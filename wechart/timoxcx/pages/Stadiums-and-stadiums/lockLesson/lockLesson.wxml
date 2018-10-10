@@ -1,0 +1,44 @@
+<view class="c-top-bar">
+  <text class='c-nowDate c-active'>今日开课</text>
+  <text class='c-nowMonth '>本月开课</text>
+</view>
+<view class="c-jiao-information">
+  <view class='c-items'>
+    <view class='c-item-inifo'>
+      <text class='c-item-info-txt'>羽毛球 12班 234期班</text>
+      <text class='c-item-title'>课程标算得上是多题课程标题</text>
+      <view class="c-item-status">报名中</view>
+    </view>
+    <view class='c-item-inifo'>
+      <image class='c-user' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/jiao.png'></image>
+      <text class='c-username-text in'>张翔</text>
+      <image class='c-touser' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/total.png'></image>
+      <text class='c-renshu in'>23人已报名</text>
+      <image class='c-date' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/date.png'></image>
+      <text class='c-data-txt in'>2018-02-29 周五 17:23</text>
+    </view>
+     <view class='c-item-inifo c-topBor'>
+      <text class="c-jiaoQin in">缴费情况</text>
+      <text class='c-jiaoFei in'>已在线缴费 （羽毛球 | 2场地 | 3小时 | RMB 300.00）</text>
+     </view>
+  </view>
+  <view class='c-items'>
+    <view class='c-item-inifo'>
+      <text class='c-item-info-txt'>羽毛球 12班 234期班</text>
+      <text class='c-item-title'>课程标算得上是多题课程标题</text>
+      <view class="c-item-status c-item-cancel">开课已取消</view>
+    </view>
+    <view class='c-item-inifo'>
+      <image class='c-user' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/jiao.png'></image>
+      <text class='c-username-text in'>张翔</text>
+      <image class='c-touser' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/total.png'></image>
+      <text class='c-renshu in'>23人已报名</text>
+      <image class='c-date' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/date.png'></image>
+      <text class='c-data-txt in'>2018-02-29 周五 17:23</text>
+    </view>
+     <view class='c-item-inifo c-topBor'>
+      <text class="c-jiaoQin in">缴费情况</text>
+      <text class='c-jiaoFei in'>已在线缴费 （羽毛球 | 2场地 | 3小时 | RMB 300.00）</text>
+     </view>
+  </view>  
+</view>

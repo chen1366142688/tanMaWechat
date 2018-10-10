@@ -1,0 +1,6 @@
+<!--pages/my/alter-Guardian/alter-Guardian.wxml-->
+<view class='alter-Name'>
+  <input class="input" name="userName" placeholder="微信账号" value='{{name}}' bindinput="userNameInput" />
+</view>
+
+<button class='settle-accounts' bindtap='subMit'>保  存</button>

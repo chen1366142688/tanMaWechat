@@ -1,0 +1,101 @@
+<!--pages/curriculum/curriculumeIndex/curriculumIndex.wxml-->
+<view class='curriculum-info'>
+<navigator class='share' target="miniProgram" open-type="navigate" app-id="wx16ab989b71bd24f1" path="pages/techer/share-Cocah/share-Cocah?cocahId={{userId}}" version="release">
+  分享
+  <image src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/coach/iteration/share.png'></image>
+</navigator>
+  <view class='main'>
+      <image src='{{cocahInfo.avatarUrl}}' class='avatar'></image>
+      <view class='label'>
+        <text  wx:for="{{cocahInfo.itemList}}" wx:key="{{index}}">{{item}}</text>
+      </view>
+      <view class='name'>
+        <text>{{cocahInfo.nickName}}</text>    
+        <text>{{cocahInfo.organNameList[0]}}</text>  
+      </view>
+      <view class='primary'>{{cocahInfo.description ? "教练简历：" + cocahInfo.description :"暂未填写教练简介"}}</view>
+  </view>
+</view>
+<view class='curriculum-header' wx:for="{{classList}}" wx:key="{{index}}" data-classid="{{item.classId}}" bindtap='toClassDetail'>
+  <view class='van-rmbf kec-box-terms' wx:if="{{item.putawayStatus == 2}}">
+    <view class='kec-termsa' style='padding:{{baseHeight}}rpx 0' mode="widthFix">
+      <view class='circle-a'></view>
+      <view class='circle-b circle-six'></view>
+      <view class='circle-c circle-six'></view>
+      <view class='kec-maina circle-wholea'>该课程已下架！</view>
+      <view class='circle-c'></view>
+      <view class='circle-b circle-six'></view> 
+      <view class='circle-a circle-six'></view>
+    </view>
+  </view>
+  <view class='curriculum-banner' style="background-image: url('{{item.classPhotoAddress ? item.classPhotoAddress : '../../../imgs/minStation.png'}}')"> 
+    <image wx:if="{{ item.classExperience == 1 }}" class='banner-img' src='{{imgUrl}}coach/curriculum/experiencea.png'></image>
+    <view class='banner-heat'>
+      <image class='heat-img' src='{{imgUrl}}coach/particulars/popularity.png'></image>
+      <text class='heat-text'>{{item.popularity?item.popularity:0}}</text>
+    </view>
+  </view>
+
+  <!--  项目  -->
+  <view class='curriculum-project'>
+    <view class='project-sort'>
+      <view class='sort-one'>{{item.itemName}}</view>
+      <view class='sort-two'>{{item.maxMember}}人班</view>
+    </view>
+    <view class='project-describe'>
+      <view class='describe-text'>{{item.className}}</view>
+      <view class='Statistics'>
+        <image class='l-cdcenter-posa' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/frequency1.png'></image>
+        <text class='c-username-text in textOver'>{{item.lastAttendPeriod ?item.lastAttendPeriod:0}}期</text>
+        <image class='c-touser-xcxa' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/population-blue.png'></image>
+        <text class='c-renshu in'>{{item.signUpMember}}人</text>
+        <image class='c-date' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/grade-blue.png'></image>
+        <text space="nbsp" class='c-data-txt in'>{{item.itemStudentGrade}}</text>
+      </view>
+    </view>
+    <view class='project-money'>
+      <view class='van-left-txt'>
+        <view class='van-rmba'>
+          <text class='van-rmbb-smal'>RMB</text>
+          <text class='van-rmbc'>{{item.courseCostTotal/100}}</text>
+        </view>
+        <view class='van-rmbe'>{{item.courseCount}}课时</view>
+        <!-- <view class='van-rmbe'>{{item.courseCount}}课时/{{item.courseTime/10}}h</view> -->
+      </view>
+    </view>
+  </view>
+
+  <!--地址  -->
+
+  <view class='site'>
+    <view class='site-location'>
+      <image class='l-cdcenter-posa' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/position-blue.png'></image>
+      <text class='c-username-texts in textOver'>{{item.homeName}}</text>
+    </view>
+    <view class='site-period'>
+      <image class='l-cdcenter-posae' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/time-blue.png'></image>
+      <text class='c-username-text in'>{{item.lastModifyTime}} 最后编辑</text>
+    </view>
+  </view>
+
+  <!-- 时间 -->
+  <!-- <view class='curriculum-time'>
+    <view class='time-one' wx:for="{{item.classSectionVOs}}" wx:key="{{index}}">
+      <view class='one-text'>周{{item.weekDay==1?"一":item.weekDay==2?"二":item.weekDay==3?"三":item.weekDay==4?"四":item.weekDay==5?"五":item.weekDay==6?"六":"日"}}</view>
+      <view class='two-text'>{{item.dayTimeStart}}-{{item.dayTimeEnd}}</view>
+      <view class='there-text' wx:if="{{item.signUpOver ==1}}">
+        <text class='renshu'>已报满</text>
+      </view> -->
+      <!-- <view class='there-text' wx:if="{{item.signUpOver ==0}}">
+        <text class='renshu'>报名{{item.signUpMember}}人</text>
+      </view>
+      <view class='four-text' wx:if="{{item.attendStatus ==1}}">已开课</view>
+      <view class='four-text-cdcentera1' wx:elif="{{item.attendStatus ==0}}">未开课</view> -->
+
+      <!-- attendStatus  是否开始开课 1 是 0 否 , -->
+    <!-- </view>
+  </view> -->
+</view>
+<view class='addProBox' bindtap='addClasses' wx:if="{{canAddClass}}">
+  <view class='addition'>+添加新课程</view>
+</view>

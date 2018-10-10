@@ -1,0 +1,212 @@
+<view class='c-header clearfloat' wx:if="{{showHeader != ''}}">
+  <view class='c-fujin fl' bindtap='bust'>
+    <text class='fujinTxt'>附近场馆</text>
+    <image class='xiaLa2' src='{{url}}xiala2.png'></image>
+  </view>
+  <input type='text' value="{{searchKeyword}}" placeholder='输入您要找的场馆名称' placeholder-class='chanName' class='guan-name fr' bindinput="bindKeywordInput"></input>
+  <view bindtap="keywordSearch" class='searchview'>
+    <image src='{{url}}sousuo.png' class='sousuo'></image>
+  </view>
+
+</view>
+<!--第二块-->
+<view class='fenBox' wx:if="{{show !=''}}">
+  <view class='fenItem' wx:for="{{urls}}" wx:key="{{item.itemId}}">
+    <image  bindtap="itemChoose" class='itemImg' src='{{item.itemPhotoAddress}}' data-id='{{item.itemId}}'></image>
+    <text class='c-zuqiu'>{{item.itemName}}</text>
+  </view>
+</view>
+<!-- <view class='fenLei' wx:if="{{show !=''}}">
+  <view class='fenleiOne'>
+    <view class='fenleiOne-info'>
+      <image class='itemImg' src='{{url}}zuqiu.png'></image>
+    <text class='c-zuqiu'>足球</text>
+    </view>
+    <view class='fenleiOnes-info'>
+    <image class='itemImg' src='{{url}}taquandao.png'></image>
+    <text class='c-zuqiu'>跆拳道</text></view>
+  </view>
+  <view class='fenleiOne'>
+    <view class='fenleiOne-info'>
+      <image class='itemImg' src='{{url}}lanqiu.png'></image>
+    <text class='c-zuqiu'>篮球</text>
+    </view>
+    <view class='fenleiOnes-info'>
+    <image class='itemImg' src='{{url}}bingqiu.png'></image>
+    <text class='c-zuqiu'>冰球</text></view>
+  </view>
+  <view class='fenleiOne'>
+    <view class='fenleiOne-info'>
+      <image class='itemImg' src='{{url}}yumaoqiu.png'></image>
+    <text class='c-zuqiu'>羽毛球</text>
+    </view>
+    <view class='fenleiOnes-info'>
+    <image class='itemImg' src='{{url}}bangqiu.png'></image>
+    <text class='c-zuqiu'>棒球</text></view>
+  </view>
+  <view class='fenleiOne fenCan'>
+    <view class='fenleiOne-info'>
+      <image class='itemImg' src='{{url}}youyong.png'></image>
+    <text class='c-zuqiu'>游泳</text>
+    </view>
+    <view class='fenleiOnes-info'>
+    <image class='itemImg' src='{{url}}van-more.png'></image>
+    <text class='c-zuqiu'>更多</text></view>
+  </view>
+</view> -->
+<!--滑动时的样式-->
+<view class='{{modal}}' bindtap='hideModal'>
+  <scroll-view wx:if="{{showScroll != ''}}" class='scroll-active' style='width:723rpx; white-space: nowrap; display: flex' scroll-x='true'>
+    <view class='fenleiOne-scroll' wx:for="{{urls}}" wx:for-item="item" wx:key="{{item.itemName}}"  data-code='{{item.itemId}}'>
+      <image bindtap="itemChoose" class='itemImg-scroll' src='{{item.itemPhotoAddress}}' data-id='{{item.itemId}}'></image>
+      <text class='c-zuqiu-scroll'>{{item.itemName}}</text>
+    </view>
+    <!-- <view class='fenleiOne-scroll'>
+      <image class='itemImg-scroll' src='{{url}}lanqiu.png'></image>
+      <text class='c-zuqiu-scroll'>篮球</text>
+    </view>
+    <view class='fenleiOne-scroll'>
+      <image class='itemImg-scroll' src='{{url}}yumaoqiu.png'></image>
+      <text class='c-zuqiu-scroll'>羽毛球</text>
+    </view>
+    <view class='fenleiOne-scroll'>
+      <image class='itemImg-scroll' src='{{url}}youyong.png'></image>
+      <text class='c-zuqiu-scroll'>游泳</text>
+    </view>
+    <view class='fenleiOne-scroll'>
+      <image class='itemImg-scroll' src='{{url}}taquandao.png'></image>
+      <text class='c-zuqiu-scroll'>跆拳道</text>
+    </view>
+    <view class='fenleiOne-scroll'>
+      <image class='itemImg-scroll' src='{{url}}bingqiu.png'></image>
+      <text class='c-zuqiu-scroll'>冰球</text>
+    </view>
+    <view class='fenleiOne-scroll'>
+      <image class='itemImg-scroll' src='{{url}}bangqiu.png'></image>
+      <text class='c-zuqiu-scroll'>棒球</text>
+    </view>
+    <view class='fenleiOne-scroll last-fenleiOne-scroll'>
+      <image class='itemImg-scroll' src='{{url}}van-more.png'></image>
+      <text class='c-zuqiu-scroll'>更多</text>
+    </view> -->
+  </scroll-view>
+  <view class='can-fujin' wx:if="{{showchang != ''}}" bindtap='nearHome'>
+    <text wx-if="{{nearHome}}" class='can-txt'>附近场馆</text>
+    <text wx-if="{{!nearHome}}" class='cansoso'>附近场馆</text>
+    <image wx-if="{{nearHome}}" class='sure' src='{{url}}sure.png'></image>
+  </view>
+  <view class='can-fujin' wx:if="{{showchang != ''}}" bindtap='localHome'>
+    <text wx-if="{{loacalHome}}" class='can-txt'>搜索本地</text>
+    <text wx-if="{{!loacalHome}}" class='cansoso'>搜索本地</text>
+    <image wx-if="{{loacalHome}}" class='sure' src='{{url}}sure.png'></image>
+    <!-- <input value='' type='text' placeholder='搜索本地' class='can-sousuo' placeholder-class='cansoso'></input> -->
+  </view>
+</view>
+<!--第三块-->
+<scroll-view style='height:{{height}}rpx;' scroll-y bindscroll='scroll' upper-threshold='02' bindscrolltoupper='scrolltoupper' bindscrolltolower="searchScrollLower">
+  <view class='vanThree' wx:for="{{gymList}}" wx:key="unique" data-data="{{item.homeId}}" bindtap='toDetail'>
+    <view class='van-banner' style='background:url({{item.homeMainPhoto}});background-size: cover;'>
+      <view class='van-banner-item'>
+        <view class='van-text'>
+          <text class='van-city'>{{item.cityName}}</text>
+          <text class='van-name '>{{item.homeName}}</text>
+        </view>
+        <view class='van-hot'>
+          <image class='hot-img' src='{{url}}van-hot.png'></image>
+          <text class='van-hot-num'>{{item.popularity}}</text>
+        </view>
+      </view>
+    </view>
+    <view class='van-sc'>
+      <scroll-view class='van-scroll' scroll-x scroll-with-animation >
+      <view>
+      <text wx:for="{{item.itemVOS}}"wx:for-item="item2" wx:key="unique"  data-data="{{item2}}" class='van-ke'>{{item2.itemName}} {{item2.itemNums}}课程</text>
+      </view>
+      </scroll-view>
+    </view>
+    <view class='van-location'>
+      <view class='van-left'>
+        <image class='van-left-img' src='{{url}}van-location.png'></image>
+        <text class='van-left-txt'>{{item.addrDetail}}</text>
+      </view>
+      <view class='van-right'>
+        <image class='van-left-img' src='{{url}}van-date.png'></image>
+        <text class='van-left-txt'>经营时间：{{item.starTime}}-{{item.endTime}}</text>
+      </view>
+    </view>
+  </view>
+  <!--第四-->
+  <!-- <view class='vanThree'>
+    <view class='van-banner'>
+      <view class='van-banner-item'>
+        <view class='van-text'>
+          <text class='van-city'>成都</text>
+          <text class='van-name '>场馆名称场馆名称馆名</text>
+        </view>
+        <view class='van-hot'>
+          <image class='hot-img' src='{{url}}van-hot.png'></image>
+          <text class='van-hot-num'>4523</text>
+        </view>
+      </view>
+    </view>
+    <view class='van-sc'>
+      <scroll-view class='van-scroll' scroll-x scroll-with-animation>
+        <text class='van-ke'>篮球 28课程</text>
+        <text class='van-ke'>羽毛球 234课程</text>
+        <text class='van-ke'>游泳 8课程</text>
+        <text class='van-ke'>游泳 8课程</text>
+        <text class='van-ke'>游泳 8课程</text>
+      </scroll-view>
+    </view>
+    <view class='van-location'>
+      <view class='van-left'>
+        <image class='van-left-img' src='{{url}}van-location.png'></image>
+        <text class='van-left-txt'>成都市人民中路一段十一号</text>
+      </view>
+      <view class='van-right'>
+        <image class='van-left-img' src='{{url}}van-date.png'></image>
+        <text class='van-left-txt'>经营时间：9:00-19:00</text>
+      </view>
+    </view>
+  </view>
+  <view class='vanThree'>
+    <view class='van-banner'>
+      <view class='van-banner-item'>
+        <view class='van-text'>
+          <text class='van-city'>成都</text>
+          <text class='van-name '>场馆名称场馆名称馆名</text>
+        </view>
+        <view class='van-hot'>
+          <image class='hot-img' src='{{url}}van-hot.png'></image>
+          <text class='van-hot-num'>4523</text>
+        </view>
+      </view>
+    </view>
+    <view class='van-sc'>
+      <scroll-view class='van-scroll' scroll-x scroll-with-animation>
+        <text class='van-ke'>篮球 28课程</text>
+        <text class='van-ke'>羽毛球 234课程</text>
+        <text class='van-ke'>游泳 8课程</text>
+        <text class='van-ke'>游泳 8课程</text>
+        <text class='van-ke'>游泳 8课程</text>
+      </scroll-view>
+    </view>
+    <view class='van-location'>
+      <view class='van-left'>
+        <image class='van-left-img' src='{{url}}van-location.png'></image>
+        <text class='van-left-txt'>成都市人民中路一段十一号</text>
+      </view>
+      <view class='van-right'>
+        <image class='van-left-img' src='{{url}}van-date.png'></image>
+        <text class='van-left-txt'>经营时间：9:00-19:00</text>
+      </view>
+    </view>
+  </view> -->
+  <!-- <view class="loading" hidden="{{upToLoading}}">上拉加载更多...</view>
+  <view class="loading" hidden="{{searchLoading}}">正在载入更多...</view>
+  <view class="loading complete" hidden="{{searchLoadingComplete}}">已加载全部</view> -->
+  <view wx:if="{{upToLoading}}"> <text class='van-over' >上拉加载更多</text> </view>
+  <view wx:if="{{searchLoading}}"><text class='van-over' >正在加载</text> </view>
+  <view wx:if="{{searchLoadingComplete}}"><text class='van-over'>暂无更多数据</text> </view>
+  
+</scroll-view>

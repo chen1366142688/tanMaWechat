@@ -1,0 +1,68 @@
+<view class='dateBox'>
+    <image src='{{imgUrl}}calendar.png'></image>
+    <view class='datetime'>
+      <picker bindchange="bindDateChange" value="{{dateTime}}" mode="date">
+        <view class="picker" style='margin-right:20rpx'>
+          周{{weekday}}
+        </view>
+      </picker>
+      <picker bindchange="bindTimeStartChange" value="{{thisTime+':00'}}" mode="time" start="08:00" end="22:00">
+        <view class="picker">
+          {{thisTime}}:00
+        </view>
+      </picker>
+      -
+      <picker bindchange="bindTimeEndChange" value="{{thisTimeEnd+':00'}}" mode="time" start="{{thisTime+':00'}}" end="22:00">
+        <view class="picker">
+         {{thisTimeEnd}}:00
+        </view>
+      </picker>
+      
+    </view>
+  </view>
+<scroll-view scroll-y="true" class='scrollInfo' bindscrolltolower="scrolltolower">
+  <view class='curresInfo' wx:for="{{curresInfo}}" wx:key="curriumise" wx:for-item="curr">
+    <view class='curresLf'>
+      <view class='curresLtop'>
+        <view class='dateBorder'>剩余课时:{{curr.spareSchedule == "" ? "未知" : curr.spareSchedule }}</view>
+        <view class='currName textOver'>{{curr.className}}</view>
+      </view>
+      <view class='curresLbottom'>
+        <view>
+          <image class='dateImg' src='{{imgUrl}}mindate.png'></image>
+          <text class='textOver'>{{curr.dayTimeStart +"-" + curr.dayTimeEnd}}</text>
+        </view>
+        <view>
+          <image class='dateImg' src='{{imgUrl}}mincurriculum.png'></image>
+          <text class='textOver'>{{curr.itemName}}</text>
+        </view>
+        <view>
+          <image class='dateImg' src='{{imgUrl}}minlanMark.png'></image>
+          <text class='textOver'>{{curr.homeName}}</text>
+        </view>
+      </view>
+    </view>
+    <view class='curresRg'>
+      <view class='starffed' wx:if="{{curr.spareSignUp  <= 0}}">满员</view>
+      <view class='starffed' wx:elif="{{curr.isSignUp == '1'}}">已报名</view>
+      <view class='addCurrese' wx:elif="{{curr.isSignUp == '0' && curr.spareSchedule > 0 && curr.spareSignUp > 0}}" bindtap='addClass' data-info='{{curr}}'>添加</view>
+      <view class='starffed' wx:elif="{{curr.spareSchedule  <= 0}}">无可排课课时</view>
+    </view>
+  </view>
+</scroll-view>
+
+<view class="addBtn" bindtap='goAddCurrse'>
+  <image class='addImg' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/iteration/add.png'></image>
+  <text>添加其他日程</text>
+</view>
+<!-- 弹窗 -->
+<view class='modal' wx:if="{{modal}}" catchtouchmove="ture">
+  <view class='modalContent'>
+    <view class='modalTxt'>{{modalTxt}}</view>
+    <view class='btngroup'>
+      <view class='btnLf' bindtap='cancel'>{{btnLfText}}</view>
+      <view class='btnRg' bindtap='sure'>{{btnRgText}}</view>
+    </view>
+  </view>
+  <view class='foot' bindtap='cancel'></view>
+</view>

@@ -1,0 +1,384 @@
+<!--pages/keChen/keChen-index/keChen-index.wxml-->
+<view class='c-header clearfloat'>
+  <view class='c-fujin'>
+    <image class='cou-positiona' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/yizhouroada.jpg'></image>
+    <text class='fujinTxt'>益州大道…</text>
+    <navigator class='l-stop-sti-leftb c-active' url="lessoninform" hover-class="navigator-hover">
+      <text class='l-stop-traina'>训练课程</text>
+    </navigator>
+    <navigator class='l-stop-sti-a' url="lessoninform" hover-class="navigator-hover">
+      <text class='l-stop-traina'>开课通知</text>
+    </navigator>
+
+    <image src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/cou-notice-imga.jpg' class='kecc-noticepointa'></image>
+  </view>
+  <image src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/kecc-noticepointb.jpg' class='kecc-noticepointba'></image>
+</view>
+<!--第二块-->
+<view class='fenLei' wx:if="{{show !=''}}">
+  <view class='fenleiOne'>
+    <view class='fenleiOne-info'>
+      <image class='itemImg' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/zuqiu.png'></image>
+      <text class='c-zuqiu'>足球</text>
+    </view>
+    <view class='fenleiOnes-info'>
+      <image class='itemImg' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/taquandao.png'></image>
+      <text class='c-zuqiu'>跆拳道</text>
+    </view>
+  </view>
+  <view class='fenleiOne'>
+    <view class='fenleiOne-info'>
+      <image class='itemImg' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/lanqiu.png'></image>
+      <text class='c-zuqiu'>篮球</text>
+    </view>
+    <view class='fenleiOnes-info'>
+      <image class='itemImg' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/bingqiu.png'></image>
+      <text class='c-zuqiu'>冰球</text>
+    </view>
+  </view>
+  <view class='fenleiOne'>
+    <view class='fenleiOne-info'>
+      <image class='itemImg' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/yumaoqiu.png'></image>
+      <text class='c-zuqiu'>羽毛球</text>
+    </view>
+    <view class='fenleiOnes-info'>
+      <image class='itemImg' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/bangqiu.png'></image>
+      <text class='c-zuqiu'>棒球</text>
+    </view>
+  </view>
+  <view class='fenleiOne fenCan'>
+    <view class='fenleiOne-info'>
+      <image class='itemImg' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/youyong.png'></image>
+      <text class='c-zuqiu'>游泳</text>
+    </view>
+    <view class='fenleiOnes-info'>
+      <image class='itemImg' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/van-more.png'></image>
+      <text class='c-zuqiu'>更多</text>
+    </view>
+  </view>
+</view>
+
+<!--课程类型-->
+<view class="page">
+  <!--页头-->
+  <view class="page__bd">
+    <view class="btn-area">
+      <view class='l-stop-trainb-nava'>
+        <view class='l-trainb-nava'>
+          <view class='k-train-head-namea k-active-dowd'>课程类型</view>
+          <!--<view class='k-train-head-nameb'></view>-->
+          <!--向下-->
+          <view class='k-name-downwardc'></view>
+        </view>
+        <view class='l-trainb-nava'>
+          <view class='k-train-head-namea'>附近场馆</view>
+          <view class='k-train-head-nameb'></view>
+        </view>
+        <view class='l-trainb-nava'>
+          <view class='k-train-head-namea'>人气排名</view>
+          <view class='k-train-head-nameb'></view>
+        </view>
+        <view class='l-trainb-nava'>
+          <view class='k-train-head-namea'>价格</view>
+          <view class='k-train-head-nameb'></view>
+        </view>
+      </view>
+
+      <view class="k-act-dowa">
+        <view class="k-act-dowb">
+          <view class="k-act-dowc">
+            <view>全部</view>
+          </view>
+          <!--<view class="k-act-dowd">全部</view>-->
+        </view>
+      </view>
+      <view class="k-act-dowa">
+        <view class="k-act-dowb">
+          <view class="k-act-dowc">
+            <view>大课</view>
+          </view>
+          <view class="k-act-dowd">
+            <image class='k-act-dowe' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/sure.png'></image>
+          </view>
+        </view>
+      </view>
+      <view class="k-act-dowa">
+        <view class="k-act-dowb">
+          <view class="k-act-dowc">
+            <view>私教</view>
+          </view>
+          <!--<view class="k-act-dowd">全部</view>-->
+        </view>
+      </view>
+
+    </view>
+  </view>
+  <!--主体-->
+</view>
+
+<!--课程类型end-->
+
+<!--滑动时的样式-->
+<view class='{{modal}}' bindtap='hideModal'>
+  <scroll-view wx:if="{{showScroll != ''}}" class='scroll-active' style='width:723rpx; white-space: nowrap; display: flex' scroll-x='true'>
+    <view class='fenleiOne-scroll'>
+      <image class='itemImg-scroll' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/zuqiu.png'></image>
+      <text class='c-zuqiu-scroll'>足球</text>
+    </view>
+    <view class='fenleiOne-scroll'>
+      <image class='itemImg-scroll' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/lanqiu.png'></image>
+      <text class='c-zuqiu-scroll'>篮球</text>
+    </view>
+    <view class='fenleiOne-scroll'>
+      <image class='itemImg-scroll' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/yumaoqiu.png'></image>
+      <text class='c-zuqiu-scroll'>羽毛球</text>
+    </view>
+    <view class='fenleiOne-scroll'>
+      <image class='itemImg-scroll' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/youyong.png'></image>
+      <text class='c-zuqiu-scroll'>游泳</text>
+    </view>
+    <view class='fenleiOne-scroll'>
+      <image class='itemImg-scroll' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/taquandao.png'></image>
+      <text class='c-zuqiu-scroll'>跆拳道</text>
+    </view>
+    <view class='fenleiOne-scroll'>
+      <image class='itemImg-scroll' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/bingqiu.png'></image>
+      <text class='c-zuqiu-scroll'>冰球</text>
+    </view>
+    <view class='fenleiOne-scroll'>
+      <image class='itemImg-scroll' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/bangqiu.png'></image>
+      <text class='c-zuqiu-scroll'>棒球</text>
+    </view>
+    <view class='fenleiOne-scroll last-fenleiOne-scroll'>
+      <image class='itemImg-scroll' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/van-more.png'></image>
+      <text class='c-zuqiu-scroll'>更多</text>
+    </view>
+  </scroll-view>
+  <view class='can-fujin' wx:if="{{showchang != ''}}">
+    <text class='can-txt'>附近场馆</text>
+    <image class='sure' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/sure.png'></image>
+  </view>
+  <view class='can-sousuo-con' wx:if="{{showchang != ''}}">
+    <input value='' type='text' placeholder='搜索本地' class='can-sousuo' placeholder-class='cansoso'></input>
+  </view>
+</view>
+<!--第三块-->
+<scroll-view style='height:{{height}}rpx;' scroll-y bindscroll='scroll' upper-threshold='30' bindscrolltoupper='scrolltoupper'>
+  <!--第四-->
+  <view class='vanThree'>
+    <view class='van-bannerceca'>
+      <view>
+        <image class='hot-img-clasa hot-img-clasaaf' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/canexperience.png'></image>
+      </view>
+      <view class='van-banner-item'>
+        <image class='hot-img-clasa' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/headportrait.png'></image>
+        <view class='van-text'>
+          <text class='van-city'>主教练 张翔</text>
+          <image class='img-clasboy' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/boy.png'></image>
+          <!--<image class='img-clasboy' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/girl.png'></image>-->
+          <text class='van-name'>助教 李华 刘敏</text>
+        </view>
+        <view style="height:40px;" class='van-hot van-hot-keca'>
+          <view class='van-kecab-a'>
+            <!--<image class='hot-img-clasb' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/collect.png'></image>-->
+            <!-- 已经收藏图标 -->
+            <image class='hot-img-clasb' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/havenotcollect.png'></image>
+          </view>
+          <view class='van-kecab-colb'>
+            <text class='van-hot-num'>收藏</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='van-sc'>
+      <scroll-view class='van-scroll'>
+        <view class="van-topclassa">
+          <view class="van-topclassb">
+            <view class="van-topclassc">羽毛球</view>
+            <view class='van-topclassd'>12人班</view>
+          </view>
+          <view class="van-topclassba">
+            <view class='van-class-titlea single-line'>
+              羽毛球大班课程标题羽毛球大班课程标题羽毛球大班课程标题羽毛球大班课程标题羽毛球大班课程标题羽毛球大班课程标题
+            </view>
+            <view class=''>
+              <view class='van-left van-terms-classa'>
+                <image class='van-timesa-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/times.png'></image>
+                <text class='van-terms-class-d'>234期</text>
+                <image class='van-timesb-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/peoplecounting.png'></image>
+                <text class='van-left-txt van-terms-class-c'>23人</text>
+                <text class="van-terms-class-d">适合等级 L1,L2,L3  </text>
+                <image class='van-left-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/van-hot.png'></image>4543
+              </view>
+            </view>
+
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+    <view class='van-location'>
+      <view class='van-left van-terms-classf'>
+        <image class='van-left-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/van-backlocation.png'></image>
+        <text class='van-left-txt'>成都体育中心</text>
+      </view>
+      <view class='van-right'>
+        <view class='van-left-txt'>
+          <view class='van-rmba'>
+            <text class='van-rmbb-smal'>RMB</text>
+            <text class='van-rmbc'>3000</text>
+          </view>
+          <view class='van-rmbe'>10课时/1.5h</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!--第二套-->
+  <view class='vanThree'>
+    <view class='van-bannerceca'>
+      <view>
+        <image class='hot-img-clasa hot-img-clasaaf' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/canexperience.png'></image>
+      </view>
+      <view class='van-banner-item'>
+        <image class='hot-img-clasa' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/headportrait.png'></image>
+        <view class='van-text'>
+          <text class='van-city'>主教练 张翔</text>
+          <image class='img-clasboy' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/boy.png'></image>
+          <!--<image class='img-clasboy' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/girl.png'></image>-->
+          <text class='van-name'>助教 李华 刘敏</text>
+        </view>
+        <view style="height:40px;" class='van-hot van-hot-keca'>
+          <view class='van-kecab-a'>
+            <!--<image class='hot-img-clasb' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/collect.png'></image>-->
+            <!-- 已经收藏图标 -->
+            <image class='hot-img-clasb' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/havenotcollect.png'></image>
+          </view>
+          <view class='van-kecab-colb'>
+            <text class='van-hot-num'>收藏</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='van-sc'>
+      <scroll-view class='van-scroll'>
+        <view class="van-topclassa">
+          <view class="van-topclassb">
+            <view class="van-topclassc">羽毛球</view>
+            <view class='van-topclassd'>12人班</view>
+          </view>
+          <view class="van-topclassba">
+            <view class='van-class-titlea single-line'>
+              羽毛球大班课程标题羽毛球大班课程标题羽毛球大班课程标题羽毛球大班课程标题羽毛球大班课程标题羽毛球大班课程标题
+            </view>
+            <view class=''>
+              <view class='van-left van-terms-classa'>
+                <image class='van-timesa-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/times.png'></image>
+                <text class='van-terms-class-d'>234期</text>
+                <image class='van-timesb-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/peoplecounting.png'></image>
+                <text class='van-left-txt van-terms-class-c'>23人</text>
+                <text class="van-terms-class-d">适合等级 L1,L2,L3  </text>
+                <image class='van-left-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/van-hot.png'></image>4543
+              </view>
+            </view>
+
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+    <view class='van-location'>
+      <view class='van-left van-terms-classf'>
+        <image class='van-left-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/van-backlocation.png'></image>
+        <text class='van-left-txt'>成都体育中心</text>
+      </view>
+      <view class='van-right'>
+        <view class='van-left-txt'>
+          <view class='van-rmba'>
+            <text class='van-rmbb-smal'>RMB</text>
+            <text class='van-rmbc'>3000</text>
+          </view>
+          <view class='van-rmbe'>10课时/1.5h</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!--第二套end-->
+  <!--第三套-->
+  <view class='vanThree'>
+    <view class='van-bannerceca'>
+      <view>
+        <image class='hot-img-clasa hot-img-clasaaf' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/canexperience.png'></image>
+      </view>
+      <view class='van-banner-item'>
+        <image class='hot-img-clasa' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/headportrait.png'></image>
+        <view class='van-text'>
+          <text class='van-city'>主教练 张翔</text>
+          <image class='img-clasboy' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/boy.png'></image>
+          <!--<image class='img-clasboy' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/girl.png'></image>-->
+          <text class='van-name'>助教 李华 刘敏</text>
+        </view>
+        <view style="height:40px;" class='van-hot van-hot-keca'>
+          <view class='van-kecab-a'>
+            <!--<image class='hot-img-clasb' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/collect.png'></image>-->
+            <!-- 已经收藏图标 -->
+            <image class='hot-img-clasb' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/havenotcollect.png'></image>
+          </view>
+          <view class='van-kecab-colb'>
+            <text class='van-hot-num'>收藏</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='van-sc'>
+      <scroll-view class='van-scroll'>
+        <view class="van-topclassa">
+          <view class="van-topclassb">
+            <view class="van-topclassc">羽毛球</view>
+            <view class='van-topclassd'>12人班</view>
+          </view>
+          <view class="van-topclassba">
+            <view class='van-class-titlea single-line'>
+              羽毛球大班课程标题羽毛球大班课程标题羽毛球大班课程标题羽毛球大班课程标题羽毛球大班课程标题羽毛球大班课程标题
+            </view>
+            <view class=''>
+              <view class='van-left van-terms-classa'>
+                <image class='van-timesa-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/times.png'></image>
+                <text class='van-terms-class-d'>234期</text>
+                <image class='van-timesb-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/peoplecounting.png'></image>
+                <text class='van-left-txt van-terms-class-c'>23人</text>
+                <text class="van-terms-class-d">适合等级 L1,L2,L3  </text>
+                <image class='van-left-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/van-hot.png'></image>4543
+              </view>
+            </view>
+
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+    <view class='van-location'>
+      <view class='van-left van-terms-classf'>
+        <image class='van-left-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/van-backlocation.png'></image>
+        <text class='van-left-txt'>成都体育中心</text>
+      </view>
+      <view class='van-right'>
+        <view class='van-left-txt'>
+          <view class='van-rmba'>
+            <text class='van-rmbb-smal'>RMB</text>
+            <text class='van-rmbc'>3000</text>
+          </view>
+          <view class='van-rmbe'>10课时/1.5h</view>
+        </view>
+      </view>
+    </view>
+
+    <!--
+    <view class='van-rmbf'>
+      sdf 撒旦法撒旦法撒旦法撒旦法是
+    </view> -->
+    <!---<image class='van-sticka' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/stick.png'></image>-->
+  </view>
+  <!-- 
+  该课程已报满
+  -->
+  <!--第三套end -->
+  <text class='van-over'>已经到底了</text>
+
+</scroll-view>

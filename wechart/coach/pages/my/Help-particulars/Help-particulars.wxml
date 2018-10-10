@@ -1,0 +1,13 @@
+<!--pages/my/Help-particulars/Help-particulars.wxml-->
+<web-view src="{{urlappxcx}}/helpParticulars.html?helpDetailId={{helpDetailId}}"></web-view>
+<!-- <view class='Help-particulars'>
+  <view class='particular-headline'>{{helpBox.title}}</view> -->
+<!--<view class='particular-section'> <text class='K'></text> 
+  {{helpBox.content}}
+  </view>-->
+<!-- <view class='particular-section'> <text class='K'></text> 
+  </view>
+</view>
+<view class='footer'>已经到底了</view> -->
+
+

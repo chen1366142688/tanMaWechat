@@ -1,0 +1,28 @@
+<view class='comment-header'>
+  <view class='comment-one'>
+    <text class='comment-l fl'>课程整体评价</text>
+    <view class='comment-r fr'>
+      <image class='cha' bindtap='cha' src='{{url}}bad{{bad}}.png' data-val="bad"></image>
+      <text class='cha-t iLblock {{reds}}' bindtap='cha' data-val="bad">差评</text>
+      <image class='zhong' src='{{url}}ok{{ok}}.png' data-val="ok" bindtap='cha'></image>
+      <text class='zhong-t iLblock {{hei}}' data-val="ok" bindtap='cha'>中评</text>
+      <image class='hao' src='{{url}}good{{good}}.png' data-val="good" bindtap='cha'></image>
+      <text class='hao-t iLblock {{green}}' data-val="good" bindtap='cha'>好评</text>
+    </view>
+  </view>
+  <view class='comment-two'>
+    <text class='comment-l fl'>场馆整体评价</text>
+    <view class='comment-r fr'>
+      <image class='cha' src='{{url}}bad{{bads}}.png' data-val="bad" bindtap='chas'></image>
+      <text class='cha-t iLblock {{redss}}' data-val="bad" bindtap='chas'>差评</text>
+      <image class='zhong' src='{{url}}ok{{oks}}.png' data-val="ok" bindtap='chas'></image>
+      <text class='zhong-t iLblock {{heis}}' data-val="ok" bindtap='chas'>中评</text>
+      <image class='hao' src='{{url}}good{{goods}}.png' data-val="good" bindtap='chas'></image>
+      <text class='hao-t iLblock {{greens}}' data-val="good" bindtap='chas'>好评</text>
+    </view>
+  </view>
+</view>
+<textarea class='textpush' maxlength="150" auto-height adjust-position="true" placeholder-class="busPush" placeholder="说说你对教练/助教的印象吧……" value='{{shuRu}}' data-val="{{shuRu}}" bindinput="arear"></textarea>
+<view class='footer' bindtap='sunBtn'>
+  <view class='submit'>提   交</view> 
+</view>

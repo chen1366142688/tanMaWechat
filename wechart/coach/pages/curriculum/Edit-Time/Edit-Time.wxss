@@ -1,0 +1,63 @@
+/* pages/curriculum/Edit-Time/Edit-Time.wxss */
+
+.Edit-Time {
+  width: 750rpx;
+  background-color: #fff;
+  margin: 0rpx;
+  padding: 0rpx;
+}
+
+.Edit-Time-headline {
+  width: 750rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  font-size: 30rpx;
+  color: #333;
+  padding-left: 26rpx;
+  font-weight: bold;
+  border-top: 1rpx solid #e4e4e4;
+  border-bottom: 1rpx solid #e4e4e4;
+}
+
+.blue{
+  color: #00B6D6;
+}
+
+
+.radio{
+  width: 726rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 24rpx;
+  color: #333;
+  float: left; 
+  padding-left: 24rpx;
+  background: #fff;
+}
+
+.check {
+  border-color: #007587;
+}
+
+.checkted {
+  color: #007587;
+}
+
+
+.surplus-number{
+  width: 220rpx;
+  height: 70rpx;
+  font-size: 24rpx;
+  color: #333;
+  line-height: 70rpx;
+  float: right;
+  padding-right: 60rpx;
+  text-align: right;
+}
+
+
+.red{
+  color: #E40011;
+  font-weight: bold;
+}
+

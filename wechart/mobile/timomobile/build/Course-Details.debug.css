@@ -1,0 +1,709 @@
+/*body{*/
+
+/*background-color: #ececec;*/
+
+/*}*/
+
+.Course-Details {
+  width: 100%;
+  /*line-height: 0.52rem;*/
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.empity {
+  height: 1.32rem;
+  background-color: #fff;
+  width: 100%;
+}
+
+.Course-Details-section {
+  width: 100%;
+  /*line-height: 0;*/
+  /*margin: 0;*/
+  /*padding: 0;*/
+  /*background-color: #ececec;*/
+  position: relative;
+}
+
+.Course-Details-botton {
+  width: 100%;
+  height: 1.32rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #F9F9F9;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.Botton-one {
+  height: 1.32rem;
+  border-right: 0.013333rem solid #e4e4e4;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+.Botton-one-a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Botton-two {
+  height: 1.32rem;
+  border-right: 0.013333rem solid #e4e4e4;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.Botton-there {
+  height: 1.32rem;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.Botton-one-image {
+  width: 0.666667rem;
+  height: 0.666667rem;
+  vertical-align: middle;
+}
+
+.Botton-one-image1 {
+  width: 0.666667rem;
+  height: 0.666667rem;
+  vertical-align: middle;
+}
+
+.Botton-one-image2 {
+  width: 0.666667rem;
+  height: 0.666667rem;
+  vertical-align: middle;
+  display: none;
+}
+
+.Botton-one-text {
+  font-size: 0.32rem;
+  color: #333333;
+  vertical-align: middle;
+  margin-left: 0.16rem;
+}
+
+/*选择课程时段*/
+
+.Course-Details-model1 {
+  width: 100%;
+  height: 100%;
+  background: rgba(41,38,39,0.7);
+  z-index: 111;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.model1-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  padding: 0 0.32rem;
+  box-sizing: border-box;
+}
+
+.model1-section-headline {
+  width: 100%;
+  height: 2rem;
+  line-height: 2rem;
+  vertical-align: middle;
+  font-size: 0.4rem;
+  color: #333333;
+  text-align: left;
+}
+
+#Iform {
+  width: 100%;
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Iform-one {
+  width: 100%;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  font-size: 0.373333rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.586667rem;
+}
+
+.Iform-one-left {
+  width: 50%;
+  height: 0.4rem;
+  font-size: 0.373333rem;
+  display: flex;
+  align-items: center;
+  color: #00C693;
+}
+
+.Iform-p {
+  font-size: 0.373333rem;
+  color: #00C693;
+  margin-left: 0.2rem;
+}
+
+.Iform-one-right {
+  width: 50%;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  vertical-align: middle;
+  text-align: right;
+  font-size: 0.373333rem;
+  color: #333333;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.Iform-one-p {
+  font-size: 0.373333rem;
+  color: #E75571;
+  margin: 0 0.133333rem;
+}
+
+.model1-section-button {
+  width: 100%;
+  height: 1.173333rem;
+  display: flex;
+  align-items: center;
+  background-color: #00C693;
+  padding: 0.053333rem 0.053333rem;
+  box-sizing: border-box;
+  margin: 0.8rem 0;
+  border-radius: 0.586667rem;
+}
+
+.model1-section-button-biank {
+  width: 100%;
+  font-size: 0.4rem;
+  color: #fff;
+  text-align: center;
+  height: 1.066667rem;
+  line-height: 1.066667rem;
+  border: 0.013333rem dashed #fff;
+  border-radius: 0.533333rem;
+}
+
+/*购买课程未登录*/
+
+.Course-Details-model2 {
+  width: 100%;
+  height: 100%;
+  background: rgba(41,38,39,0.7);
+  z-index: 122;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#Iform2 {
+  width: 100%;
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.model1-section-iPhone {
+  width: 100%;
+  height: 4rem;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0.693333rem;
+  box-sizing: border-box;
+}
+
+.model1-section-iPhone-top {
+  width: 100%;
+  height: 0.666667rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.72rem;
+}
+
+.model1-section-iPhone-top-image {
+  width: 0.4rem;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  vertical-align: middle;
+}
+
+.model1-section-iPhone-top-input {
+  width: 88%;
+  height: 0.666667rem;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  /*line-height: 50px;*/
+  border-bottom: 0.013333rem solid #00C693;
+}
+
+.iPhone-top-input {
+  width: 100%;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  height: 0.6rem;
+  /*line-height: 32px;*/
+  font-size: 0.4rem;
+  color: #333333;
+  border: 0;
+  background-color: #f4f4f4;
+}
+
+.myInfo {
+  color: #999;
+}
+
+.model1-section-iPhone-bottom {
+  width: 100%;
+  height: 0.666667rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.model1-section-iPhone-bottom-image {
+  width: 0.4rem;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  vertical-align: middle;
+}
+
+.model1-section-iPhone-bottom-input {
+  width: 49%;
+  height: 0.666667rem;
+  /*line-height: 50px;*/
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  border-bottom: 0.013333rem solid #00C693;
+}
+
+.iPhone-bottom-input {
+  width: 100%;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  height: 0.6rem;
+  /*line-height: 32px;*/
+  font-size: 0.4rem;
+  color: #333333;
+  border: 0;
+  background-color: #f4f4f4;
+}
+
+.model1-section-iPhone-bottom-fasong {
+  width: 30%;
+  height: 0.586667rem;
+  line-height: 0.586667rem;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 0.32rem;
+  color: #00C693;
+  border: 0.013333rem solid #00C693;
+  border-radius: 0.293333rem;
+  background-color: #f4f4f4;
+}
+
+/*购买成功*/
+
+.Course-Details-model3 {
+  width: 100%;
+  height: 100%;
+  background: rgba(41,38,39,0.7);
+  z-index: 133;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.model3-section {
+  width: 100%;
+  height: 6.666667rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+.model3-section-image {
+  width: 1.653333rem;
+  height: 1.653333rem;
+  line-height: 1.653333rem;
+  vertical-align: middle;
+}
+
+.model3-section-text {
+  width: 100%;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  font-size: 0.4rem;
+  color: #00C693;
+  text-align: center;
+  margin-top: 0.293333rem;
+}
+
+/*购买失败*/
+
+.Course-Details-model4 {
+  width: 100%;
+  height: 100%;
+  background: rgba(41,38,39,0.7);
+  z-index: 144;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.model4-section {
+  width: 100%;
+  height: 6.666667rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+.model4-section-image {
+  width: 1.653333rem;
+  height: 1.653333rem;
+  line-height: 1.653333rem;
+  vertical-align: middle;
+}
+
+.model4-section-text {
+  width: 100%;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  font-size: 0.4rem;
+  color: #E75571;
+  text-align: center;
+  margin-top: 0.293333rem;
+}
+
+/*收藏课程  未登录*/
+
+.Course-Details-model5 {
+  width: 100%;
+  height: 100%;
+  background: rgba(41,38,39,0.7);
+  z-index: 155;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.model5-section {
+  width: 100%;
+  height: 6.666667rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.466667rem 0.693333rem 0.8rem 0.693333rem;
+  box-sizing: border-box;
+}
+
+.model5-section-iPhone {
+  width: 100%;
+  height: 4rem;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.model5-section-iPhone-top {
+  width: 100%;
+  height: 0.666667rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.72rem;
+}
+
+.model5-section-iPhone-top-image {
+  width: 0.4rem;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  vertical-align: middle;
+}
+
+.model5-section-iPhone-top-input {
+  width: 88%;
+  height: 0.666667rem;
+  /*line-height: 50px;*/
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  border-bottom: 0.013333rem solid #00C693;
+}
+
+.iPhone-top-input5 {
+  width: 100%;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  height: 0.6rem;
+  /*line-height: 30px;*/
+  font-size: 0.4rem;
+  color: #333333;
+  border: 0;
+  background-color: #fff;
+}
+
+.myInfo {
+  color: #999;
+}
+
+.model5-section-iPhone-bottom {
+  width: 100%;
+  height: 0.666667rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.model5-section-iPhone-bottom-image {
+  width: 0.4rem;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  vertical-align: middle;
+}
+
+.model5-section-iPhone-bottom-input {
+  width: 49%;
+  height: 0.666667rem;
+  line-height: 0.666667rem;
+  border-bottom: 0.013333rem solid #00C693;
+}
+
+.iPhone-bottom-input5 {
+  width: 100%;
+  height: 0.6rem;
+  display: flex;
+  display: -webkit-flex;
+  /*line-height: 30px;*/
+  font-size: 0.4rem;
+  color: #333333;
+  border: 0;
+  background-color: #fff;
+}
+
+.model5-section-iPhone-bottom-fasong {
+  width: 30%;
+  height: 0.586667rem;
+  line-height: 0.586667rem;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 0.32rem;
+  color: #00C693;
+  border: 0.013333rem solid #00C693;
+  border-radius: 0.293333rem;
+  background-color: #fff;
+}
+
+.model5-section-button {
+  width: 100%;
+  height: 1.173333rem;
+  display: flex;
+  align-items: center;
+  background-color: #00C693;
+  padding: 0.053333rem 0.053333rem;
+  box-sizing: border-box;
+  margin-top: 0.8rem;
+  border-radius: 0.586667rem;
+}
+
+.model5-section-button-biank {
+  width: 100%;
+  font-size: 0.4rem;
+  color: #fff;
+  text-align: center;
+  height: 1.066667rem;
+  line-height: 1.066667rem;
+  border: 0.013333rem dashed #fff;
+  border-radius: 0.533333rem;
+}
+
+/*收藏课程  收藏成功*/
+
+.Course-Details-model6 {
+  width: 100%;
+  height: 100%;
+  background: rgba(41,38,39,0.7);
+  z-index: 166;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.model6-section {
+  width: 100%;
+  height: 6.666667rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+.model6-section-image {
+  width: 1.653333rem;
+  height: 1.653333rem;
+  line-height: 1.653333rem;
+  vertical-align: middle;
+}
+
+.model6-section-text {
+  width: 100%;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  font-size: 0.4rem;
+  color: #00C693;
+  text-align: center;
+  margin-top: 0.293333rem;
+}
+
+.Course-Details-section p {
+  width: 100%;
+  line-height: 0.52rem;
+  margin: 0.493333rem 0;
+  font-size: 0.346667rem;
+  color: #171717;
+}
+
+.Course-Details-section p img {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.Course-Details-section h1 {
+  display: block;
+  font-size: 2em;
+  -webkit-margin-before: 0.67em;
+  -webkit-margin-after: 0.67em;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  font-weight: bold;
+}
+
+input[type="radio"] {
+  width: 0.4rem;
+  height: 0.4rem;
+  vertical-align: middle;
+}
+
+.backModal {
+  width: 100%;
+  min-height: 6rem;
+  background: rgba(41,38,39,0);
+}
+
+.backModals {
+  width: 100%;
+  min-height: 10.666667rem;
+  background: rgba(41,38,39,0);
+}
+
+/*弹窗提示*/
+
+.Course-Details-model8 {
+  width: 100%;
+  height: 100%;
+  background: rgba(41,38,39,0.7);
+  z-index: 178;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.model8-section {
+  width: 6.666667rem;
+  height: 3.333333rem;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 4.6rem;
+  border-radius: 0.4rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+.model8-section-input {
+  width: 6.666667rem;
+  height: 1.8rem;
+  font-size: 0.4rem;
+  line-height: 1.8rem;
+  border-bottom: 0.013333rem solid #e4e4e4;
+  text-align: center;
+}
+
+.model8-section-text {
+  width: 100%;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  font-size: 0.4rem;
+  color: #00C693;
+  text-align: center;
+  margin-top: 0.293333rem;
+}

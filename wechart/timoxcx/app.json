@@ -1,0 +1,92 @@
+{
+  "pages": [
+    "pages/keChen/keChen-index/keChen-index",
+    "pages/changGuan/c-Venue/c-Venue",
+    "pages/changGuan/c-VenueItem/c-VenueItem",
+    "pages/index/index",
+ 
+
+  
+    "pages/keChen/purchasecourse/purchasecourse",
+    "pages/keChen/eachclassis/eachclassis",
+
+ 
+
+    
+    "pages/Stadiums-and-stadiums/venue-register/venue-register",
+    "pages/techer/techerPersonal/techerPersonal",
+    "pages/techer/techerEditor/techerEditor",
+    "pages/changGuan/c-Venuescreen/c-Venuescreen",
+    "pages/techer/techer-index/techer-index",
+    "pages/techer/Coach-introduction/Coach-introduction",
+
+    "pages/changGuan/c-Venuecomment/c-Venuecomment",
+    "pages/changGuan/c-VenueOrder-Application/c-VenueOrder-Application",
+    "pages/changGuan/c-VenueOrder-item/c-VenueOrder-item",
+    "pages/changGuan/c-VenueOrder/c-VenueOrder",
+    "pages/changGuan/c-VenueStudent/c-VenueStudent",
+    "pages/changGuan/c-VenueLocation/c-VenueLocation",
+    
+    "pages/new/new-index/news-index",
+    "pages/my/my-order/my-order",
+    "pages/Stadiums-and-stadiums/Venue/Venue",
+    "pages/Stadiums-and-stadiums/lockLesson/lockLesson",
+    "pages/Stadiums-and-stadiums/Cost-query/Cost-query",
+    "pages/Stadiums-and-stadiums/pay/pay",
+    "pages/Stadiums-and-stadiums/erwei/erwei",
+    "pages/Stadiums-and-stadiums/Coaching-information/Coaching-information",
+    "pages/logs/logs",
+    "pages/register/register",
+    "pages/register/registerchengren/register",
+    "pages/course/location/location",
+    
+    "pages/my/systematicnotification/systematicnotification",
+    "pages/keChen/coursedetails/coursedetails"
+    
+    
+  ],
+  "enablePullDownRefresh": true,
+  "window": {
+    "backgroundTextStyle": "#FFF",
+    "navigationBarBackgroundColor": "#00C693",
+    "navigationBarTextStyle": "#00C693"
+  },
+  "tabBar": {
+    "color": "#171718",
+    "selectedColor": "#171718",
+    "backgroundColor": "#F9F9F9",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/keChen/keChen-index/keChen-index",
+        "text": "课程",
+        "iconPath": "image/imgs/keChen.png",
+        "selectedIconPath": "image/imgs/keChen.png"
+      },
+      {
+        "pagePath": "pages/changGuan/c-Venue/c-Venue",
+        "text": "场馆",
+        "iconPath": "image/imgs/changguan.png",
+        "selectedIconPath": "image/imgs/changguan.png"
+      },
+      {
+        "pagePath": "pages/techer/techer-index/techer-index",
+        "text": "教练",
+        "iconPath": "image/imgs/jiaoLians.png",
+        "selectedIconPath": "image/imgs/jiaoLians.png"
+      },
+      {
+        "pagePath": "pages/new/new-index/news-index",
+        "text": "消息",
+        "iconPath": "image/imgs/new-my.png",
+        "selectedIconPath": "image/imgs/new-my.png"
+      },
+      {
+        "pagePath": "pages/my/my-order/my-order",
+        "text": "我的",
+        "iconPath": "image/imgs/my-oder.png",
+        "selectedIconPath": "image/imgs/my-oder.png"
+      }
+    ]
+  }
+}

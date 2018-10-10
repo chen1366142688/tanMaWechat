@@ -1,0 +1,14 @@
+// pages/My/Alter-New-Password/Alter-New-Password.js
+Page({
+  data: {
+  
+  },
+  onLoad: function (options) {},
+  onReady: function () {},
+  onShow: function () {},
+  onHide: function () {},
+  onUnload: function () {},
+  onPullDownRefresh: function () {},
+  onReachBottom: function () {},
+  onShareAppMessage: function () {}
+})

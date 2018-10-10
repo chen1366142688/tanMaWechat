@@ -1,0 +1,81 @@
+<!--这是头部-->
+<view class="c-tou">
+<!--top-->
+  <view class="c-touItem">
+    <view class="c-touIteml">
+        <image class="c-topImg" src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/lanqiu.png'></image>
+        <text class="c-txtt">篮球</text>
+    </view>
+    <view class="c-touItemr">
+      <image class="c-topImg" src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/share.png'></image>
+      <text class="c-txtb">分享</text>
+    </view>
+  </view>
+  <!--bottomo-->
+  <view class="c-information">
+    <image src="http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/userImg.png" class="c-userImg"></image>
+    <view class="c-itemRight">
+      <view class="c-userName">
+        <image class="c-nice" src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/nice.png'></image>
+        <text class="c-name">张翔</text>
+        <image class="c-man" src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/man.png'></image>
+      </view>
+      <view class="c-jiaolian">
+        <image class="c-level" src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/level.png'></image>
+        <text class="c-one-athlete">国家一级运动员</text>
+        <text class="c-one-coach">一级教练</text>
+      </view>
+      <view class="c-hot">
+        <image class="c-hotImg" src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/van-hot.png'></image>
+        <text class="c-hotTxt">4532</text>
+      </view>
+      <view class="c-levels">
+        <image class="c-level-img" src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/level.png'></image>
+        <text class='c-leve-txt'>L3 L4 L5</text>
+         <image class='c-location-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/location.png'></image>
+         <text class='c-location'>四川-成都</text>  
+      </view>
+    </view>
+  </view>
+</view>
+<view class="c-jiao-information">
+  <view class='c-items'>
+    <view class='c-item-inifo'>
+      <text class='c-item-info-txt'>羽毛球 12班 234期班</text>
+      <text class='c-item-title'>课程标算得上是多题课程标题</text>
+      <view class="c-item-status">报名中</view>
+    </view>
+    <view class='c-item-inifo'>
+      <image class='c-user' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/jiao.png'></image>
+      <text class='c-username-text in'>张翔</text>
+      <image class='c-touser' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/total.png'></image>
+      <text class='c-renshu in'>23人已报名</text>
+      <image class='c-date' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/date.png'></image>
+      <text class='c-data-txt in'>2018-02-29 周五 17:23</text>
+    </view>
+     <view class='c-item-inifo c-topBor'>
+      <text class="c-jiaoQin in">缴费情况</text>
+      <text class='c-jiaoFei in'>已在线缴费 （羽毛球 | 2场地 | 3小时 | RMB 300.00）</text>
+     </view>
+  </view>
+  <view class='c-items'>
+    <view class='c-item-inifo'>
+      <text class='c-item-info-txt'>羽毛球 12班 234期班</text>
+      <text class='c-item-title'>课程标算得上是多题课程标题</text>
+      <view class="c-item-status c-item-cancel">开课已取消</view>
+    </view>
+    <view class='c-item-inifo'>
+      <image class='c-user' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/jiao.png'></image>
+      <text class='c-username-text in'>张翔</text>
+      <image class='c-touser' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/total.png'></image>
+      <text class='c-renshu in'>23人已报名</text>
+      <image class='c-date' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/date.png'></image>
+      <text class='c-data-txt in'>2018-02-29 周五 17:23</text>
+    </view>
+     <view class='c-item-inifo c-topBor'>
+      <text class="c-jiaoQin in">缴费情况</text>
+      <text class='c-jiaoFei in'>已在线缴费 （羽毛球 | 2场地 | 3小时 | RMB 300.00）</text>
+     </view>
+  </view>  
+</view>
+<view class="c-fu">直 接 缴 纳 场 馆 费</view>

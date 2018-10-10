@@ -1,0 +1,103 @@
+{
+  "pages": [
+    "pages/Introduction/Introduction",
+    "pages/techer/share-ClassNew/share-ClassNew",
+    "pages/techer/share-Cocah/share-Cocah",
+    "pages/computer/computer",
+    "pages/competition/competition-list/competition-list",
+    "pages/keChen/Notice/Notice",
+    "pages/wx-cropper/index",
+    "pages/User-Feedback/User-Feedback",
+    "pages/welcome/welcomeNo/welcomeNo",
+    "pages/changGuan/c-Venuecomment/c-Venuecomment",
+    "pages/keChen/keChen-index/keChen-index",
+    "pages/register/register",
+    "pages/my/my-index/my-index",
+    "pages/keChen/eachclassis/eachclassis",
+    "pages/changGuan/c-Venuescreen/c-Venuescreen",
+    "pages/my/set/set",
+    "pages/my/newhandhelper/newhandhelper",
+    "pages/my/myrating/myrating",
+    "pages/my/Help-particulars/Help-particulars",
+    "pages/changGuan/c-Venue/c-Venue",
+    "pages/techer/techer-index/techer-index",
+    "pages/changGuan/c-VenueCollection/c-VenueCollection",
+    "pages/new/new-index/news-index",
+    "pages/my/alter-wechat/alter-wechat",
+    "pages/my/accountdetails/accountdetails",
+    "pages/my/systematicnotification/systematicnotification",
+    "pages/keChen/purchasecourse/purchasecourse",
+    "pages/techer/Coach-introduction/Coach-introduction",
+    "pages/new/chitchat/chitchat",
+    "pages/keChen/coursedetails/coursedetails",
+    "pages/course/location/location",
+    "pages/keChen/paymentsuccessfully/paymentsuccessfully",
+    "pages/my/individualresume/individualresume",
+    "pages/changGuan/c-VenueStudent/c-VenueStudent",
+    "pages/changGuan/c-VenueOrder-item/c-VenueOrder-item",
+    "pages/changGuan/c-VenueOrder-Application/c-VenueOrder-Application",
+    "pages/my/alter-site/alter-site",
+    "pages/changGuan/c-VenueOrder/c-VenueOrder",
+    "pages/changGuan/c-VenueLocation/c-VenueLocation",
+    "pages/changGuan/c-VenueItem/c-VenueItem",
+    "pages/techer/techerEditor/techerEditor",
+    "pages/techer/techerPersonal/techerPersonal",
+    "pages/my/alter-phone/alter-phone",
+    "pages/my/myEditor-Personal/myEditor-Personal",
+    "pages/my/alter-Guardian/alter-Guardian",
+    "pages/my/alter-intro/alter-intro",
+    "pages/my/alter-Password/alter-Password",
+    "pages/my/alter-Name/alter-Name",
+    "pages/register/schoolSelect/schoolSelect",
+    "pages/logs/logs",
+    "pages/competition/competition-detail/competition-detail",
+    "pages/competition/competition-html/competition-html",
+    "pages/keChen/marketing-index/marketing-index",
+    "pages/Timetable/Course-record/Course-record",
+    "pages/Timetable/Workshop/Workshop",
+    "pages/Timetable/NewAgenda/NewAgenda",
+    "pages/Timetable/NewClasses/NewClasses",
+    "pages/Timetable/Timetable/Timetable",
+    "pages/Timetable/CourseDetails/CourseDetails"
+  ],
+  "enablePullDownRefresh": true,
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTitleText": "探马",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#ECECEC"
+  },
+  "tabBar": {
+    "color": "#CBCBCB",
+    "selectedColor": "#00C693",
+    "backgroundColor": "#F9F9F9",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/keChen/keChen-index/keChen-index",
+        "text": "首页",
+        "iconPath": "image/iteration/index.png",
+        "selectedIconPath": "image/iteration/indexActive.png"
+      },
+      {
+        "pagePath": "pages/Timetable/Timetable/Timetable",
+        "text": "课表",
+        "iconPath": "image/iteration/Timetable.png",
+        "selectedIconPath": "image/iteration/TimetableActive.png"
+      },
+      {
+        "pagePath": "pages/my/my-index/my-index",
+        "text": "我的",
+        "iconPath": "image/iteration/myIndex.png",
+        "selectedIconPath": "image/iteration/myIndexActive.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 6000,
+    "connectSocket": 6000,
+    "uploadFile": 6000,
+    "downloadFile": 6000
+  }
+}

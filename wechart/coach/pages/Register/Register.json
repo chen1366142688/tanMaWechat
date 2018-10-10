@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "注册",
+  "navigationBarBackgroundColor": "#007587",
+  "navigationBarTextStyle": "#fff",
+  "tabBar": {
+    "color": "#171718",
+    "selectedColor": "#171718",
+    "backgroundColor": "#007587",
+    "borderStyle": "white"
+    }
+}

@@ -1,0 +1,206 @@
+/* pages/Forget-Password/Forget-Password.wxss */
+
+.Forget-Password{
+  width: 750rpx;
+  line-height: 0;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.Forget-Password-background{
+  width: 750rpx;
+  height: 278rpx;
+  line-height: 278rpx;
+  background-color: #4DD0C8;
+  vertical-align: middle;
+  position: absolute;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.Forget-Password-section{
+  width: 702rpx;
+  height: 972rpx;
+  position: relative;
+  top: 96rpx;
+  margin: 0 auto;
+}
+
+.section-Head-Portraits{
+  width: 702rpx;
+  height: 144rpx;
+  line-height: 144rpx;
+  position: absolute;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  z-index: 111;
+}
+
+.Head-Portraits-img{
+  width: 144rpx;
+  height: 144rpx;
+  border-radius: 50%;
+  vertical-align: middle;
+  background-color: #fff;
+}
+
+.Register-section-taber{
+  width: 702rpx;
+  height: 900rpx;
+  position: relative;
+  top: 72rpx;
+  background-color: #fff;
+  border-radius: 30rpx;
+  margin: 0 auto;
+  -moz-box-shadow:2px 2px 5px rgba(0,0,0,0.1);
+  -webkit-box-shadow:2px 2px 5px rgba(0,0,0,0.1);
+  box-shadow:2px 2px 5px rgba(0,0,0,0.1);
+}
+
+.Section-List{
+  width: 702rpx;
+  height: 750rpx;
+  background-color: #fff;
+  padding-top: 110rpx;
+  border-radius: 30rpx;
+}
+
+
+.Register-List-Section-left{
+  width: 460rpx;
+  padding: 122rpx 86rpx 10rpx 126rpx;
+}
+
+.Register-List-Section-one{
+  width: 460rpx; 
+  height: 54rpx;
+  line-height: 54rpx;
+  font-size: 34rpx;
+  margin-top: 40rpx;
+  display: flex;
+  justify-content: space-between;
+  vertical-align: middle;
+}
+
+.List-Section-one-input{
+  width: 420rpx;
+  height: 54rpx;
+  text-align: center;
+  line-height: 54rpx;
+  font-size: 34rpx;
+  color: #333;
+  vertical-align: middle;
+  border-bottom: 1rpx solid #cbcbcb;
+}
+
+.List-Section-one-input-cbcbcb{
+  color: #cbcbcb;
+  border-bottom: 1rpx solid #4DD0C8;
+}
+
+.List-Section-one-img{
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 15rpx;
+  vertical-align: middle;
+  margin-left: 10rpx;
+  margin-top: 24rpx;
+}
+
+.Register-List-Section-two{
+  width: 460rpx; 
+  height: 54rpx;
+  line-height: 54rpx;
+  font-size: 34rpx;
+  margin-top: 40rpx;
+  display: flex;
+  justify-content: space-between;
+  vertical-align: middle;
+}
+.Register-List-Section-twos{
+  width: 460rpx; 
+  height: 54rpx;
+  line-height: 54rpx;
+  font-size: 34rpx;
+  margin-top: 40rpx;
+  display: flex;
+  justify-content: space-between;
+  vertical-align: middle;
+}
+.List-Section-one-input-twos{
+  width: 420rpx;
+  height: 54rpx;
+  text-align: center;
+  line-height: 54rpx;
+  font-size: 34rpx;
+  padding-right: 5rpx;
+  color: #333;
+  vertical-align: middle;
+  border-bottom: 1rpx solid #cbcbcb;
+}
+.List-Section-one-input-two{
+  width: 250rpx;
+  height: 54rpx;
+  text-align: right;
+  line-height: 54rpx;
+  font-size: 34rpx;
+  padding-right: 5rpx;
+  color: #333;
+  vertical-align: middle;
+  border-bottom: 1rpx solid #cbcbcb;
+}
+
+.List-Section-one-text-two{
+  width: 173rpx;
+  height: 54rpx;
+  text-align: left;
+  line-height: 54rpx;
+  font-size: 30rpx;
+  padding-left: 5rpx; 
+  color: #4DD0C8;
+  vertical-align: middle;
+  border-bottom: 1rpx solid #cbcbcb;
+}
+
+.List-Section-one-img-two{
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 15rpx;
+  vertical-align: middle;
+  margin-left: 10rpx;
+  margin-top: 24rpx;
+  opacity: 0
+}
+
+.Register-Submit-left{
+  width: 420rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  vertical-align: middle;
+  margin-top: 224rpx;
+  display: flex;
+}
+
+.Register-Submit-button{
+  width: 420rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  vertical-align: middle;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 30rpx;
+  color: #fff;
+  background-color: #4DD0C8;
+  border-radius: 40rpx;
+}
+/*登录注册*/
+.ok{
+  border-bottom: 1rpx solid #4DD0C8;
+}
+.opacity{
+  opacity: 1;
+}

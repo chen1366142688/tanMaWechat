@@ -1,0 +1,163 @@
+/* pages/Exercise/Project-Summary/Project-Summary.wxss */
+
+.Project-Summary{
+  width: 750rpx;
+  line-height: 0rpx;
+  margin: 0;
+  padding: 0;
+}
+
+.Program-Particulars-section {
+  width: 750rpx;
+  background-color: #fff;
+  padding: 0 24rpx;
+  box-sizing: border-box;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.auxiliary-appliance {
+  width: 100%;
+  height: 86rpx;
+  line-height: 86rpx;
+  vertical-align: middle;
+  font-size: 28rpx;
+  color: #171717;
+  font-weight: bold;
+  text-align: left;
+  border-bottom: 1rpx solid #e4e4e4;
+}
+
+.auxiliary-appliance-section {
+  font-size: 24rpx;
+  color: #999;
+  vertical-align: middle;
+}
+
+.Program-description {
+  width: 100%;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1rpx solid #e4e4e4;
+}
+
+.Program-description-headline {
+  width: 100%;
+  height: 84rpx;
+  line-height: 84rpx;
+  vertical-align: middle;
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #171717;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.Program-description-text {
+  width: 100%;
+  margin-bottom: 30rpx;
+  vertical-align: middle;
+  font-size: 24rpx;
+  color: #999;
+  line-height: 36rpx;
+}
+
+.Training-Principle-img {
+  width: 100%;
+  height: 394rpx;
+  line-height: 394rpx;
+  margin-bottom: 30rpx;
+  vertical-align: middle;
+}
+
+.Taboo-crowd {
+  width: 100%;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border-bottom: 1rpx solid #e4e4e4; */
+}
+
+.patent {
+  width: 100%;
+  background-color: #f4f4f4;
+  border-radius: 10rpx;
+  padding: 0 19rpx;
+  margin-bottom: 49rpx;
+  margin-top: 149rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.patent-img {
+  width: 60rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  vertical-align: middle;
+  position: absolute;
+  left: 321rpx;
+  top: -30rpx;
+}
+
+.patent-text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.patent-text-headline {
+  width: 100%;
+  height: 24rpx;
+  line-height: 24rpx;
+  margin-top: 50rpx;
+  font-size: 24rpx;
+  color: #cbb383;
+  text-align: center;
+}
+
+.patent-text-section {
+  width: 100%;
+  line-height: 36rpx;
+  font-size: 24rpx;
+  margin-top: 17rpx;
+  margin-bottom: 27rpx;
+  color: #cbb383;
+}
+
+.pack-up {
+  width: 100%;
+  height: 24rpx;
+  line-height: 24rpx;
+  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 43rpx;
+}
+
+.pack-up-text {
+  font-size: 24rpx;
+  line-height: 24rpx;
+  height: 24rpx;
+  color: #4dd0c8;
+  vertical-align: middle;
+}
+
+.pack-up-img {
+  width: 20rpx;
+  height: 20rpx;
+  line-height: 20rpx;
+  margin-top: 5rpx;
+  vertical-align: middle;
+  margin-left: 20rpx;
+}

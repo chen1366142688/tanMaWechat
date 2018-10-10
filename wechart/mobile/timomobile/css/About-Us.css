@@ -1,0 +1,289 @@
+@charset "UTF-8";
+body, ul, li, dl, dt, dd, p, ol, h1, h2, h3, h4, h5, h6, form, img, table, fieldset, legend {
+    margin: 0;
+    padding: 0;
+}
+
+ul, li, ol {
+    list-style: none;
+}
+
+img, fieldset {
+    border: 0;
+}
+
+img {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 100;
+}
+
+body {
+    font-family: "微软雅黑";
+    margin: 0;
+    padding: 0;
+}
+
+input, a {
+    outline: none;
+    border: 0;
+}
+
+i {
+    font-style: normal
+}
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+    -webkit-appearance: none;
+}
+
+a, button, input {
+    -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.clearfloat:after {
+    display: block;
+    clear: both;
+    content: "";
+    visibility: hidden;
+    height: 0;
+}
+
+.clearfloat {
+    zoom: 1;
+}
+
+.textOver {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.iLblock {
+    display: inline-block;
+}
+
+/*自定义样式*/
+
+body, html {
+    max-width: 50rem;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+header {
+    width: 100%;
+    height: 38vh;
+}
+
+@media screen and (min-width: 320px) and (max-width: 375px) {
+    header {
+        width: 100%;
+        height: 45vh;
+
+    }
+}
+
+@media screen  and (min-width: 375px)  and (max-width: 414px) {
+    header {
+        width: 100%;
+        height: 38vh;
+
+    }
+}
+
+@media screen and (min-width: 414px) and (max-width: 550px) {
+    header {
+        width: 100%;
+        height: 34vh;
+
+    }
+
+}
+
+@media screen and (min-width: 550px) and (max-width: 689px) {
+    header {
+        width: 100%;
+        height: 28vh;
+
+    }
+}
+
+@media screen and (min-width: 689px) and (max-width: 750px) {
+    header {
+        width: 100%;
+        height: 27vh;
+
+    }
+}
+
+@media screen and (min-width: 750px) and (max-width: 960px) {
+    header {
+        width: 100%;
+        height: 27vh;
+
+    }
+}
+
+@media screen and (min-width: 960px) and (max-width: 1080px) {
+    header {
+        width: 100%;
+        height: 19vh;
+
+    }
+}
+
+section {
+    width: 100%;
+    height: 62vh;
+    overflow: auto;
+}
+
+@media screen and (min-width: 320px) and (max-width: 375px) {
+    section {
+        width: 100%;
+        height: 55vh;
+        overflow: auto;
+    }
+}
+
+@media screen  and (min-width: 375px)  and (max-width: 414px) {
+    section {
+        width: 100%;
+        height: 62vh;
+        overflow: auto;
+    }
+}
+
+@media screen and (min-width: 414px) and (max-width: 550px) {
+    section {
+        width: 100%;
+        height: 66vh;
+        overflow: auto;
+    }
+
+}
+
+@media screen and (min-width: 550px) and (max-width: 689px) {
+    section {
+        width: 100%;
+        height: 72vh;
+        overflow: auto;
+    }
+}
+
+@media screen and (min-width: 689px) and (max-width: 750px) {
+    section {
+        width: 100%;
+        height: 73vh;
+        overflow: auto;
+    }
+}
+
+@media screen and (min-width: 750px) and (max-width: 960px) {
+    section {
+        width: 100%;
+        height: 73vh;
+        overflow: auto;
+    }
+}
+
+@media screen and (min-width: 960px) and (max-width: 1080px) {
+    section {
+        width: 100%;
+        height: 81vh;
+        overflow: auto;
+    }
+}
+
+/*关于探马运动*/
+.ratinginstructionsa {
+    width: 100%;
+    font-size: 0.24rem;
+    height: 40px;
+    color: #fff;
+    font-weight: bold;
+    background-color: #00C693;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-headline {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.headline-img {
+    width: 60px;
+    height: 60px;
+}
+
+.headline-p {
+    /*width: 100%;*/
+    height: 83px;
+    padding-top: 6px;
+    display: flex;
+    justify-content: center;
+}
+
+.headline-p {
+    /*width: 100%;*/
+    font-size: 14px;
+    color: #333;
+}
+
+.caption {
+    /*width: 100%;*/
+    height: 25px;
+    display: flex;
+    padding-left: 12px;
+    font-size: 14px;
+    color: #333;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.About-stion {
+    /*width: 100%;*/
+    padding-left: 12px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-between;
+    color: #333;
+}
+
+.About-stion-bt {
+    font-size: 13px;
+    width: 100%;
+    margin-top: 12px;
+}
+
+.About-stion-nr {
+    width: 100%;
+    margin-top: 3px;
+    font-size: 12px;
+}
+

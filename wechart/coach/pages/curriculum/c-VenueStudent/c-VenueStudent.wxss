@@ -1,0 +1,396 @@
+/* pages/curriculum/c-VenueStudent/c-VenueStudent.wxss */
+page{
+  background: #ececec;
+}
+.topStudent{
+  width:750rpx;
+  height:300rpx;
+  background: #fff;
+  margin-bottom:20rpx;
+}
+.studentImg-content{
+  width: 216rpx;
+  height: 300rpx;
+  box-sizing: border-box;
+}
+.studentImg{
+  width:160rpx;
+  height:160rpx;
+  margin:36rpx 34rpx 0 22rpx;
+}
+.studentText{
+  width:508rpx;
+  padding-right:26rpx;
+  height: 300rpx;
+  line-height: 0;
+}
+.student-name{
+  margin:45rpx 0 39rpx;
+}
+.student-man{
+  width:26rpx;
+  height:26rpx;
+  vertical-align: middle;
+}
+.student-man-name{
+  font-size:30rpx;
+  font-family:PingFang-SC-Bold;
+  color:rgba(51,51,51,1);
+  font-weight: bold;
+  margin:0 26rpx 0 18rpx;
+}
+.student-biao{
+  text-align: center;
+  padding:0 5rpx;
+  height:30rpx;
+  line-height: 30rpx;
+  border:1px solid  rgba(23,23,24,1);
+  border-radius: 5rpx ;
+  font-size:24rpx;
+  font-family:PingFang-SC-Regular;
+  color:rgba(23,23,24,1);
+  vertical-align: middle;
+}
+.student-item{
+  font-size:24rpx;
+  font-family:PingFang-SC-Regular;
+  color:rgba(51,51,51,1);
+  line-height:36rpx;
+}
+.tel-phone{
+  text-align: right;
+  padding-top:30rpx;
+  position: absolute;
+  top:220rpx;
+  right: 30rpx;
+}
+.miniPhone{
+  width:11rpx;
+  height:19rpx;
+  margin-right:12rpx;
+}
+.phoneNumber{
+  font-size:24rpx;
+  font-family:SanFranciscoDisplay-Regular;
+  color:rgba(51,51,51,1);
+}
+
+.thatStudent{
+  width:725rpx;
+  height:88rpx;
+  line-height: 88rpx;
+  font-size: 34rpx;
+  font-weight:bold;
+  font-family:PingFang-SC-Bold;
+  background: #fff;
+  padding-left:25rpx;
+  margin-bottom:2rpx;
+}
+.guangKe{
+  margin-bottom:20rpx;
+}
+.items-jiao{
+  width:702rpx;
+  height:140rpx;
+  background: #fff;
+  padding:0 24rpx;
+  margin-bottom:2rpx;
+  position: relative;
+}
+.item-userImg{
+  display: inline-block;
+  height: 140rpx;
+  line-height: 140rpx;
+  padding-right:14rpx;
+  text-align: center;
+}
+.userImg{
+  width:107rpx;
+  height:107rpx;
+  vertical-align: middle;
+  margin-right:14rpx; 
+   /* margin:18rpx 14rpx 0 23rpx;  */
+}
+
+.item-userTxt{
+  display: inline-block;
+  position: relative;
+  top:30rpx; 
+  width:700rpx;
+  box-sizing: border-box;
+}
+.money{
+  position: absolute;
+  top:-22rpx;
+  right:0;
+  height: 22rpx;
+  line-height: 22rpx;
+}
+.rmb{
+  font-size:18rpx;
+font-family:SanFranciscoDisplay-Regular;
+color:rgba(232,85,113,1);
+margin-right:5rpx;
+}
+.rmbNum{
+  font-size:30rpx;
+font-family:SanFranciscoDisplay-Bold;
+color:rgba(232,85,113,1);
+font-weight: bold;
+}
+.userTxt-top,.userTxt-bottom{
+  line-height: 0;
+}
+.userTxt-top{
+  margin-bottom:10rpx;
+}
+.userA{
+  width:160rpx;
+  border:1rpx solid #171718;
+  text-align: center;
+  height:40rpx;
+  line-height: 40rpx;
+  font-size:22rpx;
+  font-family:PingFang-SC-Regular;
+  border-radius: 5rpx;
+  margin-right:10rpx;
+  position: absolute;
+}
+.userB{
+  font-size:24rpx;
+  height:40rpx;
+  line-height: 40rpx;
+  font-family:PingFang-SC-Bold;
+  color:rgba(51,51,51,1);
+  font-weight: bold;
+  text-overflow: ellipsis;
+  white-space:nowrap;
+  width: 350rpx;
+  overflow:hidden;
+  margin-left:170rpx; 
+}
+.userC{
+  font-size:20rpx;
+  height:40rpx;
+  line-height: 40rpx;
+  font-family:PingFang-SC-Regular;
+  color:rgba(102,102,102,1);
+}
+.txt-A{
+  font-size:24rpx;
+font-family:PingFang-SC-Regular;
+color:#E85571;
+height:40rpx;
+  line-height: 40rpx;
+  margin-right:10rpx;
+}
+.txt-B{
+   font-size:24rpx;
+font-family:PingFang-SC-Regular;
+color:#333;
+height:40rpx;
+  line-height: 40rpx;
+  margin-right:10rpx;
+}
+.userIsman{
+  width:20rpx;
+  height:20rpx;
+  vertical-align: middle;
+  margin-right:10rpx;
+}
+.userNumber{
+  width:14rpx;
+  height:13rpx;
+  vertical-align: middle;
+  margin-right:10rpx;
+}
+.userMum{
+  font-size:24rpx;
+font-family:SanFranciscoDisplay-Regular;
+color:rgba(51,51,51,1);
+height:40rpx;
+  line-height: 40rpx;
+  margin-right:19rpx;
+}
+.userLevelColor{
+  font-size:24rpx;
+font-family:PingFang-SC-Regular;
+color:#333333;
+height:40rpx;
+  line-height: 40rpx;
+  margin-right:17rpx;
+}
+.userLevel{
+  font-size:24rpx;
+font-family:PingFang-SC-Regular;
+color:  #E85571;
+height:40rpx;
+  line-height: 40rpx;
+}
+.hot-show{
+  position: absolute;
+  right: 0rpx;
+  width: 140rpx;
+  float: right;
+  margin-top: -40rpx;
+}
+.hotTwo{
+  width:21rpx;
+  height:21rpx;
+  padding-top: 10rpx;
+  margin-right:7rpx;
+  float: left;
+}
+.hotTwoText{
+  font-size:24rpx;
+  font-family:PingFang-SC-Regular;
+  color:rgba(51,51,51,1);
+  height:40rpx;
+  line-height: 40rpx;
+  float: left;
+}
+.baoMan{
+  color: #999999;
+}
+.baoMan-bo{
+  border:1rpx solid #999999;
+}
+.manLe{
+  width:135rpx;
+  height:115rpx;
+  position: absolute;
+  top:10rpx;
+  right:81rpx;
+}
+.van-itemInfo{
+  width:494rpx;
+  height:87rpx;
+  line-height:87rpx;
+  padding:0 128rpx;
+  background: #fff; 
+  border-bottom:1rpx solid #ececec;
+  display: flex;
+  justify-content: space-between;
+}
+.van-ke,.van-jie{
+  display: inline-block;
+  font-size:30rpx;
+  font-family:PingFang-SC-Regular;
+  color:#007587;
+}
+.van-ac{
+  border-bottom:4rpx solid #007587;
+  color: #007587;
+}
+.van-pask{
+  width:702rpx;
+  height:160rpx;
+  background: #fff;
+  padding:0 25rpx 0 23rpx;
+}
+.student-pask-img{
+  width:55rpx;
+  height:55rpx;
+  vertical-align: bottom;
+  margin-right:37rpx;
+  border-radius: 100rpx;
+}
+.student-pask-name{
+  font-size:20rpx;
+  font-family:PingFang-SC-Bold;
+  color:rgba(51,51,51,1);
+  font-weight: bold;
+}
+.student-itempask{
+  font-size:22rpx;
+  font-family:PingFang-SC-Bold;
+  color:rgba(153,153,153,1);
+  border:1rpx solid rgba(153,153,153,1);
+  border-radius: 5rpx ;
+  padding:0 9rpx;
+  margin-left:13rpx;
+}
+.pask-daBan{
+  position: absolute;
+  font-size:24rpx;
+  font-family:PingFang-SC-Regular;
+  color:rgba(51,51,51,1);
+  margin-left:7rpx;
+  text-overflow: ellipsis;
+  white-space:nowrap;
+  width: 220rpx;
+  overflow:hidden;
+  left:360rpx;
+  padding-top: 16rpx;
+}
+.van-pask-bottom{
+  font-size:24rpx;
+  font-family:PingFang-SC-Bold;
+  color:rgba(51,51,51,1);
+  line-height:36rpx;
+  margin-top:10rpx;
+}
+.van-pask-le{
+  width:615rpx;
+}
+.van-pask-rg{
+  width: 83rpx;
+  height: 119rpx;
+  padding-top:41rpx;
+  text-align: center;
+}
+.can-good{
+  display: block;
+  width:48rpx;
+  height:48rpx;
+  margin: 0 auto;
+}
+.can-text{
+  display: block; 
+  font-size:24rpx;
+  font-family:PingFang-SC-Bold;
+  color:rgba(0,198,147,1);
+  margin-top:14rpx;
+}
+.van-footer{
+  display: block;
+  width: 750rpx;
+  text-align: center;
+  margin:20rpx 0 200rpx 0;
+  font-size:24rpx;
+  font-family:PingFang-SC-Regular;
+  color:rgba(153,153,153,1);
+}
+.van-student-level{
+  width:750rpx;
+  height:224rpx;
+  background: #fff;
+  padding:20rpx 23rpx;
+}
+.level-item{
+  width:161rpx;
+  height:40rpx;
+  border:1rpx solid rgba(0,198,147,1);
+  border-radius: 5px;
+  line-height: 40rpx;
+  font-size:24rpx;
+  font-family:PingFang-SC-Bold;
+  color:rgba(255,255,255,1);
+  margin-right:40rpx;
+}
+.level-basketball{
+  width: 100rpx;
+  height: 40rpx;
+  color: #fff;
+  text-align: center;
+  background: rgba(0,198,147,1);
+}
+.level-bs{
+  width:59rpx;
+  height: 40rpx;
+  color:rgba(0,198,147,1);
+  text-align: center;
+}
+.bottom-line{
+  margin-bottom: 2rpx;
+}

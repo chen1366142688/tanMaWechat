@@ -1,0 +1,85 @@
+page{background-color: #fff;}
+#app{
+  /* padding-top:60rpx; */
+  width: 750rpx;
+} 
+/* .log{
+  display: block;
+  width:369rpx;
+  height: 95rpx;
+  margin: 0 auto 126rpx auto;
+}
+.play{
+  display: block;
+  width:601rpx;
+  height:522rpx;
+  margin:0 0 85rpx 114rpx;
+}
+.information{
+  display: block;
+  width:482rpx;
+  height:138rpx;
+  margin:0 auto 66rpx auto;
+}
+.footer{
+  width: 725rpx;
+  display: flex;
+  justify-content: flex-end;
+  padding-right:25rpx;
+}
+.into{
+  width:112rpx;
+  height:40rpx;
+  background:rgba(203,203,203,1);
+  border-radius:20rpx; 
+  font-size:30rpx;
+  font-family:PingFang-SC-Regular;
+  color:rgba(255,255,255,1);
+  text-align: center;
+  line-height: 40rpx;
+} */
+button{
+  background-color: #ffffff;
+  width: 750rpx;
+  height: 100vh;
+  padding-left:0;
+  padding-right:0;
+}
+button::after {
+  border: none;
+}
+
+.tanma{
+  width: 750rpx;
+  height: 95rpx;
+  line-height: 95rpx;
+  vertical-align: middle;
+  position: fixed;
+  bottom: 119rpx;
+  margin: 0 auto;
+  display: flex;
+}
+.goInto{
+  width:160rpx;
+  height:50rpx;
+  line-height: 50rpx;
+  background: #fff;
+  color: #333;
+  text-align: center;
+  border:1rpx solid #e4e4e4;
+  border-radius: 30rpx;
+  position: absolute;
+  top: 80rpx;
+  right:30rpx;
+  font-size: 24rpx;
+}
+
+.swiper {
+  width: 100%;
+  height: 100vh;
+}
+
+.slide-image {
+  width: 100%;
+  height: 100%;
+}

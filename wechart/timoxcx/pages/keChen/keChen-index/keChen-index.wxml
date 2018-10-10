@@ -1,0 +1,408 @@
+<view class='c-header clearfloat' wx:if="{{showHeader}}">
+  <view class='c-fujin'>
+    <image class='cou-positiona' src='{{url}}yizhouroada.jpg'></image>
+    <text class='fujinTxt textOver'>{{location.address}}</text>
+    <view class='course-head-ab {{coursepersona}}' bindtap='kecheng' data-val='1'>训练课程</view>
+    <view class='course-head-ac kec-tertoupb {{coursepersonbnotice}}' bindtap='kecheng' data-val='2'>开课通知</view>
+    <image src='{{url}}cou-notice-imga.jpg' class='kecc-noticepointa'></image>
+  </view>
+  <image src='{{url}}kecc-noticepointb.jpg' class='kecc-noticepointba' bindtap='Scavenging'></image>
+</view>
+
+<view hidden='{{trainingcourse}}'>
+  <!--记号第一个-->
+  <!--第二块-->
+  <view class='fenBox' wx:if="{{show !=''}}">
+    <view class='fenItem' wx:for="{{urls}}" data-id='{{item.itemId}}' bindtap='fenItemList'>
+      <image class='itemImg' src='{{item.itemPhotoAddress}}'></image>
+      <text class='c-zuqiu'>{{item.itemName}}</text>
+    </view>
+  </view>
+  <!--滑动时的样式-->
+  <view class='{{modal}}' bindtap='hideModal'>
+    <scroll-view wx:if="{{showScroll != ''}}" class='scroll-active' style='width:723rpx; white-space: nowrap; display: flex' scroll-x='true'>
+      <view class='fenleiOne-scroll' wx:for="{{urls}}">
+        <image class='itemImg-scroll' src='{{item.itemPhotoAddress}}'></image>
+        <text class='c-zuqiu-scroll'>{{item.itemName}}</text>
+      </view>
+
+    </scroll-view>
+    <view class='can-fujin' wx:if="{{showchang != ''}}">
+      <text class='can-txt'>附近场馆</text>
+      <image class='sure' src='{{url}}sure.png'></image>
+    </view>
+    <view class='can-sousuo-con' wx:if="{{showchang != ''}}">
+      <input value='' type='text' placeholder='搜索本地' class='can-sousuo' placeholder-class='cansoso'></input>
+    </view>
+  </view>
+  <!--课程类型-->
+  <view class="page" wx:if="{{showStore}}">
+    <!--页头-->
+    <view class="page__bd">
+      <view class="btn-area">
+        <view class='l-stop-trainb-nava'>
+          <view class='l-trainb-nava' bindtap='showChirden' data-show="1">
+            <view class='k-train-head-namea k-active-dowd'>课程类型</view>
+            <view class='k-train-head-nameb' hidden='{{top}}'></view>
+            <!--向下-->
+            <view class='k-name-downwardc' hidden='{{down}}'></view>
+          </view>
+          <view class='l-trainb-nava' bindtap='showChirden' data-show="2">
+            <view class='k-train-head-namea'>附近场馆</view>
+            <view class='k-train-head-nameb'></view>
+          </view>
+          <view class='l-trainb-nava' bindtap='showChirden' data-show="3">
+            <view class='k-train-head-namea'>人气排名</view>
+            <view class='k-train-head-nameb'></view>
+          </view>
+          <view class='l-trainb-nava' bindtap='showChirden' data-show="4">
+            <view class='k-train-head-namea'>价格</view>
+            <view class='k-train-head-nameb'></view>
+          </view>
+        </view>
+
+        <view class="k-act-dowa" wx:if="{{showItems}}" data-val="1" bindtap='bindSure'>
+          <view class="k-act-dowb">
+            <view class="k-act-dowc">
+              <view>全部</view>
+            </view>
+            <view class="k-act-dowd">
+              <image class='k-act-dowe' wx:if="{{showSure1}}" src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/sure.png'></image>
+            </view>
+          </view>
+        </view>
+        <view class="k-act-dowa" wx:if="{{showItems}}" data-val="2" bindtap='bindSure'>
+          <view class="k-act-dowb">
+            <view class="k-act-dowc">
+              <view>大课</view>
+            </view>
+            <view class="k-act-dowd">
+              <image class='k-act-dowe' wx:if="{{showSure2}}" src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/sure.png'></image>
+            </view>
+          </view>
+        </view>
+        <view class="k-act-dowa" wx:if="{{showItems}}" data-val="3" bindtap='bindSure'>
+          <view class="k-act-dowb">
+            <view class="k-act-dowc">
+              <view>私教</view>
+            </view>
+            <view class="k-act-dowd">
+              <image class='k-act-dowe' wx:if="{{showSure3}}" src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/sure.png'></image>
+            </view>
+          </view>
+        </view>
+
+      </view>
+    </view>
+    <!--主体-->
+  </view>
+
+  <!--课程类型end-->
+  <!--第三块-->
+  <scroll-view class='scrollBox' style='height:{{height}}rpx;' scroll-y bindscroll='scroll' upper-threshold='02' bindscrolltoupper='scrolltoupper' scroll-top="{{scrollTop}}">
+    <!--第四-->
+    <view class='vanThree' wx:for="{{keChenInfo}}">
+      <view class='van-bannerceca' style="background:url('{{item.coachPhotoAddress}}');background-size:cover;background-repeat: no-repeat;">
+        <view>
+          <image class='hot-img-clasa hot-img-clasaaf' src='{{url}}canexperience.png' wx:if="{{item.classExperience }}"></image>
+        </view>
+        <view class='van-banner-item' data-classId="{{item.classId }}">
+          <image class='hot-img-clasa' src='{{item.coachPhotoAddress }}'></image>
+          <view class='van-text'>
+            <text class='van-city'>主教练 {{item.classCoach  }}</text>
+            <image class='img-clasboy' wx:if="{{item.coachSex == 1}}" src='{{url}}boy.png'></image>
+            <image class='img-clasboy' wx:else src='{{url}}girl.png'></image>
+            <text class='van-name'>助教 {{item.classTutor }}</text>
+          </view>
+          <view style="height:40px;" class='van-hot van-hot-keca' data-storeId="{{item.storeId }}" bindtap='studentStore'>
+            <view class='van-kecab-a'>
+              <image class='hot-img-clasb' data-storeId="{{item.storeId }}" wx:if="{{item.storeStatus == 1}}" src='{{url}}collect.png'></image>
+
+              <image class='hot-img-clasb' data-storeId="{{item.storeId }}" wx:else src='{{url}}havenotcollect.png'></image>
+            </view>
+            <view class='van-kecab-colb'>
+              <text class='van-hot-num'>收藏</text>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view class='van-sc'>
+        <scroll-view class='van-scroll'>
+          <view class="van-topclassa">
+            <view class="van-topclassb">
+              <view class="van-topclassc">{{item.itemName }}</view>
+              <view class='van-topclassd'>{{item.maxMember }}人班</view>
+            </view>
+            <view class="van-topclassba">
+              <view class='van-class-titlea single-line'>
+                {{item.className }}
+              </view>
+              <view>
+                <view class='van-left van-terms-classa'>
+                  <image class='van-timesa-img' src='{{url}}times.png'></image>
+                  <text class='van-terms-class-d'>{{item.lastAttendPeriod }}期</text>
+                  <image class='van-timesb-img' src='{{url}}peoplecounting.png'></image>
+                  <text class='van-left-txt van-terms-class-c'>{{item.signUpMember  }}人</text>
+                  <text class="van-terms-class-d">适合等级 {{item.itemStudentGrade }}  </text>
+                  <image class='van-left-img' src='{{url}}van-hot.png'></image>{{item.popularity }}
+                </view>
+              </view>
+
+            </view>
+          </view>
+        </scroll-view>
+      </view>
+      <view class='van-location'>
+        <view class='van-left van-terms-classf'>
+          <image class='van-left-img' src='{{url}}van-backlocation.png'></image>
+          <text class='van-left-txt'>{{item.homeName }}</text>
+        </view>
+        <view class='van-right'>
+          <view class='van-left-txt'>
+            <view class='van-rmba'>
+              <text class='van-rmbb-smal'>RMB</text>
+              <text class='van-rmbc'>{{item.courseCostTotal  }}</text>
+            </view>
+            <view class='van-rmbe'>{{item.courseCount }}课时/{{item.courseTime }}h</view>
+          </view>
+        </view>
+      </view>
+      <view class='van-rmbf kec-box-terms' wx:if="{{item.signUpOver == 1}}">
+        <view class='kec-termsa'>
+          <view class='circle-a'></view>
+          <view class='circle-b circle-six'></view>
+          <view class='circle-c circle-six'></view>
+          <view class='kec-maina circle-wholea'>该课程已报满！</view>
+          <view class='circle-c'></view>
+          <view class='circle-b circle-six'></view>
+          <view class='circle-a circle-six'></view>
+        </view>
+      </view>
+    </view>
+    <!--第三套end -->
+    <text class='van-over'>{{lastFoot}}</text>
+    <image class='van-sticka' src='{{url}}stick.png' bindtap='toTop'></image>
+  </scroll-view>
+</view>
+
+<!--开课通知 start-->
+<view class="c-jiao-information" hidden='{{noticecoursetab}}'>
+  <view class='c-items-xcxa'>
+    <view class='c-item-inifo'>
+      <text class='c-item-info-txt'>羽毛球 12班 234期班</text>
+      <text class='c-item-title'>张翔青少年羽毛球集训营</text>
+      <view class="c-item-status">报名中</view>
+    </view>
+    <view class='c-item-inifo'>
+      <image class='c-user' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/redcoach.png'></image>
+      <text class='c-username-text in'>张翔</text>
+      <image class='l-cdcenter-posa' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/red-location.png'></image>
+      <text class='c-username-text in'>成都体育中心</text>
+      <image class='c-touser-xcxa' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/red-total.png'></image>
+      <text class='c-renshu in'>23人已报名</text>
+      <image class='c-touser-xcxb' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/more.png'></image>
+      <image class='c-date' src='../../../image/imgs/date.png'></image>
+      <text class='c-data-txt in'>1课时</text>
+      <view>
+        <text class='c-data-txt in'><text class="c-data-timea">开课时间</text> 2018-02-29 周五 17:23</text>
+      </view>
+      <view>
+        <view class='c-item-inifo c-topBor'>
+          <view class='l-cdcenter-posc l-stop-a'>暂停课程</view>
+          <view class='l-cdcenter-posc l-stop-b'>联系教练</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='c-items-xcxa'>
+    <view class='c-item-inifo'>
+      <text class='c-item-info-txt'>羽毛球 12班 234期班</text>
+      <text class='c-item-title'>张翔青少年羽毛球集训营</text>
+      <view class="c-item-status c-item-apply">开课已报名</view>
+    </view>
+    <view class='c-item-inifo'>
+      <image class='c-user' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/redcoach.png'></image>
+      <text class='c-username-text in'>张翔</text>
+      <image class='l-cdcenter-posa' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/red-location.png'></image>
+      <text class='c-username-text in'>成都体育中心</text>
+      <image class='c-touser-xcxa' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/red-total.png'></image>
+      <text class='c-renshu in'>23人已报名</text>
+      <image class='c-touser-xcxb' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/more.png'></image>
+      <image class='c-date' src='../../../image/imgs/date.png'></image>
+      <text class='c-data-txt in'>1课时</text>
+      <view>
+        <text class='c-data-txt in'><text class="c-data-timea">开课时间</text> 2018-02-29 周五 17:23</text>
+      </view>
+      <view>
+        <view class='c-item-inifo c-topBor'>
+          <view class='l-cdcenter-posc l-stop-b'>联系教练</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='c-items-xcxa'>
+    <view class='c-item-inifo'>
+      <text class='c-item-info-txt'>羽毛球 12班 234期班</text>
+      <text class='c-item-title'>张翔青少年羽毛球集训营</text>
+      <view class="c-item-status c-item-cancel">开课已取消</view>
+    </view>
+    <view class='c-item-inifo'>
+      <image class='c-user' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/redcoach.png'></image>
+      <text class='c-username-text in'>张翔</text>
+      <image class='l-cdcenter-posa' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/red-location.png'></image>
+      <text class='c-username-text in'>成都体育中心</text>
+      <image class='c-touser-xcxa' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/red-total.png'></image>
+      <text class='c-renshu in'>23人已报名</text>
+      <image class='c-touser-xcxb' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/more.png'></image>
+      <image class='c-date' src='../../../image/imgs/date.png'></image>
+      <text class='c-data-txt in'>1课时</text>
+      <view>
+        <text class='c-data-txt in'><text class="c-data-timea">开课时间</text> 2018-02-29 周五 17:23</text>
+      </view>
+      <view>
+        <view class='c-item-inifo c-topBor'>
+          <view class='l-cdcenter-posc l-stop-b'>联系教练</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- lessoinform 开课通知 end-->
+
+<!-- 开课通知弹窗提示 start
+01课程-04（大班）开班通知 
+ -->
+<!-- 拨打教练电话-->
+
+<!--
+<view class="modal-mask" bindtap="hideModalcourse" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view wx:if="{{showModal}}">
+  <view class="modal-dialog">
+    <view class="modal-title">
+      <text decode="{{true}}" space="{{true}}">开&nbsp;课&nbsp;通&nbsp;知</text>
+    </view>
+    <view class="modal-content">
+      <view>
+        <text class='les-mod-buya'>您购买的 <text class='les-mod-buyb buybperson' decode="{{true}}" space="{{true}}">羽毛球 234期班</text> 12人班开课啦！</text>
+      </view>
+      <view>
+        <text class='les-mod-buyc' >本期开课时间：2018-02-09（周五） 17:30</text>
+      </view>
+      <view class='les-mod-buyd'>
+        <view class='textOver les-mod-balla'>课程标题毛球羽毛球羽毛球羽毛球羽毛球羽毛球</view>
+        <view class='les-mod-noticeb'>
+          <image class='iLblock les-mod-postionb c-user' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/redcoach.png'></image>
+          <text class='iLblock'>
+           张翔 
+         </text>
+          <image class='iLblock les-mod-postiona' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/red-location.png'></image>
+          成都体育中心
+          <image class='iLblock c-touser-xcxper-gievename' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/red-total.png'></image>
+          23 人已报名
+          <image class='iLblock van-left-img-person' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/van-date.png'></image>
+          1课时          
+        </view>
+      </view>
+    </view>
+    <view class="modal-footer">
+      <view class='les-modal-close-stopa'>
+        <view class="btn-confirm" bindtap="callphone" data-status="confirm">联系教练</view>
+        
+        <view class="btn-confirm-les-modal-close-stop btn-confirm-les-modal-close-stopb" bindtap="" data-status="confirm">暂停</view>
+      </view>
+    </view>
+  </view>
+
+  <view class='modal-btn' bindtap="onCancel" data-status="cancel">
+    <image class='les-modal-close-loseimg' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/close.png'></image>
+  </view>
+</view>
+-->
+<!--开课通知弹窗提示 end-->
+
+<!-- 
+01课程-04（大班）-暂停课程 start
+ -->
+<view class="modal-mask" bindtap="hideModalcourse" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view wx:if="{{showModal}}">
+  <view class="modal-dialog">
+    <view class="modal-title">
+      <text decode="{{true}}" space="{{true}}">开&nbsp;课&nbsp;通&nbsp;知</text>
+    </view>
+    <view class="modal-content">
+      <view  class='les-mod-ballb'>
+        <text  decode="{{true}}">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 课程暂停申请需要教练方确认，课程暂停后，您将不会收到本课程的所有开课通知，如需要恢复请联系教练操作。确定暂停本课程吗？
+        <!--01课程-05收藏课程-->
+        <!--取消本次开课后，您需要联系教练确认下次开班的时间，确定取消吗？-->
+        </text>
+      </view>
+
+    </view>
+    <view class="modal-footer">
+      <view class='les-modal-close-stopa'>
+        <view class="btn-confirm" bindtap="">上一步</view>
+       <view class="btn-confirm-les-modal-close-stop btn-confirm-les-modal-close-stopb" bindtap="" data-status="">暂停</view>
+       <!--<view class="btn-confirm-les-modal-close-stop btn-confirm-les-modal-close-stopb" bindtap="" data-status="">确定取消</view>-->
+      </view>
+    </view>
+  </view>
+
+  <view class='modal-btn' bindtap="onCancel" data-status="cancel">
+    <image class='les-modal-close-loseimg' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/close.png'></image>
+  </view>
+</view>
+<!-- 
+01课程-04（大班）-暂停课程 end
+ -->
+
+
+<!-- 
+01课程-04（私教）开班通知 start
+ -->
+<!-- 
+<view class="modal-mask" bindtap="hideModalcourse" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view wx:if="{{showModal}}">
+  <view class="modal-dialog">
+    <view class="modal-title">
+      <text decode="{{true}}" space="{{true}}">开&nbsp;课&nbsp;通&nbsp;知</text>
+    </view>
+    <view class="modal-content">
+      <view>
+        <text class='les-mod-buya'>您购买的 <text class='les-mod-buyb buybperson' decode="{{true}}" space="{{true}}">羽毛球 234期班</text>私教课程开课啦！</text>
+      </view>
+      <view>
+        <text class='les-mod-buyc' >本期开课时间：2018-02-09（周五） 17:30</text>
+      </view>
+      <view class='les-mod-buyd'>
+        <view class='textOver les-mod-balla'>课程标题毛球羽毛球羽毛球羽毛球羽毛球羽毛球</view>
+        <view class='les-mod-noticeb'>
+          <image class='iLblock les-mod-postionb c-user' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/redcoach.png'></image>
+          <text class='iLblock'>
+           张翔 
+         </text>
+          <image class='iLblock les-mod-postiona' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/red-location.png'></image>
+          成都体育中心
+          <image class='iLblock van-left-img-person' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/van-date.png'></image>
+          1课时
+        </view>
+      </view>
+    </view>
+    <view class="modal-footer">
+      <view class='les-modal-close-stopa'>
+        <view class="btn-confirm" bindtap="callphone" data-status="confirm">联系教练</view>
+        <view class="btn-confirm-les-modal-close-stop btn-confirm-les-modal-close-stopb" bindtap="" data-status="confirm">取消</view>
+      </view>
+    </view>
+  </view>
+
+  <view class='modal-btn' bindtap="onCancel" data-status="cancel">
+    <image class='les-modal-close-loseimg' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/close.png'></image>
+  </view>
+</view>
+-->
+<!-- 
+01课程-04（私教）开班通知 end
+ -->

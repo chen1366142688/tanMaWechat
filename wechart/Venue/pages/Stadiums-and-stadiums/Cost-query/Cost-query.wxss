@@ -1,0 +1,98 @@
+page {
+  background: #ececec;
+}
+
+.c-query {
+  width: 702rpx;
+  /*height:210rpx;*/
+  margin: 20rpx auto;
+  background: #fff;
+}
+
+.c-queryBox {
+  height: 27rpx;
+  line-height: 27rpx;
+}
+
+.c-totaltext {
+  width: 192rpx;
+  height: 27rpx;
+  font-size: 28rpx;
+  font-family: PingFang-SC-Bold;
+  color: rgba(51, 51, 51, 1);
+  line-height: 27rpx;
+  margin-right: 21rpx;
+  font-weight: bold;
+}
+
+.c-query-total {
+  padding: 21rpx 14rpx 21rpx 26rpx;
+  border-bottom: 2rpx solid #ececec;
+}
+
+.c-total-money {
+  width: 196rpx;
+  height: 22rpx;
+  font-size: 28rpx;
+  font-family: PingFang-SC-Bold;
+  color: rgba(232, 85, 113, 1);
+  line-height: 22rpx;
+  font-weight: bold;
+}
+
+.c-query-date {
+  width: 160rpx;
+  height: 30rpx;
+  text-align: right;
+  font-size: 22rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(51, 51, 51, 1);
+  line-height: 30rpx;
+}
+
+.c-query-qiu {
+  height: 20rpx;
+  line-height: 20rpx;
+  padding: 25rpx 14rpx 25rpx 28rpx;
+  border-bottom: 2rpx solid #ececec;
+}
+
+.c-query-bus {
+  border-bottom: 0;
+}
+
+.c-yumao {
+  height: 30rpx;
+  font-size: 24rpx;
+  font-family: PingFang-SC-Bold;
+  color: rgba(51, 51, 51, 1);
+  font-weight: bold;
+}
+
+.c-query-pmb {
+  height: 30rpx;
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(51, 51, 51, 1);
+}
+
+.van-over {
+  display: block;
+  width: 200rpx;
+  height: 23rpx;
+  padding-bottom: 20rpx;
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(153, 153, 153, 1);
+  text-align: center;
+  margin: 0 auto;
+}
+
+.van-sticka {
+  width: 70rpx;
+  height: 70rpx;
+  position: fixed;
+  bottom: 30rpx;
+  right: 20rpx;
+  z-index: 9998;
+}

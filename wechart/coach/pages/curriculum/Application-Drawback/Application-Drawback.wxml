@@ -1,0 +1,51 @@
+<!--pages/curriculum/Application-Drawback/Application-Drawback.wxml-->
+<view class='order-item-one'>
+     <view class='order-state clearfloat'>
+
+        <view class='order-numbers fl'>
+          <view class='order-numbers-top'>
+            <text class='order-renshu'>羽毛球 12人班</text>
+            <text class='order-title'>羽毛球大班课程标题羽毛球大班课程标题羽毛..</text>
+          </view>
+          <view class='order-numbers-bottom'>
+            <image class='order-name-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coach/public/Number-of-people.png'></image>
+            <text class='order-name-jiao iLblock'>张翔</text>
+            <image class='order-man-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/blackboy.png'></image>
+            <image class='order-qishu-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coach/curriculum/frequency.png'></image>
+            <text class='order-qushu-txt'>233期</text>
+            <image class='order-qishu-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coach/particulars/grade.png'></image>
+            <text class='order-level-txt'>L1 L2 L3</text>
+          </view>
+        </view>
+     </view>
+     <view class='order-item-keshi clearfloat'>
+        <view class='order-total-keshi fl'><text class='strong'>10</text>课时/1.5h</view>
+        <view class='order-total-shenyu fr'>剩余<text class='strongs'>10</text>课时<text class='yu-money'>（课程余额RMB 5000.00）</text></view>
+     </view>
+  </view>
+  <view class='tuifei'>退费计算</view>
+  <view class='jisuan-money'>
+    <view class='jisuanA clearfloat'>
+      <text class='shifu fl'>实付课程费用</text>
+      <text class='shifu-money fr'>RMB 5000.00</text>
+    </view>
+    <view class='jisuanB clearfloat'>
+      <text class='shifu fl'>退款扣费</text>
+      <text class='shifu-money fr'>-RMB 600.00</text>
+    </view>
+    <view class='jisuanC clearfloat'>
+      <text class='shifu fl'>实际退款金额</text>
+      <text class='shifu-moneys fr'>RMB<text id='strongs'>4400.00</text></text>
+    </view>
+  </view>
+  <view class='weChat clearfloat'>
+    <text class='callBackWechat fl'>退回微信账号</text>
+    <text class='weChat-num fr'>13779586485</text>
+  </view>
+  <view class='weChat clearfloat'>
+    <text class='callBackWechat fl'>交易密码</text>
+    <text class='weChat-pwd fr'>*********</text>
+  </view>
+  <text class='zhuming'>*所有退款申请需要经过后台人工审核，通过后，会在24小时内到账。</text>
+  <button class='settle-accounts' bindtap='subBtn'>确认无误，提交申请</button>
+

@@ -1,0 +1,14 @@
+<!--pages/my/alter-phone/alter-phone.wxml-->
+<view class='alter-Name'>
+  <input class="input1" wx:if="{{showType == 'old'}}" value='{{phone}}' disabled  />
+  <input class="input1" wx:if="{{showType == 'new'}}" name="userName" value='' placeholder="请输入新的手机号码！" bindinput="userNameInput" />
+  <view class='Send'>
+    <image class='Send-img' src='{{url}}student/senda.png' wx:if="{{code}}" bindtap='sendCode'></image>
+    <text style='color:#fff;font-size:30rpx;'  wx:if="{{!code}}">{{thisTime}}s</text>
+  </view>
+</view>
+<view class='alter-Password'>
+  <input class="input" name="userName" value='{{userCode}}' placeholder="请输入验证码" bindinput="userCode" />
+</view>
+
+<button class='settle-accounts' bindtap='sunMit'>保  存</button>

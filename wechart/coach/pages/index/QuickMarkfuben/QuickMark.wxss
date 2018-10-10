@@ -1,0 +1,73 @@
+/* pages/index/QuickMark/QuickMark.wxss */
+
+page {
+  background-color: #e4e4e4;
+}
+
+.QuickMark {
+  width: 750rpx;
+  margin: 0 auto;
+  padding: 0rpx;
+}
+
+.QuickMark-T {
+  width: 360rpx;
+  height: 360rpx;
+  line-height: 360rpx;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 241rpx;
+  background-color: #fff;
+}
+
+.QuickMark-T-N {
+  width: 321rpx;
+  height: 321rpx;
+  margin: 0 auto;
+  position: absolute;
+  top: 21rpx;
+  left: 21rpx;
+}
+
+.QuickMark-M {
+  width: 360rpx;
+  height: 88rpx;
+  margin: 0 auto;
+  margin-top: 40rpx;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 44rpx;
+}
+
+.QuickMark-M-N {
+  width: 352rpx;
+  height: 80rpx;
+  margin: 0 auto;
+  padding-top: 4rpx;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 40rpx;
+  border: 1px solid #007587;
+  border-style: dashed;
+}
+
+.chief-coach {
+  width: 70rpx;
+  height: 22rpx;
+  margin-left: 37rpx;
+  font-size: 24rpx;
+  color: rgba(51, 51, 51, 1);
+}
+
+.Name {
+  width: 76rpx;
+  height: 38rpx;
+  margin-left: 34rpx;
+  font-size: 40rpx;
+  color: rgba(51, 51, 51, 1);
+  line-height: 80rpx;
+}
+
+.gender{
+  width: 38rpx;
+  height: 37rpx;
+  margin-left: 57rpx;
+}

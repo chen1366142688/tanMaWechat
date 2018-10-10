@@ -1,0 +1,79 @@
+const formatTime = date => {
+  const year = date.getFullYear()
+  const month = date.getMonth() + 1
+  const day = date.getDate()
+  const hour = date.getHours()
+  const minute = date.getMinutes()
+  const second = date.getSeconds()
+
+  return [year, month, day].map(formatNumber).join('/') + ' ' + [hour, minute, second].map(formatNumber).join(':')
+}
+
+const formatNumber = n => {
+  n = n.toString()
+  return n[1] ? n : '0' + n
+}
+
+let appUrl = getApp().globalData.url
+// let appUrl = "../pages/"
+// 发送请求
+let http = (url , data, method, s,that,f) => {
+  if (method == "GET"){
+    var newkey = Object.keys(data).sort()
+    var newData = {};
+    var arr = [];
+    for (let i = 0; i < newkey.length; i++) {
+      newData[newkey[i]] = data[newkey[i]];
+      // arr.push({ newData.newkey[i] : data[newkey[i]]})
+    }
+    // console.log(newData)
+    // url = appUrl + url + JSON.stringify(data)
+    // data = ""
+  }else{
+    // url = appUrl + url
+  }
+  wx.request({
+    url: appUrl + url,
+    method : method,
+    header : {"token" : wx.getStorageSync("token").token},
+    // header: { "token": "310c6b39c8570975f79e6eab92a01c88" },
+    data : data,
+    success : (res)=>{
+      if (res.data.code == 10000){
+         s(that,res.data.response)
+      }else{
+        if (f){
+          return f(that,res.data.response)
+        }
+        wx.showToast({
+          title: res.data.msg,
+          icon: 'none'
+        })
+      }
+    },
+    fail: function (info) {
+      wx.showModal({
+        title: '提示',
+        content: '网络请求失败！',
+      });
+    }
+  })
+}
+
+
+
+
+
+
+
+
+
+
+
+// 暴露这个文件里面的函数
+module.exports = {
+  formatTime: formatTime,
+  http: http
+}
+
+

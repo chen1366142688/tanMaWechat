@@ -1,0 +1,244 @@
+/* pages/curriculum/Modification/Modification.wxss */
+
+.Modification {
+  width: 702rpx;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  background-color: #fff;
+}
+
+.Modification-header {
+  width: 702rpx;
+}
+
+.header {
+  width: 702rpx;
+  height: 150rpx;
+  border-bottom: 1rpx dashed #e4e4e4;
+}
+
+.header-one {
+  width: 662rpx;
+  margin: 0 auto;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+.headline-one {
+  width: 160rpx;
+  height: 40rpx;
+  border: 1rpx solid #333;
+  color: #333;
+  text-align: center;
+  line-height: 40rpx;
+  font-size: 22rpx;
+  margin-top: 26rpx;
+  float: left;
+}
+
+.headline-two {
+  width: 460rpx;
+  height: 70rpx;
+  margin-top: 10rpx;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 24rpx;
+  color: #333;
+  float: right;
+}
+
+.content-section {
+  display: inline-block;
+  width: 662rpx;
+  height: 80rpx;
+  vertical-align: middle;
+}
+
+.l-cdcenter-posa {
+  width: 20rpx;
+  height: 20rpx;
+  margin-left: 20rpx;
+}
+
+.l-cdcenter-po {
+  width: 20rpx;
+  height: 20rpx;
+  margin-left: 10rpx;
+}
+
+.c-username-text {
+  font-size: 24rpx;
+  margin-left: 10rpx;
+  color: rgba(102, 102, 102, 1);
+}
+
+.c-touser-xcxa {
+  width: 20rpx;
+  height: 20rpx;
+  margin: 0rpx 12rpx 0rpx 22rpx;
+}
+
+.c-renshu {
+  font-size: 24rpx;
+  color: rgba(102, 102, 102, 1);
+}
+
+.c-touser-xcxb {
+  width: 20rpx;
+  height: 20rpx;
+  margin-left: 10rpx;
+}
+
+/*  剩余课时  */
+
+.period {
+  width: 702rpx;
+  height: 68rpx;
+  line-height: 68rpx;
+}
+
+.period-Z {
+  width: 200rpx;
+  height: 68rpx;
+  line-height: 68rpx;
+  font-size: 24rpx;
+  color: #333;
+  float: left;
+  margin-left: 20rpx;
+}
+
+.blue {
+  color: #00b6d6;
+}
+
+.period-Y {
+  width: 400rpx;
+  float: right;
+  text-align: right;
+  margin-right: 20rpx;
+  font-size: 24rpx;
+  color: #333;
+}
+
+.frequency {
+  color: #e40011;
+}
+
+.little {
+  font-size: 20rpx;
+}
+
+/*  修改剩余课时  */
+
+.adjustment {
+  width: 702rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  background-color: #fff;
+  margin: 0 auto;
+  margin-top: 20rpx;
+}
+
+.comment-l {
+  width: 150rpx;
+  float: left;
+  font-size: 30rpx;
+  margin-left: 20rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(51, 51, 51, 1);
+}
+
+.comment-r {
+  float: right;
+  height: 88rpx;
+  line-height: 88rpx;
+}
+
+/*  下拉  */
+
+.select_box {
+  background: #fff;
+  width: 80%;
+  height: 88rpx;
+  line-height: 88rpx;
+  position: relative;
+  z-index: 555;
+}
+
+.select {
+  box-sizing: border-box;
+  width: 180rpx;
+  height: 88rpx;
+  border-radius: 8rpx;
+  display: flex;
+  align-items: center;
+}
+
+.select_text {
+  font-size: 30rpx;
+  flex: 1;
+  margin-left: 20rpx;
+}
+
+.select_img {
+  width: 11rpx;
+  height: 21rpx;
+  line-height: 88rpx;
+  display: block;
+  margin-right: 20rpx;
+  transition: transform 0.3s;
+}
+
+.select_img_rotate {
+  transform: rotate(180deg);
+}
+
+.option_box {
+  position: absolute;
+  top: 70rpx;
+  width: 180rpx;
+  box-sizing: border-box;
+  height: 0;
+  overflow-y: auto;
+  border-top: 0;
+  background: #fff;
+  transition: height 0.3s;
+}
+
+.option {
+  display: block;
+  line-height: 40rpx;
+  font-size: 30rpx;
+  border-bottom: 1px solid #efefef;
+  padding: 10rpx;
+}
+
+/*  提示  */
+
+.hint {
+  width: 702rpx;
+  height: 48rpx;
+  margin: 0 auto;
+  line-height: 48rpx;
+  font-size: 20rpx;
+  color: #e40011;
+  text-align: center;
+}
+
+.courseTime {
+  margin-top: 18rpx;
+  width:200rpx;
+  margin-right: 24rpx;
+  text-align: right;
+}
+
+.courseTime-place {
+  /* placeholder颜色  */
+  color: #aab2bd;
+  /* placeholder字体大小  */
+  font-size: 12px;
+  /* placeholder位置  */
+  text-align: center;
+}

@@ -1,0 +1,19 @@
+<view class='head'>
+  <!-- <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+    <view class="picker">
+      当前城市：<text class='provice textOver'>{{region[0]}}</text><image class='down' src='{{url}}c-down.png'></image><text class='city textOver'>{{region[1]}}</text><image class='down' src='{{url}}c-down.png'></image><text class='theCity textOver'>{{region[2]}}</text><image class='down' src='{{url}}c-down.png'></image>
+    </view>
+  </picker> -->
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" class='iLblock'>
+      当前城市：<text class='provice textOver' bindtap='first'>{{array[index]}}</text><image class='down' src='{{url}}c-down.png'></image>
+  </picker>
+  <picker bindchange="bindPickerChange1" value="{{index1}}" range="{{array1}}" class='iLblock'>
+      <text class='provice textOver'>{{array1[index1]}}</text><image class='down' src='{{url}}c-down.png'></image>
+  </picker>
+  <picker bindchange="bindPickerChange2" value="{{index2}}" range="{{array2}}" class='iLblock'>
+      <text class='provice textOver'>{{array2[index2]}}</text><image class='down' src='{{url}}c-down.png'></image>
+  </picker>
+</view>
+<input class='address textOver' maxlength='100' placeholder='具体位置' placeholder-class='addLocation' value='{{address}}' bindinput='busLocation'></input>
+<image src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/images/icon/automaticorientation.png' class='dingLo' bindtap='autoLocation'></image>
+<button class='c-fua' bindtap='submit'>提交</button>

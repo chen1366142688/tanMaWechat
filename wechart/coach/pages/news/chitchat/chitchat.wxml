@@ -1,0 +1,28 @@
+<!--pages/news/chitchat/chitchat.wxml-->
+<scroll-view class='chitchat' scroll-top="{{top}}" scroll-y="true" style='height:{{height}}px' bindscrolltoupper="chitchattoupper" scroll-into-view="new{{ind}}">
+  <view class='section' >
+    <view wx:for="{{showList}}" id='chatContainer' wx:for-item="dayItem">
+       <view wx:if="{{dayItem.day}}" class='time'>{{dayItem.day}}</view>
+       <view  wx:for="{{dayItem.messageList}}"   id="new{{dayItem.day}}{{index}}" style='min-height:150rpx;'>
+            <view wx:if="{{item.imtype=='other'}}" class='section-zuo clearfloat'>
+              <image class='Head-Portraits-zuo' src='{{userAvatarUrl?userAvatarUrl+"?x-oss-process=image/resize,m_mfit,h_80,w_80":""}}' mode="aspectFill" ></image>
+              <view class='section-content-zuo'>
+                <image class='arrows-zuo' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coach/New/zuo.png'></image>
+                <text class='section-content-zuo-text ilblock fr'>{{item.imContent}}</text>
+              </view>
+            </view>
+            <view wx:if="{{item.imtype=='my'}}" class='section-you clearfloat'>
+              <image class='Head-Portraits-you' src='{{myAvatarUrl?myAvatarUrl+"?x-oss-process=image/resize,m_mfit,h_80,w_80":""}}' mode="aspectFill" ></image>
+              <view class='section-content-you'>
+                <image class='arrows-you' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coach/New/you.png'></image>
+                <text class='section-content-you-text ilblock fr'>{{item.imContent}}</text>
+              </view>
+            </view>
+       </view>
+    </view>
+  </view>
+</scroll-view>
+  <view class='input-window'>
+    <input class='input-WZ' bindinput='inputMessage' value='{{showContent}}' placeholder='在此输入您的聊天内容...' placeholder-class='TS'></input>
+    <image class='send' bindtap="senMessage" src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coach/New/New-button.png'></image>
+  </view>

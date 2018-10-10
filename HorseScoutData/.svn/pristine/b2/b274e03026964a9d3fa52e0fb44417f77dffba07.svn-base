@@ -1,0 +1,160 @@
+body{
+	background-color: #ececec;
+	height: -webkit-fill-available;
+}
+
+.Test-Principle{
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	line-height: 0;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.Test-Principle-header{
+	width: 93.6%;
+	height: 100%;
+	vertical-align: middle;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+
+.Test-Principle-header-section{
+	width: 100%;
+    height: 100%;
+    line-height: 36px;
+    vertical-align: middle;
+    font-size: 24px;
+    color: #666666;
+    text-align: left;
+    margin: 40px 0;
+}
+
+
+.Test-Principle-section{
+	width: 93.6%;
+	height: 100%;
+	vertical-align: middle;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.Test-Principle-section-img{
+	width: 100%;
+	height: 100%;
+	vertical-align: middle;
+}
+
+.Test-Principle-section-text{
+	width: 100%;
+	height: 100%;
+	line-height: 36px;
+	vertical-align: middle;
+	font-size: 24px;
+	color: #666666;
+	text-align: left;
+	margin: 40px 0;
+}
+
+
+/*  测试步骤  */
+
+.unwind-section{
+	width: 100%;
+	vertical-align: middle;
+	line-height: 0;
+	margin:  0;
+	padding: 40px 24px;
+	box-sizing: border-box;
+	background-color: #fff;
+}
+
+.unwind-section-headline{
+	width: 100%;
+	height: 28px;
+	line-height: 28px;
+	font-size: 28px;
+	color: #333;
+	font-weight: bold;
+}
+
+.measuring-procedure{
+	width: 100%;
+	vertical-align: middle;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.measuring-procedure-text{
+	width: 100%;
+	vertical-align: middle;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.measuring-procedure-text-one{
+	width: 100%;
+	line-height: 36px;
+	font-size: 24px;
+	color: #333;
+	vertical-align: middle;
+	margin: 15px 0;
+}
+
+.measuring-procedure-video{
+	width: 100%;
+	height: 395px;
+	line-height: 395px;
+	vertical-align: middle;
+	position: relative;
+	margin-top: 20px;
+}
+
+#video{
+	width: 100%;
+	height: 395px;
+	line-height: 395px;
+	vertical-align: middle;
+}
+
+.Play{
+	 width: 60px;
+	 height: 60px;
+	 line-height: 60px;
+	 vertical-align: middle;
+	 position: absolute;
+	 left: 31px;
+	 bottom: 31px;
+ }
+
+.pause{
+	width: 60px;
+	height: 60px;
+	line-height: 60px;
+	vertical-align: middle;
+	position: absolute;
+	left: 31px;
+	bottom: 31px;
+	display: none;
+}
+
+.measuring-procedure-button{
+	width: 100%;
+	height: 80px;
+	line-height: 80px;
+	color: #fff;
+	font-size: 30px;
+	vertical-align: middle;
+	background-color: #4DD0C8;
+	border-radius: 40px;
+	text-align: center;
+}

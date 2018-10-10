@@ -1,0 +1,26 @@
+<view class="c-top">
+  <view class='nick-content'>
+    <image class="nick" src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/nick-img.png'></image>
+    <view class="name">账号名称</view>
+  </view>
+</view>
+<view class="c-content">
+  <view class="c-nei">
+    <view class='one rt'>
+      <image class="c-img" src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/kaike.png'></image>
+      <text class="txt">查看开课</text>
+    </view>
+    <view class='one'>
+      <image class="c-img" src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/erwei.png'></image>
+      <text class="txt">扫描二维码</text>
+    </view>
+    <view class='one rt mt'>
+      <image class="c-img" src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/owen.png'></image>
+      <text class="txt">独立缴费查询</text>
+    </view>
+    <view class='one mt'>
+      <image class="c-img" src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/price.png'></image>
+      <text class="txt">每日费用查询</text>
+    </view>
+  </view>
+</view>

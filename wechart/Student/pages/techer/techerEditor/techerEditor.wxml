@@ -1,0 +1,51 @@
+<view class='editor clearfloat'>
+  <view class='editor-name fl'>
+    <image class='editor-userImg' src='{{url}}userImg.png'></image>
+    <text class='editor-nameAndLocation iLblock'>张翔-男-四川·成都</text>
+  </view>
+  <view class='editor-phone fr'>
+    <image class='editor-phoneImg' src='{{url}}gayPhone.png'></image>
+    <text class='editor-phoneNum'>136******48</text>
+    <image class='editorPen' src='{{url}}editor.png'></image>
+  </view>
+</view>
+<view class='examine'>
+  <text>资料审核</text>
+  <text class='exIng'>审核中</text>
+</view>
+<view class='classBox'>
+  <view class='yunDongBox center' wx:for="{{qiuLei}}" wx:key="*this">
+    <text>{{item.name}}</text>
+    <view class='qiuXing iLblock'>
+      <text class='qiuLeis'>{{item.value}}</text>
+      <image class='next' src='{{url}}next.png'></image>
+    </view>
+  </view>
+  <view class='uploadBox'>
+    <text class='uploadItem'>*请上传清晰的运动员证书照片，需包含封面和首页，不超过5张。</text>
+    <view class='scroolBox'>
+      <scroll-view class='intro-scroll' scroll-x='true' scroll-with-animation='true'>
+        <image class='intro-scrollImg' src='{{url}}intro-scroll3.png'></image>
+        <image class='intro-scrollImg' src='{{url}}addImg.png'></image>
+      </scroll-view>
+    </view>
+  </view>
+</view>
+<view class='addProBox'>
+  <image class='addPro' src='{{url}}addProject.png'></image>
+</view>
+<view class='myItemBox'>
+   <textarea bindblur="bindTextAreaBlur" class='myInfoBxo' placeholder-class='myInfo' maxlength="300" value=''  placeholder="填写自我介绍（不超过300字）" />
+   <view class='uploadBox'>
+    <text class='uploadItem'>*请上传2-5张运动照片（全身）。</text>
+    <view class='scroolBox'>
+      <scroll-view class='intro-scroll' scroll-x='true' scroll-with-animation='true'>
+        <image class='intro-scrollImg' src='{{url}}intro-scroll3.png'></image>
+        <image class='intro-scrollImg' src='{{url}}addImg.png'></image>
+      </scroll-view>
+    </view>
+  </view>
+</view>
+<view class='submitEditor'>
+  <view class='subBor'>提 交</view>
+</view>

@@ -1,0 +1,75 @@
+<view class='topStudent clearfloat'>
+  <view class='studentImg-content fl'>
+    <image class='studentImg' src='{{avatarUrl}}'></image>
+  </view>
+  <view class='studentText fl'>
+    <view class='student-name'>
+      <image class='student-man' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/{{gender==1?"man":"gril"}}.png'></image>
+      <text class='student-man-name iLblock'>{{studentNickName}}</text>
+      <text class='student-biao iLblock'>{{studentType==1?"成人":"青少年"}}</text>
+    </view>
+    <text class='student-item'>{{described}}</text>
+    <view class='tel-phone'>
+      <image class='miniPhone' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/miniPhone.png'></image>
+      <text class='phoneNumber iLblock'>{{phone}}</text>
+    </view>
+  </view>
+</view>
+<view class='thatStudent'>TA参与的课程</view>
+<view class='guangKe'>
+   <view class='items-jiao' wx:for="{{classList}}"> 
+    <view class='item-userTxt'>
+      <view class='userTxt-top clearfloat'>
+        <view class='fl'>
+        <view class='userA iLblock'>{{item.itemName}} {{item.maxMember}}人班</view>
+        <view class='userB iLblock'>{{item.className}}</view>
+        </view>
+        <view class='fr'>
+        <view class='userC iLblock'>{{item.courseCount}}课时/{{item.courseTime/10}}h</view>
+        </view>
+        <view class='money'><text class='rmb'>RMB</text><text class='rmbNum'>{{item.courseCostTotal/100}}</text></view>
+      </view>
+      <view class='userTxt-bottom'>
+          <image class='userIsman iLblock' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/man.png'></image>
+          <text class='txt-B iLblock'>{{item.classCoach}}</text>
+          <image class="userNumber iLblock" src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/numbers.png'></image>
+          <text class='userMum iLblock'>{{item.lastAttendPeriod}}期</text>
+          <text class='userLevel iLblock'>适合等级</text>
+          <text class='userLevelColor iLblock'>{{item.itemStudentGrade}}</text>
+          <view class='hot-show' >
+            <image class='hotTwo iLblock' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/hotTwo.png'></image>
+            <text class='hotTwoText wx:if="{{ item.signUpOver==1?"baoMan":""}}"'>{{item.popularity}}</text>
+          </view>
+      </view>
+    </view>
+    <image class='manLe' wx:if="{{item.signUpOver == 1 }}" src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/zhang.png'></image>
+   </view>
+</view>
+<view class='van-itemInfo'>
+    <view class='van-ke {{van}}' bindtap='kecheng' data-val='1'>TA的评级</view>
+    <view class='van-jie {{vans}}' bindtap='kecheng' data-val='2'>教练评价</view>
+</view>
+<view class='van-pask clearfloat bottom-line' hidden='{{guanJie}}'  wx:for="{{commentList}}">
+  <view class='van-pask-le fl' >
+    <view class='van-pask-leTop'>
+      <image class='student-pask-img' src='{{item.avatarUrl}}'></image>
+      <text class='student-pask-name iLblock'>{{item.nickName}}</text>
+      <text class='student-itempask iLblock'>{{item.itemName}} {{item.maxMember}}人班</text>
+      <text class='pask-daBan iLblock'>{{item.className}}</text>
+    </view>
+    <view class='van-pask-bottom'>
+      {{item.evaluateContent}}
+    </view>
+  </view>
+  <view class='van-pask-rg fr'>
+    <image class='can-good' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/{{item.evaluate=="1"?"good":item.evaluate=="2"?"okHei":"badRed" }}.png'></image>
+    <text class='can-text' style='color:{{item.evaluate=="1"?"#00C693":item.evaluate=="2"?"#333333":"#E82433" }}' >{{item.evaluate=='1'?"好评":item.evaluate=='2'?"中评":"差评" }}</text>
+  </view>
+</view>
+<view class='van-student-level' hidden='{{guanKe}}'>
+  <view class='level-item iLblock' wx:for="{{gradesList}}">
+    <text class='level-basketball iLblock'>{{item.itemName}}</text>
+    <text class='level-bs iLblock'>L{{item.itemGrade}}</text>
+  </view>
+</view>
+<text class='van-footer'>已经到底了</text>

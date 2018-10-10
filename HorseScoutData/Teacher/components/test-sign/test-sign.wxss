@@ -1,0 +1,21 @@
+/* components/test-picker/test-picker.wxss */
+.test_picker{
+  height: 270rpx;
+  overflow: hidden;
+  width: 135rpx;
+}
+.result-count{
+  opacity: 0.8;
+  font-weight: 800;
+  text-align: center;
+  font-size: 64rpx;
+}
+.result-mid{
+  /* opacity: 1; */
+  background: rgba(0,0,0,0);
+  height: 90rpx;
+
+}
+.resultnow{
+  color: RGBA(255, 102, 105, 1);
+}

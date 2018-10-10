@@ -1,0 +1,72 @@
+.Baike{
+    width: 100%;
+    line-height: 39px;
+    margin-bottom: 100px;
+    padding:0 24px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+.footer{
+    width:100%;
+    height:80px;
+    background-color: #ffffff;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 24px;
+    box-sizing: border-box;
+    font-family:PingFang-SC-Regular;
+}
+button{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+}
+.noTest{
+    width:200px;
+    height:80px;
+    border:1px solid rgba(77,208,200,1);
+    background:#fff;
+    border-radius:40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:30px;
+    color:rgba(77,208,200,1);
+}
+.actionTest{
+    width:450px;
+    height:80px;
+    background:rgba(77,208,200,1);
+    border-radius:40px;
+    border:1px solid rgba(77,208,200,1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:30px;
+    color:rgba(255,255,255,1);
+}
+.Baike p{
+    width: 100%;
+    margin: 37px 0;
+    font-size:24px;
+    font-family:PingFang-SC-Regular;
+    color:rgba(23,23,23,1);
+    line-height:36px;
+    color: #171717;
+}
+
+.Baike p img{
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+.emptyItem{
+    height:140px;
+    background-color: #fff;
+    width:100%;
+}

@@ -1,0 +1,8 @@
+<!--pages/Exercise/Training-feelings/Training-feelings.wxml-->
+<view class='Training-feelings'>
+  <view class='input-box'>
+    <textarea  class='myInfoBxo' placeholder-class='myInfo' maxlength="400"  placeholder="写写训练中的心得吧~~" />
+  </view>
+  <view class='alt'> (当前 <text class='alt-yellow'> 234 </text>  字 / 400 字)</view>
+  <view class='Training-feelings-button'>提交心得</view>
+</view>

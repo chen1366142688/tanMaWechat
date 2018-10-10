@@ -1,0 +1,31 @@
+<view class="c-top" style='background: url({{backgroundUrl}})'>
+
+</view>
+<view class='nick-content'>
+  <image class="nick" src='{{backgroundUrlFill}}'></image>
+  <!-- <view class="name">{{nickName}}</view> -->
+</view>
+ <view class="name">{{nickName}}</view>
+
+<view class="c-content">
+  <view class="c-nei">
+    <view class='one rt'>
+      <image bindtap='imageClick' data-url='pages/Stadiums-and-stadiums/lockLesson/lockLesson' class="c-img" src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/kaike.png'></image>
+      <text class="txt">查看开课</text>
+    </view>
+    <view class='one'>
+      <!-- <image bindtap='imageClick' data-url='pages/Stadiums-and-stadiums/erwei/erwei' class="c-img" src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/erwei.png'></image> -->
+      <image bindtap='imageClick' data-url='pages/Stadiums-and-stadiums/venue-erweima/venue-erweima' class="c-img" src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/erwei.png'></image>
+      <!-- <text class="txt">扫描二维码</text> -->
+      <text class="txt">展示二维码</text>
+    </view>
+    <view class='one rt mt'>
+      <image bindtap='imageClick' data-url='pages/Stadiums-and-stadiums/pay/pay' class="c-img" src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/owen.png'></image>
+      <text class="txt">独立缴费查询</text>
+    </view>
+    <view class='one mt'>
+      <image bindtap='imageClick' data-url='pages/Stadiums-and-stadiums/Cost-query/Cost-query' class="c-img" src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/price.png'></image>
+      <text class="txt">每日费用查询</text>
+    </view>
+  </view>
+</view>

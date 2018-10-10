@@ -1,0 +1,41 @@
+<!--pages/Exercise/Project-Summary/Project-Summary.wxml-->
+<view class='Project-Summary'>
+  <view class='Program-Particulars-section clearfloat'>
+    <!-- <view class='auxiliary-appliance'>辅助器材
+      <text class='auxiliary-appliance-section'>单杠</text> </view> -->
+    <!-- 计划简介 -->
+    <view class='Program-description clearfloat'>
+      <view class='Program-description-headline'>计划简介</view>
+      <view class='Program-description-text clearfloat'>课程介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介...</view>
+    </view>
+    <!-- 训练原理 -->
+    <view class='Program-description clearfloat'>
+      <view class='Program-description-headline'>训练原理</view>
+      <view class='Program-description-text clearfloat'>原理原理原理原理原理原理原理原理原理原理原理原理原理原理原理原理原理原理原理原理原理原理原理原理原理原理原理原理原理原理原理原理原理原理原理原理原理原理原理原理原理原理原理原理原理原理原理原理原理原理原理原理原理原理原理原理原理原...</view>
+      <image class='Training-Principle-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/Exercise/brief-introduction.png'></image>
+    </view>
+    <!-- 适用人群 -->
+    <view class='Program-description clearfloat'>
+      <view class='Program-description-headline '>适用人群</view>
+      <view class='Program-description-text clearfloat'>适用人群适用人群适用人群适用人群适用人群适用人群适用人群适用人群适用人群适用人群适用人群适用人群适用人群适用人群适用人群适用人群</view>
+    </view>
+    <!-- 禁忌人群 -->
+    <view class='Program-description clearfloat'>
+      <view class='Program-description-headline'>禁忌人群</view>
+      <view class='Program-description-text clearfloat'>禁忌人群禁忌人群禁忌人群禁忌人群禁忌人群禁忌人群禁忌人群禁忌人群禁忌人群禁忌人群禁忌人群禁忌人群</view>
+    </view>
+    <!-- 练前准备 -->
+    <view class='Taboo-crowd clearfloat'>
+      <view class='Program-description-headline'>练前准备</view>
+      <view class='Program-description-text clearfloat'>练前准备练前准备练前准备练前准备练前准备练前准备练前准备练前准备练前准备</view>
+    </view>
+    <!--专利说明  -->
+    <view class='patent'>
+      <image class='patent-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/Exercise/patent.png'></image>
+      <view class='patent-text'>
+        <view class='patent-text-headline'>专利版权说明</view>
+        <view class='patent-text-section'>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容。</view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,119 @@
+// pages/Exercise/Exercise-Program/Exercise-Program.js
+const app = getApp().globalData;
+Page({
+  data: {
+    scroll:true,
+    childName:[
+      {
+        "childrenAge": 10,
+        "childrenId": 0,
+        "realName": "程咬金",
+        "sex": 1,
+        "active": true
+      },
+      {
+        "childrenAge": 8,
+        "childrenId": 1,
+        "realName": "陈小春",
+        "sex": 2,
+        "active": false
+      },
+    ],
+    active:'Exercise-Program-choose-one',
+    defaultPlan:[],
+    childId:11,
+    childList:[]
+  },
+  onLoad: function (options) {
+    const that = this;
+    //获取所有默认计划
+    defaultPlan(that)
+    //通过家长id获取孩子的信息列表
+    childList(that)
+  },
+  onReady: function () {},
+  onShow: function () {},
+  onHide: function () {},
+  onUnload: function () {},
+  onPullDownRefresh: function () {},
+  onReachBottom: function () {},
+  onShareAppMessage: function (e) {},
+  //切换child
+  cilckChild(e) {
+    const that = this;
+    let childId = e.currentTarget.dataset.childid;
+    let index = e.currentTarget.dataset.index;
+    let childName = that.data.childName;
+    for (let i = 0; i < childName.length; i++) {
+      if (index == i) {
+        childName[i].active = true;
+      } else {
+        childName[i].active = false;
+      }
+    }
+    that.setData({ childName: childName, childId: childId})
+  },
+  //跳转到计划详情
+  planDetail(e){
+    let planId = e.currentTarget.dataset.planid;
+    wx.navigateTo({
+      url: "../../../pages/Exercise/Program-Particulars/Program-Particulars?planId=" + planId + '&&childrenId=' + this.data.childId,
+    })
+  },
+})
+//获取所有默认计划
+function defaultPlan(that){
+  wx.request({
+    url: app.rQUrl + '/v1/exercisePlan/getAllDefaultPlan',
+    method:'GET',
+    //header: { 'token': wx.getStorageSync('userInfo').token },
+    success(res){
+      if(res.data.code == '10000'){
+        console.log(res.data.response)
+        let results = res.data.response;
+        that.setData({
+          defaultPlan:results
+        })
+      }else{
+        wx.showToast({
+          title: res.data.msg,
+          icon:'none'
+        })
+      }
+    },
+    fail(info){
+      wx.showToast({
+        title: info.data.msg,
+        icon:'none'
+      })
+    }
+  })
+}
+//通过家长id获取孩子列表
+function childList(that){
+  wx.request({
+    url: app.rQUrl + '/v1/exercisePlan/getChildrenListByUserId',
+    method: 'GET',
+    header: { 'token': wx.getStorageSync('userInfo').oauthToken.token},
+    data: { userId: wx.getStorageSync('userInfo').userId},
+    success(res) {
+      if (res.data.code == '10000') {
+        let results = res.data.response;
+        that.setData({
+          childList: results
+        })
+      } else {
+        wx.showToast({
+          title: res.data.msg,
+          icon: 'none'
+        })
+      }
+    },
+    fail(info) {
+      wx.showToast({
+        title: info.data.msg,
+        icon: 'none'
+      })
+    }
+  })
+}

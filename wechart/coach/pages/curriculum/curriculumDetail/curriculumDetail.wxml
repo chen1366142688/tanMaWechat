@@ -1,0 +1,77 @@
+<!--pages/curriculum/curriculumDetail/curriculumDetail.wxml-->
+<view class='curriculumDetail'>
+  <view class='header'>
+    <view class='top'>
+      <navigator target="miniProgram" open-type="navigate" app-id="wx16ab989b71bd24f1" path="{{path}}" extra-data="" version="release" class='invitation'>
+        <image class='invitationImg' src='{{imgUrl}}invitation.png'></image>
+        <text>邀请报名</text>
+      </navigator>
+      <view class='title'>
+        {{coach.className}}
+      </view>
+    </view>
+    <view class='bot'>
+      <view>
+        <image src='{{imgUrl}}address.png'></image>
+        {{coach.homeName }}
+      </view>  
+      <view>
+        <image src='{{imgUrl}}teacher.png'></image>
+        {{coach.nickName }}
+      </view>
+      <view>
+        <image src='{{imgUrl}}date.png'></image>
+        {{coach.dayTimeStart}}-{{coach.dayTimeEnd }}
+      </view>   
+    </view>
+  </view>
+  <view class='main'>
+    <view class='title'>
+      学员列表（{{coach.signUpMember }}/{{coach.maxMember }}人）
+    </view>
+    <view class='mainlist' wx:for="{{stuList}}" wx:key="{{index}}" wx:if="{{coach.signUpMember != 0}}">
+      <view class='listname'>
+        {{item.nickName }}
+        <text wx:if="{{coach.attendStatus == '06' && item.signStatus== 2 && coach.settlementStatus == 1}}">旷课</text>
+      </view>
+      <view class='listphone' catchtap='phonecallevent' data-phone='{{item.phoneNum}}'>
+        {{item.phoneNum != "undefined"? item.phoneNum : ""}}
+      </view>
+      <view class='truant' bindtap='truant' wx:if="{{(coach.attendStatus == '04' ||coach.attendStatus == '06') && coach.settlementStatus == 0  && item.signStatus != 2}}" data-index='{{index}}' data-scheduleId='{{item.scheduleId}}'>
+        旷课
+      </view>
+      <view class='truant2' wx:if="{{(coach.attendStatus == '04'||coach.attendStatus == '06') && coach.settlementStatus == 0 && item.signStatus == 2}}" bindtap='cancelTruant' data-index='{{index}}' data-scheduleId='{{item.scheduleId}}'>
+        取消旷课
+      </view>
+      <view class='listfun' wx:if="{{coach.settlementStatus != 1 && item.signStatus != 2}}" bindtap='deleStu' data-scheduleId='{{item.scheduleId}}' data-name='{{item.nickName}}'>
+        移除
+      </view>
+    </view>
+    <view class='mainlist2' wx:if="{{coach.signUpMember == 0}}">
+      暂时还没有学生报名
+    </view>
+  </view>
+  <view class='addstu' wx:if="{{coach.attendStatus != '06'}}" bindtap='addStu'>
+    <view>添 加</view>
+    <view>学 员</view>   
+  </view>
+  <view class='btn' wx:if="{{coach.attendStatus == '02' || coach.attendStatus == '01'}}">
+    <view class='left' bindtap='changeClass'>
+      修改课堂信息
+    </view>  
+    <view class='right' bindtap='deleClass'>
+      删除本次上课
+    </view>
+  </view>
+  <view></view>
+</view>
+<!-- 弹窗 -->
+<view class='mock' wx:if="{{isMock}}" bindtap='cancel'>
+  <view class='main'>
+    {{mockInfo}}
+  </view>
+  <view class='bot'>
+    <view class='cancel' catchtap='cancel'>取消</view> 
+    <view class='sure' catchtap='sure'>确认</view>
+  </view>
+</view>

@@ -1,0 +1,51 @@
+<!--pages/Information/Height-Weight/Height-Weight.wxml-->
+<view class='Perfect-Information'>
+  <view class='headline-Prompt'>为了便于为您提供更好的服务，我们需要您完善下面信息，如有疑问请
+    <text class='headline-Prompt-blue' bindtap='ContactCustomerService'>联系客服</text>。</view>
+  <view class='Perfect-Information-Name'>
+    <view class='Bargraph-yellow'></view>
+    <view class='Perfect-Information-Name-section'>
+      <view class='Name-section-headline'>您是孩子的？</view>
+      <picker class='family-relation' bindchange="bindPickerChange"  value="{{index}}" range="{{array}}">
+       <view class='family-relation'>
+        <view class='relation'>{{array[index]}}</view>
+        <image class='section-pull-down' src='{{imgUrl}}pull-down.png'></image>
+      </view>
+      </picker> 
+      <!-- <picker class='family-relation' bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <view class="picker">
+          当前选择：{{array[index]}}
+        </view>
+      </picker> -->
+    </view>
+  </view>
+  <view class='Information-ID-card'>
+    <view class='Perfect-Information-ID-card'>
+      <view class='Bargraph-red'></view>
+      <view class='Perfect-Information-ID-card-section'>
+        <view class='ID-card-section-headline'>您孩子当前身高？</view>
+        <view class='section-options-have-one'>
+          <view class='have-one-stature'>
+            <input class='section-options-have-input {{Height? "ok" : ""}}' maxlength="5" placeholder='身高' placeholder-class='section-options-have-input-cbcbcb' type='digit' bindinput='inputHeight'></input>
+            <view class='centimeter'>CM</view>
+          </view>
+           <!-- <view class='section-options-have-headline'>（您的孩子已超过
+            <text class='section-options-have-headline-yellow'>35%</text>的同龄人啦~）</view> -->
+        </view> 
+        <view class='weight-section-headline'>您孩子当前身高？</view>
+        <view class='section-options-have-one'>
+          <view class='have-one-stature'>
+            <input class='section-options-have-input {{Weight? "ok" : ""}}' maxlength="5" placeholder='体重' placeholder-class='section-options-have-input-cbcbcb' type='digit' bindinput='inputWeight'></input>
+            <view class='centimeter'>KG</view>
+          </view>
+          <!-- <view class='section-options-have-headline'>（您的孩子已超过
+            <text class='section-options-have-headline-yellow'>35%</text>的同龄人啦~）</view> -->
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='Perfect-Information-footer'>
+    <view class='Perfect-Information-button-previous-step' bindtap="prev">上一步</view>
+    <view class='Perfect-Information-button'  bindtap="next">下一步</view>
+  </view>
+</view>

@@ -1,0 +1,82 @@
+// pages/Exercise/Physical-Test/Physical-Test.js
+const app = getApp().globalData;
+Page({
+  data: {
+    scroll: true,
+    childName: [
+      { "name": '扎合格', "active": true },
+      { "name": '的回暖', "active": false },
+      { "name": "目定口呆", "active": false },
+      { "name": '滴的', "active": false }
+    ],
+    active: 'Exercise-Program-choose-one',
+    copyright:[]
+  },
+  cilckChild(e) {
+    const that = this;
+    let index = e.currentTarget.dataset.index;
+    let childName = that.data.childName;
+    for (let i = 0; i < childName.length; i++) {
+      if (index == i) {
+        childName[i].active = true;
+      } else {
+        childName[i].active = false;
+      }
+    }
+    that.setData({ childName: childName })
+  },
+  onLoad: function (options) {
+    copyright(this)
+    getTestList(options.childrenid)
+  },
+  onReady: function () {},
+  onShow: function () {},
+  onHide: function () {},
+  onUnload: function () {},
+  onPullDownRefresh: function () {},
+  onReachBottom: function () {},
+  onShareAppMessage: function () {}
+})
+function copyright(that){
+  wx.request({
+    url: app.rQUrl +'/v1/help/get/commonInformation',
+    method: 'POST',
+    data:{
+      "codes": ["COPYRIGHT"]
+    },
+    success(res){
+      if(res.data.code == '10000'){
+        let result = res.data.response;
+        that.setData({ copyright:result})
+      }else{
+        wx.showToast({
+          title: res.data.msg,
+          icon:'none'
+        })
+      }
+    },
+    fail(info){
+      wx.showToast({
+        title: info.data.msg,
+        icon:'none'
+      })
+    }
+  })
+}
+function getTestList(id){
+  console.log(id)
+  console.log(wx.getStorageSync('userInfo').oauthToken.token)
+  wx.request({
+    url: app.rQUrl + '/v1/corporeityTest/getListByChildrenId',
+    method : "GET",
+    header: { 'token': wx.getStorageSync('userInfo').oauthToken.token },
+    data : {
+      childrenId : id,
+      pageNo : 1,
+      pageSize : 2
+    },
+    success : function(res){
+      console.log(res)
+    }
+  })
+}

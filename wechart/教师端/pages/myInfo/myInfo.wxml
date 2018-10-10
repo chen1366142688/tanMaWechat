@@ -1,0 +1,52 @@
+<!--pages/myInfo/myInfo.wxml-->
+<view class='myinfo'>
+  <view class='header'>
+    <view class='backgroundtrigon'></view>
+    <image src='http://tanma-data.oss-cn-beijing.aliyuncs.com/user/img/1532683469988J4d761twMy.jpg' class='headerimg'></image>
+    <view class='headerinfo'>
+      <text>李花</text>
+      <image src='{{teacherInfo.sex == 1 ? "../../../image/man.png" : "../../../image/woman.png"}}'></image>
+    </view>
+  </view>
+  <view class='main'>
+    <view class='main_info'>
+      <view>
+        <image src='http://tanma-competition.oss-cn-beijing.aliyuncs.com/my_school.png'></image>
+        <text>学校名称</text> 
+      </view>
+      
+    </view>
+    <view class='main_info'>
+      <view>
+        <image src='http://tanma-competition.oss-cn-beijing.aliyuncs.com/vestaddres.png'></image>
+        <text>四川省/成都</text>
+      </view>
+
+    </view>
+    <view class='main_info'>
+      <view>
+        <image src='http://tanma-competition.oss-cn-beijing.aliyuncs.com/my_phone.png'></image>
+        <text>13512345678</text>
+      </view>
+      <view class='setchange'>修改</view>
+    </view>
+    <view class='main_info'>
+      <view>
+        <image src='http://tanma-competition.oss-cn-beijing.aliyuncs.com/identit.png'></image>
+        <text>体育老师</text>
+      </view>
+      <view class='setchange'>修改</view>
+    </view>
+    <view class='main_info'>
+      <view>
+        <image src='http://tanma-competition.oss-cn-beijing.aliyuncs.com/setpassword.png'></image>
+        <text>登录密码</text>
+      </view>
+      <view class='setchange'>修改</view>
+    </view>
+  </view>
+  <view class='logout'>
+    退出登录
+    <image src='http://tanma-competition.oss-cn-beijing.aliyuncs.com/logout.png'></image>
+  </view>
+</view>

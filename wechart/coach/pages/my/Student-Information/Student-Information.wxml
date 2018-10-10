@@ -1,0 +1,81 @@
+<!--pages/my/Student-Information/Student-Information.wxml-->
+<view class='Student-Information'>
+  <view class='personal-Information'>
+    <!-- 个人简介  -->
+    <view class='Information-header clearfloat'>
+      <view class='Information-header-Head-Portraits clearfloat'>
+        <image class='Head-Portraits-img' src='{{studentInfo.avatarUrl}}'></image>
+      </view>
+      <view class='Information-header-section clearfloat'>
+        <view class='header-section-name-size'>
+          <view class='header-section-name'>{{studentInfo.nickName}}</view>
+          <image class='header-section-img'  wx:if="{{studentInfo.gender == 1}}" src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/man-blue.png'></image>
+          <image class='header-section-img'  wx:if="{{studentInfo.gender == 2}}" src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/woman-blue.png'></image>
+          <view class='header-section-catagory'>{{studentInfo.studentType == 1 ?  "成人" : "青少年"}}</view>
+        </view>
+        <view class='individual-resume clearfloat'> {{studentInfo.described?studentInfo.described:'暂无'}}</view>
+      </view>
+    </view>
+    <!--TA的等级  -->
+    <view class='Information-background'>
+      <view class='Information-grade clearfloat'>
+        <view class='Information-grade-headlin'>TA的等级</view>
+        <view class='student-items-section clearfloat'>
+          <view class='student-items-one' wx:for="{{studentInfo.gradeVos}}" wx:key="itemName" wx:for-item="gradeVos" >
+            <view class='exercise-item'>{{gradeVos.itemName}}</view>
+            <view class='item-grade'>{{gradeVos.itemGrade}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 他的课程  -->
+    <view class='student-curriculum' wx:for="{{studentItmeInfo}}" wx:key="itemInfo" wx:for-item="itemIn" >
+      <!--课程标题/入训时间/培训教练  -->
+      <view class='student-curriculum-one'>
+        <view class='curriculum-one-haeder'>
+          <view class='curriculum-one-haeder-headlin'>
+            <text class='headlin-blue' decode='true'>{{itemIn.itemName }}&nbsp;</text>|
+            <text class='headlin-blue' decode='true'>{{itemIn.type == 1 ? '大班' : '私教'}}&nbsp;</text>| {{itemIn.className }}</view>
+        </view>
+        <view class='curriculum-two-haeder'>
+          <view class='curriculum-two-haeder-left'>入训时间：{{itemIn.payTime }}</view>
+          <view class='curriculum-two-haeder-right'>培训教练：
+            <view class='teacher-name'>{{itemIn.classCoachName }}</view>
+          </view>
+        </view>
+      </view>
+      <!--培训时间  
+      <view class='Time-Allocation clearfloat'>
+        <view class='Time-Allocation-time clearfloat'>
+          <view class='Time-Allocation-time-headline'>培训时间：</view>
+          <view class='Allocation-time-section clearfloat'>
+            <view class='Time-Allocation-time-one' wx:for="{{itemIn.orderSectionList }}" wx:key="section" wx:for-item="sectionList" data-classId="{{sectionList.classId }}">周{{sectionList.weekDay == 1 ? "一" : sectionList.weekDay == 2 ? "二" : sectionList.weekDay == 3 ? "三" : sectionList.weekDay == 4 ? "四" : sectionList.weekDay == 5 ? "五" : sectionList.weekDay == 6 ? "六" : "日"}} | {{sectionList.dayTimeStart }}</view>
+          </view>
+        </view>
+        <view class='redact'>
+          <image class='redact-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/compile.png'></image>
+        </view>
+      </view>-->
+      <!-- 剩余课时  -->
+      <view class='Surplus'>
+        <view class='Surplus-headline'>剩余课时：</view>
+        <view class='Surplus-text' wx:if="{{itemIn.payType==2}}">未知</view>
+        <view class='Surplus-text' wx:else>
+          <text class='Surplus-text-red'>{{itemIn.spareTime }}</text> 课时（课程余额 RMB {{itemIn.spareCost/100 }}）</view>
+          
+      </view>
+      <!-- 私教方案 -->
+      <view class='personal-trainer clearfloat' wx:if="{{itemIn.type== 2}}">
+        <view class='personal-trainer-headline'>私教方案：</view>
+        <view class='personal-trainer-section clearfloat'>{{itemIn.personalPlan ? itemIn.personalPlan : ''}}</view>
+      </view>
+      <!--查看订单详情  -->
+      <view class='view-details' data-orderCode="{{itemIn.orderCode }}" data-classId="{{itemIn.classId }}" bindtap='goInfoMation'>查看订单详情 》</view>
+    </view>
+    <view class='gray-background'></view>
+    <view class='contact-student'>
+      <view class='contact-student-leave-word' data-photo="{{studentInfo.avatarUrl }}" data-nickname="{{studentInfo.nickName }}" data-studentuserid="{{studentInfo.studentUserId}}" bindtap='wechat'>给TA留言</view>
+      <view class='contact-student-phone' data-phone="{{studentInfo.phoneNo}}" bindtap='callPhone'>联系TA</view>      
+    </view>
+  </view>
+</view>

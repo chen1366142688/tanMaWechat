@@ -1,0 +1,158 @@
+/* pages/gradeTable/gradeTableIndex/gradeTableIndex.wxss */
+
+.gradeTable{
+  background: RGBA(236, 236, 236, 1);
+}
+.gradeTable .header{
+  display :flex;
+  height : 240rpx;
+  align-items: center;
+  padding: 0 80rpx;
+  box-sizing: border-box;
+  background: white;
+}
+.gradeTable .header .header-img{
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 140rpx;
+  overflow: hidden;
+  margin-right: 52rpx;
+}
+.gradeTable .header .header-img image{
+  width: 100%;
+  height: 100%;
+}
+
+.gradeTable .header .header-info{
+  flex: 1;
+  font-size: 30rpx;
+  color: RGBA(51, 51, 51, 1);
+}
+.gradeTable .header .header-info .header-top{
+  display: flex;
+  align-items: center;
+  margin-bottom:22rpx;
+
+}
+.gradeTable .header .header-info .header-top text{
+  margin-right: 15rpx;
+}
+.gradeTable .header .header-info .header-top image{
+  width: 24rpx;
+  height: 24rpx;
+}
+.gradeTable .header .header-info .header-top .teacherpost{
+  font-size: 20rpx;
+  padding: 4rpx 15rpx;
+  line-height: 30rpx;
+  background: RGBA(2, 199, 220, 0.3);
+  color: RGBA(2, 199, 220, 1);
+  border-radius: 30rpx; 
+  margin-left: 15rpx;
+}
+.gradeTable .header .header-info .header-bot{
+  display: flex;
+  align-items: center;
+  color: RGBA(153, 153, 153, 1);
+  font-size: 24rpx;
+
+}
+.gradeTable .header .header-info .header-bot .symbol{
+  margin: 0 15rpx;
+}
+.gradeTable .main{
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  background: white;
+  margin-bottom: 20rpx;
+}
+.gradeTable .main .section{
+  height: 60rpx;
+  display: flex;
+  justify-content: space-between;
+  font-size: 26rpx;
+  align-items: center;
+  line-height: 60rpx;
+  text-align: center;
+  margin-bottom: 31rpx;
+}
+.gradeTable .main .section1{
+  width: 260rpx;
+  height: 60rpx;
+  background: RGBA(2, 199, 220, 1);
+  color: white;
+  border-radius: 60rpx;
+}
+.gradeTable .main .section1 view{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gradeTable .main .section1 view text{
+  width: 180rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  display: inline-block
+}
+.gradeTable .main .section2{
+  width: 220rpx;
+  height: 60rpx;
+  background: RGBA(2, 199, 220, 1);
+  color: white;
+  border-radius: 60rpx;
+}
+.gradeTable .main .section3{
+  width: 180rpx;
+  height: 60rpx;
+  background: RGBA(2, 199, 220, 1);
+  color: white;
+  border-radius: 60rpx;
+}
+.gradeTable .main .section image{
+  width: 20rpx;
+  height: 20rpx;
+  margin-left:13rpx; 
+}
+
+.gradeTable .main .maininfo .testlist{
+  height: 120rpx;
+  border-top: 1rpx solid RGBA(228, 228, 228, 1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 28rpx;
+}
+.gradeTable .main .maininfo .testlist .left{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.gradeTable .main .maininfo .testlist .left image{
+  height: 60rpx;
+  width: 60rpx;
+  margin-right: 32rpx;
+}
+.gradeTable .main .maininfo .testlist .right{
+  color: RGBA(2, 199, 220, 1);
+}
+.gradeTable .teststate{
+  font-size: 30rpx;
+  height: 170rpx;
+  background: white;
+  padding: 30rpx;
+}
+.gradeTable .teststate view{
+  height: 98rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.gradeTable .teststate view image{
+  width: 99rpx;
+  height: 60rpx;
+}
+.gradeTable .teststate text{
+  color: RGBA(153, 153, 153, 1);
+  font-size: 20rpx;
+}

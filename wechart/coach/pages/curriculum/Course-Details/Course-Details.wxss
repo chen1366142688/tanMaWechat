@@ -1,0 +1,524 @@
+/* pages/curriculum/Course-Details/Course-Details.wxss */
+
+.Course-Details {
+  width: 750rpx;
+  margin: 0;
+  padding: 0;
+}
+
+.Course-banner {
+  width: 750rpx;
+  height: 320rpx;
+  margin: 0 auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.banner-img {
+  width: 78rpx;
+  height: 76rpx;
+  left: 650rpx;
+  position: absolute;
+}
+
+.banner-heat {
+  width: 139rpx;
+  height: 40rpx;
+  line-height: 33rpx;
+  position: relative;
+  top: 14rpx;
+  background-image: url('http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coach/curriculum/background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  float: right;
+}
+
+.heat-img {
+  width: 16rpx;
+  height: 16rpx;
+  margin: 0;
+  padding: 0;
+  margin-left: 29rpx;
+  line-height: 40rpx;
+}
+
+.heat-text {
+  font-size: 24rpx;
+  line-height: 40rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(228, 0, 17, 1);
+  margin-left: 20rpx;
+}
+
+/*  简介  */
+
+.Details-abstract {
+  position: absolute;
+  top: 230rpx;
+  width: 750rpx;
+  height: 90rpx;
+  background: rgba(40, 38, 39, 1);
+  opacity: 0.7;
+}
+
+.project-sort {
+  width: 120rpx;
+  height: 60rpx;
+  margin-top: 14rpx;
+  float: left;
+  margin-left: 24rpx;
+  border: 1rpx solid #fff;
+  border-radius: 10rpx;
+}
+
+.sort-one {
+  width: 120rpx;
+  height: 30rpx;
+  color: rgba(40, 38, 39, 1);
+  text-align: center;
+  font-size: 20rpx;
+  background-color: #fff;
+}
+
+.sort-two {
+  width: 120rpx;
+  height: 30rpx;
+  color: #fff;
+  font-size: 20rpx;
+  text-align: center;
+}
+
+.abstract {
+  width: 569rpx;
+  height: 61rpx;
+  float: right;
+  font-size: 26rpx;
+  margin-top: 14rpx;
+  margin-right: 10rpx;
+}
+
+.abstract-text {
+  width: 549rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #fff;
+}
+
+.abstract-BZ {
+  max-width: 300rpx;
+  min-width: 60rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  margin-top: 10rpx;
+  text-align: right;
+  float: right;
+}
+
+.c-grade-a {
+  width: 20rpx;
+  height: 20rpx;
+  float: left;
+  margin-top: 5rpx;
+}
+
+.van-name {
+  max-width: 270rpx;
+  min-width: 35rpx;
+  color: #fff;
+  font-size: 24rpx;
+  float: right;
+  margin-top: -2rpx;
+  text-align: left;
+}
+
+/*  培训时间  */
+
+.Time-Allocation {
+  width: 702rpx;
+  background: rgba(255, 255, 255, 1);
+  padding: 0rpx 24rpx;
+}
+
+.Time-BT {
+  width: 702rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  color: #333;
+  font-weight: Bold;
+}
+
+.Allocation-Z {
+  width: 702rpx;
+  font-size: 24rpx;
+  background-color: #fff;
+  color: #333;
+}
+
+.Allocation-Z-one {
+  width: 702rpx;
+  height: 80rpx;
+  background-color: #fff;
+  border-top: 1rpx solid #e4e4e4;
+}
+
+.Z-one-time {
+  width: 252rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  float: left;
+}
+
+.Z-one-text {
+  width: 270rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-left: 19rpx;
+  float: left;
+}
+
+.surplus {
+  color: #e40011;
+}
+
+.in-all {
+  color: #00b6d6;
+}
+
+.option {
+  width: 134rpx;
+  height: 40rpx;
+  background-color: #fff;
+  border: 1rpx solid #007587;
+  float: right;
+  margin-top: 19rpx;
+  border-radius: 24rpx;
+}
+
+.tution {
+  width: 67rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+  border-radius: 24rpx;
+  float: left;
+}
+
+.await {
+  width: 67rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+  border-radius: 24rpx;
+  float: right;
+}
+
+.selectAwit {
+  color: #fff;
+  background-color: #007587;
+}
+
+.notSelectAwit {
+  color: #007587;
+  background-color: #fff;
+}
+
+.Allocation-Z-tow {
+  width: 702rpx;
+  background-color: #cbcbcb;
+}
+
+/*  已报学员  */
+
+.fenBox {
+  display: flex;
+  flex-wrap: wrap;
+  width: 702rpx;
+  background: rgba(228, 228, 228, 1);
+  flex-direction: row;
+  justify-content: flex-start;
+  -webkit-justify-content: flex-start;
+  padding-top: 10rpx;
+}
+
+.fenItem {
+  width: 65rpx;
+  margin: 0rpx 27rpx 10rpx 10rpx; /* 调节封面之间的原始间距，即不小于36px */
+}
+
+.fenItem-text {
+  width: 48rpx;
+  font-size: 24rpx;
+  color: #333;
+  text-align: center;
+  overflow: hidden;
+  padding-left: 7rpx;
+  /* text-overflow: ellipsis; */
+  white-space: nowrap;
+}
+
+@media screen and (min-width: 320px) and (max-width: 374px) {
+  .fenItem {
+    width: 60rpx;
+    margin: 0rpx 10rpx 10rpx 10rpx; /* 调节封面之间的原始间距，即不小于36px */
+  }
+}
+
+.itemImg {
+  display: block;
+  width: 65rpx;
+  height: 65rpx;
+  margin: 0 auto;
+  border-radius: 50rpx;
+}
+
+/*课程简介*/
+
+.c-course-int-titl {
+  max-height: 100%;
+  height: 50rpx;
+  color: #333;
+  font-size: 30rpx;
+  line-height: 29rpx;
+  border-bottom: 1rpx solid #e4e4e4;
+  font-weight: Bold;
+}
+
+.c-course-int-titlea {
+  width: 300rpx;
+  max-height: 100%;
+  height: 39rpx;
+  color: #333;
+  float: left;
+  font-size: 30rpx;
+  line-height: 29rpx;
+  font-weight: Bold;
+}
+
+.c-course-int-titleb {
+  color: #333;
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  text-align: left;
+  line-height: 36rpx;
+  padding-bottom: 6px;
+  margin-top: 10rpx;
+  /* border-top: 1rpx solid #e4e4e4; */
+}
+
+.items-img {
+  width: 700rpx;
+  vertical-align: bottom;
+  /* margin-bottom: 14rpx;  */
+  margin-top: 20rpx;
+}
+
+.c-course-int-titlec {
+  padding: 15rpx 24rpx;
+  margin-top: 20rpx;
+  background-color: #fff;
+}
+
+.c-cou-havea {
+  width: 400rpx;
+  float: right;
+  text-align: right;
+  align-items: flex-end;
+  color: #007587;
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+}
+
+.c-cou-havea-text {
+  width: 370rpx;
+  float: left;
+}
+
+image.c-cou-haveb {
+  width: 17rpx;
+  float: right;
+  margin-top: 9rpx;
+  height: 17rpx;
+  margin-left: 12rpx;
+}
+
+.c-cou-per-a {
+  display: flex;
+  /* margin-bottom: 4rpx; */
+  border-bottom:1rpx solid #e4e4e4;
+  padding-bottom:13rpx;
+}
+
+.c-cou-per-b {
+  display: flex;
+  align-items: flex-end;
+}
+
+.c-cou-havec {
+  font-family: PingFang-SC-Regular;
+  font-size: 24rpx;
+  color: #333;
+  /* border-top: 1px solid #e4e4e4; */
+  padding-top: 16rpx;
+}
+
+.c-cou-havecaf {
+  font-family: PingFang-SC-Regular;
+  font-size: 24rpx;
+  color: #333;
+  /* border-top: 1px solid #e4e4e4; */
+  padding-top: 18rpx;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+.c-cou-havef {
+  clear: both;
+}
+
+.cou-timea {
+  float: left;
+}
+
+.cou-timea-attr {
+  float: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 700rpx;
+  overflow: hidden;
+}
+
+.cou-timeb {
+  float: left;
+  margin-left: 13.3%;
+}
+
+.cou-timec {
+  flex: 1;
+}
+
+/* 培训项目 */
+
+.cou-timeg {
+  margin: 10rpx 0;
+}
+
+/*  训练场馆  */
+
+.cou-timed {
+  margin-left: 18px;
+}
+
+.cou-timee {
+  text-align: right;
+  width: 400rpx;
+  float: right;
+  color: #007587;
+  font-size: 24rpx;
+  margin-left: 18px;
+}
+
+.cou-timef {
+  display: inline-block;
+}
+
+.scroolBox {
+  width: 702rpx;
+  /* height: 140rpx; */
+  background: #fff;
+  /* overflow: hidden; */
+  margin-top: 10rpx;
+  white-space: nowrap;
+  margin-bottom: 10rpx;
+}
+
+.intro-scroll {
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+}
+
+.intro-scrollImg {
+  width: 269rpx;
+  height: 210rpx;
+  vertical-align: bottom;
+  margin-right: 20rpx;
+}
+
+/*到底  */
+
+.van-over {
+  display: block;
+  width: 600rpx;
+  height: 185rpx;
+  line-height: 73rpx;
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(153, 153, 153, 1);
+  text-align: center;
+  margin: 0 auto;
+}
+
+/*  底部按钮  */
+
+.compile {
+  width: 750rpx;
+  height: 98rpx;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0rpx;
+}
+
+.compile .pay-the-fees {
+  width: 375rpx;
+  height: 98rpx;
+  background-color: #f9f9f9;
+  color: #007587;
+  margin: 0rpx;
+  padding: 0rpx;
+  display: block;
+  overflow: hidden;
+  line-height: 98rpx;
+  border-radius: 0;
+  font-size: 30rpx;
+  float: left;
+}
+
+.compile .cancel-curriculum {
+  width: 375rpx;
+  height: 98rpx;
+  background-color: #cbcbcb;
+  color: #feffff;
+  display: block;
+  line-height: 98rpx;
+  font-size: 30rpx;
+  margin: 0rpx;
+  padding: 0rpx;
+  overflow: hidden;
+  float: left;
+  border-radius: 0;
+}
+
+.compile .compile-curriculum {
+  width: 350rpx;
+  height: 98rpx;
+  line-height: 98rpx;
+  background-color: #007587;
+  color: #feffff;
+  display: block;
+  margin: 0rpx;
+  padding: 0rpx;
+  font-size: 30rpx;
+  overflow: hidden;
+  float: left;
+  border-radius: 0;
+}
+
+button::after {
+  border: none;
+}

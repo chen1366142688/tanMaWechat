@@ -1,0 +1,14 @@
+{
+  "pages":[
+    "pages/login/Forget-Password/Forget-Password",
+    "pages/login/Register/Register",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  }
+}

@@ -1,0 +1,20 @@
+<!--pages/Information/Selection-school/Selection-school.wxml-->
+<view class='Selection-school'>
+  <view class='Selection-school-headline'>
+    <view class='headline-school'>
+       <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" class='relation'>{{array[index]}}</picker> 
+      <image class='section-pull-down' src='{{imgUrl}}pull-down.png'></image>
+    </view>
+    <view class='headline-Name'>
+      <!-- <view class='Bargraph'></view> -->
+      <input class='section-options-have-input' maxlength="30" placeholder='请输入学校名称' placeholder-class='section-options-have-input-cbcbcb' bindinput='inputSchool' value="{{value}}"></input>
+    </view>
+    <view class='headline-search' bindtap='searchSchool'>
+      <image class='search-img' src='{{imgUrl}}search.png'></image>
+    </view>
+  </view>
+
+  <view class='section-school'>
+    <view class='section-school-one' bindtap='selectedSchool' wx:for="{{schoolList}}" wx:for-item="school" wx:key="schoolId" data-schoolId="{{school.schoolId}}" data-school="{{school.schoolName}}">{{school.schoolName}}</view>
+  </view>
+</view>

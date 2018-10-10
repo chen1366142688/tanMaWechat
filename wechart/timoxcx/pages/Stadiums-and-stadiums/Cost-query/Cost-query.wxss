@@ -1,0 +1,66 @@
+page{
+  background: #ececec;
+}
+.c-query{
+  width:702rpx;
+  height:210rpx;
+  margin:20rpx auto;
+  background: #fff;
+}
+.c-queryBox{
+  height:27rpx;
+  line-height: 27rpx;
+}
+.c-totaltext{
+   width:192rpx;
+height:27rpx;
+font-size:28rpx;
+font-family:PingFang-SC-Bold;
+color:rgba(51,51,51,1);
+line-height:27rpx;
+margin-right:21rpx;
+font-weight: bold;
+}
+.c-query-total{
+  padding:21rpx 14rpx 21rpx 26rpx;
+  border-bottom:2rpx solid #ececec;
+}
+.c-total-money{
+   width:196rpx;
+height:22rpx;
+font-size:28rpx;
+font-family:PingFang-SC-Bold;
+color:rgba(232,85,113,1);
+line-height:22rpx;
+font-weight: bold;
+}
+.c-query-date{
+   width:128rpx;
+height:17rpx;
+font-size:22rpx;
+font-family:PingFang-SC-Regular;
+color:rgba(51,51,51,1);
+line-height: 27rpx;
+}
+.c-query-qiu{
+  height:20rpx;
+  line-height: 20rpx;
+  padding:25rpx 14rpx 25rpx 28rpx;
+  border-bottom:2rpx solid #ececec;
+}
+.c-query-bus{
+  border-bottom:0;
+}
+.c-yumao{
+height:23rpx;
+font-size:24rpx;
+font-family:PingFang-SC-Bold;
+color:rgba(51,51,51,1);
+font-weight: bold;
+}
+.c-query-pmb{
+height:18rpx;
+font-size:24rpx;
+font-family:PingFang-SC-Regular;
+color:rgba(51,51,51,1);
+}

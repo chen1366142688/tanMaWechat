@@ -1,0 +1,7 @@
+<!--pages/My/alter-password/alter-password.wxml-->
+<view class='alter-password'>
+  <view class='alter-input'>
+    <input class="input" maxlength="18" type='password' placeholder="请输入原密码" name="userPwd" value="{{name && name!='null'?name:''}}" bindinput='oldPass'/>
+  </view>
+  <view type="default" class="preserve" bindtap="subName">提交结果</view>
+</view>

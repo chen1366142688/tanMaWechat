@@ -1,0 +1,14 @@
+<!--pages/My/Training-Record/Training-Record.wxml-->
+<view class='Training-Record'>
+  <view class='Test-Record-one' wx:for="{{listData}}">
+    <view class='Test-Record-one-headline'>测试项目：{{item.planName}}</view>
+    <view class='Test-complete-result-one'>
+      <view class='Test-complete-result-one-headline-left'>
+        <view class='Test-complete-result-one-headline-left-top'>测试成绩：{{item.resultValue}}</view>
+        <view class='Test-complete-result-one-headline-left-bottom'>测试时间：{{item.createTime}}</view>
+      </view>
+      <view class='Test-complete-result-one-section-right'>{{item.exerciseCount}}次</view>
+    </view>
+  </view>
+  <view wx:if="{{notHaveMoreData}}" class='footer'>————已全部显示————</view>
+</view>

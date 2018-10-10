@@ -1,0 +1,96 @@
+<!--pages/my/Subordinate-coach/Subordinate-coach.wxml-->
+<view class='Subordinate-coach'>
+<scroll-view class='coachListBox' scroll-y="true"  bindscrolltolower="scrolltolower">
+  <view class='coach-Single'  wx:for="{{coachList}}" wx:key="itemName" wx:for-item="coach" bindlongpress="longpress" bindtap='coachItem' data-coachId="{{coach.coachUserId}}">
+    <view class='Single-header'>
+      <view class='coach-jiao-one '>
+        <image class='jiao-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/location7.png'></image>
+        <text class='jiao-text'>{{coach.provinceName? coach.provinceName:'' }}-{{coach.cityName? coach.cityName:'' }}</text>
+      </view>
+      <view class='coach-jiao-two'>
+        <view class="coach-jiao-one-item" wx:for="{{coach.itemNameList}}" wx:key="coachId" wx:for-item="itemName" wx:if="{{index<4}}">
+          <image class='qiu-img' src='{{itemName.itemPhotoAddress}}'></image>
+          <text class='qiu-text'>{{itemName.itemName}}</text>
+        </view>
+        <text class='more' wx:if="{{coach.itemNameList.length>4}}" decode="true">&nbsp;等</text>
+      </view>
+    </view>
+    <view class='Single-section'>
+      <image class='Head-Portraits' src='{{coach.avatarUrl}}'></image>
+      <view class='section-center'>
+        <view class='section-center-one'>
+          <view class='section-center-one-left'>
+            <view class='one-left-name'>{{coach.nickName }}</view>
+            <image class='one-left-gender' wx:if="{{coach.gender==1}}" src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/man-blue.png'></image>
+            <image class='one-left-gender' wx:if="{{coach.gender==2}}" src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/woman-blue.png'></image>
+            <view class='one-left-attestation' wx:if="{{coach.authState=='1'}}">已认证</view>
+            <view class='one-left-attestation' wx:else>未认证</view>
+          </view>
+          <view class='section-center-one-right'>
+            <image class='one-right-gender' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/class-blue.png'></image>
+            <view class='one-right-name'>{{coach.athleteName? coach.athleteName:'暂无' }}</view>
+          </view>
+        </view>
+
+        <view class='section-center-two'>
+          <view class='section-center-two-left'>
+            <view class='two-left-name'>有 <text class='two-left-name-red'>{{coach.classMember? coach.classMember:'0' }}</text> 课程正在培训</view>
+          </view>
+          <view class='section-center-two-right'>
+            <image class='two-right-gender' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/popularity1.png'></image>
+            <view class='two-right-name'>{{coach.popularity? coach.popularity:'0' }}</view>
+            <!-- <view class='right-attestation'>已认证</view>  -->
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+  <!-- <view class='coach-Single'>
+    <view class='Single-header'>
+      <view class='coach-jiao-one '>
+        <image class='jiao-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/location7.png'></image>
+        <text class='jiao-text'>四川-成都</text>
+      </view>
+      <view class='coach-jiao-two'>
+        <view class="coach-jiao-one-item">
+          <image class='qiu-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/basketballMini.png'></image>
+          <text class='qiu-text'>篮球</text>
+        </view>
+      </view>
+    </view>
+    <view class='Single-section'>
+      <image class='Head-Portraits' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/headportrait.png'></image>
+      <view class='section-center'>
+        <view class='section-center-one'>
+          <view class='section-center-one-left'>
+            <view class='one-left-name'>李冰</view>
+            <image class='one-left-gender' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/man-blue.png'></image>
+          </view>
+          <view class='section-center-one-right'>
+            <image class='one-right-gender' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/class-blue.png'></image>
+            <view class='one-right-name'>国家一级运动员</view>
+          </view>
+        </view>
+
+        <view class='section-center-two'>
+          <view class='section-center-two-left'>
+            <view class='two-left-name'>有 <text class='two-left-name-red'>1</text> 课程正在培训</view>
+          </view>
+          <view class='section-center-two-right'>
+            <image class='two-right-gender' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/popularity1.png'></image>
+            <view class='two-right-name'>42</view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+   
+  </view> -->
+
+   <!-- 添加教练  -->
+
+    <view class='add-coach'>
+       <view class='add-coach-inset' bindtap='addCoach'> <text class='add-coach-inset-add'>+</text> 添加教练</view>
+    </view>
+</view>

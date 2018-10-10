@@ -1,0 +1,118 @@
+<!--pages/index/particulars/particulars.wxml-->
+<!--header  -->
+<!-- <view class='box'> -->
+<view class='vanThree'>
+  <view class='van-bannerceca' style='background: url({{classInfo.classPhotoAddress}});background-size: cover;'>
+    <!-- <view class='hot-img-clasa hot-img-clasaaf'>通知以发出</view> -->
+    <view class="hot-img-clasa hot-img-clasaaf" wx:if="{{attendDetail.attendStatus == '01'}}">准备中</view>
+    <view class="hot-img-clasa hot-img-clasaaf" wx:if="{{attendDetail.attendStatus == '02' || attendDetail.attendStatus == '03'}}">通知已发出</view>
+      <view class="hot-img-clasa hot-img-clasaaf kaike" wx:if="{{attendDetail.attendStatus == '04'}}">开课进行中</view>
+      <view class="hot-img-clasa hot-img-clasaaf" wx:if="{{attendDetail.attendStatus == '06'}}">已完结</view>
+      <view class="hot-img-clasa hot-img-clasaaf" wx:if="{{attendDetail.attendStatus == '05'}}">已取消</view>
+    <view class='van-banner-item' data-classId="{{item.classId }}">
+      <!--  开课课程  -->
+      <text class='c-item-info-txt' wx:if="{{attendDetail.type == '1'}}">{{classInfo.itemName}} {{classInfo.maxMember}}人班</text>
+      <text class='c-item-info-txt' wx:if="{{attendDetail.type == '2'}}">{{classInfo.itemName}} 私教</text>
+      <text class='brief-introduction'>{{classInfo.className}}</text>
+    </view>
+  </view>
+  <!-- 课程信息  -->
+  <view class='period'>
+    <!--  课程信息-人员信息  -->
+    <view class='period-one'>
+      <image class='head-portrait' src='{{classInfo.coachPhotoAddress }}'></image>
+      <view class='Statistics'>
+        <image class='l-cdcenter-posa' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/coach.png'></image>
+        <text class='c-username-text in'>{{classInfo.classCoach}}</text>
+        <image wx:if="{{attendDetail.gender  ==1}}" class='l-cdcenter-po' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/man.png'></image>
+        <image wx:if="{{attendDetail.gender  ==2}}" class='l-cdcenter-po' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/class-blue.png'></image>
+        <image class='c-touser-xcxa' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/grade-blue.png'></image>
+        <text class='c-renshu in'>{{classInfo.itemStudentGrade}}</text>
+        <image class='c-date' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/popularity2.png'></image>
+        <text class='c-data-txt in'>{{classInfo.popularity?classInfo.popularity:0}}</text>
+      </view>
+      <view class='van-right'>
+        <view class='van-left-txt'>
+          <view class='van-rmba'>
+            <text class='van-rmbb-smal'>RMB</text>
+            <text class='van-rmbc'>{{classInfo.courseCostTotal/100}}</text>
+          </view>
+          <view class='van-rmbe'>{{classInfo.courseCount}}课时</view>
+        </view>
+      </view>
+    </view>
+
+    <!--  课时信息-课程信息  -->
+    <view class='period-tow'>
+      <view class='curriculum-time'> {{attendDetail.attendPeriod?attendDetail.attendPeriod:0}}期开课时间：{{attendDetail.attendDate}}（周{{attendDetail.weekDay==1?"一":attendDetail.weekDay==2?"二":attendDetail.weekDay==3?"三":attendDetail.weekDay==4?"四":attendDetail.weekDay==5?"五":attendDetail.weekDay==6?"六":"日"}}）{{attendDetail.dayTimeStart}} </view>
+      <view class='Statisticse'>
+        <image class='l-cdcenter-posa' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/position-blue.png'></image>
+        <text class='c-username-text in'>{{attendDetail.homeName}}</text>
+        <image class='c-touser-xcxa' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/population-blue.png'></image>
+        <text class='c-renshu in'>{{attendDetail.signUpMember}}人已报名</text>
+        <image class='c-date' wx:if="{{attendDetail.homeCostStatus == '1'}}" src='{{imgUrl}}coach/public/account.png'></image>
+        <text class='c-data-txt in' wx:if="{{attendDetail.homeCostStatus == '1'}}">已在线缴纳场馆费</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!--  截止某时间报名情况  --> 
+<!-- <scroll-view class='Apply'> -->
+  <!--  签到情况  -->
+  <text class='To-sign-up'>截止{{nowDate}} 已报名学员</text>
+      <view class='sign-in'>
+        <view class='member1' wx:for="{{studentList}}" wx:for-item="student" wx:key="{{student.scheduleId}}">
+          <image class='head-portrait' src='{{student.avatarUrl}}'></image>
+          <view class='information-about-firm'>
+            <text class='c-username-text in'>{{student.nickName}}</text>
+            <image class='c-touser-xcxa' wx:if="{{student.gender == '1'}}" src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/man-blue.png'></image>
+            <image class='c-touser-xcxa' wx:if="{{student.gender == '2'}}" src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/woman-blue.png'></image>
+          </view>
+          <view class='van-right-txt'>
+            <view class='van-rmba'>
+              <text class='van-rmbc'>报名时间：{{student.createTime}}</text>
+              <view class='residue'>( <text class='red-text'>余{{student.residueCount }}课时</text> /共{{student.courseCount}}课时)</view>
+            </view>
+          </view>
+          <view class="btn"  wx:if="{{attendDetail.settlementStatus=='0'&& student.signStatus=='0' && (attendDetail.attendStatus=='04'||attendDetail.attendStatus=='06')}}" data-scheduleid='{{student.scheduleId}}' data-signstatus='2' bindtap="qiandao">旷课</view>     
+           <view class="btn"  wx:if="{{attendDetail.settlementStatus=='0'&& student.signStatus=='0' && (attendDetail.attendStatus=='04'||attendDetail.attendStatus=='06')}}" data-scheduleid='{{student.scheduleId}}' data-signstatus='1' bindtap="qiandao">签到</view>
+          <view class="overbtn"  wx:if="{{attendDetail.settlementStatus=='0'&&student.signStatus=='1' && (attendDetail.attendStatus=='04'||attendDetail.attendStatus=='06')}}" data-scheduleid='{{student.scheduleId}}' data-signstatus='0' bindtap="qiandao">取消签到</view>
+          <view class="overbtn"  wx:if="{{attendDetail.settlementStatus=='0'&&student.signStatus=='2' && (attendDetail.attendStatus=='04'||attendDetail.attendStatus=='06')}}" data-scheduleid='{{student.scheduleId}}' data-signstatus='0' bindtap="qiandao">取消旷课</view>
+          <view class="overbtn"  wx:if="{{attendDetail.settlementStatus=='1'&&student.signStatus=='1'}}">已签到</view>
+          <view class="overbtn"  wx:if="{{attendDetail.settlementStatus=='1'&&student.signStatus=='2' }}">已旷课</view>
+      </view>
+    </view>      
+  <!-- 底部提示语  -->
+   <text class='van-over'>————{{allStudent}}————</text> 
+  <!--  底部按钮  -->
+<!-- </scroll-view> -->
+  <view class='compile' wx:if="{{attendDetail.attendStatus == '01' && coachUserType=='3' && attendDetail.coachUserId==coachUserId}}">
+    <button style='width:50%;background-color: #cbcbcb' class='cancel-curriculum' bindtap='deleteAttend'>删除本次日程</button>
+    <button style='width:50%;' class='compile-curriculum' bindtap='editeAttend'>编辑本次日程        </button>
+  </view>
+
+  <view class='compile' wx:if="{{attendDetail.attendStatus == '02' && coachUserType=='3' && attendDetail.coachUserId==coachUserId}}">
+  <button style='width:33%;' class='pay-the-fees' bindtap='toPay' wx:if="{{attendDetail.homeCostStatus == '0'}}">交场馆费</button>
+  <button style='width:34%;' class='cancel-curriculum' bindtap='cancelAttend' wx:if="{{attendDetail.homeCostStatus == '0'}}">取消本次日程</button>
+  <button style='width:33%;' class='compile-curriculum' bindtap='editeAttend' wx:if="{{attendDetail.homeCostStatus == '0'}}">编辑本次日程</button>
+  <button style='width:50%;' class='cancel-curriculum' bindtap='cancelAttend' wx:if="{{attendDetail.homeCostStatus == '1'}}">取消本次日程</button>
+  <button style='width:50%;' class='compile-curriculum' bindtap='editeAttend' wx:if="{{attendDetail.homeCostStatus == '1'}}">编辑本次日程</button>
+</view>
+
+<view class='compile' wx:if="{{attendDetail.attendStatus == '03' && coachUserType=='3' && attendDetail.coachUserId==coachUserId}}">
+ <!-- <button style='width:50%;' class='pay-the-fees' bindtap='toPay' wx:if="{{attendDetail.homeCostStatus == '0'}}">交场馆费</button>
+  <button style='width:50%;' class='cancel-curriculum' bindtap='cancelAttend' wx:if="{{attendDetail.homeCostStatus == '0'}}">取消本次日程</button>
+  <button style='width:100%;' class='cancel-curriculum' bindtap='cancelAttend'wx:if="{{attendDetail.homeCostStatus == '1'}}">取消本次日程</button>-->
+  <button style='width:100%;' class='pay-the-fees' bindtap='toPay' wx:if="{{attendDetail.homeCostStatus == '0'}}">交场馆费</button>
+</view>
+
+<view class='compile' wx:if="{{attendDetail.attendStatus == '04' && coachUserType=='3' && attendDetail.coachUserId==coachUserId}}">
+  <button style='width:100%;' class='pay-the-fees' bindtap='toPay' wx:if="{{attendDetail.homeCostStatus == '0'}}">交场馆费</button>
+</view>
+  
+<!-- 
+</view> -->
+
+
+

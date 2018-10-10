@@ -1,0 +1,112 @@
+.box{
+  width:100vw;
+  height: 100%;
+  background: #ececec;
+  text-align: center;
+  background:url(http://tanma-competition.oss-cn-beijing.aliyuncs.com/backTest.png);
+  background-size: 100% 100%;
+}
+
+button::after{
+border:none;
+}
+
+input{
+outline:none;
+border:none;
+list-style: none;
+}
+.btnBxo{
+  border-radius: 0;
+  padding-left:0;
+  padding-right:0;
+  background: 0;
+  border:0;
+}
+.name{
+  display: block;
+  font-size:34rpx;
+  font-family:PingFang-SC-Bold;
+  color:rgba(89,98,165,1);
+  line-height:45rpx;
+  margin-top:120rpx;
+  font-weight: bold;
+}
+.imgBox{
+  width:240rpx;
+  height:240rpx;
+  background:rgba(255,255,255,1);
+  border:2rpx solid #70A0D8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin:150rpx auto 60rpx auto;
+}
+.arCode{
+  width:220rpx;
+  height:220rpx;
+}
+.lookItem{
+  padding:0 16rpx 0 23rpx;
+  font-size:30rpx;
+  font-family:PingFang-SC-Regular;
+  color:rgba(255,255,255,1);
+  background:rgba(255,94,0,1);
+  border-radius:30rpx;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  justify-content: space-between;
+  width:260rpx;
+  margin: 0 auto;
+}
+.lookItem text{
+  font-size:30rpx;
+  font-family:PingFang-SC-Regular;
+  color:rgba(255,255,255,1);
+}
+.lookItem image{
+  width:16rpx;
+  height:16rpx;
+}
+.Registration{
+  width:620rpx;
+  min-height: 248rpx;
+  border-radius:5rpx;
+  margin:120rpx auto;
+  padding:26rpx 41rpx;
+}
+.bgColor{
+  background:rgba(255,255,255,.7);
+}
+
+.listTitle{
+  font-size:28rpx;
+  font-family:PingFang-SC-Bold;
+  color:rgba(51,51,51,1);
+  line-height:29rpx;
+  font-weight: bold;
+  display: flex;
+  align-self: flex-start;
+}
+.rowItem{
+  width:100%;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-between;
+  font-size:26rpx;
+  font-family:PingFang-SC-Regular;
+  color:rgba(51,51,51,1);
+  line-height:45rpx;
+  box-sizing: border-box;
+}
+.cloItem{
+  margin-right:35rpx;
+  display: inline-block;
+  max-width: 60%;
+  text-align: left;
+}
+.itemName{
+  display: inline-block;
+  max-width: 40%;
+}

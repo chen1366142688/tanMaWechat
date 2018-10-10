@@ -1,0 +1,65 @@
+<!--pages/My/My-Index/My-Index.wxml-->
+<view class='My-Index'>
+  <view class='My-Index-section'>
+    <view class='My-Index-header' bindtap='introduce'>
+      <view class='My-Index-header-head-portrait'>
+        <image class='head-portrait' src='{{childList.avatarUrl || imgUrl}}'></image>
+      </view>
+      <view class='My-Index-header-Name'>
+        <view class='My-Index-header-Name-top'>{{childList.nickName}}</view>
+        <view class='My-Index-header-Name-bottom'>
+          <view class='relation'>
+            <image class='Name-bottom-relation-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/My/identity.png'></image>
+            <view class='Name-bottom-relation-text'>{{childList.relationCode =='01' ? '本人' : childList.relationCode =='02' ? '母亲' : '父亲'}}</view>
+          </view>
+          <view class='Iphone'>
+            <image class='Name-bottom-Iphone-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/My/Iphone.png'></image>
+            <view class='Name-bottom-Iphone-text'>{{childList.phoneNum}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='My-Index-List'>
+      <view class='My-Index-List-one' wx:if="{{children.length == 0}}">
+        <view class='My-Index-List-one-section'>
+          <view class='My-Index-List-one-headline'>请先
+            <text class='My-Index-List-one-headline-blue'> 添加孩子信息</text>，才可看到本栏数据。</view>
+          <view class='My-Index-List-one-button'>
+            <view class='My-Index-List-one-button-left' bindtap='historyTest'>历史测试记录</view>
+            <view class='My-Index-List-one-button-right' bindtap='historyTraining'>历史训练记录</view>
+          </view>
+        </view>
+      </view>
+      <view class='My-Index-List-two' wx:for="{{children}}" wx:key="uqine" wx:for-item="chil">
+        <view class='My-Index-List-one-section'>
+          <view class='My-Index-List-two-headline' bindtap='details' data-childrenId="{{chil.childrenId }}">
+            <view class='My-Index-List-two-headline-left'>
+              <view class='My-Index-List-two-headline-left-Name'>
+                <view class='Name'>{{chil.realName }}</view>
+                <image class='Name-gender-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/My/{{chil.gender ==1 ? "man" : "woman"}}.png'></image>
+              </view>
+              <view class='My-Index-List-two-headline-left-corporeity' wx:if="{{chil.planCount>0}}">TA的体质： <text class='corporeity-yellow' catchtap='goTesting' data-childrenId="{{chil.childrenId }}" > {{chil.score }}分</text></view>
+              <view class='My-Index-List-two-headline-left-undetected' wx:if="{{chil.planCount == 0}}">TA还未完成体质监测
+                <text class='undetected-yellow' catchtap='goTesting' data-childrenId="{{chil.childrenId }}" decode='true' >&nbsp;&nbsp;去检测 >></text>
+              </view>
+            </view>
+            <view class='My-Index-List-two-headline-right'>
+              <view class='My-Index-List-two-headline-right-time'>{{chil.childrenAge }}岁 | BMI:{{chil.bmi }}</view>
+              <view class='My-Index-List-two-headline-right-participation'>已参与
+                <text class='participation'> {{chil.planCount }} </text>项训练</view>
+            </view>
+          </view>
+          <view class='My-Index-List-one-button'>
+            <view class='My-Index-List-one-button-left' data-childrenId="{{chil.childrenId }}" data-name="{{chil.realName}}" bindtap='historyTest'>历史测试记录</view>
+            <view class='My-Index-List-one-button-right' data-childrenId="{{chil.childrenId }}" data-name="{{chil.realName}}" bindtap='historyTraining'>历史训练记录</view>
+          </view>
+        </view>
+      </view>
+      <view class='My-Index-footer'>
+    <view class='My-Index-footer-left' bindtap='goHelp'>新手帮助</view>
+    <view class='My-Index-footer-right' bindtap='ContactCustomerService'>联系客服</view>
+  </view>
+    </view>
+  </view>
+  
+</view>

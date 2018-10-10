@@ -1,0 +1,259 @@
+<view class='van-banner' style='background:url("{{noticeBox.classPhotoAddress}}") no-repeat;background-size:100%;'>
+  <view class='van-banner-item'>
+    <view class='van-hot'>
+      <image class='hot-img' src='{{url}}van-hot.png'></image>
+      <text class='van-hot-num'>{{noticeBox.classPopularity?noticeBox.classPopularity:"0" }}</text>
+    </view>
+    <view class='van-text'>
+      <image class='c-grade-a' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/grade-white.png'></image>
+      <text class='van-name'>{{noticeBox.itemStudentGrade }}</text>
+    </view>
+  </view>
+</view>
+<view class='cor-collect-shop-foot'>
+  <view class='van-right-txtzhac'>
+    <view class='van-right-txtzhad'>
+      <view class='c-cou-per-a'>
+        <text class='c-item-info-txt-persona'>{{noticeBox.itemName }} {{noticeBox.maxMember }}人班</text>
+        <text class='van-right-txtzhaa' wx:if="{{noticeBox.classExperience ==1 }}">*本课程为体验课，详情请咨询教练。</text>
+        <text class='van-right-txtzhaa' wx:if="{{signOver==1 }}">*本课程已报满，如果喜欢可先收藏，有名额空出时，系统会短信通知到您。</text>
+      </view>
+      <view class='van-titel-txtzha'>
+        <text class='van-right-txtzhab'>{{noticeBox.className }}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class='c-course-int-titlec van-right-txtzhac'>
+    <view class='c-course-int-titleae'>课程简介</view>
+    <view class='c-course-int-titleb'>
+      <text>{{noticeBox.classDescribe}}</text>
+      <image wx:for="{{noticeBox.classPhotoVOList}}" class='items-img' wx:key="uqine" mode="widthFix" src='{{item.photoAddress}}'></image>
+    </view>
+  </view>
+
+  <view class='van-right-txtzhac'>
+    <view class='c-course-int-titlec'>
+      <view class='clearfloat'>
+        <view class='c-course-int-titlea'>课时与费用</view>
+        <view class='c-cou-havea c-cou-per-b c-cou-havee' bindtap='openKe'>
+          <!-- <view>已开课：{{noticeBox.lastAttendPeriod?noticeBox.lastAttendPeriod:"0" }}期</view> -->
+          <view class='cou-timef'>已开课{{noticeBox.lastAttendPeriod?noticeBox.lastAttendPeriod:"0" }}期</view>
+          <view class='cou-timef'>
+            <image class='c-cou-haveb' src='{{url}}more.png'></image>
+          </view>
+        </view>
+      </view>
+      <view class='c-cou-havec clearfix'>
+        <view class='cou-timea'>
+          <text>课时：{{noticeBox.courseCount }}课时/{{noticeBox.courseTime/10*60}}分钟</text>
+        </view>
+        <view class='c-cou-havef'></view>
+      </view>
+      <view class='c-cou-havec clearfix'>
+        <view class='cou-timeb' style='margin-left:0;'>
+          <text>费用：RMB {{noticeBox.courseCost/100}}/每课时 {{noticeBox.haveHomeFee == '1'?"(含场馆费)":"(不含场馆费)"}}</text>
+        </view>
+        <view class='c-cou-havef'></view>
+      </view>
+    </view>
+  </view>
+  <!--训练场馆-->
+  <view class='van-right-txtzhac'>
+    <view class='c-course-int-titlec titlecMiss'>
+      <view class='c-cou-per-a'>
+        <view class='c-course-int-titlea'>培训场馆</view>
+        <view class='c-cou-havea c-cou-per-b c-cou-havee cou-timec' bindtap='openVenue'>
+          <view class='cou-timee'>
+            <view class='cou-timef'>场馆详情</view>
+            <!-- <view class='cou-timef'>查看场馆详情</view> -->
+            <view class='cou-timef'>
+              <image class='c-cou-haveb' src='{{url}}more.png'></image>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class='c-cou-havec clearfix'> 
+        <view class='cou-timea'>
+          <text>{{noticeBox.homeName }}：{{noticeBox.homeAddress }}</text>
+        </view>
+        <view class='c-cou-havef'></view>
+      </view>
+      <view class='scroolBox'>
+        <scroll-view class='intro-scroll' scroll-x='true' scroll-with-animation='true'>
+          <view class='iLblock' wx:for="{{noticeBox.homePhoto }}" data-url="{{item.name}}" bindtap='imgPreview' wx:key="*this">
+            <image class='intro-scrollImg' src="{{item.name+'?x-oss-process=image/resize,m_mfit,h_210,w_269/quality,q_100'}}"  lazy-load="ture" mode='aspectFill' ></image>
+          </view>
+        </scroll-view>
+      </view>
+    </view>
+  </view>
+  <view class='van-right-txtzhac'>
+    <view class='c-course-int-titlec'>
+      <view class='c-course-int-titleae cou-timeg'>培训内容</view>
+      <view class='c-course-int-titleb'>
+        <view wx:for="{{project}}" wx:key="*this" data-detail="{{item.detailId}}">{{item.articleName}}：{{item.articleContent}}</view>
+      </view>
+    </view>
+  </view>
+  <!--培训时间-->
+  <!-- <view class='van-right-txtzhac'>
+    <view class='c-course-int-titlec'>
+      <view style='display:flex;aligin:center;'>
+        <view class='c-course-int-titlea cou-timeg'>培训时间</view>
+      </view>
+      <view class='c-cou-havec clearfix'>
+        <view wx:for="{{sectionList}}" wx:key="*this" data-sectionId="{{item.sectionId }}">
+          <text class='cou-sixa textOver'>{{item.weekDay }}：{{item.dayTimeStart }} - {{item.dayTimeEnd }}</text>
+          <view class='fr' wx:if="{{item.signUpOver ==0}}">空缺
+            <text class='cou-timei'>{{item.maxMember-item.signUpMember }}</text>人 / 共
+            <text class='cou-timei'>{{item.maxMember }}</text>人</view>
+          <view class='fr' wx:if="{{item.signUpOver ==1}}">
+            <text class='cou-timei'>已报满</text>
+          </view>
+        </view>
+
+      </view>
+    </view>
+  </view> -->
+
+  <view class='van-right-txtzhac'>
+    <view class='c-course-int-titlec'  >
+      <view class='c-cou-per-a' bindtap='openCoach'>
+        <view class='c-course-int-titlea'>简介</view>
+        <view class='c-cou-havea c-cou-per-b c-cou-havee cou-timec'>
+          <view class='cou-timee'>
+            <view class='cou-timef'>详细资料</view>
+            <view class='cou-timef'>
+              <image class='c-cou-haveb' src='{{url}}more.png'></image>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class='c-cou-havecesa clearfloat'>
+        <view class='cou-introduce-topica'>
+          <view class='cou-sixb' bindtap='imgPreviewCoach' data-url='{{noticeBox.coachPhotoAddress}}'>
+            <image class='cou-sixc' src='{{noticeBox.coachPhotoAddress?noticeBox.coachPhotoAddress+"?x-oss-process=image/resize,m_mfit,h_65,w_65":""}}' mode="aspectFill"></image>
+          </view>
+          <view class='cou-introduce-topicf'>
+            <text class='cou-time-authenticated' wx:if="{{noticeBox.authStatus ==1}}">已认证</text>
+            <text class='cou-time-authenticated' wx:if="{{noticeBox.authStatus ==0}}">未认证</text>
+          </view>
+          <!--已认证 -->
+        </view>
+        <view class='clearfloat cou-introduce-topicb'  bindtap='openCoach' >
+          <view class='cou-timea cou-time-authenticateda'>
+            <view class='cou-time-authenticatedb'>机构：</view>
+            <view class='cou-introduce-topicges'>{{noticeBox.classCoach}}</view>
+            <view class='cou-introduce-contenta'>
+              {{noticeBox.coachDescribe? noticeBox.coachDescribe:'此用户尚未提供简介' }}
+            </view>
+          </view>
+          <view class='cou-introduce-topicc'>
+            <image class='hot-img cou-introduce-topicd' src='{{url}}van-hot.png'></image>
+            <text class='van-hot-num cou-introduce-topicd'>{{noticeBox.coachPopularity?noticeBox.coachPopularity:0 }}</text>
+          </view>
+        </view>
+        <view class='cou-introduce-topice'></view>
+      </view>
+      <view class='teaching-assistant'>
+        <view class='cou-time-authenticatedb'>授课教练：</view>
+        <view class='cou-introduce-topicg'>{{noticeBox.classCoachName}}</view>
+      </view>
+
+    </view>
+  </view>
+  <!--已报名学员-->
+  <view class='van-right-txtzhac'>
+    <view class='c-course-int-titlec'>
+      <view class='c-course-int-titlea cou-timeg'>已报名学员</view>
+      <view class='fenBox c-cou-havec'>
+        <view class='fenItem' wx:for="{{signUserList}}" wx:key="*this" data-sudentId="{{item.studentId }}" bindtap="toUserDetailPage" data-studentuserid="{{item.studentUserId }}">
+          <image class='itemImg' src='{{item.avatarUrl}}?x-oss-process=image/resize,w_65,h_65'></image>
+        </view>
+        <text class='coach-certificate' wx:if="{{signUserList.length == 0}}">暂无已报名学员</text>
+        <!-- <view class='fenItem'>
+          <view class='authenticatedfistb-fist' wx:if="{{index>max}}" bindtap="more">{{index-max}}</view>
+        </view> -->
+      </view>
+    </view>
+  </view>
+  <text class='van-over'>————已全部显示————</text>
+  <image class='van-sticka' bindtap='returnhome' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/index.png'></image>
+  <image class='van-stickab' bindtap='telephone' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/customer-service1.png'></image>
+</view>
+
+<!--新的独立-->
+<view>
+  <view>
+    <view class='cor-bara'>
+      <!--弹出-->
+      <!--<view class="k-act-dowa" wx:if="{{tabImg}}">-->
+      <view class="k-act-dowa cor-collect-starta" wx:if="{{tabImgGay}}">
+        <view>
+          <view class="k-act-dowc">
+            <view class='k-act-dowb' bindtap='msg'>
+              <image class='k-messageconsulting' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/messageconsulting.png' wx:if="{{weing}}"></image>
+              <image class='k-messageconsultinga' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/messageconsultinga.png' wx:if="{{wei}}"></image>
+              <text class='k-messageconsulting-takea k-act-dowc-visited' wx:if="{{weing}}">留言咨询</text>
+              <text class='k-messageconsulting-takea' wx:if="{{wei}}">留言咨询</text>
+            </view>
+            <view class='k-act-dowb' bindtap='callPhone' data-phone="{{noticeBox.coachPhone  }}">
+              <image class='k-messageconsultinga' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/telephonecounseling.png' wx:if="{{phone}}"></image>
+              <image class='k-messageconsultinga' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/telephonecounselinga.png' wx:if="{{phoneIng}}"></image>
+              <text class='k-messageconsulting-takea' wx:if="{{phone}}">电话咨询</text>
+              <text class='k-messageconsulting-takea k-act-dowc-visited' wx:if="{{phoneIng}}">电话咨询</text>
+            </view>
+          </view>
+
+        </view>
+      </view>
+
+      <!--弹出end-->
+      <view class='footerMike footer-modal-background'>
+        <view class='cor-bar-cssa cor-css-askb' bindtap='what'>
+          <view class='cor-css-askc'>
+            <!--切换青色的咨询教练图标 c-consultingcoachqinse-hover -->
+            <view class='cor-consulta c-consultingcoachqinse-hover' wx:if="{{tabImgAc}}"></view>
+            <view class='cor-consulta' wx:if="{{tabImg}}"></view>
+            <view class='cor-css-askd'>咨询教练</view>
+          </view>
+        </view>
+        <!--留言咨询 电话咨询-->
+        <view class='cor-bar-cssa cor-css-askb' bindtap='shop'>
+          <view class='cor-css-askc'>
+            <view class='cor-shopcara'></view>
+            <view class='cor-css-askd'>购买课程</view>
+          </view>
+        </view>
+        <view class='cor-bar-cssa cor-collect-shope cor-collect-startb'>
+          <view class='cor-bar-cssa cor-collect-shope' bindtap='studentStore'>
+            <view class='cor-collect-shopf'>
+              <view class='cor-collect-shopb'>
+                <view class='cor-collect' wx:if="{{noticeBox.storeStatus==0}}" style='background:url("http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/collecta.png") no-repeat;background-size:100%;'>
+                </view>
+                <view class='cor-collect' wx:if="{{noticeBox.storeStatus==1}}" style='background:url("http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/studentNewImg/c18.png") no-repeat;background-size:95%;'>
+                </view>
+              </view>
+              <view class='cor-collect-shopc'>收藏</view>
+            </view>
+          </view>
+
+          <view class='cor-bar-cssa cor-collect-shopef'>
+            <button class='cor-btn-cllection' data-name="shareBtn" open-type="share">
+              <view class='cor-collect-shopf'>
+                <view class='cor-collect-shopb'>
+                  <view class='cor-share'></view>
+                </view>
+                <view class='cor-collect-shopa cor-collect-shopd'>分享课程</view>
+              </view>
+            </button>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='modal-cou' wx:if="{{dialog}}" bindtap='dialog'></view>
+<!--蒙层-->

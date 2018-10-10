@@ -1,0 +1,139 @@
+page{
+  background: #ececec;
+}
+.c-topimg{
+  width:750rpx;
+  height:642rpx;
+  background: url('http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/vanen-back.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.c-news{
+  width:702rpx;
+  height:530rpx;
+  background:rgba(255,255,255,1);
+  border-radius: 30rpx;
+  margin:0 auto;
+  position: relative;
+  top:389rpx;
+  border-top:0.1rpx solid transparent;
+}
+.userImg{
+  width:140rpx;
+  height:140rpx;
+  position: absolute;
+  left: 281rpx;
+  top:-70rpx;
+}
+.c-select{
+  width:532rpx;
+  height:88rpx;
+  line-height: 88rpx;
+  background:rgba(255,255,255,1);
+  border: 1rpx solid #E85571;
+  border-radius: 44rpx; 
+  margin:122rpx auto 40rpx auto;
+  padding:0 30rpx 0 38rpx;
+  position: relative;
+}
+.c-user{
+  width:532rpx;
+  height:88rpx;
+  line-height: 88rpx;
+  background:rgba(255,255,255,1);
+  border: 1rpx solid #E85571;
+  border-radius: 44rpx; 
+  margin:0 auto 40rpx auto;
+  padding:0 30rpx 0 38rpx;
+}
+.c-phone{
+  width:562rpx;
+  height:88rpx;
+  background:rgba(255,255,255,1);
+  border: 1rpx solid #E85571;
+  border-radius: 44rpx; 
+  margin:0 auto;
+  padding-left:38rpx;
+}
+.c-select-item{
+  width:30rpx;
+  height:25rpx;
+  margin-top: 32rpx;
+}
+.c-select-items{
+  width:19rpx;
+  height:35rpx;
+  margin: 26rpx 42rpx 0 0;
+  vertical-align: middle;
+}
+.c-seletxt{
+  display: inline-block;
+  font-size: 30rpx;
+  color: #333;
+  padding-left:36rpx;
+}
+.c-down{
+  width:11rpx;
+  height:6rpx;
+  vertical-align: middle;
+  position: absolute;
+  bottom:40rpx;
+  right:30rpx;
+}
+.c-select-item{
+  width:29rpx;
+  height:29rpx;
+  vertical-align: middle;
+  margin-right:37rpx;
+}
+.c-input-name{
+  height:88rpx;
+  line-height: 88rpx;
+  font-size:30rpx;
+  font-family:PingFang-SC-Regular;
+  color:rgba(153,153,153,1);  
+}
+.c-input-plac{
+  font-size:30rpx;
+  font-family:PingFang-SC-Regular;
+  color:rgba(153,153,153,1);  
+}
+.c-input-phone{
+  width:259rpx;
+  height:88rpx;
+  line-height: 88rpx;
+  font-size:30rpx;
+  font-family:PingFang-SC-Regular;
+  color:rgba(153,153,153,1);
+  border-right:1rpx dotted #E85571;  
+}
+.c-input-code{
+  width:145rpx;
+  height:88rpx;
+  line-height: 88rpx;
+  font-size:30rpx;
+  font-family:PingFang-SC-Regular;
+  color:rgba(51,51,51,1);
+  text-align: center;
+}
+.c-send-code{
+  width:90rpx;
+  height:88rpx;
+  position:relative;
+  right:-10rpx;
+}
+.c-shuoming{
+  font-size:24rpx;
+  font-family:PingFang-SC-Regular;
+  color:rgba(153,153,153,1);
+  position: relative;
+  top:297rpx;
+  left:184rpx;    
+}
+.vanenReg{
+  width:702rpx;
+  height:88rpx;
+  position: relative;
+  top:380rpx;
+  left:24rpx;   
+}

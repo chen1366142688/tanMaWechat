@@ -1,0 +1,263 @@
+<!--pages/curriculum/Course-Composer/Course-Composer.wxml-->
+<view class='redact'>
+  <!-- 开课课程  -->
+<picker disabled='{{!isCanediteOrg}}' class='course-curriculum' bindchange='orgChange' range='{{orgList}}' range-key='orgName' value='{{orgUserId}}'>
+    <text class='compile-category'>所属机构</text>
+    <view class='compile-select'>
+      <text class='compile-select-N'>{{orgList[orgIndex].orgName}}</text>
+      <image class='compile-select-T' wx:if="{{isCanediteOrg}}" src='{{imgUrl}}xiala2.png'></image>
+    </view>
+  </picker>
+
+  <view  class='course-curriculum' >
+    <text class='compile-categoryi'>课程状态</text>
+    <image src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/coach-doubt.png' type="primary" bindtap="modalcnta" class='Query'></image>
+    <picker class='compile-select' range="{{classStatus}}" range-key="name" value="{{statusIndex}}"  bindchange='classStatusChange'>
+      <text class='compile-select-N'>{{classStatus[statusIndex].name}}</text>
+      <image class='compile-select-T'  src='{{imgUrl}}xiala2.png'></image>
+    </picker>
+  </view>
+
+  <picker  class='course-curriculum' bindchange='experienceChange' range='{{isExperience}}' range-key='name' value='{{experienceIndex}}'>
+    <text class='compile-category'>是否为体验课</text>
+    <view class='compile-select'>
+      <text class='compile-select-N'>{{isExperience[experienceIndex].name}}</text>
+      <image class='compile-select-T'src='{{imgUrl}}xiala2.png'></image>
+    </view>
+  </picker>
+
+  <view  class='course-curriculum' >
+    <text class='compile-categoryi'>课程类型</text>
+    <image src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/coach-doubt.png' type="primary" bindtap="modalcntb" class='Query'></image>
+    <picker class='compile-select' disabled='{{editeStatus}}' bindchange='classTypeChange' range='{{classType}}' range-key='name' value='{{typeIndex}}'>
+      <text class='compile-select-N'>{{classType[typeIndex].name}}</text>
+      <image class='compile-select-T' wx:if="{{!editeStatus}}" src='{{imgUrl}}xiala2.png'></image>
+    </picker>
+  </view>
+
+  <view class='course-curriculum'>
+    <text class='compile-categoryi'>课程人数</text>
+    <image src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/coach-doubt.png' type="primary" bindtap="modalcntc" class='Query'></image>
+    <view class='compile-select'>
+      <input  bindinput='maxMember' value='{{studentNums}}' maxlength='5' type='number' placeholder='请输入本课程的最大人数' class='compile-select-N'>{{studentNums}}</input>
+      <!-- <image class='compile-select-T' src='{{imgUrl}}xiala2.png'></image> -->
+    </view>
+  </view>
+
+  <picker bindtap='itemChoose' disabled='{{itemListEdite}}' class='course-curriculum' bindchange='itemChange' range='{{itemList}}' range-key='itemName' value='{{itemIndex}}'>
+    <text class='compile-category'>培训内容</text>
+    <view class='compile-select'>
+      <text class='compile-select-N'>{{itemList[itemIndex].itemName}}</text>
+      <image class='compile-select-T' wx:if="{{!itemListEdite}}" src='{{imgUrl}}xiala2.png'></image>
+    </view>
+  </picker>
+
+  <view class='course-curriculum' bindtap='chooseLevel'>
+    <text class='compile-category'>适合能力级别</text>
+    <view class='compile-select'>
+      <text class='compile-select-N'>{{gradeShow}}</text>
+      <image class='compile-select-T'  src='{{imgUrl}}xiala2.png'></image>
+    </view>
+  </view>
+
+  <picker  bindtap='tips' class='course-curriculum' bindchange='homeChange' range='{{homeList}}' range-key='homeName' value='{{homeIndex}}'>
+    <text class='compile-category'>培训场馆</text>
+    <view class='compile-select'>
+      <text class='compile-select-N'>{{homeList[homeIndex].homeName}}</text>
+      <image class='compile-select-T'  src='{{imgUrl}}xiala2.png'></image>
+    </view>
+  </picker>
+
+  <picker  class='course-curriculum' bindchange='courseChange' range='{{courseTime}}' range-key='name' value='{{courseIndex}}'>
+    <text class='compile-category'>课时时长</text>
+    <view class='compile-select'>
+      <text class='compile-select-N'>{{courseTime[courseIndex].name}}</text>
+      <image class='compile-select-T'  src='{{imgUrl}}xiala2.png'></image>
+    </view>
+  </picker>
+  
+  <view class='edit-session'>
+    <view class='session-category'>
+      <text class='session-category-text'>课程时间</text>
+      <image  class='session-category-T' src='{{imgUrl}}coach/curriculum/addition.png' bindtap='addClassSection'></image>
+    </view>
+    <view class='session-time' wx:if="{{classSectionList}}" wx:for="{{classSectionList}}" wx:for-item="classSection" wx:key="{{index}}" wx:for-index="sectionIndex" data-index='{{sectionIndex}}'>
+      <view class='session-time-text'>
+        <picker  data-index='{{sectionIndex}}' range="{{weekList}}" range-key='name' value='{{weekIndex}}' bindchange="bindWeekChange" class='compile-select-N1'>{{ classSection.weekDay ==1 ? '周一':'' || classSection.weekDay ==5 ? '周五':'' || classSection.weekDay ==2 ? '周二':'' || classSection.weekDay ==6 ? '周六':'' || classSection.weekDay ==3 ? '周三':'' || classSection.weekDay ==7 ? '周日':'' || classSection.weekDay
+          ==4 ? '周四':'' }}
+        </picker>
+        <image  class='compile-select-T1' src='{{imgUrl}}xiala2.png'></image>
+        <!-- <text class='compile-select-T3' wx:if='{{editeStatus}}'>|</text> -->
+        <picker  data-index='{{sectionIndex}}' data-start="{{classSection.dayTimeStart}}" mode="time" bindchange='starTimeChange' value="{{classSection.dayTimeStart}}" start="08:00" end="22:00" class='compile-select-N1'>{{classSection.dayTimeStart}}</picker>
+        <image  class='compile-select-T1' src='{{imgUrl}}xiala2.png'></image>
+        <!-- <text class='compile-select-T4' wx:if='{{editeStatus}}'>—</text> -->
+        <picker  data-index='{{sectionIndex}}' data-end="{{classSection.dayTimeEnd}}"  mode="time" bindchange='endTimeChange' value="{{classSection.dayTimeEnd}}" start="08:00" end="22:00" class='compile-select-N1'>{{classSection.dayTimeEnd}}</picker>
+        <image  class='compile-select-T1' src='{{imgUrl}}xiala2.png'></image>
+      </view>
+      <view wx:if='{{!classSection.sectionId}}' bindtap='deleteCourseTime' data-index='{{sectionIndex}}' class='session-time-text-T'>
+        <view class='expurgate'>删除</view>
+      </view>
+    </view>
+    <!-- <view class='session-time'>
+      <view class='session-time-text'>
+        <picker range="{{weekList}}" range-key='name' value=''  bindchange="bindWeekChange" class='compile-select-N1' >周六</picker>
+        <image class='compile-select-T1' src='{{imgUrl}}xiala2.png'></image>
+        <picker mode="time" value="{{time}}" start="09:00" end="21:00" class='compile-select-N1'>14:00</picker>
+        <image class='compile-select-T1' src='{{imgUrl}}xiala2.png'></image>
+        <picker mode="time" value="{{time}}" start="09:00" end="21:00" class='compile-select-N1'>17:00</picker>
+        <image class='compile-select-T1' src='{{imgUrl}}xiala2.png'></image>
+      </view>
+      <view class='session-time-text-T'>
+        <view class='expurgate'>删除</view>
+      </view>
+    </view> -->
+  </view>
+  <!--  课程名称/简介  -->
+  <view class='myItemBox'>
+  <view class='myItemBox-section'>
+  <view class='myItemBox-headline'>课程名称 </view>
+   <textarea wx:if="{{textNum ==0}}" bindinput='classNameBlur' class='myInfoBxo1' placeholder-class='myInfo' maxlength="30" value='{{className}}' placeholder="填写课程名称（不超过30字）" />
+  </view>
+   <view class='myItemBox-section'>
+   <view class='myItemBox-headline-two'>课程简介 </view>
+   <textarea wx:if="{{textNum ==0}}" bindinput='classDescBulr' class='myInfoBxo' placeholder-class='myInfo' maxlength="300" value='{{classDesc}}' placeholder="填写课程简介（不超过300字）" />
+   </view>
+   
+
+
+    <view class='uploadBox'>
+      <view class='scroolBox'>
+        <scroll-view class='intro-scroll' scroll-x="true" scroll-with-animation='true'>
+          <view class='intro-view iLblock' wx:if="{{classPhotos}}" wx:for="{{classPhotos}}" wx:for-item="photo" wx:key="{{index}}">
+            <image class='intro-scrollImg' src='{{photo.photoAddress}}' data-index="{{index}}" bindtap='clickImg'></image>
+            <!-- <image class='intro-deleteImg' src='{{imgUrl}}coach/curriculum/dislodge.png' wx:if='{{!editeStatus}}' data-index='{{index}}' bindtap='deleteClassImg'></image> -->
+            <image class='intro-deleteImg' src='{{imgUrl}}coach/curriculum/dislodge.png' data-index='{{index}}' bindtap='deleteClassImg'></image>
+            <view class='Section-cover'><text class='cover'>{{photo.y ? '设为封面' : '封面'}}</text></view>
+          </view>
+          <image class='intro-scrollImg' src='{{imgUrl}}coach/curriculum/addImg.png' bindtap='uploadPic' wx:if="{{uploadPic}}"></image>
+        </scroll-view>
+      </view>
+      <text class='uploadItem'>*请上传至少一张图片作为课程介绍。</text>
+    </view>
+  </view>
+
+
+
+  <!-- 课程包含项目描述  -->
+
+  <view class='project-description'>
+    <view class='project-description-text'>
+      <text>添加课程内容</text>
+      <image src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/coach-doubt.png' type="primary" bindtap="modalcnte" class='Query'></image>
+    </view>
+    <view class='description-specific' wx:if="{{classArticleList}}" wx:for="{{classArticleList}}" wx:for-item="classes" wx:key="{{index}}">
+      <view class='project-description1'>{{classes.articleName}}：
+        <view class='alter-text'>{{classes.articleContent}}</view>
+      </view>
+      <view class='compile'>
+        <image class='project-description-T' src='{{imgUrl}}coach/curriculum/amend.png' data-index="{{index}}" bindtap='editeClass'></image>
+        <image class='project-description-T' src='{{imgUrl}}coach/curriculum/cancel.png' data-index="{{index}}" bindtap='deleteClass'></image>
+      </view>
+    </view>
+    <!-- <view class='description-specific'>
+      <view class='project-description1'>项目2：
+        <view class='alter-text'>说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说</view>
+      </view>
+      <view class='compile'>
+        <image class='project-description-T' src='{{imgUrl}}coach/curriculum/amend.png'></image>
+        <image class='project-description-T' src='{{imgUrl}}coach/curriculum/cancel.png'></image>
+      </view>
+    </view> -->
+    <!--  添加课程  -->
+    <view class='addProBox'>
+      <view class='addition' bindtap='addSport'>+添加课程内容</view>
+    </view>
+  </view>
+
+  <!-- 培训周期  -->
+  <view class='period-of-training'>
+    <view class='course-curriculum'>
+      <text class='compile-category'>培训周期</text>
+      <view class='compile-select'>
+        <input  type='number' maxlength='4' value='{{courseCount}}' bindinput='courseCount' class='compile-select-two' placeholder='请输入课时数量'>{{courseCount}}</input>
+        <text style='margin-left:20rpx;'>  课时</text>
+      </view>
+      <!-- <picker disabled='{{editeStatus}}' class='compile-select' bindchange='courseCount' value='{{courseCountIndex}}' range="{{courseCountList}}" range-key='name'>
+        <view  class='compile-select-two'>{{courseCount}}</view>
+        <text style='margin-left:40rpx;'>  课时</text>
+      </picker> -->
+    </view>
+
+    <view class='course-curriculum'>
+      <text class='compile-category'>课时费</text>
+      <view class='compile-select'>
+        <input  type='number' maxlength='5' value='{{courseFeeShow}}' bindinput='courseFee' class='compile-select-two' placeholder='请输入每节课费用(RMB)'>{{courseFeeShow}}</input>
+        <text style='margin-left:1rpx;'>元/课时</text>
+        <!-- <image class='compile-select-T2' src='{{imgUrl}}next.png'></image> -->
+      </view>
+    </view>
+  </view>
+
+
+<picker  class='course-curriculum' bindchange='homeFeeChange' range='{{haveHomeFee}}' range-key='name' value='{{haveHomeFeeIndex}}'>
+    <text class='compile-category'>是否含场馆费</text>
+    <view class='compile-select'>
+      <text class='compile-select-N'>{{haveHomeFee[haveHomeFeeIndex].name}}</text>
+      <image class='compile-select-T'  src='{{imgUrl}}xiala2.png'></image>
+    </view>
+  </picker>
+  <!-- 选择助教  -->
+
+  <view class='teaching-assistant' wx:if="{{flase}}">
+    <view class='teaching-assistant-text'>
+      <text>选择教练</text>
+      <image src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/coach-doubt.png' type="primary" bindtap="modalcnt" class='Query'></image>
+    </view>
+    <view class='scroolBox1'>
+      <scroll-view class='teaching-A' scroll-x="true" scroll-with-animation='true'>
+        <view class='assistant' wx:if="{{tutorList}}" wx:for="{{tutorList}}" wx:for-item="tutor" wx:key="{{index}}">
+          <image class='assistant-one' src='{{tutor.avatarUrl}}'></image>
+          <image class='assistant-no' src='{{imgUrl}}coach/curriculum/dislodge.png' wx:if='{{!editeStatus}}' data-index='{{index}}' bindtap='deletTutor'></image>
+        </view>
+        <image class='assistant-tow' bindtap='addTutor' src='{{imgUrl}}coach/curriculum/accretion.png'></image>
+      </scroll-view>
+    </view>
+  </view>
+
+  <!--添加教练  -->
+
+  <view class='Addition-coach' bindtap='toChooseCoach'>
+    <text class='compile-category'>授课教练</text>
+    <view class='compile-select'>
+      <text class='compile-select-N2'>{{classCoach?classCoach.nickName:'教练昵称'}}</text>
+      <image class='compile-select-T2' src='{{imgUrl}}next.png' ></image>
+    </view>
+  </view>
+
+</view>
+
+
+
+
+<view class='but'>
+  <view bindtap='submintClass' class='submitEditor'>
+    <view class='subBor'>提 交</view>
+  </view>
+</view>
+
+
+<!-- 自定义弹窗 -->
+<view class="mask" catchtouchmove='preventTouchMove' wx:if="{{uploading}}"></view>
+<view class="mask" catchtouchmove='preventTouchMove' wx:if="{{showModal}}"></view>
+<view class="modalDlg" catchtouchmove='preventTouchMove' wx:if="{{showModal}}">
+  <view>
+    <button class='sure' bindtap='checkBoxSure'>确定</button>
+    <button class='cancle' bindtap='checkBoxCancle'>取消</button>
+  </view>
+  <checkbox-group class="checkboxgroup" bindchange="checkboxChange">
+    <label class="checkbox" wx:for="{{itemGrade}}" wx:for-item='item' wx:key="{{item.value}}">
+      <checkbox value="{{item.value}}" checked='{{item.checked}}' />{{item.name}}
+    </label>
+  </checkbox-group>
+  <button class='look-shuoming' bindtap='myLevel'>查看等级说明</button>
+</view>

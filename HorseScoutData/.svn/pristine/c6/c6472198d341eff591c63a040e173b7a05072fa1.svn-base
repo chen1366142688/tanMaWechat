@@ -1,0 +1,65 @@
+<!--pages/Patriarch/Register/Register.wxml-->
+<view class='Register'>
+  <view class='Register-background'>
+    <!-- <image class='Register-background-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/patriarch.png'></image> -->
+  </view>
+  <view class='Register-section'>
+    <view class='section-Head-Portraits'>
+      <image class='Head-Portraits-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/Head-Portraits.png'></image>
+    </view>
+    <view class='Register-section-taber'>
+      <view class='Section-List'>
+        <view class='Section-List-headline'>    
+          <view class='List-headline-left {{coursepersona}}' bindtap='Register' data-val='1'>注册账号</view>
+          <view class='List-headline-right {{coursepersonbnotice}}' bindtap='Register' data-val='2'>登录账号</view>          
+        </view>
+        <view class='Register-List-Section-left' hidden='{{trainingcourse}}'>
+          <view class='Register-List-Section-one'>
+            <input class='List-Section-one-input' maxlength="20" placeholder='用户昵称' placeholder-class='List-Section-one-input-cbcbcb' bindinput='inputNickName'></input>
+            <image class='List-Section-one-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/accomplish.png'></image>
+          </view>
+          <view class='Register-List-Section-one'>
+            <input class='List-Section-one-input' maxlength="11" placeholder='登录手机' placeholder-class='List-Section-one-input-cbcbcb'></input>
+            <image class='List-Section-one-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/accomplish.png'></image>
+          </view>
+          <view class='Register-List-Section-two' >
+            <input class='List-Section-one-input-two' maxlength="6" placeholder='验证码' placeholder-class='List-Section-one-input-cbcbcb'></input>
+            <view class='List-Section-one-text-two'>发送验证码</view>
+            <image class='List-Section-one-img-two' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/accomplish.png'></image>
+          </view>
+          <!--没有输入phone时-->
+           <view class='Register-List-Section-twos' wx:if="{{!showSendCode}}">
+            <input class='List-Section-one-input-twos' maxlength="6" placeholder='验证码' placeholder-class='List-Section-one-input-cbcbcb'></input>
+            <!-- <view class='List-Section-one-text-two' wx:if="{{showSendCode}}">发送验证码</view> -->
+            <image class='List-Section-one-img-two' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/accomplish.png'></image>
+          </view>
+          <view class='Register-List-Section-one'>
+            <input class='List-Section-one-input' maxlength="18" placeholder='登录密码' placeholder-class='List-Section-one-input-cbcbcb'></input>
+            <image class='List-Section-one-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/accomplish.png'></image>
+          </view>
+          <view class='Register-List-Section-one'>
+            <input class='List-Section-one-input' maxlength="18" placeholder='二次输入登录密码' placeholder-class='List-Section-one-input-cbcbcb'></input>
+            <image class='List-Section-one-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/accomplish.png'></image>
+          </view>
+          <view class='Register-Submit-left'>
+           <view class='Register-Submit-button'>提交</view>
+          </view>
+        </view>
+        <view class='Register-List-Section-right' hidden='{{noticecoursetab}}'>
+          <view class='Register-List-Section-one'>
+            <input class='List-Section-one-input' maxlength="20" placeholder='登录手机' placeholder-class='List-Section-one-input-cbcbcb'></input>
+            <image class='List-Section-one-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/accomplish.png'></image>
+          </view>
+          <view class='Register-List-Section-one'>
+            <input class='List-Section-one-input' maxlength="11" placeholder='登录密码' placeholder-class='List-Section-one-input-cbcbcb'></input>
+            <image class='List-Section-one-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/accomplish.png'></image>
+          </view>
+           <view class='Register-Submit-right'>
+           <view class='Register-button'>登录</view>
+          </view>
+          <view class='Forget-Password'> <text class='Forget-Password-cbcb'>忘记密码</text>？ </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

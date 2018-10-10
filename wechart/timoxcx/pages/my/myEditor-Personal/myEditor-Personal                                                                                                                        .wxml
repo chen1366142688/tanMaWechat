@@ -1,0 +1,123 @@
+<view class='box'>
+  <view class='personalImgBox center'>
+    <text>头像</text>
+    <view class='imgRig'>
+      <image class='userImg' src='{{url}}userImg.png'></image>
+      <image class='right' src='{{url}}next.png'></image>
+    </view>
+  </view>
+  <view class='personalImgBox personalImgCat  center' wx:for="{{info}}">
+    <text>{{item.name}}</text>
+    <view class='imgRig'>
+      <text class='perName'>{{item.value}}</text>
+      <image class='right' src='{{url}}next.png'></image>
+    </view>
+  </view>
+  <view class='personalImgBox personalImgCat'>
+    <text class='iLblock cos'>学员类型</text>
+    <radio-group class="radio-group iLblock" bindchange="radioChange">
+      <label class="radio" wx:for="{{items}}">
+        <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+      </label>
+    </radio-group>  
+  </view>
+
+  <view class='personalImgBox personalImgCat  center'>
+    <text>学员类型</text>
+    <view class='imgRig'>
+      <text class='perName ziwo textOver'>自我介绍以内介绍一段一段...</text>
+      <image class='right' src='{{url}}next.png'></image>
+    </view>
+  </view>
+
+  <view class='personalImgBox personalImgCat  center'>
+    <text>真实姓名</text>
+    <view class='imgRig'>
+      <text class='perName'>李华</text>
+      <image class='right' src='{{url}}next.png'></image>
+    </view>
+  </view>
+
+  <view class='personalImgBox personalImgCat'>
+    <text class='iLblock cost'>个人性别</text>
+    <radio-group class="radio-group iLblock" bindchange="radioChange">
+      <label class="radio radiocheck" wx:for="{{mans}}">
+        <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+      </label>
+    </radio-group>  
+  </view>
+
+  <view class='personalImgBox personalImgCat center xuans'>
+      <picker mode="date" value="{{date}}" start="1980-01-01" end="2020-01-01" bindchange="bindDateChange">
+        <view class="picker">出生年月</view>
+      </picker>
+      <text class='pakeValue'>{{date}}</text>
+      <text class='xuan' hidden='{{xuaned}}'>点击空白处选择日期</text>
+  </view>
+
+  <view class='personalImgBox personalImgCat  center'>
+    <text>所在学校</text>
+    <view class='imgRig'>
+      <text class='perName'>西华小学</text>
+      <image class='right' src='{{url}}next.png'></image>
+    </view>
+  </view>
+
+  <view class='personalImgBox personalImgCat  center'>
+    <text>家庭住址</text>
+    <view class='imgRig'>
+      <text class='perName ziwo textOver'>四川省成都市高新区益州大道中段移动互联大厦</text>
+      <image class='right' src='{{url}}next.png'></image>
+    </view>
+  </view>
+</view>
+<text class='bindNum'>监护人信息</text>
+<view class='boxTwo'>
+  <view class='personalImgBox personalImgCat clearfloat' wx:for="{{nameInfo}}">
+    <text class='perNames fl'>{{item.name}}</text>
+    <view wx:if="{{item.name !=='与学员关系'}}" class='imgRigGai fr {{item.name=="住址"? "location":""}}'>
+      <text class='perNameGai textOver iLblock {{item.name=="住址"? "locations":""}}'>{{item.value}}</text>
+      <image class='rightGai iLblock' src='{{url}}next.png'></image>
+    </view>
+    <view wx:else class='imgRigGai fr'>
+      <picker bindchange="bindPickerChange" class='iLblock' value="{{indexs}}" range="{{array}}">
+      <view class="pickr">
+        {{array[indexs]}}
+      </view>
+      </picker>
+      <image class='rightGai iLblock {{item.name=="与学员关系"? "rightTT":""}}' src='{{url}}c-down.png'></image>
+    </view>
+  </view>
+</view>
+<text class='bindNum'>账号绑定</text>
+<view class='personalImgBox personalImgCat  center'>
+    <view class='imgLeft'>
+      <image class='phoneGreen' src='{{url}}phoneGreen.png'></image>
+      <text class='model'>手机（登录账号）</text>
+    </view>
+    <view class='imgRig'>
+      <text class='perName'>136******49</text>
+      <image class='right' src='{{url}}next.png'></image>
+    </view>
+</view>
+<view class='personalImgBox personalImgCat  center'>
+    <view class='imgLeft'>
+      <image class='wechartGreen' src='{{url}}wechatGreen.png'></image>
+      <text class='model'>微信</text>
+    </view>
+    <view class='imgRig'>
+      <text class='perName'>lsmgyodhgte</text>
+      <image class='right' src='{{url}}next.png'></image>
+    </view>
+</view>
+<text class='security'>安全设置</text>
+<view class='personalImgBox personalImgCat  center' wx:for="{{setting}}">
+    <text>{{item.name}}</text>
+    <view class='imgRig'>
+      <text class='perName'>{{item.value}}</text>
+      <image class='right' src='{{url}}next.png'></image>
+    </view>
+</view>
+<view class='footerBtn'>
+  <view class='footerBtnNei'>提   交</view>
+</view>

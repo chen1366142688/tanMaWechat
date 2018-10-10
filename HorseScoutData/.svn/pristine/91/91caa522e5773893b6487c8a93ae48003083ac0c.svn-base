@@ -1,0 +1,163 @@
+/* pages/gradeTable/gradeDetail/gradeDetail.wxss */
+.gradeDetail{
+  background: white;
+}
+.gradeDetail .header{
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30rpx;
+  box-sizing: border-box; 
+}
+.gradeDetail .header .left{
+  display: flex;
+  align-items: center;
+  height: 100%;
+
+}
+.gradeDetail .header .left image{
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 19rpx;
+}
+.gradeDetail .header .left .classgrade{
+  font-size: 30rpx;
+  margin-right: 3rpx;
+}
+.gradeDetail .header .left .yetnot{
+  width: 136rpx;
+  height: 44rpx;
+  border-radius: 44rpx;
+  box-shadow:0px 2px 4px 0px RGBA(2, 199, 220, 0.3);
+  font-size: 22rpx;
+  color: RGBA(2, 199, 220, 1);
+  line-height: 44rpx;
+  text-align: center;
+  margin: 0 7rpx;
+}
+.gradeDetail .header .right image{
+  width: 60rpx;
+  height: 60rpx;
+  margin-left: 20rpx;
+}
+
+.gradeDetail .studentlist{
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+.gradeDetail .studentlist .listheader{
+  display: flex;
+  justify-content: space-between;
+  height: 80rpx;
+  align-items: center;
+  font-size: 30rpx;
+  color: RGBA(203, 203, 203, 1);
+}
+.gradeDetail .studentlist .listheader .head-main{
+  flex: 1;
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.gradeDetail .studentlist .listheader .checklist{
+  color: RGBA(2, 199, 220, 1);
+  border-bottom: 2rpx solid RGBA(2, 199, 220, 1);
+}
+.gradeDetail .studentlist .studentinfo{
+  height: 120rpx;
+  border-top: 1rpx solid RGBA(228, 228, 228, 1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: RGBA(51, 51, 51, 1);
+  font-size: 28rpx;
+}
+.gradeDetail .studentlist .studentinfo .left text{
+  margin: 0 13rpx;
+  font-size: 20rpx;
+}
+.gradeDetail .studentlist .studentinfo .left image{
+  width: 24rpx;
+  height: 24rpx;
+  border-radius: 24rpx;
+  overflow: hidden;
+}
+.gradeDetail .studentlist .studentinfo .right{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 200rpx;
+}
+.gradeDetail .studentlist .studentinfo .right .isreach{
+  color: RGBA(255, 102, 105, 1);
+}
+.gradeDetail .studentlist .studentinfo .right .item_not{
+  color: RGBA(153, 153, 153, 1);
+}
+.gradeDetail .studentlist .studentinfo .right image{
+  width: 30rpx;
+  height: 30rpx;
+}
+
+/* 搜索模态框 */
+.search_mock{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  background: white;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+.search_input{
+  height: 100rpx;
+  background: RGBA(244, 244, 244, 1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left:21rpx;
+  padding-right: 30rpx;
+  box-sizing: border-box; 
+}
+.search_input input{
+  flex:1;
+  font-size: 28rpx;
+  color: RGBA(153, 153, 153, 1);
+}
+.search_input image{
+  width: 44rpx;
+  height: 44rpx;
+  margin-left: 21rpx;
+}
+.search_mock .search_result{
+  height: 120rpx;
+  border-bottom: 1rpx solid RGBA(228, 228, 228, 1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: RGBA(51, 51, 51, 1);
+  font-size: 28rpx;
+}
+.search_mock .search_result .left text{
+  margin: 0 13rpx;
+  font-size: 20rpx;
+}
+.search_mock .search_result .left image{
+  width: 24rpx;
+  height: 24rpx;
+  border-radius: 24rpx;
+  overflow: hidden;
+}
+.search_mock .search_result .right{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 200rpx;
+}
+.search_mock .search_result .right image{
+  width: 30rpx;
+  height: 30rpx;
+}
+

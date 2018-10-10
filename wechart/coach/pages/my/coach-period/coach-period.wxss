@@ -1,0 +1,457 @@
+/* pages/my/coach-period/coach-period.wxss */
+
+.coach-period{
+  width: 750rpx;
+  line-height: 0;
+}
+
+.period-header{
+  width: 750rpx;
+  background-color: #fff;
+}
+
+.header-filtrate{
+  width: 702rpx;
+  height: 88rpx;
+  padding: 0 24rpx;
+  border-top: 1rpx solid #e4e4e4;
+  display: flex;
+  vertical-align: middle;
+  align-items: center;
+}
+
+.filtrate-headline{
+  width: 220rpx;
+  font-size: 30rpx;
+  color: #333;
+  height: 88rpx;
+  line-height: 88rpx;
+  vertical-align: middle;
+}
+
+.start{
+  width: 300rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  vertical-align: middle;
+  font-size: 30rpx;
+  color: #333;
+  display: flex;
+}
+
+.start-text{
+  font-size: 30rpx;
+  color: #333;
+  vertical-align: middle;
+}
+
+.start-img{
+  width: 12rpx;
+  height: 12rpx;
+  margin-top: -167rpx;
+  margin-left:172rpx;
+  vertical-align: middle;
+}
+
+.over{
+  width: 300rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  vertical-align: middle;
+  font-size: 30rpx;
+  color: #333;
+  display: flex;
+}
+
+.over-text{
+  font-size: 30rpx;
+  color: #333;
+  vertical-align: middle;
+}
+
+.over-img{
+  width: 12rpx;
+  height: 12rpx;
+  margin-top: -167rpx;
+  margin-left: 174rpx;
+  vertical-align: middle;
+}
+
+.period-money{
+  width: 750rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  border-top: 1rpx solid #e4e4e4;
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.period-text{
+  width: 50%;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #333;
+  vertical-align: middle;
+}
+
+.period-text-red{
+  color: #E85571;
+}
+
+.period-text-blue{
+  color: #00B6D6;
+}
+
+.coach-section-list{
+  width: 750rpx;
+}
+
+.list-header{
+  width: 750rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  border-bottom: 1rpx solid #e4e4e4;
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+  vertical-align: middle;
+  margin-top: 20rpx;
+  background-color: #fff;
+}
+
+.list-header-ac {
+  width: 20%;
+  margin: 0 15%;
+  height: 88rpx;
+  line-height: 88rpx;
+  font-size: 34rpx;
+  text-align: center;
+  vertical-align: middle;
+  font-family: PingFang-SC-Regular;
+  color: #999;
+}
+
+.list-header-ab {
+  width: 20%;
+  margin: 0 15%;
+  height: 88rpx;
+  line-height: 88rpx;
+  font-size: 34rpx;
+  text-align: center;
+  vertical-align: middle;
+  border-bottom: 4rpx solid #007587;
+  color: #007587;
+}
+
+.curriculum-list{
+  width: 750rpx;
+}
+
+.coach-list{
+  width: 750rpx;
+}
+
+.list-section-one{
+  width: 750rpx;
+  height: 130rpx;
+  line-height: 130rpx;
+  background-color: #fff;
+  border-bottom: 1rpx solid #e4e4e4;
+}
+
+.list-section-one-header{
+  width: 700rpx;
+  height: 58rpx;
+  line-height: 58rpx;
+  display: flex;
+  margin: 0 25rpx;
+  align-items: center;
+  padding-top: 8rpx;
+  vertical-align: middle;
+}
+
+.header-headline-x{
+  max-width: 180rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  padding: 0 8rpx;
+  font-size: 20rpx;
+  color: #171718;
+  border-radius: 5rpx;
+  border: 1rpx solid #171718;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.header-section-f{
+  max-width: 500rpx;
+  height: 58rpx;
+  line-height: 58rpx;
+  color: #333;
+  font-size: 23rpx;
+  margin-left: 10rpx;
+  vertical-align: middle;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: bold;
+}
+
+.list-section-one-se{
+  width: 750rpx;
+  height: 58rpx;
+  line-height: 58rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.coach-Class-fees{
+  max-width: 320rpx;
+  height: 58rpx;
+  line-height: 58rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 24rpx;
+  color: #999;
+  padding-left: 24rpx;
+  vertical-align: middle;
+}
+
+.coach-period-money{
+  font-size: 24rpx;
+  color: #333;
+  /* padding-right: 24rpx; */
+  vertical-align: middle;
+}
+
+.coach-period-money-chang{
+  font-size: 24rpx;
+  color: #333;
+  padding-right: 24rpx; 
+  vertical-align: middle;
+}
+
+.period-money-blue{
+  color: #00B6D6;
+}
+
+.period-money-red{
+  color: #E85571;
+}
+
+
+.list-section-two{
+  width: 750rpx;
+  /* height: 100%; */
+  background-color: #F4F4F4;
+  border-bottom: 1rpx solid #e4e4e4; 
+}
+
+.list-section-one-footer{
+  width: 750rpx;
+  height: 100%;
+  background-color: #F4F4F4;
+  border-top: 1rpx solid #e4e4e4;
+}
+
+.one-footer-one{
+  width: 750rpx;
+  height: 58rpx;
+  line-height: 58rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.coach-list-section{
+  width: 750rpx;
+}
+
+.coach-list-section-one{
+  width: 750rpx;
+  background-color: #fff;
+}
+
+.coach-list-section-two{
+  width: 750rpx;
+  /* height: 100%; */
+  background-color: #f4f4f4;
+}
+
+.list-section-two-footer{
+  width: 750rpx;
+  /* height: 100%; */
+  background-color: #F4F4F4;
+  border-bottom: 1rpx solid #e4e4e4; 
+}
+
+.coach-Class-fees-bb{
+  max-width: 400rpx;
+  font-size: 24rpx;
+  color: #999;
+  padding-left: 24rpx;
+  vertical-align: middle;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.Single-section{
+  width: 702rpx;
+  height: 162rpx;
+  line-height: 162rpx;
+  padding: 0 24rpx;
+  display: flex;
+  border-bottom: 1rpx solid #e4e4e4;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Head-Portraits{
+  width: 120rpx;
+  height: 120rpx;
+  vertical-align: middle;
+}
+
+.section-center {
+  width: 582rpx;
+  height: 120rpx;
+  vertical-align: middle;
+}
+
+.section-center-one{
+  width: 557rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+  padding-left: 25rpx;
+  margin-top: 18rpx;
+  vertical-align: middle;
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-center-one-left{
+  height: 36rpx;
+  line-height: 36rpx;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+}
+
+.one-left-name{
+  max-width: 180rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 34rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.one-left-gender{
+  width: 24rpx;
+  height: 24rpx;
+  margin-left: 10rpx;
+  vertical-align: middle;
+}
+
+.one-left-attestation{
+  width: 80rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  font-size: 22rpx;
+  text-align: center;
+  color: #00b6d6;
+  border: 1rpx solid #00b6d6;
+  vertical-align: middle;
+  align-items: center;
+  margin-left: 10rpx;
+  border-radius: 5rpx;
+}
+
+.section-center-one-right{
+  height: 34rpx;
+  line-height: 34rpx;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+}
+
+.one-right-gender{
+  width: 24rpx;
+  height: 24rpx;
+  margin-right: 10rpx;
+  vertical-align: middle;
+}
+
+.one-right-name{
+  max-width: 180rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 24rpx;
+  color: #333;
+}
+
+.section-center-two{
+  width: 557rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+  padding-left: 25rpx;
+  margin-top: 18rpx;
+  vertical-align: middle;
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-center-two-left{
+  height: 36rpx;
+  line-height: 36rpx;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+}
+
+.two-left-name{
+  width: 220rpx;
+  font-size: 24rpx;
+  color: #333;
+  vertical-align: middle;
+}
+
+.two-left-name-red{
+  color: #E85571;
+}
+
+.two-right-gender{
+  width: 24rpx;
+  height: 24rpx;
+  margin-right: 10rpx;
+  vertical-align: middle;
+}
+
+.two-right-name{
+  font-size: 24rpx;
+  color: #333;
+  vertical-align: middle;
+}
+
+.van-over {
+  display: block;
+  width: 600rpx;
+  height: 23rpx;
+  padding-bottom: 20rpx;
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(153, 153, 153, 1);
+  text-align: center;
+  margin: 0 auto;
+  margin-top:10px;
+}

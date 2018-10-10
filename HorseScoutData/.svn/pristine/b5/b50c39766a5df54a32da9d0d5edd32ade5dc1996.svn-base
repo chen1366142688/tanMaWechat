@@ -1,0 +1,48 @@
+<!--pages/scoreInquiry/scoreInfo/scoreInfo.wxml-->
+<view class='scoreinfo'>
+  <view class='section'>
+    <picker bindchange="typeChange" value="{{testIndex}}" mode="selector" range="{{testType}}" class='section1'>
+      <view class="picker">
+        {{testType[testIndex]}}
+        <image src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/teacher/pickerpull.png'></image>
+      </view>
+    </picker>
+    <picker bindchange="classChange" value="{{classIndex}}" mode="selector" range="{{classList}}" class='section2'>
+      <view class="picker">
+        {{classList[classIndex]}}
+        <image src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/teacher/pickerpull.png'></image>
+      </view>
+    </picker>
+    <picker bindchange="gradeChange" value="{{gradeIndex}}" mode="selector" range="{{classGrade}}" class='section3'>
+      <view class="picker">
+        {{classGrade[gradeIndex]}}
+        <image src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/teacher/pickerpull.png'></image>
+      </view>
+    </picker>
+  </view>
+  <view class='studentlist'>
+    <view class='listheader'>
+      <view class='head-main {{listIndex == 1 ? "checklist":""}}' bindtap='checklist' data-index='1'>
+        全部
+      </view>
+      <view class='head-main {{listIndex == 2 ? "checklist":""}}' bindtap='checklist' data-index='2'>
+        仅男生
+      </view>
+      <view class='head-main {{listIndex == 3 ? "checklist":""}}' bindtap='checklist' data-index='3'>
+        仅女生
+      </view>
+    </view>
+    <view class='studentinfo' wx:for="{{stuList}}" wx:key="{{index}}">
+      <view class='left'>
+        {{item.studentName}}
+        <text>（09-12）</text>
+        <image src='{{item.gender == 1 ? "../../../image/man2.png" : "../../../image/woman2.png"}}'></image>
+      </view>
+      <view class='right' bindtap='goDetail' data-stuid='{{item.studentId}}'>
+        <text wx:if="{{item.needTestCount  - item.testCount == 0}}">{{item.score}}分</text>
+        <text wx:else class='{{item.needTestCount  - item.testCount == 0 ? "" : "nottest"}}'>{{item.needTestCount  - item.testCount}}项未测完</text>
+        <image src='http://tanma-competition.oss-cn-beijing.aliyuncs.com/next.png'></image>
+      </view>
+    </view>
+  </view>
+</view>

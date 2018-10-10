@@ -1,0 +1,78 @@
+page{
+  background: #ECECEC;
+}
+.pages{
+  padding:24rpx;
+}
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.clearfloat:after{display:block;clear:both;content:"";visibility:hidden;height:0}
+.clearfloat{zoom:1} 
+.c-payContent{
+  width:702rpx;
+  height:140rpx;
+  background: #fff;
+  border-radius: 5rpx;
+  margin-bottom:20rpx;
+}
+.c-payOne{
+  padding: 24rpx 24rpx 20rpx 24rpx;
+}
+.c-pay-user{
+  display: inline-block;
+  width:26rpx;
+  height:30rpx;
+  vertical-align: middle;
+}
+.pay-user{
+  display: inline-block;
+   font-size:34rpx;
+font-family:PingFang-SC-Bold;
+color:rgba(51,51,51,1);
+font-weight: bold;
+padding-left:14rpx;
+}
+.c-payst{
+  height:32rpx;
+line-height: 32rpx;
+}
+.pay-date{
+   font-size:20rpx;
+  font-family:PingFang-SC-Regular;
+  color:rgba(51,51,51,1);
+  text-align: right;
+  height:16rpx;
+  line-height: 32rpx;
+}
+.c-border{
+  display: block;
+  width:680rpx;
+  height:2rpx;
+  background:rgba(228,228,228,1);
+  margin:0 auto;
+}
+.c-pay-situation{
+  height:23rpx;
+  line-height: 23rpx;
+  padding:20rpx 0 20rpx 24rpx;
+}
+.c-situation{
+  display: inline-block;
+height:23rpx;
+font-size:24rpx;
+font-family:PingFang-SC-Regular;
+color:rgba(23,23,24,1);
+line-height:0rpx;
+margin-right:20rpx;
+
+}
+.c-pay-item{
+  display: inline-block;
+   font-size:24rpx;
+font-family:PingFang-SC-Regular;
+color:rgba(0,198,147,1);
+}

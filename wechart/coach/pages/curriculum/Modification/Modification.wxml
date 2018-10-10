@@ -1,0 +1,53 @@
+<!--pages/curriculum/Modification/Modification.wxml-->
+<view class='Modification'>
+  <view class='Modification-header'>
+    <view class='header'>
+      <view class='header-one'>
+       
+      <view wx:if="{{orderInfo.type == '2'}}" class='headline-one'>{{orderInfo.itemName}} 私教</view>
+      <view wx:if="{{orderInfo.type == '1'}}" class='headline-one'>{{orderInfo.itemName}} {{orderInfo.maxMember}} 人班</view>
+        <view class='headline-two'>{{orderInfo.className}}</view>
+      </view>
+
+      <view class='content-section'>
+        <image class='l-cdcenter-posa' src='{{imgUrl}}coach/public/Number-of-people.png'></image>
+        <text class='c-username-text in'>{{orderInfo.studentName}}</text>
+        <image wx:if="{{orderInfo.gender == '1'}}" class='c-touser-xcxb' src='{{imgUrl}}blackboy.png'></image>
+        <image wx:if="{{orderInfo.gender == '2'}}" class='c-touser-xcxb' src='{{imgUrl}}gril.png'></image>
+        <image class='c-touser-xcxa' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/grade-blue.png'></image>
+        <text class='c-renshu in'>{{orderInfo.itemName}}</text>
+      </view>
+    </view>
+
+    <view class='period'>
+      <view class='period-Z'> <text class='blue'>{{orderInfo.courseCount==null?'未知':orderInfo.courseCount }}</text>课时/{{orderInfo.courseTime/10*60 }}分钟</view>
+      <view class='period-Y' wx:if="{{orderInfo.payType==2}}">剩余课时:未知</view>
+      <view class='period-Y' wx:else>
+       剩余 <text class='frequency'>{{orderInfo.spareTime}}</text> 课时 <text class='little'>（课程余额RMB {{orderInfo.spareCost/100}}）</text>
+       </view>
+    </view>
+  </view>
+</view>
+
+<!-- 剩余课时调整  -->
+
+  <view class='adjustment'>
+    <text class='comment-l fl'>剩余课时</text>
+    
+     <view class='comment-r fr'>
+     <input bindinput='spareTime' class='courseTime' type="number" placeholder-class='courseTime-place' placeholder='请输入剩余课时'></input>
+      <!-- <view class='select_box'>
+        <view class='select' catchtap='selectTap'>
+          <input class='select_text'type="number" placeholder='请输入该学生的剩余课时'></input>
+           <image class='select_img' src='{{imgUrl}}next.png'></image> 
+        </view>
+         <view class='option_box' style='height:{{show?(selectData.length>5?300:selectData.length*60):0}}rpx;'>
+          <text class='option' style='{{index==selectData.length-1&&"border:0;"}}' wx:for='{{selectData}}' wx:key='this' data-index='{{index}}' catchtap='optionTap'>{{item}}</text>
+        </view> 
+      </view> -->
+    </view> 
+  </view>
+
+  <!-- <view class='hint'>*本功能用于调整已线下付款课程的课时，仅能修改一次，请教练谨慎操作。</view> -->
+
+  <button bindtap='submit' class='settle-accounts'>提交结果</button>

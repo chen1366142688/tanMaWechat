@@ -1,0 +1,105 @@
+<view class='van-banner' style='background: url({{homeInfo.homeMainPhoto}});background-size: cover;'>
+  <view class='van-banner-item'>
+    <view class='van-text'> 
+      <text class='van-city'>{{homeInfo.cityName}}</text>
+      <text class='van-name '>{{homeInfo.homeName}}</text>
+    </view>
+    <view class='van-hot'>
+      <image class='hot-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/van-hot.png'></image>
+      <text class='van-hot-num'>{{homeInfo.popularity?homeInfo.popularity:0}}</text>
+    </view>
+  </view>
+</view>
+<view class='c-ban-bottom'>
+  <view class='van-location'>
+    <view class='van-left'>
+      <image class='van-left-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/studentNewImg/c48.png'></image>
+      <text class='van-left-txt'>经营时间：{{homeInfo.starTime}}-{{homeInfo.endTime}}</text>
+    </view>
+    <view class='van-right' bindtap='toMap'>
+      <image class='van-right-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/location.png'></image>
+      <text class='van-right-txt'>{{homeInfo.addrDetail}}</text>
+    </view>
+  </view>
+  <!-- <view class='van-sc'>
+    <scroll-view scroll-x class='van-beas'>
+      <view class='van-btn' wx:for="{{homeInfo.itemVOS}}" wx:for-item="item" wx:key="{{item.itemName}}">{{item.itemName}} {{item.itemNums}}课程</view>
+    </scroll-view>
+  </view> -->
+</view>
+<view class='van-itemInfo'>
+  <view class='van-ke {{van}}' bindtap='kecheng' data-val='1'>场馆课程</view>
+  <view class='van-jie {{vans}}' bindtap='kecheng' data-val='2'>场馆简介</view>
+</view>
+<view class='van-kejie' wx:if="{{supportItems && items}}">
+  <scroll-view class='scroll-active' scroll-x='true'>
+
+
+
+
+    <view class='fenleiOne-scroll' wx:for="{{homeInfo.supportItems}}" wx:for-item="item" wx:key="{{item.homeId}}" data-id="{{item.itemId}}" bindtap='itemChoose'>
+      <view class="{{itemId == item.itemId ?'is_Checked':'normal'}}">
+        <image class='itemImg-scroll' src='{{item.itemPhotoAddress}}' data-id="{{item.itemId}}" ></image>
+      </view>
+      <text class='c-zuqiu-scroll'>{{item.itemName}}</text>
+    </view>
+
+
+
+
+    <!-- <view class='fenleiOne-scroll last-fenleiOne-scroll'>
+        <image class='itemImg-scroll' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/van-more.png'></image>
+      <text class='c-zuqiu-scroll'>更多</text>
+    </view> -->
+  </scroll-view>
+</view>
+<view class='guangKe' hidden='{{guanKe}}'> 
+<scroll-view bindscrolltolower="bindscrolltolower" scroll-y style='height:{{scollHeight}}rpx'>
+  <view class='items-jiao' wx:for="{{itemList}}" wx:for-item="item" wx:key="{{index}}" bindtap='toClassDetail' data-classid='{{item.classId}}'>
+    <!-- <image class='userImg' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/userImg.png'></image> -->
+    <view class='item-userTxt'>
+      <view class='userTxt-top clearfloat'>
+        <view class='fl userTxt-line'>
+          <view class='userA iLblock' wx:if="{{item.classType == 1}}">{{item.itemName }} {{item.maxMember }}人班</view>
+          <view class='userA iLblock' wx:if="{{item.classType == 2}}">{{item.itemName }} 私教</view>
+          <view class='userB iLblock'>{{item.className}}</view>
+        </view>
+        <view class='money'>
+          <text class='rmb'>RMB</text>
+          <text class='rmbNum'>{{item.courseCostTotal/100}}</text>
+          <view class='x'>
+            <view class='userC iLblock'>{{item.courseCount}}课时</view>
+            <!-- <view class='userC iLblock'>{{item.courseCount}}课时/{{item.courseTime/10}}h</view> -->
+          </view>
+        </view>
+      </view>
+      <view class='userTxt-bottom'>
+        <!-- <text class='txt-A iLblock'>主教练</text> -->
+        <!-- <view> -->
+        <image class='userIsman iLblock' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/studentNewImg/c8.png'></image>
+        <text class='userMum iLblock'>{{item.classCoach}}</text>
+        <!-- </view> -->
+        <!-- <view> -->
+
+        <image class="userNumber iLblock" src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/studentNewImg/c41.png'></image>
+        <text class='userMum iLblock'>{{item.lastAttendPeriod?item.lastAttendPeriod:0}}节</text>
+        <!-- </view> -->
+        <!-- <view> -->
+        <!-- <text class='userLevel iLblock'>适合等级:</text> -->
+        <image class='userIsmani iLblock' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/student/position-red.png'></image>
+        <text class='userLevelColor iLblock'>{{item.itemStudentGrade}}</text>
+        <!-- </view> -->
+        <image class='hotTwo iLblock' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/studentNewImg/c39.png'></image>
+        <text class='hotTwoText'>{{item.popularity?item.popularity:0}}</text>
+      </view>
+    </view>
+    <image class='manLe' wx-if="{{item.signUpOver == '1'}}" src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/zhang.png'></image>
+  </view>
+  <text class='footer-txt'>————已全部显示————</text>
+   </scroll-view>
+  
+</view>
+<view class='itemsLo' hidden='{{guanJie}}'>
+  <text class='items-text'>{{homeDesc.describe}}</text>
+  <image wx:for="{{homeDesc.photos}}" mode="widthFix" wx:for-item="photo" wx:key="{{index}}" class='items-img' src='{{photo}}'></image>
+</view>

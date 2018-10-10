@@ -1,0 +1,8 @@
+<!--components/test-picker/test-picker.wxml-->
+<view class='test_picker'>
+  <picker-view indicator-class="result-mid" class='result-count' style="width: 100%; height: 270rpx;" value="{{value}}" bindchange="bindChange">
+    <picker-view-column>
+        <view wx:for="{{count}}" wx:key="{{index}}" class='{{nowCount == index ? "resultnow" : ""}}'>{{item}}</view>
+      </picker-view-column>
+  </picker-view>
+</view>

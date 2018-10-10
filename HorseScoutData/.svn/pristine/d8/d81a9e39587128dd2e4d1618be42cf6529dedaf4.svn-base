@@ -1,0 +1,96 @@
+// pages/Information/Height-Weight/Height-Weight.js
+const app = getApp().globalData
+Page({
+  data: {
+    imgUrl: app.url,
+    array: ['本人', '母亲', '父亲'],
+    objectArray: [
+      {
+        id: 0,
+        name: '本人'
+      },
+      {
+        id: 1,
+        name: '母亲'
+      },
+      {
+        id: 2,
+        name: '父亲'
+      }
+    ],
+    index: 0,
+    Height:0,
+    Weight:0
+  },
+  ContactCustomerService(e) {
+    wx.makePhoneCall({//客服电话待定
+      phoneNumber: '13679695212',
+    })
+  },
+  prev(e){
+    wx.navigateBack({
+      delta: 1,
+    })
+  },
+  bindPickerChange: function (e) {
+    this.setData({index: e.detail.value})
+  },
+  inputHeight(e){
+    this.setData({Height:e.detail.value})
+  },
+  inputWeight(e) {
+    this.setData({ Weight: e.detail.value })
+  },
+  next(e){
+    const that = this;
+    let Height = that.data.Height;
+    let Weight = that.data.Weight;
+    let relationship = '0'+(Number(that.data.index)+1);
+    let index = that.data.index;
+    
+    if (Height < 1 || Height == ''){
+      wx.showToast({
+        title: '请填写身高且须大于1',
+        icon:'none'
+      })
+      return false;
+    }
+    if (Height>250) {
+      wx.showToast({
+        title: '身高不能大于250CM',
+        icon: 'none'
+      })
+      return false;
+    }
+    if (Weight < 1 || Weight == '') {
+      wx.showToast({
+        title: '请填写体重',
+        icon: 'none'
+      })
+      return false;
+    }
+    if (Weight > 250) {
+      wx.showToast({
+        title: '体重不能大于250KG',
+        icon: 'none'
+      })
+      return false;
+    }
+    wx.setStorageSync('Height', Height)
+    wx.setStorageSync('Weight', Weight)
+    wx.setStorageSync('relationship', relationship)
+
+    wx.setStorageSync('relationCode ', '0'+(Number(index)+1))
+    wx.navigateTo({
+      url: '../../../pages/Information/location/location',
+    })
+  },
+  onLoad: function (options) {},
+  onReady: function () {},
+  onShow: function () {},
+  onHide: function () {},
+  onUnload: function () {},
+  onPullDownRefresh: function () {},
+  onReachBottom: function () {},
+  onShareAppMessage: function () {}
+})

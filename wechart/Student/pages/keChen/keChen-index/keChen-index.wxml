@@ -1,0 +1,190 @@
+<view class='contanier'>
+  <!-- <scroll-view class='app' scroll-y bindscroll="appScrollBind" bindscrolltoupper="ScrollToTop"  bindscrolltolower="listTolower"> -->
+  <scroll-view class='app' scroll-y bindscroll="appScrollBind" bindscrolltoupper="ScrollToTop">
+    <view class="header"  bindtap='Acquire'>
+      <view class='address'>
+        <image class='headerLocation' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/iterationSport/location.png'></image>
+        <text class='locationText iLblock textOver'>{{address}}</text>
+      </view>
+      <view class='ScanBox'>
+        <image src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/iteration/iterationBack.png' class='Scan'></image>
+      </view>
+    </view>
+    <swiper class="swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-color="{{indicatorColor}}" indicator-active-color="{{indicatorActiveColor}}" current="{{current}}" circular="{{circular}}">
+      <block wx:for="{{imgUrls}}" wx:key="orderIndex">
+        <swiper-item data-orderindex="{{item.orderIndex}}">
+          <image src='{{!imgOkSweiper?"../../../image/default.jpg":item.photoAddress}}' bindtap='toBannerDetail' data-url='{{item.linkAddress}}' class="slide-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class='iterationBox'>
+      <view class='iterItem' bindtap='moreCourse'>
+        <image src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/iteration/Morecourses.png'></image>
+        <text class='iterText'>更多体验课</text>
+      </view>
+      <view class='iterItem' bindtap='nearbyInstitutions'>
+        <image src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/iteration/mechanism.png'></image>
+        <text class='iterText'>附近教练</text>
+      </view>
+      <view class='iterItem' bindtap='nearbyStadiums'>
+        <image src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/iteration/Nearbystadiums.png'></image>
+        <text class='iterText'>附近场馆</text>
+      </view>
+    </view>
+    <!-- <view class='aside'>
+      <view class='asideNotice' bindtap='goLectureNtice'>
+        <image class='asideNoticeImg' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/student/asideNotice.png'></image>
+        <text>我的开课通知</text>
+      </view>
+      <view class='asideCurriculum' bindtap='goCourseOrder'>
+        <image class='asideCurriculumImg' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/student/asideCurriculum.png'></image>
+        <text>我的课程订单</text>
+      </view>
+    </view> -->
+    <!-- <view class='excellentCourse'>— 精品体验课 —</view> -->
+    <!-- <scroll-view class="scroll-active" id="affix" scroll-x='true'>
+      <view class='classItem' wx:for="{{itemList}}" wx:key="{{index}}" data-id='{{item.itemId}}' bindtap='fenItemList'>
+        <view class="{{itemId == item.itemId ?'is_Checked':'normal'}}">
+          <image class='classItemImg' src='{{item.itemPhotoAddress}}'></image>
+        </view>
+        <view class='classItemText'>{{item.itemName}}</view>
+      </view>
+    </scroll-view> -->
+    <!-- <scroll-view class='scroll-active stickyClass targetTop' wx:if="{{Rect || fixTop<scrollTop}}" scroll-x='true' bindscrolltoupper="scrolltoupper" style='opacity:{{opaTwo}}'>
+      <view class='classItem' wx:for="{{itemList}}" wx:key="{{index}}" data-id='{{item.itemId}}' bindtap='fenItemList'>
+        <view class="{{itemId == item.itemId ?'is_Checked':'normal'}}">
+          <image class='classItemImg' src='{{item.itemPhotoAddress}}'></image>
+        </view>
+        <view class='classItemText'>{{item.itemName}}</view>
+      </view>
+    </scroll-view>  -->
+    <!-- <scroll-view class='experienceClassSlipping' style='height:{{SlippingHeight}}px;' scroll-y="{{scrollY}}" bindscrolltolower="listTolower"> -->
+    <scroll-view class='experienceClassSlipping' scroll-y="{{scrollY}}">
+      <view class='course' wx:for="{{aListOfExperienceLessons}}" wx:key="uqine" wx:for-item="venue" data-over="{{venue.signUpOver}}" data-classid="{{venue.classId}}" data-marketingstatus='{{venue.marketingStatus}}' bindtap='goCourseDetails'>
+        <view class='course-section'>
+          <view class='courseImgBox' style='overflow:hidden;'>
+            <image lazy-load="true" wx-if="{{venue.marketingStatus==0}}" bindload="loadImg" class='courseImg' src='{{!imgOk?"../../../image/default.jpg":venue.classPhotoAddress}}' mode='widthFix'></image>
+            <image lazy-load="true"  wx-if="{{venue.marketingStatus==1}}" bindload="loadImg" class='courseImg' src='{{!imgOk?"../../../image/default.jpg":venue.marketingPhoto?venue.marketingPhoto:venue.classPhotoAddress}}' mode='widthFix'></image>  
+            <text class='itemType'>{{venue.itemName }}</text>
+            <view class='courseIter'>
+              <text class='textOver iLblock'>{{venue.homeName}}</text>
+              <text decode='true'>&nbsp;&nbsp;({{venue.length }}km)</text>
+            </view>
+          </view>
+          <view class='courseInfo'>
+            <!-- <view class='experience'>体验课</view> -->
+            <view class='perienceTitle textOver' wx-if="{{venue.marketingStatus==0}}">{{venue.className }}</view>
+            <view class='perienceTitle textOver' wx-if="{{venue.marketingStatus==1}}">{{ venue.marketingClassName?venue.marketingClassName:venue.className }}</view>
+            <view class='moneyBoxInfo'>
+              <text class='money' decode='true'>RMB&nbsp;{{venue.courseCost/100}}</text><text class='money-gray' decode='true'>&nbsp;/人次</text>
+            </view>
+          </view>
+          <!-- <view class='courseLocation'>
+            <view class='courseLocationBox'>
+              <!-- <image class='courseLocationImg' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/iterationSport/VenueName.png'></image> -->
+              <!-- <text class='textOver iLblock'>{{venue.homeName}}</text>
+              <text decode='true'>&nbsp;&nbsp;({{venue.length }}km)</text>
+            </view>
+            <view class='courseHot'>
+              <text class='money' decode='true'>RMB&nbsp;{{venue.courseCost/100}}</text><text class='money-gray' decode='true'>&nbsp;/人次</text> -->
+              <!-- <image class='courseHotImg' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/iterationSport/Hot.png'></image> -->
+              <!-- <text>{{venue.popularity ? venue.popularity : 0 }}</text> -->
+            <!-- </view> -->
+          <!-- </view> -->
+        </view>
+
+      </view>
+      <view class='tabLoading' wx:if="{{tabLoad}}">
+        <image src='../../../image/loading.gif'></image>
+      </view>
+      <view class='footerOver' wx:if="{{!tabLoad}}">{{footerText}}</view>
+    </scroll-view>
+  </scroll-view>
+</view>
+<!--显示竖着的-->
+<!-- <scroll-view class="scroll-actives {{itemOPa}}" id="affix" scroll-y='true' wx:if="{{itemShow}}">
+  <view class='classItems' wx:for="{{itemList}}" wx:key="{{index}}" data-id='{{item.itemId}}' bindtap='fenItemList'>
+    <view class="{{itemId == item.itemId ?'is_Checked':'normals'}}">
+      <image class='classItemImg' src='{{item.itemPhotoAddress}}'></image>
+    </view>
+    <view class='classItemText'>{{item.itemName}}</view>
+  </view>
+</scroll-view> -->
+<!--  没有数据显示空空如也  -->
+<view class='kong' wx:if="{{Period}}">
+  <image class='kong-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/studentNewImg/dataEmpty.png'></image>
+  <text class='kong-text'>数据为空</text>
+</view>
+<!-- 开课通知弹窗提示 start 01课程-04（大班）开班通知 -->
+<!-- 拨打教练电话-->
+<view class="smodal-mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}" style='width:{{width}}px;height:{{height}}px'>
+  <view class="modal-dialog" data-attend="{{showModalList.attendId }}" data-type="{{showModalList.type }}">
+    <view class="modal-title">
+      <text decode="{{true}}" space="{{true}}">开&nbsp;课&nbsp;通&nbsp;知</text>
+    </view>
+    <view class="modal-content">
+      <view class='mingcheng-1'>
+        <text class='les-mod-buya'>您购买的 <text class='les-mod-buyb buybperson' decode="{{true}}" space="{{true}}">{{showModalList.itemName  }} {{showModalList.attendPeriod }}期班</text> {{showModalList.maxMember }}人班开课啦！</text>
+      </view>
+      <view class='mingcheng-2'>
+        <text class='les-mod-buyc'>开课时间：{{showModalList.attendDate}}（{{showModalList.weekDay }}） {{showModalList.dayTimeStart}}</text>
+      </view>
+      <view class='les-mod-buyd'>
+        <view class='textOver les-mod-balla'>{{showModalList.className }}</view>
+        <view class='les-mod-noticeb'>
+          <image class='iLblock les-mod-postionb c-user' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/studentNewImg/c8.png'></image>
+          {{showModalList.classCoach }}
+          <image class='iLblock les-mod-postiona' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/student/grade-red.png'></image>
+          {{showModalList.homeName }}
+          <image class='iLblock c-touser-xcxper-gievename' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/studentNewImg/c15.png'></image>
+          {{showModalList.signUpMember }} 人已报名
+          <image class='iLblock van-left-img-person' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/studentNewImg/c16.png'></image>
+          {{showModalList.courseTime /10}}课时
+        </view>
+      </view>
+    </view>
+    <view class="modal-footer">
+      <view class='les-modal-close-stopa'>
+        <view class="btn-confirm {{(showModalList.type==1&&showModalList.attendMemberStatus =='01')||(showModalList.type==2&&showModalList.attendMemberStatus =='01') ? '' : 'btnCen'}}" bindtap="callphone" data-status="confirm" data-phone="{{showModalList.coachPhone }}">联系教练</view>
+        <view class="btn-confirm-les-modal-close-stop btn-confirm-les-modal-close-stopb" bindtap="stopKe" data-fash="2" data-status="confirm" data-stop="{{showModalList.classId }}" data-memberid="{{showModalList.memberId }}" data-orderid="{{showModalList.orderCode }}"
+          wx:if="{{showModalList.attendMemberStatus =='01'&&showModalList.type==1}}">暂停课程</view>
+        <view wx:elif="{{showModalList.attendMemberStatus =='01'&&showModalList.type==2}}" data-attend="{{showModalList.attendId}}" data-fash="1" class="btn-confirm-les-modal-close-stop btn-confirm-les-modal-close-stopb" bindtap="cancelKe" data-status="confirm">取消</view>
+      </view>
+    </view>
+  </view>
+  <view class='modal-btn' bindtap="onCancel" data-status="cancel">
+    <image class='les-modal-close-loseimg' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/close.png'></image>
+  </view>
+</view>
+<!--开课通知弹窗提示 end-->
+
+<!-- 01课程-04（大班）-暂停课程 start-->
+<view class="modal-mask" catchtouchmove="preventTouchMove" wx:if="{{showModalTwo}}" style='width:{{width}}px;height:{{height}}px'>
+  <view class="modal-dialog">
+    <view class="modal-title">
+      <text decode="{{true}}" space="{{true}}">开&nbsp;课&nbsp;通&nbsp;知</text>
+    </view>
+    <view class="modal-content">
+      <view class='les-mod-ballb'>
+        <text decode="{{true}}" wx:if="{{fash==1}}">
+        <!--01课程-05收藏课程-->
+          取消本次开课后，您需要联系教练确认下次开班的时间，确定取消吗？  
+        </text>
+        <text decode="{{true}}" wx:else>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 课程暂停申请需要教练方确认，课程暂停后，您将不会收到本课程的所有开课通知，如需要恢复请联系教练操作。确定暂停本课程吗？
+        </text>
+      </view>
+
+    </view>
+    <view class="modal-footer">
+      <view class='les-modal-close-stopa'>
+        <view class="btn-confirm" bindtap="lastStep">上一步</view>
+        <view class="btn-confirm-les-modal-close-stop btn-confirm-les-modal-close-stopb" bindtap="curriculum" wx:if="{{fash==2}}">确认暂停</view>
+        <view class="btn-confirm-les-modal-close-stop btn-confirm-les-modal-close-stopb" bindtap="sureCancel" wx:if="{{fash==1}}">确认取消</view>
+      </view>
+    </view>
+  </view>
+  <view class='modal-btn' bindtap="onCancel" data-status="cancel">
+    <image class='les-modal-close-loseimg' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/close.png'></image>
+  </view>
+</view>

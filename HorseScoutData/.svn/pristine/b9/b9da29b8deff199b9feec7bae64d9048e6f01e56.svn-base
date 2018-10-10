@@ -1,0 +1,8 @@
+<!--pages/My/Alter-Name/Alter-Name.wxml-->
+<view class='Alter-Name'>
+  <input class='Alter-Name-input' maxlength="20" value='{{oldNickName}}' bindinput='inputNewNickName'  name="userName" placeholder="请输入昵称" placeholder-class='input-cbcb' ></input>
+  <view class='Submit-button' bindtap='alertUserNickName' >
+    <view class='Submit-button-section'>提交结果</view>
+  </view>
+</view>
+

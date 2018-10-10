@@ -1,0 +1,59 @@
+<!--pages/Information/location/location.wxml-->
+<view class='Perfect-Information'>
+  <view class='headline-Prompt'>为了便于为您提供更好的服务，我们需要您完善下面信息，如有疑问请
+    <text class='headline-Prompt-blue' bindtap='ContactCustomerService'>联系客服</text>。</view>
+  <view class='Perfect-Information-Name'>
+    <view class='Bargraph-yellow'></view>
+    <view class='Perfect-Information-Name-section'>
+      <view class='Name-section-one'>
+        <view class='Name-section-headline'>您当前所在城市？</view>
+        <view class='family-relation'>
+          <view class='family-relation-one'>
+            <view class='relation'>四川省</view>
+            <image class='section-pull-down' src='{{imgUrl}}pull-down.png'></image>
+          </view>
+          <view class='family-relation-two'>
+            <view class='relation'>成都市</view>
+            <image class='section-pull-down' src='{{imgUrl}}pull-down.png'></image>
+          </view>
+        </view>
+        <!-- <view class='section-options-have-headline'>（本市已有
+          <text class='section-options-have-headline-yellow'>34535</text>名学生加入探马数据）</view> -->
+      </view>
+       <view class='Name-section-one'>
+        <view class='Name-section-headline1'>您孩子所在学校？(选填)</view>
+        <view class='family-relation'>
+          <view class='family-relation-one'>
+            <view class='relation'>小学</view>
+            <image class='section-pull-down' src='{{imgUrl}}pull-down.png'></image>
+          </view>
+          <view class='family-relation-two-two'>
+            <input class='section-options-have-input' maxlength="11" placeholder='当前所在学校' placeholder-class='section-options-have-input-cbcbcb'></input>
+          </view>
+        </view>
+        <!-- <view class='section-options-have-headline'>（本校已有
+          <text class='section-options-have-headline-yellow'>535</text>名学生加入探马数据）</view> -->
+      </view>
+       <view class='Name-section-one'>
+        <view class='Name-section-headline1'>您孩子所在的班级？(选填)</view>
+        <view class='family-relation'>
+          <view class='family-relation-one'>
+            <view class='relation'>五年级</view>
+            <image class='section-pull-down' src='{{imgUrl}}pull-down.png'></image>
+          </view>
+          <view class='family-relation-two'>
+            <view class='relation'>二班</view>
+            <image class='section-pull-down' src='{{imgUrl}}pull-down.png'></image>
+          </view>
+        </view>
+        <!-- <view class='section-options-have-headline'>（本班已有
+          <text class='section-options-have-headline-yellow'>35%</text>名学生加入探马数据）</view> -->
+      </view>
+    </view>
+  </view>
+  <view class='Perfect-Information-footer'>
+    <view class='Perfect-Information-button-previous-step'>上一步</view>
+    <view class='Perfect-Information-button-else'>我有其他孩子</view>
+    <view class='Perfect-Information-button'>下一步</view>
+  </view>
+</view>

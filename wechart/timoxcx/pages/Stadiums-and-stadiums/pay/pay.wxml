@@ -1,0 +1,31 @@
+<view class='pages'>
+<view class='c-payContent'>
+  <view class='c-payOne clearfloat'>
+  <view class='c-payst fl'>
+    <image class='c-pay-user' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/red-user.png'></image>
+    <text class='pay-user'>教练名称（主教练）</text>
+    </view>
+    <text class='pay-date fr'>2018-02-09 17:23</text>
+  </view>
+  <text class="c-border"></text>
+  <view class="c-pay-situation">
+    <text class='c-situation'>缴纳场馆费用情况</text>
+    <text class='c-pay-item'>羽毛球  2场地   3小时   RMB 300.00</text>
+  </view>
+</view>
+<!--第二个-->
+<view class='c-payContent'>
+  <view class='c-payOne clearfloat'>
+  <view class='c-payst fl'>
+    <image class='c-pay-user' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/red-user.png'></image>
+    <text class='pay-user'>教练名称（主教练）</text>
+    </view>
+    <text class='pay-date fr'>2018-02-09 17:23</text>
+  </view>
+  <text class="c-border"></text>
+  <view class="c-pay-situation">
+    <text class='c-situation'>缴纳场馆费用情况</text>
+    <text class='c-pay-item'>羽毛球  2场地   3小时   RMB 300.00</text>
+  </view>
+</view>
+</view>

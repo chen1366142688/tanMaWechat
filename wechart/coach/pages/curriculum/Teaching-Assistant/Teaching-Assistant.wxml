@@ -1,0 +1,32 @@
+<!--pages/curriculum/Teaching-Assistant/Teaching-Assistant.wxml-->
+<view class='search'>
+  <input type='text' value="" placeholder='输入助教名称' placeholder-class='chanName' class='guan-name fr' bindinput="nickName"></input>
+  <view bindtap="searCoach" class='searchview'>
+    <image src='{{imgUrl}}coach/curriculum/search.png' class='sousuo'></image>
+  </view>
+</view>
+<view class='List'>
+  <view class='List-one' bindtap='chooseCoach' wx:if="{{coachList}}" wx:for="{{coachList}}" wx:for-item="coach" wx:key="{{index}}" data-index='{{coach}}'>
+    <image src='{{coach.avatarUrl}}' class='head-portrait'></image>
+    <view class='List-Name'>{{coach.nickName}}</view>
+    <image wx:if="{{coach.gender == 1}}" src='{{imgUrl}}coach/curriculum/List-man.png' class='gender'></image>
+    <image wx:if="{{coach.gender == 2}}" src='{{imgUrl}}gril.png' class='gender'></image>
+    <view class='Site'>{{coach.provinceName}}-{{coach.cityName}}</view>
+    <!-- <view class='Strengths'>
+      <image src='{{imgUrl}}youyong.png' class='Strengths-T'></image>
+      <view class='Strengths-text'>游泳</view>
+    </view>  -->
+  </view>
+  <!-- <view class='List-one'>
+    <image src='{{imgUrl}}coach/public/head-portrait.png' class='head-portrait'></image>
+    <view class='List-Name'>张 萨达撒多撒大所华</view>
+    <image src='{{imgUrl}}coach/curriculum/List-man.png' class='gender'></image>
+    <image src='{{imgUrl}}gril.png' class='gender'></image>
+    <view class='Site'>四川省-雅安市</view>
+    <view class='Strengths'>
+      <image src='{{imgUrl}}youyong.png' class='Strengths-T'></image>
+      <view class='Strengths-text'>游泳</view>
+    </view>
+  </view> -->
+  <!-- <button class='settle-accounts' form-type='submit' bindtap='studentState'>提 交</button> -->
+</view>

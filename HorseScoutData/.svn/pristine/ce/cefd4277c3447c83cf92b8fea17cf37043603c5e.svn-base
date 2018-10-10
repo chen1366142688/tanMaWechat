@@ -1,0 +1,64 @@
+/* pages/Patriarch/Test/Test.wxss */
+
+.Test{
+  width: 100%;
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.Test-header{
+  width: 750rpx;
+  height: 90rpx;
+  background-color: #fff;
+  padding: 20rpx 24rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  white-space: nowrap;
+  border-bottom: 1rpx solid #e4e4e4;
+}
+
+.Exercise-Program-choose{
+  width: 100%;
+  height: 90rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.Exercise-Program-choose-two{
+  display: inline-block;
+  height: 89rpx;
+  line-height: 89rpx;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 30rpx;
+  color: #999;
+  margin-right: 55rpx;
+  margin: 0 90rpx;
+  align-items: center;
+}
+
+.Exercise-Program-choose-two-text{
+  height: 89rpx;
+  line-height: 89rpx;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 30rpx;
+  color: #999;
+}
+
+.Exercise-Program-choose-one{
+  color: #4DD0C8;
+  border-bottom:1rpx solid #4DD0C8;
+}
+
+.Test-section{
+  width: 100%;
+  background-color: #fff;
+  margin: 0;
+  padding: 0 24rpx;
+  box-sizing: border-box;
+}

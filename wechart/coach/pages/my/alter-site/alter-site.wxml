@@ -1,0 +1,19 @@
+<!--pages/my/alter-site/alter-site.wxml-->
+<view class='alter-Name'>
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" class='iLblock'>
+      当前选择：{{array[index]}}
+  </picker>
+  <image class='pull-down' src='{{url}}xiala2.png'></image>
+   <picker bindchange="bindPickerChange1" value="{{index1}}" range="{{array1}}" class='iLblock'>
+      {{array1[index1]}}
+  </picker>
+  <image class='pull-down' src='{{url}}xiala2.png'></image>
+  <picker bindchange="bindPickerChange2" value="{{index2}}" range="{{array2}}" class='iLblock'>
+      {{array2[index2]}}
+  </picker>
+</view>
+<view class='alter-Password'>
+  <text class='alter-category'>详细地址</text>
+  <input class="input" maxlength="255" name="userName" value="{{addr?addr:''}}" placeholder="{{address?address:''}}" bindinput="userNameInput" />
+</view>
+<button class='settle-accounts' bindtap='subMit'>保  存</button>

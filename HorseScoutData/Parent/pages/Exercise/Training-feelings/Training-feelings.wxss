@@ -1,0 +1,75 @@
+/* pages/Exercise/Training-feelings/Training-feelings.wxss */
+
+.Training-feelings{
+  width: 750rpx;
+  height: 100vh;
+  margin: 0;
+  padding: 0 24rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-box{
+  width: 100%;
+  min-height: 400rpx;
+  /* max-height: 800rpx; */
+  line-height: 800rpx;
+  vertical-align: middle;
+  background-color: #fff;
+  padding: 20rpx 29rpx;
+  box-sizing: border-box;
+  display: flex;
+  margin-top: 20rpx;
+}
+
+.myInfoBxo {
+  width: 100%;
+  min-height: 400rpx;
+  /* max-height: 760rpx; */
+  font-size: 30rpx;
+  float: right;
+  color: #171717;
+  vertical-align: middle;
+  line-height: 36rpx;
+}
+
+.myInfo{
+  color: #999;
+}
+
+.alt{
+  width: 100%;
+  height: 64rpx;
+  line-height: 64rpx;
+  font-size: 24rpx;
+  color: #999;
+  vertical-align: middle;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.alt-yellow{
+  color: #FDC54A;
+  margin: 0 10rpx;
+}
+
+.Training-feelings-button{
+  width: 702rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  padding: 0 24rpx;
+  box-sizing: border-box;
+  justify-content: center;
+  background-color: #4DD0C8;
+  font-size: 30rpx;
+  color: #fff;
+  border-radius: 40rpx;
+  position: fixed; 
+  bottom: 60rpx;
+}

@@ -1,0 +1,8 @@
+<!--pages/login/Prompt/Prompt.wxml-->
+<view class='Prompt'>
+  <view class='Prompt-section'>
+  <view class='Prompt-section-headline'>系统检测到您的账号尚未注册，您需要：</view>
+  <view class='Existing-account'>绑定已有账号</view>
+  <view class='New-account'>绑定新账号</view>  
+  </view>
+</view>

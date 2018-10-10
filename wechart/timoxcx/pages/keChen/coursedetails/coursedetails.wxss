@@ -1,0 +1,500 @@
+page {
+  background: #ececec;
+}
+
+.van-banner {
+  width: 750rpx;
+  height: 442rpx;
+  position: relative;
+  background: url('http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/images/icon/cl-detailr-a.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.van-banner-item {
+  width: 700rpx;
+  height: 62rpx;
+  line-height: 62rpx;
+  padding: 0 25rpx;
+  position: absolute;
+  bottom: 0;
+  background: rgba(23, 23, 24, 0.4);
+  display: flex;
+  flex-direction: row;
+}
+
+.van-hot {
+  flex: 1;
+  color: #e85571;
+}
+
+.hot-img {
+  width: 24rpx;
+  height: 24rpx;
+  vertical-align: middle;
+}
+
+.van-hot-num {
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(232, 85, 113, 1);
+  padding-left: 10rpx;
+}
+
+.van-text {
+  flex: end;
+}
+
+.van-name {
+  max-width: 358rpx;
+  overflow: hidden;
+  font-family: PingFang-SC-Bold;
+  color: rgba(255, 255, 255, 1);
+  margin-left: 10rpx;
+  font-size: 18rpx;
+  vertical-align: middle;
+}
+
+.c-grade-a {
+  width: 14rpx;
+  height: 14rpx;
+  vertical-align: middle;
+}
+
+.c-item-info-txt-persona {
+  display: inline-block;
+  border-radius: 4rpx;
+  font-size: 18rpx;
+  font-family: PingFang-SC-Regular;
+  border: 2rpx solid #00c693;
+  padding: 3rpx 8rpx;
+  margin-right: 13rpx;
+  color: #00c693;
+  height: 26rpx;
+  line-height: 26rpx;
+}
+
+.van-right-txtzhaa {
+  display: inline-block;
+  font-size: 18rpx;
+  font-family: PingFang-SC-Regular;
+  color: #e85571;
+  margin-left: 2px;
+}
+
+.van-titel-txtzha {
+  font-size: 30rpx;
+  line-height: 45rpx;
+  position: relative;
+  min-height: 73rpx;
+  vertical-align: middle;
+  margin-left: 0;
+  margin-right: 0;
+  text-align: left;
+  overflow: inherit;
+  display: -webkit-box;
+  display: -webkit-flex;
+  font-weight: bold;
+}
+
+text.van-right-txtzhab {
+  display: -webkit-box !important;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+}
+
+.van-right-txtzhac {
+  background-color: #fff;
+  margin-bottom: 20rpx;
+}
+
+.van-right-txtzhad {
+  padding: 16rpx 25rpx;
+}
+
+/*课程简介*/
+
+.c-course-int-titlea {
+  max-height: 100%;
+  color: #333;
+  font-size: 30rpx;
+  line-height: 29rpx;
+  font-weight: Bold;
+}
+
+.c-course-int-titleb {
+  color: #333;
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  text-align: left;
+  line-height: 36rpx;
+  text-indent: 2em;
+  padding-bottom: 6px;
+  margin-top: 4rpx;
+}
+
+.c-course-int-titlec {
+  padding: 15rpx 24rpx;
+}
+
+.c-cou-havea {
+  color: #00c693;
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+}
+
+image.c-cou-haveb {
+  width: 17rpx;
+  height: 17rpx;
+  margin-left: 12rpx;
+}
+
+.c-cou-per-a {
+  display: flex;
+  margin-bottom: 4rpx;
+}
+
+.c-cou-per-b {
+  display: flex;
+  align-items: flex-end;
+}
+
+.c-cou-havec {
+  font-family: PingFang-SC-Regular;
+  font-size: 24rpx;
+  color: #333;
+  border-top: 1px solid #e4e4e4;
+  padding-top: 18rpx;
+}
+
+.c-cou-havee {
+  margin-left: 48%;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+.c-cou-havef {
+  clear: both;
+}
+
+.cou-timea {
+  float: left;
+}
+
+.cou-timeb {
+  float: left;
+  margin-left: 13.3%;
+}
+
+.cou-timec {
+  flex: 1;
+}
+
+.cou-timed {
+  margin-left: 18px;
+}
+
+.cou-timee {
+  margin-left: 18px;
+}
+
+.cou-timef {
+  display: inline-block;
+}
+
+.scroolBox {
+  width: 726rpx;
+  height: 140rpx;
+  padding: 10rpx 0 10rpx 24rpx;
+  background: #fff;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-bottom: 20rpx;
+}
+
+.intro-scroll {
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+}
+
+.intro-scrollImg {
+  width: 269rpx;
+  height: 210rpx;
+  vertical-align: bottom;
+  margin-right: 20rpx;
+}
+
+/* 培训项目 */
+
+.cou-timeg {
+  margin: 10rpx 0;
+}
+
+.cou-timeh {
+  text-align: left;
+  color: #333;
+  font-size: 24rpx;
+}
+
+.cou-timei {
+  color: #e85571;
+  font-weight: bold;
+}
+
+.cou-sixa {
+  width: 56%;
+  display: inline-block;
+}
+
+.cou-sixc {
+  width: 110rpx;
+  height: 110rpx;
+  vertical-align: middle;
+}
+
+.cou-time-authenticated {
+  width: 75rpx;
+  height: 30rpx;
+  vertical-align: middle;
+}
+
+.cou-time-authenticateda {
+  font-size: 28rpx;
+  color: #333;
+  text-align: left;
+}
+
+.cou-time-authenticatedb {
+  color: #00c693;
+}
+
+.cou-introduce-topica {
+  width: 17.2%;
+  height: 183rpx;
+  float: left;
+}
+
+.cou-introduce-topicb {
+  margin-left: 15rpx;
+  width: 77%;
+  float: left;
+}
+
+.cou-introduce-topicc {
+  display: inline-block;
+  float: right;
+}
+
+.cou-introduce-topicd {
+  display: inline-block;
+}
+
+.cou-introduce-topice {
+  clear: both;
+}
+
+.cou-introduce-topicf {
+  margin: 13rpx 30rpx 6rpx 17rpx;
+}
+
+.cou-introduce-topicg {
+  padding-left: 12rpx;
+}
+
+.cou-introduce-contenta {
+  font-size: 24rpx;
+  color: #333;
+  line-height: 36rpx;
+}
+
+.authenticatedfista {
+  width: 65rpx;
+  height: 65rpx;
+}
+
+/*已报名学员*/
+
+.fenBox {
+  display: flex;
+  flex-wrap: wrap;
+  width: 702rpx;
+  padding: 0 21rpx 0 21rpx;
+  background: #fff;
+  flex-direction: row;
+  justify-content: flex-start;
+  -webkit-justify-content: flex-start;
+  padding-top: 10rpx;
+}
+
+.fenItem {
+  width: 65rpx;
+  margin: 0rpx 10rpx 10rpx 10rpx; /* 调节封面之间的原始间距，即不小于36px */
+}
+
+@media screen and (min-width: 320px) and (max-width: 374px) {
+  .fenItem {
+    width: 60rpx;
+    margin: 0rpx 10rpx 10rpx 10rpx; /* 调节封面之间的原始间距，即不小于36px */
+  }
+}
+
+.itemImg {
+  display: block;
+  width: 65rpx;
+  height: 65rpx;
+  margin: 0 auto;
+}
+
+.authenticatedfistb-fist {
+  background: url('http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/cou-introduce-contentab.jpg');
+  background-size: 66rpx 63rpx;
+  width: 66rpx;
+  height: 63rpx;
+  background-repeat: no-repeat;
+  text-align: center;
+  line-height: 52rpx;
+}
+
+.van-over {
+  display: block;
+  width: 200rpx;
+  height: 23rpx;
+  padding-bottom: 20rpx;
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(153, 153, 153, 1);
+  text-align: center;
+  margin: 0 auto;
+}
+
+.cor-consulta {
+  background: url('http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/consult.png');
+  background-size: 50rpx 43rpx;
+  width: 50rpx;
+  height: 43rpx;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+/*底部，咨询教练，聊天*/
+
+.cor-bara {
+  position: fixed;
+  z-index: 14;
+  right: 0px;
+  left: 0px;
+  background: #f9f9f9;
+}
+
+.cor-bar-cssa {
+  display: inline-block;
+  overflow: hidden;
+  height: 100rpx;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #333;
+  font-size: 24rpx;
+}
+
+.cor-css-aska {
+  bottom: 0px;
+  display: table;
+  width: 100%;
+  height: 100rpx;
+  table-layout: fixed;
+  padding: 0px;
+}
+
+.cor-css-askb {
+  width: 33%;
+  border-right: 1px solid #e4e4e4;
+}
+
+.cor-css-askc {
+  padding: 28rpx 0;
+}
+
+.cor-css-askd {
+  display: inline-block;
+  margin-left: 5px;
+  height: 45rpx;
+  line-height: 19rpx;
+  vertical-align: middle;
+}
+
+/*购物课程*/
+
+.cor-shopcara {
+  background: url('http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/purchasecourse.png');
+  background-size: 46rpx 44rpx;
+  width: 46rpx;
+  height: 44rpx;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.cor-shopcarb {
+  background: url('http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/purchasecourse.png');
+  background-size: 46rpx 44rpx;
+  width: 46rpx;
+  height: 44rpx;
+  background-repeat: no-repeat;
+}
+
+.cor-shopcarc {
+  margin-left: 5px;
+  height: 45rpx;
+  line-height: 19rpx;
+  vertical-align: middle;
+}
+
+.cor-collect {
+  background: url('http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/collecta.png');
+  background-size: 50rpx 47rpx;
+  width: 50rpx;
+  height: 47rpx;
+  background-repeat: no-repeat;
+}
+
+.cor-collect-shopa {
+  height: 45rpx;
+  line-height: 19rpx;
+}
+
+.cor-collect-shopb {
+  margin: 0 14px;
+}
+
+.cor-collect-shopc {
+  margin-top: 11rpx;
+}
+
+.cor-collect-shopd {
+  margin-top: 15rpx;
+}
+
+.cor-collect-shope {
+  width: 15.2%;
+}
+
+.cor-collect-shopf {
+  padding: 10rpx 0rpx;
+}
+
+.cor-collect-shop-foot {
+  margin-bottom: 100rpx;
+}
+
+.cor-share {
+  background: url('http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/share.png');
+  background-size: 42rpx 42rpx;
+  width: 42rpx;
+  height: 42rpx;
+  background-repeat: no-repeat;
+}

@@ -1,0 +1,63 @@
+<view class='box'>
+  <view class='personalImgBox center'>
+    <text>头像</text>
+    <view class='imgRig'>
+      <image class='userImg' src='{{url}}userImg.png'></image>
+      <image class='right' src='{{url}}next.png'></image>
+    </view>
+  </view>
+  <view class='personalImgBox personalImgBoxCat center' wx:for="{{info}}" wx:key="*this">
+    <text>{{item.name}}</text>
+    <view class='imgRig'>
+      <text class='perName'>{{item.value}}</text>
+      <image class='right' src='{{url}}next.png'></image>
+    </view>
+  </view>
+</view>
+<view class='boxTwo'>
+  <view class='personalImgBox personalImgBoxCat center' wx:for="{{nameInfo}}" wx:key="*this">
+    <text class='perNames fl'>{{item.name}}</text>
+    <view class='imgRigGai fr'>
+      <text class='perNameGai textOver iLblock'>{{item.value}}</text>
+      <image class='rightGai iLblock' src='{{url}}next.png'></image>
+    </view>
+  </view>
+</view>
+<text class='bindNum'>账号绑定</text>
+<view class='personalImgBox personalImgBoxCat center'>
+    <view class='imgLeft'>
+      <image class='phoneGreen' src='{{url}}phoneGreen.png'></image>
+      <text class='model'>手机（登录账号）</text>
+    </view>
+    <view class='imgRig'>
+      <text class='perName'>136******49</text>
+      <image class='right' src='{{url}}next.png'></image>
+    </view>
+</view>
+<view class='personalImgBox personalImgBoxCat center'>
+    <view class='imgLeft'>
+      <image class='wechartGreen' src='{{url}}wechatGreen.png'></image>
+      <text class='model'>微信</text>
+    </view>
+    <view class='imgRig'>
+      <text class='perName'>lsmgyodhgte</text>
+      <image class='right' src='{{url}}next.png'></image>
+    </view>
+</view>
+<text class='security'>安全设置</text>
+<view class='personalImgBox personalImgBoxCat center' wx:for="{{setting}}" wx:key="*this">
+    <text>{{item.name}}</text>
+    <view class='imgRig'>
+      <text class='perName'>{{item.value}}</text>
+      <image class='right' src='{{url}}next.png'></image>
+    </view>
+</view>
+<text class='security'>账户状态</text>
+<view class='switch center'>
+  <text>是否开启</text>
+  <view class='switchBtn'>
+    <text class='iLblock open {{state}}'  bindtap='switchBtn' data-val="open">开启</text>
+    <text class='iLblock close {{states}}'  bindtap='switchBtn' data-val="close">关闭</text>
+  </view>
+</view>
+<text class='van-footer'>已经到底了</text>

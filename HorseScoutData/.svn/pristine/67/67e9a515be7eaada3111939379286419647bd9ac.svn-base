@@ -1,0 +1,472 @@
+/* pages/Exercise/Physical-Test/Physical-Test.wxss */
+
+.Physical-Test{
+  width: 750rpx;
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.patent-preparatory-work{
+  width: 750rpx;
+  height: 100%;
+  background-color: #fff;
+  padding: 40rpx 24rpx;
+  box-sizing: border-box;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.patent{
+  width: 100%;
+  height: 100%;
+  background-color: #F4F4F4;
+  border-radius: 10rpx;
+  padding: 0 19rpx;
+  margin-top: 67rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.patent-img{
+  width: 60rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  vertical-align: middle;
+  position: absolute;
+  left: 321rpx;
+  top: -30rpx;
+}
+
+.patent-text{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.patent-text-headline{
+  width: 100%;
+  height: 24rpx;
+  line-height: 24rpx;
+  margin-top: 50rpx;
+  font-size: 24rpx;
+  color: #CBB383;
+  text-align: center;
+}
+
+.patent-text-section{
+  width: 100%;
+  height: 100%;
+  line-height: 36rpx;
+  font-size: 24rpx;
+  margin-top: 17rpx;
+  margin-bottom: 27rpx;
+  color: #CBB383;
+}
+
+.preparatory-work{
+  width: 100%;
+  height: 100%;
+  background-color: #F4F4F4;
+  border-radius: 10rpx;
+  padding: 0 19rpx;
+  margin-top: 27rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.preparatory-work-img{
+  width: 60rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  vertical-align: middle;
+  position: absolute;
+  left: 321rpx;
+  top: -30rpx;
+}
+
+.preparatory-work-text{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.preparatory-work-text-headline{
+  width: 100%;
+  height: 24rpx;
+  line-height: 24rpx;
+  margin-top: 50rpx;
+  font-size: 24rpx;
+  color: #72B9E7;
+  text-align: center;
+}
+
+.preparatory-work-text-section{
+  width: 100%;
+  height: 100%;
+  line-height: 36rpx;
+  font-size: 24rpx;
+  margin-top: 17rpx;
+  margin-bottom: 27rpx;
+  color: #72B9E7;
+}
+
+/* 孩子列表  */
+.Physical-Test-list{
+  width: 750rpx;
+  height: 120rpx;
+  background-color: #fff;
+  padding: 20rpx 24rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  white-space: nowrap;
+  margin-top: 20rpx;
+}
+
+.Exercise-Program-choose{
+  width: 100%;
+  height: 120rpx;
+  line-height: 120rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.Exercise-Program-choose-one{
+  display: inline-block;
+  min-width: 150rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 30rpx;
+  padding: 0 22rpx;
+  color: #fff;
+  background-color: #4DD0C8;
+  border-radius: 40rpx;
+  margin-right: 55rpx;
+  border:1rpx solid #4DD0C8;
+}
+
+.Exercise-Program-choose-two{
+  display: inline-block;
+  min-width: 150rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 30rpx;
+  padding: 0 22rpx;
+  color: #cbcbcb;
+  background-color: #fff;
+  border-radius: 40rpx;
+  margin-right: 55rpx;
+  border:1rpx solid #cbcbcb;
+}
+
+/*  测试项目  */
+
+.Physical-Test-test-item{
+  width: 750rpx;
+  line-height: 0;
+  margin: 0;
+  box-sizing: border-box;
+  margin-top: 20rpx;
+}
+
+.test-item-one{
+  width: 750rpx;
+  height: 100%;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  padding:  20rpx 24rpx 45rpx 24rpx;
+  box-sizing: border-box;
+  margin-bottom: 20rpx;
+}
+
+.test-item-one-section{
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.test-item-one-section-img{
+  width: 100%;
+  height: 395rpx;
+  line-height: 395rpx;
+  vertical-align: middle;
+  position: relative;
+}
+
+.section-img{
+  width: 100%;
+  height: 395rpx;
+  line-height: 395rpx;
+  vertical-align: middle;
+}
+
+.Completion-Rate{
+  height: 40rpx;
+  padding: 0 28rpx;
+  box-sizing: border-box;
+  line-height: 40rpx;
+  vertical-align: middle;
+  text-align: center;
+  border-top-left-radius: 20rpx;
+  border-bottom-left-radius: 20rpx;
+  background-color: #000;
+  color: #fff;
+  position: absolute;
+  right: 0;
+  bottom: 31rpx;
+  font-size: 22rpx;
+  opacity:0.7;
+}
+
+.test-item{
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.test-item-headline{
+  width: 100%;
+  height: 28rpx;
+  line-height: 28rpx;
+  vertical-align: middle;
+  font-size: 28rpx;
+  color: #171717;
+  font-weight: bold;
+  margin-top: 30rpx;
+}
+
+.test-item-age{
+  width: 100%;
+  height: 140rpx;
+  line-height: 140rpx;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.test-item-age-headline{
+  width: 100%;
+  height: 24rpx;
+  line-height: 24rpx;
+  vertical-align: middle;
+  margin-top: 39rpx;
+  font-size: 24rpx;
+  color: #333;
+}
+
+.test-item-age-text{
+  width: 100%;
+  height: 76.5rpx;
+  line-height: 76.5rpx;
+  vertical-align: middle;
+  font-size: 24rpx;
+  color: #999;
+}
+
+.test-purpose{
+  width: 100%;
+  height: 110rpx;
+  line-height: 110rpx;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.test-purpose-headline{
+  width: 100%;
+  height: 55rpx;
+  line-height: 55rpx;
+  vertical-align: middle;
+  font-size: 24rpx;
+  color: #333;
+}
+
+.test-purpose-text{
+  width: 100%;
+  height: 100%;
+  line-height: 36rpx;
+  margin: 15rpx 0;
+  vertical-align: middle;
+  font-size: 24rpx;
+  color: #999;
+}
+
+.test-philosophy{
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.test-philosophy-headline{
+  width: 100%;
+  height: 55rpx;
+  line-height: 55rpx;
+  vertical-align: middle;
+  font-size: 24rpx;
+  color: #333;
+}
+
+.test-philosophy-text{
+  width: 100%;
+  height: 100%;
+  line-height: 36rpx;
+  margin: 15rpx 0;
+  vertical-align: middle;
+  font-size: 24rpx;
+  color: #999;
+}
+
+/* 展开全文  */
+
+.pack-up{
+  width: 100%;
+  height: 24rpx;
+  line-height: 24rpx;
+  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 39rpx;
+  margin-top: 39rpx;
+}
+
+.pack-up-text{
+  font-size: 24rpx;
+  line-height: 24rpx;
+  height: 24rpx;
+  color: #4DD0C8;
+  vertical-align: middle;
+  
+}
+.pack-up-img{
+  width: 20rpx;
+  height: 20rpx;
+  line-height: 20rpx;
+  margin-top: 5rpx;
+  vertical-align: middle;
+  margin-left: 20rpx;
+}
+
+/*  测试步骤  */
+
+.unwind-section{
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.unwind-section-headline{
+  width: 100%;
+  height: 28rpx;
+  line-height: 28rpx;
+  font-size: 28rpx;
+  color: #333;
+  font-weight: bold;
+}
+
+.measuring-procedure{
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.measuring-procedure-text{
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.measuring-procedure-text-one{
+  width: 100%;
+  height: 100%;
+  line-height: 36rpx;
+  font-size: 24rpx;
+  color: #333;
+  vertical-align: middle;
+  margin: 15rpx 0;
+}
+
+.measuring-procedure-video{
+  width: 100%;
+  height: 395rpx;
+  line-height: 395rpx;
+  vertical-align: middle;
+  position: relative;
+  margin-top: 20rpx;
+  margin-bottom: 40rpx;
+}
+
+.video{
+  width: 100%;
+  height: 395rpx;
+  line-height: 395rpx;
+  vertical-align: middle;
+}
+
+.Play{
+  width: 60rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  vertical-align: middle;
+  position: absolute;
+  left: 31rpx;
+  bottom: 31rpx;
+}
+
+.measuring-procedure-button{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #fff;
+  font-size: 30rpx;
+  vertical-align: middle;
+  background-color: #4DD0C8;
+  border-radius: 40rpx;
+  text-align: center;
+}

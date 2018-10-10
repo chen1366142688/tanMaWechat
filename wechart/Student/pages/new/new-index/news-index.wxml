@@ -1,0 +1,28 @@
+<!--pages/new/new-index/news-index.wxml-->
+<view class='Newslndex-BG'>
+  <view class='Newslnedx-header'>
+    <image class='attribute' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coach/New/New-Student.png'></image>
+    <view class='header-Name'>
+      <image class='Head-Portraits'  src='{{avatarUrl?avatarUrl+"?x-oss-process=image/resize,m_mfit,h_70,w_70":""}}' mode="aspectFill" ></image>
+      <view class='Name'>{{studentNickName}}</view>
+    </view>
+  </view>
+</view>
+
+<!--  单个消息  -->
+<view class='New'>
+  <view class='New-one' wx:for="{{showUserList}}" wx:key="userId" bindtap="toChat" data-userimname='{{item.imUserName}}' data-nickname='{{item.nickName}}'  data-avatarurl='{{item.avatarUrl}}'>
+    <image class='Attribute' src='{{item.avatarUrl?item.avatarUrl+"?x-oss-process=image/resize,m_mfit,h_50,w_50":""}}' mode="aspectFill" ></image>
+    <view class='names'>
+      <view class='name-zuo'>
+        <image class='classes' src='{{imgUrl}}coach/New/{{item.userType =="coach"?"Teacher-one":"Teacher-four"}}.png'></image>
+        <view class='name1'>{{item.nickName}}</view>
+      </view>
+      <view class='time'>{{item.time}}</view>
+    </view>
+    <view class='message'>
+      <view class='mesage-text'>{{item.contemt}}</view>
+      <view wx:if="{{item.unreadCount>0}}" class='mesage-W'>{{item.unreadCount}}</view>
+    </view>
+  </view>
+</view>

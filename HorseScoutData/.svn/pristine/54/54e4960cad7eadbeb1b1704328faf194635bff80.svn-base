@@ -1,0 +1,59 @@
+<!--pages/gradeTable/gradeDetail/gradeDetail.wxml-->
+<view class='gradeDetail'>
+  <view class='header'>
+    <view class='left'>
+      <image src='http://tanma-competition.oss-cn-beijing.aliyuncs.com/classgrade.png'></image>
+      <text class='classgrade'>{{classList[gradeId]}}{{className}}班</text>
+      <view class='yetnot'>已录入：{{scoreYet}}</view>
+      <view class='yetnot'>未录入：{{scoreNot}}</view>
+    </view>
+    <view class='right'>
+      <image src='http://tanma-competition.oss-cn-beijing.aliyuncs.com/student_search.png' bindtap='search'></image>
+      <image src='http://tanma-competition.oss-cn-beijing.aliyuncs.com/student_rank.png' bindtap='rank'></image>
+    </view>
+  </view>
+  <view class='studentlist'>
+    <view class='listheader'>
+      <view class='head-main {{gender == 0 ? "checklist":""}}' bindtap='checklist' data-index='0'>
+        全部
+      </view>
+      <view class='head-main {{gender == 1 ? "checklist":""}}' bindtap='checklist' data-index='1'>
+        仅男生
+      </view>
+      <view class='head-main {{gender == 2 ? "checklist":""}}' bindtap='checklist' data-index='2'>
+        仅女生
+      </view>
+    </view>
+    <view class='studentinfo' wx:for="{{stuList}}" wx:key="{{index}}">
+      <view class='left'>
+        {{item.studentName}}
+        <text>（09-12）</text>
+        <image src='{{item.gender == 1 ? "../../../image/man2.png" : "../../../image/woman2.png"}}'></image>
+      </view>
+      <view class='right' bindtap='goTest' data-value='{{item}}'>
+        <text wx:if="{{item.resultExist == 1}}" class='{{item.resultValue < 0 ? "isreach" : ""}}'>{{item.resultValue}}{{item.valueUnit ?item.valueUnit : "" }}</text>
+        <text wx:else class='item_not'>未录入</text>
+        <image src='http://tanma-competition.oss-cn-beijing.aliyuncs.com/next.png'></image>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 排序模态框 -->
+<view class='search_mock' wx:if="{{isSearch}}">
+  <view class='search_input'>
+    <input></input>
+    <image src='http://tanma-competition.oss-cn-beijing.aliyuncs.com/seach.png'></image>
+  </view>
+  <view class='search_result' wx:for="{{searchList}}" wx:key="{{index}}">
+    <view class='left'>
+       {{item.name}}
+        <text>（09-12）</text>
+        <image src='{{item.sex == 1 ? "../../../image/man2.png" : "../../../image/woman2.png"}}'></image>
+      </view>
+      <view class='right'>
+        <text>{{item.score}}</text>
+        <image src='http://tanma-competition.oss-cn-beijing.aliyuncs.com/next.png'></image>
+      </view>
+  </view>
+</view>

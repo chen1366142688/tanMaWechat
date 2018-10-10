@@ -1,0 +1,45 @@
+/* pages/curriculum/Order-Selection/Order-Selection.wxss */
+
+.bmwH {
+  width: 725rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  background: #fff;
+  margin-bottom: 2rpx;
+  padding-left: 25rpx;
+}
+
+.van-screen {
+  margin-top: 20rpx;
+  font-size: 30rpx;
+  font-family: PingFang-SC-Bold;
+  color: #333;
+  font-weight: bold;
+}
+
+.van-screen-one {
+  font-size: 28rpx;
+  color: #333;
+  font-family: PingFang-SC-Regular;
+}
+
+.checkted {
+  color: #007587;
+}
+
+.check {
+  border-color: #007587;
+}
+
+.submit {
+  width: 702rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  background-image: url('http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coach/public/button.png');
+  background-size:100% 100%;
+  background-color: #007587;
+  border-radius: 40rpx;
+  color: #fff;
+  margin: 61rpx auto;
+  text-align: center;
+}

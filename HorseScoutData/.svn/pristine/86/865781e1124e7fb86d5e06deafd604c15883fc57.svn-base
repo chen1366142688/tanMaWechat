@@ -1,0 +1,84 @@
+/* pages/My/Test-Record/Test-Record.wxss */
+
+.Test-Record{
+  width: 750rpx;
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.Test-Record-one{
+  width: 100%;
+  height: 170rpx;
+  line-height: 170rpx;
+  padding: 0 24rpx;
+  box-sizing: border-box;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  margin-top: 10rpx;
+}
+
+.Test-Record-one-headline{
+  width: 100%;
+  height: 65rpx;
+  line-height: 65rpx;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 24rpx;
+  color: #A088D4;
+  font-weight: bold;
+}
+
+.Test-complete-result-one{
+  width: 100%;
+  height: 101rpx;
+  line-height: 101rpx;
+  vertical-align: middle;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1rpx solid #e4e4e4;
+}
+
+.Test-complete-result-one-headline-left{
+  width: 85%;
+  height: 101rpx;
+  line-height: 101rpx;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Test-complete-result-one-headline-left-top{
+  font-size: 24rpx;
+  color: #666;
+  width: 100%;
+  height: 24rpx;
+  line-height: 24rpx;
+  margin-top: 19rpx;
+  vertical-align: middle;
+  text-align: left;
+}
+
+.Test-complete-result-one-headline-left-bottom{
+  width: 100%;
+  height: 50rpx;
+  line-height: 50rpx;
+  vertical-align: middle;
+  font-size: 24rpx;
+  color: #666;
+  text-align: left;
+}
+
+.Test-complete-result-one-section-right{
+  width: 15%;
+  height: 101rpx;
+  vertical-align: middle;
+  font-size: 36rpx;
+  color: #FDC54A;
+}

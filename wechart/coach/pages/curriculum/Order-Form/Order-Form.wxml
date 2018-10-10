@@ -1,0 +1,178 @@
+<!--pages/curriculum/Order-Form/Order-Form.wxml-->
+
+ <view class='scrollView'  style='margin-top:{{marginTop}}px;'> 
+
+
+  <view class='order-item-one'>
+    <view class='order-item-onecontent clearfloat'>
+      <view class='order-biaohao fl'>
+        订单编号:{{orderItems.orderCode }}
+      </view>
+      <view wx:if="{{orderItems.orderStatus == '00'}}" data-status="{{orderItems.orderStatus}}" class='order-status fr'>
+        订单状态：已下单待教练确认
+      </view>
+      <view wx:if="{{orderItems.orderStatus == '01'}}" data-status="{{orderItems.orderStatus}}" class='order-status fr'>
+        订单状态：已下单待学员支付
+      </view>
+      <view wx:elif="{{orderItems.orderStatus == '02'}}" data-status="{{orderItems.orderStatus}}" class='order-status fr'>
+        订单状态： 已支付课程进行中
+      </view>
+      <view wx:elif="{{orderItems.orderStatus == '03'}}" data-status="{{orderItems.orderStatus}}" class='order-status fr'>
+        订单状态： 课程已结束
+      </view>
+      <view wx:elif="{{orderItems.orderStatus == '04'}}" data-status="{{orderItems.orderStatus}}" class='order-status fr'>
+        订单状态： 退款申请中
+      </view>
+      <view wx:elif="{{orderItems.orderStatus == '05'}}" data-status="{{orderItems.orderStatus}}" class='order-status fr'>
+        订单状态： 退款已完成
+      </view>
+      <view wx:elif="{{orderItems.orderStatus == '06'}}" data-status="{{orderItems.orderStatus}}" class='order-status fr'>
+        订单状态： 申请暂停中
+      </view>
+      <view wx:elif="{{orderItems.orderStatus == '07'}}" class='order-status fr' data-status="{{orderItems.orderStatus}}">
+        订单状态： 课程暂停中
+      </view>
+      <view wx:elif="{{orderItems.orderStatus == '99'}}" class='order-status fr' data-status="{{orderItems.orderStatus}}">
+        订单状态：订单已取消
+      </view>
+    </view>
+    <view class='order-state clearfloat'>
+      <image class='order-userImg fl' src='{{orderItems.studentPhotoAddress }}'></image>
+      <view class='order-numbers fl'>
+        <view class='order-numbers-top'>
+          <text class='order-renshu' wx:if="{{orderItems.type==1}}">{{orderItems.itemName }} {{orderItems.maxMember }}人班</text>
+          <text class='order-renshu' wx:if="{{orderItems.type==2}}">{{orderItems.itemName }} 私教</text>
+          <text class='order-title'>{{orderItems.className}} </text>
+        </view>
+        <view class='order-numbers-bottom'>
+          <image class='order-name-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/population-blue.png'></image>
+          <text class='order-name-jiao iLblock'>{{orderItems.studentName }}</text>
+          <image wx:if="{{orderItems.gender==1 }}" class='order-man-img' src='{{imgUrl}}blackboy.png'></image>
+          <image wx:if="{{orderItems.gender==2 }}" class='order-man-img' src='{{imgUrl}}blackgirl.png'></image>
+          <image class='order-qishu-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/grade-blue.png'></image>
+          <text class='order-level-txt'>{{orderItems.itemName }}  L{{orderItems.itemGrade?orderItems.itemGrade:"1" }}</text>
+        </view>
+      </view>
+    </view>
+    <view class='order-item-keshi clearfloat'>
+      <view class='order-total-keshi fl'>
+        <text class='strong'>{{orderItems.courseCount==null?'未知':orderItems.courseCount}}</text>课时/{{orderItems.courseTime/10*60 }}分钟</view>
+      <view class='order-total-shenyu fr' wx:if="{{orderItems.payType==2}}">剩余课时:未知</view>       
+      <view class='order-total-shenyu fr' wx:else >剩余
+        <text class='strongs'>{{orderItems.spareTime }}</text>课时
+        <text class='yu-money'>（课程余额RMB {{orderItems.spareCost/100 }}）</text>
+      </view>
+    </view>
+  </view>
+  <view class='order-item-two clearfloat'>
+    <text class='down-order-date fl'>下单时间:{{orderItems.createTime }}</text>
+    <text wx:if="{{orderItems.payType == 0 && orderItems.payTime}}" class='down-order-date fr'>确认时间:{{orderItems.payTime }}</text>
+    <text wx:if="{{orderItems.payType == 1 && orderItems.payTime}}" class='down-order-date fr'>付款时间:{{orderItems.payTime }}</text>
+  </view>
+  <view class='order-item-three'>
+    <view class='there-text'>学员留言</view>
+    <view class='there-N'>{{orderItems.remarks? orderItems.remarks:'暂无' }}</view>
+  </view>
+ 
+  <view class='remarks'>
+    <view class='remarks-text'>订单备注</view>
+    <view class='remarks-N'>
+      <!-- <view class='remarks-NR'>{{orderItems.coachRemarks }}</view> -->
+      <input class='remarks-NR' value='{{orderItems.coachRemarks }}' disabled='{{marksOne}}' bindinput='orderBeiZhu'></input>
+      <image class='remarks-T' wx:if="{{!showSure}}" src='{{imgUrl}}coach/public/redact-button.png' bindtap='edtorRemarks'></image>
+      <image class='remarks-mark' wx:if="{{showSure}}" data-superMe="1" src='{{imgUrl}}coachMarksSure.png' bindtap='subContent'></image>
+    </view>
+  </view>
+  
+  <!-- <view class='order-item-four clearfloat'>
+    <view class='peixun-date fl'>培训时间</view>
+    <view class='peixun-time fl'>
+      <!-- <picker bindchange="bindPickerChange" wx:if="{{marksTwo}}" value="{{index}}" range="{{array}}" class='peixun-date-item fl'>{{array[index]}}</picker> -->
+      <!-- <view class='peixun-date-item fl' wx:for="{{orderItems.orderSectionList}}" wx:for-index="idx" wx:for-item="section">周{{section.weekDay==1?"一":section.weekDay==2?"二":section.weekDay==3?"三":section.weekDay==4?"四":section.weekDay==5?"五":section.weekDay==6?"六":"日"}}：{{section.dayTimeStart }} - {{section.dayTimeEnd }}</view> -->
+    <!-- </view> -->
+  
+    <!-- <image class='remarks-T' wx:if="{{orderItems.orderStatus=='02'}}" src='{{imgUrl}}coach/public/redact-button.png' bindtap='editorDate'></image> -->
+    <!-- <image class='remarks-mark' wx:if="{{showSure2 && orderItems.orderStatus=='02'}}" data-superMe="3" src='{{imgUrl}}coachMarksSure.png' bindtap='subDate'></image> -->
+  <!-- </view>  -->
+  <view wx:if="{{orderItems.type==2}}" class='order-item-six clearfloat'>
+    <view class='peixun-xmu fl'>私教方案</view>
+    <!-- <view class='peixun-xmu-items fl' wx:if="{{!marksThree}}">{{orderItems.personalPlan? orderItems.personalPlan:'暂无' }}</view> --> 
+    <!-- <input class='peixun-xmu-items' disabled='{{marksThree}}' value="{{orderItems.personalPlan && orderItems.personalPlan!='null'? orderItems.personalPlan:'' }}" bindinput='pushPrgrome'></input> -->
+    <textarea class='peixun-xmu-items' auto-focus="{{focus}}" disabled='{{marksThree}}' value="{{orderItems.personalPlan && orderItems.personalPlan!='null'? orderItems.personalPlan:'' }}" bindinput='pushPrgrome' bindfocus='toTop' bindblur='goDown' maxlength="400" adjust-position='true'></textarea>
+    <image class='redact-T' wx:if="{{!showSure3  && orderItems.orderStatus!='03' && orderItems.orderStatus!='99'}}" src='{{imgUrl}}coach/public/redact-button.png' bindtap='editorProgramme'></image>
+    <image class='remarks-mark' wx:if="{{showSure3  && orderItems.orderStatus!='03' && orderItems.orderStatus!='99'}}" data-superMe="2" src='{{imgUrl}}coachMarksSure.png' bindtap='subPrgrome'></image>
+  </view>
+  <view class='order-item-five clearfloat'>
+    <view class='peixun-xmu fl'>培训项目</view>
+    <view class='peixun-xmu-item fl'>
+      <view class='peixun-xmu-shuoming' wx:for="{{orderItems.orderArticleDetail }}" wx:key="{{index}}">{{item.detailName}}：{{item.detailContent}}
+      </view>
+    </view>
+  </view>
+  <view class='order-item-seven' wx:for="{{orderStates}}" wx:key="{{index}}" data-attendId="{{item.attendId }}">
+    <view class='zhuangtai-top clearfloat'>
+      <view class='zhuangtai-left fl'>
+        <text class='qiulei iLblock'>{{item.itemName }} {{item.attendPeriod }}期班</text>
+        <image src='{{imgUrl}}location-redmini.png' class='location-mini'></image>
+        <text class='location-sure'>{{item.homeName }}</text>
+        <image class='location-totals-img' src='{{imgUrl}}peponum.png'></image>
+        <text class='location-totals-num'>{{item.signUpMember }}人已报名</text>
+      </view>
+      <view wx:if="{{item.attendMemberStatus  == '04'}}" class='zhuangtai-right fr ok'>开课已报名 </view>
+      <view wx:elif="{{item.attendMemberStatus  == '05'}}" class='zhuangtai-right fr'>开课已结束 </view>
+    </view>
+    <view class='zhuangtai-bottom clearfloat'>
+      <view class='fl'>
+        <text class='fl-date iLblock'>开课时间</text>
+        <text class='fl-dates iLblock'>{{item.attendDate }} {{item.dayTimeStart }}-{{item.dayTimeEnd }}</text>
+      </view>
+      <view class='fr'>
+        <text class='fr-item iLblock'>1课时/{{item.courseTime/10}}h</text>
+        <text class='fr-rmb iLblock'>RMB</text>
+        <text class='fr-num iLblock'>{{item.courseCost/100}}</text>
+      </view>
+    </view>
+  </view>
+
+
+  <text class='footer-text'>————已全部显示————</text>
+  <view class='order-items clearfloat'>
+    <!-- <view class=' order-tuikuan fl' data-code='{{orderCode}}' wx:if="{{statusArr=='00'}}" bindtap='goSure'>{{best}}</view>
+    <view class=' order-tuikuan fl' data-code='{{orderCode}}' wx:if="{{statusArr=='01'}}" bindtap='goPay'>{{best}}</view>
+    <view class=' order-tuikuan fl' data-code='{{orderCode}}' wx:if="{{statusArr=='02'}}" bindtap='goStops'>{{best}}</view>
+    <view class=' order-tuikuan fl' data-code='{{orderCode}}' wx:if="{{statusArr=='04'}}" bindtap='refund'>{{best}}</view>
+    <view class=' order-tuikuan fl' data-code='{{orderCode}}' wx:if="{{statusArr=='03'||statusArr=='05'}}" bindtap='goCurriculum'>{{best}} </view>-->
+
+    <!--课程已结束.显示-评论课程-->
+    <view class='order-active order-tuikuan fl' wx:if="{{orderItems.orderStatus=='03' && !orderItems.commentId}}" data-code="{{orderItems.orderCode}}" bindtap='goCurriculum'>评论学员</view>
+    <!--已下单待教练确认-显示-确认已付款-->
+    <view class=' order-tuikuan fl' wx:elif="{{orderItems.orderStatus=='00'}}" bindtap='goSure'>确认已付款</view>
+    <!--已下单待学员付款.显示--取消订单-->
+    <view class=' order-tuikuan fl' wx:elif="{{orderItems.orderStatus=='01'}}" bindtap='cancelOrder'>取消订单</view>
+
+    <!--已付款，课程进行中：小班显示--修改剩余课时-->
+    <view class=' order-tuikuan fl' wx:elif="{{orderItems.orderStatus=='02' && orderItems.type=='2'}}" bindtap='refundFun'>修改剩余课时</view>
+    <!--已付款，课程进行中：大班--更多操作（暂停课程、修改剩余课时）-->
+    <view class=' order-tuikuan fl' wx:elif="{{orderItems.orderStatus=='02' && orderItems.type=='1'}}" bindtap='goStops'>更多操作</view>
+    <!--退款申请中显示--取消申请退款-->
+    <view class='order-tuikuan fl' wx:elif="{{orderItems.orderStatus=='04'}}" bindtap='cancelreFund'>学员申请退款</view>
+    <!--申请暂停中-->
+    <view class='order-tuikuan fl' wx:elif="{{orderItems.orderStatus=='06'}}" bindtap='cancelreStop'>学员申请暂停</view>
+    <!--暂停中-->
+    <view class='order-tuikuan fl' wx:elif="{{orderItems.orderStatus=='07'}}" bindtap='cancelreStart'>重启课程</view>
+
+
+    <view class='order-phones fr'>
+      <image bindtap='callPhone' class='order-phoneing' src='{{imgUrl}}coach/public/B2.png' data-phone="{{orderItems.studentPhone }}"></image>
+      <image bindtap='weiLiao' class='order-weiLiao' src='{{imgUrl}}coach/public/B3.png' data-photo="{{orderItems.studentPhotoAddress}}" data-nickname="{{orderItems.studentName}}" data-studentuserid="{{orderItems.studentUserId}}"></image>
+    </view>
+  </view>
+ </view> 
+<!--这是已付款，课程进行中：未使用课时且为大班弹框-->
+<view class='orderModal' wx:if="{{isDialogShow}}">
+  <view class='orderItems'>
+    <text class='stop' bindtap='stopCoase'>暂停课程</text>
+    <text class='refund' bindtap='refundFun'>修改剩余课时</text>
+    <text class='cancel' bindtap='cancels'>取消</text>
+  </view>
+</view>

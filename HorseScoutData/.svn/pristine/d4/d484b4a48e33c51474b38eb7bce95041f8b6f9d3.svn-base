@@ -1,0 +1,68 @@
+<!--pages/Patriarch/Register/Register.wxml-->
+<view class='Register'>
+  <view class='Register-background'>
+    <!-- <image class='Register-background-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/patriarch.png'></image> -->
+  </view>
+  <view class='Register-section'>
+    <view class='section-Head-Portraits'>
+      <image class='Head-Portraits-img' src='{{avatarUrl}}'></image>
+    </view>
+    <view class='Register-section-taber'>
+      <view class='Section-List'>
+        <view class='Section-List-headline'>
+          <view class='List-headline-left {{coursepersona}}' bindtap='Register' data-val='1'>注册账号</view>
+          <view class='List-headline-right {{coursepersonbnotice}}' bindtap='Register' data-val='2'>登录账号</view>
+        </view>
+        <view class='Register-List-Section-left' hidden='{{trainingcourse}}'>
+          <view class='Register-List-Section-one'>
+            <input class='List-Section-one-input {{NickName?"ok":""}}' maxlength="20" placeholder='用户昵称' placeholder-class='List-Section-one-input-cbcbcb' bindinput='inputNickName'></input>
+            <image wx:if="{{NickName}}" class='List-Section-one-img' src='{{imgUrl}}accomplish.png'></image>
+          </view>
+          <view class='Register-List-Section-one'>
+            <input class='List-Section-one-input {{phoneNo.length==11 ?"ok":""}}' maxlength="11" placeholder='登录手机' placeholder-class='List-Section-one-input-cbcbcb' type='number' bindinput='inputPhoneNo'></input>
+            <image wx:if="{{phoneNoIsOk}}" class='List-Section-one-img' src='{{imgUrl}}accomplish.png'></image>
+            <image wx:if="{{!phoneNoIsOk && phoneNo.length !== 0}}" class='List-Section-one-img' src='{{imgUrl}}Bug.png'></image>
+          </view>
+          <view class='Register-List-Section-two' wx:if="{{phoneNo.length==11}}">
+            <input class='List-Section-one-input-two {{code.length==6?"ok" : ""}}' maxlength="6" placeholder='验证码' placeholder-class='List-Section-one-input-cbcbcb' bindinput='inputCode' type='number'></input>
+            <view class='List-Section-one-text-two {{code.length==6?"ok" : ""}}' wx:if="{{showCode}}" style='text-align:center'>({{thisTime}}s)</view>
+            <view class='List-Section-one-text-two {{code.length==6?"ok" : ""}}' wx:if="{{!showCode}}" bindtap='sendCode'>发送验证码</view>
+            <image class='List-Section-one-img-two {{code.length==6?"opacity" : ""}}' src='{{imgUrl}}accomplish.png'></image>
+          </view>
+          <!--没有输入phone时-->
+          <view class='Register-List-Section-twos' wx:if="{{phoneNo.length!==11}}">
+            <input class='List-Section-one-input-twos' maxlength="6" placeholder='验证码' placeholder-class='List-Section-one-input-cbcbcb'></input>
+          </view>
+          <view class='Register-List-Section-one'>
+            <input class='List-Section-one-input {{pwd.length>5?"ok":""}}' maxlength="18" placeholder='登录密码' placeholder-class='List-Section-one-input-cbcbcb' password="true" bindinput='inputPwd'></input>
+            <image wx:if="{{pwd.length>5 && pwdIsOk}}" class='List-Section-one-img' src='{{imgUrl}}accomplish.png'></image>
+          </view>
+          <view class='Register-List-Section-one'>
+            <input class='List-Section-one-input {{pwdAging.length>5?"ok":""}}' maxlength="18" placeholder='二次输入登录密码' placeholder-class='List-Section-one-input-cbcbcb' password="true"  bindinput='inputPwdAging'></input>
+            <image wx:if="{{pwd.length>5 && pwdAgingIsOk}}" class='List-Section-one-img' src='{{imgUrl}}accomplish.png'></image>
+          </view>
+          <view class='Register-Submit-left'>
+            <view class='Register-Submit-button' bindtap='submitLogin'>提 交</view>
+          </view>
+        </view>
+        <view class='Register-List-Section-right' hidden='{{noticecoursetab}}'>
+          <view class='Register-List-Section-one'>
+            <input class='List-Section-one-input {{loginPhone.length==11? "ok" : ""}}' maxlength="11" value='{{loginPhone}}' placeholder='登录手机' placeholder-class='List-Section-one-input-cbcbcb' bindinput='loginPhone'></input>
+            <image wx:if="{{loginPhoneIsOk}}" class='List-Section-one-img' src='{{imgUrl}}accomplish.png'></image>
+            <image wx:if="{{!loginPhoneIsOk && loginPhone.length !== 0}}" class='List-Section-one-img' src='{{imgUrl}}Bug.png'></image>
+          </view>
+          <view class='Register-List-Section-one'>
+            <input class='List-Section-one-input {{loginPwd.length>5? "ok" : ""}}' maxlength="18" placeholder='登录密码' placeholder-class='List-Section-one-input-cbcbcb' password="true"  bindinput='loginPwd'></input>
+            <image wx:if="{{loginPwdIsOk}}" class='List-Section-one-img' src='{{imgUrl}}accomplish.png'></image>
+          </view>
+          <view class='Register-Submit-right'>
+            <view class='Register-button' bindtap='subLogin'>登 录</view>
+          </view>
+          <view class='Forget-Password' bindtap='ForgetPassword'>
+            <text class='Forget-Password-cbcb'>忘记密码?</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

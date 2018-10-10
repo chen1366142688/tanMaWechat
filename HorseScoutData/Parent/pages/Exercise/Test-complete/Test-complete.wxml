@@ -1,0 +1,46 @@
+<!--pages/Exercise/Test-complete/Test-complete.wxml-->
+<view class='Test-complete'>
+  <view class='Test-complete-header'>
+    <!-- <canvas canvas-id='scores' class='Test-scores'></canvas> -->
+    <view class='circle'>
+      <canvas canvas-id="circle" id='circle'></canvas>
+      <view class='score'>
+        <text class='finalScore'>{{finalScore}}</text>
+        <view class='score-fen'>分</view>
+      </view>
+    </view>
+    <view class='Test-scores-prompt-text'>恭喜！本项测试已完成 。</view>
+    <view class='Test-scores-Beat-number'>本次打败
+      <text class='Beat-number-blue'>{{defeatProportion}}%</text> 的同龄人</view>
+  </view>
+   
+    <!-- <view class='Test-complete-graph-header'>
+      <view class='Test-complete-graph-header-left'>人数
+        <text class='Test-complete-graph-header-left-blue'>(人)</text> </view>
+      <view class='Test-complete-graph-header-right'>0-100分</view>
+    </view> -->
+    <view class='graph-img'>
+      <ec-canvas id="mychart3" canvas-id="mychart3" ec="{{ peopleEc }}"></ec-canvas>
+    </view>
+    <view class='Test-complete-graph'>
+    <view class='Test-complete-graph-prompt-text-top'>您还有 {{remainNum}} 项测试未完成，完成后便可查看完整评估结果啦~~</view>
+    <view class='Test-complete-graph-button'>
+      <view class='Test-complete-graph-button-index' bindtap='returnhome'>回首页</view>
+      <view class='Test-complete-graph-button-other' wx:if="{{remainNum == 0}}" bindtap='testOthers'>测试其他项目</view>
+      <view class='Test-complete-graph-button-again' bindtap='testAgain'>再次测试本项</view>
+    </view>
+  </view>
+  <view class='Test-complete-result'>
+    <view class='Test-complete-result-headline'>XXX的本项历史测试结果</view>
+    <view class='Test-complete-graph-prompt-text-bottom'>您可在【我的】中查看所有历史测试记录。</view>
+    <view class='Test-complete-result-one' wx:for="{{historyLst}}" wx:key="{{index}}">
+      <view class='Test-complete-result-one-headline-left'>
+        <view class='Test-complete-result-one-headline-left-top'>测试成绩：</view>
+        <view class='Test-complete-result-one-headline-left-bottom'>测试时间：{{item.createTime}}</view>
+      </view>
+      <view class='Test-complete-result-one-section-right'><text class='right-text'>得分：</text>{{item.score}}</view>
+    </view>
+  </view>
+  <view wx:if="{{isMore}}" class='ismore'>没有更多了</view>
+  <view class='kong'></view>
+</view>

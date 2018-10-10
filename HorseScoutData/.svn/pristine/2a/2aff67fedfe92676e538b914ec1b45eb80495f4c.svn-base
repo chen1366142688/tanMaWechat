@@ -1,0 +1,25 @@
+<!--components/text-list/text-list.wxml-->
+<view class='test-list'>
+      <view class='test-list-header'>
+        <image class='test-list-header-img' src='{{paramsList.coverPhotoAddr}}'></image>
+        <view class='test-list-header-text'>
+          <view class='header-text-one'>{{paramsList.testName}}</view>
+          <view class='header-text-two'>适合年龄段
+            <text class='header-text-two-age'> {{paramsList.ageScope}}</text>
+          </view>
+          <view class='header-text-there'>已有
+            <text class='header-text-there-Number'>{{paramsList.participationCount}}</text> 完成测试</view>
+        </view>
+      </view>
+      <view class='test-list-main'>
+        <view class='test-list-main1'>测试目的：
+          <text class='main-text'>{{paramsList.testGoal}}</text>
+        </view>
+        <view class='test-list-main1'>测试原理：
+          <text class='main-text'>{{paramsList.theoryIntroduction}}</text>
+        </view>
+      </view>
+      <view class='test-list-button {{paramsList.haveTest == 0? "" : "hasTest"}}' bindtap='startTest'>{{paramsList.haveTest == 0? "开始" : "再次"}}测试本项</view>
+    </view>
+
+

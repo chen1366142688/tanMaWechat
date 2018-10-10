@@ -1,0 +1,207 @@
+// pages/My/alter-Iphone/alter-Iphone.js
+let utils = require("../../../utils/util.js");
+let http = utils.http;
+let that = this;
+const md5 = require('../../../utils/md5.js');
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    phone: '',
+    code: '',
+    pwd: '',
+    showCode: false,
+    showCodes: false,
+    thisTime: 60,
+  },
+  phoneNum(e) {
+    let value = e.detail.value;
+    var reg = /(^1[3|4|5|6|7|8|9]\d{9}$)|(^09\d{8}$)/;
+    if (reg.test(value)) {
+      this.setData({
+        showCode: true,
+        phone: value
+      })
+    }
+
+  },
+  phoneCode(e) {
+    let value = e.detail.value;
+    this.setData({
+      code: value
+    })
+  },
+  sendCode(e) {
+    let that = this;
+    let phoneNum = that.data.phone;
+    var reg = /(^1[3|4|5|6|7|8|9]\d{9}$)|(^09\d{8}$)/;
+    if (reg.test(phoneNum)) {
+      this.sendCoded(phoneNum);
+    } else {
+      wx.showToast({
+        title: '请输入正确的手机号码！',
+        icon: 'none'
+      })
+    }
+  },
+  phonePwd(e) {
+    let value = e.detail.value;
+    this.setData({
+      pwd: value
+    })
+  },
+  submit(e) {
+    const that = this;
+    var reg = /(^1[3|4|5|6|7|8|9]\d{9}$)|(^09\d{8}$)/;
+    if (!reg.test(that.data.phone)) {
+      wx.showToast({
+        title: '请输入正确的手机号码！',
+        icon: 'none'
+      })
+      return;
+    }
+    if (that.data.code.length !== 6) {
+      wx.showToast({
+        title: '请输入正确的验证码',
+        icon: 'none'
+      })
+      return;
+    }
+    if (!this.CheckPassWord(that.data.pwd)) {
+      wx.showToast({
+        title: '密码必须是6-18位的数字和字母组合',
+        icon: 'none'
+      })
+      return;
+    }
+    let phoneObj = {
+      code : this.data.code,
+      passWord: md5.hex_md5(this.data.pwd),
+      phoneNum: this.data.phone,
+      teacherId : wx.getStorageSync("userInfo").teacherId
+    }
+    http("/v1/auth/update/phone",phoneObj,"POST",newPhone,that)
+  },
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function(options) {
+    that = this;
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function() {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function() {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function() {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function() {
+
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function() {
+
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function() {
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function() {
+
+  },
+  // 接口调成功函数
+  sendCoded: function(phone) {
+    var data = {
+      'phoneNum': phone
+    };
+    //调接口 第一个参数 路径，第二个传的参数，第三个请求方式，第四个成功函数
+    // http("/v1/auth/sendSmsForUpdatePhone", data, "GET", this.sendclk);
+    // 第二种成功函数的写法
+    http("/v1/auth/sendSmsForUpdatePhone", data, "GET",(that,res)=>{
+      that.setData({
+        showCodes: true,
+        showCode: false
+      }, () => {
+        that.changeThisTime()
+      });
+    },that);
+  },
+  // 验证码倒计时
+  changeThisTime: function() {
+    var that = this;
+    var time = that.data.thisTime;
+    time--;
+    if (time >= 0) {
+      that.setData({
+        thisTime: time,
+      });
+      setTimeout(() => {
+        this.changeThisTime()
+      }, 1000)
+    } else {
+      that.setData({
+        showCodes: false,
+        showCode: true,
+        thisTime: 60
+      });
+    }
+
+  },
+  //验证密码字母加数字 正则
+  CheckPassWord: function(password) { //必须为字母加数字且长度不小于6位
+    var str = password;
+    if (str == null || str.length < 6) {
+      return false;
+    }
+    var reg1 = new RegExp(/^[0-9A-Za-z]+$/);
+    if (!reg1.test(str)) {
+      return false;
+    }
+    var reg = new RegExp(/[A-Za-z].*[0-9]|[0-9].*[A-Za-z]/);
+    if (reg.test(str)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+});
+// 新手机号码提交回调
+function newPhone(that,res){
+  let user = wx.getStorageSync("userInfo")
+  user.phoneNum = that.data.phone
+  wx.setStorageSync("userInfo", user)
+  wx.switchTab({
+    url: '../../myInfo/myInfo',
+  })
+}

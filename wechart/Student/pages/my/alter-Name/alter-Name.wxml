@@ -1,0 +1,5 @@
+<!--pages/my/alter-Name/alter-Name.wxml-->
+<view class='alter-Name'>
+  <input class="input" maxlength="40" placeholder='{{holder}}' maxlength='6' name="userName" bindinput="userName"  value="{{name && name!='null'?name:''}}"/>
+</view>
+<button type='default' class='settle-accounts' bindtap='subName'>保  存</button>

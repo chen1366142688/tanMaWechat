@@ -1,0 +1,155 @@
+body{
+	margin: 0;
+	height: 100vh;
+	padding: 0;
+	background-image: url(../images/count-down.png);
+	background-size: 100% 100%;
+}
+
+
+@media only screen and (min-width: 992px) {
+   body{
+	margin: 0;
+	height: 100vh;
+	padding: 0;
+	background-image: url(../images/count-down.png);
+	background-size: 100%;
+}
+}
+} 
+
+@media only screen and (min-width: 1200px) {
+    body{
+	margin: 0;
+	height: 100vh;
+	padding: 0;
+	background-image: url(../images/count-down.png);
+	background-size: 100%;
+}
+
+}
+}
+
+
+.count-down{
+	width: 100%;
+	height: 1742px;
+	margin: 0;
+	padding: 0;
+}
+
+
+.headline{
+	min-width: 100%;
+	height: 76px;
+	margin: 0 auto;
+	padding-top: 249px;
+	display: flex;
+}
+
+.headline-img{
+	display: inline-block;
+    height: auto;
+    margin: 0 auto;
+    width: 818px;
+}
+
+.headline-T{
+	width: 100%;
+	height: 50px;
+	display: flex;
+	padding-top: 58px;
+}
+
+.header-text{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	font-size: 42px;
+	color: #000;
+	text-align: center;
+}
+
+/*.container{
+	width: 100%;
+	height: 589px;
+}*/
+.container {
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    padding-top: 150px;
+    width: 100%;
+    height: 372px;
+}
+
+h1 {
+    font-family: "Lato", sans-serif;
+    text-align: center;
+    margin-top: 2em;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: #F6F4F3;
+        }
+        
+        #timer {
+            color: #fff;
+            text-align: center;
+            text-transform: uppercase;
+            font-family: "Lato", sans-serif;
+            font-size: 30px;
+            letter-spacing: 15px;
+            height: 277px;
+            line-height: 240px;
+            vertical-align: middle;
+        }
+        
+        .days,
+        .hours,
+        .minutes,
+        .seconds {
+            display: inline-block;
+            width: 283px;
+            height: 277px;
+            margin: 0;
+	padding: 0;
+            border-radius: 5px;
+        }
+        
+        .days {
+            background-image: url(../images/time-background.png);
+            background-size: 100% 100%;
+        }
+        
+        .hours {
+            background-image: url(../images/shi-background.png) ;
+            background-size: 100% 100%;
+            color: #fff;
+        }
+        
+        
+        .numbers {
+            font-family: "Montserrat", sans-serif;
+            color: #fff;
+            font-size: 5em;
+        }
+
+
+.hint{
+	width: 840px;
+	height: 465px;
+	margin: 0;
+	padding: 0;
+	margin: 0 auto;
+	border: 3px dashed #fff;
+	border-radius: 45px;
+}
+
+.hint-text{
+	font-size: 39px;
+	color: #fff;
+	margin: 0;
+	padding: 0;
+	padding: 25px;
+}

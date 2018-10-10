@@ -1,0 +1,25 @@
+<view class='c-topimg'>
+  <view class='c-news'>
+    <image class='userImg' src='{{url}}vanen-img.png'></image>
+    <!-- <view class='c-select clearfloat'> -->
+    <picker class='c-select' bindchange="bindPickerChange" data-val="" value="{{index}}" range="{{array}}">
+    <image class='c-select-item fl' src='{{url}}select-vanen.png'></image>
+    <text class='c-seletxt fl'>{{array[index]}}</text>
+      <image class="c-down" src='{{url}}c-down.png'></image>
+  </picker>
+    <!-- </view> -->
+    <view class='c-user clearfloat'>
+      <image class='c-select-item fl' src='{{url}}student.png'></image>
+      <input class='c-input-name fl' value='' bindblur='name' placeholder-class='c-input-plac' maxlength='15' placeholder='输入昵称'></input>
+    </view>
+    <view class='c-phone clearfloat'>
+       <image class='c-select-items fl' src='{{url}}c-logiin-phonoe.png'></image>
+       <input class='c-input-phone fl' bindinput='shuRu' type='number' placeholder-class='c-input-plac' maxlength='11' placeholder='登录手机'></input>
+       <input class='c-input-code fl' bindinput='shuCode' type='number' placeholder-class='c-input-placcode' maxlength='6' placeholder='验证码'></input>
+       <image class='c-send-code' bindtap='sendCode' src='{{url}}send.png'></image>
+    </view>
+  </view>
+</view>
+<text class='c-shuoming'>*注意：学院和教练请勿注册本账号.</text>
+<image class='vanenReg' bindtap='submit' src='{{url}}vanen-register.png'></image>
+

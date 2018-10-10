@@ -1,0 +1,9 @@
+{
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#4DD0C8",
+  "navigationBarTextStyle": "#fff",
+  "navigationBarTitleText": "测试完成",
+  "usingComponents": {
+    "ec-canvas": "../../../ec-canvas/ec-canvas"
+  }
+}

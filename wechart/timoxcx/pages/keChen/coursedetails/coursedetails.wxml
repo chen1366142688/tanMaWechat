@@ -1,0 +1,258 @@
+<view class='van-banner'>
+  <view class='van-banner-item'>
+
+    <view class='van-hot'>
+      <image class='hot-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/van-hot.png'></image>
+      <text class='van-hot-num'>45643</text>
+    </view>
+
+    <view class='van-text'>
+      <image class='c-grade-a' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/cou-grade.png'></image>
+      <text class='van-name'>L3、L4、L5</text>
+    </view>
+  </view>
+</view>
+<view class='cor-collect-shop-foot'>
+  <view class='van-right-txtzhac'>
+    <view class='van-right-txtzhad'>
+      <view class='c-cou-per-a'>
+        <text class='c-item-info-txt-persona'>羽毛球 12人班</text>
+        <text class='van-right-txtzhaa'>*本课程支持1课时免费体验，详情请咨询教练。</text>
+      </view>
+      <view class='van-titel-txtzha'>
+        <text class='van-right-txtzhab'>张翔青少年羽毛球集训营/进阶班/周末开课，不含寒暑假，长期开课</text>
+      </view>
+    </view>
+  </view>
+  <view class='c-course-int-titlec van-right-txtzhac'>
+    <view class='c-course-int-titlea'>课程简介</view>
+    <view class='c-course-int-titleb'>
+      近几年来，随着国家经济体制的改革、产业的调整，我国高校毕业生就业形势日趋严峻，就业压力越业越大，特别是体育教育专业毕业生尤其严重，供大于求的现状越来越突出。 一、体育教育专业毕业生就业难的原因体育教育专业毕业生存量增加，社会需求趋向饱和。随着我国高校招生规模的不断扩大，报考体育专业的学生越来越多，大学生的存量迅速扩大，体育教育专业毕业生的数量正在逐年递增。而现阶段，社会对体育教育人才的需求没有明显增加，甚至出现社会对体育教育专业毕业生的需求逐渐趋向饱和，造成毕业生的就业压力越来越大，导致每年都有相当多的体育教育专业毕业生没有及时就业。
+    </view>
+  </view>
+
+  <view class='van-right-txtzhac'>
+    <view class='c-course-int-titlec'>
+      <view class='c-cou-per-a'>
+        <view class='c-course-int-titlea'>课时与费用</view>
+        <view class='c-cou-havea c-cou-per-b c-cou-havee'>
+          <view>已开课：23期</view>
+          <view>
+            <image class='c-cou-haveb' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/more.png'></image>
+          </view>
+        </view>
+      </view>
+      <view class='c-cou-havec clearfix'>
+        <view class='cou-timea'>
+          <text>课时：10课时/1.5h</text>
+        </view>
+        <view class='cou-timeb'>
+          <text>费用：500元 / 课时</text>
+        </view>
+        <view class='c-cou-havef'></view>
+      </view>
+    </view>
+  </view>
+  <!--训练场馆-->
+  <view class='van-right-txtzhac'>
+    <view class='c-course-int-titlec'>
+      <view class='c-cou-per-a'>
+        <view class='c-course-int-titlea'>训练场馆</view>
+        <view class='c-cou-havea c-cou-per-b c-cou-havee cou-timec'>
+          <view class='cou-timee'>
+            <view class='cou-timef'>查看场馆详情</view>
+            <view class='cou-timef'>
+              <image class='c-cou-haveb' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/more.png'></image>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class='c-cou-havec clearfix'>
+        <view class='cou-timea'>
+          <text>成都体育中心：成都市人民中路一段十一号</text>
+        </view>
+        <view class='c-cou-havef'></view>
+      </view>
+      <view class='scroolBox'>
+        <scroll-view class='intro-scroll' scroll-x='true' scroll-with-animation='true'>
+          <image class='intro-scrollImg' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/cou-pephospitalb.jpg'></image>
+          <image class='intro-scrollImg' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/cou-pephospitalb.jpg'></image>
+          <image class='intro-scrollImg' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/cou-pephospitalb.jpg'></image>
+        </scroll-view>
+      </view>
+    </view>
+  </view>
+  <view class='van-right-txtzhac'>
+    <view class='c-course-int-titlec'>
+      <view class='c-course-int-titlea cou-timeg'>培训项目</view>
+      <view class='c-cou-havec clearfix'>
+        <view class='cou-timea'>
+          <text>项目1：项目1说明说明说明说明说明说明说明 </text>
+        </view>
+        <view class='cou-timea'>
+          <text>项目2：项目2说明说明说明说明说明说明说明 </text>
+        </view>
+        <view class='c-cou-havef'></view>
+      </view>
+    </view>
+  </view>
+  <!--培训时间-->
+  <view class='van-right-txtzhac'>
+    <view class='c-course-int-titlec'>
+      <view style='display:flex;aligin:center;'>
+        <view class='c-course-int-titlea cou-timeg'>培训时间</view>
+        <view class='c-cou-havea c-cou-per-b c-cou-havee cou-timec'>
+          <view class='cou-timee'>
+            <view class='cou-timef'>查看接送详情</view>
+            <view class='cou-timef'>
+              <image class='c-cou-haveb' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/more.png'></image>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class='c-cou-havec clearfix'>
+        <view>
+          <text class='cou-sixa textOver'>周六：14:00 - 17:00</text>
+          <view class='fr'>还可报
+            <text class='cou-timei'>2</text>人 / 总
+            <text class='cou-timei'>12</text>人</view>
+        </view>
+        <view>
+          <text class='cou-sixa textOver'>周六：14:00 - 17:00</text>
+          <view class='fr'>还可报
+            <text class='cou-timei'>2</text>人 / 总
+            <text class='cou-timei'>12</text>人</view>
+        </view>
+        <view>
+          <text class='cou-sixa textOver'>周六：14:00 - 17:00</text>
+          <view class='fr'>
+            <text class='cou-timei'>已报满</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='van-right-txtzhac'>
+    <view class='c-course-int-titlec'>
+      <view class='c-cou-per-a'>
+        <view class='c-course-int-titlea'>教练简介</view>
+        <view class='c-cou-havea c-cou-per-b c-cou-havee cou-timec'>
+          <view class='cou-timee'>
+            <view class='cou-timef'>查看详细资料</view>
+            <view class='cou-timef'>
+              <image class='c-cou-haveb' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/more.png'></image>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class='c-cou-havec clearfloat'>
+        <view class='cou-introduce-topica'>
+          <view class='cou-sixb'>
+            <image class='cou-sixc' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/cou-sixauserImg.png'></image>
+          </view>
+          <view class='cou-introduce-topicf'>
+            <image class='cou-time-authenticated' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/authenticated.png'></image>
+          </view>
+          <!--已认证 -->
+        </view>
+        <view class='clearfloat cou-introduce-topicb'>
+          <view class='cou-timea cou-time-authenticateda'>
+            <text class='cou-time-authenticatedb'>助教：</text>
+            <text class='cou-introduce-topicg'>李华</text>
+            <text class='cou-introduce-topicg'>李华</text>
+            <view class='cou-introduce-contenta'>
+              随着我国高校招生规模的不断扩大，报考体育专业的学生越来越多，大学生的存量迅速扩大，体育教育专业毕业生的数量正在逐年递增。而现阶段，社会对体育教育人才的需求没有明显增加，甚至出现社会对体育教育专业毕业生的需求逐渐趋向饱和，造成毕业生的就业压力越来越大。
+            </view>
+          </view>
+          <view class='cou-introduce-topicc'>
+            <image class='hot-img cou-introduce-topicd' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/van-hot.png'></image>
+            <text class='van-hot-num cou-introduce-topicd'>45643</text>
+          </view>
+        </view>
+        <view class='cou-introduce-topice'></view>
+      </view>
+    </view>
+  </view>
+  <!--已报名学员-->
+  <view class='van-right-txtzhac'>
+    <view class='c-course-int-titlec'>
+      <view class='c-course-int-titlea cou-timeg'>已报名学员</view>
+      <view class='fenBox c-cou-havec'>
+        <view class='fenItem'>
+          <image class='itemImg' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/authenticatedfist.png'></image>
+        </view>
+        <view class='fenItem'>
+          <image class='itemImg' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/authenticatedfist.png'></image>
+        </view>
+        <view class='fenItem'>
+          <image class='itemImg' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/authenticatedfist.png'></image>
+        </view>
+        <view class='fenItem'>
+          <image class='itemImg' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/authenticatedfist.png'></image>
+        </view>
+        <view class='fenItem'>
+          <image class='itemImg' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/authenticatedfist.png'></image>
+        </view>
+        <view class='fenItem'>
+          <image class='itemImg' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/authenticatedfist.png'></image>
+        </view>
+        <view class='fenItem'>
+          <image class='itemImg' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/authenticatedfist.png'></image>
+        </view>
+        <view class='fenItem'>
+          <image class='itemImg' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/authenticatedfist.png'></image>
+        </view>
+        <view class='fenItem'>
+          <image class='itemImg' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/authenticatedfist.png'></image>
+        </view>
+        <view class='fenItem'>
+          <image class='itemImg' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/authenticatedfist.png'></image>
+        </view>
+        <view class='fenItem'>
+          <image class='itemImg' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/authenticatedfist.png'></image>
+        </view>
+        <view class='fenItem'>
+          <view class='authenticatedfistb-fist'>345</view>
+        </view>
+      </view>
+
+    </view>
+  </view>
+  <text class='van-over'>已经到底了</text>
+
+</view>
+<!--新的独立-->
+<view class='cor-bara cor-css-aska'>
+  <view class='cor-bar-cssa cor-css-askb'>
+    <view class='cor-css-askc'>
+      <view class='cor-consulta'></view>
+      <view class='cor-css-askd'>咨询教练</view>
+    </view>
+  </view>
+
+  <!--留言咨询 电话咨询-->
+  <view class='cor-bar-cssa cor-css-askb'>
+    <view class='cor-css-askc'>
+      <view class='cor-shopcara'></view>
+      <view class='cor-css-askd'>购买课程</view>
+    </view>
+  </view>
+  <view class='cor-bar-cssa cor-collect-shope'>
+    <view class='cor-collect-shopf'>
+      <view class='cor-collect-shopb'>
+        <view class='cor-collect'></view>
+      </view>
+      <view class='cor-collect-shopa cor-collect-shopc'>收藏</view>
+    </view>
+  </view>
+
+  <view class='cor-bar-cssa cor-collect-shope'>
+    <view class='cor-collect-shopf'>
+      <view class='cor-collect-shopb'>
+        <view class='cor-share'></view>
+      </view>
+      <view class='cor-collect-shopa cor-collect-shopd'>分享课程</view>
+    </view>
+  </view>
+</view>

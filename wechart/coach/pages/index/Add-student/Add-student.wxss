@@ -1,0 +1,350 @@
+/* pages/index/Add-student/Add-student.wxss */
+
+.Add-student {
+  width: 750rpx;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.Add-student-headline {
+  width: 100%;
+  height: 88rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ececec;
+}
+
+.headline-search {
+  width: 702rpx;
+  height: 60rpx;
+  background: rgba(255, 255, 255, 1);
+  border: 1rpx solid rgba(0, 117, 135, 1);
+  border-radius: 30rpx;
+  font-size: 30rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(203, 203, 203, 1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 29rpx;
+  box-sizing: border-box;
+}
+
+.search-input {
+  width: 652rpx;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.caoch-suo {
+  width: 100%;
+  font-size: 30rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: RGBA(51, 51, 51, 1)
+}
+
+.coach-s {
+  font-size: 30rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: #cbcbcb;
+}
+
+.search-Click {
+  width: 50rpx;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.search-img {
+  width: 24rpx;
+  height: 24rpx;
+}
+
+/* 学员列表 */
+
+.Add-student-section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section-one {
+  width: 100%;
+  height: 120rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 23rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-bottom: 1rpx solid #ececec;
+}
+
+.section-one-name {
+  max-width: 164rpx;
+  font-size: 28rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(51, 51, 51, 1);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.section-one-iPhone {
+  width: 200rpx;
+  font-size: 28rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(51, 51, 51, 1);
+}
+
+.section-one-add {
+  width: 100rpx;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.section-one-add-img {
+  width: 60rpx;
+  height: 60rpx;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 30rpx;
+  box-shadow: 0rpx 2rpx 6rpx 0rpx rgba(0, 182, 214, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(203, 203, 203, 1);
+}
+
+.Add-img {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.section-one-add-text {
+  min-width: 60rpx;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(203, 203, 203, 1);
+}
+
+/* 自定义添加按钮 */
+
+.Add-section-footer {
+  width: 750rpx;
+  height: 88rpx;
+  background: rgba(0, 117, 135, 1);
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-footer-img {
+  width: 30rpx;
+  height: 30rpx;
+  margin-top: 3rpx;
+}
+
+.section-footer-text {
+  font-size: 30rpx;
+  font-family: PingFang-SC-Bold;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 1);
+  padding-left: 14rpx;
+}
+
+/* 自定义添加模态框 */
+
+.footer-Add-model {
+  width: 100%;
+  height: 100vh;
+  background: rgba(41, 38, 39, 0.3);
+  z-index: 20;
+  /* display: none; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.model-section {
+  position: absolute;
+  top: 0;
+  z-index: 9;
+  width: 100%;
+  height: 570rpx;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* padding: 90rpx 75rpx 0 75rpx;
+  box-sizing: border-box; */
+}
+
+.model-section-Name {
+  width: 599rpx;
+  height: 90rpx;
+  background: rgba(255, 255, 255, 1);
+  border: 1rpx solid rgba(0, 182, 214, 1);
+  border-radius: 4rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 39rpx;
+  margin-top: 90rpx;
+  padding: 0 28rpx;
+  box-sizing: border-box;
+}
+
+.model-section-Name-input {
+  width: 100%;
+  font-size: 26rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(0, 182, 214, 1);
+}
+
+.model-section-iPhone {
+  width: 599rpx;
+  height: 90rpx;
+  background: rgba(255, 255, 255, 1);
+  border: 1rpx solid rgba(0, 182, 214, 1);
+  border-radius: 4rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20rpx;
+  padding: 0 28rpx;
+  box-sizing: border-box;
+}
+
+.model-section-iPhone-input {
+  width: 100%;
+  font-size: 26rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(0, 182, 214, 1);
+}
+
+.alt {
+  width: 600rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(153, 153, 153, 1);
+}
+
+.submit {
+  width: 750rpx;
+  height: 88rpx;
+  background: rgba(0, 117, 135, 1);
+  font-size: 30rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 130rpx;
+}
+
+/* 添加学员按钮模态框 */
+
+.footer-Add-student {
+  width: 100%;
+  height: 100vh;
+  background: rgba(41, 38, 39, 0.3);
+  z-index: 20;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.student-model {
+  width: 100%;
+  height: 570rpx;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.student-model-text {
+  width: 100%;
+  height: 482rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(51, 51, 51, 1);
+}
+
+.student-model-button {
+  width: 100%;
+  height: 88rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.model-button-cancel {
+  width: 100%;
+  height: 88rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(244, 244, 244, 1);
+  font-size: 30rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(0, 117, 135, 1);
+}
+
+.model-button-confirm {
+  width: 100%;
+  height: 88rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 117, 135, 1);
+  font-size: 30rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+}
+.mockshade{
+  height: 100%;
+  width: 100%;
+}

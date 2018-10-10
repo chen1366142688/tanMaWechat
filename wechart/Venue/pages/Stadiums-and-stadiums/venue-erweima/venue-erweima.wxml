@@ -1,0 +1,16 @@
+
+<!--  我的二维码 跳转H5 场馆 -->
+<web-view  src="{{urlappxcx}}/QuickMark.html?type=02&homeId={{homeId}}"></web-view>
+
+
+
+
+
+
+
+
+
+ <!-- <view class='c-erweiBackimg'>
+  <image class='erma' src='../../../image/imgs/erweima.png'></image>
+</view>
+<text class='vunName'>场馆名称鼎城明国际中西不是看见的必胜客</text>  -->

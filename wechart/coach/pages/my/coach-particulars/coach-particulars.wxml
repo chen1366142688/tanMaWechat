@@ -1,0 +1,122 @@
+<!--pages/my/coach-particulars/coach-particulars.wxml-->
+<view class='Subordinate-coach'>
+
+  <!--基本简介  -->
+  <view class='coach-Single'>
+    <view class='Single-header'>
+      <view class='coach-jiao-one'>
+        <image class='jiao-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/location7.png'></image>
+        <text class='jiao-text'>{{coach.provinceName}}—{{coach.cityName}}</text>
+      </view>
+      <view class='coach-jiao-two'>
+        <view class="coach-jiao-one-item">
+          <image class='qiu-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/popularity1.png'></image>
+          <text class='qiu-text'>{{coach.popularity?coach.popularity:0 }}</text>
+        </view>
+      </view>
+    </view>
+    <view class='Single-section'>
+      <image class='Head-Portraits' src='{{coach.avatarUrl}}'></image>
+      <view class='section-center'>
+        <view class='section-center-one'>
+          <view class='section-center-one-left'>
+            <view class='one-left-name'>{{coach.nickName}}</view>
+            <image class='one-left-gender' wx:if="{{coach.gender==1}}" src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/man-blue.png'></image>
+            <image class='one-left-gender' wx:if="{{coach.gender==2}}" src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/woman-blue.png'></image>
+            <view class='one-left-attestation'>{{coach.authStatus == 1 ? "已认证" : "未认证"}}</view>
+          </view>
+        </view>
+        <view class='section-center-two'>
+          <view class='section-center-two-right'>
+            <image class='two-right-gender' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/class-blue.png'></image>
+            <view class='two-right-name' wx:if="{{coach.athleteName&&coach.coachGradeName}}">{{coach.athleteName}} | {{coach.coachGradeName}}</view>
+            <view class='two-right-name' wx:elif="{{coach.athleteName}}">{{coach.athleteName}} | {{coach.coachGradeName?coach.coachGradeName : ''}}</view>
+            <view class='two-right-name' wx:elif="{{coach.coachGradeName}}">{{coach.athleteName?coach.athleteName : ''}} | {{coach.coachGradeName}}</view>
+            <view class='two-right-name' wx:else>暂无</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='Single-footer'>
+      <view class='training-programs'>
+        训练项目：
+        <text wx:for="{{coach.itemNameList}}" wx:key="uqiue" wx:for-item="itenSide"> {{itenSide.itemName}}</text>
+      </view>
+      <!--<view class='accept-class'>接受学员：L3、L4、L5</view>没有这个字段-->
+    </view>
+  </view>
+
+  <!-- TA的权限（多选） -->
+
+  <form class='permission' wx:if="{{Untie}}">
+    <checkbox-group>
+      <view class='permission-headline bmwH'>TA的权限(多选)</view>
+      <view class='permission-section bmwH' wx:for="{{permissionsList}}" wx:key="{{index}}" bindtap="checkChange" data-code="{{item.permissionsCode}}" data-checked="{{item.checked}}">
+        <text class='checkted'>{{item.permissionsName}}</text>
+        <checkbox style="transform:scale(.8)" class='check' value="{{item.permissionsCode}}" checked="{{item.checked}}" />
+      </view>
+    </checkbox-group>
+  </form>
+
+  <!--ta的课程  -->
+
+  <view class='curriculum'>
+    <view class='curriculum-headline'>TA的课程</view>
+    <view class='curiculum-one' wx:for="{{coachUserList}}" wx:key="classId" wx:for-item="forCoach">
+      <view class='one-section'>
+        <view class='curiculum-one-header'>
+          <view class='header-headline'>{{forCoach.itemName }} {{forCoach.maxMember }}人班</view>
+          <view class='header-section'>{{forCoach.className}}</view>
+        </view>
+        <view class='curriculum-section'>
+          <view class='section-type'>
+            <image class='van-timesa-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/studentNewImg/c12.png'></image>
+            <text class='van-terms-class-d'>{{forCoach.lastAttendPeriod?forCoach.lastAttendPeriod:0}}节</text>
+            <image class='van-timesb-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/studentNewImg/c14.png'></image>
+            <text class='van-terms-class-d'>{{forCoach.signUpMember }}人</text>
+            <image class='van-timesa-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/student/grade.png'></image>
+            <text class="van-terms-class-d">{{forCoach.itemStudentGrade}}</text>
+            <image class='van-left-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/studentNewImg/c13.png'></image>
+            <text class='van-terms-class-d'>{{forCoach.popularity?forCoach.popularity:0 }}</text>
+          </view>
+          <view class='section-money'>课时费：{{forCoach.courseCostTotal/100 }}元</view>
+        </view>
+      </view>
+      <view class='two-section'>
+        <button class='compile-button' bindtap='edit' data-classid="{{forCoach.classId}}">编辑课程</button>
+        <button class='history-button' bindtap='openHistory' data-classid="{{forCoach.classId}}" data-id="history">开课历史</button>
+      </view>
+    </view>
+    <!-- <view class='curiculum-one' >
+      <view class='one-section'>
+        <view class='curiculum-one-header'>
+          <view class='header-headline'>羽毛球 12人班</view>
+          <view class='header-section'>羽毛球大班课程标题羽毛球大班课程标题羽毛球...</view>
+        </view>
+        <view class='curriculum-section'>
+          <view class='section-type'>
+            <image class='van-timesa-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/studentNewImg/c12.png'></image>
+            <text class='van-terms-class-d'>234节</text>
+            <image class='van-timesb-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/studentNewImg/c14.png'></image>
+            <text class='van-terms-class-d'>23人</text>
+            <image class='van-timesa-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/student/grade.png'></image>
+            <text class="van-terms-class-d">L1 L2 L3</text>
+            <image class='van-left-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/studentNewImg/c13.png'></image>
+            <text class='van-terms-class-d'>23</text>
+          </view>
+          <view class='section-money'>课时费：500元</view>
+        </view>
+      </view>
+      <view class='two-section'>
+        <button class='compile-button'>编辑开课</button>
+        <button class='history-button'>开课历史</button>        
+      </view>
+    </view> -->
+  </view>
+
+  <!-- 解绑该教练  -->
+  <view class='outline-border'>
+    <view class='relieve' bindtap='Untie' wx:if="{{Untie}}">解绑当前教练</view>
+  </view>
+
+</view>

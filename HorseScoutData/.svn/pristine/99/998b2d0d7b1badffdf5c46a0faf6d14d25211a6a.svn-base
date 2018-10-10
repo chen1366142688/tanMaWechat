@@ -1,0 +1,173 @@
+/* pages/My/Personal-Information/Personal-Information.wxss */
+
+.Personal-Information{
+  width: 750rpx;
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Personal-Information-head-portrait{
+  width: 100%;
+  height: 270rpx;
+  line-height: 270rpx;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.head-portrait{
+  width: 90rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  vertical-align: middle;
+  border-radius: 45rpx;
+}
+
+.Alter-head-portrait{
+  width: 160rpx;
+  height: 58rpx;
+  border:1rpx solid #4DD0C8;
+  line-height: 58rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #4DD0C8;
+  background-color: #fff;
+  border-radius: 30rpx;
+  margin-top: 40rpx;
+}
+
+.Personal-Information-section{
+  width: 750rpx;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Personal-Information-section-Name{
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx;
+  padding: 0 24rpx;
+  box-sizing: border-box;
+  vertical-align: middle;
+  border-top: 1rpx solid #e4e4e4;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Personal-Information-section-Name-left{
+  width: 25%;
+  height: 90rpx;
+  line-height: 90rpx;
+  vertical-align: middle;
+  font-size: 26rpx;
+  color: #171717;
+  text-align: left;
+}
+
+.Personal-Information-section-Name-right{
+  width: 75%;
+  height: 90rpx;
+  line-height: 90rpx;
+  vertical-align: middle;
+  font-size: 26rpx;
+  color: #999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-Name-right{
+  width: 92%;
+  height: 90rpx;
+  line-height: 90rpx;
+  vertical-align: middle;
+  text-align: right;
+  font-size: 26rpx;
+  color: #999;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.section-Name-img{
+  width: 24rpx;
+  height: 24rpx;
+  line-height: 24rpx;
+  vertical-align: middle;
+  margin-top: 2rpx;
+}
+
+.Personal-Information-section-Name-right-two{
+  width: 75%;
+  height: 90rpx;
+  line-height: 90rpx;
+  vertical-align: middle;
+  font-size: 26rpx;
+  color: #999;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.Name-right-one{
+  height: 90rpx;
+  line-height: 90rpx;
+  vertical-align: middle;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.Name-right-two{
+  height: 90rpx;
+  line-height: 90rpx;
+  vertical-align: middle;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: 75rpx;
+}
+
+.section-Name-img-two{
+  width: 24rpx;
+  height: 24rpx;
+  line-height: 24rpx;
+  vertical-align: middle;
+  margin-top: 2rpx;
+  margin-left: 10rpx;
+}
+
+
+.Bind-Account{
+  width: 100%;
+  height: 102rpx;
+  line-height: 102rpx;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 24rpx;
+  color: #171717;
+}
+
+.log-out{
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 26rpx;
+  color: #4DD0C8;
+  background-color: #fff;
+  margin-top: 40rpx;
+}

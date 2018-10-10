@@ -1,0 +1,16 @@
+/* pages/my/alter-Name/alter-Name.wxss */
+
+.alter-Name{
+  width: 750rpx;
+  height: 88rpx;
+  margin-top: 20rpx;
+  background-color: #fff;
+}
+
+.input{
+  width: 730rpx;
+  height: 88rpx;
+  color: #333;
+  font-size: 30rpx;
+  margin-left: 20rpx;
+}

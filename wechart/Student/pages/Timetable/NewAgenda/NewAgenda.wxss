@@ -1,0 +1,156 @@
+page {
+  background-color: #ececec;
+}
+
+.topDate {
+  width: 702rpx;
+  padding: 0 24rpx;
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+
+.dateBox {
+  width: 100%;
+  height: 80rpx;
+  border-bottom: 1rpx solid #ececec;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.placeName {
+  font-size: 28rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(153, 153, 153, 1);
+  text-align: right;
+}
+
+.dateBox text, .dateName {
+  font-size: 28rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(51, 51, 51, 1);
+}
+
+.dateBox input {
+  width: 280rpx;
+  text-align: right;
+}
+
+.itemInfo {
+  width: 100%;
+  min-height: 100rpx;
+  padding-top: 40rpx;
+  background-color: #fff;
+  padding-bottom: 25rpx;
+}
+
+.itemTitle {
+  font-size: 28rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(51, 51, 51, 1);
+  margin-bottom: 20rpx;
+}
+
+.palceItem {
+  font-size: 28rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(153, 153, 153, 1);
+}
+
+.texxAr {
+  font-size: 28rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(51, 51, 51, 1);
+  width: 702rpx;
+  min-height: 50rpx;
+}
+
+.pickeDate {
+  width: 702rpx;
+  height: 88rpx;
+  padding: 0 24rpx;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+}
+
+.dateInfo {
+  font-size: 28rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(51, 51, 51, 1);
+}
+
+/* .pickeDates{
+  width: 702rpx;
+  height: 88rpx;
+  padding:0 24rpx;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  justify-content: space-around;
+} */
+
+.dateRight {
+  height: 88rpx;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #00c693;
+  font-size: 28rpx;
+}
+
+.Select-time {
+  width: 240rpx;
+  height: 88rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: #00c693;
+  font-size: 28rpx;
+}
+
+.start {
+  width: 240rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  vertical-align: middle;
+  font-size: 30rpx;
+  color: #00c693;
+  display: flex;
+  align-items: center;
+}
+
+.start-text {
+  font-size: 30rpx;
+  color: #00c693;
+  vertical-align: middle;
+}
+
+.Time-Bucket {
+  width: 200rpx;
+  height: 88rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: #00c693;
+  font-size: 28rpx;
+}
+.alter-Idcard {
+  width: 750rpx;
+  height: 88rpx;
+  border-top: 1px solid #e4e4e4;
+  background-color: #fff;
+}
+button[type=default]{
+  color:#fff;
+}

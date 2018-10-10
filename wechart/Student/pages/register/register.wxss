@@ -1,0 +1,519 @@
+/* pages/register/register.wxss */
+
+/** 修改默认的navigator点击态 **/
+@import "../../css/weui.wxss";
+
+.navigator-hover {
+  color: #00c693;
+}
+
+/** 自定义其他点击态样式类 **/
+
+.other-navigator-hover {
+  color: #00c693;
+}
+
+.page-body-form-item {
+  width: 100%;
+  height: 50rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.registrationstubtna-one {
+  background-color: #00c693;
+  width: 350rpx;
+  height: 88rpx;
+  border-radius: 44rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.return {
+  width: 230rpx;
+  height: 88rpx;
+  background: rgba(255, 255, 255, 1);
+  border: 1rpx solid rgba(0, 198, 147, 1);
+  border-radius: 44rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.biankuang-return {
+  width: 210rpx;
+  height: 68rpx;
+  border: 1rpx solid rgba(0, 198, 147, 0.3);
+  border-radius: 34rpx;
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+  font-family: PingFang-SC-Regular;
+  color:rgba(0,198,147,1);
+  justify-content: center;
+}
+.reg_sec_ac {
+  width: 100%;
+  height: 88rpx;
+  position: fixed;
+  bottom: 152rpx;
+  padding: 0 75rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.biankuang-one {
+  width: 330rpx;
+  height: 68rpx;
+  display: flex;
+  align-items: center;
+  font-family: PingFang-SC-Regular;
+  color: rgba(255, 255, 255, 1);
+  justify-content: center;
+  font-size: 30rpx;
+  border: 1rpx solid rgba(255, 255, 255, 0.3);
+  border-radius: 34rpx;
+}
+
+
+.container {
+  width: 750rpx;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.notcheckedai {
+  width: 100%;
+  height: 455rpx;
+  background: #00c693;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.notcheckeda_j {
+  width: 702rpx;
+  height: 870rpx;
+  background: #fff;
+  position: absolute;
+  top: 36rpx;
+  left: 24rpx;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 5rpx;
+  box-shadow: 0rpx 3rpx 3rpx 3rpx rgba(193, 193, 193, 0.35);
+}
+
+/*头像*/
+
+.head-img {
+  width: 100%;
+  height: 362rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.head-img image {
+  width: 180rpx;
+  height: 180rpx;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.pleainput {
+  background: url('https://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/images/icon/pleaxlr.png') scroll left center no-repeat;
+  display: inline-block;
+  background-size: 37rpx 44rpx;
+  width: 74rpx;
+  height: 88rpx;
+}
+
+.inpblocknicka {
+  width: 100%;
+  height: 50rpx;
+}
+
+.inpadulta1 {
+  background: url('http://j6.cdjmjx.cn/qingshaonian/adulta1.png') scroll left center no-repeat;
+  display: inline-block;
+  background-size: 50rpx 44rpx;
+  width: 100rpx;
+  height: 88rpx;
+}
+
+.user-typeac image {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.user-typead image {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.user-typeae image {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.sendbuttona {
+  width: 160rpx;
+  height: 44rpx;
+  border: none;
+  border-radius: none;
+  border-style: none;
+  background: #00c693;
+  color: #fff;
+  line-height: 44rpx;
+  font-size: 24rpx;
+  text-align: center;
+}
+
+.sendbutton-goa {
+  width: 160rpx;
+  height: 44rpx;
+  border: solid 1px #00c693;
+  border-radius: 22rpx;
+  background: #fff;
+  color: #00c693;
+  line-height: 43rpx;
+  font-size: 24rpx;
+  text-align: center;
+  margin-left: 41rpx;
+}
+
+.registrationstubtna {
+  background-color: #00c693;
+  width: 600rpx;
+  height: 88rpx;
+  border-radius: 44rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.biankuang {
+  width: 580rpx;
+  height: 68rpx;
+  display: flex;
+  align-items: center;
+  font-family: PingFang-SC-Regular;
+  color: rgba(255, 255, 255, 1);
+  justify-content: center;
+  border: 1rpx solid rgba(255, 255, 255, 0.3);
+  border-radius: 34rpx;
+}
+
+.registecoacha-back {
+  /* width: 15%; */
+  height: 90rpx;
+  /* color: #00c693; */
+  color: #999;
+  font-size: 34rpx;
+  float: left;
+  text-align: center;
+  line-height: 90rpx;
+  text-decoration: underline;
+  /* display: inline-block; */
+}
+
+.registecoachaa {
+  width: 24.6%;
+  height: 90rpx;
+  color: #999;
+  font-size: 34rpx;
+  float: left;
+  text-align: center;
+  line-height: 90rpx;
+  text-decoration: underline;
+  /* display: inline-block; */
+}
+
+.registecoachab {
+  width: 31.6%;
+  height: 90rpx;
+  color: #999;
+  font-size: 34rpx;
+  float: left;
+  text-align: center;
+  line-height: 90rpx;
+  text-decoration: underline;
+  /* display: inline-block; */
+  margin-left: 47rpx;
+}
+
+radio .wx-radio-input {
+  border-radius: 50%;
+  width: 40rpx;
+  height: 40rpx;
+}
+
+radio .wx-radio-input.wx-radio-input-checked {
+  border: none;
+  background: #00c693;
+}
+
+radio .wx-radio-input.wx-radio-input-checked::before {
+  border-radius: 50%;
+  width: 40rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #fff;
+  background: #00c693;
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+}
+
+.bindingmobileainputa {
+  width: 300rpx;
+}
+
+.notcheckedabbg {
+  /* width: 100%; */
+  height: 88rpx;
+}
+
+/*.bindingmobiaa{padding:0px 0px;}
+.bindingmobiab{margin:0 auto;}*/
+
+/*验证码*/
+
+.notcheckedac {
+  width: 100%;
+  height: 50rpx;
+  display: flex;
+  align-items: center;
+  padding: 0 55rpx;
+  box-sizing: border-box;
+  font-size: 30rpx;
+  color: #333;
+  margin-top: 80rpx;
+}
+
+.notcheckedad {
+  width: 30rpx;
+  height: 40rpx;
+}
+
+.checksendcodea {
+  width: 30rpx;
+  height: 40rpx;
+}
+
+.check-backfista {
+  width: 30rpx;
+  height: 30rpx;
+  display: inline-block;
+}
+
+.checksendcode-imagea {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.notcheckedae {
+  display: flex;
+  line-height: 50rpx;
+}
+
+.schoolu_boxc {
+  width: 100%;
+  height: 50rpx;
+  font-size: 30rpx;
+}
+
+.notcheckedaf {
+  height: 50rpx;
+  font-size: 30rpx;
+  border-bottom: 1px solid #00c693;
+}
+
+.notcheckedaf input {
+  width: 320rpx;
+  color: #333;
+}
+
+text.notcheckedag {
+  font-size: 30rpx;
+}
+
+/*青少年距离*/
+
+/*.notcheckedah {
+  margin-bottom: 58rpx;
+  margin-top: 14rpx;
+}*/
+
+/*覆盖样式*/
+
+.weui-cell:before {
+  border-top: none;
+}
+
+.notname_a:before {
+  border-top: 1rpx solid #00a883;
+}
+
+.notname_a:after {
+  border-top: 1rpx solid #00a883;
+}
+
+/*tim logo 第一个*/
+
+.log_name_a {
+  width: 100%;
+  height: 508rpx;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.log_name_b {
+  width: 100%;
+  height: 50rpx;
+  display: flex;
+  align-items: center;
+  padding: 0 55rpx;
+  box-sizing: border-box;
+  font-size: 30rpx;
+  color: #333;
+  margin-top: 50rpx;
+}
+
+.weui-cell__hd {
+  width: 30rpx;
+  height: 40rpx;
+}
+
+.log_name_c {
+  margin-left: 30rpx;
+}
+
+.log_name_d {
+  border-bottom: 1px solid #00c693;
+  width: 534rpx;
+  height: 50rpx;
+  margin-left: 15px;
+}
+
+.login-pleasea-code {
+  width: 534rpx;
+  height: 50rpx;
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.log_name_e radio:nth-child(2) {
+  margin-left: 114rpx;
+}
+
+/*.name_seconds_a{margin-left:7rpx;}* /*秒钟 */
+
+.reg_sec_a {
+  width: 100%;
+  height: 88rpx;
+  position: fixed;
+  bottom: 152rpx;
+  padding: 0 75rpx;
+  box-sizing: border-box;
+}
+
+.reg_sec_b {
+  margin-top: 57rpx;
+  /* margin-bottom: 60rpx; */
+}
+
+.reg_sec_backfista {
+  width: 30rpx;
+  height: 30rpx;
+  /* display: inline-block; */
+  float: left;
+  margin-top: 32rpx;
+  margin-left: 70rpx;
+}
+
+.reg_sec_backfistb {
+  /* display: inline-block; */
+  width: 31.3%;
+  float: left;
+  text-align: center;
+}
+
+.locationsec_a image {
+  width: 30rpx;
+  height: 30rpx;
+  left: 0;
+}
+
+/*青少年位置*/
+
+.locationsec_b {
+  display: flex;
+  padding: 10px 15px;
+}
+
+.locationsec_c {
+  display: flex;
+}
+
+.locationsec_e {
+  width: 100%;
+  display: flex;
+}
+
+.schoolu_a image {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.schoolu_b {
+  font-size: 24rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  display: block;
+  color: #999;
+}
+
+.schoolu_boxc input {
+  font-size: 30rpx;
+  color: #333;
+  width: 100%;
+  height: 50rpx;
+}
+
+/*青少年开始*/
+
+.schoolu_boxe {
+  background: url('http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/images/icon/pulldown.png') scroll 0px 10px no-repeat;
+  width: 40rpx;
+  height: 32rpx;
+  background-size: 11rpx 6rpx;
+  margin-left: 37rpx;
+}
+
+.weui-cell__ft {
+  text-align: left;
+  color: #999;
+}
+
+.bangdinga01 {
+  margin-top: 0rpx;
+}

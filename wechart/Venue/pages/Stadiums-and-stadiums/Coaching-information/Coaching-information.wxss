@@ -1,0 +1,248 @@
+page{
+  background: #ECECEC;
+}
+.in{
+  display: inline-block;
+}
+.c-tou{
+  width:702rpx;
+  height:250rpx;
+  background: rgba(255,255,255,1);
+  padding:22rpx 24rpx 15rpx;
+  position: relative;
+}
+.c-touItem{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom:20rpx;
+  border-bottom:2rpx solid rgba(228,228,228,1);
+} 
+.c-topImg{
+  width:30rpx;
+  height:30rpx;
+  vertical-align: middle;
+  margin-right:8rpx;
+}
+.c-txtt,.c-txtb{
+  font-size:20rpx;
+  font-family:PingFang-SC-Regular;
+  color:rgba(51,51,51,1);
+}
+.c-txtb{
+  font-size:24rpx;
+  color:rgba(232,85,113,1);
+}
+.c-information{
+    padding:28rpx 0 0 43rpx;
+    box-sizing: border-box;
+}
+.c-userImg{
+  margin-right:44rpx;
+  display: inline-block;
+  width:120rpx;
+  height:120rpx;
+  vertical-align: top;
+}
+/* .c-imgBox{
+  width:120rpx;
+  height:120rpx;
+  
+} */
+.c-itemRight{
+  display: inline-block;
+  margin-top:8rpx;
+}
+.c-nice{
+  display:inline-block;
+  width:73rpx;
+  height:30rpx;
+  margin-right:17rpx;
+  vertical-align: middle;
+}
+.c-name{
+  display: inline-block;
+  font-size:30rpx;
+  font-family:PingFang-SC-Bold;
+  color:rgba(102,102,102,1);
+}
+.c-man{
+  display: inline-block;
+  width:24rpx;
+  height:24rpx;
+  margin-left:10rpx;
+}
+.c-level{
+  display: inline-block;
+  width:20rpx;
+  height:20rpx;
+  vertical-align: middle;
+}
+.c-one-athlete{
+  display: inline-block;
+  font-size:24rpx;
+  font-family:PingFang-SC-Regular;
+  color:rgba(51,51,51,1);
+  margin:0 15rpx 0 11rpx;
+}
+.c-one-coach{
+  display: inline-block;
+  font-size:24rpx;
+  font-family:PingFang-SC-Regular;
+  color:rgba(51,51,51,1);
+}
+.c-hotImg{
+  width:16rpx;
+  height:16rpx;
+  margin-right:13rpx;
+}
+.c-hotTxt{
+  font-size:22rpx;
+  font-family:PingFang-SC-Regular;
+  color:rgba(232,85,113,1);
+}
+.c-userName,.c-jiaolian,.c-hot,.c-levels{line-height:0;}
+.c-userName{margin-bottom:20rpx;}
+.c-jiaolian{margin-bottom:22rpx;}
+.c-levels{
+  text-align: right;
+  position: absolute;
+  bottom:15rpx;
+  right:25rpx;
+}
+.c-level-img{
+  width:20rpx;
+  height:20rpx; 
+  margin-right:10rpx;
+  vertical-align: middle;
+}
+.c-leve-txt{
+  display: inline-block;
+  font-size:22rpx;
+  font-family:PingFang-SC-Regular;
+  color:rgba(153,153,153,1);
+  padding-right:26rpx;
+}
+.c-location-img{
+  width:15rpx;
+  height:20rpx;
+  margin-right:10rpx;
+  vertical-align: middle;
+}
+.c-location{
+  display: inline-block;
+  font-size:20rpx;
+  font-family:PingFang-SC-Regular;
+  color:rgba(153,153,153,1);
+}
+.c-jiao-information{
+  padding:20rpx 24rpx 0 24rpx;
+}
+.c-items{
+  width:670rpx;
+  height:180rpx;
+  background: rgba(255,255,255,1);
+  border-radius: 5rpx;
+  padding:23rpx 16rpx 10rpx;
+  margin-bottom:20rpx;
+}
+.c-item-inifo{
+  display: inline-block;
+  width:100%;
+}
+.c-item-info-txt{
+  display: inline-block;
+  border-radius: 5rpx;
+  font-size:24rpx;
+  font-family:PingFang-SC-Regular;
+  border:2rpx solid rgba(23,23,24,1);
+  padding:3rpx 8rpx;
+  margin-right:13rpx;
+}
+.c-item-title{
+  display: inline-block;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  width:201rpx;
+  height:28rpx;
+  line-height: 28rpx;
+  font-size:30rpx;
+  font-family:PingFang-SC-Regular;
+  color:rgba(51,51,51,1);
+  margin-right:56rpx;
+}
+.c-item-status{
+  display: inline-block;
+  width:134rpx;
+  height:34rpx;
+  line-height: 34rpx;
+  background:rgba(232,85,113,1);
+  border-radius: 17rpx; 
+  font-size:22rpx;
+  font-family:PingFang-SC-Regular;
+  color:rgba(255,255,255,1);
+  text-align: center;
+}
+.c-user{
+  width:14rpx;
+  height:16rpx;
+  margin-right:10rpx;
+}
+.c-username-text{
+   font-size:20rpx;
+font-family:PingFang-SC-Regular;
+color:rgba(102,102,102,1);
+}
+.c-touser{
+  width:24rpx;
+  height:17rpx;
+  margin:0 10rpx 0 29rpx;
+}
+.c-renshu{
+   font-size:20rpx;
+font-family:PingFang-SC-Regular;
+color:rgba(102,102,102,1);
+}
+.c-date{
+  width:20rpx;
+  height:20rpx;
+  margin:0 10rpx 0 29rpx;
+}
+.c-data-txt{
+   font-size:20rpx;
+font-family:PingFang-SC-Regular;
+color:rgba(102,102,102,1);
+}
+.c-jiaoQin{
+font-size:22rpx;
+font-family:PingFang-SC-Regular;
+color:rgba(231,85,113,1);
+padding-right:21rpx;
+}
+.c-jiaoFei{
+   font-size:22rpx;
+font-family:PingFang-SC-Regular;
+color:rgba(0,198,147,1);
+}
+.c-topBor{
+  border-top: 2rpx solid rgba(228,228,228,1);
+}
+.c-fu{
+  width:702rpx;
+  height:88rpx;
+  position: fixed;
+  bottom:60rpx;
+  left:24rpx;
+  z-index: 20;
+  font-size:30rpx;
+  text-align: center;
+  line-height: 88rpx; 
+  font-family:PingFang-SC-Bold;
+  color:rgba(255,255,255,1);
+  background: url('http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/buttonB.png');
+  background-repeat: no-repeat;
+  background-size:cover; 
+}
+.c-item-cancel{
+  background:rgba(153,153,153,1);
+}

@@ -1,0 +1,4 @@
+<map id="map" longitude="{{longitude}}" latitude="{{latitude}}"  controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location="true" style="width: 100%; height: 100vh;"></map>
+<cover-view class='cover'>
+  {{address}}</cover-view>
+  <cover-image src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/location.png' class='coveImg'></cover-image>

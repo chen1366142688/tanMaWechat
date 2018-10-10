@@ -1,0 +1,73 @@
+{
+  "pages": [
+    "pages/My/Binding-Information/Binding-Information",
+    "pages/Exercise/Program-Particulars/Program-Particulars",
+    "pages/My/Binding-Information/Binding-Information",
+    "pages/login/Register/Register",
+    "pages/Information/location/location",
+    "pages/login/Forget-Password/Forget-Password",
+    "pages/login/Secondary-Input/Secondary-Input",
+    "pages/Information/Height-Weight/Height-Weight",
+    "pages/login/Binding/Binding",
+    "pages/login/Prompt/Prompt",
+    "pages/Information/Perfect-Information/Perfect-Information",
+    "pages/My/Child-Information/Child-Information",
+    "pages/My/My-Index/My-Index",
+    "pages/index/index", 
+    "pages/Patriarch/Patriarch-Index/Patriarch-Index",
+    "pages/Exercise/Test-complete/Test-complete",
+    "pages/Exercise/Project-Summary/Project-Summary",
+    "pages/Exercise/Physical-Test/Physical-Test",
+    "pages/My/Personal-Information/Personal-Information",
+    "pages/My/Training-Record/Training-Record",
+    "pages/My/Test-Record/Test-Record",
+    "pages/My/Alter-Phone-number/Alter-Phone-number",
+    "pages/My/Alter-New-Password/Alter-New-Password",
+    "pages/My/Alter-Password/Alter-Password",
+    "pages/My/Alter-Name/Alter-Name",
+    "pages/Exercise/Complete-training/Complete-training",
+    "pages/Exercise/Select-Planning/Select-Planning",
+    "pages/Exercise/Exercise-Program/Exercise-Program", 
+    "pages/Exercise/Training-feelings/Training-feelings",
+    "pages/Information/Selection-school/Selection-school",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#4DD0C8",
+    "navigationBarTextStyle": "#fff",
+    "navigationBarTitleText": "探马数据"
+  },
+  "tabBar": {
+    "color": "#C8C8C8",
+    "selectedColor": "#4DD0C8",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "image/indexAction.png",
+        "selectedIconPath": "image/index.png"
+      },
+      {
+        "pagePath": "pages/Exercise/Exercise-Program/Exercise-Program",
+        "text": "锻炼计划",
+        "iconPath": "image/planningAction.png",
+        "selectedIconPath": "image/planning.png"
+      },
+      {
+        "pagePath": "pages/My/My-Index/My-Index",
+        "text": "我的",
+        "iconPath": "image/person.png",
+        "selectedIconPath": "image/personAction.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 6000,
+    "connectSocket": 6000,
+    "uploadFile": 6000,
+    "downloadFile": 6000
+  }
+}

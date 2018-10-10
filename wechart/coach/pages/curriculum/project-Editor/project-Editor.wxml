@@ -1,0 +1,9 @@
+<!--pages/curriculum/project-Editor/project-Editor.wxml-->
+<view class='project-Editor'>
+    <textarea  fixed="{{tag}}" bindinput='articleName' class='myInfoBxo1' placeholder-class='myInfo' maxlength="20" value='{{classArticle.articleName}}' placeholder="课程内容名称" />
+    <textarea  fixed="{{tag}}" bindinput='articleContent' class='myInfoBxo' placeholder-class='myInfo' maxlength="300" value='{{classArticle.articleContent}}' placeholder="课程内容" />
+</view>
+
+<button bindtap='submitSport' class='settle-accounts'>提 交</button>
+
+

@@ -1,0 +1,9 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  box-sizing: border-box;
+  background: RGBA(236, 236, 236, 1);
+} 
+page{
+  background: RGBA(236, 236, 236, 1);
+}

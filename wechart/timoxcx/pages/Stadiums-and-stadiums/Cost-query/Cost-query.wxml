@@ -1,0 +1,35 @@
+<view class='c-query'>
+  <view class='c-query-total clearfloat'>
+    <view class='c-queryBox fl'>
+      <text class='c-totaltext'>当日线上总收款</text>
+      <text class='c-total-money'>RMB 3040500.00</text>
+    </view>
+    <text class='c-query-date fr'>2018-03-26</text>
+  </view>
+  <view class='c-query-qiu clearfloat'>
+    <text class='c-yumao fl'>羽毛球</text>
+    <text class='c-query-pmb fr'>RMB 3020.00</text>
+  </view>
+  <view class='c-query-qiu clearfloat c-query-bus'>
+    <text class='c-yumao fl'>篮球</text>
+    <text class='c-query-pmb fr'>RMB 3020.00</text>
+  </view>
+</view>
+<!--第二行-->
+<view class='c-query'>
+  <view class='c-query-total clearfloat'>
+    <view class='c-queryBox fl'>
+      <text class='c-totaltext'>当日线上总收款</text>
+      <text class='c-total-money'>RMB 3040500.00</text>
+    </view>
+    <text class='c-query-date fr'>2018-03-26</text>
+  </view>
+  <view class='c-query-qiu clearfloat'>
+    <text class='c-yumao fl'>羽毛球</text>
+    <text class='c-query-pmb fr'>RMB 3020.00</text>
+  </view>
+  <view class='c-query-qiu clearfloat c-query-bus'>
+    <text class='c-yumao fl'>篮球</text>
+    <text class='c-query-pmb fr'>RMB 3020.00</text>
+  </view>
+</view> 

@@ -1,0 +1,34 @@
+<!--pages/index/QuickMark/QuickMark.wxml-->
+
+<!--  我的二维码  -->
+<view class='QuickMark'>
+  <view class='QuickMark-T'>
+    <image class='QuickMark-T-N' src='{{imgUrl}}erweima.png'></image>
+  </view>
+  <view class='QuickMark-M'>
+    <view class='QuickMark-M-N'>
+      <text class='chief-coach'>主教练</text>
+      <text class='Name'>张翔</text>
+      <image class='gender' src='{{imgUrl}}blackboy.png'></image>
+    </view>
+  </view>
+</view>
+
+<!-- demo 测试 -->
+
+<view class="container">  
+  <!-- 生成二维码 -->  
+  <view class="input-row">  
+      <label>内容</label>  
+      <input value='{{qrcStr}}' class="qrcInput" bindblur="onQrcStrBlur" type="text" maxlength="255"   
+                placeholder="{{qrcPhld}}"/>  
+  </view>  
+  <button class="genQrcBtn" type="primary" bindtap="onGenQrc">生成二维码</button>  
+  
+  <view class="img-box">  
+      <canvas bindtap="onPreviewQrc" hidden="{{canvasHidden}}"   
+                style="width: 686rpx;height: 686rpx;background:#f1f1f1;" canvas-id="qrcCanvas"/>  
+  </view>  
+</view>   
+<view hidden="{{maskHidden}}" class="mask"></view>  
+<view class="canvas-box"></view> 

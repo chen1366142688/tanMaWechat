@@ -1,0 +1,125 @@
+<scroll-view class='scrollView' scroll-y="{{isScroll}}" bindscrolltolower="tolower" bindscrolltoupper="toRefash">
+  <view class="order-top clearfloat">
+    <text class='order-one {{order}} fl' data-order="1" bindtap='order'>未完结订单</text>
+    <text class='order-two {{orders}} fl' data-order="2" bindtap='order'>已完结订单</text>
+    <image class='order-sort fr' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/order-sort.png' bindtap='orderSort'></image>
+  </view>
+  <view class='order-item' wx:for="{{orderList}}" wx:key="{{index}}">
+    <view class='order-ones' data-status="{{item.orderStatus}}" data-orderCodes="{{item.orderCode}}" data-classId="{{item.classId}}" data-spareTime="{{item.spareTime}}" data-courseCount="{{item.courseCount}}" data-type="{{item.type}}" bindtap='orderItem'>
+      <view class='order-name iLblock clearfloat'>
+        <view class='fr order-zhuName'>
+          <image class='orderLocation' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/position-blue.png'></image>
+          <text class='zhuajiaoName iLblock'>{{item.homeName }}</text>
+        </view>
+        <text class='order-status fl' wx:if="{{item.orderStatus =='00'}}">订单状态： 已下单待教练确认</text>
+        <text class='order-status fl' wx:elif="{{item.orderStatus =='01'}}">订单状态：已下单待学员支付</text>
+        <text class='order-status fl' wx:elif="{{item.orderStatus =='02'&&item.payType  =='1' }}">订单状态：已支付课程进行中</text>
+        <text class='order-status fl' wx:elif="{{item.orderStatus =='02'&&item.payType  =='0'}}">订单状态：已支付课程进行中(线下支付)</text>
+        <text class='order-status fl' wx:elif="{{item.orderStatus =='02'&&item.payType  =='2'}}">订单状态：已支付课程进行中(线下支付)</text>
+        <text class='order-status fl' wx:elif="{{item.orderStatus =='03'}}">订单状态：课程已结束</text>
+        <text class='order-status fl' wx:elif="{{item.orderStatus =='04'}}">订单状态：退款申请中</text>
+        <text class='order-status fl' wx:elif="{{item.orderStatus =='05'}}">订单状态：退款已完成</text>
+        <text class='order-status fl' wx:elif="{{item.orderStatus =='06'}}">订单状态：申请暂停中</text>
+        <text class='order-status fl' wx:elif="{{item.orderStatus =='07'}}">订单状态：课程暂停中 </text>
+        <text class='order-status fl' wx:elif="{{item.orderStatus =='99'}}">订单状态：订单已取消  </text>
+      </view>
+    </view>
+    <view class='order-twos' data-status="{{item.orderStatus}}" data-orderCodes="{{item.orderCode}}" data-classId="{{item.classId}}" data-spareTime="{{item.spareTime}}" data-courseCount="{{item.courseCount}}" data-type="{{item.type}}" bindtap='orderItem'>
+      <text class='order-qiu iLblock' wx:if="{{item.type==1 }}">{{item.itemName }} {{item.maxMember }}人班  </text>
+      <text class='order-qiu iLblock' wx:if="{{item.type==2 }}">{{item.itemName }} 私教  </text>
+      <text class='order-keName textOver'>{{item.className }}</text>
+    </view>
+    <view class='order-threes clearfloat' data-status="{{item.orderStatus}}" data-orderCodes="{{item.orderCode}}" data-classId="{{item.classId}}" data-spareTime="{{item.spareTime}}" data-courseCount="{{item.courseCount}}" data-type="{{item.type}}" bindtap='orderItem'>
+      <view class='order-date fl'>
+        <image class='orderTeacher' src='{{item.studentPhotoAddress }}'></image>
+        <text class='orderUserName textOver'>{{item.studentName }}</text>
+        <image wx:if="{{item.gender ==1}}" class='userIsMan' src='{{imgUrl}}blackboy.png'></image>
+        <image wx:if="{{item.gender ==2}}" class='userIsMan' src='{{imgUrl}}blackgirl.png'></image>
+        <text wx:if="{{item.studentType ==1}}" class='IsStudent'>成人</text>
+        <text wx:if="{{item.studentType ==2}}" class='IsStudent'>青少年</text>
+        <image wx:if="{{item.itemName =='羽毛球'}}" class='studentLieBie' src='{{imgUrl}}Badminton.png'></image>
+        <!--羽毛球-->
+        <image wx:if="{{item.itemName =='篮球'}}" class='studentLieBie' src='{{imgUrl}}lanqiu.png'></image>
+        <!--篮球-->
+        <image wx:if="{{item.itemName =='棒球'}}" class='studentLieBie' src='{{imgUrl}}bangqiu.png'></image>
+        <!--棒球-->
+        <image wx:if="{{item.itemName =='冰球'}}" class='studentLieBie' src='{{imgUrl}}bingqiu.png'></image>
+        <!--冰球-->
+        <image wx:if="{{item.itemName =='足球'}}" class='studentLieBie' src='{{imgUrl}}zuqiu.png'></image>
+        <!--足球-->
+        <image wx:if="{{item.itemName =='游泳'}}" class='studentLieBie' src='{{imgUrl}}youyong.png'></image>
+        <!--游泳-->
+        <image wx:if="{{item.itemName =='跆拳道'}}" class='studentLieBie' src='{{imgUrl}}taquandao.png'></image>
+        <!--跆拳道-->
+        <text class='coachLevel'>L{{item.itemGrade?item.itemGrade:"1" }}</text>
+      </view>
+      <view class='order-newDate fr'>
+      <view class='order-keshi' wx:if="{{item.payType=='2'}}">剩余课时：未知</view>
+        <view class='order-keshi' wx:else>剩余
+          <text class='order-red'>{{item.spareTime }}</text>课时
+          <!-- <text class='order-gay'>{{item.courseCount }}</text>课时（{{item.courseTime/10*60}}min） -->
+          </view>
+          <!-- <text class='order-gay'>{{item.courseCount }}</text>课时（{{item.courseTime/10*60}}min）</view> -->
+      </view>
+    </view>
+    <!-- <view class='order-time'>
+        <view class='frBottom'>
+          <image class='order-dates' src='{{imgUrl}}order-gayDate.png'></image>
+          <text class='order-date' wx:for="{{item.orderSectionList}}" wx:key="*this" wx:for-index="idx" wx:for-item="section">周{{section.weekDay==1?"一":section.weekDay==2?"二":section.weekDay==3?"三":section.weekDay==4?"四":section.weekDay==5?"五":section.weekDay==6?"六":"日"}}{{section.dayTimeStart }} {{idx < item.orderSectionList.length-1?"|":""}} </text>
+        </view>
+    </view> -->
+    <view class='order-four'>
+      <view class='order-fourLf fl'>
+        <text class='Remarks iLblock'>订单备注：</text>
+        <text class='reMarksInfo iLblock textOver'>{{item.coachRemarks? item.coachRemarks=='null'?"暂无":item.coachRemarks:"暂无"}}</text>
+      </view>
+      <!-- <view class='order-fourRg fr'>
+      <image wx:if="{{!item.coachEdtor}}" class='etidor' src='{{imgUrl}}editorGay.png'  data-orderCode="{{item.orderCode }}"  bindtap='orderEditor'></image>
+      <image wx:if="{{item.coachEdtor}}" class='etidorSure' src='{{imgUrl}}coachMarksSure.png'  data-orderCode="{{item.orderCode }}" bindtap='orderEditorSub'></image> 
+    </view> -->
+    </view>
+    <view class='order-items clearfloat'>
+      <!--课程已结束.显示-评论课程-->
+      <view class='order-active order-tuikuan fl' wx:if="{{item.orderStatus=='03' && !item.commentId}}" data-code="{{item.orderCode}}" bindtap='goCurriculum'>评论学员</view>
+      <!--已下单待教练确认-显示-确认已付款-->
+      <view class=' order-tuikuan fl' wx:elif="{{item.orderStatus=='00'}}" data-name="{{item.studentName }}" data-code="{{item.orderCode}}" bindtap='goPay'>确认已付款</view>
+      <!--已下单待学员付款.显示--取消订单-->
+      <view class=' order-tuikuan fl' wx:elif="{{item.orderStatus=='01'}}" data-code="{{item.orderCode}}" bindtap='cancelOrder'>取消订单</view>
+
+      <!--已付款，课程进行中：小班显示--修改剩余课时-->
+      <view class=' order-tuikuan fl' wx:elif="{{item.orderStatus=='02' && item.type=='2'}}" bindtap='refundFun' data-code="{{item.orderCode}}" data-name="{{item.studentName }}">修改剩余课时</view>
+
+      <!--已付款，课程进行中：大班显示--更多操作（暂停课程、修改剩余课时）-->
+      <view class=' order-tuikuan fl' wx:elif="{{item.orderStatus=='02' && item.type=='1'}}" data-code="{{item.orderCode}}" data-name="{{item.studentName }}" data-className="{{item.itemName }}" data-maxNumber="{{item.maxMember }}" bindtap='goStops'>更多操作</view>
+
+      <!--退款申请中显示--取消申请退款-->
+      <view class='order-tuikuan fl' wx:elif="{{item.orderStatus=='04'}}" data-code="{{item.orderCode}}" data-name="{{item.studentName }}" bindtap='cancelreFund'>学员申请退款</view>
+
+      <!--申请暂停中-->
+      <view class='order-tuikuan fl' wx:elif="{{item.orderStatus=='06'}}" data-code="{{item.orderCode}}" data-name="{{item.studentName }}" data-classname="{{item.className }}" bindtap='cancelreStop'>学员申请暂停</view>
+      
+      <!--暂停中-->
+      <view class='order-tuikuan fl' wx:elif="{{item.orderStatus=='07'}}" data-code="{{item.orderCode}}" data-name="{{item.studentName }}" data-classname="{{item.className }}" bindtap='cancelreStart'>重启课程</view>
+      <!-- <view class='order-tuikuan fl' wx:else>不知道</view> -->
+      <view class='order-phones fr'>
+        <image bindtap='callPhone' class='order-phoneing' data-phone="{{item.studentPhone  }}" src='{{imgUrl}}phoneBlue.png'></image>
+        <image bindtap='weiLiao' class='order-weiLiao' src='{{imgUrl}}wechatBlue.png' data-photo="{{item.studentPhotoAddress }}" data-nickname="{{item.studentName }}" data-studentuserid="{{item.studentUserId}}"></image>
+      </view>
+    </view>
+  </view>
+  <!--  没有数据显示空空如也  -->
+  <view class='kong' wx:if="{{Period}}">
+    <image class='kong-img' src='../../../imgs/dataEmpty.png'></image>
+    <text class='kong-text'>数据为空</text>
+  </view>
+  <text class='footer-text' wx:if="{{showFooter}}">{{footerTxt}}</text>
+
+</scroll-view>
+<!--这是已付款，课程进行中：未使用课时且为大班弹框-->
+<view class='orderModal' wx:if="{{isDialogShow}}">
+  <view class='orderItems'>
+    <text class='stop' bindtap='stopCoase'>暂停课程</text>
+    <text class='refund' bindtap='refundFun'>修改剩余课时</text>
+    <text class='cancel' bindtap='cancels'>取消</text>
+  </view>
+</view>

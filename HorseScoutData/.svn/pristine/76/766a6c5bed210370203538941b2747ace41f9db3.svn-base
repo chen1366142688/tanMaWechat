@@ -1,0 +1,76 @@
+var btn=document.getElementsByTagName("button");
+var myvideo=document.getElementById("video1");
+var pro=document.getElementById("pro");
+var ran=document.getElementById("ran");
+var a=0.5,b=0.5;
+myvideo.volume = a;
+
+//关闭声音
+function enableMute(){
+    myvideo.muted=true;
+    btn[0].disabled=true;
+    btn[1].disabled=false;
+}
+
+//打开声音
+function disableMute(){
+    myvideo.muted=false;
+    btn[0].disabled=false;
+    btn[1].disabled=true;
+}
+
+//播放视频
+function playVid(){
+    myvideo.play();
+    setInterval(pro1,1000);
+}
+//暂停视频
+function pauseVid(){
+    myvideo.pause();
+}
+//全屏
+function showFull(){
+    myvideo.webkitrequestFullscreen();
+}
+//进度条展示
+function pro1(){
+    pro.max=myvideo.duration;
+    pro.value=myvideo.currentTime;
+}
+
+function setvalueour(){
+    if(b>0.10000000000){
+        console.log(b)
+        a =b- 0.1;
+        b = a;
+        console.log(a)
+        if(a < 0 || a>1){
+            myvideo.volume = 0;
+            myvideo.muted = true;
+            return;
+        }else{
+            myvideo.volume = a;
+            myvideo.muted = false;
+        }
+
+    }else{
+        return;
+    }
+}
+//拖动range进行调音量大小
+function setvalue(num){
+    // myvideo.volume=ran.value/100;
+
+    if(b<0.999999){
+        console.log(b)
+        a =b+ 0.1;
+        b = a;
+        console.log(a)
+
+        myvideo.volume = a;
+        myvideo.muted = false;
+    }else{
+        return;
+    }
+
+}

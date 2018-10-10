@@ -1,0 +1,150 @@
+/* pages/gradeTable/testDetail/testDetail.wxss */
+.test_detail{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.test_swiper{
+  flex: 1;
+  width: 100%;
+}
+.test_swiper swiper-item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.test_main{
+  width: 659rpx;
+  height: 660rpx;
+  border-radius:30rpx;
+  box-shadow:4rpx 0rpx 12rpx rgba(255,102,105,0.3);
+  overflow: hidden;
+  background: white;
+  transition: height 0.3s ease
+}
+.nowcurrent{
+  height: 760rpx;
+}
+.test_main .header{
+  height: 202rpx;
+  background: RGBA(255, 102, 105, 1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 28rpx;
+  color: white;
+  flex-wrap: wrap;
+  margin-bottom: 65rpx;
+}
+.test_main .header .triangle{
+  width: 0;
+  height: 0;
+  border-right: 659rpx solid white; 
+  border-top: 100rpx solid transparent; 
+}
+.test_main .header .left{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left:34rpx; 
+  height: 102rpx;
+}
+.test_main .header .right{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right:34rpx; 
+  height: 102rpx;
+}
+.test_main .header .left text:nth-child(2){
+  font-size: 22rpx;
+}
+.test_main .header .left .img_box{
+  width: 30rpx;
+  height: 30rpx;
+  background: white;
+  border-radius: 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.test_main .header .left image{
+  width: 18rpx;
+  height: 18rpx;
+}
+.test_main .main{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 0rpx;
+  align-items: center;
+  transition: margin 0.3s ease;
+}
+.test_main .now_current{
+  margin-bottom: 123rpx;
+}
+.point{
+  width: 11rpx;
+  height: 11rpx;
+  background: black;
+}
+.test_main .main .pickers{
+  width: 135rpx;
+  overflow: hidden;
+}
+.test_main .unit{
+  width: 160rpx;
+  height: 60rpx;
+  border: 1rpx solid RGBA(255, 102, 105, 1);
+  border-radius: 60rpx;
+  font-size: 28rpx;
+  color: RGBA(255, 102, 105, 1);
+  text-align: center;
+  line-height: 60rpx;
+  margin-left: 40rpx;
+}
+.pushbtn{
+  width: 690rpx;
+  height: 100rpx;
+  background: RGBA(2, 199, 220, 1);
+  color: white;
+  font-size: 34rpx;
+  line-height: 100rpx;
+  text-align: center;
+  margin-bottom: 100rpx;
+  border-radius: 100rpx;
+}
+.mock{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top : 0;
+  z-index: 999;
+  /* background: rgba(0,0,0,0.3); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mock image{
+  width: 100rpx;
+  height: 100rpx;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

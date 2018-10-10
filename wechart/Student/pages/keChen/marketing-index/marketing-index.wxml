@@ -1,0 +1,1 @@
+<web-view src="{{htmlUrl}}/Course-Details.html?userId={{userId}}&classId={{classId}}&isLogin={{isLogin}}&token={{token}}&studentId={{studentId}}&userName={{userName}}&time={{time}}"></web-view>

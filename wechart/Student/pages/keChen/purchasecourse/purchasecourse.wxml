@@ -1,0 +1,128 @@
+<!--购买课程-->
+<view class='order-item-one'>
+  <view class='order-state clearfloat'>
+    <!-- <image class='order-userImga fl' src="{{classDetail.classPhotoAddress}}"></image> -->
+    <view class='order-numbers fl'>
+      <view class='order-numbers-top'>
+        <text class='order-renshu'>{{classDetail.itemName}} {{classDetail.maxMember}}人班 </text>
+        <text class='order-title pur-girl-titlea textOver'>{{classDetail.className}}</text>
+      </view>
+      <view class='order-numbers-bottom'>
+        <text class='order-qushu-txt iLblock'><text class='purchase-qushu-mainae iLblock'>机构：</text>{{classDetail.classCoach}}</text>
+        <text class='order-qushu-txt shopping iLblock'><text class='purchase-qushu-mainae iLblock'>教练：</text>{{classDetail.classCoachName}}</text>
+        <!-- <text class='purchase-qushu-maina iLblock' wx:if="{{classDetail.classTutors.length > 0}}" > 助教：</text>
+        <view class='iLblock zujiao textOver'>
+          <text class='purchase-qushu-mainb iLblock' wx:for="{{classDetail.classTutors}}">{{item.nickName}}</text>
+        </view> -->
+      </view>
+      <!-- <image class='order-qishu-img iLblock' src='{{url}}red-level.png'></image>
+        <text class='order-level-txt iLblock'>{{classDetail.homeName}}</text> -->
+      <view class='orientation textOver'>
+        <image class='order-qishu-img iLblock' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/student/position-red.png'></image>
+        <text class='order-level-txt iLblock'>{{classDetail.homeName}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- </view> -->
+
+<view class='c-course-int-firsta'>
+  <view class='c-course-int-titlec van-right-txtzhac'>
+    <view class='c-course-int-titlea'>培训项目</view>
+    <view class='c-course-int-titleb c-pur-left'>
+      <view wx:for="{{articleList}}" wx:key="*this">{{item.articleName}}：{{item.articleContent}}</view>
+    </view>
+    <view class='order-item-keshi clearfloat'>
+      <view class='order-total-keshi fl'>课时</view>
+      <view class='order-total-shenyu fl'>
+        <text class='strongs'>{{classDetail.courseCount}}</text>课时
+        <text class='yu-money'>（RMB {{classDetail.courseCost/100}}/课时，{{classDetail.haveHomeFee == '1'?"含场馆费":"不含场馆费"}}）</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- <view class='pur-item-threea'>
+  <view class='pur-item-boxa'>
+    <view class="course-six-title">课程时段（多选）</view>
+    <checkbox-group class="pur-item-threeb" name="radio-group" bindchange="radioChange">
+      <view class='pur-line' wx:for="{{sectionList}}" wx:key="*this" bindtap="checkChange" data-sectionid="{{item.sectionId}}" data-checked="{{item.check}}">
+        <lablel class='course-project-contenta iLblock pur-item-threec pur-still-hover'>
+          <checkbox class='check' style="transform:scale(.5)" checked='{{item.check}}' value="{{item.sectionId}}"></checkbox>周{{item.weekDay==1?"一":item.weekDay==2?"二":item.weekDay==3?"三":item.weekDay==4?"四":item.weekDay==5?"五":item.weekDay==6?"六":"日"}}：{{item.dayTimeStart}} - {{item.dayTimeEnd}}
+        </lablel>
+        <view class='iLblock pur-item-threed' wx:if="{{item.maxMember-item.signUpMember>0}}">空缺
+          <text class='pur-rednumber'>{{item.maxMember-item.signUpMember}}</text> 人</view>
+        <view class='iLblock pur-item-threed' wx:else>已报满</view>
+      </view>
+    </checkbox-group>
+  </view>
+</view> -->
+
+<view class='pur-item-placeordera'>
+  <view class='pur-item-boxa'>
+    <view class="course-six-title">下单备注</view>
+     <view class='pur-item-placeorderb'> 
+      <textarea wx:if="{{!showModal}}" class='myInfoBxo' placeholder-class='myInfo' bindinput="bindKeyInput" maxlength="300" value='' placeholder="请备注真实姓名、需求详情" />
+     </view> 
+  </view>
+</view>
+
+<view class='pur-item-placeorderb-fact'>
+  <view class='jisuan-money'>
+    <view class="course-sixe-title">费用结算</view>
+    <view class='jisuanA clearfloat'>
+      <text class='shifu fl'>课时费用</text>
+      <text class='shifu-money fr'>RMB {{payPrice}}</text>
+    </view>
+    <view class='jisuanB clearfloat'>
+      <text class='shifu fl'>优惠抵扣</text>
+      <text class='shifu-money fr'>- RMB 0.00</text>
+    </view>
+    <view class='jisuanC clearfloat'>
+      <text class='shifuC fl'>总费用</text>
+      <text class='shifu-moneys fr'>RMB<text id='strongs'>{{payPrice}}</text></text>
+    </view>
+  </view>
+</view>
+
+<view class='pur-close-stopbtna'>
+  <view class='les-offlinepaymentbtna'>
+    <view class='pur-item-paya'>
+      <view class='iLblock l-stop-a' bindtap="payOrder" data-paytype="0">已线下支付</view>
+      <view class='iLblock l-stop-a l-stop-b l-stop-avisited' bindtap="payOrder" data-paytype="1">付款</view>
+    </view>
+  </view>
+</view>
+
+<!-- 
+课程订单确认
+ -->
+<view class="modal-mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view wx:if="{{showModal}}">
+  <view class="modal-dialog">
+    <view class="modal-title">
+      <text decode="{{true}}" space="{{true}}">信&nbsp;息&nbsp;确&nbsp;认</text>
+    </view>
+    <view class="modal-content">
+      <view class='les-mod-ballb'>
+        <text decode="{{true}}" wx:if="{{fash==1}}">
+        <!--01课程-05收藏课程-->
+          取消本次开课后，您需要联系教练确认下次开班的时间，确定取消吗？  
+        </text>
+        <text decode="{{true}}" wx:else>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 如果您已经在线下支付课程费用，下单后需要教练方进行确认，订单方可生效。
+        </text>
+      </view>
+    </view>
+    <view class="modal-footer">
+      <view bindtap="hideModalcourse" class='pur-stop-onlinea'>
+        <view class="btn-confirm">确认</view>
+      </view>
+    </view>
+  </view>
+
+  <!--<view class='modal-btn' bindtap="onCancel" data-status="cancel">
+    <image class='les-modal-close-loseimg' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/close.png'></image>
+  </view>-->
+  <!--没有关闭 -->
+</view>

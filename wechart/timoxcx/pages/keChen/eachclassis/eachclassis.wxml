@@ -1,0 +1,72 @@
+<view style='style="position: relative;"'>
+<view class='guangKe'>
+  <view class='items-jiao'>
+    <image class='userImg' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/userImg.png'></image>
+
+    <view class='item-userTxt'>
+      <view class='userTxt-top clearfloat'>
+        <view class='fl'>
+          <view class='userA iLblock'>羽毛球 12人班</view>
+          <view class='userB iLblock  user-top-wid-a textOver'>羽毛球大班课程标题</view>
+        </view>
+
+        <view class='money'>
+          <view class='eachclassis-rmbb'>
+            <text class='rmb'>RMB</text>
+            <text class='rmbNum'>3000</text>
+          </view>
+          <view class='fr'>
+            <view class='userC iLblock'>10课时/1.5h</view>
+          </view>
+        </view>
+
+      </view>
+      <view class='userTxt-bottom'>
+        <image class='userboysexa iLblock' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/redcoach.png'></image>
+        <text class='userMum-lilei iLblock'>李雷</text>
+        <image class='userboysexb iLblock' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/blackboy.png'></image>
+        <!--<image class='userboysexb iLblock' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/blackgirl.png'></image>-->
+        <!--性别 女-->
+        <!-- 
+        <image src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/boy.png'></image>
+        <image src='girl.png'></image>
+        -->
+        <image class="userNumber iLblock" src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/numbers.png'></image>
+        <text class='userMum iLblock'>233期</text>
+        <image style='width:20rpx;height:20rpx;' class='userLevel' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/titletechnicalpost.png'></image>
+        <text class='userLevelColor iLblock'>L1L2L3</text>
+      </view>
+    </view>
+  </view>
+
+</view>
+
+<view class='cor-shop-head-da'></view>
+
+<!--第二部分 -->
+
+<!--羽毛球 234期班 开始-->
+<view class="c-jiao-information">
+  <view class='c-items-xcxa'>
+    <view class='c-item-inifo'>
+      <text class='c-item-info-txt'>羽毛球 234期班</text>
+      <text class='c-item-title'>2018-02-12 14:30-18:00</text>
+      <!--<view class="c-item-status c-item-apply">开课已报名</view>-->
+      <view class="c-item-status">报名中</view> <!--  下面2个状态 -->
+      <!--<view class="c-item-status c-item-cancel">开课已取消</view>-->
+    </view>
+    <view class='c-item-inifo'>
+      <image class='l-cdcenter-posa' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/red-location.png'></image>
+      <text class='c-username-text in'>成都体育中心</text>
+      <image class='c-touser-xcxa' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/red-total.png'></image>
+      <text class='c-renshu in'>23人已报名</text>
+          <view class='eachclassis-rmbc fr'>
+            <text class='c-data-txt in'>1课时/1.5h</text>
+            <text class='rmb'>RMB</text>
+            <text class='rmbNuma'>600</text>
+          </view>      
+    </view>
+  </view>
+</view>
+<!--<!--羽毛球 234期班 end-->
+</view>

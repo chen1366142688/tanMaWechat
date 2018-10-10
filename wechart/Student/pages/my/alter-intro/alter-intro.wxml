@@ -1,0 +1,7 @@
+<!--pages/my/alter-intro/alter-intro.wxml-->
+<view class='alter-intro'>
+ <textarea maxlength='200'  class='alter-text' value="{{userInfo.self && userInfo.self !='null'?userInfo.self:''}}" bindinput='selfContent'>
+</textarea >
+</view>
+<view class='alter-hint'>（*不得超过200字）</view>
+<button class='settle-accounts' bindtap='subContent'>保  存</button>

@@ -1,0 +1,133 @@
+<!--pages/curriculum/Course-Details/Course-Details.wxml-->
+<view class='Course-Details'>
+  <view class='Course-banner' style="background-image: url('{{classDetail.classPhotoAddress ? classDetail.classPhotoAddress : '../../../imgs/maxStation.png'}}')">
+    <view class='banner-heat'>
+      <image class='heat-img' src='{{imgUrl}}coach/particulars/popularity.png'></image>
+      <text class='heat-text'>{{classDetail.classPopularity?classDetail.classPopularity:"0"}}</text>
+    </view>
+    <view class='Details-abstract'>
+      <view class='project-sort'>
+        <view class='sort-one'>{{classDetail.itemName}}</view>
+        <view class='sort-two'>{{classDetail.maxMember}}人班</view>
+      </view>
+      <view class='abstract'>
+        <view class='abstract-text'>{{classDetail.className}}</view>
+        <view class='abstract-BZ'>
+          <image class='c-grade-a' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/grade-white.png'></image>
+          <text class='van-name' decode='true'>&nbsp;{{classDetail.itemStudentGrade}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 培训时间  -->
+
+  <view class='Time-Allocation'>
+    <view class='Time-BT'>培训时间</view>
+    <view class='Allocation-Z'>
+      <view wx:for="{{sectionList}}" wx:key="{{sectionId}}">
+        <view class='Allocation-Z-one'>
+          <view data-sectionid="{{item.sectionId}}" bindtap='queryStudentList'>
+            <view class='Z-one-time'>周{{item.weekDay==1?"一":item.weekDay==2?"二":item.weekDay==3?"三":item.weekDay==4?"四":item.weekDay==5?"五":item.weekDay==6?"六":"日"}}：{{item.dayTimeStart}} - {{item.dayTimeEnd}}</view>
+            <!-- <view class='Z-one-text' wx:if="{{item.maxMember-item.signUpMember>0}}">空缺
+              <text class='surplus'>{{item.maxMember-item.signUpMember}}</text><text decode="{{true}}">人 / 共</text>
+              <text class='in-all'> {{item.maxMember}}</text>人</view>
+              <view class='Z-one-text' wx:else>已报满</view> -->
+          </view>
+          
+          <!-- <view class='option' wx:if="{{isCanEdit}}" data-sectionid="{{item.sectionId}}" data-attendstatus="{{item.attendStatus}}" bindtap='changeOption'>
+            <view class='await {{item.attendStatus == 1?"notSelectAwit":"selectAwit"}}'>等待</view>
+            <view class='tution {{item.attendStatus == 1?"selectAwit":"notSelectAwit"}}'>开课</view>
+          </view> -->
+          </view>
+        <view wx:if="{{item.sectionId == showSectionId && studentList.length > 0 }}" class='Allocation-Z-tow'>
+          <view class='fenBox c-cou-havec'>
+            <view class='fenItem' wx:for="{{studentList}}">
+              <image class='itemImg' src='{{item.avatarUrl}}'></image>
+              <view class='fenItem-text'>{{item.nickName}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view> 
+
+  <!-- 课程简介  -->
+
+  <view class='c-course-int-titlec van-right-txtzhac'>
+    <view class='c-course-int-titl'>课程简介</view>
+    <view class='c-course-int-titleb'>
+      <text>{{classDetail.classDescribe}}</text>
+      <image wx:for="{{classDetail.classPhotoVOList}}" wx:key="*this" class='items-img' mode="widthFix" src='{{item.photoAddress}}'></image>
+    </view>
+  </view>
+
+  <view class='van-right-txtzhac'>
+    <view class='c-course-int-titlec'>
+      <view class='c-cou-per-a'>
+        <view class='c-course-int-titlea'>课时与费用</view>
+        <view class='c-cou-havea'>
+          <view class='c-cou-havea-text' bindtap='classesOf' data-id='2'>已开课：{{classDetail.lastAttendPeriod?classDetail.lastAttendPeriod:0}}期</view>
+          <view>
+            <image class='c-cou-haveb' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/more.png'></image>
+          </view>
+        </view>
+      </view>
+      <view class='c-cou-havecaf clearfix'>
+        <view class='cou-timea'>
+          <text>课时：{{classDetail.courseCount}}课时/{{classDetail.courseTime/10*60}}分钟</text>
+        </view>
+        <view class='cou-timeb'>
+          <text>费用：RMB {{classDetail.courseCost/100}}/每课时</text>
+        </view>
+        <view class='c-cou-havef'></view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 培训项目  -->
+  <view class='van-right-txtzhac'>
+    <view class='c-course-int-titlec'>
+      <view class='c-course-int-titl cou-timeg'>培训内容</view>
+      <view class='c-cou-havec clearfix'>
+        <view wx:for="{{articleList}}" wx:key="articleName">
+          <text>{{item.articleName}}：{{item.articleContent}}</text>
+        </view>
+        <view class='c-cou-havef'></view>
+      </view>
+    </view>
+  </view>
+
+  <!--训练场馆-->
+  <view class='van-right-txtzhac'>
+    <view class='c-course-int-titlec'>
+      <view class='c-cou-per-a'>
+        <view class='c-course-int-titlea'>培训场馆</view>
+        <view class='cou-timee'>
+          <view class='cou-timef'></view>
+          <view class='cou-timef'>
+          </view>
+        </view>
+      </view>
+      <view class='c-cou-havec clearfix'>
+        <view class='cou-timea'>
+          <text>{{classDetail.homeName}}：{{classDetail.homeAddress}}</text>
+        </view>
+        <view class='c-cou-havef'></view>
+      </view>
+      <view class='scroolBox'>
+        <scroll-view class='intro-scroll' scroll-x='true' scroll-with-animation='true'>
+          <image class='intro-scrollImg' wx:for="{{classDetail.homePhoto}}" wx:key="unique" src='{{item}}' style="width:{{imgwidth}}rpx; height:{{imgheight }}rpx;" bindload="imageLoad"></image>
+        </scroll-view>
+      </view>
+    </view>
+  </view>
+</view>
+<text class='van-over'>————已全部显示————</text>
+
+
+<view class='compile' wx:if="{{isCanEdit}}">
+  <button class='pay-the-fees' bindtap='toAuditClass'>编辑课程</button>
+  <button class='cancel-curriculum' bindtap='changePutAwayStatus'>{{putawayStatus==1?"下架课程":"上架课程"}}</button>
+  <!-- <button class='compile-curriculum' bindtap='editeAttend'>添加开课 +</button> -->
+</view>

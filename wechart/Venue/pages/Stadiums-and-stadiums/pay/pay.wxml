@@ -1,0 +1,40 @@
+<wxs module="numberTransform">
+var transform = {
+  toFix: function (value) {
+    return value.toFixed(2)
+  }
+}
+
+module.exports = {
+  toFix: transform.toFix
+}
+</wxs>
+
+
+<view class='pages'>
+ <scroll-view class='scrollBox' style='height:{{height}}rpx;' scroll-y bindscroll='scroll' upper-threshold='02' bindscrolltoupper='scrolltoupper' bindscrolltolower="scrolltolower" scroll-top="{{scrollTop}}">
+
+<view class='c-payContent' wx:for="{{orderHomeList}}" wx:key="*this">
+  <view class='c-payOne'>
+    <view class='c-payst'>
+      <image class='c-pay-user' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/red-user.png'></image>
+      <text class='pay-user'>{{ item.classCoach }}</text>
+    </view>
+    <text class='pay-date'>{{ item.payTime }}</text>
+  </view>
+  <text class="c-border"></text>
+  <view class="c-pay-situation">
+    <text class='c-situation'>缴纳场馆费用情况</text>
+    <text class='c-pay-item' space="true" decode="true">{{ item.itemName  }}&nbsp;&nbsp;&nbsp;{{ item.homeItemCount  }}场地&nbsp;&nbsp;&nbsp;{{ item.homeItemTime/10  }}小时&nbsp;&nbsp;&nbsp;RMB&nbsp;{{ numberTransform.toFix(item.homeItemPrice/100)  }}</text>
+  </view>
+</view>
+
+<text class='van-over' wx:if="{{lastFootShow}}">{{lastFoot}}</text>
+<image class='van-sticka' src='{{url}}stick.png' bindtap='toTop'></image>
+</scroll-view>
+<!--  没有数据显示空空如也  -->
+  <view class='kong' wx:if="{{Period}}">
+    <image class='kong-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/studentNewImg/kong.png'></image>
+    <text class='kong-text'>空空如也</text>
+  </view> 
+</view>

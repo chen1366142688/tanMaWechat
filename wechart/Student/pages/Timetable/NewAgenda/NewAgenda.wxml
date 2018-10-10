@@ -1,0 +1,26 @@
+<view class="topDate">
+  <view class='dateBox'>
+    <text>日程名称</text>
+    <input class='dateName' bindinput='placeName' type='text' value="{{name}}" placeholder="显示在日程表上的名称" placeholder-class="placeName" maxlength="8" disabled='{{changeFlag == "1" ? false : true}}'></input>
+  </view>
+  <view class='itemInfo'>
+    <view class='itemTitle'>详情描述</view>
+    <textarea class='texxAr' value="{{itemContent}}" bindinput='palceItem' placeholder="日程描述，方便记忆" placeholder-class="palceItem" maxlength="-1" auto-height="true"  disabled='{{changeFlag == "1" ? false : true}}'></textarea>
+  </view>
+</view>
+<view class='pickeDate'>
+  <view class='dateInfo'>日程时间</view>
+  <view class='dateRight'>
+    <view class='Select-time'>
+      <picker class='start' mode="date" value="{{startDate}}" start="2018-09-04" end="{{end}}" bindchange="startDateChange"  disabled='{{changeFlag == "1" ? false : true}}'>
+        <view class='start-text'>{{startDate}}</view>
+      </picker>
+    </view> 
+    <view class='Time-Bucket'>
+      <picker  data-index='{{sectionIndex}}' mode="time" bindchange='starTimeChange' value="{{dayTimeStart}}" start="08:00" end="22:00" class='compile-select-N1' disabled='{{changeFlag == "1" ? false : true}}'>{{dayTimeStart}}</picker>
+      <text>-</text>
+      <picker  data-index='{{sectionIndex}}' mode="time" bindchange='endTimeChange' value="{{dayTimeEnd}}" start="08:00" end="22:00" class='compile-select-N1' disabled='{{changeFlag == "1" ? false : true}}'>{{dayTimeEnd}}</picker>
+    </view>
+  </view>
+</view>
+<button type='default' class='settle-accounts' bindtap='subContent'>保  存</button>

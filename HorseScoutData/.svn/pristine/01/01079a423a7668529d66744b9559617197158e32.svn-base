@@ -1,0 +1,224 @@
+/* pages/Information/location/location.wxss */
+/* pages/Information/Height-Weight/Height-Weight.wxss */
+
+.Perfect-Information{
+  width: 750rpx;
+  line-height: 0;
+  margin: 0;
+  /* padding: 0; */
+  padding: 0 24rpx;
+  box-sizing: border-box;
+}
+
+.headline-Prompt{
+  /* width: 702rpx; */
+  width: 100%;
+   padding: 60rpx 0; 
+  height: 62rpx;
+  line-height: 31rpx;
+  font-size: 24rpx;
+  color: #000;
+  vertical-align: middle;
+}
+
+.headline-Prompt-blue{
+  color: #4DD0C8;
+  border-bottom: 1rpx solid #4DD0C8;
+}
+
+.Name-section-one{
+  width: 100%;
+}
+
+.Perfect-Information-Name{
+  width: 100%;
+  height: 770rpx;
+  display: flex;
+  justify-content: space-between; 
+  vertical-align: middle;
+  position: relative;
+  margin-bottom: 74rpx;
+}
+
+.Bargraph-yellow{
+  width: 4rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  background-color: #FDC54A;
+  position: absolute;
+  top: 40rpx;
+  left: -2rpx;
+}
+
+.Perfect-Information-Name-section{
+  width: 698rpx;
+  height: 770rpx;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Name-section-headline{
+  width: 698rpx;
+  height: 28rpx;
+  text-align: center;
+  line-height: 28rpx;
+  font-size: 28rpx;
+  color: #171717;
+  margin-top: 60rpx;
+  vertical-align: middle;
+}
+
+.Name-section-headline1{
+  width: 698rpx;
+  height: 28rpx;
+  text-align: center;
+  line-height: 28rpx;
+  font-size: 28rpx;
+  color: #171717;
+  margin-top: 90rpx;
+  vertical-align: middle;
+}
+
+.family-relation{
+  width: 698rpx;
+  height: 101rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.family-relation-one{
+  height: 34rpx;
+  text-align: center;
+  line-height: 34rpx;
+  font-size: 34rpx;
+  margin-top: 60rpx;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.family-relation-two{
+  height: 34rpx;
+  text-align: center;
+  line-height: 34rpx;
+  margin-left: 59rpx; 
+  margin-top: 60rpx;
+  font-size: 34rpx;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.family-relation-two-two{
+  height: 34rpx;
+  text-align: center;
+  line-height: 34rpx;
+  margin-left: 10rpx; 
+  margin-top: 60rpx;
+  font-size: 34rpx;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.relation{
+  font-size: 34rpx;
+  color: #333;
+}
+
+.section-pull-down{
+  width: 16rpx;
+  height: 16rpx;
+  line-height: 16rpx;
+  margin-left: 19rpx;
+  margin-top: 8rpx;
+  vertical-align: middle;
+}
+
+.section-options-have-headline{
+  width: 698rpx;
+  height: 24rpx;
+  line-height: 24rpx;
+  font-size: 24rpx;
+  color: #999;
+  text-align: center;
+  margin-top: 10rpx;
+}
+
+
+.section-options-have-headline-yellow{
+  font-size: 24rpx;
+  color: #FDC54A;
+}
+
+.section-options-have-input{
+  width: 400rpx;
+  height: 54rpx;
+  line-height: 54rpx;
+  text-align: center;
+  border-bottom: 1rpx solid #cbcbcb;
+  font-size: 34rpx;
+  margin-bottom: 10rpx;
+  color: #333;
+}
+
+.section-options-have-input-cbcbcb{
+  color: #999;
+  font-size: 34rpx;
+}
+
+
+.Perfect-Information-footer{
+  width: 702rpx;
+  height: 180rpx;
+  line-height: 180rpx;
+  vertical-align: middle;
+  display: flex;
+  justify-content: space-around;
+}
+
+.Perfect-Information-button-previous-step{
+  width: 200rpx;
+  height: 78rpx;
+  line-height: 78rpx;
+  vertical-align: middle;
+  text-align: center;
+  margin-top: 60rpx;
+  font-size: 30rpx;
+  color: #4DD0C8;
+  background-color: #fff;
+  border-radius: 40rpx;
+  border: 1rpx solid #4DD0C8;
+}
+
+.Perfect-Information-button-else{
+  width: 240rpx;
+  height: 78rpx;
+  line-height: 78rpx;
+  vertical-align: middle;
+  text-align: center;
+  margin-top: 60rpx;
+  font-size: 30rpx;
+  color: #4DD0C8;
+  background-color: #fff;
+  border-radius: 40rpx;
+  border: 1rpx solid #4DD0C8;
+}
+
+.Perfect-Information-button{
+  width: 200rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  vertical-align: middle;
+  text-align: center;
+  margin-top: 60rpx;
+  font-size: 30rpx;
+  color: #fff;
+  background-color: #4DD0C8;
+  border-radius: 40rpx;
+}

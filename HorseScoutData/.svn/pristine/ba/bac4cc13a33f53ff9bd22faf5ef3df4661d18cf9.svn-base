@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据小百科</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <script src="../build/flexible_css.debug.js"></script>
+    <script src="../build/flexible.debug.js"></script>
+    <link href="../build/base.debug.css" rel="stylesheet"/>
+    <link href="../build/Baike.debug.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="Baike">
+    <div class="Baike-header">
+        <div class="Switch"></div>
+    </div>
+    <div class="Baike-section"> </div>
+</div>
+<script src="../js/url-helper.js" type="text/javascript"></script>
+<script src="../js/zepto.min.js" type="text/javascript"></script>
+<!--<script src="../js/Baike.js" type="text/javascript"></script>-->
+<script>
+    var codes = GetQueryString("code");
+    getallItemInfo(codes);
+    $(".Switch-one-text").live('click',function (ev) {
+        $(this).addClass("active").parent().siblings().children(".Switch-one-text").removeClass('active');
+        var code = $(this).parent().attr('data-code');
+        var arrobj = [code];
+        itemGradeInfoByItemIdb(arrobj,1); //默认显示第一个
+    });
+    function getallItemInfo(codes) {
+        $.ajax({
+            type: 'post',
+            url: appurl + "/v1/help/get/commonInformationNames",
+            data: {},
+            dataType: "json",
+            success: function (res) {
+                if (res.code == '10000') {
+                    var arr = [];
+                    var dataHtmls = '';
+                    var data_responses = res.response;
+                    if (data_responses == null || data_responses.length == 0)
+                        return;
+
+                    for (var i = 0; i < data_responses.length; i++) {
+                        arr.push(data_responses[i].code)
+                        dataHtmls +="<div class='Switch-one' data-code='"+data_responses[i].code+"' data-name='"+data_responses[i].name+"'><p class='Switch-one-text'>"+data_responses[i].name+"</p></div>";
+                    }
+                    $(".Switch").html(dataHtmls);
+                    $(`[data-code=${codes}] .Switch-one-text`).addClass('active');
+                    $(".Baike-header").scrollLeft($(`[data-code=${codes}] .Switch-one-text`)[0].offsetLeft);
+                    itemGradeInfoByItemIdb(arr,codes);
+                }
+            },
+            error: function (data) {
+                console.log("请求失败，服务器错误")
+            }
+        })
+    }
+    function itemGradeInfoByItemIdb(arr,codes){
+        $.ajax({
+            type: 'post',
+            url: appurl + "/v1/help/get/commonInformation",
+            data: JSON.stringify({codes:arr}),
+            dataType: "json",
+            contentType: "application/json",
+            success(res){
+                if (res.code == '10000') {
+                    for(var i = 0; i<res.response.length;i++){
+                        if(codes ==1){
+                            $('.Baike-section').html(res.response[0].comtent)
+                        }else{
+                            if(res.response[i].code == codes){
+                                $('.Baike-section').html(res.response[i].comtent)
+                            }
+                        }
+                    }
+                }
+            },
+            error(res){
+                alert("失败")
+            }
+        })
+    }
+
+</script>
+</body>
+</html>

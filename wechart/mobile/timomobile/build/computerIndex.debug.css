@@ -1,0 +1,250 @@
+.app {
+  width: 9.2rem;
+  background-color: #fff;
+  padding: 0.786667rem 0.4rem 0.8rem 0.4rem;
+}
+
+.title {
+  height: 0.426667rem;
+  font-size: 0.4rem;
+  font-weight: bold;
+  font-family: PingFang-SC-Bold;
+  color: rgba(23,23,23,1);
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  margin-bottom: 1.013333rem;
+}
+
+.title b {
+  color: #EB3C37;
+  font-size: 0.4rem;
+  font-weight: bold;
+  font-family: PingFang-SC-Bold;
+}
+
+.title span {
+  font-size: 0.4rem;
+  font-weight: bold;
+  font-family: PingFang-SC-Bold;
+  color: rgba(23,23,23,1);
+}
+
+.q1 {
+  width: 100%;
+  /*height:680px;*/
+  /*overflow-y: scroll;*/
+}
+
+.q2 {
+  width: 1.613333rem;
+  height: 13.933333rem;
+  border-right: 0.013333rem solid #00C693;
+  position: relative;
+  margin-right: 0.2rem;
+}
+
+.q4,
+.q10,
+.q11,
+.q12,
+.q15,
+.q16 {
+  position: absolute;
+  font-size: 0.373333rem;
+  height: 0.373333rem;
+  line-height: 0.373333rem;
+  font-family: PingFang-SC-Regular;
+  color: rgba(51,51,51,1);
+  top: 0;
+  right: 0.24rem;
+}
+
+.q4 {
+  top: 0.4rem;
+}
+
+.q10 {
+  top: 2.786667rem;
+}
+
+.q11 {
+  top: 5.173333rem;
+}
+
+.q12 {
+  top: 7.56rem;
+}
+
+.q15 {
+  top: 9.946667rem;
+}
+
+.q16 {
+  top: 12.333333rem;
+}
+
+.q5 {
+  width: 0.253333rem;
+  height: 0.253333rem;
+  background: rgba(255,255,255,1);
+  border: 0.013333rem solid #00C693;
+  border-radius: 50%;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: -0.146667rem;
+  top: 0.453333rem;
+}
+
+.q14 {
+  border: 0.013333rem solid #CBCBCB;
+}
+
+.q7 {
+  top: 2.84rem;
+}
+
+.q8 {
+  top: 5.226667rem;
+}
+
+.q9 {
+  top: 7.613333rem;
+}
+
+.q17 {
+  top: 10rem;
+}
+
+.q18 {
+  top: 12.386667rem;
+}
+
+.q5 .q6 {
+  width: 0.133333rem;
+  height: 0.133333rem;
+  background-color: #00C693;
+  border-radius: 50%;
+}
+
+.q5 .q13 {
+  background-color: #CBCBCB;
+}
+
+.qqb {
+  width: 0.013333rem;
+  height: 0.453333rem;
+  position: absolute;
+  top: 0;
+  right: -0.013333rem;
+  background-color: #CBCBCB;
+}
+
+.q3 {
+  /*transform: translateY(-15px);*/
+  width: 7.04rem;
+}
+
+.q3Info {
+  width: 100%;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: flex-start;
+  margin-bottom: 0.773333rem;
+}
+
+.last {
+  margin-bottom: 0;
+}
+
+.itemBox {
+  text-align: center;
+  display: inline-block;
+  flex: 1;
+  cursor: pointer;
+}
+
+.img {
+  width: 1.066667rem;
+  height: 1.066667rem;
+  display: block;
+  margin: 0 auto;
+  border: 0.013333rem solid transparent;
+}
+
+.itemBox p {
+  font-size: 0.266667rem;
+  height: 0.293333rem;
+  line-height: 0.293333rem;
+  font-family: PingFang-SC-Bold;
+  color: rgba(153,153,153,1);
+  margin-top: 0.266667rem;
+}
+
+.form {
+  width: 100%;
+  margin-top: 1.2rem;
+}
+
+.formTitle {
+  padding-left: 0.6rem;
+  font-size: 0.4rem;
+  font-family: PingFang-SC-Bold;
+  color: rgba(23,23,23,1);
+  font-weight: bold;
+  margin-bottom: 0.4rem;
+}
+
+.input {
+  display: block;
+  width: 7.733333rem;
+  height: 0.8rem;
+  background: rgba(244,244,244,1);
+  border-radius: 0.133333rem;
+  margin: 0 auto 0.4rem auto;
+  border: 0.013333rem solid #CBCBCB;
+  font-size: 0.4rem;
+  font-family: PingFang-SC-Regular;
+  color: #333333;
+  padding-left: 0.253333rem;
+  caret-color: #00C693;
+}
+
+.active {
+  border: 0.013333rem solid #00C693;
+}
+
+.actives {
+  border: 0.013333rem solid #00C693;
+  border-radius: 0.133333rem;
+}
+
+.subBox {
+  width: 8rem;
+  height: 1.173333rem;
+  background: rgba(0,198,147,1);
+  border-radius: 0.586667rem;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.4rem auto 0.8rem auto;
+  cursor: pointer;
+}
+
+.subBorder {
+  width: 7.733333rem;
+  height: 0.906667rem;
+  border: 0.013333rem solid rgba(255,255,255,1);
+  border-radius: 0.453333rem;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.4rem;
+  font-family: PingFang-SC-Regular;
+  color: rgba(255,255,255,1);
+}

@@ -1,0 +1,21 @@
+/* pages/competition/competition-list.wxss */
+.app{
+  width:100%;
+}
+.imgBox{
+  width:100%;
+  text-align: center;
+  margin:20rpx 0;
+}
+.imgData{
+  width: 702rpx;
+  height: 394rpx;
+}
+.notmessage{
+  width: 100%;
+  text-align: center;
+  font-size: 24rpx;
+  color:rgba(51, 51, 51, 1);
+  margin-top: 20rpx;
+  padding-bottom: 30rpx;
+}

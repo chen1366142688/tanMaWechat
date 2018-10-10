@@ -1,0 +1,182 @@
+page{background: #ececec;font-size: 30rpx;font-family:PingFang-SC-Regular;
+color:rgba(51,51,51,1);}
+.center{
+  width: 700rpx;
+  padding: 0 25rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+}
+.box,.boxTwo{
+  margin-bottom: 20rpx;
+}
+.personalImgBox{
+  width: 700rpx;
+  padding: 0 25rpx;
+  height: 120rpx;
+  line-height: 120rpx;
+  margin-bottom:2rpx;
+  background: #fff;
+}
+.personalImgCat{
+  height: 88rpx;
+  line-height: 88rpx;
+  margin-bottom:2rpx;
+  background: #fff;
+}
+.userImg{
+  width:88rpx;
+  height:88rpx;
+  vertical-align: middle;
+}
+.right{
+  width:12rpx;
+  height:21rpx;
+  vertical-align: middle;
+  margin-left:25rpx;
+}
+.perName{
+  color:rgba(153,153,153,1);
+}
+.perNames {
+  display: inline-block;
+  height: 88rpx;
+  line-height: 88rpx;
+  vertical-align: middle;
+}
+.perNameGai{
+  color:rgba(153,153,153,1);
+  width: 324rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  vertical-align: middle;
+}
+.rightGai{
+  width:12rpx;
+  height:21rpx;
+  margin-left:25rpx;
+   vertical-align: middle;
+}
+.imgRigGai{
+  width: 361rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: right;
+}
+.location{
+  width: 505rpx;
+}
+.locations{
+  width: 469rpx;
+}
+.rightTT{
+  width: 11rpx;
+  height: 6rpx;
+}
+.bindNum,.security{
+  display: block;
+  font-size:24rpx;
+  font-weight: bold;
+  margin-bottom:20rpx;
+  width: 750rpx;
+  text-align: center;
+}
+.security{
+  margin:20rpx auto;
+}
+.phoneGreen{
+  width:12rpx;
+  height:22rpx;
+  vertical-align: middle;
+}
+.wechartGreen{
+  width:22rpx;
+  height:18rpx;
+  vertical-align: middle;
+}
+.model{
+  margin-left:25rpx;
+}
+.switch{
+  height: 88rpx;
+  line-height: 88rpx;
+}
+.van-footer{
+  display: block;
+  width: 750rpx;
+  text-align: center;
+  margin:20rpx 0 20rpx 0;
+  font-size:24rpx;
+  font-family:PingFang-SC-Regular;
+  color:rgba(153,153,153,1);
+}
+.switchBtn{
+  width:200rpx;
+  height:60rpx;
+  line-height: 60rpx;
+  border:1rpx solid #00C693;
+  border-radius: 5rpx;
+}
+.open,.close{
+  width:100rpx;
+  height:60rpx;
+  text-align: center;
+  color: #00C693;
+}
+.active{
+  background:  #00C693;
+  color: #fff;
+}
+.radio-group{
+  margin-left:93rpx;
+}
+.radio{
+  margin-right:40rpx;
+  color: #999999;
+}
+.busYo{ 
+color:#00C693;
+}
+.ziwo{
+  display: inline-block;
+  width: 467rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  vertical-align: middle;
+}
+/* .radiocheck{
+  margin-left:75rpx;
+} */
+.picker{
+  width: 450rpx;
+}
+.pakeValue{
+  width: 250rpx;
+  text-align: right;
+}
+.xuans{
+  position: relative;
+}
+.xuan{
+  position: absolute;
+  color: #999;
+  right:20rpx;
+}
+.footerBtn{
+  width:702rpx;
+height:88rpx;
+line-height: 88rpx;
+background:rgba(0,198,147,1);
+border-radius: 44rpx; 
+margin:60rpx auto;
+}
+.footerBtnNei{
+  width:694rpx;
+height:80rpx;
+border:2rpx dotted rgba(228,228,228,1);
+border-radius: 40rpx ;
+text-align: center;
+color: #fff;
+font-size:30rpx;
+}

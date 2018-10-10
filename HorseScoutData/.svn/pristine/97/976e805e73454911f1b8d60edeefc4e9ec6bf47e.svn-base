@@ -1,0 +1,21 @@
+<!--pages/My/Binding-Information/Binding-Information.wxml-->
+<view class='Binding-Information'>
+  <view class='ID-number'>
+    <input class='ID-number-input' maxlength="23" name="userName" placeholder="请输入您孩子的完整身份证号" placeholder-class='input-cbcb'></input>
+    <image class='ID-number-search' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/search.png'></image>
+  </view>
+  <view class='Name-age'>
+    <view class='Name-age-section'>
+      <view class='Name-age-left'>
+        <view class='Name-age-left-Name'>孩子姓名</view>
+        <image class='Name-age-left-gender' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/My/man.png'></image>
+      </view>
+      <view class='Name-age-right'>15岁 | 成都 | 所在学校</view>
+    </view>
+  </view>
+  <view class='Prompt'>
+    <view class='Prompt-text'>您搜索的孩子尚未在平台登记，可到</view>
+    <view class='Prompt-button'>这里</view>
+    <view class='Prompt-text'> 完成添加。</view>
+  </view>
+</view>

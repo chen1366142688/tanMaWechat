@@ -1,0 +1,72 @@
+/* pages/my/alter-phone/alter-phone.wxss */
+
+page {
+  background-color: #ececec;
+}
+
+.alter-Name {
+  width: 750rpx;
+  height: 88rpx;
+  margin-top: 20rpx;
+  background-color: #fff;
+}
+
+.input1 {
+  width: 600rpx;
+  height: 88rpx;
+  color: #333;
+  font-size: 30rpx;
+  float: left;
+  margin-left: 20rpx;
+  background-color: #fff;
+}
+
+.Send {
+  width: 88rpx;
+  height: 44rpx;
+  margin-top: 22rpx;
+  margin-right: 20rpx;
+  float: right;
+  background-color: #007587;
+  border-radius: 22rpx;
+  text-align:center;
+line-height:44rpx;
+
+}
+
+.Send-img {
+  width: 29rpx;
+  height: 22rpx;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  padding-right: 20rpx;
+  padding-left: 20rpx;
+  padding-top: 5rpx;
+}
+
+@media screen and (max-width: 320px) {
+  .Send-img {
+    width: 29rpx;
+    height: 22rpx;
+    margin: 0 auto;
+    margin-left: 40%;
+    margin-bottom: 14%;
+    background-repeat: no-repeat;
+  }
+}
+
+.input {
+  width: 730rpx;
+  height: 88rpx;
+  color: #333;
+  font-size: 30rpx;
+  margin-left: 20rpx;
+  background-color: #fff;
+}
+
+.alter-Password {
+  width: 750rpx;
+  height: 88rpx;
+  border-top: 1px solid #e4e4e4;
+  background-color: #fff;
+}

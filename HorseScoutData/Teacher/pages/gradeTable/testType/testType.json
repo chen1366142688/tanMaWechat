@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "test-picker": "../../../components/test-picker/test-picker",
+    "test-sign": "../../../components/test-sign/test-sign"
+  }
+}

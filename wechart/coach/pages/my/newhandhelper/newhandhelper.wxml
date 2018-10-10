@@ -1,0 +1,7 @@
+<view class='new-handa' wx:for="{{newfist}}" wx:key="*this">
+  <view class="new-titlea">{{item.typeName}}</view>
+  <!--帮助大类-->
+  <navigator class='new-helpera new-helperc' wx:for="{{item.helpDetail}}" wx:for-item="item2" wx:key="unique" 
+  data-data="{{item2}}" url='../Help-particulars/Help-particulars?helpDetailId={{item2.helpDetailId}}'
+  hover-class="other-navigator-hover">{{item2.title}} </navigator>
+</view>

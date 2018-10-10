@@ -1,0 +1,31 @@
+{
+  "navigationBarTitleText": "教练",
+  "tabBar": {
+    "color": "#171718",
+    "selectedColor": "#171718",
+    "backgroundColor": "#F9F9F9",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/keChen/keChen-index/keChen-index",
+        "text": "课程"
+      },
+      {
+        "pagePath": "pages/changGuan/c-Venue/c-Venue",
+        "text": "场馆"
+      },
+      {
+        "pagePath": "pages/techer/techer-index/techer-index",
+        "text": "教练"
+      },
+      {
+        "pagePath": "pages/new/new-index/news-index",
+        "text": "消息"
+      },
+      {
+        "pagePath": "pages/my/my-order/my-order",
+        "text": "我的"
+      }
+    ]
+  }
+}

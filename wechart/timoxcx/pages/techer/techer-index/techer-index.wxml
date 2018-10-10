@@ -1,0 +1,97 @@
+<view wx:if="{{show}}" class='coach-suosou'>
+  <input type='text' value='{{coachNickName}}' bindinput="bindKeywordInput"
+ class='caoch-suo' maxlength='20' placeholder-class='coach-sou' placeholder='输入您要找的教练名称'></input>
+  <image class='coach-search' bindtap="queryByName" src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/sousuo.png'></image>
+</view>
+<view wx:if="{{show}}" class='fenLei' >
+  <view class='fenleiOne' wx:for="{{itemList}}" wx:for-index="itemIndex"  >
+    <view class='fenleiOne-info' bindtap="selectItem" data-id="{{item.itemId}}" wx:if="{{itemIndex < 7 || (itemList.length==8) }}"  >
+      <image class='itemImg' src='{{item.itemPhotoAddress}}'></image>
+      <text class='c-zuqiu'>{{item.itemName}}</text>
+    </view>
+    <view class='fenleiOne-info' wx:if="{{itemIndex > 6 && itemIndex < 8 && itemList.length > 8 }}" >
+      <image class='itemImg' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/van-more.png'></image>
+      <text class='c-zuqiu'>更多</text>
+    </view>
+  </view>
+  <view class='fenleiOne' >
+    <view class='fenleiOne-info' >
+      <image class='itemImg' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/van-more.png'></image>
+      <text class='c-zuqiu'>更多</text>
+    </view>
+  </view>
+</view>
+<scroll-view wx:if="{{!show}}" class='fenLeiX' style='width:723rpx; white-space: nowrap; display: flex' scroll-x='true'>
+    <view class='fenleiOne-scroll' bindtap="selectItem" data-id="{{item.itemId}}" wx:for="{{itemList}}" >
+        <image class='itemImg-scroll' src='{{item.itemPhotoAddress}}'></image>
+      <text class='c-zuqiu-scroll'>{{item.itemName}}</text>
+    </view>
+</scroll-view>
+<view class='select-top-box'>
+  <view bindtap="selectLine" data-type="a" class='select-line {{selectAuth?"select-line-select":""}}'>平台认证<image class='line_img' src='{{selectAuth?upImg:downwardImg}}' /></view>
+  <view bindtap="selectLine" data-type="l" class='select-line {{selectL?"select-line-select":""}}'>接受学员<image class='line_img' src='{{selectL?upImg:downwardImg}}' /></view>
+  <view bindtap="selectLine" data-type="p" class='select-line {{selectP?"select-line-select":""}}'>人气排名<image class='line_img' src='{{selectP?upImg:downwardImg}}' /></view>
+  <view bindtap="selectLine" data-type="c" class='select-line {{selectC?"select-line-select":""}}'>开课数<image class='line_img' src='{{selectC?upImg:downwardImg}}' /></view>
+</view>
+<view class='show-line-parent' wx:if="{{thisList.length > 0}}" >
+   <view class='show-line' bindtap="selectLineItem" data-id="{{item.id}}" style='color:{{item.id==thisId?"#5BD6B2":"#999999"}}' wx:for="{{thisList}}"  >{{item.name}}<image  wx:if="{{item != null && item.id==thisId}}" class='line_img_show'src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/sure.png' ></image> </view>
+   <view class='line-bottom' ></view>
+</view>
+<scroll-view style='top: {{listTop}}rpx;' class='scroll-view-box' bindscroll='scroll' bindscrolltoupper='scrolltoupper' bindscrolltolower="searchScrollLower" scroll-y>
+  <view class='coach-jian' wx:for="{{coachList}}" bindtap="toDetailPage" data-coach="{{item.coachId}}" data-user="{{item.userId}}" >
+    <view class='coach-jiao-one clearfloat'>
+      <view class='coach-jiao-oneL fl'>
+        <image class='jiao-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/locationGay.png'></image>
+        <text class='jiao-text'>{{item.provinceName}}-{{item.cityName}}</text>
+      </view>
+      <view class='coach-jiao-oneL fr'>
+        <image class='qiu-img' src='{{item.itemPhotoAddress}}'></image>
+        <text class='qiu-text'>{{item.itemName}}</text>
+      </view>
+    </view>
+    <view class='cocah-pas'>
+      <view class='imgBox iLblock'>
+        <image class='coach-userImg' src='{{item.avatarUrl}}'></image>
+      </view>
+      <view class='coach-txt-item iLblock'>
+        <view class='nameBox clearfloat'>
+          <view class='name-left fl'>
+            <text class='name-jiao iLblock'>{{item.nickName}}</text>
+            <image class='manImg' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/{{item.gender == 2?"gril":"man"}}.png'></image>
+            <image class='coach-ren' wx:if="{{item.authStatus == '1'}}" src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/renzheng.png'></image>
+          </view>
+          <view class='name-left fr'>
+            <image class='coach-levev' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/level.png'></image>
+            <text class='coach-level-txt iLblock'>{{item.athleteGrade}}</text>
+          </view>
+        </view>
+        <view class='coach-jianJie'>
+          <text class='coach-str'>教练简介：</text>
+          {{item.description}}
+        </view>
+        <view class='coach-more-foot clearfloat'>
+          <view class='coach-more-le fl'>
+            <view class=' iLblock'>
+              <image class='men' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/red-keChen.png'></image>
+              <text class='menNum'>{{item.totalItemNum}}门</text>
+            </view>
+            <view class='coach-lie iLblock'>
+              <image class='qi' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/numbers.png'></image>
+              <text class='qiNum'>{{item.totalCourseNum}}期</text>
+            </view>
+            <view class=' iLblock'>
+              <image class='jibie' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/red-level.png'></image>
+              <text class='jibieNum'>{{item.itemStudentGrade }}</text>
+            </view>
+          </view>
+          <view class='coach-more-rg fr'>
+            <image class='coach-hot' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/red-hot.png'></image>
+            <text class='coach-ted iLblock'>{{item.popularity}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <text wx:if="{{showFooter}}" class='van-footer'>已显示所有教练</text>
+  <text wx:if="{{coachList.length == 0}}" class='van-footer not-info'>没有查询到任何数据哦！</text>
+</scroll-view>

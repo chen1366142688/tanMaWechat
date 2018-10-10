@@ -1,0 +1,76 @@
+/* pages/my/set/set.wxss */
+page {
+  background-color: #ececec;
+}
+
+.Set {
+  width: 750rpx;
+}
+
+.Set-versions {
+  width: 750rpx;
+  height: 88rpx;
+  margin-top: 20rpx;
+  line-height: 88rpx;
+  background-color: #fff;
+  border-top: 1rpx solid #fff;
+}
+
+.Set-sort {
+  width: 690rpx;
+  height: 88rpx;
+  float: left;
+  margin-left: 20rpx;
+  line-height: 88rpx;
+  color: #333;
+  font-size: 30rpx;
+}
+
+.next {
+  width: 11rpx;
+  height: 21rpx;
+  line-height: 88rpx;
+  margin-right: 20rpx;
+}
+
+.Set-sort1 {
+  width: 400rpx;
+  height: 88rpx;
+  float: left;
+  margin-left: 20rpx;
+  line-height: 88rpx;
+  color: #333;
+  font-size: 30rpx;
+}
+
+.Set-text {
+  width: 300rpx;
+  height: 88rpx;
+  float: right;
+  color: #333;
+  font-size: 30rpx;
+  text-align: right;
+  margin-right: 28rpx;
+}
+
+.Set-Edition{
+  width: 750rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  background-color: #fff;
+  border-top: 1rpx solid #e4e4e4;
+}
+
+.switchover{
+  width: 750rpx;
+  margin-top: 20rpx;
+  padding: 0rpx;
+}
+
+.Set-Switchover {
+  width: 750rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  background-color: #fff;
+  border-top: 1rpx solid #e4e4e4;
+}

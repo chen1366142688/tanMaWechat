@@ -1,0 +1,257 @@
+/* pages/my/Subordinate-coach/Subordinate-coach.wxss */
+
+.Subordinate-coach {
+  width: 750rpx;
+  line-height: 0;
+ 
+}
+
+.coach-Single {
+  width: 750rpx;
+  height: 220rpx;
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+
+.more{
+  font-size: 20rpx;
+  color: rgba(51, 51, 51, 1);
+}
+
+.Single-header {
+  width: 702rpx;
+  height: 57rpx;
+  line-height: 57rpx;
+  padding: 0 24rpx;
+  border-bottom: 1rpx solid #e4e4e4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.coach-jiao-one {
+  height: 57rpx;
+  line-height: 57rpx;
+  vertical-align: middle;
+}
+
+.coach-jiao-two {
+  height: 57rpx;
+  vertical-align: middle;
+  display: flex;
+}
+ .coach-jiao-one-item{
+  margin-left:10rpx;
+  display:flex;
+  align-items:center;
+} 
+.jiao-img {
+  width: 20rpx;
+  height: 20rpx;
+  vertical-align: middle;
+  margin-right: 10rpx;
+}
+
+.jiao-text {
+  display: inline-block;
+  font-size: 20rpx;
+  color: rgba(51, 51, 51, 1);
+  vertical-align: middle;
+}
+
+.qiu-text {
+  display: inline-block;
+  font-size: 20rpx;
+  color: rgba(51, 51, 51, 1);
+  vertical-align: middle;
+}
+
+.qiu-img {
+  width: 30rpx;
+  height: 30rpx;
+  vertical-align: middle;
+  margin-right: 8rpx;
+}
+
+
+.Single-section{
+  width: 702rpx;
+  height: 162rpx;
+  line-height: 162rpx;
+  padding: 0 24rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Head-Portraits{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.section-center {
+  width: 582rpx;
+  height: 120rpx;
+  vertical-align: middle;
+}
+
+.section-center-one{
+  width: 557rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+  padding-left: 25rpx;
+  margin-top: 18rpx;
+  vertical-align: middle;
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-center-one-left{
+  height: 36rpx;
+  line-height: 36rpx;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+}
+
+.one-left-name{
+  max-width: 120rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 34rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.one-left-gender{
+  width: 24rpx;
+  height: 24rpx;
+  margin-left: 10rpx;
+  vertical-align: middle;
+}
+
+.one-left-attestation{
+  width: 80rpx;
+  height: 30rpx;
+  font-size: 22rpx;
+  text-align: center;
+  color: #00b6d6;
+  border: 1rpx solid #00b6d6;
+  vertical-align: middle;
+  align-items: center;
+  margin-left: 10rpx;
+  border-radius: 5rpx;
+  line-height: 32rpx;
+}
+
+.section-center-one-right{
+  height: 34rpx;
+  line-height: 34rpx;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+}
+
+.one-right-gender{
+  width: 24rpx;
+  height: 24rpx;
+  margin-right: 10rpx;
+  vertical-align: middle;
+}
+
+.one-right-name{
+  max-width: 180rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 24rpx;
+  color: #333;
+}
+
+.section-center-two{
+  width: 557rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+  padding-left: 25rpx;
+  margin-top: 18rpx;
+  vertical-align: middle;
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-center-two-left{
+  height: 36rpx;
+  line-height: 36rpx;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+}
+
+.two-left-name{
+  width: 220rpx;
+  font-size: 24rpx;
+  color: #333;
+  vertical-align: middle;
+}
+
+.two-left-name-red{
+  color: #E85571;
+}
+
+
+.section-center-two-right{
+  height: 34rpx;
+  line-height: 34rpx;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+}
+
+.two-right-gender{
+  width: 24rpx;
+  height: 24rpx;
+  margin-right: 10rpx;
+  vertical-align: middle;
+}
+
+.two-right-name{
+  font-size: 24rpx;
+  color: #E85571;
+  vertical-align: middle;
+}
+
+/*添加教练  */
+
+.add-coach{
+  width: 702rpx;
+  height: 120rpx;
+  vertical-align: middle;
+  background-color: #fff;
+  margin-left: 24rpx;
+  margin-top: 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-coach-inset{
+  width: 682rpx;
+  height: 100rpx;
+  line-height: 90rpx;
+  vertical-align: middle;
+  font-size: 30rpx;
+  border:1rpx dotted #007587;
+  color: #007587;
+  text-align: center;
+}
+
+.add-coach-inset-add{
+  font-size: 42rpx;
+}

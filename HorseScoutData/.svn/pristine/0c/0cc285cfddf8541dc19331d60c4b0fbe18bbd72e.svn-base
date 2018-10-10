@@ -1,0 +1,26 @@
+<!--pages/Information/Selection-school/Selection-school.wxml-->
+<view class='Selection-school'>
+  <view class='Selection-school-headline'>
+    <view class='headline-school'>
+      <view class='relation'>小学</view>
+      <image class='section-pull-down' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/pull-down.png'></image>
+    </view>
+    <view class='headline-Name'>
+      <view class='Bargraph'></view>
+      <input class='section-options-have-input' maxlength="30" placeholder='请输入学校名称' placeholder-class='section-options-have-input-cbcbcb'></input>
+    </view>
+    <view class='headline-search'>
+      <image class='search-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/search.png'></image>
+    </view>
+  </view>
+
+  <view class='section-school'>
+    <view class='section-school-one'>成都某某小学</view>
+    <view class='section-school-one'>成都某某小学</view>
+    <view class='section-school-one'>成都某某小学</view>
+    <view class='section-school-one'>成都某某小学</view>
+    <view class='section-school-one'>成都某某小学</view>
+    <view class='section-school-one'>成都某某小学</view>
+    <view class='section-school-one'>成都某某小学</view>
+  </view>
+</view>

@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+  height: 100vh;
+  padding: 0;
+  background-image: url(../images/count-down.png);
+  background-size: 100% 100%;
+}
+
+@media only screen and (min-width: 992px) {
+  body {
+    margin: 0;
+    height: 100vh;
+    padding: 0;
+    background-image: url(../images/count-down.png);
+    background-size: 100%;
+  }
+}

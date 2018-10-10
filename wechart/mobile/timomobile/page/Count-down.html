@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>倒计时</title>
+		<link rel="stylesheet" href="../css/Count-down.css" />
+	</head>
+	<body>
+		<div class="count-down">
+			<div class="headline">
+				<img src="../images/headline.png" alt="" class="headline-img"/>
+			</div>
+			<div class="headline-T">
+				<p class="header-text">探马运动上线倒计时</p>
+	</div>
+		<div class="container">
+			<div id="timer">
+				<div class="days">
+					<div class="numbers" id="dayData" ></div>
+				</div>
+				<div class="hours">
+					<div class="numbers" id="hoursData"></div>
+				</div>
+			</div>
+		</div>
+		<div class="hint">
+            	<p class="hint-text">“探马运动”是基于青少年体质健康监测的一款专业的针对青少年体育培训的线上服务平台，打造线上平台对接教练与用户，
+            		提高教练课程曝光率和学员课程管理效率。同时让青少年和家长0距离接触教练和体育培训场馆，便于体育培训课程了解和选择。
+            		促进青少年体育培训行业的发展，提高青少年体质健康，让您的孩子爱上运动！</p>
+            </div>
+		</div>
+		<script>
+        const fourthOfJuly = new Date("September 19, 2018 15:15:00").getTime();
+        const today = new Date().getTime();
+        const diff = fourthOfJuly - today;
+        let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        document.getElementById("dayData").innerHTML =days;
+        document.getElementById("hoursData").innerHTML =hours;
+
+        let timer = setInterval(function() {
+
+            // get today's date
+            const today = new Date().getTime();
+
+            // get the difference
+            const diff = fourthOfJuly - today;
+
+            // math
+            let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            
+            // display
+            document.getElementById("dayData").innerHTML =days;
+            document.getElementById("hoursData").innerHTML =hours;
+            
+        }, 60000*10);
+    </script>
+	</body>
+</html>

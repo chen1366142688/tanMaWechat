@@ -1,0 +1,94 @@
+$(function () {
+    let code = GetQueryString("code");
+    var gradesList = {};
+    var gradesitemPhoto = [];
+    getallItemInfo();
+    // $('.Switch-one').click(function (e) {
+    //     var index = $(this).index();
+    //     console.log(index);
+    //     $('.Switch-one-text').eq(!index).css({'border-bottom':'1px solid #e4e4e4','color':'#999999'});
+    //     $('.Switch-one-text').eq(index).css({'border-bottom':'1px solid #4DD0C8','color':'#4DD0C8'});
+    //     var code = $(this).attr('data-code');
+    //     var name = $(this).attr('data-name');
+    //     console.log(code);
+    //     console.log(name);
+    //     itemGradeInfoByItemIdb(code, name); //默认显示第一个
+    // })
+
+});
+
+/*
+获取所有有效的科目简要信息
+*/
+function getallItemInfo() {
+    $.ajax({
+        type: 'post',
+        url: appurl + "/v1/help/get/commonInformationNames",
+        data: {},
+        dataType: "json",
+        success: function (res) {
+             console.log(res);
+            if (res.code == '10000') {
+                var arr = [];
+                var dataHtmls = [];
+                var data_responses = res.response;
+                if (data_responses == null || data_responses.length == 0)
+                    return;
+
+                for (var i = 0; i < data_responses.length; i++) {
+                    arr.push(data_responses[i].code)
+                    dataHtmls.push("<div class='Switch-one'  data-code=" + data_responses[i].code + " data-name = " + data_responses[i].name + ">");
+                    if (i == 0) {
+                        dataHtmls.push("<p class='Switch-one-text' style=\"border-bottom: 1px solid #4DD0C8; color: #4DD0C8;\">" + data_responses[i].name + "</p>");
+                    } else {
+                        dataHtmls.push("<p class='Switch-one-text' style=\"border-bottom: 1px solid #e4e4e4; color: #999999;\">" + data_responses[i].name + "</p>");
+                    }
+                    dataHtmls.push("</div>");
+
+                }
+                $('.Switch-one-text').eq(0).css("border-bottom","1px solid #e4e4e4","color","#999");
+                $(".Switch").html(dataHtmls.join(""));
+                itemGradeInfoByItemIdb(arr);
+            }
+
+        },
+        error: function (data) {
+            console.log("请求失败，服务器错误")
+        }
+    })
+}
+
+//请求接口 接口名字是，通过科目id查询科目的评级说明
+function itemGradeInfoByItemIdb(arr) {
+    var obj = {}
+    arr.forEach((item,index)=>{obj[index] = item})
+    console.log(obj)
+    console.log(arr)
+    $.ajax({
+        type: 'POST',
+        // headers:{"Content-Type": "application/json"},
+        url: appurl + "/v1/help/get/commonInformation",
+        data: {
+            "codes":JSON.stringify(arr)
+        },
+        traditional: true,
+        dataType: 'JSON',
+        success: function (res) {
+            if (res.code == '10000') {
+                var result = res.response;
+                var article = result.content;
+                // console.log(data_responses);
+                if (data_responses == null || data_responses.length == 0)
+                    return;
+                for (var i = 0; i < data_responses.length; i++) {
+                    dataHtmlsa.push("<div class='BaikeText' style='clearfloat'><div class='Baike-section-one-text-p'>" + data_responses[i].comtent  + "</div></div>");
+                }
+                $('.Baike-section').html(res.response.content);
+                Baike-section.innerHTML;
+            }
+        },
+        error: function (data) {
+            console.log("请求失败，服务器错误")
+        }
+    })
+}

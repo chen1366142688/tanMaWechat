@@ -1,0 +1,65 @@
+<!--pages/gradeTable/gradeTableIndex/gradeTableIndex.wxml-->
+<view class='gradeTable'>
+  <view class='header'>
+    <view class='header-img'>
+      <image src='{{teacherInfo.imgUrl}}'></image>
+    </view>
+    <view class='header-info'>
+      <view class='header-top'>
+        <text>{{teacherInfo.name}} </text>
+        <image src='{{teacherInfo.sex == 1 ? "../../../image/man2.png" : "../../../image/woman2.png"}}'></image>
+        <text class='teacherpost'>{{teacherInfo.position}}</text>
+      </view>
+      <view class='header-bot'>
+        <text>{{teacherInfo.province}}</text>-
+        <text>{{teacherInfo.city}}</text>
+        <text class='symbol'>/</text>
+        <text>{{teacherInfo.scholl}}</text>
+      </view>
+    </view>
+  </view>
+  <!-- 列表 -->
+  <view class='main'>
+    <view class='section'>
+      <picker bindchange="typeChange" value="{{testIndex}}" mode="selector" range="{{testType}}" class='section1'>
+        <view class="picker">
+          <text>{{testType[testIndex]}}</text>
+          <image src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/teacher/pickerpull.png'></image>
+        </view>
+      </picker>
+      <picker bindchange="classChange" value="{{classIndex}}" mode="selector" range="{{newClassList}}" class='section2'>
+        <view class="picker">
+          {{newClassList[classIndex]}}
+          <image src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/teacher/pickerpull.png'></image>
+        </view>
+      </picker>
+      <picker bindchange="gradeChange" value="{{gradeIndex}}" mode="selector" range="{{classGrade}}" class='section3'>
+        <view class="picker">
+          {{classGrade[gradeIndex]}}
+          <image src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/teacher/pickerpull.png'></image>
+        </view>
+      </picker>
+    </view>
+    <view class='maininfo'>
+      <view class='testlist' wx:for="{{testList}}" wx:key="{{index}}" bindtap='getGradeDetail' data-testInfo='{{item}}'>
+        <view class='left'>
+          <image class='testimg' wx:if="{{!isCheck}}" src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/teacher/img{{item.schoolTestId}}.png'></image>
+          <image class='testimg' wx:else src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/teacher/img_lock.png'></image>
+          <text class='testname'>{{item.schoolItemName}}</text>
+        </view>
+        <view class='right'>
+          <text class='yet'>已录入： {{item.testStudentCount}}</text> |
+          <text class='not'>未录入： {{item.studentCount - item.testStudentCount}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='teststate' wx:if="{{testList.length != 0}}">
+    <view>
+      本班数据提交状态
+      <image src='../../../image/{{isCheck? "open.png" : "close.png"}}' bindtap='checkState'></image>
+    </view>
+    <text>说明：数据处于已提交状态后，则无法再次编辑。如需要编辑，则需要将上面提交状态关闭。</text>
+  </view>
+</view>
+

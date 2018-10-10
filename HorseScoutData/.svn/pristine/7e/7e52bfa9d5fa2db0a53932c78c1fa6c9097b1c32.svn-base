@@ -1,0 +1,53 @@
+/* pages/My/Alter-Name/Alter-Name.wxss */
+
+.Alter-Name{
+  width: 750rpx;
+  height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.Alter-Name-input{
+ width: 100%;
+ height: 100rpx;
+ line-height: 100rpx;
+ vertical-align: middle;
+ font-size: 28rpx;
+ color: #333;
+ margin-top: 20rpx;
+ background-color: #fff;
+ padding: 0 44rpx;
+ box-sizing: border-box;
+}
+
+.input-cbcb{
+  color: #999;
+}
+
+.Submit-button{
+  width: 100%;
+  padding: 0 24rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+.Submit-button-section{
+  width: 702rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0 24rpx;
+  box-sizing: border-box;
+  justify-content: center;
+  background-color: #4DD0C8;
+  font-size: 30rpx;
+  color: #fff;
+  border-radius: 40rpx;
+  position: fixed; 
+  bottom: 60rpx;
+}

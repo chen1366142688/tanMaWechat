@@ -1,0 +1,48 @@
+<view class="myIndex-header">
+  <view class='header-top'>
+    <image class='header-editor' src='{{url}}myEditor.png'></image>
+  </view>
+  <view class='header-content clearfloat'>
+    <view class='fl imgBox'>
+      <view class='imgBg'>
+        <image class='myHeadImg' src='{{url}}userImg.png'></image>
+        <image class='myManOrGril' src='{{url}}myManWrite.png'></image>
+      </view>
+    </view>
+    <view class='fr contentBox'>
+      <view class='content-top'>
+        <text class='userName iLblock'>李华</text>
+        <text class='category iLblock'>成人</text>
+        <image class='phoneImg' src='{{url}}myPhoneMini.png'></image>
+        <text class='phoneTxt iLblock'>136******12</text>
+      </view>
+      <view class='content-bottom'>
+        <view class='content_bomItem iLblock' wx:for="{{coteGry}}">
+          <text class='Lanqiu iLblock'>{{item.name}}</text>
+          <text class='level iLblock'>{{item.value}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='header-chirden'>
+    <view class='fl money'>
+      <view class='money-top'><text class='moneyNumber'>23.00</text><text class='yuan'>元</text></view>
+      <view class='money-bottom'>课程剩余</view>
+    </view>
+    <view class='fr store'>
+      <view class='money-top'><text class='moneyNumber green'>6545</text><text  class='yuan green'>点</text></view>
+      <view class='money-bottom'>我的积分</view>
+    </view>
+  </view>
+</view>
+<view class='my-item {{index==2 ? "last" : index == 5 ? "lasting" : ""}}' wx:for="{{cost}}" >
+  <view class='item-Left'>
+    <image class='itemone {{item.name=="系统通知" ? "tong" : ""}} {{index==2 ? "now" : ""}}' src='{{item.value}}'></image>
+    <text class='itemOneTxt'>{{item.name}}</text>
+  </view>
+  <view class='item-Right'>
+    <text class='mask' wx:if="{{item.name=='系统通知'}}">8</text>
+    <image class='totast' src='{{url}}next.png'></image>
+  </view>
+  <image class='server' wx:if='{{index == 5}}' src='{{url}}myService.png'></image>
+</view>

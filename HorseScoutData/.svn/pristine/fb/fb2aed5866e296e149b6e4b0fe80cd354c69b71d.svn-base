@@ -1,0 +1,56 @@
+<!--pages/My/Personal-Information/Personal-Information.wxml-->
+<view class='Personal-Information'>
+  <view class='Personal-Information-head-portrait'>
+    <image class='head-portrait' src='{{onselfObj.avatarUrl || defaultImgUrl}}'></image>
+    <view class='Alter-head-portrait' bindtap='modifyImg'>头像更改</view>
+  </view>
+  <view class='Personal-Information-section'>
+    <view class='Personal-Information-section-Name' bindtap='modifyName'>
+      <view class='Personal-Information-section-Name-left'>我的昵称</view>
+      <view class='Personal-Information-section-Name-right'>
+        <view class='section-Name-right'>{{onselfObj.nickName }}</view>
+        <image class='section-Name-img' src='{{imgUrl}}My/next-page.png'></image>
+      </view>
+    </view>
+    <view class='Personal-Information-section-Name'>
+      <view class='Personal-Information-section-Name-left'>监护人类型</view>
+      <picker class='Personal-Information-section-Name-right' bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <view class='Name-right-section'>
+          <view class='section-Name-right'>{{array[index]}}</view>
+          <image class='section-Name-img-two' src='{{imgUrl}}My/unfold.png'></image>
+        </view>
+      </picker>
+    </view>
+    <view class='Personal-Information-section-Name'>
+      <view class='Personal-Information-section-Name-left'>所在城市</view>
+      <view class='Personal-Information-section-Name-right-two'>
+        <view class='Name-right-one'>
+          <picker class='section-Name-right-two' bindchange="bindPickerChange1" value="{{index1}}" range="{{array1}}">{{array1[index1]}}</picker>
+          <image class='section-Name-img-two' src='{{imgUrl}}My/unfold.png'></image>
+        </view>
+        <view class='Name-right-two'>
+          <picker class='section-Name-right-two' bindchange="bindPickerChange2" value="{{index2}}" range="{{array2}}">{{array2[index2]}}</picker>
+          <image class='section-Name-img-two' src='{{imgUrl}}My/unfold.png'></image>
+        </view>
+      </view>
+    </view>
+    <view class='Bind-Account'>账号绑定</view>
+    <view class='Personal-Information-section-Name'>
+      <view class='Personal-Information-section-Name-left'>手机(登录账号)</view>
+      <view class='Personal-Information-section-Name-right' bindtap='alterphone'>
+        <view class='section-Name-right'>{{onselfObj.phoneNum }}</view>
+        <image class='section-Name-img' src='{{imgUrl}}My/next-page.png'></image>
+      </view>
+    </view>
+    <view class='Bind-Account'>安全设置</view>
+    <view class='Personal-Information-section-Name'>
+      <view class='Personal-Information-section-Name-left'>登录密码</view>
+      <view class='Personal-Information-section-Name-right' bindtap='alterpassword'>
+        <view class='section-Name-right'>修改</view>
+        <image class='section-Name-img' src='{{imgUrl}}My/next-page.png'></image>
+      </view>
+    </view>
+
+    <view class='log-out' bindtap='sinOut'>退出登录 > </view>
+  </view>
+</view>

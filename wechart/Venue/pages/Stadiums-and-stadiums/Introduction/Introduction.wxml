@@ -1,0 +1,26 @@
+<!-- <view id='app'>
+  <button class='Introduction' open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">
+  <image class='venue-logo' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coach/Introduction/venue-Logo.png'></image>
+  <image class='venue-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coach/Introduction/venue-img.png'></image>
+  <button  class='venue-text'></button>
+</button>
+</view> -->
+<!-- <view id='app'>
+  <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">
+    <image class='log' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/welcome/Venue-Logo.png'></image>
+    <image class='play' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/welcome/venue-img.png'></image>
+    <image class='information' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/welcome/slogan-stadium.png'></image>
+    <view class='footer'>
+      <view class='into'>进入</view>
+    </view>
+  </button>  
+</view> -->
+
+<view id='app'>
+  <button open-type="getUserInfo" hover-class='none' bindgetuserinfo="bindGetUserInfo">
+    <view class='goInto'>点击进入</view>
+    <image class='tanma' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coach/Introduction/tanma.png'></image>
+  </button>  
+</view>
+
+

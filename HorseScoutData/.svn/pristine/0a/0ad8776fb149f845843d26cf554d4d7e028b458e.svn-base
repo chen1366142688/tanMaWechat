@@ -1,0 +1,88 @@
+// pages/Patriarch/Register/Register.js
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    trainingcourse: false,
+    noticecoursetab: true,
+    coursepersona: 'headline-border',
+    coursepersonbnotice: '',
+  },
+  //点击切换tabbar
+  Register(e) {
+    var val = e.currentTarget.dataset.val;
+    var that = this;
+    if (val == 1) {//这是用户点击训练课程
+      that.setData({
+        coursepersona: 'headline-border',
+        coursepersonbnotice: '',
+        trainingcourse: false,
+        noticecoursetab: true,
+      })
+    } else if (val == 2) {//这是用户点击开课通知
+      that.setData({
+        coursepersona: '',
+        coursepersonbnotice: 'headline-border',
+        trainingcourse: true,
+        noticecoursetab: false,
+      })
+    }
+  },
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+  
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+  
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+  
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+  
+  }
+})

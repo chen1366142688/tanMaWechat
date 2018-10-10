@@ -1,0 +1,356 @@
+/* pages/my/Accretion-coach/Accretion-coach.wxss */
+.Accretion-coach{
+
+}
+
+.Seek {
+  width: 750rpx;
+  height: 80rpx;
+  padding-top: 15rpx;
+  background: #ececec;
+  z-index: 2;
+  border-bottom: 1rpx solid #e4e4e4;
+}
+
+.venue-seek {
+  width: 702rpx;
+  height: 58rpx;
+  line-height: 58rpx;
+  border: 1rpx solid #007587;
+  border-radius: 30rpx;
+  margin-left: 26rpx;
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(153, 153, 153, 1);
+  display: flex;
+  background-color: #fff;
+}
+
+.venue-seek-Click {
+  width: 150rpx;
+  height: 58rpx;
+  line-height: 56rpx;
+  z-index: 9;
+  vertical-align: middle;
+}
+
+.caoch-suo {
+  width: 678rpx;
+  height: 60rpx;
+  margin: 0 auto;
+  padding-left: 24rpx;
+  font-size: 30rpx;
+  font-family: PingFang-SC-Regular;
+  color: #333;
+}
+
+.coach-sou {
+  font-size: 30rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(153, 153, 153, 1);
+}
+
+.coach-search {
+  width: 30rpx;
+  height: 30rpx;
+  vertical-align: middle;
+  padding-left: 62rpx;
+}
+
+.coach-section {
+  width: 750rpx;
+  line-height: 0;
+}
+
+.coach-Single {
+  width: 750rpx;
+  height: 100%;
+  background-color: #fff;
+  margin-bottom: 20rpx; 
+}
+
+ .studentListBox{
+  
+} 
+
+.Single-header {
+  width: 702rpx;
+  height: 57rpx;
+  line-height: 57rpx;
+  padding: 0 24rpx;
+  border-bottom: 1rpx solid #e4e4e4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.coach-jiao-one {
+  height: 57rpx;
+  line-height: 57rpx;
+  vertical-align: middle;
+}
+.coach-jiao-one-item{
+  margin-left:10rpx;
+}
+.coach-jiao-two {
+  height: 57rpx;
+  line-height: 57rpx;
+  vertical-align: middle;
+  display: flex;
+}
+
+.jiao-img {
+  width: 20rpx;
+  height: 20rpx;
+  vertical-align: middle;
+  margin-right: 10rpx;
+}
+
+.jiao-text {
+  display: inline-block;
+  font-size: 20rpx;
+  color: rgba(51, 51, 51, 1);
+  vertical-align: middle;
+}
+
+.qiu-text {
+  display: inline-block;
+  font-size: 20rpx;
+  color: rgba(51, 51, 51, 1);
+  vertical-align: middle;
+}
+
+.qiu-img {
+  width: 30rpx;
+  height: 30rpx;
+  vertical-align: middle;
+  margin-right: 10rpx;
+}
+
+
+.Single-section{
+  width: 702rpx;
+  height: 100%;
+  padding: 0 24rpx;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Head-Portraits{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius:50%;
+  margin-top: 20rpx;
+  vertical-align: middle; 
+}
+
+.section-center {
+  width: 582rpx;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.section-center-one{
+  width: 557rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+  padding-left: 25rpx;
+  margin-top: 38rpx;
+  vertical-align: middle;
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-center-one-left{
+  height: 36rpx;
+  line-height: 36rpx;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+}
+
+.one-left-name{
+  max-width: 120rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 34rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.one-left-gender{
+  width: 24rpx;
+  height: 24rpx;
+  margin-left: 10rpx;
+  vertical-align: middle;
+}
+
+.one-left-attestation{
+  width: 80rpx;
+  height: 30rpx;
+  line-height: 32rpx;
+  font-size: 22rpx;
+  text-align: center;
+  color: #00b6d6;
+  border: 1rpx solid #00b6d6;
+  vertical-align: middle;
+  align-items: center;
+  margin-left: 10rpx;
+  border-radius: 5rpx;
+}
+
+.section-center-one-right{
+  height: 34rpx;
+  line-height: 34rpx;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+}
+
+.one-right-gender{
+  width: 24rpx;
+  height: 24rpx;
+  margin-right: 10rpx;
+  vertical-align: middle;
+}
+
+.one-right-name{
+  max-width: 180rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 24rpx;
+  color: #333;
+}
+
+.section-center-two{
+  width: 557rpx;
+  height: 100%;
+  line-height: 34rpx;
+  padding-left: 25rpx;
+  margin-top: 18rpx;
+  vertical-align: middle;
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-center-two-left{
+  height: 100%;
+  line-height: 36rpx;
+  font-size: 24rpx;
+  color: #999;
+  vertical-align: middle;
+  margin-bottom: 32rpx;
+}
+
+
+
+
+
+
+
+/*modal*/
+.modal{
+  background-color:rgba(99, 97, 98, .8);
+  position: fixed;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+}
+.closeModal{
+  width:80rpx;
+  height:80rpx;
+  position: fixed;
+  bottom:120rpx;
+  right:335rpx;
+}
+.modalContent{
+  width: 550rpx;
+  height:620rpx;
+  padding:65rpx 41rpx;
+  background:rgba(255,255,255,1);
+  border-radius:30rpx;
+  margin:188rpx auto 68rpx auto;
+  background-image: url('http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachblockbg.png'); 
+  background-size: cover;
+}
+.title{
+  text-align: center;
+  font-size:48rpx;
+  font-weight: bold;
+  font-family:PingFang-SC-Bold;
+  color:rgba(255,255,255,1);
+  padding-bottom:120rpx;
+}
+.content{
+  font-size:30rpx;
+  font-family:PingFang-SC-Regular;
+  color:rgba(51,51,51,1);
+  line-height:45rpx;
+}
+.sendCode{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top:65rpx;
+}
+.phoneInput{
+  width: 320rpx;
+  font-size:30rpx;
+  border-bottom:2rpx solid rgba(0,117,135,1); 
+}
+.placeCode{
+  font-size:30rpx;
+  font-family:PingFang-SC-Regular;
+  color:rgba(153,153,153,1);
+}
+.sendCodes{
+  width:180rpx;
+  height:44rpx;
+  line-height: 44rpx;
+  border:1rpx solid rgba(0,117,135,1);
+  border-radius:22rpx;
+  font-size:24rpx;
+  font-family:PingFang-SC-Regular;
+  color:rgba(0,117,135,1);
+  text-align: center;
+}
+.btnGlrup{
+  display: flex;
+  justify-content: center;
+  margin-top:80rpx;
+}
+.cencel{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 220rpx;
+  height:70rpx;
+  border:1rpx solid rgba(0,117,135,1);
+  border-radius:35rpx;
+  font-size:34rpx;
+  font-family:PingFang-SC-Regular;
+  color:rgba(0,117,135,1);
+  background-color: #fff;
+}
+.confrim{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 220rpx;
+  height:70rpx;
+  border:1rpx solid rgba(255,255,255,1);
+  border-radius:35rpx;
+  font-size:34rpx;
+  font-family:PingFang-SC-Regular;
+  color:rgba(255,255,255,1);
+  background-color: rgba(0,117,135,1);
+  margin-left: 24rpx;
+}

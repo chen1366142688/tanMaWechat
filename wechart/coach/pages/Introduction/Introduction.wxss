@@ -1,0 +1,315 @@
+/* page{background-color: #fff;}
+#app{
+  width: 750rpx;
+} 
+button{
+  background-color: #ffffff;
+  width: 750rpx;
+  height: 100vh;
+  padding-left:0;
+  padding-right:0;
+}
+button::after {
+  border: none;
+}
+
+.tanma{
+  width: 750rpx;
+  height: 95rpx;
+  line-height: 95rpx;
+  vertical-align: middle;
+  position: fixed;
+  bottom: 119rpx;
+  margin: 0 auto;
+  display: flex;
+}
+.goInto{
+  width:160rpx;
+  height:50rpx;
+  line-height: 50rpx;
+  background: #fff;
+  color: #333;
+  text-align: center;
+  border:1rpx solid #e4e4e4;
+  border-radius: 30rpx;
+  position: absolute;
+  top: 80rpx;
+  right:30rpx;
+  font-size: 24rpx;
+} */
+
+/*  注册样式 */
+
+page {
+  background-color: #fff;
+}
+
+.Register {
+  width: 750rpx;
+  height: 419rpx;
+  background-color: #007587;
+  padding: 40rpx 24rpx;
+  box-sizing: border-box;
+}
+
+.Register-section {
+  width: 702rpx;
+  height: 870rpx;
+  box-shadow: 0rpx 3rpx 3rpx 3rpx rgba(193, 193, 193, 0.35);
+  margin: 0 auto;
+  background-color: #fff;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 5rpx;
+}
+
+.section-img {
+  width: 100%;
+  height: 362rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-img image {
+  width: 180rpx;
+  height: 180rpx;
+}
+
+.SingleSelection {
+  width: 100%;
+  height: 508rpx;
+  padding: 0 55rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-SingleSelection {
+  width: 100%;
+  line-height: 100rpx;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.user-typead {
+  width: 28rpx;
+  float: left;
+  height: 28rpx;
+}
+
+.van-screen-one {
+  width: 526rpx;
+  float: left;
+  margin-left: 20rpx;
+  font-size: 28rpx;
+  color: #333;
+  font-family: PingFang-SC-Regular;
+}
+
+.checkted {
+  color: #007587;
+}
+
+.check {
+  border-color: #007587;
+}
+
+.section-Name {
+  width: 100%;
+  height: 128rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Name-typead {
+  width: 28rpx;
+  float: left;
+  height: 28rpx;
+}
+
+.Name-bulletsimga {
+  width: 28rpx;
+  float: left;
+  height: 20rpx;
+}
+
+.pull-unfoldxial1 {
+  width: 22rpx;
+  height: 10rpx;
+  display: inline-block;
+  margin-left: 21rpx;
+}
+
+.pull-unfoldxial2-bg {
+  width: 40rpx;
+  height: 29rpx;
+  background: url('http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coach/public/unfoldxiala.png') scroll 0px 10rpx no-repeat;
+  background-size: 22rpx 10rpx;
+  display: inline-block;
+}
+
+.unfoldxia01-projecta {
+  display: inline-block;
+  width: 100%;
+}
+
+.bindUnfoldChange-proa1 {
+  display: inline-block;
+  width: 91%;
+  color: #999;
+}
+
+.bindUnfoldChange-proa2ver {
+  display: inline-block;
+  width: 91%;
+  color: #333;
+}
+
+.Name-input {
+  width: 526rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 30rpx;
+  border-bottom: 1rpx solid #007587;
+}
+
+.section-phone {
+  width: 100%;
+  height: 133rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30rpx;
+}
+
+.phone-typead {
+  width: 19rpx;
+  height: 30rpx;
+}
+
+.section-input {
+  width: 526rpx;
+  height: 128rpx;
+  display: flex;
+  align-items: center;
+}
+
+.phone-input {
+  width: 100%;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 30rpx;
+  border-bottom: 1rpx solid #007587;
+}
+
+.phone-input1 {
+  width: 320rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 30rpx;
+  border-bottom: 1rpx solid #007587;
+}
+
+.phone-button {
+  width: 160rpx;
+  height: 58rpx;
+}
+
+.section-verification-code {
+  width: 100%;
+  height: 133rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.code-typead {
+  width: 24rpx;
+  height: 20rpx;
+}
+
+.btna {
+  width: 160rpx;
+  height: 44rpx;
+  margin-top: 10rpx;
+  border-radius: 22rpx;
+  background-color: #fff;
+  border: 1rpx solid #007587;
+  color: #007587;
+  line-height: 43rpx;
+  font-size: 20rpx;
+}
+
+/*  section-button  */
+
+.section-button {
+  width: 100%;
+  margin-top: 75rpx;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.waikuang {
+  background-color: #007587;
+  width: 600rpx;
+  height: 88rpx;
+  border-radius: 44rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.withdraw-deposit {
+  width: 580rpx;
+  height: 68rpx;
+  display: flex;
+  align-items: center;
+  font-family: PingFang-SC-Regular;
+  color: rgba(255, 255, 255, 1);
+  justify-content: center;
+  border: 1rpx solid rgba(255, 255, 255, 0.3);
+  border-radius: 34rpx;
+  background-color: #007587;
+}
+
+.button-one {
+  width: 100%;
+  height: 100rpx;
+  font-size: 30rpx;
+  line-height: 100rpx;
+  padding: 0 85rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.one-X {
+  height: 100rpx;
+  line-height: 100rpx;
+  float: left;
+  text-align: center;
+  color: #007587;
+}
+
+.one-C {
+  height: 100rpx;
+  line-height: 100rpx;
+  float: right;
+  text-align: center;
+  color: #999;
+}
+
+.schoolu_b {
+  font-size: 25rpx;
+  height: 90rpx;
+  line-height: 60rpx;
+  display: block;
+}

@@ -1,0 +1,56 @@
+<view class="myIndex-header" style='padding-bottom:{{paddingBottom}}rpx'>
+  <view class='header-top' bindtap='edtiorMy'>
+    <image class='header-editor' src='{{url}}myEditor.png'></image>
+  </view>
+  <view class='header-content clearfloat'>
+    <view class='fl imgBox' bindtap='edtiorMy'>
+      <view class='imgBg'>
+        <image class='myHeadImg' src='{{userInfo.avatarUrl?userInfo.avatarUrl+"?x-oss-process=image/resize,m_mfit,h_80,w_80":""}}' mode="aspectFill" ></image>
+        <image class='myManOrGril' wx:if="{{userInfo.gender==1}}" src='{{url}}myManWrite.png'></image>
+        <image class='myManOrGril' wx:if="{{userInfo.gender==2}}" src='{{url}}girl.png'></image>
+      </view>
+    </view>
+    <view class='fr contentBox'>
+      <view class='content-top' bindtap='edtiorMy'>
+        <text class='userName iLblock textOver'>{{userInfo.nickName}}</text>
+        <!-- <text class='category iLblock'>{{userInfo.studentType==1?"成人":"青少年"}}</text> -->
+        <!-- <image class='phoneImg' src='{{url}}myPhoneMini.png'></image> -->
+        <!-- <text class='phoneTxt iLblock'>{{userInfo.phoneNo}}</text> -->
+      </view>
+      <view class='content-topi' bindtap='edtiorMy'>
+        <!-- <text class='userName iLblock textOver'>{{userInfo.nickName}}</text> -->
+        <!-- <text class='category iLblock'>{{userInfo.studentType==1?"成人":"青少年"}}</text> -->
+        <image class='phoneImg' src='{{url}}myPhoneMini.png'></image>
+        <text class='phoneTxt iLblock'>{{userInfo.phoneNo}}</text>
+      </view>
+      <view class='content-bottom'>
+        <view class='content_bomItem iLblock' wx:for="{{userInfo.gradeVos}}" wx:key="itemName" bindtap='myLevel'>
+          <text class='Lanqiu iLblock'>{{item.itemName}}</text>
+          <text class='level iLblock'>L{{item.itemGrade}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- <view bindtap='headerChirden' class='header-chirden'>
+    <view class='fl money'>
+      <view class='money-top'><text class='moneyNumber'>{{userInfo.spareCost}}</text><text class='yuan'>元</text></view>
+      <view class='money-bottom'>剩余课程金额</view>
+    </view>
+    <view class='fr store'>
+      <view class='money-top'><text class='moneyNumber green'>0</text><text  class='yuan green'>点</text></view>
+      <view class='money-bottom'>我的积分</view>
+    </view>
+  </view> -->
+</view>
+<view class='my-item {{index==2 ? "last" : index == 5 ? "lasting" : ""}}' wx:for="{{cost}}" wx:key="name" data-costName="{{item.name}}" bindtap='mycurriculum'>
+  <view class='item-Left'>
+    <image class='itemone {{item.name=="系统通知" ? "tong" : ""}} {{index==2 ? "now" : ""}}' src='{{item.value}}'></image>
+    <text class='itemOneTxt'>{{item.name}}</text>
+  </view>
+  <view class='item-Right'>
+    <text class='mask' wx:if="{{item.name=='系统通知' && notice > 0}}" >{{notice}}</text>
+    <image class='totast' src='{{url}}next.png'></image>
+  </view>
+  <!-- <image class='server' wx:if='{{index == 5}}' src='{{url}}myService.png'></image> -->
+</view>
+  <image class='van-stickab' bindtap='telephone' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/customer-service1.png'></image>

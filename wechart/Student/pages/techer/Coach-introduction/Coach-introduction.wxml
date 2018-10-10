@@ -1,0 +1,142 @@
+<view class="intro-head">
+
+  <image class='van-sticka' bindtap='returnhome' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/index.png'></image>
+  <image class='van-stickab' bindtap='telephone' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/customer-service1.png'></image>
+
+  <view class='intro-header clearfloat'>
+    <view class='intro-heder-le fl' wx:for="{{coachDetail.certificateList}}" wx:for-item="item" wx:key="*this">
+      <image class='intro-heder-lanqiu' src='{{item.itemPhotoAddress}}'></image>
+      <text class='intro-basketball iLblock'>{{item.itemName}}</text>
+    </view>
+    <view class='intro-heder-le fr'>
+      <image class='intro-heder-share' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/green-share.png'></image>
+      <button class='intro-share iLblock' data-name="shareBtn" open-type="share" style='color:#00C693;background-color:#FFF;line-height:0;padding-left:0;padding-right:0;margin-right:0;overflow:inherit;'>分享</button>
+    </view>
+  </view>
+  <!--第一行-->
+  <view class='intro-top clearfloat'>
+    <view class='intro-imgBox fl'>
+      <image class='intro-userImg' bindtap='imgPreviewCoach' src='{{coachDetail.coachBaseInfo.avatarUrl?coachDetail.coachBaseInfo.avatarUrl+"?x-oss-process=image/resize,m_mfit,h_120,w_120":""}}' mode="aspectFill" ></image>
+    </view>
+    <view class='intro-itemBox fl'>
+      <view class='intro-itemOne'>
+        <image class='intro-renz' wx:if="{{coachDetail.coachBaseInfo.authState=='1'}}" src='{{url}}renzheng.png'></image>
+        <text class='intro-itemName iLblock' wx:if="{{coachDetail.coachBaseInfo.authState=='1'}}">{{coachDetail.coachBaseInfo.nickName}}</text>
+        <text class='intro-itemName intro-itemName-all iLblock' wx:else>{{coachDetail.coachBaseInfo.nickName}}</text>
+      </view>
+      <!--第二行-->
+      <view class='intro-itemTwo' wx:if="{{levelList.length>0 && coachDetail.coachBaseInfo.authState=='1'}}">
+        <image class='intro-itemChenWei' src='{{url}}red-level.png'></image>
+        <text class='intro-chenWeiTxt' wx:for="{{levelList}}" wx:key="*this" decode='true'>{{item.athleteGrade?item.athleteGrade:''}}&nbsp;{{item.coachGrade?item.coachGrade:''}}</text>
+      </view>
+      <view class='intro-itemTwo' wx:else>
+        <!-- <image class='intro-itemChenWei' src='{{url}}red-level.png'></image>
+        <text class='intro-chenWeiTxt'>暂无</text> -->
+      </view>
+      <!--第三行-->
+      <view class='intro-hotBox'>
+        <image class='intro-img' src='{{url}}red-hot.png'></image>
+        <text class='intro-Txt'>{{coachDetail.coachBaseInfo.popularity?coachDetail.coachBaseInfo.popularity:0}}</text>
+        <image class='intro-levels' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/student/grade-red.png'></image>
+        <text class='intro-power'>{{coachDetail.coachBaseInfo.itemStudentGrade? coachDetail.coachBaseInfo.itemStudentGrade:'暂无' }}</text>
+        <image class='intro-location' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/student/position-red.png'></image>
+        <text class='intro-locationText'>{{coachDetail.provinceName? coachDetail.provinceName:'' }}-{{coachDetail.cityName? coachDetail.cityName:''}}</text>
+      </view>
+      <!--第四行-->
+      <!-- <view class='intro-level'>
+        <image class='intro-img' src='{{url}}red-hot.png'></image>
+        <text class='intro-Txt'>{{coachDetail.coachBaseInfo.popularity?coachDetail.coachBaseInfo.popularity:0}}</text>
+        <image class='intro-levels' src='{{url}}red-level.png'></image>
+        <text class='intro-power'>{{coachDetail.coachBaseInfo.itemStudentGrade? coachDetail.coachBaseInfo.itemStudentGrade:'暂无' }}</text>
+        <image class='intro-location' src='{{url}}red-location.png'></image>
+        <text class='intro-locationText'>{{coachDetail.provinceName? coachDetail.provinceName:'' }}-{{coachDetail.cityName? coachDetail.cityName:''}}</text>
+      </view> -->
+    </view>
+  </view>
+</view>
+<!--横向滚动-->
+<!-- 教练简介图片  -->
+<view class='scroolBox' wx:if="{{coachDetail.sportsPhone.length >0}}">
+  <scroll-view class='intro-scroll' scroll-x='true' scroll-with-animation='true'>
+    <image class='intro-scrollImg' data-url="{{item.photoAddress}}" bindtap='imgPreview' wx:for="{{coachDetail.sportsPhone}}" lazy-load="ture" src="{{item.photoAddress+'?x-oss-process=image/resize,m_mfit,h_140,w_200/quality,q_100'}}" mode="aspectFill" ></image>
+  </scroll-view>
+</view>
+<view class='van-itemInfo'>
+  <view class='van-ke {{van}}' bindtap='kecheng' data-val='1'>简介</view>
+  <view class='van-jie {{vans}}' bindtap='kecheng' data-val='2'>学员评价</view>
+</view>
+<!--教练介绍-->
+<view class='coachInfrmation' wx:if='{{guanJie}}'>
+  <view class='coachA'>
+    {{coachDetail.coachBaseInfo.described? coachDetail.coachBaseInfo.described:'该教练尚未提供简介' }}
+  </view>
+  <view wx:for="{{coachDetail.certificateList}}" wx:key="*this">
+    <text class='coach-certificate' wx:if="{{item.photos.length>0}}">相关证书</text>
+    <image class='certificate' wx:if="{{item.photos.length>0}}" wx:for="{{item.photos}}" wx:key="*this" wx:for-item="itemName" src='{{itemName.photoAddress}}' mode="widthFix"></image>
+  </view>
+</view>
+<!--学员评价-->
+<view class='van-pask clearfloat' wx:for="{{commentList}}" wx:key="studentUserId" bindtap="toUserDetailPage" wx:if='{{guanKe}}' data-user="{{item.studentUserId}}">
+  <view class='van-pask-le fl'>
+    <view class='van-pask-leTop'>
+      <image class='student-pask-img' src='{{item.avatarUrl+"?x-oss-process=image/resize,m_mfit,h_50,w_50"}}' mode="aspectFill"></image>
+      <view class='student-NR'>
+        <text class='student-pask-name iLblock'>{{item.nickName}}</text>
+        <text class='student-itempask iLblock'>{{item.itemName}} {{item.maxMember}}人班</text>
+        <text class='pask-daBan iLblock'>{{item.className}}</text>
+      </view>
+    </view>
+    <view class='van-pask-bottom'>
+      {{item.evaluateContent? item.evaluateContent:'' }}
+    </view>
+  </view>
+  <view class='van-pask-rg fr'>
+    <image class='can-good' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/{{item.evaluate=="1"?"good":item.evaluate=="2"?"okHei":"badRed" }}.png'></image>
+    <text class='can-text' style='color:{{item.evaluate=="1"?"#00C693":item.evaluate=="2"?"#333333":"#E82433" }}'>{{item.evaluate=='1'?"好评":item.evaluate=='2'?"中评":"差评" }}</text>
+  </view>
+</view>
+<view wx:if="{{!showFooter && guanKe}}" class='more-comment' bindtap="showMoreComment">
+  {{commentList.length==0?"无":"点击查看更多评价。。。"}}
+</view>
+<view wx:elif="{{commentList.length==0 && guanKe}}" class='more-comment'>
+  无
+</view>
+<view class='thatKe' wx:if="{{Heycurriculum}}">
+  <view class='thatStudent'>
+    <text class='coat-str fl'></text> 
+    <text class='taKe fl'>TA的课程</text>
+  </view>
+  <view class='guangKe'>
+    <scroll-view bindscrolltolower="bindscrolltolower" scroll-y style='height:{{scollHeight}}rpx'>
+      <view class='guanKeItem' wx:for="{{classList}}" wx:key="*this" bindtap='toClassDetail' data-classid='{{item.classId}}'>
+        <view class='guanKeItInfo clearfloat'>
+          <view class='fl nima textOver'>
+            <text class='iLblock classItemName'>{{item.itemName}} {{item.maxMember }}人班</text>
+            <text class='iLblock classTitle textOver'>{{item.className }}</text>
+          </view>
+          <view class='fr'>
+            <text class=' iLblock classRem'>RMB</text>
+            <text class='iLblock classRemNum'>{{item.courseCostTotal/100}}</text>
+          </view>
+        </view>
+        <view class='guanKeItInfoTwo'>
+          <view>{{item.courseCount}}课时</view>
+          <!-- <view>{{item.courseCount}}课时/{{item.courseTime/10}}h</view> -->
+        </view>
+        <view class='guanKeItInfoThree'>
+          <image class='userIsman iLblock' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/studentNewImg/c8.png'></image>
+          <text class='txt-B iLblock'>{{item.classCoach}}</text>
+          <image class="userNumber iLblock" src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/studentNewImg/c41.png'></image>
+          <text class='userMum iLblock'>{{item.lastAttendPeriod?item.lastAttendPeriod:0 }}节</text>
+          <image class='userIsmane iLblock' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/student/grade-red.png'></image>
+          <text class='userLevelColor iLblock'>{{item.itemStudentGrade}}</text>
+          <image class='hotTwo iLblock' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/studentNewImg/c39.png'></image>
+          <text class='hotTwoText'>{{item.popularity?item.popularity:0}}</text>
+        </view>
+        <image class='manLe' wx:if="{{item.signUpOver==1}}" src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/zhang.png'></image>
+      </view>
+      <text class='van-footer'>————已全部显示————</text>
+    </scroll-view>
+
+  </view>
+</view>

@@ -1,0 +1,168 @@
+<!--pages/my/coach-period/coach-period.wxml-->
+<view class='coach-period'>
+  <view class='period-header'>
+    <view class='header-filtrate'>
+      <view class='filtrate-headline'>筛选时段：</view>
+      <picker class='start' mode="date" value="{{startDate}}" start="2018-01-01" end="{{end}}" bindchange="startDateChange">
+        <view class='start-text'>{{startDate}}</view>
+        <image class='start-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/unfold.png'></image>
+      </picker>
+      <picker class='over' mode="date" value="{{endDate}}" start="2018-01-01" end="{{end}}" bindchange="endDateChange">
+        <view class='over-text'>{{endDate}}</view>
+        <image class='over-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/unfold.png'></image>
+      </picker>
+    </view>
+    <view class='period-money'>
+      <view class='period-text'>共
+        <text class='period-text-blue'>{{totalCourseCount}}</text> 课时</view>
+      <view class='period-text'>共
+        <text class='period-text-red'>{{totalCourseFee/100}}</text> 元</view>
+    </view>
+  </view>
+  <view class='coach-section-list'>
+    <view class='list-header'>
+      <view class='list-header-ac {{coursepersona}}' bindtap='kecheng' data-val='1'>课程列表</view>
+      <view class='list-header-ac {{coursepersonbnotice}}' bindtap='kecheng' data-val='2'>教练列表</view>
+    </view>
+
+    <!-- 课程列表 -->
+    <view class='curriculum-list' hidden='{{trainingcourse}}'>
+      <scroll-view scroll-y bindscrolltolower="classMore" style='height:{{height}}px;' class='curriculum-list-section'>
+        <!-- <view class='list-section-one'>
+          <view class='list-section-one-header'>
+            <view class='header-headline-x'>羽毛球 12人班</view>
+            <view class='header-section-f'>羽毛球大班课程标题羽毛球大班课程标题羽毛球求奇求求气球</view>
+          </view>
+          <view class='list-section-one-se'>
+            <view class='coach-Class-fees'>课时费：500元/课时</view>
+            <view class='coach-period-money-chang'>共
+              <text class='period-money-blue'>23</text> 课时 (
+              <text class='period-money-red'>432</text> 元 )</view>
+          </view>
+        </view> -->
+
+        <view class='list-section-two clearfloat' wx:for="{{classPeriodList}}" wx:for-item="classPeriod" wx:key="index">
+          <view class='list-section-one-header' bindtap='classDetail' data-classid='{{classPeriod.classId}}' data-openstate='{{classPeriod.openState}}'>
+            <view class='header-headline-x'>{{classPeriod.itemName}} {{classPeriod.maxMember}}人班</view>
+            <view class='header-section-f'>{{classPeriod.className}}</view>
+          </view>
+          <view class='list-section-one-se' bindtap='classDetail' data-classid='{{classPeriod.classId}}' data-openstate='{{classPeriod.openState}}'>
+            <view class='coach-Class-fees'>课时费：{{classPeriod.courseCoast/100}}元/课时</view>
+            <view class='coach-period-money-chang'>共
+              <text class='period-money-blue'>{{classPeriod.courseCount}}</text> 课时 (
+              <text class='period-money-red'>{{classPeriod.courseFee/100}}</text> 元 )</view>
+          </view>
+          <view class='list-section-one-footer' wx:if="{{classPeriod.list && classPeriod.openState}}">
+            <view class='one-footer-one' wx:for="{{classPeriod.list}}" wx:for-item="classCoach" wx:key="index">
+              <view class='coach-Class-fees'>教练：{{classCoach.nickName}}</view>
+              <view class='coach-period-money-chang'>共
+                <text class='period-money-blue'>{{classCoach.courseCount}}</text> 课时 (
+                <text class='period-money-red'>{{classCoach.courseFee/100}}</text> 元 )</view>
+            </view>
+            
+          </view>
+        </view>
+
+        <!-- <view class='list-section-one'>
+          <view class='list-section-one-header'>
+            <view class='header-headline-x'>羽毛球 12人班</view>
+            <view class='header-section-f'>羽毛球大班课程标题羽毛球大班课程标题羽毛球求奇求求气球</view>
+          </view>
+          <view class='list-section-one-se'>
+            <view class='coach-Class-fees'>课时费：500元/课时</view>
+            <view class='coach-period-money-chang'>共
+              <text class='period-money-blue'>23</text> 课时 (
+              <text class='period-money-red'>432</text> 元 )</view>
+          </view>
+        </view> -->
+        <view class='van-over' wx:if="{{!classHaveData}}">没有更多数据了</view>
+      </scroll-view>
+    </view>
+
+    <!-- 教练列表  -->
+    <view class='coach-list' hidden='{{noticecoursetab}}'>
+      <scroll-view scroll-y bindscrolltolower="coachMore" style='height:{{height}}px;' class='coach-list-section'>
+        <!-- <view class='coach-list-section-one'>
+          <view class='Single-section'>
+            <image class='Head-Portraits' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/headportrait.png'></image>
+            <view class='section-center'>
+              <view class='section-center-one'>
+                <view class='section-center-one-left'>
+                  <view class='one-left-name'>张翔</view>
+                  <image class='one-left-gender' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/man-blue.png'></image>
+                  <view class='one-left-attestation'>已认证</view>
+                </view>
+              </view>
+              <view class='section-center-two'>
+                <view class='two-right-name'>手机号：12345689712</view>
+                <view class='coach-period-money'>共
+                  <text class='period-money-blue'>23</text> 课时 (
+                  <text class='period-money-red'>432</text> 元 )</view>
+              </view>
+            </view>
+          </view>
+        </view> -->
+
+         <view class='coach-list-section-two clearfloat' wx:for="{{coachPeriodList}}" wx:for-item="coachPeriod" wx:key="index">
+          <view class='Single-section' bindtap='coachDetail' data-coachuserid='{{coachPeriod.coachUserId}}' data-openstate='{{coachPeriod.openState}}'>
+            <image class='Head-Portraits' src='{{coachPeriod.headUrl}}'></image>
+            <view class='section-center'>
+              <view class='section-center-one'>
+                <view class='section-center-one-left'>
+                  <view class='one-left-name'>{{coachPeriod.nickName}}</view>
+                  <image class='one-left-gender' wx:if="{{coachPeriod.gender =='1'}}" src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/man-blue.png'></image>
+                  <image class='one-left-gender' wx:if="{{coachPeriod.gender =='2'}}" src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/woman-blue.png'></image>
+                  <view class='one-left-attestation' wx:if="{{coachPeriod.coachAuthStatus == '1'}}">已认证</view>
+                </view>
+              </view>
+              <view class='section-center-two'>
+                <view class='two-right-name'>手机号：{{coachPeriod.phoneNo}}</view>
+                <view class='coach-period-money'>共
+                  <text class='period-money-blue'>{{coachPeriod.courseCount}}</text> 课时 (
+                  <text class='period-money-red'>{{coachPeriod.courseFee/100}}</text> 元 )</view>
+              </view>
+            </view>
+          </view>
+          <view class='list-section-two-footer' wx:if="{{coachPeriod.list && coachPeriod.openState}}">
+            <view class='one-footer-one' wx:for="{{coachPeriod.list}}" wx:for-item="coachClass" wx:key="index">
+              <view class='coach-Class-fees-bb'>{{coachClass.itemName}} | {{coachClass.maxMember}}人班 | {{coachClass.className}}</view>
+              <view class='coach-period-money-chang'>共
+                <text class='period-money-blue'>{{coachClass.courseCount}}</text> 课时 (
+                <text class='period-money-red'>{{coachClass.courseFee/100}}</text> 元 )</view>
+            </view>
+            
+          </view>
+        </view>
+
+         <!-- <view class='coach-list-section-one'>
+          <view class='Single-section'>
+            <image class='Head-Portraits' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/headportrait.png'></image>
+            <view class='section-center'>
+              <view class='section-center-one'>
+                <view class='section-center-one-left'>
+                  <view class='one-left-name'>张翔</view>
+                  <image class='one-left-gender' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/man-blue.png'></image>
+                  <view class='one-left-attestation'>已认证</view>
+                </view>
+              </view>
+              <view class='section-center-two'>
+                <view class='two-right-name'></view>
+                <view class='coach-period-money'>共
+                  <text class='period-money-blue'>23</text> 课时 (
+                  <text class='period-money-red'>432</text> 元 )</view>
+              </view>
+            </view>
+          </view>
+        </view> -->
+        <view class='van-over' wx:if="{{!coachHaveData}}">没有更多数据了</view>
+      </scroll-view>
+    </view>
+
+
+  </view>
+</view>
+<!--  没有数据显示空空如也  -->
+        <view class='kong' wx:if="{{Period}}">
+          <image class='kong-img' src='../../../imgs/dataEmpty.png'></image>
+          <text class='kong-text'>数据为空</text>
+        </view>

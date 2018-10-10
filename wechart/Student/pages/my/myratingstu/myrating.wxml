@@ -1,0 +1,69 @@
+<!--pages/my/myrating/myrating.wxml
+myratingstu 小程序的界面备份
+-->
+<view class='personalImgBox personalImgCat  center imgLeft-myra'>
+  <view class=''>
+    <image class='phoneGreen' src='{{url}}zuqiu.png'></image>
+    <text class='model'>篮球 L1</text>
+  </view>
+  <view class='imgRig'>
+    <text>评级教练：张翔</text>
+  </view>
+</view>
+<view class='personalImgBox personalImgCat  center imgLeft-myra'>
+  <view class=''>
+    <image class='wechartGreen' src='{{url}}yumaoqiu.png'></image>
+    <text class='model'>羽毛球 L2</text>
+  </view>
+  <view class='imgRig'>
+    <text>评级教练：张翔发</text>
+  </view>
+</view>
+
+
+<view class='ratinginstructionsa'>评级说明</view>
+<view class='ratinginstructionsb-bgfff'>
+  <view class='fenBox'>
+    <view class='fenItem'>
+      <image class='itemImg' src='{{url}}zuqiu.png'></image>
+      <text class='c-zuqiu'>足球</text>
+    </view>
+    <view class='fenItem'>
+      <image class='itemImg' src='{{url}}lanqiu.png'></image>
+      <text class='c-zuqiu'>篮球</text>
+    </view>
+    <view class='fenItem'>
+      <image class='itemImg' src='{{url}}yumaoqiu.png'></image>
+      <text class='c-zuqiu'>羽毛球</text>
+    </view>
+    <view class='fenItem'>
+      <image class='itemImg' src='{{url}}van-more.png'></image>
+      <text class='c-zuqiu'>游泳</text>
+    </view>
+    <view class='fenItem'>
+      <image class='itemImg' src='{{url}}van-more.png'></image>
+      <text class='c-zuqiu'>跆拳道</text>
+    </view>
+    <view class='fenItem'>
+      <image class='itemImg' src='{{url}}van-more.png'></image>
+      <text class='c-zuqiu'>冰球</text>
+    </view>
+    <view class='fenItem'>
+      <image class='itemImg' src='{{url}}van-more.png'></image>
+      <text class='c-zuqiu'>棒球</text>
+    </view>
+    <view class='fenItem'>
+      <image class='itemImg' src='{{url}}van-more.png'></image>
+      <text class='c-zuqiu'>更多</text>
+    </view>
+  </view>
+</view>
+
+<!--近几年来-->
+<view class='itemsLo'>
+  <view class='items-text'>
+  近几年来，随着国家经济体制的改革、产业的调整，我国高校毕业生就业形势日趋严峻，就业压力越业越大，特别是体育教育专业毕业生尤其严重，供大于求的现状越来越突出。 一、体育教育专业毕业生就业难的原因体育教育专业毕业生存量增加，社会需求趋向饱和。随着我国高校招生规模的不断扩大，报考体育专业的学生越来越多，大学生的存量迅速扩大，体育教育专业毕业生的数量正在逐年递增。而现阶段，社会对体育教育人才的需求没有明显增加，甚至出现社会对体育教育专业毕业生的需求逐渐趋向饱和，造成毕业生的就业压力越来越大，导致每年都有相当多的体育教育专业毕业生没有及时就业。
+  </view>
+</view>
+
+

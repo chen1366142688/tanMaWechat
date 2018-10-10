@@ -1,0 +1,7 @@
+<!--pages/My/alter-Name/alter-Name.wxml-->
+<view class='alter-Name'>
+  <view class='alter-input'>
+    <input class="input" maxlength="40" placeholder='{{holder}}' name="userName" bindinput="userName" value="{{name && name!='null'?name:''}}" />
+  </view>
+  <view type="default" class="preserve" bindtap="subName">提交结果</view>
+</view>

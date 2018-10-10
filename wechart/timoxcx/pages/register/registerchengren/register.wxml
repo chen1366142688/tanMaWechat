@@ -1,0 +1,110 @@
+<!--pages/register/register.wxml-->
+<view class="page">
+  <!--页头-->
+  <view class="page__bd">
+    <!--学员a start-->
+    <view class="container">
+      <view class="notcheckedai">
+        <view class="notcheckeda_j">
+          <view class="head-img">
+            <image src="{{head_image_url}}"></image>
+          </view>
+        </view>
+      </view>
+      <view class="weui-cells_form notcheckedah log_name_a">
+        <view class="log_name_b">
+          <!--start-->
+          <view class="weui-cell page-body-form-item notname_a">
+            <view class="weui-cell__hd user-cell__hd user-typeac">
+              <image src="../../image/loginimages/user-type.png"></image>
+            </view>
+            <view class="weui-cell__hd  notname_a log_name_c">
+              <radio-group class="radio-group log_name_e" bindchange="radioChange">
+                <radio class="radio wx-radio-input wx-radio-input-checked" wx:for-items="{{items}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}">
+                  <text>{{item.value}}</text>
+                </radio>
+              </radio-group>
+            </view>
+          </view>
+          <view class="weui-cell page-body-form-item">
+            <view class="weui-cell__hd user-cell__hd user-typead">
+              <image src='../../image/loginimages/nick-name.png'></image>
+            </view>
+            <view class="weui-cell__hd log_name_d">
+              <input class="weui-inputpage-body-form-value inpblocknicka" type="text" placeholder="请输入昵称" value="" placeholder-class="psection" />
+            </view>
+          </view>
+      
+          <!--end-->
+          <!--<view class="weui-cell__hd user-cell__hd user-typead">
+            <image src='../../image/loginimages/nick-name.png'></image>
+          </view>
+          <view class="weui-cell__hd">-->
+          <!--<input type="text" placeholder="sss/>-->
+          <!--<input class="weui-inputpage-body-form-value inpblocknicka" type="text" placeholder="请输入昵称" value="" placeholder-class="psection" />
+          </view>    -->
+          <!--
+          <view class="weui-cell page-body-form-item">
+            <view class="weui-cell__hd user-cell__hd user-typead">
+              <image src='../../image/loginimages/nick-name.png'></image>
+            </view>
+            <view class="weui-cell__hd log_name_d">
+              <input class="weui-inputpage-body-form-value inpblocknicka" type="text" placeholder="请输入昵称" value="" placeholder-class="psection" />
+            </view>
+          </view>
+          <view>
+            <view class="locationsec_a">
+              <image src='../../image/loginimages/location.png'></image>
+            </view>
+            四川省 成都市
+
+          </view>
+          <view class="weui-cell page-body-form-item">
+            <view class="weui-cell__hd user-cell__hd schoolu_a">
+              <image src='../../image/loginimages/school.png'></image>
+            </view>
+            <view class="weui-cell__hd log_name_d">
+              <input class="weui-inputpage-body-form-value inpblocknicka" type="text" placeholder="请输入学校名称" value="" placeholder-class="psection" />
+            </view>
+          </view>
+           -->
+        </view>
+
+        <view class="notcheckedabbg bindingmobiab notcheckedac schoolu_boxd">
+          <view class="user-typeae notcheckedad">
+            <image src='../../image/loginimages/loginphonec.png'></image>
+          </view>
+          <view class="weui-cell_vcode bindingmobiaa notcheckedae log_name_d">
+            <view class="schoolu_boxc">
+              <input class="page-body-form-value weui-input bindingmobileainputa" type="number" placeholder="绑定手机号" value="" maxlength="11" placeholder-class="psection" />
+            </view>
+            <view class="weui-cell__ft notcheckedaf">
+              <input class="page-body-form-value" type="number" placeholder="验证码" value="" maxlength="6" placeholder-class="psection" />
+            </view>
+            <view class="weui-cell__ft">
+              <!--<button disabled="" class="btna weui-vcode-btn sendbuttona">发送验证码</button>-->
+              <view class="schoolu_b">(40 s)</view>
+            </view>
+            <!--<view class="weui-cell__ft notcheckedaf">
+              <input class="page-body-form-value" type="number" placeholder="验证码" value="" maxlength="6" placeholder-class="psection" />
+            </view>
+            <view class="weui-cell__ft">
+              <text>(40s)</text>
+            </view>-->
+          </view>
+        </view>
+      </view>
+
+      <view class="page__bd page__bd_spacing reg_sec_a">
+        <button class="weui_btn weui_btn_default registrationstubtna">注册学员账户</button>
+      </view>
+      <view class="btn-area reg_sec_b">
+        <navigator url="/page/navigate/navigate?title=navigate" hover-class="navigator-hover" class="registecoachaa">注册教练</navigator>
+        <navigator url="/page/navigate/navigate?title=navigate" hover-class="navigator-hover" class="registecoachab">注册场馆管理</navigator>
+      </view>
+    </view>
+  </view>
+  <!--学员a-->
+
+  <!--主体-->
+</view>

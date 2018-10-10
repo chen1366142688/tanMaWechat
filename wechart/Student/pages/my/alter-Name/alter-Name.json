@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "修改昵称",
+  "tabBar": {
+    "color": "#171718",
+    "selectedColor": "#171718",
+    "backgroundColor": "#F9F9F9",
+    "borderStyle": "white"
+
+  }
+}

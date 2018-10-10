@@ -1,0 +1,10 @@
+<!--pages/My/alter-cipher/alter-cipher.wxml-->
+<view class='alter-cipher'>
+  <view class='alter-input'>
+    <input class="input" maxlength="18"  type='password' placeholder="输入新密码" name="userPwd" value="{{name && name!='null'?name:''}}" bindinput='newPass'/>
+  </view>
+  <view class='alter-affirm'>
+    <input class="affirm" maxlength="18" type='password' placeholder="输入新密码第二次" name="userPwd" value="{{name && name!='null'?name:''}}" bindinput='resetPass'/>
+  </view>
+  <view type="default" class="preserve" bindtap="subName">提交结果</view>
+</view>

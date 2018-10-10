@@ -1,0 +1,699 @@
+page {
+  background: #ececec;
+}
+.scroll-activeTop{
+  position: fixed;
+  top:300rpx;
+  right:0;
+  width:80rpx;
+  height: 400rpx;
+  display: flex;
+  display: -webkit-flex;
+  /* white-space: nowrap;
+  flex-wrap: nowrap; */
+  background-color:rgba(255,255,255,.7);
+  align-items: center;
+  margin-bottom:2rpx;
+  border-radius: 20rpx 0 0 20rpx;
+  padding:20rpx 0;
+}
+.classItems{
+  display: block;
+  width:80rpx;
+  height: 80rpx;
+  margin:20rpx 0;
+  line-height: 80rpx;
+  text-align: center;
+}
+.normals {
+  width: 70rpx;
+  height: 60rpx;
+  border-radius: 35rpx;
+  margin: 0 auto;
+  padding-top:10rpx;
+}
+.itemOPa{
+  animation:fadeIn 1s forwards;
+  -moz-animation:fadeIn 1s forwards; /* Firefox */
+  -webkit-animation:fadeIn 1s forwards; /* Safari and Chrome */
+  -o-animation:fadeIn 1s forwards; /* Opera */
+}
+.itemOPas{
+  animation:fadeOut 0.2s forwards;
+  -moz-animation:fadeOut 0.2s forwards; /* Firefox */
+  -webkit-animation:fadeOut 0.2s forwards; /* Safari and Chrome */
+  -o-animation:fadeOut 0.2s forwards; /* Opera */
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0; /*初始状态 透明度为0*/
+    display: block;
+  }
+
+  100% {
+    opacity: 1; /*结尾状态 透明度为1*/
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1; /*初始状态 透明度为0*/
+  }
+
+  100% {
+    opacity: 0; /*结尾状态 透明度为1*/
+    display: none;
+  }
+}
+.coach-suosou {
+  width: 750rpx;
+  height: 80rpx;
+  padding-top: 15rpx; 
+  background: #fff;
+  z-index: 2;
+  border-bottom: 1rpx solid #e4e4e4;
+}
+
+.venue-seek{
+  width: 702rpx;
+  height: 58rpx; 
+  line-height: 58rpx;
+  border: 1rpx solid rgba(0, 198, 147, 1);
+  border-radius: 30rpx;
+  margin-left: 26rpx;
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(153, 153, 153, 1);
+  display: flex;
+}
+
+ .venue-seek-Click{
+  width: 150rpx;
+  height: 58rpx;
+  line-height: 58rpx;
+  z-index: 9; 
+  vertical-align: middle;
+} 
+
+.caoch-suo {
+  width: 678rpx;
+  height: 60rpx;
+  margin: 0 auto;
+  padding-left: 24rpx;
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(153, 153, 153, 1);
+}
+
+.coach-sou {
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(153, 153, 153, 1);
+}
+
+.coach-search {
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: middle;
+   padding-left: 62rpx; 
+}
+
+.searchIn{
+  -webkit-animation-name: searchIn; /*动画名称*/
+  -webkit-animation-duration: 0.5s; /*动画持续时间*/
+  -webkit-animation-iteration-count: 1; /*动画次数*/
+  animation-fill-mode: forwards;
+}
+.searchOut{
+  -webkit-animation-name: searchOut; /*动画名称*/
+  -webkit-animation-duration: 0.5s; /*动画持续时间*/
+  -webkit-animation-iteration-count: 1; /*动画次数*/
+  animation-fill-mode: forwards;
+}
+@-webkit-keyframes searchIn {
+  0% {
+    opacity: 1; /*初始状态 透明度为0*/
+    top:-2rpx;
+  }
+  100% {
+    opacity: 0; /*结尾状态 透明度为1*/
+    top: -68rpx;
+  }
+}
+@-webkit-keyframes searchOut {
+  0% {
+    opacity: 0; /*初始状态 透明度为0*/
+    top:-68rpx;
+  }
+  100% {
+    opacity: 1; /*结尾状态 透明度为1*/
+    top: -2rpx;
+  }
+}
+#sortBox{
+  position: relative;
+  border-bottom:3px solid #ececec;
+  height:90rpx;
+  line-height: 90rpx;  
+}
+.headers{
+  -webkit-animation-name: fadeInHeader; /*动画名称*/
+  -webkit-animation-duration: 0.5s; /*动画持续时间*/
+  -webkit-animation-iteration-count: 1; /*动画次数*/
+  animation-fill-mode: forwards;
+  padding-top:0rpx; 
+}
+.headersout{
+  -webkit-animation-name: fadeOutHeader; /*动画名称*/
+  -webkit-animation-duration: 0.5s; /*动画持续时间*/
+  -webkit-animation-iteration-count: 1; /*动画次数*/
+  animation-fill-mode: forwards;
+}
+@-webkit-keyframes fadeInHeader {
+  0% {
+    opacity: 1; /*初始状态 透明度为0*/
+    margin-top:0;
+  }
+  100% {
+    opacity: 0; /*结尾状态 透明度为1*/
+    margin-top:-80rpx;
+  }
+}
+@-webkit-keyframes fadeOutHeader {
+  0% {
+    opacity: 0; /*初始状态 透明度为0*/
+    margin-top:-80rpx;
+  }
+  100% {
+    opacity: 1; /*结尾状态 透明度为1*/
+    margin-top:0;
+  }
+}
+.scroll-actives {
+  -webkit-animation-name: fadeInScroll; /*动画名称*/
+  -webkit-animation-duration: 0.1s; /*动画持续时间*/
+  -webkit-animation-iteration-count: 1; /*动画次数*/
+  animation-fill-mode: forwards;
+}
+.scroll-activeOut {
+  -webkit-animation-name: fadeOutScroll; /*动画名称*/
+  -webkit-animation-duration: 0.1s; /*动画持续时间*/
+  -webkit-animation-iteration-count: 1; /*动画次数*/
+  animation-fill-mode: forwards;
+}
+@-webkit-keyframes fadeInScroll {
+  0% {
+    opacity: 1; /*初始状态 透明度为0*/
+    margin-top:0;
+  }
+  100% {
+    opacity: 0; /*结尾状态 透明度为1*/
+    margin-top:-155rpx;
+  }
+}
+@-webkit-keyframes fadeOutScroll {
+  0% {
+    opacity: 0; /*初始状态 透明度为0*/
+    margin-top:-155rpx;
+  }
+  100% {
+    opacity: 1; /*结尾状态 透明度为1*/
+    margin-top:0;
+  }
+}
+/****列表头****/
+
+.fenLei {
+  width: 700rpx;
+  height: 195rpx;
+  min-height: 220rpx;
+  background: #fff;
+  padding: 24rpx 25rpx 21rpx 25rpx;
+  margin-top: 10rpx;
+  margin-bottom: 20rpx;
+  position: fixed;
+  z-index: 2;
+  top: 88rpx;
+  float: left;
+}
+
+.fenleiOne {
+  width: 25%;
+  text-align: center;
+  justify-content: center;
+  float: left;
+}
+
+.fenleiOneLine {
+  width: 25%;
+  text-align: center;
+  justify-content: center;
+}
+
+.fenleiOne-info {
+  width: 70rpx;
+  height: 70rpx;
+  text-align: center;
+  margin-bottom: 40rpx;
+  display: inline-block;
+}
+
+.is_Checked {
+  width: 70rpx;
+  height: 60rpx;
+  border-radius: 35rpx;
+  background-color: #e4e4e4;
+  margin: 0 auto;
+  padding-top:10rpx;
+}
+
+.normal {
+  width: 70rpx;
+  height: 60rpx;
+  border-radius: 35rpx;
+  background-color: #fff;
+  margin: 0 auto;
+  padding-top:10rpx; 
+}
+
+.itemImg {
+  display: block;
+  width: 50rpx;
+  height: 50rpx;
+  margin: 0 auto;
+  padding-top: 10rpx;
+}
+
+/* 列表尾  */
+
+.fenLeiX {
+  padding-left: 52rpx;
+  background: #fff;
+  z-index: 4;
+  height: 150rpx;
+  /* line-height: 150rpx; */
+  width: 700rpx;
+  white-space: nowrap;
+  display: flex;
+  border-bottom: 1rpx solid #e4e4e4;
+}
+
+.fenleiOne-scroll {
+  display: inline-block;
+  align-self: center;
+  width: 70rpx;
+  text-align: center;
+  margin-right: 132rpx;
+  margin-top: -16rpx;
+}
+
+.last-fenleiOne-scroll {
+  margin-right: 27rpx;
+}
+
+.itemImg-scroll {
+  display: block;
+  width: 50rpx;
+  height: 50rpx;
+  padding-top: 10rpx;
+  margin: 43rpx auto 0 auto;
+}
+
+.c-zuqiu-scroll {
+  display: block;
+  font-size: 20rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(23, 23, 24, 1);
+}
+
+.scroll-view-box {
+  /* height: 900rpx; */
+   /* height: 1035rpx;  */
+   
+}
+
+.c-zuqiu {
+  display: block;
+  font-size: 20rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(23, 23, 24, 1);
+}
+
+.fenleiOnes-info {
+  width: 60rpx;
+  text-align: center;
+}
+
+.c-zuqiu {
+  display: block;
+  font-size: 20rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(23, 23, 24, 1);
+}
+
+.fenCan {
+  margin-right: 0;
+}
+
+.coach-jian {
+  width: 700rpx;
+  line-height: 0;
+  padding: 0 25rpx;
+  background: #fff;
+  margin-bottom: 20rpx;
+  margin-top: 20rpx;
+  z-index: 1;
+}
+
+.coach-jiao-one {
+  height: 57rpx;
+  border-bottom: 1rpx solid #e4e4e4;
+  width: 100%;
+  line-height: 0;
+}
+
+.coach-jiao-oneL, .coach-jiao-oneL {
+  height: 57rpx;
+  line-height: 57rpx;
+}
+
+.coach-jiao-one-item{
+  float: left;
+  margin-left:10rpx;
+}
+
+.jiao-img {
+  width: 20rpx;
+  height: 20rpx;
+  vertical-align: middle;
+  margin-right: 12rpx;
+}
+
+.jiao-text, .qiu-text {
+  display: inline-block;
+  font-size: 20rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(51, 51, 51, 1);
+  vertical-align: middle;
+}
+
+.qiu-img {
+  width: 30rpx;
+  height: 30rpx;
+  vertical-align: middle;
+  margin-right: 8rpx;
+}
+
+.cocah-pas {
+  width: 100%;
+  height: 222rpx;
+}
+
+.imgBox {
+  width: 119rpx;
+  padding-right: 25rpx;
+  display: table-cell;
+}
+
+.coach-userImg {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 60rpx;
+  vertical-align: middle;
+}
+
+.coach-txt-item {
+  width: 555rpx;
+  display: table-cell;
+}
+
+.manImg {
+  width: 30rpx;
+  height: 30rpx;
+  vertical-align: middle;
+  margin: 0 10rpx;
+  
+}
+
+.nameBox {
+  margin-top: 12rpx;
+}
+
+.name-jiao {
+  display: inline-block;
+  max-width: 300rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 32rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+  font-family: PingFang-SC-Bold;
+  color: rgba(102, 102, 102, 1);
+  vertical-align: middle;
+}
+.name-jiaoClone{
+  max-width: 515rpx;
+}
+
+.coach-ren {
+  width: 73rpx;
+  height: 30rpx;
+  vertical-align: top;
+}
+
+.coach-levev {
+  width: 22rpx;
+  height: 22rpx;
+  vertical-align: middle;
+}
+
+.coach-level-txt {
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(51, 51, 51, 1);
+  margin-left: 10rpx;
+}
+
+.coach-str {
+  font-weight: bold;
+}
+
+.coach-jianJie {
+  width: 555rpx;
+  font-size: 24rpx;
+  font-family: PingFang-SC-Bold;
+  color: rgba(51, 51, 51, 1);
+  line-height: 40rpx;
+  padding: 10rpx 0 10rpx 0;
+  height: 105rpx;
+  overflow: hidden;
+}
+
+.coach-more-foot {
+  padding: 10rpx 0;
+  width: 555rpx;
+}
+
+.coach-more-le{
+  height: 24rpx;
+  line-height: 24rpx;
+  vertical-align: middle;
+}
+
+.men {
+  width: 20rpx;
+  height: 20rpx;
+  vertical-align: middle;
+}
+
+.coach-lie {
+  margin: 0 23rpx;
+}
+
+.menNum, .qiNum, .jibieNum {
+  font-size: 20rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(51, 51, 51, 1);
+  vertical-align: middle;
+  margin-left: 11rpx;
+}
+
+.qi {
+  width: 20rpx;
+  height: 20rpx;
+  vertical-align: middle;
+}
+
+.jibie {
+  width: 20rpx;
+  height: 20rpx;
+  vertical-align: middle;
+}
+
+.coach-hot {
+  width: 24rpx;
+  height: 24rpx;
+  vertical-align: middle;
+}
+
+.coach-ted {
+  font-size: 20rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(232, 85, 113, 1);
+  padding-left: 10rpx;
+  vertical-align:middle;
+}
+
+.van-footer {
+  display: block;
+  width: 750rpx;
+  text-align: center;
+  margin: 20rpx 0 20rpx 0;
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(153, 153, 153, 1);
+}
+
+.not-info {
+  padding: 200rpx 0 20rpx 0;
+}
+
+/* .scroll-active {
+  padding-left: 27rpx;
+  height: 150rpx;
+  background: #fff;
+  overflow: scroll;
+  width: 723rpx;
+  white-space: nowrap;
+  display: flex;
+  margin-top: 95rpx;
+} */
+
+.select-top-box {
+  z-index: 5;
+  background: #fff;
+  height: 90rpx;
+  line-height: 90rpx;
+  border-bottom:4rpx solid #ececec;
+}
+
+.select-line {
+  width: 25%;
+  display: inline-block;
+  text-align: center;
+  font-size: 28rpx;
+  background: #fff;
+  color: #333;
+}
+
+.select-line-select {
+  color: #000;
+}
+
+.line_img {
+  height: 13rpx;
+  width: 13rpx;
+  vertical-align: middle;
+}
+
+.line_img_show {
+  right: 40px;
+  height: 10px;
+  width: 15px;
+  float: right;
+  margin-right: 40px;
+  margin-top: 15px;
+}
+
+.show-line-parent {
+  position: absolute;
+  top:91rpx;
+  right: 0;
+  left: 0;
+  z-index: 5;
+  bottom: 0;
+  border-top:1rpx solid #e4e4e4;
+}
+.show-line-parents {
+  top: 91rpx;
+}
+
+.show-line {
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px #ddd solid;
+  width: 740rpx;
+  z-index: 5;
+  background-color: #fff;
+  font-size: 14px;
+  color: #999;
+  padding-left: 10px;
+}
+
+.line-bottom {
+  background-color: #000;
+  opacity: 0.4;
+  width: 100%;
+  z-index: 4;
+  filter: alpha(opacity=40);
+  height: 100%;
+}
+.mechanism{
+  width: 30rpx;
+  height: 30rpx;
+  vertical-align: middle;
+  margin: 0 10rpx;
+  font-size: 20rpx;
+  font-family:PingFang-SC-Bold;
+  color:rgba(102, 102, 102, 1);
+}
+.scroll-active{
+  width:750rpx;
+  height: 150rpx;
+  display: flex;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+  background-color: #ffffff;
+  margin:2rpx 0;
+  align-items: center;
+}
+.classItem{
+  display: inline-block;
+  width:168rpx;
+  height: 110rpx;
+  padding-top:20rpx;
+}
+.classItemImg{
+  display: block;
+  width:50rpx;
+  height: 50rpx;
+  margin:0 auto;
+}
+.classItemText{
+  font-size:20rpx;
+  font-family:PingFang-SC-Regular;
+  color:rgba(23, 23, 24, 1);
+  text-align: center;
+}
+.tabLoading{
+  width: 750rpx;
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tabLoading image {
+    width: 68rpx;
+    height: 68rpx;
+}
+.footerOver{
+  width:100%;
+  height:80rpx;
+  font-family:PingFang-SC-Regular;
+  color:rgba(153,153,153,1);
+  font-size: 24rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

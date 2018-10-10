@@ -1,0 +1,12 @@
+<!--pages/curriculum/Training-Protocol/Training-Protocol.wxml-->
+<view class='Training-Protocol'>
+  <view class='Protocol-L'>
+    <view class='Protocol-B'>方案模板</view>
+    <view class='Protocol-X'>
+      <view class='Protocol-X-text'>自定义</view>
+      <image class='Protocol-X-T' src='{{imgUrl}}xiala2.png'></image>
+  </view>
+</view>
+<textarea class='myInfoBxo' placeholder-class='myInfo' maxlength="300" value='{{content}}' bindinput='pushText'/>
+</view>
+<button class='settle-accounts' bindtap='submits'>提 交</button>

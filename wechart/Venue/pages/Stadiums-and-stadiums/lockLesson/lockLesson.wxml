@@ -1,0 +1,99 @@
+
+<wxs module="numberTransform">
+var transform = {
+  toFix: function (value) {
+    return value.toFixed(2)
+  }
+}
+
+module.exports = {
+  toFix: transform.toFix
+}
+</wxs>
+
+<view class="c-top-bar">
+  <text class="c-nowDate {{currentTab==0 ? 'c-active' : ''}}" data-current="0" bindtap='currentTabClick'>今日开课</text>
+  <text class="c-nowMonth {{currentTab==1 ? 'c-active' : ''}}" data-current="1" bindtap='currentTabClick'>本月开课</text>
+</view>
+<!--本月开课-->
+<view wx:if="{{currentTab==1}}">
+
+  <view class='calendar'>
+      <view class='calendar-Header'>
+          <button class='subtract' data-attenddate="{{lastAttendDate}}" bindtap="monthChange"> {{lastMonth}}月 </button>
+          <text class='At-present' >{{thisYearMonth}}</text>
+          <button class='plus' data-attenddate="{{nextAttendDate}}"  bindtap="monthChange"> {{nextMonth}}月 </button>
+        </view>
+        <view class='concreteness'>
+            <view class="box-flex">
+              <view class="flex-item">
+                <view class="item-content">日</view>
+              </view>
+              <view class="flex-item">
+                <view class="item-content">一</view>
+              </view>
+              <view class="flex-item">
+                <view class="item-content">二</view>
+              </view>
+              <view class="flex-item">
+                <view class="item-content">三</view>
+              </view>
+              <view class="flex-item">
+                <view class="item-content">四</view>
+              </view>
+              <view class="flex-item">
+                <view class="item-content">五</view>
+              </view>
+              <view class="flex-item">
+                <view class="item-content">六</view>
+              </view>
+          </view>
+          <view class="day" >
+            <view class="day-item" wx:for="{{thisCalendar}}" wx:key="*this">
+              <view wx:if="{{item.dayId}}" class="item-content {{item.dayId==thisDay ? 'item-today' : ''}}"  data-dayid="{{item.dayId}}" bindtap="dayItemClick">{{item.dayId}}</view>
+              <view class='sum' wx:if="{{item.classNums>0}}">{{item.classNums}}</view>
+            </view>
+          </view>
+    </view>
+
+  </view>
+</view>
+<view class="c-jiao-information"  wx:for="{{homeAttendList}}" wx:key="*this">
+  <view class='c-items'> 
+    <view class='c-item-inifo1'>
+      <text class='c-item-info-txt'>{{item.itemName}} {{item.maxMember?item.maxMember:0}}人班 {{item.attendPeriod?item.attendPeriod:0}}期班</text>
+      <text class='c-item-title'>{{item.className}}</text>      
+      <view class="c-item-status" wx:if="{{item.attendStatus == '01'}}">未报名</view>
+      <view class="c-item-status" wx:elif="{{item.attendStatus == '02'}}">报名中</view>
+      <view class="c-item-status" wx:elif="{{item.attendStatus == '03'}}">报名结束</view>
+      <view class="c-item-status" wx:elif="{{item.attendStatus == '04'}}">已开课</view>
+      <view class="c-item-status  c-item-cancel" wx:else>已取消</view>
+    </view>
+    
+    <view class='c-item-inifo2 c-f'>
+      <image class='c-user' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/jiao.png'></image>
+      <text class='c-username-text in'>{{item.coachName}}</text>
+      <image class='c-touser' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/total.png'></image>
+      <text class='c-renshu in'>{{item.signUpMember}}人已报名</text>
+      <image class='c-date' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/date.png'></image>
+      <text class='c-data-txt in' wx:if="{{item.weekDay == '1'}}">{{item.attendDate}} 周一 {{item.dayTimeStart}}</text>
+      <text class='c-data-txt in' wx:elif="{{item.weekDay == '2'}}">{{item.attendDate}} 周二 {{item.dayTimeStart}}</text>
+      <text class='c-data-txt in' wx:elif="{{item.weekDay == '3'}}">{{item.attendDate}} 周三 {{item.dayTimeStart}}</text>
+      <text class='c-data-txt in' wx:elif="{{item.weekDay == '4'}}">{{item.attendDate}} 周四 {{item.dayTimeStart}}</text>
+      <text class='c-data-txt in' wx:elif="{{item.weekDay == '5'}}">{{item.attendDate}} 周五 {{item.dayTimeStart}}</text>
+      <text class='c-data-txt in' wx:elif="{{item.weekDay == '6'}}">{{item.attendDate}} 周六 {{item.dayTimeStart}}</text>
+      <text class='c-data-txt in' wx:else>{{item.attendDate}} 周日 {{item.dayTimeStart}}</text>
+    </view>
+     <view class='c-item-inifo3 c-topBor'>
+      <text class="c-jiaoQin in">缴费情况</text> 
+      <text class='c-jiaoFei in' wx:if="{{item.homeCostStatus == '1'}}">已在线缴费 （{{item.homeItemName}} | {{item.homeItemCount }}场地 | {{item.homeItemTime/10 }}小时 | RMB {{numberTransform.toFix(item.homeItemPrice/100)}}）</text>
+      <text class='c-jiaoFei in' wx:else>未知</text>
+     </view>
+  </view>
+ </view>
+
+<!--  没有数据显示空空如也  -->
+   <view class='kong' wx:if="{{Period}}">
+    <image class='kong-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/studentNewImg/kong.png'></image>
+    <text class='kong-text'>空空如也</text>
+  </view> 

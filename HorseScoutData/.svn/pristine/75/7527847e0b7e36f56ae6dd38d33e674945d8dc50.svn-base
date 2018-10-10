@@ -1,0 +1,26 @@
+<!--pages/Patriarch/Training/Training.wxml-->
+<view class='Training'>
+  <image class='Training-video' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/Exercise/header-background.png'></image>
+  <view class='Training-control'>
+    <view class='Training-control-volume'>
+      <image class='Training-control-volume-reduce' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/Patriarch/reduce.png'></image>
+      <view class='volume-background'>
+        <view class='volume-gradual-change'></view>
+      </view>
+      <image class='Training-control-volume-increase' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/Patriarch/increase.png'></image>
+    </view>
+    <view class='Training-Pause'>
+      <view class='Training-Pause-background'>
+        <view class='Training-Pause-beijing'>
+         <image class='Abeyancd' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/Patriarch/Abeyancd.png'></image>
+         <!-- <image class='Play' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/Patriarch/Play.png'></image> -->
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='Training-button'>
+    <view class='Training-button-left'>放弃本次训练</view>
+    <view class='Training-button-right'>完成本次训练</view>
+  </view>
+  <view class='kong'></view>
+</view>

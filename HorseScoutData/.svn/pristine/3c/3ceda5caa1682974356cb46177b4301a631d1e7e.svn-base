@@ -1,0 +1,37 @@
+<!--pages/gradeTable/Corporeity/Corporeity.wxml-->
+<view class='Corporeity'>
+  <view class='Corporeity-header'>
+    <view class='Corporeity-header-left'>
+      <view class='Corporeity-header-left-top'>
+        <image class='Corporeity-header-left-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/teacher/{{studentInfo.gender == 1? "man" : "woman"}}.png'></image>
+      </view>
+      <view class='Corporeity-header-left-buttom'>{{studentInfo.studentName}}</view>
+    </view>
+    <view class='Corporeity-header-right'>
+      <view class='eag'>{{studentInfo.age}}岁
+        <text class='eag-text'>（{{studentInfo.birthday.split("-")[1] + "-" + studentInfo.birthday.split("-")[2]}}）</text> </view>
+      <view class='school'>{{studentInfo.schoolName}}</view>
+      <view class='grade'>{{classList[studentInfo.grade-1]}}{{studentInfo.studentClass}}班</view>
+    </view>
+  </view>
+  <view class='Corporeity-section'>
+    <view class='total'>
+      <view class='total-headin'>总分</view>
+      <view class='total-score'>{{studentInfo.score}}</view>
+      <view class='total-grade'>{{level[studentInfo.level]}}</view>
+    </view>
+    <view class='section-table'>
+      <view class='section-table-one' wx:for="{{scoreList}}" wx:key="{{index}}">
+        <view class='Project-name'>{{item.testName}}<text wx:if="{{item.showScore == 1}}">[{{item.percent}}%]</text></view>
+        <view class='Parameter' wx:if="{{item.existValue == 1}}">
+          <view class='Parameter-one {{item.resultValue < 0 ? "xiao" : ""}}'>{{item.resultValue }} {{item.valueUnit ?item.valueUnit : "" }}</view>
+          <view class='Parameter-two' wx:if="{{item.showScore == 1}}">{{item.score}}分</view>
+          <view class='Parameter-there' wx:if="{{item.showScore == 1}}">{{level[item.level]}}</view>
+        </view>
+        <view class='Parameter nottest' wx:else>
+          尚未测试
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

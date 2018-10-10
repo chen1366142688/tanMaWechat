@@ -1,0 +1,135 @@
+<!--未登录-->
+    <view class="head">
+        <button class="headBtn" wx:if="{{!isLogin}}" data-text="{{ontxt}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">
+            <view class='helpFriend'>{{ontxt}}</view>
+        </button>
+        <!--已参加活动-->
+        <view class="myBox" wx:if="{{isLogin}}">
+            <image src="{{imgUrldefault}}" alt="头像"></image>
+            <view wx:if="{{peopleNum<120}}" class='helpInfo'>还差<text decode='true'>&nbsp;{{peopleNum}}&nbsp;</text>个小伙伴就能get到<text decode='true'>&nbsp;{{difference}}&nbsp;</text>大奖啦</view>
+            <view class='helpInfo' wx:if="{{peopleNum>=120}}">邀请更多小伙伴赢取排名大奖</view>
+        </view>
+    </view>
+    <view class="Ruler" wx:if="{{isLogin}}">
+        <view class="rulerCenter">
+            <view class="ruler1"><text class="ruleTxt">500米</text><text class="ruleNum">5人</text></view><view class="ruler2"><text class="ruleTxt">1000米</text><text class="ruleNum">10人</text></view><view class="ruler3"><text class="ruleTxt">2公里</text><text class="ruleNum">20人</text></view><view class="ruler4"><text class="ruleTxt">4公里</text><text class="ruleNum">40人</text></view><view class="ruler5"><text class="ruleTxt">8公里</text><text class="ruleNum">80人</text></view><view class="ruler6"><text class="ruleTxt">12公里</text><text class="ruleNum">120人</text></view>
+            <text class="rulerActive" decode='true' style="width:{{width}}rpx" wx:if="{{activeNum>0}}">{{activeNum}}</text>
+        </view>
+    </view>
+    <view class="Inviting" wx:if="{{isLogin}}">
+        <button open-type='share' class="friends" data-text="{{isLoginTxt}}">{{isLoginTxt}}</button>
+    </view>
+    <view class="myFriends" wx:if="{{isLogin}}">
+        <view class="myFriendsBox" wx:if="{{friendsBox.length > 0}}">
+            <view class="myName">TA们都帮 <text>“{{userName}}”</text> 助力了</view>
+            <view class="friendsBox">
+                <image src="{{item.avatarUrl ? item.avatarUrl : ''}}" alt="头像" wx:for="{{friendsBox}}" ></image>
+                <image wx:if="{{peopleNumMore}}" class="more" src="{{imgUrl}}more.png" alt="更多"></image>
+            </view>
+        </view>
+    </view>
+    <view class="section">
+        <image mode="widthFix" src="{{imgUrl}}section.png" alt="activity"></image>
+    </view>
+    <view class="rule">
+        <view class="ruleBack">
+            <view class="ruleBorder">
+                <view class="ruleTit">活动规则</view>
+                <view class="stepOne">
+                    <image class="stepOneImg" src="{{imgUrl}}stepOne.png" alt="步骤一"></image>
+                    <view class="stepOneInfo">参加比赛，点击“帮助好友”，一人助力，成功游泳100米：</view>
+                </view>
+                <view class="stepOne">
+                    <image class="stepOneImg" src="{{imgUrl}}stepTwo.png" alt="步骤二"></image>
+                    <view class="stepOneInfo">分享给好友，邀请接力，可帮忙继续游泳，更多人接力可取得更好的成绩：</view>
+                </view>
+                <view class="stepOne">
+                    <image class="stepOneImg" src="{{imgUrl}}stepThree.png" alt="步骤三"></image>
+                    <view class="stepOneInfo">活动时间：2018.08.25 - 2018.09.03</view>
+                </view>
+                <view class="stepOne">
+                    <image class="stepOneImg" src="{{imgUrl}}stepFour.png" alt="步骤四"></image>
+                    <view class="stepOneInfo">中奖公布时间：2018.09.06</view>
+                </view>
+                <view class="stepOne last">
+                    <image class="stepOneImg" src="{{imgUrl}}stepFive.png" alt="步骤五"></image>
+                    <view class="stepOneInfo">以活动时间截止日期的游泳距离数据为准，参与者获得相应运动梯度奖励，同时前三名选手享有排名奖励。</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="rankingAward">
+        <view class="sortAward">排名奖</view>
+        <view class="myAward"  wx:if="{{friendsBox.length > 0}}" bindtap='tapMySort'>我的排名 》</view>
+    </view>
+    <view class="roundBox">
+        <image mode="widthFix" class="roundImg" src="{{imgUrl}}round.png" alt="排名奖"></image>
+    </view>
+    <view class="payment">领取奖品方式</view>
+    <view class="paymentBox">
+        <view class="paymentInfo">
+            <image class="qrCode" src="{{imgUrl}}qrCode.png" alt="二维码"></image>
+            <view class="paymentInformation">
+                <view class="payStepBox">
+                    <text class="payStep">1</text>
+                    <text class="payStepment">关注"探马运动"公众号</text>
+                </view>
+                <view class="payStepBox">
+                    <text class="payStep">2</text>
+                    <text class="payStepment">回复"领奖"</text>
+                </view>
+                <view class="payStepBox">
+                    <text class="payStep">3</text>
+                    <text class="payStepment">打开链接</text>
+                </view>
+                <view class="payStepBox">
+                    <text class="payStep">4</text>
+                    <text class="payStepment">填写领取信息</text>
+                </view>
+                <view class="asid">* 本活动最终解释权归探马运动所有！探马运动将持续推出活动，感谢关注！* 
+                  <view>任何作弊行为都将取消活动资格</view>
+                </view>
+            </view> 
+        </view>
+    </view>
+    <view class="btnBox" bindtap='goIndex'>
+        <image src="{{imgUrl}}freeExperience.png" alt="点击领取"></image>
+    </view>
+    <image class="footer" src="{{imgUrl}}footer.png" alt="底部图"></image>
+<!--绑定手机号帮助好友弹窗-->
+<view class="modal" wx:if="{{modalBox}}">
+    <view class="register" wx:if="{{modal}}">
+        <view class="phoneBox">
+            <image src="{{imgUrl}}phone.png" alt="手机图标"></image>
+            <input id="phoneNum" type="number" placeholder="{{holderPhone}}" maxlength="11" bindinput='inputPhone'></input>
+        </view>
+        <view class="phoneBox codeBox">
+            <image src="{{imgUrl}}send.png" alt="发送图标"></image>
+            <input class="send" type="number" placeholder="{{holderCode}}" maxlength="6" bindinput='inputCode'></input>
+            <button class="sendCode" wx:if='{{diss}}' bindtap='sendCode'>发送验证码</button>
+            <button class="sendCode" wx:if='{{!diss}}'>({{countShowMessage}}s)</button>
+        </view>
+        <view class="helpBox">
+            <text bindtap='helpfriend' class="helpBorder" decode='true'>{{btnTxt}}</text>
+        </view>
+    </view>
+    <view class='sortBox' wx:if="{{mySort}}">
+      <view class='sortTitle'>
+        <view class='sortMy'>我的排名</view>
+        <view class='takeUp' bindtap='takeUp'>收起</view>
+      </view>
+      <view class='sortInfo {{order.myInvitation == 1 ? "active" : ""}}' wx:for="{{orderList}}" wx:for-item="order" wx:key="phone">
+        <view class='sortNum'>{{order.orderindex }}</view>
+        <view class='sortPhone'>{{order.phone }}</view>
+        <view class='sortName textOver'>{{order.nickName }}</view>
+        <view class='sortJu'>{{order.invitationUserCount*100}}米</view>
+      </view>
+    </view>
+    <view class='successBox' wx:if="{{showSuccess}}" bindtap='hidenShowSuccess'>
+      <view class='BoxSucc'>
+        <image src='{{imgUrl}}success.png'></image>
+      </view>
+      <view class='iKwon'>知道了</view>
+    </view>
+    <view class='moreBox' style='height:{{moreBoxH}}px' bindtap='tapMoreBox'></view>
+</view>

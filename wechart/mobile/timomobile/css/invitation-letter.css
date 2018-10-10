@@ -1,0 +1,220 @@
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/background.png');
+    background-size: 100%;
+}
+
+#canvas {
+    height: auto /*默认全屏显示 可自己设置高度640px*/;
+    display: inline-block;
+    vertical-align: baseline;
+    position: absolute;
+    z-index: -100;
+}
+
+.Invitation {
+    width: 100%;
+    z-index: 1;
+    position: relative;
+    height: 100vh;
+}
+
+.header-img {
+    width: 100%;
+    height: 490px;
+    padding-top: 22%;
+    z-index: 2;
+}
+
+.header-headline {
+    width: 662px;
+    height: 408px;
+    position: absolute;
+    margin-left: -6%;
+    z-index: 4;
+    animation: header-headline 5s 1 forwards;
+    -webkit-animation: header-headline 5s 1 forwards; /*Safari and Chrome*/
+}
+
+@keyframes header-headline {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes header-headline /*Safari and Chrome*/
+{
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.header-Butterfly {
+    width: 218px;
+    height: 167px;
+    position: relative;
+    top: -90px;
+    left: 80px;
+    z-index: 4;
+}
+
+.header-text {
+    width: 540px;
+    height: 150px;
+    background-image: url('../images/kuang.png');
+    background-size: 100%;
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: middle;
+    position: absolute;
+    animation: header-text 3s 1 forwards;
+    -webkit-animation: header-text 3s 1 forwards; /*Safari and Chrome*/
+}
+
+@keyframes header-text {
+    from {
+        left: -540px;
+    }
+    to {
+        left: 200px;
+    }
+}
+
+@-webkit-keyframes header-text /*Safari and Chrome*/
+{
+    from {
+        left: -540px;
+    }
+    to {
+        left: 200px;
+    }
+}
+
+.text-T {
+    width: 100%;
+    font-size: 78px;
+    color: #333333;
+    margin: 0;
+    padding-top: 15px;
+    z-index: 6;
+}
+
+.qindian {
+    width: 100%;
+    height: 212px;
+    text-align: center;
+    margin-top: 230px;
+}
+
+.qindian-img {
+    display: block;
+    width: 365px;
+    height: 212px;
+    z-index: 8;
+    margin: 0 auto;
+    /*animation:qindian-img 3s 1 forwards;*/
+    /*-webkit-animation:qindian-img 3s 1 forwards; !*Safari and Chrome*!*/
+}
+
+.qindian-img2 {
+    z-index: 88;
+    margin-top: -230px;
+}
+
+@keyframes qindian-img {
+    from {
+        right: 0px;
+    }
+    to {
+        right: 325px;
+    }
+}
+
+@-webkit-keyframes qindian-img /*Safari and Chrome*/
+{
+    from {
+        right: 0px;
+    }
+    to {
+        right: 325px;
+    }
+}
+
+.dizhi {
+    width: 100%;
+    height: 216px;
+    z-index: 9;
+    position: absolute;
+    bottom: 0;
+    animation: dizhi 3s 1 forwards;
+    -webkit-animation: dizhi 3s 1 forwards; /*Safari and Chrome*/
+}
+
+@keyframes dizhi {
+    from {
+        bottom: 0;
+    }
+    to {
+        bottom: 170px;
+    }
+}
+
+@-webkit-keyframes dizhi /*Safari and Chrome*/
+{
+    from {
+        bottom: 0;
+    }
+    to {
+        bottom: 170px;
+    }
+}
+
+/*.dizhi-img {*/
+/*display: block;*/
+/*width: 783px;*/
+/*height: 216px;*/
+/*margin:0 auto;*/
+
+/*}*/
+
+.dizhi-text {
+    display: block;
+    width: 783px;
+    height: 216px;
+    margin: 0 auto;
+}
+
+.chengdu{
+    color: #fff;
+    font-size: 42px;
+    margin: 24px auto;
+    text-align: center;
+}
+
+.dizhi-text hr{
+    width: 27px;
+    text-align: center;
+}
+
+.time{
+    color: #fff;
+    font-size: 30px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.location{
+    color: #fff;
+    font-size: 30px;
+    margin: 20px auto;
+    text-align: center;
+}

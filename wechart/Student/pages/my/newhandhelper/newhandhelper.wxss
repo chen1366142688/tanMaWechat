@@ -1,0 +1,56 @@
+/* pages/my/alter-phone/alter-phone.wxss */
+
+page {
+  background-color: #ececec;
+}
+
+.new-titlea {
+  font-family: PingFang-SC-Bold;
+  font-weight: Bold;
+  text-align: center;
+  color:#333333;
+  padding: 28rpx 0;
+  border-bottom: 1rpx solid #e4e4e4;
+}
+.new-helpera{
+  width: 50%;
+  margin-left: -3rpx;
+  border-left: 1rpx solid #e4e4e4;
+  border-right: 1rpx solid #e4e4e4;
+  border-bottom: 1rpx solid #e4e4e4;
+  display: inline-block;
+}
+.new-helperb{
+  width: 2rpx;
+  height:105rpx; 
+  border-right: 2rpx solid #e4e4e4;
+  display: inline-block;
+  vertical-align:bottom;
+}
+
+.new-handa {
+  background: #fff;
+  width: 750rpx;
+  margin: 0 auto;
+  margin-bottom: 20rpx;
+}
+
+/** wxss **/
+/** 修改默认的navigator点击态 **/
+.navigator-hover {
+    color:#00c693;
+}
+/** 自定义其他点击态样式类 **/
+.other-navigator-hover {
+    color:#00c693;
+}
+
+.new-helperc{
+  font-family: PingFang-SC-Bold;
+  /* font-weight: Bold; */
+  text-align: center;
+  color:#333333;
+  font-size: 28rpx;
+  padding: 31rpx 0;
+  width:50%;
+}

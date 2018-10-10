@@ -1,0 +1,48 @@
+<wxs module="numberTransform">
+var transform = {
+  toFix: function (value) {
+    return value.toFixed(2)
+  }
+}
+
+module.exports = {
+  toFix: transform.toFix
+}
+</wxs>
+
+
+<view class='pages'>
+ <scroll-view class='scrollBox' style='height:{{height}}rpx;' scroll-y bindscroll='scroll' upper-threshold='02' bindscrolltoupper='scrolltoupper' bindscrolltolower="scrolltolower" scroll-top="{{scrollTop}}">
+
+
+<view class='c-query' wx:for="{{orderHomeListForDay}}" wx:for-item="list" wx:key="*this">
+
+  <view class='c-query-total clearfloat'>
+    <view class='c-queryBox fl'>
+      <text class='c-totaltext'>当日线上总收款</text>
+      <text class='c-total-money'>RMB {{numberTransform.toFix(list.homePriceCount/100)}}</text>
+    </view>
+    <text class='c-query-date fr'>{{list.payTime}}</text>
+  </view>
+
+  <view class='c-query-qiu clearfloat' wx:for="{{list.homeItemList}}" wx:key="*this">
+    <text class='c-yumao fl'>{{item.itemName}}</text>
+    <text class='c-query-pmb fr'>RMB {{numberTransform.toFix(item.itemPriceCount/100)}}</text>
+  </view>
+
+  <!--<view class='c-query-qiu clearfloat c-query-bus'>
+    <text class='c-yumao fl'>篮球</text>
+    <text class='c-query-pmb fr'>RMB 3020.00</text>
+  </view>-->
+
+</view>
+
+<text class='van-over' wx:if="{{lastFootShow}}">{{lastFoot}}</text>
+<image class='van-sticka' src='{{url}}stick.png' bindtap='toTop'></image>
+</scroll-view>
+<!--  没有数据显示空空如也  -->
+  <view class='kong' wx:if="{{Period}}">
+    <image class='kong-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/studentNewImg/kong.png'></image>
+    <text class='kong-text'>空空如也</text>
+  </view>
+</view>

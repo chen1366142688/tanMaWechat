@@ -1,0 +1,78 @@
+<view style='style="position: relative;"'>
+<view class='guangKe'>
+  <view class='items-jiao'>
+    <image class='userImg' src='{{attendInfo.coachPhotoAddress }}'></image>
+
+    <view class='item-userTxt'>
+      <view class='userTxt-top clearfloat'>
+        <view class='fl'>
+          <view class='userA iLblock'>{{attendInfo.itemName }} {{attendInfo.maxMember }}人班</view>
+          <view class='userB iLblock  user-top-wid-a textOver'>{{attendInfo.className }}</view>
+        </view>
+
+        <view class='money'>
+          <view class='eachclassis-rmbb'>
+            <text class='rmb'>RMB</text>
+            <text class='rmbNum'>{{attendInfo.courseCostTotal }}</text>
+          </view>
+          <view class='fr'>
+            <view class='userC iLblock'>{{attendInfo.courseCount }}课时/{{attendInfo.courseTime }}h</view>
+          </view>
+        </view>
+
+      </view>
+      <view class='userTxt-bottom'>
+        <image class='userboysexa iLblock' src='{{imgUrl}}/redcoach.png'></image>
+        <text class='userMum-lilei iLblock'>{{attendInfo.classCoach }}</text>
+        <image class='userboysexb iLblock' src='{{imgUrl}}/blackboy.png' wx:if="{{attendInfo.coachSex==1}}"></image>
+        <image class='userboysexb iLblock' src='{{imgUrl}}/blackgirl.png' wx:if="{{attendInfo.coachSex==2}}"></image>
+        <!--性别 女-->
+        <!-- 
+        <image src='{{imgUrl}}/boy.png'></image>
+        <image src='girl.png'></image>
+        -->
+        <image class="userNumber iLblock" src='{{imgUrl}}/numbers.png'></image>
+        <text class='userMum iLblock'>{{attendInfo.lastAttendPeriod }}期</text>
+        <image style='width:20rpx;height:20rpx;' class='userLevel' src='{{imgUrl}}/titletechnicalpost.png'></image>
+        <text class='userLevelColor iLblock'>{{attendInfo.itemStudentGrade  }}</text>
+      </view>
+    </view>
+  </view>
+
+</view>
+
+<view class='cor-shop-head-da'></view>
+
+<!--第二部分 -->
+
+<!--羽毛球 234期班 开始-->
+<scroll-view scroll-y='true' style='height:{{height}}px'>
+<view class="c-jiao-information" wx:for="{{classAttenList}}">
+  <view class='c-items-xcxa'>
+    <view class='c-item-inifo'>
+      <text class='c-item-info-txt'>{{item.itemName }} {{item.attendPeriod }}期班</text>
+      <text class='c-item-title'>{{item.attendDate }} {{item.dayTimeStart }}-{{item.dayTimeEnd }}</text>
+      <view class="c-item-status" wx:if="{{item.attendStatus =='00'}}">删除</view>
+      <view class="c-item-status" wx:if="{{item.attendStatus =='01'}}">未报名 </view>
+      <view class="c-item-status c-item-apply" wx:if="{{item.attendStatus =='02'}}">报名中 </view>
+      <view class="c-item-status" wx:if="{{item.attendStatus =='03'}}">报名结束 </view>
+      <view class="c-item-status" wx:if="{{item.attendStatus =='04'}}">已开课</view>
+      <view class="c-item-status c-item-cancel" wx:if="{{item.attendStatus =='05'}}">已取消</view> 
+    </view>
+    <view class='c-item-inifo'>
+      <image class='l-cdcenter-posa' src='{{imgUrl}}/red-location.png'></image>
+      <text class='c-username-text in'>{{item.homeName }}</text>
+      <image class='c-touser-xcxa' src='{{imgUrl}}/red-total.png'></image>
+      <text class='c-renshu in'>{{item.signUpMember }}人已报名</text>
+          <view class='eachclassis-rmbc fr'>
+            <text class='c-data-txt in'>1课时/{{item.courseTime/10}}h</text>
+            <text class='rmb'>RMB</text>
+            <text class='rmbNuma'>{{item.courseCost }}</text>
+          </view>      
+    </view>
+  </view>
+</view>
+</scroll-view>
+<!--<!--羽毛球 234期班 end-->
+</view>
+<text class='van-over'>{{footer}}</text>

@@ -1,0 +1,529 @@
+/* pages/curriculum/curriculumeIndex/curriculumIndex.wxss */
+.curriculum-info{
+  /* height: 450rpx; */
+  width: 100%;
+  padding-top: 120rpx;
+  position: relative;
+}
+.curriculum-info .share{
+ width: 160rpx;
+ height: 60rpx;
+ border-radius: 60rpx;
+ background: white;
+ font-size: 30rpx;
+ color: RGBA(0, 117, 135, 1);
+ text-align: center; 
+ line-height: 60rpx;
+ position: absolute;
+  right: 25rpx;
+  top: 41rpx;
+}
+.curriculum-info .share image{
+  width: 30rpx;
+  height: 30rpx;
+  
+}
+.curriculum-info .main{
+  background: white;
+  height: 100%;
+  position: relative;
+  padding: 31rpx 37rpx 41rpx;
+  box-sizing: border-box;
+}
+.curriculum-info .main .avatar{
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 30rpx;
+  position: absolute;
+  top:-90rpx;
+  background: white;
+}
+.curriculum-info .main .label{
+  padding-left: 200rpx;
+  font-size: 20rpx;
+  color: RGBA(0, 182, 214, 1);
+  margin-bottom: 86rpx;
+  height: 20rpx;
+}
+.curriculum-info .main .label text{
+  padding: 6rpx 20rpx;
+  background: RGBA(217, 244, 249, 1);
+  border-radius: 40rpx;
+  margin-right: 15rpx;
+}
+.curriculum-info .main .name{
+  padding-left: 40rpx;
+  font-size: 26rpx;
+  color: RGBA(102, 102, 102, 1);
+  margin-bottom: 32rpx;
+}
+.curriculum-info .main .name text:nth-child(1){
+  font-size: 34rpx;
+  color: RGBA(51, 51, 51, 1);
+  margin-right: 20rpx;
+}
+.curriculum-info .main .primary{
+  font-size: 24rpx;
+  line-height: 36rpx;
+}
+
+.curriculum-header {
+  width: 750rpx;
+  margin: 0;
+  margin-top: 20rpx;
+  padding: 0;
+}
+
+.curriculum-banner {
+  width: 702rpx;
+  height: 256rpx;
+  margin-top: 20rpx;
+  margin: 0 auto;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border-top-left-radius: 7rpx;
+  border-top-right-radius: 7rpx;
+}
+
+.banner-img {
+  width: 78rpx;
+  height: 76rpx;
+  right: 0;
+  position: absolute;
+}
+
+.banner-heat {
+  overflow: hidden;
+  width: 150rpx;
+  height: 42rpx;
+  line-height: 34rpx;
+  position: relative;
+  top: 197rpx;
+  background-image: url('http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coach/curriculum/background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  float: right;
+}
+
+.heat-img {
+  width: 16rpx;
+  height: 16rpx;
+  margin-left: 29rpx;
+  line-height: 40rpx;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.heat-text {
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(228, 0, 17, 1);
+  margin-left: 20rpx;
+  display: inline-block;
+  width: 78rpx;
+}
+
+/*  项目  */
+
+.curriculum-project {
+  width: 702rpx;
+  height: 90rpx;
+  margin: 0 auto;
+  background-color: #fff;
+  border-top: 1rpx solid #e4e4e4;
+}
+
+.project-sort {
+  width: 120rpx;
+  height: 60rpx;
+  margin-top: 14rpx;
+  float: left;
+  margin-left: 17rpx;
+  border: 1rpx solid #007587;
+  border-radius: 10rpx;
+}
+
+.sort-one {
+  width: 120rpx;
+  height: 30rpx;
+  color: #fff;
+  text-align: center;
+  font-size: 20rpx;
+  background-color: #007587;
+  border-top-right-radius: 8rpx;
+  border-top-left-radius: 8rpx;
+}
+
+.sort-two {
+  width: 120rpx;
+  height: 30rpx;
+  color: #007587;
+  background-color: #fff;
+  font-size: 20rpx;
+  text-align: center;
+  border-bottom-right-radius: 10rpx;
+  border-bottom-left-radius: 10rpx;
+}
+
+.project-describe {
+  width: 364rpx;
+  height: 80rpx;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-left: 20rpx;
+  margin-top: 14rpx;
+  float: left;
+}
+
+.describe-text {
+  width: 382rpx;
+  height: 30rpx;
+  margin: 0;
+  padding: 0;
+  font-size: 30rpx;
+  line-height: 31rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  vertical-align: middle;
+  text-overflow: ellipsis;
+}
+
+/* 班次、人数、级别 */
+
+.Statistics {
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 355rpx;
+  height: 30rpx;
+  line-height: 17rpx;
+  margin: 0 auto;
+  vertical-align: middle;
+}
+
+.l-cdcenter-posa {
+  width: 20rpx;
+  height: 20rpx;
+  margin-right: 10rpx;
+}
+
+.order-items-posb {
+  width: 14rpx;
+  height: 17rpx;
+  margin-right: 10rpx;
+}
+
+.l-cdcenter-posae {
+  width: 20rpx;
+  height: 20rpx;
+  margin-right: 10rpx;
+}
+
+.c-username-text {
+  display: inline-block;
+  height:25rpx;
+  line-height:25rpx;
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(102, 102, 102, 1);
+  vertical-align: middle;
+}
+.c-username-texts {
+  display: inline-block;
+  max-width: 200rpx;
+  height:25rpx;
+  line-height:25rpx;
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(102, 102, 102, 1);
+  vertical-align: middle;
+}
+.c-touser-xcxa {
+  width: 24rpx;
+  height: 24rpx;
+  margin: 0rpx 12rpx 0rpx 22rpx;
+  vertical-align: middle;
+}
+
+.c-renshu {
+  height:25rpx;
+  line-height:25rpx;
+  vertical-align: middle;
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(102, 102, 102, 1);
+}
+
+.c-touser-xcxb {
+  width: 19rpx;
+  height: 19rpx;
+  margin-left: 10rpx;
+}
+
+.c-date {
+  width: 20rpx;
+  height: 20rpx;
+  margin: 0 10rpx 0 20rpx;
+  vertical-align: middle;
+}
+
+.c-data-txt {
+  height:25rpx;
+  line-height:25rpx;
+  vertical-align: middle;
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(102, 102, 102, 1);
+}
+
+/*  金额  */
+
+.project-money {
+  width: 150rpx;
+  float: left;
+  /* margin-left: 20rpx; */
+  margin-right: 18rpx;
+}
+
+.van-left-txt {
+  width: 150rpx;
+  display: inline-block;
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(51, 51, 51, 1);
+  vertical-align: middle;
+}
+
+.van-rmba {
+  font-family: SanFranciscoDisplay-Bold;
+  font-weight: Bold;
+  color: #ff5571;
+  margin-top: 14rpx;
+  height: 38rpx;
+  line-height: 38rpx;
+  text-align: right;
+}
+
+.van-rmba .van-rmbb-smal {
+  font-size: 18rpx;
+}
+
+.van-rmba .van-rmbc {
+  display: inline-block;
+  max-width: 99rpx;
+  overflow: hidden;
+  /* text-overflow: ellipsis; */
+  white-space: nowrap;
+  font-size: 34rpx;
+  padding-left: 9rpx;
+}
+
+.van-rmbe {
+  font-size: 18rpx;
+  color: rgba(102, 102, 102, 1);
+  text-align: right;
+}
+
+.site {
+  width: 702rpx;
+  height: 49rpx;
+  background-color: #fff;
+  border-top: 1rpx solid #e4e4e4;
+  margin: 0 auto;
+  line-height: 49rpx;
+  padding-bottom: 10rpx;
+}
+
+.site-location {
+  width: 300rpx;
+  height: 51rpx;
+  float: left;
+  line-height: 51rpx;
+  margin-left: 20rpx;
+}
+
+.site-period {
+  width: 360rpx;
+  height: 51rpx;
+  text-align: right;
+  line-height: 51rpx;
+  float: right;
+  padding-right: 20rpx;
+}
+
+/*  时间  */
+
+.curriculum-time {
+  width: 702rpx;
+  margin: 0 auto;
+  background-color: #fff;
+  font-size: 28rpx;
+}
+
+.time-one {
+  width: 702rpx;
+  height: 81rpx;
+  line-height: 81rpx;
+  /* margin-left: 17rpx; */
+  overflow: hidden;
+  border-top: 1rpx solid #e4e4e4;
+}
+
+.one-text {
+  width: 60rpx;
+  height: 81rpx;
+  margin-left: 17rpx;
+  float: left;
+}
+
+.two-text {
+  width: 187rpx;
+  height: 81rpx;
+  margin-left: 46rpx;
+  float: left;
+}
+
+.there-text {
+  width: 140rpx;
+  height: 81rpx;
+  text-align: center;
+  margin-left: 62rpx;
+  float: left;
+}
+
+.renshu {
+  color: #00b6d6;
+}
+
+.four-text {
+  width: 134rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 22rpx;
+  margin-top: 23rpx;
+  border: 1rpx solid #00b6d6;
+  border-radius: 17rpx;
+  background-color: #00b6d6;
+  margin-right: 20rpx;
+  float: right;
+}
+
+.four-text-cdcentera1 {
+  background-color: #999;
+  width: 134rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 22rpx;
+  margin-top: 23rpx;
+  border: 1rpx solid #999;
+  border-radius: 17rpx;
+  margin-right: 20rpx;
+  float: right;
+}
+
+.four-text1 {
+  width: 134rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 22rpx;
+  margin-top: 23rpx;
+  border: 1rpx solid #999;
+  border-radius: 17rpx;
+  background-color: #999;
+  margin-right: 20rpx;
+  float: right;
+}
+
+/*  添加项目  */
+
+.addProBox {
+  width: 702rpx;
+  height: 180rpx;
+  margin: 0 auto;
+  line-height: 180rpx;
+  margin-top: 20rpx;
+  background-color: #fff;
+  /* position: relative; */
+  border-radius:5rpx;
+  padding-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.addition {
+  display: block;
+  width: 662rpx;
+  margin: 0 auto;
+  height: 160rpx;
+  color: #007587;
+  line-height: 160rpx;
+  font-size: 34rpx;
+  text-align: center;
+  border: 1px dashed #007587;
+}
+
+.van-rmbf {
+  width: 702rpx;
+  background: rgba(40, 38, 39, 1);
+  opacity: 0.7;
+  border-radius: 5rpx;
+}
+
+.kec-termsa {
+  display: flex;
+  align-items: center;
+  width: 200px;
+  margin: 0 auto;
+}
+
+.circle-a {
+  width: 4px;
+  height: 4px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.circle-b {
+  width: 6px;
+  height: 6px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.circle-c {
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.circle-six {
+  margin-left: 6rpx;
+}
+
+.circle-wholea {
+  padding: 0 16rpx;
+  color: #fff;
+}
+
+.kec-box-terms {
+  position: absolute;
+  z-index: 20;
+  left: 25rpx;
+}
+
+.kec-maina {
+  color: #fff;
+  font-size: 34rpx;
+  text-align: center;
+  width: 400rpx;
+}

@@ -1,0 +1,10 @@
+<!--pages/index/payment1/payment1.wxml-->
+
+<!--  付款成功  -->
+<view class='Payment'>
+   <image class='succeed' src='{{imgUrl}}coach/public/succeed.png'></image>
+   <view  class='Payment-succeed'>恭喜您！付款成功</view>
+   <!-- <view class='succeed-T'>您可以在【我的】-【系统通知】中查看本次付款记录。</view> -->
+</view>
+<button class='settle-accounts' bindtap="toIndexDetail">返回首页</button>
+

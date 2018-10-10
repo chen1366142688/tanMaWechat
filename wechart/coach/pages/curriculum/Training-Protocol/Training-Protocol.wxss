@@ -1,0 +1,65 @@
+/* pages/curriculum/Training-Protocol/Training-Protocol.wxss */
+
+.Training-Protocol{
+  width: 750rpx;
+  margin: 0;
+  padding: 0;
+}
+
+.Protocol-L{
+  width: 750rpx;
+  height: 88rpx;
+  border-top: 1rpx solid #e4e4e4;
+  background-color: #fff;
+}
+
+.Protocol-B{
+  width: 300rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  font-size: 30rpx;
+  margin-left: 30rpx;
+  color: #333;
+  float: left;
+}
+
+.Protocol-X{
+  width: 390rpx; 
+  height: 88rpx;
+  float: right;
+  margin-right: 30rpx;
+}
+
+.Protocol-X-text{
+  width: 365rpx; 
+  line-height: 88rpx;
+  text-align: right;  
+  font-size: 30rpx;
+  color: #333;
+  float: left;
+}
+
+.Protocol-X-T{
+  line-height: 88rpx;
+  width: 11rpx;
+  height: 6rpx;
+  margin-top: 41rpx;
+  margin-left: 15rpx;
+}
+
+.myInfoBxo{
+  width: 720rpx;
+  height: 580rpx;
+  padding: 30rpx;
+  margin: 0 auto;
+  color: #999999;
+  font-size: 30rpx;
+  border-top: 1rpx solid #e4e4e4;
+  background-color: #fff;
+}
+
+.myInfo {
+  color: #999;
+  line-height: 88rpx;
+  font-size: 30rpx;
+}

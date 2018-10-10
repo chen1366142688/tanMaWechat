@@ -1,0 +1,23 @@
+// pages/Exercise/Program-Particulars/Program-Particulars.js
+Page({
+  data: {
+   url:''
+  },
+  onLoad: function (options) {
+    console.log(options)
+    //计划类型 planId 
+    //孩子Id 非必须 childrenId 
+    let childrenId = options.childrenId;
+    let planId = options.planId;
+    let url = `http://tanmasports?planId=${planId}&&childrenId=${childrenId}`;
+    this.setData({url : url})
+  },
+  onReady: function () {},
+  onShow: function () {},
+  onHide: function () {},
+  onUnload: function () {},
+  onPullDownRefresh: function () {},
+  onReachBottom: function () {},
+  onShareAppMessage: function (e) {
+  }
+})

@@ -1,0 +1,128 @@
+<!--pages/schedule/scheduleIndex/scheduleIndex.wxml-->
+<!--header  -->
+<view class='Schedule-header clearfloat'>
+  <view class='Schedule-fujin'>
+    <!-- 定位  -->
+    <image class='cou-positiona' src='{{imgUrl}}yizhouroada.jpg'></image>
+    <text class='fujinTxt textOver'>益州大道…</text>
+    <!-- 今日日程  -->
+   <view class='course-head-ab {{coursepersona}}' bindtap='kecheng' data-val='1'>训练课程</view>
+    <!-- 本月日程  -->
+     <view class='course-head-ac kec-tertoupb {{coursepersonbnotice}}' bindtap='kecheng' data-val='2'>开课通知</view>
+  </view>
+  <!-- 扫一扫/我的二维码  -->
+  <image src='{{imgUrl}}coach/public/scan.png' class='kecc-noticepointba'></image>
+</view>
+<!-- 今日日程  -->
+<view class='Today' hidden='{{trainingcourse}}'>
+  <view class='l-stop-traina-Nav'>
+    <!--通知已发出  -->
+    <view class='Schedule-Single'>
+      <text class='c-item-info-txt'>羽毛球 12班 234期班</text>
+      <view class="c-item-status">通知以发出</view>
+    </view>
+    <view class='c-item-inifo'>
+      <text class='c-data-txt'>课程标题课程标题课程标题课程标题课程标题...</text>
+      <view class='Statistics'>
+        <image class='l-cdcenter-posa' src='{{imgUrl}}coach/public/location-blue.png'></image>
+        <text class='c-username-text in'>成都体育中心</text>
+        <image class='c-touser-xcxa' src='{{imgUrl}}coach/public/Number-of-people.png'></image>
+        <text class='c-renshu in'>23人已报名</text>
+        <image class='c-touser-xcxb' src='{{imgUrl}}more.png'></image>
+        <image class='c-date' src='{{imgUrl}}coach/public/account.png'></image>
+        <text class='c-data-txt in'>已在线缴纳场馆费</text>
+      </view>
+    </view>
+    <view class='curriculum-time'>
+      <text class='c-data-text in'><text class="c-data-timea">开课时间</text> 2018-02-29 周五 17:23</text>
+    </view>
+  </view>
+  <!-- 今日日程 -->
+  <view class='l-stop-traina-Nav'>
+    <!--开课已取消  -->
+    <view class='Schedule-Single'>
+      <text class='c-item-info-txt'>羽毛球 12班 234期班</text>
+      <view class="c-item-abolish">开课已取消</view>
+    </view>
+    <view class='c-item-inifo'>
+      <text class='c-data-txt'>课程标题课程标题课程标题课程标题课程标题...</text>
+      <view class='Statistics'>
+        <image class='l-cdcenter-posa' src='{{imgUrl}}coach/public/location-blue.png'></image>
+        <text class='c-username-text in'>成都体育中心</text>
+        <image class='c-touser-xcxa' src='{{imgUrl}}coach/public/Number-of-people.png'></image>
+        <text class='c-renshu in'>23人已报名</text>
+        <!-- <image class='c-touser-xcxb' src='{{imgUrl}}more.png'></image>
+      <image class='c-date' src='{{imgUrl}}coach/public/account.png'></image>
+      <text class='c-data-txt in'>已在线缴纳场馆费</text> -->
+      </view>
+    </view>
+    <view class='curriculum-time'>
+      <text class='c-data-text in'><text class="c-data-timea">开课时间</text> 2018-02-29 周五 17:23</text>
+    </view>
+  </view>
+  <view class='stop-traina-Nav'>
+    <view class='Add'>
+      <view class='addition'>+添加开课日程</view>
+    </view>
+  </view>
+</view>
+
+
+<!-- 本月日程   -->
+<view hidden='{{noticecoursetab}}'>
+<view class='calendar'>
+</view>
+ <view class='l-stop-traina-Nav'>
+    <!--通知已发出  -->
+    <view class='Schedule-Single'>
+      <text class='c-item-info-txt'>羽毛球 12班 234期班</text>
+      <view class="c-item-status">通知以发出</view>
+    </view>
+    <view class='c-item-inifo'>
+      <text class='c-data-txt'>课程标题课程标题课程标题课程标题课程标题...</text>
+      <view class='Statistics'>
+        <image class='l-cdcenter-posa' src='{{imgUrl}}coach/public/location-blue.png'></image>
+        <text class='c-username-text in'>成都体育中心</text>
+        <image class='c-touser-xcxa' src='{{imgUrl}}coach/public/Number-of-people.png'></image>
+        <text class='c-renshu in'>23人已报名</text>
+        <image class='c-touser-xcxb' src='{{imgUrl}}more.png'></image>
+        <image class='c-date' src='{{imgUrl}}coach/public/account.png'></image>
+        <text class='c-data-txt in'>已在线缴纳场馆费</text>
+      </view>
+    </view>
+    <view class='curriculum-time'>
+      <text class='c-data-text in'><text class="c-data-timea">开课时间</text> 2018-02-29 周五 17:23</text>
+    </view>
+  </view>
+  <view class='l-stop-traina-Nav'>
+    <!--开课已取消  -->
+    <view class='Schedule-Single'>
+      <text class='c-item-info-txt'>羽毛球 12班 234期班</text>
+      <view class="c-item-abolish">开课已取消</view>
+    </view>
+    <view class='c-item-inifo'>
+      <text class='c-data-txt'>课程标题课程标题课程标题课程标题课程标题...</text>
+      <view class='Statistics'>
+        <image class='l-cdcenter-posa' src='{{imgUrl}}coach/public/location-blue.png'></image>
+        <text class='c-username-text in'>成都体育中心</text>
+        <image class='c-touser-xcxa' src='{{imgUrl}}coach/public/Number-of-people.png'></image>
+        <text class='c-renshu in'>23人已报名</text>
+        <!-- <image class='c-touser-xcxb' src='{{imgUrl}}more.png'></image>
+      <image class='c-date' src='{{imgUrl}}coach/public/account.png'></image>
+      <text class='c-data-txt in'>已在线缴纳场馆费</text> -->
+      </view>
+    </view>
+    <view class='curriculum-time'>
+      <text class='c-data-text in'><text class="c-data-timea">开课时间</text> 2018-02-29 周五 17:23</text>
+    </view>
+  </view>
+  <view class='stop-traina-Nav'>
+    <view class='Add'>
+      <text class='addition'>+添加开课日程</text>
+    </view>
+  </view>
+</view>
+<!-- 扫一扫/我的二维码  -->
+<view>
+
+</view>

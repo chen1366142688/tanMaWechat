@@ -1,0 +1,43 @@
+<!--pages/gradeTable/testDetail/testDetail.wxml-->
+<view class='test_detail'>
+  <swiper class='test_swiper' current="{{current}}" bindanimationfinish="nextCurrent" duration="500" previous-margin="35rpx" next-margin='35rpx' bindchange='change'>
+    <block wx:for="{{studentInfo}}" wx:key="{{index}}">
+      <swiper-item>
+        <view class='test_main {{current == index ? "nowcurrent" : ""}}'>
+          <view class='header'>
+            <view class='left'>
+              <text>{{item.studentName}}</text>
+              <text>（{{item.birthday}}）</text>
+              <view class='img_box'><image src='{{item.gender == 1 ? "../../../image/man2.png" : "../../../image/woman2.png"}}'></image></view>
+            </view>
+            <view class='right'>
+              五年级二班
+            </view>
+            <view class='triangle'></view>
+          </view>
+          <view class='main {{current == index ? "now_current" : ""}}'>
+            <view class='pickers' wx:if="{{isSign}}">
+              <test-sign bind:sign="getSign" myValue="{{item.sign}}" myIndex="{{index}}"></test-sign>
+            </view>
+            <view class='pickers' wx:for="{{item.pickNum}}" wx:key="{{index}}" wx:for-item="i">
+              <test-picker bind:myValue="getValue" myIndex="{{index}}" myValue="{{i}}"></test-picker>
+            </view>
+            <view wx:if="{{isPoint}}" class='point'></view>
+            <view class='pickers' wx:if="{{isPoint}}">
+              <test-picker bind:myValue="getValuePoint" myIndex="-1" myValue="{{item.myPoint}}"></test-picker>
+            </view>
+          </view>
+          <view class='unit'>单位：{{resultValue}}</view>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='pushbtn' bindtap='pushResult'>
+    提交结果
+  </view>
+</view>
+
+<!-- 遮罩层防止连续滑动 -->
+<view class="mock" wx:if="{{isAnimation}}">
+  <image src='../../../image/loading.gif'></image>
+</view>

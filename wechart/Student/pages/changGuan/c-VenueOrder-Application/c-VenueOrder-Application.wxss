@@ -1,0 +1,266 @@
+page {
+  background: #ececec;
+  position: relative;
+}
+
+.order-item-one {
+  width: 695rpx;
+  background: #fff;
+  border-radius: 5rpx;
+  padding: 0 25rpx 0 30rpx;
+}
+
+.order-state {
+  line-height: 0;
+  padding: 21rpx 0;
+  border-bottom: 1rpx dotted #999;
+}
+
+.order-userImg {
+  width: 84rpx;
+  height: 84rpx;
+  border-radius: 42rpx;
+  vertical-align: middle;
+}
+
+.order-numbers-bottom {
+  padding-top: 13rpx;
+}
+
+.order-renshu {
+  display: inline-block;
+  width: 160rpx;
+  height: 40rpx;
+  border: 1rpx solid #171718;
+  border-radius: 5rpx;
+  line-height: 40rpx;
+  text-align: center;
+  font-size: 22rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(23, 23, 24, 1);
+  margin-right: 19rpx;
+}
+
+.order-title {
+  font-size: 24rpx;
+  font-family: PingFang-SC-Bold;
+  color: rgba(51, 51, 51, 1);
+  font-weight: bold;
+}
+
+.order-numbers-bottom {
+  padding-top: 13rpx;
+}
+
+.order-name-img {
+  width: 18rpx;
+  height: 20rpx;
+  margin-right: 8rpx;
+  vertical-align: middle;
+}
+
+.order-name-jiao {
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(51, 51, 51, 1);
+}
+
+.order-man-img {
+  width: 20rpx;
+  height: 20rpx;
+  vertical-align: middle;
+  margin-left: 12rpx;
+}
+
+.order-qishu-img {
+  width: 20rpx;
+  height: 20rpx;
+  vertical-align: middle;
+  margin-left: 32rpx;
+}
+
+.order-qushu-txt {
+  font-size: 24rpx;
+  font-family: SanFranciscoDisplay-Regular;
+  color: rgba(102, 102, 102, 1);
+  margin-left: 9rpx;
+}
+
+.order-level-txt {
+  font-size: 24rpx;
+  font-family: SanFranciscoDisplay-Regular;
+  color: rgba(51, 51, 51, 1);
+  margin-left: 9rpx;
+}
+
+.order-numbers-bottom {
+  padding-top: 13rpx;
+}
+
+.order-numbers-top {
+  white-space: nowrap;
+  overflow: hidden;
+  vertical-align: middle;
+  text-overflow: ellipsis;
+  width: 550rpx;
+}
+
+.order-numbers {
+  margin-left: 23rpx;
+}
+
+.order-item-keshi {
+  height: 60rpx;
+  line-height: 60rpx;
+}
+
+.order-total-keshi {
+  font-size: 24rpx;
+  font-family: PingFang-SC-Bold;
+  color: rgba(0, 198, 147, 1);
+}
+
+.strong {
+  color: #00c693;
+  font-weight: bold;
+}
+
+.order-total-shenyu {
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(51, 51, 51, 1);
+}
+
+.yu-money {
+  font-size: 20rpx;
+}
+
+.strongs {
+  color: #e85571;
+  font-weight: bold;
+}
+
+#strongs {
+  color: #e85571;
+  font-weight: bold;
+  font-size: 24rpx;
+  margin-left: 10rpx;
+}
+
+.tuifei {
+  width: 100%;
+  height: 23rpx;
+  line-height: 23rpx;
+  font-size: 24rpx;
+  font-weight: bold;
+  text-align: center;
+  margin: 20rpx auto;
+  font-family: PingFang-SC-Bold;
+  color: rgba(51, 51, 51, 1);
+}
+
+.jisuan-money {
+  width: 702rpx;
+  height: 160rpx;
+  padding: 0 24rpx;
+  background: #fff;
+}
+
+.jisuanA {
+  height: 36rpx;
+  line-height: 36rpx;
+  padding-top: 10rpx;
+}
+
+.shifu {
+  font-size: 24rpx;
+  font-family: SanFranciscoDisplay-Regular;
+  color: rgba(51, 51, 51, 1);
+}
+
+.shifu-money {
+  font-size: 24rpx;
+  font-family: SanFranciscoDisplay-Regular;
+  color: rgba(51, 51, 51, 1);
+}
+
+.jisuanB {
+  height: 36rpx;
+  line-height: 36rpx;
+  padding-bottom: 10rpx;
+  border-bottom: 1rpx dotted #e4e4e4;
+}
+
+.shifu-moneys {
+  font-size: 18rpx;
+  font-family: SanFranciscoDisplay-Bold;
+  color: rgba(232, 85, 113, 1);
+}
+
+.jisuanC {
+  height: 70rpx;
+  line-height: 70rpx;
+}
+
+.weChat {
+  width: 707rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  background: #fff;
+  padding: 0 23rpx 0 20rpx;
+  margin: 20rpx 0;
+}
+
+.callBackWechat {
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(51, 51, 51, 1);
+}
+
+.weChat-num {
+  font-size: 24rpx;
+  font-family: SanFranciscoDisplay-Regular;
+  color: rgba(153, 153, 153, 1);
+}
+
+.weChat-pwd {
+  font-size: 28rpx;
+  font-family: SanFranciscoDisplay-Regular;
+  color: rgba(51, 51, 51, 1);
+}
+
+.zhuming {
+  display: block;
+  height: 30rpx;
+  font-size: 20rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(153, 153, 153, 1);
+  padding-left: 20rpx;
+  margin-top: 20rpx;
+}
+
+.btn {
+  width: 702rpx;
+  height: 88rpx;
+  background: rgba(0, 198, 147, 1);
+  border-radius: 44rpx;
+  font-size: 30rpx;
+  font-family: PingFang-SC-Bold;
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
+  background: #00c693;
+  position: fixed;
+  bottom: 60rpx;
+  left: 24rpx;
+}
+
+.sub {
+  display: block;
+  width: 690rpx;
+  height: 80rpx;
+  margin-left: 3rpx;
+  margin-top: 2rpx;
+  line-height: 80rpx;
+  border: 1rpx dotted #fff;
+  border-radius: 40rpx;
+}

@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/gradeTable/gradeTableIndex/gradeTableIndex",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/login/login",
+    "pages/register/register",
+    "pages/myInfo/myInfo",
+    
+    "pages/scoreInquiry/scoreInfo/scoreInfo",
+    "pages/gradeTable/gradeDetail/gradeDetail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "white",
+    "borderStyle": "#E4E4E4",
+    "navigationBarTitleText": "探马",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#CBCBCB",
+    "selectedColor": "#00C693",
+    "backgroundColor": "#F9F9F9",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/gradeTable/gradeTableIndex/gradeTableIndex",
+        "text": "成绩录入",
+        "iconPath": "image/grade.png",
+        "selectedIconPath": "image/grade2.png"
+      },
+      {
+        "pagePath": "pages/scoreInquiry/scoreInfo/scoreInfo",
+        "text": "分数查看",
+        "iconPath": "image/scoreInquiry.png",
+        "selectedIconPath": "image/scoreInquiry2.png"
+      },
+      {
+        "pagePath": "pages/myInfo/myInfo",
+        "text": "账号管理",
+        "iconPath": "image/account.png",
+        "selectedIconPath": "image/account2.png"
+      }
+    ]
+  }
+}

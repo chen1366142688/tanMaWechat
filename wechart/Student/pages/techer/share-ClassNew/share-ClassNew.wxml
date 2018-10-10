@@ -1,0 +1,99 @@
+<!--pages/techer/share-Class/share-Class.wxml-->
+<view class='share-class'>
+  <view class='main'>
+      <image src='{{curriculumInfo.orgPhoto}}' class='avatar'></image>
+      <view class='label'>
+        <text>{{item.orgName}}</text>
+      </view>
+      <view class='name'>
+        <text>{{curriculumInfo.className}}</text>    
+      </view>
+      <view class='infomain'>
+        <image src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/coach/iteration/time_img.png'></image>
+        <text>{{month}}月/{{day}}日</text>
+        <text>周{{weekList[curriculumInfo.weekDay]}}</text>
+        <text>{{curriculumInfo.startTime}}-{{curriculumInfo.endTime}}</text>
+      </view>
+      <view class='infomain'>
+        <image src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/coach/iteration/class_img.png'></image>
+        <text>{{curriculumInfo.itemName}}</text>
+      </view>
+      <view class='infomain'>
+        <image src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/coach/iteration/address_img.png'></image>
+        <text>{{curriculumInfo.homeName }}</text>
+      </view>
+  </view>
+  <view style='height:20rpx;background:RGBA(236, 236, 236, 1)'></view>
+  <view class='list'>
+    <view>已报名的学员<text class='count'>（{{curriculumInfo.signUpMember }}/{{curriculumInfo.maxMember }}）</text></view>
+    <view class='mainlist' wx:if="{{stuList.length !=0}}">
+      <view class='one' wx:for="{{stuList}}" wx:key="{{index}}">
+        <text>
+          {{item.studentName}}
+        </text> 
+        <text>
+          {{item.signupTime}}
+        </text>      
+      </view>
+    </view>
+    <view class='nobady' wx:if="{{stuList.length ==0}}">
+      <image src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/coach/iteration/nothing.png'></image>
+      还没有学生报名这堂课程，快去邀请学生吧
+    </view>
+  </view>
+</view>
+<!-- <view class='addstu' bindtap='addStu' wx:if="{{!isShare}}">
+  <view>前 往</view>
+  <view>首 页</view>   
+</view> -->
+<view class='curriculum-btn' wx:if="{{isShare}}">
+  <view class='share_box'>
+    <button class='share2' open-type="share">
+      <image src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/coach/iteration/student_wechart.png'></image>
+      邀请学生快捷报名
+    </button>
+  </view>
+  <view class='back' bindtap='back'>
+    返回
+  </view>
+</view>
+<button class='apply_btn' open-type="getUserInfo" hover-class='none' bindgetuserinfo="bindGetUserInfo" wx:if="{{!isShare && curriculumInfo.signUpMember != curriculumInfo.maxMember && sign.signStatus != 1 && curriculumInfo.attendStatus != 06}}">
+  报名上课
+</button>
+<view class='apply_not' wx:if="{{!isShare && curriculumInfo.signUpMember >= curriculumInfo.maxMember  && sign.signStatus != 1 && curriculumInfo.attendStatus != 06}}">
+  已报满
+</view>
+<view class='sign' wx:if="{{!isShare && sign.signStatus == 1 && curriculumInfo.attendStatus != 06}}">
+  <view class='cancelapply' bindtap='cancelApply'>
+    取消报名
+  </view>
+  <view class='record' bindtap='myHistory'>
+    我的上课记录
+  </view>
+</view>
+
+<!-- 弹窗 -->
+<view class='mock' wx:if="{{isMockInput}}">
+  <!-- <view class='mockback' catchtap='cancelInput'></view> -->
+  <view class='main'>
+    <input placeholder='学生姓名' maxlength='8' bindinput='studentName'></input>
+    <input placeholder='电话号码' maxlength='11' type='number' bindinput='userPhone'></input>
+    <view class='code'>
+      <input id="sendCode" placeholder='验证码' maxlength='6' type='number' bindinput='inputCode'></input>
+      <view class='sendText' wx:if="{{!showCode}}" catchtap='getCode'>发送验证码</view>
+      <view class='sendText' wx:if="{{showCode}}">{{thisTime}}s</view>
+    </view>
+  </view>
+  <view class='btn' bindtap='subMit'>提交</view>
+</view>
+
+<!-- 弹窗 -->
+<view class='mock' wx:if="{{isMock}}">
+  <view class='main'>
+    {{mockInfo}}
+  </view>
+  <view class='bot'>
+    <view class='cancel' catchtap='cancel' wx:if="{{isCancel}}">取消</view> 
+    <view class='sure {{isCancel?"" : "sure2"}}' catchtap='sure'>确认</view>
+  </view>
+</view>

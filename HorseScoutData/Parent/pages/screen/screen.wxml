@@ -1,0 +1,8 @@
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-dots="true" indicator-color="#fff" indicator-active-color="#4DD0C8">
+  <block wx:for="{{imgUrls}}" wx:key="uqine">
+    <swiper-item data-index="{{index}}" bindtap="goRegister">
+      <image src="{{item}}" class="slide-image" width="355" height="150"/>
+    </swiper-item>
+  </block>
+</swiper>

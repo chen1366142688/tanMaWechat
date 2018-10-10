@@ -1,0 +1,19 @@
+<view class='box'>
+  <button class='btnBxo' open-type="getUserInfo" hover-class='none' bindgetuserinfo="bindGetUserInfo">
+    <text class='name'>{{activityDetail.activityInfo}}</text>
+    <view class='imgBox'>
+      <image mode='widthFix' class='arCode' src='{{activityDetail.organizationQrCode}}'  />
+    </view>
+    <view class='lookItem'>
+      <text>查 看 比 赛 详 情</text>
+      <image src='http://tanma-competition.oss-cn-beijing.aliyuncs.com/back.png'></image>
+    </view>
+  </button>
+  <view class='Registration {{signupList.length>0?"bgColor":""}}'>
+      <view class='listTitle'>{{signupList.length>0?"已参加比赛":""}}</view>
+      <view class='rowItem' wx:for="{{signupList}}" bindtap='toSignResult' data-cpuserid='{{item.userId}}' data-competitionid='{{item.competitionId}}' data-signuptype='{{item.signupType}}'>
+        <text class='cloItem textOver'>{{item.activityName}}</text>
+        <text class='itemName textOver'>{{item.category}}</text>
+      </view>
+    </view>
+</view>

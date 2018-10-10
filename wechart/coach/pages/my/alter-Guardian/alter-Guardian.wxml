@@ -1,0 +1,11 @@
+<!--pages/my/alter-Guardian/alter-Guardian.wxml-->
+<view class='alter-Name'>
+  <input wx:if="{{realStatus != '1'}}" class="input" maxlength="20" name="userName" placeholder="请输入姓名" value="{{name?name:''}}" bindinput="userNameInput" />
+  <input wx:if="{{realStatus == '1'}}" disabled class="input" maxlength="20" name="userName" placeholder="请输入姓名" value="{{name?name:''}}" bindinput="userNameInput" />
+</view>
+<view class='alter-Password'>
+  <input wx:if="{{realStatus != '1'}}" class="input" name="userName" maxlength="20" placeholder="请输入身份证号码" value="{{userNum?userNum:''}}" bindinput="usershenFen"/>
+  <input wx:if="{{realStatus == '1'}}" disabled class="input" name="userName" maxlength="20" placeholder="请输入身份证号码" value="{{userNum?userNum:''}}" bindinput="usershenFen"/>
+</view>
+
+<button wx:if="{{realStatus != '1'}}" class='settle-accounts' bindtap='subMit'>保  存</button>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>计划简介</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <script src="../build/flexible_css.debug.js"></script>
+    <script src="../build/flexible.debug.js"></script>
+    <link href="../build/base.debug.css" rel="stylesheet"/>
+    <link href="../build/Project-Summary.debug.css" rel="stylesheet"/>
+<body>
+<div class="Project-Summary">
+    <div class="Program-Particulars-section">
+        <div class="Project-Summary">
+            <div class="Program-Particulars-sections">
+                <!-- 计划简介 -->
+                <div class="Program-description">
+                    <div class="Program-description-headline">计划简介</div>
+                    <div class="Program-description-text" id="presentation"></div>
+                </div>
+                <!-- 训练原理 -->
+                <div class="Program-description">
+                    <div class="Program-description-headline">训练原理</div>
+                    <div class="Program-description-text" id="theory"></div>
+                    <!--<img class="Training-Principle-img"-->
+                         <!--src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/Exercise/brief-introduction.png'>-->
+                </div>
+                <!-- 适用人群 -->
+                <div class="Program-description">
+                    <div class="Program-description-headline ">适用人群</div>
+                    <div class="Program-description-text" id="TargetUser"></div>
+                </div>
+                <!-- 禁忌人群 -->
+                <div class="Program-description">
+                    <div class="Program-description-headline">禁忌人群</div>
+                    <div class="Program-description-text" id="TabooCrowd"></div>
+                </div>
+                <!-- 练前准备 -->
+                <div class="Taboo-crowd">
+                    <div class="Program-description-headline">练前准备</div>
+                    <div class="Program-description-text" id="preparation"></div>
+                </div>
+                <!--专利说明  -->
+                <!--<div class='patent'>-->
+                    <!--<img class="patent-img"-->
+                         <!--src="../images/Exercise/patent.png">-->
+                    <!--<div class="patent-text">-->
+                        <!--<div class="patent-text-headline">专利版权说明</div>-->
+                        <!--<div class="patent-text-section" id="Copyright">-->
+                            <!--测试前需要进行充分的热身活动，防止测试过程中出现受伤情况。处于饥饿状态或饱腹状态切勿进行测试。若测试环境为室内，需注意测试环境内无任何危险物品和会产生磕碰物体。若测试环境为室外，则需要注意天气因素和周边是否有行人或者车辆。在测试过程中请勿进行交谈，以免分心导致受伤-->
+                            <!--。感冒患者不宜进行测试，心脏病、糖尿病、哮喘、低血糖等疾病患者也不宜进行测试。建议女性避开生理期进行测试。在剧烈运动后进行测试可能会产生偏差-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.3.2.js"></script>
+<script src="../js/zepto.min.js" type="text/javascript"></script>
+<script src="../js/url-helper.js" type="text/javascript"></script>
+<script src="../js/Project-Summary.js" type="text/javascript"></script>
+
+</body>
+</html>

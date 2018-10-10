@@ -1,0 +1,36 @@
+<view class="page">
+<!--  <navigator url="../../pages/register/register?title=register" hover-class="other-navigator-hover">注册页面</navigator>
+  <navigator url="../../pages/register/registerchengren/register" hover-class="other-navigator-hover">注册页面，第一个</navigator>
+  <navigator url="../../pages/course/location/location?location" hover-class="navigator-hover">我的位置</navigator>
+  <navigator url="../../pages/course/lessoninform/lessoninform" hover-class="navigator-hover">开课通知</navigator>
+  <navigator url="../../pages/keChen/keChen-index/keChen-index" hover-class="navigator-hover">课程</navigator>
+  <navigator url="../../pages/keChen/keChen-indexone/keChen-indexone" hover-class="navigator-hover">第一个课程</navigator>
+  <navigator url="../../pages/keChen/coursedetails/coursedetails" hover-class="navigator-hover">课程详情</navigator>
+  <navigator url="../../pages/my/" hover-class="navigator-hover">接收通知</navigator>
+  <navigator url="../../pages/my/systematicnotification/systematicnotification" hover-class="navigator-hover">系统通知</navigator>-->
+  <navigator url="../../pages/keChen/eachclassis/eachclassis" hover-class="navigator-hover">开班情况</navigator>
+  
+  <navigator url="../../pages/keChen/purchasecourse/purchasecourse" hover-class="navigator-hover">购买课程</navigator>
+  <text style='display:block'>学员端场馆：</text>
+  <navigator class='to' url='../../pages/changGuan/c-VenueItem/c-VenueItem'>场馆详情</navigator>
+  <navigator class='to' url='../../pages/changGuan/c-VenueLocation/c-VenueLocation'>场馆位置</navigator>
+  <navigator class='to' url='../../pages/changGuan/c-VenueStudent/c-VenueStudent'>学员信息</navigator>
+  <navigator class='to' url='../../pages/changGuan/c-VenueOrder/c-VenueOrder'>我的订单</navigator>
+  <navigator class='to' url='../../pages/changGuan/c-VenueOrder-item/c-VenueOrder-item'>订单详情</navigator>
+  <navigator class='to' url='../../pages/changGuan/c-VenueOrder-Application/c-VenueOrder-Application'>申请退款</navigator>
+  <navigator class='to' url='../../pages/changGuan/c-Venuecomment/c-Venuecomment'>课程评论</navigator>
+  <navigator class='to' url='../../pages/changGuan/c-Venue/c-Venue'>场馆（带导航的跳不过去）</navigator>
+  <text style='display:block'>教练端：</text>
+  <navigator class='to' url='../../pages/techer/techer-index/techer-index'>教练首页（带导航的跳不过去）</navigator>
+  <navigator class='to' url='../../pages/techer/Coach-introduction/Coach-introduction'>教练介绍</navigator>
+  <navigator class='to' url='../../pages/techer/techerEditor/techerEditor'>编辑介绍</navigator>
+  <navigator class='to' url='../../pages/techer/techerPersonal/techerPersonal'>教练个人介绍</navigator>
+  <navigator class='to' url='../../pages/changGuan/c-Venuescreen/c-Venuescreen'>场馆筛选</navigator>
+  <text style='display:block'>场馆端：</text>
+  <navigator class='to' url='../../pages/Stadiums-and-stadiums/Coaching-information/Coaching-information'>教练信息</navigator>
+  <navigator class='to' url='../../pages/Stadiums-and-stadiums/pay/pay'>独立缴费列表</navigator>
+  <navigator class='to' url='../../pages/Stadiums-and-stadiums/Cost-query/Cost-query'>每日费用查询</navigator>
+  <navigator class='to' url='../../pages/Stadiums-and-stadiums/lockLesson/lockLesson'>查看开课</navigator>
+  <navigator class='to' url='../../pages/Stadiums-and-stadiums/venue-register/venue-register'>场馆注册</navigator>
+  <navigator class='to' url='../../pages/Stadiums-and-stadiums/erwei/erwei'>场馆二维码</navigator>
+</view>

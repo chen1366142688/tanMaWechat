@@ -1,0 +1,90 @@
+<view class='c-header clearfloat {{headers}}'>
+  <view class='c-fujin fl' bindtap='bust'>
+    <text class='fujinTxt'>{{tabchangGuan}}</text>
+    <image class='xiaLa2' src='{{newUrl}}c30.png'></image>
+  </view>
+  <view class='venue-seek'>
+    <input type='text' value="{{searchKeyword}}" placeholder='输入您要找的场馆名称' placeholder-class='chanName' class='guan-name fr' bindinput="bindKeywordInput" bindconfirm="searchBtn" confirm-type='search'></input>
+    <view class='venue-seek-Click'  bindtap="keywordSearch">
+    <image src='{{newUrl}}c56.png' class='sousuo'></image>
+    </view>
+  </view>
+
+</view> 
+<!--第二块-->
+<!--滑动时的样式-->
+<view class='{{modal}}' bindtap='hideModal'>
+  <scroll-view class='{{scrollActive}}' scroll-x='true' id="affix">
+    <view class='classItem' wx:for="{{urls}}" wx:key="{{index}}" data-id='{{item.itemId}}' bindtap='itemChoose' data-code='{{item.itemId}}'>
+      <view class="{{itemId == item.itemId ?'is_Checked':'normal'}}">
+        <image class='classItemImg' src='{{item.itemPhotoAddress}}'></image>
+      </view>
+      <view class='classItemText'>{{item.itemName}}</view>
+    </view>
+  </scroll-view>
+  <view class='can-fujin' wx:if="{{showchang != ''}}" bindtap='nearHome'>
+    <text wx-if="{{nearHome}}" class='can-txt'>附近场馆</text>
+    <text wx-if="{{!nearHome}}" class='cansoso'>附近场馆</text>
+    <image wx-if="{{nearHome}}" class='sure' src='{{url}}sure.png'></image> 
+  </view>
+  <view class='can-fujin' wx:if="{{showchang != ''}}" bindtap='localHome'>
+    <text wx-if="{{loacalHome}}" class='can-txt'>搜索本地</text>
+    <text wx-if="{{!loacalHome}}" class='cansoso'>搜索本地</text>
+    <image wx-if="{{loacalHome}}" class='sure' src='{{url}}sure.png'></image>
+    <!-- <input value='' type='text' placeholder='搜索本地' class='can-sousuo' placeholder-class='cansoso'></input> -->
+  </view>
+</view>
+<!--第三块-->
+<scroll-view scroll-y="{{scrollY}}" upper-threshold='02' bindscrolltoupper='scrolltoupper'>
+  <view class='vanThree' wx:for="{{gymList}}" wx:key="homeId" data-data="{{item.homeId}}" bindtap='toDetail' style='height:{{item.height}}'>
+    <view class='van-banner' style='background:url({{item.homeMainPhoto}}?x-oss-process=image/resize,w_{{bannerHight}});background-size: cover;'>
+      <view class='van-banner-item'>
+        <view class='van-text'>
+          <text class='van-city'>{{item.cityName}}</text>
+          <text class='van-name '>{{item.homeName}}</text>
+        </view>
+        <view class='van-hot'>
+          <image class='hot-img' src='{{newUrl}}c13.png'></image>
+          <text class='van-hot-num'>{{item.popularity?item.popularity:0}}</text>
+        </view>
+      </view>
+    </view>
+    <view class='van-sc' wx:if="{{item.check}}">
+      <scroll-view class='van-scroll' scroll-x scroll-with-animation>
+        <view>
+          <text wx:for="{{item.itemVOS}}" wx:for-item="item2" wx:key="itemId" data-data="{{item2}}" class='van-ke'>{{item2.itemName}} </text>
+          <!-- <text wx:for="{{item.itemVOS}}" wx:for-item="item2" wx:key="itemId" data-data="{{item2}}" class='van-ke'>{{item2.itemName}} {{item2.itemNums}}课程</text> -->
+        </view>
+      </scroll-view>
+    </view>
+    <view class='van-location'>
+      <view class='van-left'>
+        <image class='van-left-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/student/position-red.png'></image>
+        <text class='van-left-txt iLblock textOver'>{{item.addrDetail}}</text>
+      </view>
+      <view class='van-right'>
+        <image class='van-right-img' src='{{newUrl}}c16.png'></image>
+        <text class='van-left-txt'>开放时间：{{item.starTime}}-{{item.endTime}}</text>
+        <!-- <text class='van-left-txt'>经营时间：{{item.starTime}}-{{item.endTime}}</text> -->
+      </view>
+    </view>
+  </view>
+  <view class='tabLoading' wx:if="{{tabLoad}}">
+      <image src='../../../image/loading.gif'></image>
+    </view>
+  <view class='footerOver' wx:if="{{showFooter}}">已经到底了</view>
+</scroll-view>
+<!--显示竖着的-->
+<scroll-view class="scroll-activeTop {{itemOPa}}" id="affix" scroll-y='true' wx:if="{{itemShow}}">
+      <view class='classItems' wx:for="{{urls}}" wx:key="{{index}}" data-id='{{item.itemId}}' bindtap='itemChoose'>
+        <view class="{{itemId == item.itemId ?'is_Checked':'normals'}}">
+          <image class='classItemImg' src='{{item.itemPhotoAddress}}'></image>
+        </view>
+        <!-- <view class='classItemText'>{{item.itemName}}</view> -->
+      </view>
+</scroll-view>
+<!--  没有数据显示空空如也  -->
+<view class='kong' wx:if="{{Period}}">
+  <image class='kong-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/studentNewImg/dataEmpty.png'></image>
+  <text class='kong-text'>数据为空</text>
+</view>

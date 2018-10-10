@@ -1,0 +1,342 @@
+/* pages/keChen/paymentsuccessfully/paymentsuccessfully.wxss */
+
+page {
+  background: #ececec;
+}
+
+.Payment {
+  width: 750rpx;
+  height: 494rpx;
+  background-color: #fff;
+  margin: 0 auto;
+}
+
+.pay-payment-box-one {
+  width: 100%;
+  margin: 0 auto;
+  height: 127rpx;
+  padding-top: 82rpx;
+}
+
+.pay-paymentapprovala {
+  width: 127rpx;
+  height: 127rpx;
+  margin-left: 311rpx;
+}
+
+.Payment-succeed {
+  font-size: 30rpx;
+  margin-top: 14rpx;
+  font-weight: Bold;
+  margin-left: 256rpx;
+  font-family: PingFang-SC-Bold;
+  color: #00c693;
+}
+
+.succeed-T {
+  font-size: 24rpx;
+  margin-top: 20rpx;
+  width: 551rpx;
+  margin: 0 auto;
+  font-family: PingFang-SC-Regular;
+  color: rgba(51, 51, 51, 1);
+}
+
+@media (min-width: 370px) {
+  .succeed-T {
+    font-size: 24rpx;
+    margin-top: 20rpx;
+    width: 77%;
+    margin: 0 auto;
+    font-family: PingFang-SC-Regular;
+    color: rgba(51, 51, 51, 1);
+  }
+}
+
+.pur-item-paya {
+  padding-top: 64rpx;
+  width: 702rpx;
+  margin: 0 auto;
+}
+
+.pay-congratu-youa {
+  margin-left: 114rpx;
+}
+
+.pay-congratu-you-back {
+  margin-left: 126rpx;
+}
+
+.pay-gobakck {
+  width: 160rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  background-color: #fff;
+  border-radius: 30rpx;
+  color: #00c693;
+  font-size: 24rpx;
+  border: 2rpx solid #00c693;
+  text-align: center;
+  font-weight: Bold;
+}
+
+.pay-gobakckviisted {
+  width: 160rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  background-color: #00c693;
+  border-radius: 30rpx;
+  color: #fff;
+  font-size: 24rpx;
+  text-align: center;
+  font-weight: Bold;
+}
+
+/*订单详情*/
+
+.order-numbers {
+}
+
+.order-renshu {
+  display: inline-block;
+  width: 160rpx;
+  height: 40rpx;
+  border: 1rpx solid #171718;
+  border-radius: 5rpx;
+  line-height: 40rpx;
+  text-align: center;
+  font-size: 22rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(23, 23, 24, 1);
+  margin-right: 9rpx;
+  vertical-align: middle;
+}
+
+.order-title {
+  font-size: 30rpx;
+  font-family: PingFang-SC-Bold;
+  color: #333;
+  font-weight: bold;
+}
+
+.pur-girl-titlea {
+  width: 474rpx;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.order-numbers-bottom {
+  display: inline-block;
+  width:668rpx;
+  height: 46rpx;
+  line-height: 46rpx;
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+.order-qushu-txt {
+  display: inline-block;
+  width: 450rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+  white-space: nowrap;
+  /* padding-top: 10rpx; */
+  font-size: 24rpx;
+  font-family: SanFranciscoDisplay-Regular;
+  color: rgba(102, 102, 102, 1);
+}
+
+.purchase-teacher-namea {
+  color: #666;
+  font-weight: bold;
+  font-size: 24rpx;
+  line-height: 46rpx;
+  vertical-align: middle;
+}
+
+.purchase-qushu-maina {
+  display: inline-block;
+  /* width: 60rpx; */
+  height: 40rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  /* padding-top: 10rpx; */
+  color: #666;
+  font-weight: bold;
+  font-size: 24rpx;
+}
+
+.purchase-qushu-mainb {
+  display: inline-block;
+  width: 500rpx;
+  color: #333;
+  height: 40rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  /* padding-top: 10rpx; */
+  line-height: 40rpx;
+  font-size: 24rpx;
+  margin-left: 12rpx;
+}
+
+.order-level-txt {
+  display: inline-block;
+  width: 500rpx;
+  height: 40rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  /* padding-top: 10rpx; */
+  font-size: 24rpx;
+  font-family: SanFranciscoDisplay-Regular;
+  color: rgba(51, 51, 51, 1);
+  margin-left: 9rpx;
+}
+
+/*最新一期开班*/
+
+.c-course-int-titlec {
+  background-color: #fff;
+}
+
+.c-cou-havec {
+  font-family: PingFang-SC-Regular;
+  font-size: 24rpx;
+  color: #333;
+  /* border-top: 1px solid #e4e4e4; */
+  padding-top: 18rpx;
+}
+
+.course-time {
+  font-size: 24rpx;
+  height: 100%;
+}
+
+.kecheng-course-time {
+  width: 125rpx;
+  font-size: 24rpx;
+  vertical-align: middle;
+  height: 40rpx;
+  line-height: 40rpx;
+  float: left;
+}
+
+.course-JT{
+   width: 450rpx; 
+   height: 100%;
+   float: left;
+}
+
+.course-jt-time {
+  width: 400rpx;
+  line-height: 40rpx;
+  height: 40rpx;
+  vertical-align: middle;
+  float: left;
+}
+
+.bestnewsa text {
+  display: block;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+
+.pay-order-topa {
+  background: #fff;
+  margin-top: 20rpx;
+}
+
+.pay-order-topb {
+  padding: 26rpx 43rpx 26rpx 42rpx;
+  font-family: PingFang SC;
+}
+
+.pay-order-topc {
+  border-bottom: 1px dashed #999;
+  width: 668rpx;
+  height: 60rpx;
+}
+
+.pay-order-topd {
+  color: #333;
+  font-weight: Bold;
+  text-align: left;
+  font-size: 30rpx;
+  width: 23%;
+  display: inline-block;
+}
+
+.pay-order-tope {
+  text-align: right;
+  color: #333;
+  font-size: 24rpx;
+  width: 76%;
+  display: inline-block;
+}
+
+.pay-order-topf {
+  border-bottom: 1rpx dashed #999;
+  /* height: 62rpx; */
+  /* line-height: 62rpx; */
+}
+
+.pay-order-topfb {
+  border-bottom: 1rpx dashed #999;
+  /* height: 62rpx; */
+   line-height: 62rpx; 
+}
+
+.pay-mid-ordernumberb {
+  font-weight: blod;
+  text-align: left;
+  color: #666;
+  font-size: 24rpx;
+}
+
+.pay-mid-ordernumberb-rmb {
+  font-weight: blod;
+  text-align: left;
+  color: #e85571;
+  font-size: 20rpx;
+  margin-left: 25rpx;
+}
+
+.pay-mid-ordernumberb-numbers {
+  font-weight: blod;
+  text-align: left;
+  color: #e85571;
+  font-size: 30rpx;
+}
+
+/*订单编号*/
+
+.pay-order-topb .pay-mid-ordernumbera {
+  text-align: left;
+  color: #333;
+  font-size: 24rpx;
+  padding: 12rpx 0;
+}
+
+/*开课说明*/
+
+.coursedescription-paya {
+  border-radius: 5rpx;
+  border: 1px solid #e85571;
+  color: #e85571;
+  width: 702rpx;
+  margin: 19rpx 24rpx 131rpx 24rpx;
+}
+
+.coursedescription-payb {
+  width: 670rpx;
+  margin: 0 auto;
+  padding-top: 18rpx;
+  padding-bottom: 20rpx;
+  font-size: 24rpx;
+  text-align: left;
+}

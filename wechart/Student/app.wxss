@@ -1,0 +1,438 @@
+/**index.wxss**/
+
+/*引入模板样式*/
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+::-webkit-scrollbar {
+  width: 0rpx;
+  height: 0rpx;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.img {
+  width: 100%;
+}
+
+/* 疑问  */
+
+.Query {
+  width: 24rpx;
+  height: 24rpx;
+  line-height: 88rpx;
+  margin-left: 10rpx;
+  margin-top: -4rpx;
+  vertical-align: middle;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+/** wxss **/
+
+/** 修改默认的navigator点击态 **/
+
+.navigator-hover {
+  color: blue;
+}
+
+/** 自定义其他点击态样式类 **/
+
+.other-navigator-hover {
+  color: red;
+}
+
+/*覆盖样式*/
+
+.weui-cell:before {
+  border-top: 1rpx solid #00c693;
+}
+
+/*覆盖样式*/
+
+.weui-cell:before {
+  border-top: 1rpx solid #00c693;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.clearfloat:after {
+  display: block;
+  clear: both;
+  content: "";
+  visibility: hidden;
+  height: 0;
+}
+
+.clearfloat {
+  zoom: 1;
+}
+
+.textOver {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.iLblock {
+  display: inline-block;
+}
+
+/**开课通知弹窗提示 start 
+**01课程-04（大班）开班通知
+**/
+
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9998;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.modal-dialog {
+  width: 632rpx;
+  position: fixed;
+  top: 188rpx;
+  left: 59rpx;
+  z-index: 9999;
+  background: #f9f9f9;
+  /* margin: -268rpx 59rpx; */
+  border-radius: 30rpx;
+  height: 750rpx;
+}
+
+.smodal-mask {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 9998;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.modal-title {
+  font-size: 48rpx;
+  font-weight: Bold;
+  color: #030303;
+  text-align: center;
+  width: 632rpx;
+  height: 210rpx;
+  margin: 0 auto;
+  background: url('http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/greenblockbg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.modal-title text {
+  font-size: 48rpx;
+  line-height: 210rpx;
+  color: #fff;
+  width: 243rpx;
+  height: 100%;
+}
+
+.modal-content {
+  margin: 0 auto;
+  height: 290rpx;
+  padding: 92rpx 34rpx 30rpx 34rpx;
+}
+
+.modal-content text {
+  font-size: 24rpx;
+  margin-right: 20rpx;
+  line-height: 45rpx;
+}
+
+.modal-footer {
+  height: 120rpx;
+  font-size: 34rpx;
+  /* margin-top: 28rpx; */
+}
+
+.btn-cancel {
+  width: 50%;
+  color: #38f;
+  text-align: center;
+  border-right: 2rpx solid #b2b2b2;
+}
+
+.btn-confirm {
+  width: 220rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  border-radius: 35rpx;
+  color: #00c693;
+  text-align: center;
+  border: 2rpx solid #00c693;
+}
+
+.btn-confirm-les-modal-close-stop {
+  width: 220rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  border-radius: 35rpx;
+  color: #fff;
+  text-align: center;
+  background: #00c693;
+}
+
+.btn-confirm-les-modal-close-stopb {
+  color: #fff;
+  margin-left: 23rpx;
+}
+
+.les-modal-close-loseimg {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.les-modal-close-stopa {
+  margin: 0 84rpx;
+  display: flex;
+  bottom: 50rpx;
+}
+
+.les-mod-postiona {
+  width: 18rpx;
+  height: 18rpx;
+  vertical-align: middle;
+  margin-right: 10rpx;
+}
+
+.les-mod-postionb {
+  vertical-align: middle;
+}
+
+.les-mod-noticea image {
+  margin-bottom: 6rpx;
+}
+
+.les-mod-noticeb {
+  color: #999;
+  font-size: 24rpx;
+  line-height: 30rpx;
+  margin-top: 11rpx;
+  width: 100%;
+  height: 30rpx;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+}
+
+.modal-btn {
+  width: 80rpx;
+  height: 80rpx;
+  position: fixed;
+  bottom: 4%;
+  left: 335rpx;
+  z-index: 9999;
+}
+
+.pur-stop-onlinea {
+  margin: 0 208rpx;
+}
+
+.les-mod-ballb {
+  font-size: 30rpx;
+  color: #333;
+}
+
+/* 关闭图标*/
+
+/*红色教练图标 文字区域的css*/
+
+/**开课通知弹窗提示 end **/
+
+/*  button  */
+
+.settle-accounts {
+  width: 702rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  background-image: url('http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/images/icon/submit_fua.png');
+  background-size: 100% 100%;
+  background-color: #00c693;
+  border-radius: 40rpx;
+  position: fixed;
+  bottom: 60rpx;
+  margin-left: 23rpx;
+  color: #fff;
+  font-size: 30rpx;
+}
+
+/*  没有数据空空如也  */
+
+.kong {
+  width: 750rpx;
+  height: 790rpx;
+  margin: 0 auto;
+  background-color: #ececec;
+}
+
+.kong-img {
+  /* width: 340rpx;
+  height: 340rpx; */
+  width: 240rpx;
+  height: 240rpx;
+  /* margin-left: 205rpx; */
+  margin-left: 255rpx;
+  /* margin-top: 20%; */
+  margin-top: 352rpx;
+}
+
+.kong-text {
+  display: inline-block;
+  width: 750rpx;
+  height: 27rpx;
+  /* line-height: 25rpx;
+  font-size: 24rpx;
+  color: #999; */
+  text-align: center;
+  /* margin-top: 120rpx; */
+  margin-top: 34rpx;
+  font-size: 26rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(203, 203, 203, 1);
+}
+
+/*!
+ * animate.css -http://daneden.me/animate
+ * Version - 3.5.2
+ * Licensed under the MIT license - http://opensource.org/licenses/MIT
+ *
+ * Copyright (c) 2017 Daniel Eden
+ */
+
+.animated {
+  animation-duration: 2s;
+  animation-fill-mode: both;
+}
+
+.animated.infinite {
+  animation-iteration-count: infinite;
+}
+
+.animated.hinge {
+  animation-duration: 2s;
+}
+
+.animated.flipOutX, .animated.flipOutY, .animated.bounceIn, .animated.bounceOut {
+  animation-duration: 0.75s;
+}
+
+@keyframes rubberBand {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.rubberBand {
+  animation-name: rubberBand;
+  animation-direction: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounceOutDown {
+  20% {
+    transform: translate3d(0, 10rpx, 0);
+  }
+
+  40%, 45% {
+    opacity: 1;
+    transform: translate3d(0, -20rpx, 0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translate3d(0, 2000rpx, 0);
+  }
+}
+
+.bounceOutDown {
+  animation-name: bounceOutDown;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.fadeOut {
+  animation-name: fadeOut;
+}
+
+@keyframes fadeOutDownBig {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    transform: translate3d(0, 2000rpx, 0);
+  }
+}
+
+.fadeOutDownBig {
+  animation-name: fadeOutDownBig;
+}

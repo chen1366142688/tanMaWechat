@@ -1,0 +1,514 @@
+page {
+  background: #ececec;
+}
+.van-over {
+  display: block;
+  width: 200rpx;
+  height: 23rpx;
+  padding-bottom: 20rpx;
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(153, 153, 153, 1);
+  text-align: center;
+  margin: 20rpx auto;
+}
+.guangKe {
+  margin: 0 24rpx;
+  background: #fff;
+  border-radius: 5px;
+  position: relative;
+  z-index:20;
+}
+
+.cor-shop-head-da {
+  width: 100%;
+  height:57px;
+  background: #00c693;
+  position: absolute;
+  top: 0;
+}
+
+.items-jiao {
+  width: 702rpx;
+  height: 140rpx;
+  padding: 0 24rpx;
+  margin-bottom: 2rpx;
+  position: relative;
+}
+
+.item-userImg {
+  display: inline-block;
+  height: 140rpx;
+  line-height: 140rpx;
+  padding-right: 14rpx;
+  text-align: center;
+}
+
+.userImg {
+  width: 107rpx;
+  height: 107rpx;
+  vertical-align: middle;
+  margin-right: 14rpx;
+  /* margin:18rpx 14rpx 0 23rpx;  */
+}
+
+.item-userTxt {
+  display: inline-block;
+  position: relative;
+  top: 30rpx;
+  width: 581rpx;
+  box-sizing: border-box;
+}
+
+.money {
+  position: absolute;
+  top: 4rpx;
+  right: 37rpx;
+}
+
+.eachclassis-rmba {
+  margin-top: 15px;
+  margin-left: 65rpx;
+}
+
+.eachclassis-rmbb {
+  height: 22rpx;
+  line-height: 22rpx;
+}
+
+.eachclassis-rmbc {
+  height: 22rpx;
+  line-height: 22rpx;
+  margin-top: 12px;
+}
+
+.rmb {
+  font-size: 18rpx;
+  font-family: SanFranciscoDisplay-Regular;
+  color: rgba(232, 85, 113, 1);
+  margin-right: 5rpx;
+}
+
+.rmbNum {
+  font-size: 15px;
+  font-family: SanFranciscoDisplay-Bold;
+  color: rgba(232, 85, 113, 1);
+  font-weight: bold;
+}
+
+.rmbNuma {
+  font-size: 30rpx;
+  font-family: SanFranciscoDisplay-Bold;
+  color: rgba(232, 85, 113, 1);
+  font-weight: bold;
+}
+
+.userTxt-top, .userTxt-bottom {
+  line-height: 0;
+}
+
+.userTxt-top {
+  margin-bottom: 10rpx;
+}
+
+.user-top-wid-a {
+  width: 215rpx;
+}
+
+.userA {
+  width: 160rpx;
+  border: 1rpx solid #171718;
+  text-align: center;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 22rpx;
+  font-family: PingFang-SC-Regular;
+  border-radius: 5rpx;
+  margin-right: 10rpx;
+  vertical-align: middle;
+}
+
+.userB {
+  font-size: 24rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-family: PingFang-SC-Bold;
+  color: rgba(51, 51, 51, 1);
+  font-weight: bold;
+  vertical-align: middle;
+}
+
+.userC {
+  font-size: 20rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(102, 102, 102, 1);
+}
+
+.txt-A {
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  color: #e85571;
+  height: 40rpx;
+  line-height: 40rpx;
+  margin-right: 10rpx;
+}
+
+.txt-B {
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  color: #333;
+  height: 40rpx;
+  line-height: 40rpx;
+  margin-right: 10rpx;
+}
+
+.userIsman {
+  width: 20rpx;
+  height: 20rpx;
+  vertical-align: middle;
+  margin-right: 10rpx;
+}
+
+.userboysexa {
+  width: 14rpx;
+  height: 16rpx;
+  vertical-align: middle;
+  margin-right: 10rpx;
+}
+
+.userboysexb {
+  width: 14rpx;
+  height: 16rpx;
+  vertical-align: middle;
+  margin-right: 22rpx;
+}
+
+.userNumber {
+  width: 14rpx;
+  height: 12rpx;
+  vertical-align: middle;
+  margin-right: 10rpx;
+}
+
+.userMum {
+  font-size: 24rpx;
+  font-family: SanFranciscoDisplay-Regular;
+  color: rgba(51, 51, 51, 1);
+  height: 40rpx;
+  line-height: 40rpx;
+  margin-right: 19rpx;
+}
+
+.userMum-lilei {
+  font-size: 24rpx;
+  font-family: SanFranciscoDisplay-Regular;
+  color: rgba(51, 51, 51, 1);
+  height: 23rpx;
+  margin-right: 8rpx;
+}
+
+.userLevelColor {
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  color: #333;
+  height: 40rpx;
+  line-height: 40rpx;
+  margin-right: 17rpx;
+  margin-left: 5rpx;
+  letter-spacing: 1px;
+}
+
+/*.userLevel{
+  font-size:24rpx;
+font-family:PingFang-SC-Regular;
+color:  #E85571;
+height:40rpx;
+  line-height: 40rpx;
+}*/
+
+.hotTwo {
+  width: 21rpx;
+  height: 21rpx;
+  vertical-align: middle;
+  margin-right: 7rpx;
+}
+
+.hotTwoText {
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(51, 51, 51, 1);
+  height: 40rpx;
+  line-height: 40rpx;
+}
+
+.baoMan {
+  color: #999;
+}
+
+.baoMan-bo {
+  border: 1rpx solid #999;
+}
+
+.manLe {
+  width: 135rpx;
+  height: 115rpx;
+  position: absolute;
+  top: 10rpx;
+  right: 81rpx;
+}
+
+/*开课通知 start css*/
+
+/*选项卡*/
+
+.course-head-ab, .course-head-ac {
+  display: inline-block;
+  font-size: 34rpx;
+  font-family: PingFang-SC-Regular;
+  color: #333;
+}
+
+.course-head-ad {
+  border-bottom: 4rpx solid #00c693;
+  color: #00c693;
+}
+
+.kec-tertoupb {
+  margin-left: 33rpx;
+}
+
+/*羽毛球 12人  css*/
+
+.c-jiao-information {
+  width: 702rpx;
+  margin: 20rpx auto 0 auto;
+}
+.c-items-xcxa {
+  width: 670rpx;
+  height: 120rpx;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 5rpx;
+  padding: 0 16rpx;
+  margin-bottom: 20rpx;
+  overflow: hidden;
+  box-sizing: content-box;
+}
+
+.c-item-inifo {
+  display: inline-block;
+  width: 100%;
+}
+
+.c-item-info-txt {
+  display: inline-block;
+  border-radius: 5rpx;
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  border: 2rpx solid rgba(23, 23, 24, 1);
+  padding: 3rpx 8rpx;
+  margin-right: 13rpx;
+}
+
+.c-item-title {
+  display: inline-block;
+  white-space: nowrap;
+  width: 249rpx;
+  height: 31rpx;
+  line-height: 31rpx;
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(51, 51, 51, 1);
+  margin-right: 56rpx;
+  vertical-align: middle;
+}
+
+.c-item-status {
+  display: inline-block;
+  width: 139rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+  background: rgba(232, 85, 113, 1);
+  border-radius: 17rpx;
+  font-size: 22rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
+}
+
+.c-user {
+  width: 14rpx;
+  height: 16rpx;
+  margin-right: 10rpx;
+}
+
+.c-username-text {
+  font-size: 20rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(102, 102, 102, 1);
+}
+
+.c-touser-xcxa {
+  width: 24rpx;
+  height: 17rpx;
+  margin: 0 10rpx 0 29rpx;
+}
+
+.c-touser-xcxb {
+  width: 19rpx;
+  height: 19rpx;
+  margin-left: 10rpx;
+}
+
+.c-renshu {
+  font-size: 20rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(102, 102, 102, 1);
+}
+
+.c-date {
+  width: 20rpx;
+  height: 20rpx;
+  margin: 0 10rpx 0 20rpx;
+}
+
+.c-data-txt {
+  font-size: 20rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(102, 102, 102, 1);
+  padding-right: 10rpx;
+}
+
+.c-data-txt text.c-data-timea {
+  color: #333;
+  font-weight: 800;
+}
+
+.c-jiaoQin {
+  width: 86rpx;
+  font-size: 22rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(231, 85, 113, 1);
+  padding-right: 21rpx;
+}
+
+.c-jiaoFei {
+  font-size: 22rpx;
+  font-family: PingFang-SC-Regular;
+  color: #00c693;
+}
+
+.c-topBor {
+  border-top: 2rpx solid rgba(228, 228, 228, 1);
+}
+
+.c-item-cancel {
+  background: rgba(153, 153, 153, 1);
+}
+
+.c-item-apply {
+  background: #00c693;
+}
+
+.l-cdcenter-posa {
+  width: 12rpx;
+  height: 16rpx;
+  margin: 0rpx 12rpx 0rpx 22rpx;
+}
+
+.l-cdcenter-posb {
+  width: 150rpx;
+  height: 56rpx;
+  font-size: 24rpx;
+  text-align: center;
+  line-height: 56rpx;
+  font-family: PingFang-SC-Regular;
+  color: #999;
+}
+
+.l-cdcenter-posc {
+  display: inline-block;
+}
+
+.l-stop-b {
+  margin: 23rpx 0;
+}
+
+.l-stop-a {
+  vertical-align: middle;
+  padding: 0 30rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  background: #fff;
+  font-size: 24rpx;
+  color: #999;
+  text-align: center;
+  border-radius: 25rpx;
+  border: 1px solid #999;
+  margin-top: 22rpx;
+}
+
+.l-stop-b {
+  vertical-align: middle;
+  padding: 0 30rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  background: #fff;
+  font-size: 24rpx;
+  color: #00c693;
+  text-align: center;
+  border-radius: 25rpx;
+  border: 1px solid #00c693;
+  float: right;
+}
+
+.l-stop-sti-a {
+  display: inline-block;
+}
+
+.l-stop-sti-leftb {
+  display: inline-block;
+  margin-left: 34rpx;
+}
+
+.cou-positiona {
+  width: 28rpx;
+  height: 35rpx;
+  vertical-align: middle;
+}
+
+.l-stop-sti-leftc {
+  font-size: 28rpx;
+  font-family: PingFang-SC-Bold;
+  padding-right: 102rpx;
+  font-weight: bold;
+  color: #333;
+  margin-left: 8rpx;
+}
+
+.l-stop-sti-leftd {
+  width: 50rpx;
+  height: 50rpx;
+  vertical-align: middle;
+  margin-left: 19.3%;
+}
+
+.l-stop-sti-lefte {
+  padding: 0 24rpx;
+}
+
+@media screen and (min-width:320px)  and (max-width: 370px) {
+  .l-stop-sti-leftd {
+    width: 50rpx;
+    height: 50rpx;
+    vertical-align: middle;
+    margin-left: 21%;
+  }
+}
+
+.corhidea {
+  display: none;
+}
+
+/*开课通知结束 end*/

@@ -1,0 +1,5 @@
+<!--pages/My/Alter-Password/Alter-Password.wxml-->
+<view class='Alter-Password'>
+  <input class='Alter-Name-input' maxlength="12"  name="userName" placeholder="请输入原密码" placeholder-class='input-cbcb' ></input>
+  <view class='Submit-button'>下一步</view>
+</view>

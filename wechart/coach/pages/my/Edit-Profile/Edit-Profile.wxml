@@ -1,0 +1,101 @@
+<!--pages/my/Edit-Profile/Edit-Profile.wxml-->
+<view style='margin-top:-{{paddingBtm}}px'>
+<view class='editor clearfloat'> 
+  <view class='editor-name fl'>
+    <image class='editor-userImg' src='{{avatarUrl}}'></image>
+    <text class='editor-nameAndLocation iLblock'>{{nickName}}-{{gender}}-{{provinceName?provinceName:''}}·{{cityName?cityName:''}}</text>
+  </view>
+  <view class='editor-phone fr'>
+    <image class='editor-phoneImg' src='{{imgUrl}}gayPhone.png'></image>
+    <text class='editor-phoneNum'>{{phoneNo}}</text>
+    <image bindtap='editCoach' class='editorPen' src='{{imgUrl}}coach/public/redact.png'></image>
+  </view>
+</view>
+<view class='examine'>
+  <view class='extext'>
+    <text>资料审核</text>
+    <image src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/coach-doubt.png' type="primary" bindtap="modalcnte" class='Query'></image>
+  </view>
+  <view class='exIng'>{{auditStatus}}</view>
+</view>
+
+<view class='classBox' wx:for="{{certificateRequestList}}" wx:for-item="item" wx:key="{{index}}">
+  <view class='yunDongBox center'>
+    <text class='Item-Category'>运动项目</text>
+    <view class='compile-select'>
+      <view class='compile-select-N'>
+        <picker bindchange="itemBindChange" bindtap='tips' disabled='{{item.havaClass}}' data-havaclass='{{item.havaClass}}' data-index='{{index}}' value="{{item.itemIndex}}" range="{{itemList}}">
+          <view>
+            <view>{{itemList[item.itemIndex]}}</view>
+          </view>
+        </picker>
+      </view>
+      <image wx:if="{{!item.havaClass}}" class='compile-select-T' src='{{imgUrl}}xiala2.png'></image>
+    </view>
+  </view>
+  <view class='yunDongBox center'>
+    <text class='Item-Category'>运动员证书</text>
+    <view class='compile-select'>
+      <view class='compile-select-N'>
+        <picker bindchange="athleteGradeBindChange" data-index='{{index}}' value="{{item.athleteGradeIndex}}" range="{{athleteGradeList}}">
+          <view>
+            <view>{{athleteGradeList[item.athleteGradeIndex]}} </view>
+          </view>
+        </picker>
+      </view>
+      <image  wx:if="{{!item.havaClass}}" class='compile-select-T' src='{{imgUrl}}xiala2.png'></image>
+    </view>
+  </view>
+  <view class='yunDongBox center'>
+    <text class='Item-Category'>教练证书</text>
+    <view class='compile-select'>
+      <view class='compile-select-N'>
+        <picker bindchange="coachGradeBindChange" data-index='{{index}}' value="{{item.coachGradeIndex}}" range="{{coachGradeList}}">
+          <view>
+            <view>{{coachGradeList[item.coachGradeIndex]}}</view>
+          </view>
+        </picker>
+      </view>
+      <image  wx:if="{{!item.havaClass}}" class='compile-select-T' src='{{imgUrl}}xiala2.png'></image>
+    </view>
+  </view>
+  <view class='uploadBox' wx:if="{{item.showPhoto}}">
+    <text class='uploadItem'>*请上传清晰的运动员/教练证书，需包含封面和首页，不超过5张。</text>
+    <view class='scroolBox'>
+      <scroll-view class='intro-scroll' scroll-x='true' scroll-with-animation='true'>
+        <view class='intro-view iLblock' wx:for="{{item.photos}}" wx:key="unique" wx:for-item="photo" wx:for-index="idx">
+          <image class='intro-scrollImg' src='{{photo}}'></image>
+          <image class='intro-deleteImg' src='{{imgUrl}}coach/curriculum/dislodge.png' data-index='{{index}}' data-photoindex='{{idx}}' bindtap='deleteItemImg'></image>
+        </view>
+        <image class='intro-scrollImg' src='{{imgUrl}}addImg.png' data-index='{{index}}' bindtap='addItemImg'></image>
+      </scroll-view>
+    </view>
+  </view>
+  <button class='cancel' wx:if='{{!item.havaClass}}' data-index='{{index}}' bindtap='deleteItem'>删除该项</button>
+</view>
+ 
+<view class='addProBox'>
+  <view class='addition' bindtap='addItem'>+添加运动项目</view>
+</view>
+<view class='myItemBox'>
+  <textarea bindinput="bindTextArea" bindblur='setPaddEmpity' bindfocus="setPadding" class='myInfoBxo' placeholder-class='myInfo' maxlength="300" value='{{coachDescription}}' placeholder="填写自我介绍（不超过300字）" adjust-position="true"/>
+  <view class='uploadBox'>
+    <text class='uploadItem'>*请上传2-5张照片。</text>
+    <view class='scroolBox'>
+      <scroll-view class='intro-scroll' scroll-x='true' scroll-with-animation='true'>
+        <view class='intro-view iLblock' wx:for="{{coachSelfPhotos}}" wx:key="*this">
+          <image class='intro-scrollImg' src='{{item}}'></image>
+          <image class='intro-deleteImg' src='{{imgUrl}}coach/curriculum/dislodge.png' data-index='{{index}}' bindtap='deleteCoachImg'></image>
+        </view>
+        <image class='intro-scrollImg' bindtap='addCoachImg' src='{{imgUrl}}addImg.png'></image>
+      </scroll-view>
+    </view>
+  </view>
+</view>
+<view class='btn'>
+  <view class='submitEditor'>
+    <view class='subBor' bindtap='submitCoachInfo'>保  存</view>
+  </view>
+</view>
+
+</view>

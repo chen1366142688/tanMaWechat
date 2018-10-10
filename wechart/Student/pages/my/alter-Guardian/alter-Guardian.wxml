@@ -1,0 +1,9 @@
+<!--pages/my/alter-Guardian/alter-Guardian.wxml-->
+<view class='alter-Name'>
+  <input class="input" name="userName" placeholder="监护人姓名" value='{{name}}' bindinput="userNameInput" />
+</view>
+<view class='alter-Password'>
+  <input class="input" name="userName" placeholder="身份证号码" value="{{numbers}}" bindinput="userNumInput" />
+</view>
+
+<button class='settle-accounts' bindtap='subMit'>保  存</button>

@@ -1,0 +1,27 @@
+<!--pages/login/Binding/Binding.wxml-->
+<view class='Binding'>
+  <view class='Forget-Password-background'></view>
+  <view class='Forget-Password-section'>
+    <view class='section-Head-Portraits'>
+      <image class='Head-Portraits-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/Head-Portraits.png'></image>
+    </view>
+    <view class='Register-section-taber'>
+      <view class='Section-List'>
+        <view class='Register-List-Section-left'>
+          <view class='Register-List-Section-one'>
+            <input class='List-Section-one-input' maxlength="11" placeholder='登录手机' placeholder-class='List-Section-one-input-cbcbcb'></input>
+            <image class='List-Section-one-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/accomplish.png'></image>
+          </view>
+            <view class='Register-List-Section-one'>
+            <input class='List-Section-one-input' maxlength="18" placeholder='登录密码' placeholder-class='List-Section-one-input-cbcbcb'></input>
+            <image class='List-Section-one-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/accomplish.png'></image>
+          </view>
+          <view class='Register-Submit-left'>
+           <view class='Register-Submit-button'>绑定该账号</view>
+          </view>
+          <view class='Forget-Password'> <text class='Forget-Password-cbcb'>忘记密码</text>？ </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,32 @@
+<!--pages/curriculum/Curriculum-Order/Curriculum-Order.wxml-->
+
+  <view class='class-list' >
+    <view class='Curriculum-Order' wx:for="{{classList}}" wx:key="{{index}}" bindtap='orderItem' data-name='{{item.itemName}}' data-maxnum="{{item.maxMember}}" data-classId="{{item.classId}}">
+      <view class='Order-one'>
+        <view class='Order-headline'>
+          <text class='headline-category'>{{item.itemName}} {{item.maxMember}}人班</text>
+          <text class='headline-text'>{{item.className}}</text>
+        </view>
+        <view class='Order-Arrange'>
+          <view class='Arrange-T'>
+              <image class='T-one-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/frequency1.png'></image>
+              <view class='T-one-text'>{{item.lastAttendPeriod?item.lastAttendPeriod:0}}期</view>
+              <image class='T-two-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/popularity2.png'></image>
+              <view class='T-two-text'>{{item.popularity?item.popularity:0}}</view>
+              <image class='T-there-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/population-blue.png'></image>
+              <view class='T-there-text'>{{item.signUpMember}}人</view>
+              <image class='T-four-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/grade-blue.png'></image>
+              <view class='T-four-text'>{{item.itemStudentGrade}}</view>
+          </view>
+          <view class='Arrange-Text'>
+            <text class='period'>{{item.courseCount}}</text> 课时（{{item.courseTime/10*60}}分钟）</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!--  没有数据显示空空如也  -->
+   <view class='kong' wx:if="{{Period}}">
+    <image class='kong-img' src='../../../imgs/dataEmpty.png'></image>
+    <text class='kong-text'>数据为空</text>
+  </view>
+  <view class='over' wx:if="{{over}}">————已全部显示————</view>

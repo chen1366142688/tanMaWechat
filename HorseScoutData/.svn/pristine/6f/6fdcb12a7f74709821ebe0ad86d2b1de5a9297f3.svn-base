@@ -1,0 +1,13 @@
+<!--pages/Patriarch/Test/Test.wxml-->
+<view class='Test'>
+  <view class='Test-header'>
+    <scroll-view class='Exercise-Program-choose' scroll-x="{{scroll}}">
+      <view class='Exercise-Program-choose-two {{child.active ? "Exercise-Program-choose-one":""}}' wx:for="{{childName}}" wx:key="uqine" wx:for-item="child" bindtap='cilckChild' data-index="{{index}}">
+        <view class='Exercise-Program-choose-two-text'>{{child.name}}</view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class='Test-section'>
+    <view class=''></view>
+  </view>
+</view>

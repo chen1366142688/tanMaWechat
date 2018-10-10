@@ -1,0 +1,25 @@
+// pages/Information/location/location.js
+const app = getApp().globalData
+Page({
+  data: {
+    imgUrl: app.url,
+  },
+  ContactCustomerService(e) {
+    wx.makePhoneCall({//客服电话待定
+      phoneNumber: '13679695212',
+    })
+  },
+  onLoad: function (options) {},
+  onReady: function () {},
+  onShow: function () {},
+  onHide: function () {},
+  onUnload: function () {},
+  onPullDownRefresh: function () {},
+  onReachBottom: function () {},
+  onShareAppMessage: function () {}
+})
+function province(that){//获取定位信息
+  wx.request({
+    url: '',
+  })
+}

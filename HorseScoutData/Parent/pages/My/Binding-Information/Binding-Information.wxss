@@ -1,0 +1,346 @@
+/* pages/My/Binding-Information/Binding-Information.wxss */
+
+.Binding-Information {
+  width: 750rpx;
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ID-number {
+  width: 100%;
+  height: 120rpx;
+  line-height: 120rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-bottom: 1rpx solid #e4e4e4;
+}
+
+.ID-number-input {
+  width: 400rpx;
+  height: 120rpx;
+  line-height: 120rpx;
+  font-size: 28rpx;
+  color: #333;
+  vertical-align: middle;
+  text-align: left;
+}
+
+.input-cbcb {
+  font-size: 28rpx;
+  color: #999;
+}
+
+.ID-number-search {
+  width: 30rpx;
+  height: 30rpx;
+  vertical-align: middle;
+}
+
+.Name-age {
+  width: 100%;
+  height: 88rpx;
+  line-height: 88rpx;
+  vertical-align: middle;
+  padding: 0 25rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.Name-age-section {
+  width: 100%;
+  height: 86rpx;
+  line-height: 86rpx;
+  vertical-align: middle;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1rpx solid #e4e4e4;
+}
+
+.Name-age-left {
+  height: 86rpx;
+  line-height: 86rpx;
+  vertical-align: middle;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.Name-age-left-Name {
+  max-width: 180rpx;
+  height: 86rpx;
+  line-height: 86rpx;
+  vertical-align: middle;
+  font-size: 30rpx;
+  color: #171717;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.Name-age-left-gender {
+  width: 30rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  vertical-align: middle;
+  margin-left: 20rpx;
+}
+
+.Name-age-right {
+  max-width: 300rpx;
+  height: 86rpx;
+  line-height: 86rpx;
+  vertical-align: middle;
+  font-size: 30rpx;
+  color: #171717;
+  text-align: right;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.Prompt {
+  width: 100%;
+  height: 113rpx;
+  line-height: 113rpx;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  padding: 0 25rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.Prompt-text {
+  height: 113rpx;
+  line-height: 113rpx;
+  vertical-align: middle;
+  font-size: 26rpx;
+  color: #171717;
+}
+
+.Prompt-button {
+  width: 120rpx;
+  height: 58rpx;
+  line-height: 58rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #4dd0c8;
+  border: 1rpx solid #4dd0c8;
+  border-radius: 30rpx;
+  margin: 0 10rpx;
+}
+
+/* 模态框 */
+
+.bindingModal {
+  position: absolute;
+  z-index: 99;
+  width: 750rpx;
+  height: 100%;
+  background: rgba(103, 103, 103, 0.7);
+  top: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bindingModal-section {
+  width: 500rpx;
+  background: #fff;
+  text-align: center;
+  font-size: 28rpx;
+  color: rgba(51, 51, 51, 1);
+  position: absolute;
+  top: 243rpx;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  border-radius: 30rpx;
+}
+
+.bindingModal-section-headline {
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+
+.headline-text {
+  font-size: 34rpx;
+  color: #171717;
+  vertical-align: middle;
+  height: 34rpx;
+  line-height: 34rpx;
+}
+
+.headline-img {
+  width: 30rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  vertical-align: middle;
+  margin-left: 132rpx;
+}
+
+.bindingModal-section-NR {
+  width: 100%;
+  padding: 0 61rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.bindingModal-section-NR-headline {
+  width: 100%;
+  font-size: 24rpx;
+  color: #171717;
+  line-height: 36rpx;
+  text-align: left;
+  vertical-align: middle;
+  margin-top: 30rpx;
+}
+
+.Exercise-Program-headline {
+  width: 100%;
+  height: 120rpx;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.Exercise-Program-choose {
+  width: 100%;
+  height: 120rpx;
+  line-height: 120rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.Exercise-Program-choose-two {
+  display: inline-block;
+  min-width: 150rpx;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 24rpx;
+  padding: 7rpx 22rpx;
+  color: #fff;
+  background-color: #cbcbcb;
+  border-radius: 30rpx;
+  margin-right: 20rpx;
+  border: 1rpx solid #cbcbcb;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Exercise-Program-choose-two-Name {
+  min-width: 150rpx;
+  height: 24rpx;
+  line-height: 24rpx;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 24rpx;
+  color: #fff;
+}
+
+.Exercise-Program-choose-two-iPhone {
+  min-width: 150rpx;
+  height: 18rpx;
+  line-height: 18rpx;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 18rpx;
+  margin-top: 8rpx;
+  color: #fff;
+}
+
+.Exercise-Program-choose-one {
+  color: #fff;
+  background-color: #4dd0c8;
+  border: 1rpx solid #4dd0c8;
+}
+
+.bindingModal-section-NR-iPhone {
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  vertical-align: middle;
+  font-size: 24rpx;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1rpx solid #e4e4e4;
+  margin-top: 60rpx;
+  /* margin-bottom: 60rpx; */
+}
+
+.NR-iPhone-input {
+  height: 24rpx;
+  line-height: 24rpx;
+  vertical-align: middle;
+  font-size: 24rpx;
+  color: #333;
+  text-align: left;
+}
+
+.NR-iPhone-text {
+  width: 150rpx;
+  height: 24rpx;
+  line-height: 24rpx;
+  vertical-align: middle;
+  font-size: 24rpx;
+  color: #4dd0c8;
+}
+
+.bindingModal-section-NR-Submit {
+  width: 100%;
+  height: 195rpx;
+  line-height: 195rpx;
+  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bindingModal-section-NR-Submit-button {
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  vertical-align: middle;
+  background: rgba(203, 203, 203, 1);
+  border-radius: 40rpx;
+  font-size: 30rpx;
+  color: #fff;
+  text-align: center;
+}
+
+.bindingModal-section-NR-Submit-button1 {
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  vertical-align: middle;
+  background: #4DD0C8;
+  border-radius: 40rpx;
+  font-size: 30rpx;
+  color: #fff;
+  text-align: center;
+}

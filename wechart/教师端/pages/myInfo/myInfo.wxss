@@ -1,0 +1,86 @@
+/* pages/myInfo/myInfo.wxss */
+.myinfo{
+  padding-top: 350rpx;
+}
+.myinfo .header{
+  position: absolute;
+  top: 0;
+  height: 614rpx;
+  width: 100%;
+  background: RGBA(2, 199, 220, 1);
+  z-index: -1;
+  padding-top: 80rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.myinfo .header .backgroundtrigon{
+  width: 0;
+  height: 0;
+  border-right: 750rpx solid RGBA(236, 236, 236, 1); 
+  border-top: 150rpx solid transparent; 
+  position: absolute;
+  bottom: 0;
+}
+.myinfo .header .headerimg{
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 140rpx;
+  overflow: hidden;
+  margin-bottom: 14rpx;
+}
+.myinfo .header .headerinfo{
+  font-size: 30rpx;
+  color: white;
+}
+.myinfo .header .headerinfo image{
+  width: 24rpx;
+  height: 24rpx;
+  margin-left: 15rpx;
+}
+.myinfo .main{
+  width: 690rpx;
+  height: 510rpx;
+  background: white;
+  margin: 0 auto;
+  border-radius:10px;
+  box-shadow:0px 2px 4px 0px RGBA(2, 199, 220, 0.3);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 60rpx;
+}
+.myinfo .main .main_info{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40rpx;
+  font-size: 28rpx;
+  color: RGBA(153, 153, 153, 1);
+}
+.myinfo .main .main_info image{
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 21rpx;
+}
+.myinfo .main .main_info .setchange{
+  color: RGBA(2, 199, 220, 1);
+}
+
+.myinfo .logout{
+  font-size: 34rpx;
+  color: RGBA(2, 199, 220, 1);
+  width: 690rpx;
+  height: 100rpx;
+  background: white;
+  box-shadow:0px 2px 4px 0px rgba(2,199,220,0.3);
+  border-radius: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  margin: 0 auto;
+}
+.myinfo .logout image{
+  width: 24rpx;
+  height: 24rpx;
+}

@@ -1,0 +1,145 @@
+/* pages/news/chitchat/chitchat.wxss */
+
+.chitchat {
+  width: 750rpx;
+  height: 800rpx;
+  background-color:#ececec;
+}
+
+.section {
+  width: 750rpx;
+  height: 90%; 
+  /* margin-bottom: 15%; */
+}
+
+.time {
+  display: inline-block;
+  width: 750rpx;
+  height: 116rpx;
+  line-height: 116rpx;
+  font-size: 24rpx;
+  color: #999;
+  text-align: center;
+}
+
+.section-zuo {
+  width: 750rpx;
+  float: left;
+  margin-bottom: 50rpx;
+}
+
+.Head-Portraits-zuo {
+  width: 80rpx;
+  height: 80rpx;
+  float: left;
+  margin-left: 25rpx;
+  margin-right: 25rpx;
+  border-radius: 50rpx;
+}
+
+.section-content-zuo {
+  position: relative;
+  max-width: 60%;
+  height: 100%;
+  border-radius: 5rpx;
+  margin-left: 14%;
+  padding: 12rpx 32rpx;
+}
+
+.section-content-zuo-text {
+  background-color: #fff;
+  border-radius: 5rpx;
+  padding: 12rpx 32rpx;
+  font-size: 24rpx;
+  color: #333;
+  float: left;
+}
+
+.arrows-zuo{
+  width: 26rpx;
+  height: 24rpx;
+  position: absolute;
+  right: 92%;
+  top: 28rpx;
+}
+
+/*右  */
+
+.section-you {
+  width: 750rpx;
+  float: right;
+  margin-bottom: 50rpx;
+}
+
+.Head-Portraits-you {
+  width: 80rpx;
+  height: 80rpx;
+  float: right;
+  margin-left: 25rpx;
+  margin-right: 25rpx;
+  border-radius: 50rpx;
+}
+
+.section-content-you {
+  position: relative;
+  max-width: 60%;
+  height: 100%;
+  border-radius: 5rpx;
+  margin-left: 18%;
+  padding: 12rpx 32rpx;
+}
+
+.section-content-you-text {
+  background-color: #E85571;
+  border-radius: 5rpx;
+  padding: 12rpx 32rpx;
+  font-size: 24rpx;
+  color: #fff;
+}
+
+.arrows-you{
+  width: 26rpx;
+  height: 24rpx;
+  position: absolute;
+  left: 92%;
+  top: 28rpx;
+}
+
+/*输入框  */
+
+.input-window {
+  width: 750rpx;
+  height: 8%;
+  background-color: #fff;
+  line-height: 8%;
+  position: fixed;
+  bottom: 0;
+}
+
+.input-WZ {
+  max-width: 550rpx;
+  width: 550rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  height: 100%;
+  float: left;
+  font-size: 30rpx;
+  color: #333;
+  margin-left: 20rpx;
+}
+
+.send {
+  width: 160rpx;
+  height: 60rpx;
+  margin-top: 19rpx;
+  vertical-align: middle;
+  color: #fff;
+  font-size: 30rpx;  
+  border: none;
+  background-color: #00C693;
+}
+
+.TS {
+  font-size: 30rpx;
+}

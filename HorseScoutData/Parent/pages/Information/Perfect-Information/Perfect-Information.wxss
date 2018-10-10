@@ -1,0 +1,331 @@
+/* pages/Information/Perfect-Information/Perfect-Information.wxss */
+
+.Perfect-Information {
+  width: 750rpx;
+  line-height: 0;
+  margin: 0;
+  /* padding: 0; */
+  padding: 0 24rpx;
+  box-sizing: border-box;
+}
+
+.headline-Prompt {
+  /* width: 702rpx; */
+  width: 100%;
+  padding: 60rpx 0;
+  height: 62rpx;
+  line-height: 31rpx;
+  font-size: 24rpx;
+  color: #000;
+  vertical-align: middle;
+}
+
+.headline-Prompt-blue {
+  color: #4dd0c8;
+  border-bottom: 1rpx solid #4dd0c8;
+}
+
+.Perfect-Information-Name {
+  width: 100%;
+  height: 240rpx;
+  display: flex;
+  justify-content: space-between;
+  vertical-align: middle;
+  margin-bottom: 40rpx;
+  position: relative;
+}
+
+.Bargraph-yellow {
+  width: 4rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  background-color: #fdc54a;
+  position: absolute;
+  top: 40rpx;
+  left: -2rpx;
+}
+
+.Perfect-Information-Name-section {
+  width: 698rpx;
+  height: 240rpx;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Name-section-headline {
+  width: 698rpx;
+  height: 28rpx;
+  text-align: center;
+  line-height: 28rpx;
+  font-size: 28rpx;
+  color: #171717;
+  margin-top: 60rpx;
+  vertical-align: middle;
+}
+
+.Name-section-input {
+  width: 200rpx;
+  height: 54rpx;
+  text-align: center;
+  line-height: 54rpx;
+  margin-top: 39rpx;
+  border-bottom: 1rpx solid #cbcbcb;
+  font-size: 34rpx;
+  color: #333;
+}
+
+.Name-section-input-cbcbcb {
+  font-size: 34rpx;
+  color: #999;
+}
+
+.Information-ID-card {
+  width: 750rpx;
+}
+
+.Perfect-Information-ID-card {
+  /* width: 702rpx; */
+  width: 100%;
+  height: 100%;
+  /* padding: 0 24rpx; */
+  vertical-align: middle;
+  position: relative;
+}
+
+.Bargraph-red {
+  width: 4rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  background-color: #f882b6;
+  position: absolute;
+  top: 50rpx;
+  left: -2rpx;
+}
+
+.Perfect-Information-ID-card-section {
+  width: 698rpx;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ID-card-section-headline {
+  width: 698rpx;
+  height: 28rpx;
+  text-align: center;
+  line-height: 28rpx;
+  font-size: 28rpx;
+  color: #171717;
+  margin-top: 60rpx;
+  vertical-align: middle;
+}
+
+.ID-card-section-options {
+  width: 698rpx;
+  height: 200rpx;
+  line-height: 200rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ID-card-section-options-have {
+  width: 80rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 30rpx;
+  vertical-align: middle;
+  border: 1rpx solid #cbcbcb;
+  color: #cbcbcb;
+  font-size: 30rpx;
+  text-align: center;
+  background-color: #fff;
+}
+
+.pitch-on {
+  border: 1rpx solid #4dd0c8 !important;
+  color: #fff !important;
+  background-color: #4dd0c8 !important;
+}
+
+.ID-card-section-options-no {
+  width: 80rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 30rpx;
+  vertical-align: middle;
+  margin-left: 175rpx;
+  border: 1rpx solid #cbcbcb;
+  color: #cbcbcb;
+  font-size: 30rpx;
+  text-align: center;
+  background-color: #fff;
+}
+
+.section-options-have {
+  width: 698rpx;
+  height: 236rpx;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+.section-options-have-headline {
+  width: 698rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+  font-size: 28rpx;
+  color: #333;
+  text-align: center;
+}
+
+.section-options-have-input {
+  width: 334rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  border-bottom: 1rpx solid #cbcbcb;
+  font-size: 34rpx;
+  margin-top: 34rpx;
+  color: #333;
+}
+
+.section-options-have-input-cbcbcb {
+  color: #999;
+  font-size: 34rpx;
+}
+
+/* 没有  */
+
+.section-options-no {
+  width: 698rpx;
+  height: 436rpx;
+  vertical-align: middle;
+  background-color: #fff;
+}
+
+.section-options-no-headline {
+  width: 698rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 28rpx;
+  color: #333;
+}
+
+.section-options-no-section {
+  width: 698rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  vertical-align: middle;
+  margin-top: 60rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.options-no-section-man {
+  width: 90rpx;
+  height: 90rpx;
+}
+
+.options-no-section-woman {
+  width: 90rpx;
+  height: 90rpx;
+  margin-left: 154rpx;
+}
+
+.section-Date-of-Birth {
+  width: 698rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 28rpx;
+  margin-top: 60rpx;
+  color: #333;
+}
+
+.Year-month-day {
+  width: 698rpx;
+  height: 172rpx;
+  line-height: 172rpx; 
+  vertical-align: middle;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row; 
+}
+
+.section-Year {
+  font-size: 30rpx;
+  color: #171717;
+}
+
+.section-Year-blue {
+  font-size: 40rpx;
+  color: #4dd0c8;
+}
+
+.section-month {
+  font-size: 30rpx;
+  color: #171717;
+}
+
+.section-month-blue {
+  font-size: 40rpx;
+  color: #4dd0c8;
+}
+
+.section-day {
+  font-size: 30rpx;
+  color: #171717;
+}
+
+.section-day-blue {
+  font-size: 40rpx;
+  color: #4dd0c8;
+}
+
+.section-pull-down {
+  width: 16rpx;
+  height: 16rpx;
+  margin-left: 10rpx;
+}
+
+.Perfect-Information-footer {
+  width: 702rpx;
+  height: 180rpx;
+  line-height: 180rpx;
+  /* padding: 0 24rpx; */
+  vertical-align: middle;
+  display: flex;
+  position: absolute;
+}
+
+.Perfect-Information-button {
+  width: 702rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  vertical-align: middle;
+  text-align: center;
+  margin-top: 60rpx;
+  font-size: 30rpx;
+  color: #fff;
+  background-color: #4dd0c8;
+  border-radius: 40rpx;
+}
+.ok{
+  border-bottom: 1rpx solid #4DD0C8;
+}
+.opacity{
+  opacity: 1;
+}

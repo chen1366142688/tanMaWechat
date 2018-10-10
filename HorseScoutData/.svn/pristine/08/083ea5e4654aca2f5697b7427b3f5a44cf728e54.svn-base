@@ -1,0 +1,215 @@
+const app = getApp().globalData
+// pages/My/Bind-child.js
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    imgUrl: app.url,
+    end: fmtDate(new Date),
+    year : "1992",
+    month : "02",
+    day : "09",
+    sex : true,
+    childList : [],
+    checkIndex : 0,
+    isVerification : false,
+    codeTime : 0
+  },
+
+  bindDateChange(e) {
+    let date = e.detail.value;
+    let ActiveDate = e.detail.value;
+    date = date.split("-")
+    this.setData({
+      year: date[0],
+      month: date[1],
+      day: date[2],
+      ActiveDate: ActiveDate
+    })
+  },
+  changeSex(){
+    this.setData({
+      sex : !this.data.sex
+    })
+  },
+  realName(e){
+    this.setData({
+      realName : e.detail.value
+    })
+  },
+  idcard(e) {
+    this.setData({
+      idcard: e.detail.value
+    })
+  },
+  searchChild(){
+    let that = this
+    wx.request({
+      url: app.rQUrl + '/v1/childreninfo/getChildrenSingleInfoByIdCard',
+      method: 'POST',
+      header: { 'token': wx.getStorageSync('userInfo').oauthToken.token },
+      data: {
+        "birthday": this.data.year + this.data.month + this.data.day,
+        "gender": this.data.sex ? "1" : "2",
+        "idCard": this.data.idcard,
+        "realName": this.data.realName
+      },
+      success(res) {
+        console.log(res)
+        if (res.data.code == 10000){
+          that.setData({
+            childList : res.data.response
+          })
+        }
+      },
+      fail(info) {
+        wx.showToast({
+          title: info.data.msg,
+          icon: 'none'
+        })
+      }
+    })
+  },
+  // 绑定验证信息
+  searchInfo(e){
+    let that = this
+    this.setData({
+      childId: e.currentTarget.dataset.id
+    })
+    wx.request({
+      url: app.rQUrl + '/v1/childreninfo/getChildrenRelationsByChildrenIdAndParentUserId',
+      method: 'GET',
+      header: { 'token': wx.getStorageSync('userInfo').oauthToken.token },
+      data: {
+        childrenId: e.currentTarget.dataset.id,
+        parentUserId: wx.getStorageSync('userInfo').userId
+      },
+      success(res) {
+        console.log(res)
+        if (res.data.code == 10000){
+          that.setData({
+            isVerification : true,
+            verificationList : res.data.response,
+            relationCode: res.data.response[0].relationCode,
+            patriarchId: res.data.response[0].patriarchId
+          })
+        }
+      },
+      fail(info) {
+        wx.showToast({
+          title: info.data.msg,
+          icon: 'none'
+        })
+      }
+    })
+  },
+  checkThis(e){
+    this.setData({
+      relationCode: e.currentTarget.dataset.info.relationCode,
+      patriarchId: e.currentTarget.dataset.info.patriarchId,
+      checkIndex: e.currentTarget.dataset.index
+    })
+  },
+  btnCode(){
+    let that = this;
+    if (this.data.codeTime !== 0){
+      return ;
+    }
+    wx.request({
+      url: app.rQUrl + '/v1/common/bundlingSendSMS',
+      method: 'GET',
+      header: { 'token': wx.getStorageSync('userInfo').oauthToken.token },
+      data: {
+        relationCode: that.data.relationCode,
+        patriarchId: that.data.patriarchId 
+      },
+      success(res) {
+        let timer;
+        if (res.data.code == 10000){
+          that.setData({
+            codeTime : 60
+          })
+          timer = setInterval(function(){
+            that.setData({
+              codeTime: that.data.codeTime - 1
+            })
+            if (that.data.codeTime == 0){
+              clearInterval(timer)
+            }
+          },1000)
+        }
+      },
+      fail(info) {
+        wx.showToast({
+          title: info.data.msg,
+          icon: 'none'
+        })
+      }
+    })
+  },
+  code(e){
+    this.setData({
+      code : e.detail.value
+    })
+  },
+  pushCode(){
+    let that = this;
+    wx.request({
+      url: app.rQUrl + '/v1/childreninfo/bundlingRelation',
+      method: 'POST',
+      header: { 'token': wx.getStorageSync('userInfo').oauthToken.token },
+      data: {
+        childrenId : that.data.childId,
+        parentId: that.data.patriarchId,
+        code: that.data.code,
+        relationCode: that.data.relationCode 
+      },
+      success(res) {
+        if (res.data.code == 10000){
+          wx.switchTab({
+            url: "../../../pages/My/My-Index/My-Index"
+          })
+        }
+      },
+      fail(info) {
+        wx.showToast({
+          title: info.data.msg,
+          icon: 'none'
+        })
+      }
+    })
+  },
+  onLoad: function (options) {
+  
+  },
+  onReady: function () {
+  
+  },
+  onShow: function () {
+  
+  },
+  onHide: function () {
+  
+  },
+  onUnload: function () {
+  
+  },
+  onPullDownRefresh: function () {
+  
+  },
+  onReachBottom: function () {
+  
+  },
+  onShareAppMessage: function () {
+  
+  }
+})
+function fmtDate(obj) {
+  var date = new Date(obj);
+  var y = 1900 + date.getYear();
+  var m = "0" + (date.getMonth() + 1);
+  var d = "0" + date.getDate();
+  return y + "-" + m.substring(m.length - 2, m.length) + "-" + d.substring(d.length - 2, d.length);
+}

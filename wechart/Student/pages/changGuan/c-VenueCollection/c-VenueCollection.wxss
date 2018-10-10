@@ -1,0 +1,218 @@
+page {
+  background: #ececec;
+  font-size: 30rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(51, 51, 51, 1);
+  padding-top: 20rpx;
+  line-height: 0;
+}
+
+.box {
+  width: 750rpx;
+  height: 210rpx;
+  position: relative;
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+
+.effective {
+  text-align: right;
+  height: 40rpx;
+}
+
+.effe {
+  display: inline-block;
+  width: 90rpx;
+  height: 40rpx;
+  text-align: center;
+  line-height: 40rpx;
+  font-size: 24rpx;
+  color: #fff;
+  background: rgba(0, 198, 147, 1);
+}
+
+.itemInfo, .itemInfoTitle {
+  width: 708rpx;
+  padding: 0 23rpx 0 19rpx;
+  margin-bottom: 18rpx;
+}
+.userLevelImg {
+  width: 24rpx;
+  height: 24rpx;
+  vertical-align: middle;
+  margin-right: 10rpx;
+}
+
+.userLevelImge {
+  width: 18rpx;
+  height: 18rpx;
+  vertical-align: top;
+  margin-right: 8rpx;
+}
+
+.userName {
+  font-size: 24rpx;
+  font-weight: bold;
+  max-width: 230rpx; 
+  height: 24rpx;
+  line-height: 24rpx;
+  margin-right: 10rpx;
+}
+
+.nums {
+  width: 24rpx;
+  height: 24rpx;
+  vertical-align: middle;
+  margin-right: 8rpx;
+}
+
+.hotImg {
+  width: 24rpx;
+  height: 24rpx;
+  vertical-align: middle;
+  margin-right: 8rpx;
+}
+
+.hotNum, .levelPus, .level, .numsTxt {
+  font-size: 20rpx;
+  /* vertical-align: top; */
+}
+
+.levelPus {
+  font-weight: bold;
+  margin-right: 5rpx;
+}
+
+.levelBox {
+  height: 20rpx;
+  line-height: 20rpx;
+}
+
+.level {
+  width: 100rpx;
+  vertical-align: top;
+}
+
+.numsTxt {
+  margin-right: 20rpx;
+}
+
+.hotNum {
+  margin-right: 20rpx;
+}
+
+.itemInfoTitle {
+  margin-bottom: 1rpx;
+}
+.itemInfo{
+  height: 24rpx;
+  line-height: 24rpx;
+  display: flex;
+  align-items: center;
+}
+.classItem {
+  height: 30rpx;
+  line-height: 30rpx;
+  border: 1rpx solid #171718;
+  border-radius: 5rpx;
+  color: #171718;
+  font-size: 22rpx;
+  padding: 0 10rpx;
+  vertical-align: middle;
+}
+
+.title {
+  height: 27rpx;
+  line-height: 27rpx;
+  max-width: 440rpx;
+  font-weight: bold;
+  font-size: 24rpx;
+  margin-left: 10rpx;
+  vertical-align: middle;
+}
+
+.itemInfoTitle {
+  position: relative;
+  height: 30rpx;
+}
+
+.keShi {
+  height: 30rpx;
+  line-height: 30rpx;
+  font-size: 18rpx;
+  vertical-align: middle;
+  position: absolute;
+  right: 23rpx;
+  bottom: 0;
+  color: #adadad;
+}
+
+.moneyBox {
+  position: absolute;
+  top: -12rpx;
+  right: 23rpx;
+}
+
+.money {
+  font-size: 18rpx;
+  font-family: SanFranciscoDisplay-Regular;
+  color: rgba(232, 85, 113, 1);
+}
+
+.moneys {
+  font-size: 28rpx;
+  font-family: SanFranciscoDisplay-Bold;
+  color: rgba(232, 85, 113, 1);
+  font-weight: bold;
+  padding-left: 6rpx;
+}
+
+.send {
+  width: 708rpx;
+  margin: 18rpx auto 0 auto;
+  border-top: 1rpx solid #ececec;
+  padding-top: 14rpx;
+}
+
+.check {
+  vertical-align: middle;
+}
+
+.sendCode {
+  display: inline-block;
+  font-size: 30rpx;
+  vertical-align: middle;
+}
+
+.delete {
+  width: 36rpx;
+  height: 38rpx;
+  vertical-align: middle;
+}
+
+.noThing {
+  background: rgba(153, 153, 153, 1);
+  color: #fff;
+}
+
+.active {
+  color: #00c693;
+}
+
+.rgBox {
+  width: 100rpx;
+  height: 100%;
+  text-align: right;
+}
+
+.van-footer {
+  display: block;
+  width: 750rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  margin: 20rpx 0 60rpx 0;
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(153, 153, 153, 1);
+}

@@ -1,0 +1,65 @@
+// pages/Exercise/Select-Planning/Select-Planning.js
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    difficulty:[
+      { "name": '全部', "active": true }, { "name": 'T1 基础', "active": false }, { "name": 'T2 进阶', "active": false }, { "name": 'T3 进阶', "active": false }, { "name": 'T4 进阶', "active": false }, { "name": 'T5 进阶', "active": false}
+    ],
+    allEquipment:[
+      { "name": '全部', "active": true }, { "name": '无器械', "active": false }, { "name": '家庭装备', "active": false }, { "name": '小区', "active": false }, { "name": '大街上', "active": false }, { "name": '公园', "active": false}
+    ],
+    allType:[
+      { "name": '全部', "active": true }, { "name": '综合类', "active": false }, { "name": '力量类', "active": false }, { "name": '柔韧累', "active": false }, { "name": '软肋', "active": false }, { "name": '不知道', "active": false}
+    ]
+  },
+  difficultyClick(e){
+    const that = this;
+    let index = e.currentTarget.dataset.index;
+    let difficulty = that.data.difficulty;
+    for (let i = 0; i < difficulty.length; i++) {
+      if (index == i) {
+        difficulty[i].active = true;
+      } else {
+        difficulty[i].active = false;
+      }
+    }
+    that.setData({ difficulty: difficulty })
+  },
+  allEquipmentClick(e) {
+    const that = this;
+    let index = e.currentTarget.dataset.index;
+    let allEquipment = that.data.allEquipment;
+    for (let i = 0; i < allEquipment.length; i++) {
+      if (index == i) {
+        allEquipment[i].active = true;
+      } else {
+        allEquipment[i].active = false;
+      }
+    }
+    that.setData({ allEquipment: allEquipment })
+  },
+  allTypeClick(e) {
+    const that = this;
+    let index = e.currentTarget.dataset.index;
+    let allType = that.data.allType;
+    for (let i = 0; i < allType.length; i++) {
+      if (index == i) {
+        allType[i].active = true;
+      } else {
+        allType[i].active = false;
+      }
+    }
+    that.setData({ allType: allType })
+  },
+  onLoad: function (options) {},
+  onReady: function () {},
+  onShow: function () {},
+  onHide: function () {},
+  onUnload: function () {},
+  onPullDownRefresh: function () {},
+  onReachBottom: function () {},
+  onShareAppMessage: function () {}
+})

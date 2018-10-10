@@ -1,0 +1,177 @@
+/* pages/my/Account-Details/Account-Details.wxss */
+.Account-Details{
+  width: 750rpx;
+  height: 580rpx;
+  /* line-height: 557rpx; */
+  margin: 0 auto;
+  background-color: #fff;
+  border-top:1rpx solid #e4e4e4;
+}
+
+.money{
+  width: 86rpx;
+  height: 90rpx;
+  margin: 0 auto;
+  margin-left: 44%;
+  margin-top: 69rpx;
+}
+
+.Queryi{
+  width: 20rpx;
+  height: 20rpx;
+  line-height: 88rpx;
+  margin-left: 10rpx;
+  margin-top: -4rpx;
+  vertical-align: middle;
+}
+
+.Account-Details-text1{
+  width: 750rpx;
+  height: 80rpx;
+  color: #333;
+  font-size: 24rpx;
+  text-align: center;
+  line-height: 80rpx;
+}
+
+.Account-Details-text2{
+  width: 750rpx;
+  color: #333;
+  font-size: 40rpx;
+  text-align: center;
+  font-weight:bold;
+}
+
+.Account-Details-text3{
+  width: 750rpx;
+  height: 80rpx;
+  color: #999;
+  font-size: 20rpx;
+  text-align: center;
+  line-height: 80rpx;
+}
+
+.Account-Details-text4{
+  width: 750rpx;
+  color: #333;
+  font-size: 24rpx;
+  text-align: center;
+  margin-bottom: 50rpx;
+}
+
+.withdraw-deposit{
+  width: 702rpx;
+  margin: 0 auto;
+  height: 88rpx;
+  color: #fff;
+  line-height: 88rpx;
+  background-image: url('http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coach/public/button.png');
+  background-size:100% 100%;
+  background-color: #007587;
+  border-radius: 40rpx;
+  margin-top: 21rpx;
+}
+
+.alteration{
+  width: 750rpx;
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+
+.alteration-money-one{
+  width: 750rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  border-top: 1rpx solid #e4e4e4;
+}
+
+.money-left{
+  width: 450rpx;
+  height: 88rpx;
+  float: left;
+  margin-left: 20rpx;
+}
+
+.explain{
+  widows: 450rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 24rpx;
+  margin-top: 16rpx;
+  color: #333;
+}
+
+.Time{
+  widows: 450rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 24rpx;
+  color: #333;
+}
+
+.monet-rieft-add{
+  width: 200rpx;
+  height: 88rpx;
+  float: right; 
+  font-size: 24rpx;
+  color: #00B6D6;
+  line-height: 88rpx;
+  text-align: right;
+  margin-right: 20rpx;
+}
+
+.monet-rieft-subtract{
+  width: 200rpx;
+  height: 88rpx;
+  float: right; 
+  font-size: 24rpx;
+  color: #333;
+  line-height: 88rpx;
+  text-align: right;
+  margin-right: 20rpx;
+}
+
+.money-right{
+  width: 200rpx;
+  height: 88rpx;
+  float: right;
+  line-height: 88rpx;
+}
+
+.money-rieft-add{
+  width: 150rpx;
+  text-align: right;
+  font-size: 24rpx;
+  float: left;
+  color: #00B6D6;
+}
+
+.money-rieft-subtract{
+  width: 150rpx;
+  text-align: right;
+  font-size: 24rpx;
+  float: left;
+  color: #333;
+}
+
+.money-T{
+  width: 16rpx;
+  height: 16rpx;
+  float: right;
+  margin-top: 36rpx;
+  margin-right: 20rpx;
+}
+
+.van-footer{
+  display: block;
+  width: 750rpx;
+  text-align: center;
+  margin:20rpx 0 30rpx 0; 
+  font-size:24rpx;
+  font-family:PingFang-SC-Regular;
+  color:rgba(153,153,153,1);
+}

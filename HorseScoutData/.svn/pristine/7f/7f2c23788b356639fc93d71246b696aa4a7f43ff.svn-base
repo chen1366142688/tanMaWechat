@@ -1,0 +1,225 @@
+// pages/Information/location/location.js
+const app = getApp().globalData
+//这里后面需要添加如果没有定位到的话应该是先判断后台有没有当前用户的之前注册过的城市，最后才选择默认的城市名称
+let location = wx.getStorageSync('loacation') || app.defaultLocation;
+Page({
+  data: {
+    imgUrl: app.url,
+    locationAllId: {},
+    allProvince:[],
+    array: [],
+    objectArray: [],
+    index: 0,
+    array1: [],
+    objectArray1: [],
+    index1: 0,
+    array2: ['幼儿园','小学','初中','高中'],
+    objectArray2: [],
+    index2: 0,
+    array3: ['一年级', '二年级', '三年级', '四年级','五年级','六年级'],
+    index3: 0,
+    array4: ['一班', '二班', '三班', '四班', '五班', '六班', '七班', '八班', '九班', '十班'],
+    index4: 0,
+    Kindergarten:['大班','中班','小班'],
+    JuniorMiddleSchool:['初一','初二','初三'],
+    highSchool:['高一','高二','高三'],
+    activeProvince: location.address_component.province,
+    activeProvinceId: '',
+    activecityName: location.address_component.city,
+    activecityId: '',
+  },
+  ContactCustomerService(e) {
+    wx.makePhoneCall({//客服电话待定
+      phoneNumber: '13679695212',
+    })
+  },
+  prev(e){
+    wx.navigateBack({
+      delta:1
+    })
+  },
+  bindPickerChange(e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    const that = this;
+    let index = e.detail.value;
+    let objectArray = that.data.objectArray;
+    for (let i= 0; i < objectArray.length;i++){
+      if ( i == index){
+        that.setData({ activeProvinceId: objectArray[i].provinceId, activeProvince: objectArray[i].provinceName})
+      }
+    }
+    provinceInfo(that)
+    this.setData({ index: index, index1: 0})
+  },
+  bindPickerChange1 (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    const that = this;
+    let index1 = e.detail.value;
+    let objectArray1 = that.data.objectArray1;
+    for (let i = 0; i < objectArray1.length; i++) {
+      if (i == index1) {
+        that.setData({ activecityId: objectArray1[i].cityId, activecityName: objectArray1[i].cityName })
+      }
+    }
+    this.setData({ index1: index1})
+  },
+  bindPickerChange2(e){
+    console.log(e.detail.value)
+    this.setData({index2:e.detail.value})
+  },
+  bindPickerChange3(e) {
+    console.log(e.detail.value)
+    this.setData({ index3: e.detail.value })
+  },
+  bindPickerChange4(e) {
+    console.log(e.detail.value)
+    this.setData({ index4: e.detail.value })
+  },
+  goSchool(e){
+    wx.navigateTo({
+      url: '../../../pages/Information/Selection-school/Selection-school',
+    })
+  },
+  overNext(e){},
+  overAll(e){},
+  onLoad: function (options) {
+  },
+  onReady: function () {},
+  onShow: function () {
+    locationAll(this)
+    provinceAll(this)
+  },
+  onHide: function () {},
+  onUnload: function () {},
+  onPullDownRefresh: function () {},
+  onReachBottom: function () {},
+  onShareAppMessage: function () {}
+})
+//根据神市区获取省市区id 
+function locationAll(that){
+  wx.request({
+    url: app.rQUrl+'/v1/regionInfo/getRegionInfoId',
+    method:'POST',
+    header: { 'token': wx.getStorageSync('userInfo').oauthToken.token || '1' },
+    data:{
+      "cityName": location.address_component.city || '',
+      "countryName": location.address_component.district || '',
+      "provinceName": location.address_component.province || ''
+    },
+    success(res){
+      //保存省市区id
+      if(res.data.code == '10000'){
+        that.setData({ locationAllId: res.data.response })
+      }else{
+        console.log('获取城市id失败')
+      } 
+    },
+    fail(info){
+      wx.showToast({
+        title: '后台开小差了',
+        icon:'none'
+      })
+    }
+  })
+}
+//获取所有省份信息
+function provinceAll(that){
+  wx.request({
+    url: app.rQUrl + '/v1/regionInfo/get/allProvinceInfo',
+    method: 'GET',
+    header: { 'token': wx.getStorageSync('userInfo').oauthToken.token || '1' },
+    data: {},
+    success(res){
+      if(res.data.code == '10000'){
+        let result = res.data.response;
+        let len = result.length;
+        let array = new Array();
+        for(let i = 0; i < len; i++){
+          if (result[i].provinceName == that.data.activeProvince){
+            that.setData({ index: i, activeProvinceId: result[i].provinceId})
+          }
+          array.push(result[i].provinceName);
+        }
+        that.setData({ array: array, objectArray: result})
+        provinceInfo(that)
+      }else{
+        wx.showToast({
+          title: res.data.msg,
+          icon:'none'
+        })
+      }
+    },
+    fail(info){
+      wx.showToast({
+        title: info.data.msg,
+        icon:'none'
+      })
+    }
+  })
+  
+}
+//通过省份id查询所属城市列表
+function provinceInfo(that){
+  wx.request({
+    url: app.rQUrl + '/v1/regionInfo/get/allCityInfoByProvinceId',
+    method: 'GET',
+    header: { 'token': wx.getStorageSync('userInfo').oauthToken.token || '1' },
+    data: {
+      provinceId: that.data.activeProvinceId
+    },
+    success(res){
+      if(res.data.code == '10000'){
+        let result = res.data.response;
+        let len = result.length;
+        let array1 = new Array();
+        for (let i = 0; i < len; i++) {
+          if (result[i].cityName == that.data.activecityName) {
+            that.setData({ index1: i, activecityId: result[i].cityId})
+          }else{
+            that.setData({ index1: 0, activecityId: result[0].cityId, activecityName: result[0].cityName })
+          }
+          array1.push(result[i].cityName);
+        }
+        that.setData({ array1: array1, objectArray1: result})
+      }else{
+        wx.showToast({
+          title: res.data.msg,
+          icon:'none'
+        })
+      }
+    },
+    fail(info){
+      wx.showToast({
+        title: info.data.msg,
+        icon:'none'
+      })
+    }
+  })
+}
+//通过城市id查询所属区域
+function cityInfo(that) {
+  wx.request({
+    url: app.rQUrl + '/v1/regionInfo/get/allCountyInfoByCityId',
+    method: 'GET',
+    header: { 'token': wx.getStorageSync('userInfo').oauthToken.token || '1' },
+    data: {
+      cityId: that.data.cityId
+    },
+    success(res) {
+      if (res.data.code == '10000') {
+        that.setData({ cityInfo: res.data.response })
+      } else {
+        wx.showToast({
+          title: res.data.msg,
+          icon: 'none'
+        })
+      }
+    },
+    fail(info) {
+      wx.showToast({
+        title: info.data.msg,
+        icon: 'none'
+      })
+    }
+  })
+}

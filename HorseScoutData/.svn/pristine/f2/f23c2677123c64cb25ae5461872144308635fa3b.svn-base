@@ -1,0 +1,376 @@
+/* pages/My/My-Index/My-Index.wxss */
+
+.My-Index{
+  width: 750rpx;
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.My-Index-section{
+  width: 750rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.My-Index-header{
+  width: 100%;
+  height: 240rpx;
+  line-height: 240rpx;
+  padding: 40rpx 80rpx 105rpx 80rpx;
+  box-sizing:border-box;
+  background-color: #4DD0C8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.My-Index-header-head-portrait{
+  width: 95rpx;
+  height: 95rpx;
+  line-height: 95rpx;
+  border-radius: 47.5rpx;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+.head-portrait{
+  width: 90rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  border-radius: 45rpx;
+  vertical-align: middle;
+}
+
+.My-Index-header-Name{
+  width: 452rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 43rpx;
+}
+
+.My-Index-header-Name-top{
+  width: 100%;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 40rpx;
+  color: #fff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.My-Index-header-Name-bottom{
+  width: 100%;
+  height: 30rpx;
+  line-height: 30rpx;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  margin-top: 20rpx;
+}
+
+.relation{
+  height: 30rpx;
+  line-height: 30rpx;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+}
+
+.Name-bottom-relation-img{
+  width: 30rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  vertical-align: middle;
+  margin-right: 10rpx;
+}
+
+.Name-bottom-relation-text{
+  height: 30rpx;
+  line-height: 30rpx;
+  font-size: 30rpx;
+  color: #fff;
+}
+
+.Iphone{
+  height: 30rpx;
+  line-height: 30rpx;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  margin-left: 34rpx;
+}
+
+.Name-bottom-Iphone-img{
+  width: 30rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  vertical-align: middle;
+  margin-right: 10rpx;
+}
+
+.Name-bottom-Iphone-text{
+  height: 30rpx;
+  line-height: 30rpx;
+  font-size: 30rpx;
+  color: #fff;
+}
+
+.My-Index-List{
+  width: 750rpx;
+  display: flex;
+  padding: 0 24rpx;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top:170rpx;
+}
+
+.My-Index-List-one{
+  width: 100%;
+  height: 240rpx;
+  border-radius: 10rpx;
+  background-color: #fff;
+  margin-bottom: 20rpx;
+}
+
+.My-Index-List-one-section{
+  width: 100%;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+
+.My-Index-List-one-headline{
+  width: 100%;
+  vertical-align: middle;
+  height: 98rpx;
+  line-height: 98rpx;
+  border-bottom: 1rpx solid #e4e4e4;
+  font-size: 28rpx;
+  color: #000000;
+}
+
+.My-Index-List-one-headline-blue{
+  color: #4DD0C8;
+}
+
+.My-Index-List-one-button{
+  width: 100%;
+  height: 140rpx;
+  line-height: 140rpx;
+  vertical-align: middle;display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.My-Index-List-one-button-left{
+  width: 220rpx;
+  height: 58rpx;
+  line-height: 58rpx;
+  font-size: 30rpx;
+  color: #fff;
+  border: 1rpx solid #4DD0C8;
+  background-color: #4DD0C8;
+  border-radius: 40rpx;
+  text-align: center;
+}
+
+.My-Index-List-one-button-right{
+  width: 220rpx;
+  height: 58rpx;
+  line-height: 58rpx;
+  font-size: 30rpx;
+  color: #4DD0C8;
+  border: 1rpx solid #4DD0C8;
+  background-color: #fff;
+  border-radius: 40rpx;
+  text-align: center;
+  margin-left: 100rpx;
+}
+
+.My-Index-List-two{
+  width: 100%;
+  height: 300rpx;
+  border-radius: 10rpx;
+  background-color: #fff;
+  margin-bottom: 20rpx;
+}
+
+.My-Index-List-two-section{
+  width: 100%;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+
+.My-Index-List-two-headline{
+  width: 100%;
+  vertical-align: middle;
+  height: 158rpx;
+  line-height: 158rpx;
+  border-bottom: 1rpx solid #e4e4e4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.My-Index-List-two-headline-left{
+  height: 158rpx;
+  line-height: 158rpx;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.My-Index-List-two-headline-left-Name{
+  width: 100%;
+  height: 24rpx;
+  line-height: 24rpx;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  margin-top: 49rpx;
+}
+
+.Name{
+  max-width: 220rpx;
+  font-size: 24rpx;
+  color: #000;
+  height: 24rpx;
+  line-height: 24rpx;
+  vertical-align: middle;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.Name-gender-img{
+  width: 24rpx;
+  height: 24rpx;
+  line-height: 24rpx;
+  vertical-align: middle;
+  margin-left: 10rpx;
+}
+
+.My-Index-List-two-headline-left-corporeity{
+  width: 100%;
+  height: 24rpx;
+  line-height: 24rpx;
+  vertical-align: middle;
+  font-size: 24rpx;
+  color: #000;
+  margin-top: 20rpx;
+  display: flex;
+  align-items: center;
+}
+
+
+.corporeity-yellow{
+  font-size: 24rpx;
+  color: #FDC54A;
+  height: 24rpx;
+  line-height: 24rpx;
+  vertical-align: middle;
+}
+
+.My-Index-List-two-headline-left-undetected{
+  width: 100%;
+  height: 24rpx;
+  line-height: 24rpx;
+  vertical-align: middle;
+  font-size: 24rpx;
+  color: #000;
+  margin-top: 20rpx;
+  display: flex;
+  align-items: center;
+}
+
+
+.undetected-yellow{
+  font-size: 24rpx;
+  color: #4DD0C8;
+  height: 24rpx;
+  line-height: 24rpx;
+  vertical-align: middle;
+}
+
+.My-Index-List-two-headline-right{
+  height: 158rpx;
+  line-height: 158rpx;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.My-Index-List-two-headline-right-time{
+  width: 100%;
+  height: 24rpx;
+  line-height: 24rpx;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  margin-top: 49rpx;
+  font-size: 24rpx;
+  color: #000;
+  text-align: right;
+}
+
+.My-Index-List-two-headline-right-participation{
+  width: 100%;
+  height: 24rpx;
+  line-height: 24rpx;
+  vertical-align: middle;
+  font-size: 24rpx;
+  color: #000;
+  margin-top: 20rpx;
+  text-align: right;
+}
+
+.participation{
+  color: #A088D4;
+}
+
+.My-Index-footer{
+  width: 750rpx;
+  height: 103rpx;
+  line-height: 103rpx;
+  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.My-Index-footer-left{
+  height: 103rpx;
+  line-height: 103rpx;
+  vertical-align: middle;
+  font-size: 24rpx;
+  color: #999;
+}
+
+.My-Index-footer-right{
+  height: 103rpx;
+  line-height: 103rpx;
+  vertical-align: middle;
+  font-size: 24rpx;
+  color: #4DD0C8;
+  margin-left: 200rpx;
+}

@@ -1,0 +1,56 @@
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.clearfloat:after {
+  display: block;
+  clear: both;
+  content: "";
+  visibility: hidden;
+  height: 0;
+}
+
+.clearfloat {
+  zoom: 1;
+}
+
+.textOver {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.iLblock {
+  display: inline-block;
+}
+/*  没有数据空空如也  */
+
+.kong {
+  width: 750rpx;
+  height: 790rpx;
+  margin: 0 auto;
+  background-color: #ececec;
+}
+
+.kong-img {
+  width: 340rpx;
+  height: 340rpx;
+  margin-left: 205rpx;
+  margin-top: 20%;
+}
+
+.kong-text {
+  display: inline-block;
+  width: 750rpx;
+  height: 25rpx;
+  line-height: 25rpx;
+  font-size: 24rpx;
+  color: #999;
+  text-align: center;
+  margin-top: 120rpx;
+}

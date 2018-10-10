@@ -1,0 +1,62 @@
+<!--pages/index/expense-settlement/expense-settlement.wxml-->
+<!--pages/index/Pay/pay.wxml-->
+<!-- 交场馆费-费用结算  -->
+<view class='Pay'>
+  <view class='header'>
+    <view class='Pay-header'>{{homeName}}</view>
+    <view class='Hint-expense'>费用：{{itemName}} | RMB {{itemDefaultPrice/100}}/小时/元 </view>
+    <view class='Hint-member-price'>会员优惠价：RMB {{itemMemberPrice/100}}/小时/元</view>
+  </view>
+  <view class='Hard'>
+    <view class='designation'>场地数量</view>
+    <picker bindchange="bindPickerChange" class='select' value="{{index}}" range="{{selectItemCount}}">
+        <text class='select_text'>{{homeItemCount}}个</text>
+        <image class='select_img' src='{{imgUrl}}xiala2.png'></image>
+    </picker>
+  </view>
+  <view class='Hard'>
+    <view class='designation'>课时</view>
+    <view class='select'>
+      <text class='select_text'>{{courseCount}}课时</text>
+    </view>
+  </view>
+  <view class='Hard'>
+    <view class='designation'>时长</view>
+    <view class='select'>
+      <!-- <text class='select_text'>{{courseTime/10}}小时</text> -->
+    <picker bindchange="bindCourseTimeChange" class='select' value="{{index}}" range="{{courseTimeList}}">
+        <text class='select_text'>{{thisCourseTime}}小时</text>
+        <image class='select_img' src='{{imgUrl}}xiala2.png'></image>
+    </picker>
+    </view>
+  </view>
+</view>
+
+<!-- 费用提示  -->
+
+
+
+<!-- 费用结算  -->
+
+<view class='expense-settlement'>
+  <text class='closing-cost'>费用结算</text>
+  <view class='expense-settlement-discounts'>
+    <view class='original-cost'>
+      <text class='original-cost-headline'>本次场馆费</text>
+      <text class='original-cost-money'>RMB {{totlePrice}}</text>
+    </view>
+    <view class='discounts'>
+      <text class='discounts-headline'>优惠抵扣</text>
+      <text class='discounts-money'>- RMB 0.00</text>
+    </view>
+  </view>
+  <view class='All-in-cost'>
+    <text class='All-in-cost-headline'>总费用</text>
+    <view class='All-in-cost-money'>
+      <text class='van-rmbb-smal'>RMB</text>
+      <text class='van-rmbc'>{{totlePrice}}</text>
+    </view>
+  </view>
+</view>
+
+<button class='settle-accounts' bindtap='toPayPrice' >去结算</button>

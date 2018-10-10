@@ -1,0 +1,12 @@
+<form>
+  <checkbox-group bindchange="checkboxChange">
+    <view class='van-screen bmwH'>状态管理</view>
+    <view class='van-screen-one bmwH' wx:for="{{orderState}}" wx:key="{{index}}" wx:if="{{item.group == stas}}" >
+      <checkbox style="transform:scale(.8)" class='check' value="{{item.name}}" checked="{{item.checked}}" />
+      <text class="{{item.checked ? 'checkted' : ''}}">{{item.value}}</text>
+    </view>
+  </checkbox-group>
+  <view class='but'>
+    <button class='submit' form-type='submit' bindtap='studentState'>提 交</button>
+  </view>
+</form>

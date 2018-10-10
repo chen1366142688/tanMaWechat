@@ -1,0 +1,214 @@
+page{background-color: #ececec}
+.c-jiao-information {
+  height: 1200rpx;
+  width:702rpx;
+  padding: 20rpx 24rpx 0 24rpx;
+}
+.c-items-xcxa {
+  width: 664rpx;
+  height: 253rpx;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 5rpx;
+  padding: 20rpx 20rpx 0rpx 20rpx;
+  margin-bottom: 20rpx;
+  overflow: hidden;
+}
+.c-item-inifo {
+  width: 100%;
+  height: 93rpx;
+  font-size: 24rpx;
+  color: #666;
+  /* line-height: 93rpx; */
+  /* margin-bottom: 10rpx; */
+}
+.c-item-inifoo {
+  width: 100%;
+  height: 50rpx;
+  /* margin-bottom: 10rpx; */
+}
+.zuo {
+  float: left;
+}
+
+.you {
+  float: right;
+}
+.c-item-info-txt {
+  display: inline-block;
+  border-radius: 5rpx;
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  border: 2rpx solid rgba(23, 23, 24, 1);
+  padding: 3rpx 8rpx;
+  margin-right: 13rpx;
+}
+.c-item-title {
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 180rpx;
+  height: 31rpx;
+  line-height: 31rpx;
+  font-size: 30rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(51, 51, 51, 1);
+  margin-right: 28rpx;
+  vertical-align: middle;
+}
+.c-item-title {
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 180rpx;
+  height: 31rpx;
+  line-height: 31rpx;
+  font-size: 30rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(51, 51, 51, 1);
+  margin-right: 28rpx;
+  vertical-align: middle;
+}
+.c-item-status {
+  display: inline-block;
+  width: 139rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+  background: rgba(232, 85, 113, 1);
+  border-radius: 17rpx;
+  font-size: 22rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
+}
+.c-item-apply {
+  background: #00c693;
+}
+.c-item-cancel {
+  background: rgba(153, 153, 153, 1);
+}
+.canshu {
+  margin: 12rpx auto;
+}
+.c-user {
+  width: 20rpx;
+  height: 20rpx;
+  margin-right: 10rpx; 
+}
+.c-username-text {
+  max-width: 100rpx;
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(102, 102, 102, 1);
+  vertical-align: bottom;
+}
+.l-cdcenter-posa {
+  width: 20rpx;
+  height: 20rpx;
+  margin: 0rpx 12rpx;
+}
+.c-username-taxt {
+  display: inline-block;
+  width: 120rpx;
+  /* height: 24rpx; */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(102, 102, 102, 1);
+  vertical-align: top;
+}
+.c-touser-xcxa {
+  width: 24rpx;
+  height: 17rpx;
+  margin: 0 10rpx 0 29rpx;
+}
+.c-renshu {
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(102, 102, 102, 1);
+  vertical-align: top;
+}
+.c-touser-xcxb {
+  width: 19rpx;
+  height: 19rpx;
+  margin-left: 10rpx;
+}
+.c-date {
+  width: 20rpx;
+  height: 20rpx;
+  margin: 0 10rpx 0 20rpx;
+}
+.c-data-txt {
+  display: inline-block;
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(102, 102, 102, 1);
+}
+.c-data-txte {
+  display: inline-block;
+  font-size: 24rpx;
+  height: 30rpx;
+  margin-bottom: 16rpx;
+  line-height: 30rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(102, 102, 102, 1);
+}
+.c-data-txte text.c-data-timea {
+  color: #333;
+  font-weight: bold;
+}
+.kechen-button {
+  width: 100%;
+  height: 93rpx;
+  /* line-height: 83rpx; */
+  background-color: #fff;
+}
+.c-topBor {
+  border-top: 2rpx solid rgba(228, 228, 228, 1);
+}
+.l-cdcenter-posc {
+  display: inline-block;
+}
+.l-stop-a {
+  vertical-align: middle;
+  padding: 0 30rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  background: #fff;
+  font-size: 24rpx;
+  color: #999;
+  text-align: center;
+  border-radius: 25rpx;
+  border: 1px solid #999;
+  float: left;
+  margin-top:20rpx;
+}
+
+.l-stop-b {
+  vertical-align: middle;
+  padding: 0 30rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  background: #fff;
+  font-size: 24rpx;
+  color: #00c693;
+  text-align: center;
+  border-radius: 25rpx;
+  border: 1px solid #00c693;
+  float: right;
+  margin-top:20rpx;
+}
+.van-over {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100rpx;
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(153, 153, 153, 1); 
+  margin-bottom:60rpx;
+}

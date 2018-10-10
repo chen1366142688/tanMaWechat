@@ -1,0 +1,76 @@
+<!--pages/login/login.wxml-->
+<view class='login'>
+  <view class='head-portrait'>
+    <image class='head-portrait-img' src='{{avatar}}'></image>
+  </view>
+  <view class='login-headine'>小马健康教师录入端</view>
+  <view class='Section-List-headline'>
+    <view class='List-headline-left {{coursepersona}}' bindtap='Register' data-val='1'>密码登录</view>
+    <!-- <view class='List-headline-right {{coursepersonbnotice}}' bindtap='Register' data-val='2'>验证码登录</view> -->
+  </view>
+  <!-- 密码登录 -->
+  <view class='Register-left' hidden='{{trainingcourse}}'>
+    <view class='Iphone'>
+      <view class='Iphone-img'>
+        <image class='Iphone-img-image' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/teacher/Iphone.png'></image>
+      </view>
+      <view class='Iphone-input'>
+        <input class='Section-one-input' maxlength="11" type='number' placeholder='登录手机' placeholder-class='input-cbcbcb' bindinput='loginPhone' value='{{loginPhone}}'></input>
+      </view>
+      <view class='delete' bindtap='deleteUser'>
+        <image class='delete-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/teacher/delete.png'></image>
+      </view>
+    </view>
+    <view class='lock'>
+      <view class='lock-img'>
+        <image class='lock-img-image' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/teacher/lock.png'></image>
+      </view>
+      <view class='lock-input'>
+        <input class='lock-one-input' maxlength="18" placeholder='登录密码' placeholder-class='input-cbcbcb' bindinput='loginPwd' type='password' value='{{loginPwd}}'></input>
+      </view>
+      <view class='delete' bindtap='deletePass'>
+        <image class='delete-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/teacher/delete.png'></image>
+      </view>
+    </view>
+    <view class='Register-left-footer' bindtap='ContactCustomerService'>
+      <view class='forget-password'>忘记密码？</view>
+      <view class='Contact-Customer-Service' >联系客服</view>
+    </view>
+    <view class='Register-Submit-left'>
+      <view class='Register-Submit-button' bindtap='submitLogin'>登 录</view>
+    </view>
+  </view>
+  <!-- 短信登录 -->
+  <!-- <view class='Register-right' hidden='{{noticecoursetab}}'>
+    <view class='Iphone'>
+      <view class='Iphone-img'>
+        <image class='Iphone-img-image' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/teacher/Iphone.png'></image>
+      </view>
+      <view class='Iphone-input'>
+        <input class='Section-one-input' maxlength="11" type='number' placeholder='登录手机' placeholder-class='input-cbcbcb'></input>
+      </view>
+      <view class='delete'>
+        <image class='delete-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/teacher/delete.png'></image>
+      </view>
+    </view>
+    <view class='verification-code'>
+      <view class='verification-code-img'>
+        <image class='verification-code-img-image' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/teacher/verification-code.png'></image>
+      </view>
+      <view class='verification-code-input'>
+        <input class='verification-code-one-input' maxlength="6" type='number' placeholder='验证码' placeholder-class='input-cbcbcb'></input>
+      </view>
+      <view class='send'>
+        <view class='send-text'>发送验证码</view>
+      </view>
+    </view>
+    <view class='Register-left-footer'>
+      <view class='forget-password'>忘记密码？</view>
+      <view class='Contact-Customer-Service' bindtap='ContactCustomerService'>联系客服</view>
+    </view>
+    <view class='Register-Submit-left'>
+      <view class='Register-Submit-button' bindtap='submitLogin'>登 录</view>
+    </view>
+  </view> -->
+
+</view>

@@ -1,0 +1,194 @@
+<!--pages/my/myIndex/myIndex.wxml-->
+<!-- 权限判断  -->
+<wxs module="haveThisPermissions">
+var checkPermissions = {
+  check: function (permissions,value) {
+         for(var i = 0; i < permissions.length; ++i){
+           if(permissions[i]==value){
+            return true;
+           }
+         }
+    return false;
+   }
+}
+module.exports = {
+  check: checkPermissions.check
+}
+</wxs>
+<view class='personal-information'>
+  <!-- <view class="myIndex-header" bindtap='editProfile'> -->
+  <view class="myIndex-header">
+    <view class='header-top' bindtap='editProfile'>
+      <image class='header-editor' src='{{imgUrl}}coach/public/redact.png'></image>
+    </view>
+    <view class='header-content clearfloat'>
+      <view class='fl imgBox' bindtap='editProfile'>
+        <view class='imgBg'>
+          <image class='myHeadImg' src='{{userBaseInfo.avatarUrl?userBaseInfo.avatarUrl+"?x-oss-process=image/resize,m_mfit,h_140,w_140":defaultHead}}' mode="aspectFill"></image>
+        </view>
+      </view>
+      <view class='fr contentBox' bindtap='editProfile'>
+        <view class='content-top'>
+          <image class='myManOrGril' wx:if="{{userBaseInfo.gender==1}}" src='{{imgUrl}}myManWrite.png'></image>
+          <image class='myManOrGril' wx:if="{{userBaseInfo.gender==2}}" src='{{imgUrl}}girl.png'></image>
+          <text class='userName iLblock'>{{userBaseInfo.nickName}}</text>
+          <text class='category iLblock'>{{userBaseInfo.coachType ==1?'教练':userBaseInfo.coachType ==2?'助教':'机构'}}</text>
+        </view>
+      </view>
+    </view>
+    <view class='header-chirden' bindtap='accountDetailsbind'>
+      <!--accountDetailsbind 点击剩余课时-->
+      <view class='fl money'>
+        <view class='money-top'>
+          <text class='moneyNumber'>{{coachAccount?coachAccount:0}}</text>
+          <text class='yuan'>元</text>
+        </view>
+        <view class='money-bottom'>我的余额</view>
+      </view>
+      <view class='fr store'>
+        <view class='money-top'>
+          <text class='moneyNumber green'>0</text>
+          <text class='yuan green'>点</text>
+        </view>
+        <view class='money-bottom'>我的积分</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 已获得的荣誉展示  -->
+<!-- 项目教练级别：4三级教练、3二级教练、2一级教练、1高级教练、0国家级教练 -->
+<!-- '项目运动员级别:4三级运动员、3二级运动员、2一级运动员、1运动健将、0国际运动健将\n', -->
+<view class='Honor'>
+  <view class='Honor-Single' wx:for="{{userGradeList}}" wx:key="{{index}}" wx:for-item="grade" bindtap='goMyInfomation'>
+    <image class='Medal' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/class.png'></image>
+    <text class='items'>{{grade.itemName}}</text>
+    <text class='intro' decode='true'>{{grade.athleteGrade== 4?'三级运动员&nbsp;' :grade.athleteGrade== 3?'二级运动员 &nbsp;':grade.athleteGrade== 2?'一级运动员&nbsp;':grade.athleteGrade== 1?'运动健将&nbsp;':grade.athleteGrade== 0?'国际运动健将&nbsp;':''}}</text>
+    <text class='intro'>{{grade.coachGrade== 4?'三级教练' :grade.coachGrade== 3?'二级教练':grade.coachGrade== 2?'一级教练':grade.coachGrade== 1?'高级教练':grade.coachGrade== 0?'国家级教练':''}}</text>
+    <view wx:if="{{userBaseInfo.authState=='1'}}" class='Authentication'>已认证</view>
+  </view>
+  <!-- <view class='Honor-Single'>
+    <image class='Medal' src='{{imgUrl}}coach/public/Honor.png'></image>
+    <text class='items'>篮  球</text>
+     <view style='word-spacing:20px;'>收到发送到撒的是</view> 
+    <text class='intro'>国家一级运动员</text>
+    <text class='intro'>一级教练</text>
+    <view class='Authentication'>已认证</view>
+  </view> -->
+</view>
+
+
+<!-- 我的介绍/课程订单/我的学员/下属教练/课时管理/账户明细/系统通知/系统设置/新手帮助/意见建议及需求/  -->
+
+<view wx:if="{{userType=='3'}}" class='my-item {{index==5 ? "last" : index == 9 ? "lasting" : ""}}' wx:for="{{cost}}" wx:key="{{index}}" bindtap='onselectitem' data-type='{{item.type}}'>
+  <view class='item-Left'>
+    <image class='itemone {{item.name=="系统通知" ? "tong" : ""}} {{index==2 ? "now" : ""}}' src='{{item.value}}'></image>
+    <text class='itemOneTxt'>{{item.name}}</text>
+  </view>
+  <view class='item-Right'>
+    <text class='mask' wx:if="{{item.name=='系统通知' && total}}">{{total}}</text>
+    <image class='totast' src='{{imgUrl}}next.png'></image>
+  </view>
+</view>
+<image class='server' bindtap='telephone' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/customer-service.png'></image>
+
+<!-- 机构列表 -->
+<view class='My-list' wx:if="{{userType=='1'}}">
+  <!-- 我的介绍 -->
+  <!-- 顶部一直存在 -->
+  <view class='My-list-header' bindtap='onselectitem'  data-type="1">
+    <view class='My-list-header-Left'>
+      <image class='My-list-header-Left-itemone' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/staff.png'></image>
+      <text class='My-list-header-Left-itemOneTxt'>我的介绍</text>
+    </view>
+    <view class='My-list-header-Right'>
+      <image class='My-list-header-Right-totast' src='{{imgUrl}}next.png'></image>
+    </view>
+  </view>
+  <!-- 单个机构A -->
+  <view class='My-list-section' wx:for="{{coachPermissionsList}}" wx:key="*this">
+    <view class='My-list-section-headline'>{{item.orgName}}</view>
+
+    <view wx:if="{{haveThisPermissions.check(item.permissionsList,'01')}}" bindtap='bindCoachPermissions' data-type='01' class='My-list-section-one' data-orguserid="{{item.orgUserId}}" data-orgname='{{item.orgName}}'>
+      <view class='My-list-header-Left'>
+        <image class='My-list-header-Left-itemone' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/staff.png'></image>
+        <text class='My-list-header-Left-itemOneTxt'>机构介绍</text>
+      </view>
+      <view class='My-list-header-Right'>
+        <image class='My-list-header-Right-totast' src='{{imgUrl}}next.png'></image>
+      </view>
+    </view>
+
+    <view wx:if="{{haveThisPermissions.check(item.permissionsList,'02')}}" bindtap='bindCoachPermissions' data-type='02' class='My-list-section-one' data-orguserid="{{item.orgUserId}}" data-orgname='{{item.orgName}}'>
+      <view class='My-list-header-Left'>
+        <image class='My-list-header-Left-itemone' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coach/public/from.png'></image>
+        <text class='My-list-header-Left-itemOneTxt'>{{item.permissionsList.indexOf(02)}}机构订单</text>
+      </view>
+      <view class='My-list-header-Right'>
+        <image class='My-list-header-Right-totast' src='{{imgUrl}}next.png'></image>
+      </view>
+    </view>
+
+    <view wx:if="{{haveThisPermissions.check(item.permissionsList,'03')}}" bindtap='bindCoachPermissions' data-type='03' class='My-list-section-one' data-orguserid="{{item.orgUserId}}" data-orgname='{{item.orgName}}'>
+      <view class='My-list-header-Left'>
+        <image class='My-list-header-Left-itemone' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coach/public/studentManagement.png'></image>
+        <text class='My-list-header-Left-itemOneTxt'>机构学员</text>
+      </view>
+      <view class='My-list-header-Right'>
+        <image class='My-list-header-Right-totast' src='{{imgUrl}}next.png'></image>
+      </view>
+    </view>
+
+    <view wx:if="{{haveThisPermissions.check(item.permissionsList,'04')}}" bindtap='bindCoachPermissions' data-type='04' class='My-list-section-one' data-orguserid="{{item.orgUserId}}" data-orgname='{{item.orgName}}'>
+      <view class='My-list-header-Left'>
+        <image class='My-list-header-Left-itemone' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coach/public/timeMange.png'></image>
+        <text class='My-list-header-Left-itemOneTxt'>机构教练</text>
+      </view>
+      <view class='My-list-header-Right'>
+        <image class='My-list-header-Right-totast' src='{{imgUrl}}next.png'></image>
+      </view>
+    </view>
+
+    <view wx:if="{{haveThisPermissions.check(item.permissionsList,'05')}}" bindtap='bindCoachPermissions' data-type='05' class='My-list-section-one' data-orguserid="{{item.orgUserId}}" data-orgname='{{item.orgName}}'>
+      <view class='My-list-header-Left'>
+        <image class='My-list-header-Left-itemone' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coach/public/myOrder.png'></image>
+        <text class='My-list-header-Left-itemOneTxt'>课时管理</text>
+      </view>
+      <view class='My-list-header-Right'>
+        <image class='My-list-header-Right-totast' src='{{imgUrl}}next.png'></image>
+      </view>
+    </view>
+
+    <view wx:if="{{haveThisPermissions.check(item.permissionsList,'06')}}" bindtap='bindCoachPermissions' data-type='06' class='My-list-section-one' data-orguserid="{{item.orgUserId}}" data-orgname='{{item.orgName}}'>
+      <view class='My-list-header-Left'>
+        <image class='My-list-header-Left-itemone' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coach/public/detail.png'></image>
+        <text class='My-list-header-Left-itemOneTxt'>账户明细</text>
+      </view>
+      <view class='My-list-header-Right'>
+        <image class='My-list-header-Right-totast' src='{{imgUrl}}next.png'></image>
+      </view>
+    </view>
+  </view>
+ 
+  <!-- 系统通知/系统设置/意见建议/新手帮助 -->
+  <!-- 底部一直存在 -->
+  <view class='My-list-footer'>
+    <view class='My-list-footer-one' bindtap='onselectitem' data-type="4">
+      <text class='My-list-header-Right-mask' wx:if="{{total>0}}">{{total}}</text>
+      <image class='My-list-footer-one-itemone' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/My/inform.png'></image>
+      <text class='My-list-footer-one-itemOneTxt'>系统通知</text>
+    </view>
+    <view class='My-list-footer-one' bindtap='onselectitem' data-type="5">
+      <image class='My-list-footer-one-itemone' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/My/Setting.png'></image>
+      <text class='My-list-footer-one-itemOneTxt'>系统设置</text>
+    </view>
+    <view class='My-list-footer-one' bindtap='onselectitem' data-type="6">
+      <image class='My-list-footer-one-itemone' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/My/opinion.png'></image>
+      <text class='My-list-footer-one-itemOneTxt'>意见建议</text>
+    </view>
+    <!-- <view class='My-list-footer-one'>
+      <image class='My-list-footer-one-itemone' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/My/assist.png'></image>
+      <text class='My-list-footer-one-itemOneTxt'>新手帮助</text>
+    </view> -->
+  </view>
+</view>

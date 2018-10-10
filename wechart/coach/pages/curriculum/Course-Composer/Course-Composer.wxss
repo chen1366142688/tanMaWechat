@@ -1,0 +1,641 @@
+/* pages/curriculum/Course-Composer/Course-Composer.wxss */
+
+.redact {
+  width: 750rpx;
+  margin: 0rpx;
+  padding: 0rpx;
+}
+
+.course-curriculum {
+  width: 750rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  background-color: #fff;
+  color: #333;
+  font-size: 30rpx;
+  border-top: 1rpx solid #e4e4e4;
+}
+
+.compile-category {
+  width: 203rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  float: left;
+  margin-left: 30rpx;
+}
+
+.compile-categoryi {
+  width: 120rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  float: left;
+  margin-left: 30rpx;
+}
+
+.compile-select {
+  width: 518rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  float: right;
+}
+
+.compile-select-N {
+  display: inline-block;
+  width: 457rpx;
+  height: 88rpx;
+  float: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: right;
+  vertical-align: middle;
+}
+
+.compile-select-two {
+  width: 391rpx;
+  height: 88rpx;
+  float: left;
+  text-align: right;
+}
+
+.compile-select-T {
+  width: 11rpx;
+  height: 6rpx;
+  float: right;
+  margin-top: 43rpx;
+  margin-right: 30rpx;
+}
+
+/*  课程时长  */
+
+.edit-session {
+  widows: 750rpx;
+  background-color: #fff;
+  font-size: 30rpx;
+  margin: 0rpx;
+  margin-top: 20rpx;
+  padding: 0rpx;
+}
+
+.session-category {
+  width: 750rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  border-top: 1rpx solid #e4e4e4;
+}
+
+.session-category-text {
+  width: 400rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  float: left;
+  margin-left: 30rpx;
+}
+
+.session-category-T {
+  width: 60rpx;
+  height: 60rpx;
+  margin-top: 14rpx;
+  float: right;
+  margin-right: 30rpx;
+}
+
+.session-time {
+  width: 750rpx;
+  height: 88rpx;
+  border-top: 1rpx solid #e4e4e4;
+}
+
+.session-time-text {
+  width: 500rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  margin-left: 30rpx;
+  float: left;
+}
+
+.compile-select-N1 {
+  display: inline-block;
+  width: 90rpx;
+  height: 88rpx;
+}
+
+.compile-select-T1 {
+  width: 11rpx;
+  height: 6rpx;
+  margin-top: 33rpx;
+  margin-right: 30rpx;
+  margin-left: 20rpx;
+}
+.compile-select-T3{
+   margin-right: 30rpx;
+  margin-left: 20rpx;
+}
+.compile-select-T4{
+   margin-right: 30rpx;
+  margin-left: 20rpx;
+}
+
+.session-time-text-T {
+  width: 70rpx;
+  height: 30rpx;
+  float: right;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1rpx solid #007587;
+  border-radius: 20rpx;
+  text-align: center;
+  margin-right: 30rpx;
+  margin-top: 29rpx;
+}
+
+.expurgate {
+  width: 70rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  color: #007587;
+  font-size: 20rpx;
+}
+
+/*填写课程名称/简介  */
+
+.myItemBox {
+  width: 750rpx;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  background: #fff;
+  border-radius: 5rpx;
+}
+
+.myItemBox-headline{
+  width: 150rpx;
+  height: 58rpx;
+  line-height: 58rpx;
+  float: left;
+  font-size: 30rpx;
+  padding-top: 20rpx;
+  margin-left: 30rpx;
+  color: #333;
+  vertical-align: middle;
+  border-bottom: 1rpx solid #e4e4e4;
+}
+
+.myItemBox-headline-two{
+  width: 150rpx;
+  height: 206rpx;
+  min-height: 225rpx;
+  float: left;
+  font-size: 30rpx;
+  padding-top: 20rpx;
+  margin-left: 30rpx;
+  color: #333;
+   margin-bottom: 20rpx;
+  vertical-align: middle;
+  border-bottom: 1rpx solid #e4e4e4;
+}
+
+.myItemBox-section{
+  width: 710rpx;
+  height: 100%;
+}
+
+.myInfoBxo {
+  width: 530rpx;
+  height: 206rpx;
+  min-height: 225rpx;
+  font-size: 30rpx;
+  padding-top: 20rpx;
+  margin-bottom: 20rpx;
+  float: right;
+  color: #999;
+  vertical-align: middle;
+  border-bottom: 1rpx solid #e4e4e4;
+}
+
+.myInfoBxo1 {
+  width: 530rpx;
+  height: 58rpx;
+  line-height: 58rpx;
+  min-height: 58rpx;
+  font-size: 30rpx;
+  padding-top: 20rpx;
+  color: #999;
+   border-bottom: 1rpx solid #e4e4e4; 
+  float: right;
+  vertical-align: middle;
+}
+
+.myInfo {
+  color: #999;
+  font-size: 30rpx;
+}
+
+.intro-view {
+  width: 210rpx;
+  height: 148rpx;
+  line-height: 141rpx;
+  margin-left: 20rpx;
+  position: relative;
+}
+
+.intro-deleteImg {
+  width: 30rpx;
+  height: 30rpx;
+  top: 0rpx;
+  right: 8rpx;
+  position: absolute;
+}
+.Section-cover{
+  display: inline-block;
+  height: 30rpx;
+  line-height: 30rpx;
+  padding: 0 8rpx; 
+  background-color: #007587;
+  top: 0rpx;
+  left: 0rpx;
+  position: absolute;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.cover{
+  display: inline-block;
+  height: 30rpx;
+  line-height: 25rpx;
+  color: #fff;
+  font-size: 18rpx;
+  overflow: hidden;
+  vertical-align: middle;
+}
+.intro-scrollImg {
+  width: 200rpx;
+  height: 140rpx;
+  vertical-align: bottom;
+  margin-right: 20rpx;
+}
+
+.classBox {
+  width: 750rpx;
+  margin: 0 auto;
+}
+
+.yunDongBox {
+  width: 750rpx;
+  height: 78rpx;
+  border-bottom: 1rpx solid #e4e4e4;
+}
+
+.Item-Category {
+  font-size: 30rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(51, 51, 51, 1);
+  line-height: 0rpx;
+  margin-left: 20rpx;
+}
+
+.uploadBox {
+  width: 750rpx;
+  background-color: #fff;
+  margin: 0 auto;
+}
+
+.uploadItem {
+  width: 100%;
+  font-size: 20rpx;
+  margin-left: 20rpx;
+  color: rgba(228, 0, 17, 1);
+}
+
+.scroolBox {
+  width: 702rpx;
+  height: 140rpx;
+  margin-top: 20rpx;
+  background: #fff;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.scroolBox1 {
+  width: 750rpx;
+  height: 140rpx;
+  /* margin-top: 20rpx; */
+  background: #fff;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.intro-scroll {
+  font-size: 18rpx;
+  margin-left: 20rpx;
+  overflow: scroll;
+}
+
+.intro-scrollImg {
+  width: 200rpx;
+  height: 140rpx;
+  vertical-align: bottom;
+  margin-right: 20rpx;
+}
+
+.qiuLeis {
+  vertical-align: middle;
+}
+
+.next {
+  width: 11rpx;
+  height: 6rpx;
+  vertical-align: middle;
+  margin-right: 20rpx;
+  margin-left: 20rpx;
+}
+
+.cancel {
+  width: 702rpx;
+  border: none;
+  color: #007587;
+  font-size: 30rpx;
+  height: 92rpx;
+  line-height: 92rpx;
+  background-color: #f4f4f4;
+}
+
+/* 课程包含项目  */
+
+.project-description {
+  width: 750rpx;
+  color: #333;
+  font-size: 30rpx;
+  margin-top: 20rpx;
+}
+
+.project-description-text {
+  width: 720rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  padding-left: 30rpx;
+  background-color: #fff;
+  border-top: 1rpx solid #e4e4e4;
+}
+
+.description-specific {
+  width: 750rpx;
+  height: 200rpx;
+  background-color: #fff;
+  border-top: 1rpx solid #e4e4e4;
+}
+
+.project-description1 {
+  width: 615rpx;
+  /* height: 149rpx; */
+  min-height: 170rpx;
+  overflow: hidden;
+  background-color: #fff;
+  float: left;
+  margin-top: 20rpx;
+  margin-left: 30rpx;
+  color: #007587;
+}
+
+.alter-text {
+  width: 615rpx;
+  height: 140rpx;
+  color: #333;
+  font-size: 26rpx;
+}
+
+.compile {
+  width: 60rpx;
+  height: 200rpx;
+  line-height: 200rpx;
+  margin-right: 30rpx;
+  float: right;
+}
+
+.project-description-T {
+  display: block;
+  width: 60rpx;
+  height: 60rpx;
+  margin-top: 26rpx;
+}
+
+/*  添加项目  */
+
+.addProBox {
+  width: 702rpx;
+  height: 340rpx;
+  margin: 0 auto;
+  line-height: 340rpx;
+  margin-top: 20rpx;
+  background-color: #fff;
+  /* position: relative; */
+  padding-top: 20rpx;
+}
+
+.addition {
+  display: block;
+  width: 662rpx;
+  margin: 0 auto;
+  height: 320rpx;
+  color: #007587;
+  font-size: 45rpx;
+  text-align: center;
+  border: 1px dashed #007587;
+}
+
+/*  培训周期  */
+
+.period-of-training {
+  width: 750rpx;
+  margin-top: 20rpx;
+}
+
+.compile-select-T2 {
+  width: 11rpx;
+  height: 21rpx;
+  margin-top: 33rpx;
+  margin-right: 30rpx;
+  margin-left: 20rpx;
+}
+
+/*  添加助教  */
+
+.teaching-assistant {
+  width: 750rpx;
+  background-color: #fff;
+  font-size: 30rpx;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  margin-top: 20rpx;
+}
+
+.teaching-assistant-text {
+  width: 720rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  margin-left: 30rpx;
+}
+
+.teaching-A {
+  width: 700rpx;
+  height: 140rpx;
+  line-height: 140rpx;
+  padding-left: 30rpx;
+  overflow: scroll;
+  white-space: nowrap;
+  display: flex;
+}
+
+.assistant {
+  display: inline-block;
+  width: 110rpx;
+  height: 140rpx;
+  line-height: 140rpx;
+  margin-left: 20rpx;
+  position: relative;
+}
+
+.assistant-one {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50rpx;
+}
+
+.assistant-no {
+  width: 30rpx;
+  height: 30rpx;
+  top: 0rpx;
+  right: 25rpx;
+  position: absolute;
+}
+
+.assistant-tow {
+  width: 80rpx;
+  height: 80rpx;
+  margin-left: 20rpx;
+}
+
+/* 添加授课教练  */
+
+.Addition-coach {
+  width: 750rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  background-color: #fff;
+  margin-top: 20rpx;
+  color: #333;
+  font-size: 30rpx;
+  border-top: 1rpx solid #e4e4e4;
+}
+
+.compile-select-N2 {
+  width: 457rpx;
+  height: 88rpx;
+  float: left;
+  text-align: right;
+  color: #999;
+}
+
+
+/*  提交  */
+
+.submitEditor {
+  width: 702rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  border-radius: 40rpx;
+  background-image: url('http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coach/public/button.png');
+  background-size: 100% 100%;
+  background-color: #007587;
+  margin: 40rpx auto 60rpx auto;
+  color: #fff;
+}
+
+.subBor {
+  width: 694rpx;
+  height: 80rpx;
+  border-radius: 44rpx;
+}
+
+.but {
+  width: 750rpx;
+  height: 160rpx;
+}
+
+.mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  z-index: 9000;
+  opacity: 0.7;
+}
+
+.modalDlg {
+  width: 100%;
+  height: 500rpx;
+  position: fixed;
+  top: 63%;
+  left: 0;
+  z-index: 9999;
+  background-color: #fff;
+}
+
+.checkboxgroup {
+  width: 100%;
+  height: 200rpx;
+  color: #999;
+  font-size: 32rpx;
+  margin-top: 16%;
+}
+
+.look-shuoming{
+  width: 240rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border: 1rpx solid #007587;
+  border-radius: 30rpx;
+  background-color: #fff;
+  color: #007587;
+  font-size: 26rpx;
+  margin: 0 auto;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.checkbox {
+  display: inline-block;
+  width: 20%;
+  height: 60rpx;
+  margin-left: 12%;
+  margin-top: 2%;
+  font-size: 32rpx;
+}
+
+.sure {
+  position: absolute;
+  width: 20%;
+  float: right;
+  border: none;
+  color: #007587;
+  font-size: 28rpx;
+  background-color: #fff;
+  margin-left: 80%;
+}
+
+button::after {
+  border: none;
+}
+
+.cancle {
+  width: 20%;
+  position: absolute;
+  float: left;
+  color: #333;
+  border: none;
+  font-size: 28rpx;
+  background-color: #fff;
+}

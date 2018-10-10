@@ -1,0 +1,81 @@
+<!--pages/Register/Register.wxml-->
+<view class='Register'>
+  <view class='Register-section'>
+    <view class='section-img'>
+      <image src="http://xlrtimo.oss-cn-beijing.aliyuncs.com/coach/iteration/default-avatar-coach.png"></image>
+    </view>
+    <view class='SingleSelection'>
+      <view class='section-SingleSelection'>
+        <image src="{{imgUrl}}coach/public/type.png" class='user-typead'></image>
+        <view class='van-screen-one bmwH'>
+          <radio-group class="radio-group" bindchange="radioChange">
+            <label class="radio" style='margin-right:95rpx;' wx:for="{{items}}">
+              <radio style="transform:scale(.5)" class='check' value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
+              <!-- <image src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/coach-doubt.png' data-name = "{{item.name}}" type="primary" bindtap="modalcnt" class='Query'></image>   -->
+            </label>
+
+            <!-- <label class="radio {{redio1 ? 'checkted' : 'true'}}">
+            <radio style="transform:scale(.5)" class='check' value="1" checked="{{redio1}}" />教练
+            <image src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/coach-doubt.png'  type="primary" bindtap="modalcnt" class='Query'></image>
+          </label>
+          <label style='margin-left:50rpx;' class="radio {{redio2 ? 'checkted' : ''}}">
+            <radio style="transform:scale(.5)" class='check' value="2" checked="{{redio2}}" />主教练/机构
+            <image src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/coach-doubt.png'  type="primary" bindtap="modalcnte" class='Query'></image>
+          </label> -->
+          </radio-group>
+          <!-- <checkbox-group bindchange="checkboxChange2">
+          <checkbox style="transform:scale(.5)" class='check' value="{{item.name}}" checked="{{item.checked}}" />
+          <text class="{{item.checked ? 'checkted' : ''}}">{{item.value}}</text>
+        </checkbox-group> -->
+        </view>
+      </view>
+
+      <view class='section-Name'>
+        <image src="{{imgUrl}}coach/public/bulletsimg.png" class='Name-bulletsimga'></image>
+        <view class="Name-input">
+          <picker bindchange='bindUnfoldChange' class="unfoldxia01-projecta" value="{{index}}" range='{{classList}}' range-key='itemName'>
+            <view class='bindUnfoldChange-proa2ver' wx:if="{{projectnamea01}}">{{classList[index].itemName}}</view>
+            <view wx:if="{{projectnamea02}}" class='bindUnfoldChange-proa1'>请选择项目</view>
+            <view class='pull-unfoldxial2-bg'></view>
+          </picker>
+
+        </view>
+      </view>
+
+      <view class='section-Name'>
+        <image src="{{imgUrl}}coach/public/X-Name.png" class='Name-typead'></image>
+        <view class="Name-input">
+          <input bindinput='coachName' maxlength='25' class="inpblocknicka" type="text" placeholder="{{placeholder}}" value="" placeholder-class="psection" />
+        </view>
+      </view>
+    </view>
+    <!-- <view class='section-phone'>
+      <image src="{{imgUrl}}coach/personage/Z-phone.png" class='phone-typead'></image>
+      <view class='section-input'>
+        <view class="phone-input">
+          <input maxlength='11' type='number' bindinput='phoneNo' class="inpblocknicka" type="text" placeholder="绑定手机号" value="" placeholder-class="psection" />
+        </view>
+      </view>
+    </view>
+    <view class='section-verification-code'>
+      <image src="http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coach/public/fasong.png" class='code-typead'></image>
+      <view class="phone-input1">
+        <input maxlength='6' bindinput='code' class="inpblocknickae" type="number" placeholder="请输入验证码" value="" placeholder-class="psection" />
+      </view>
+      <view class='phone-button'>
+        <view class="schoolu_b" wx:if="{{showCode}}">({{thisTime}}s)</view>
+        <button class="btna" wx:if="{{!showCode}}" bindtap='sendSms'>发送验证码</button>
+      </view>
+    </view> -->
+  </view>
+  <view class='section-button'>
+    <view class='waikuang'>
+      <button class='withdraw-deposit' bindtap='registe'>注册</button>
+    </view>
+    <!-- <view class='button-one'>
+      <view class='one-X'>注册学员</view>
+      <view class='one-C'>注册场馆管理</view>
+    </view> -->
+  </view>
+
+</view>

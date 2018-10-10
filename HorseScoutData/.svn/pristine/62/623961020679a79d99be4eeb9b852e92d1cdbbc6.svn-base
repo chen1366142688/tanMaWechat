@@ -1,0 +1,89 @@
+<!--pages/My/My-Index/My-Index.wxml-->
+<view class='My-Index'>
+  <view class='My-Index-section'>
+    <view class='My-Index-header' bindtap='introduce'>
+      <view class='My-Index-header-head-portrait'>
+        <image class='head-portrait' src='{{childList.avatarUrl}}'></image>
+      </view>
+      <view class='My-Index-header-Name'>
+        <view class='My-Index-header-Name-top'>{{childList.nickName}}</view>
+        <view class='My-Index-header-Name-bottom'>
+          <view class='relation'>
+            <image class='Name-bottom-relation-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/My/identity.png'></image>
+            <view class='Name-bottom-relation-text'>{{childList.relationCode =='01' ? '孩子本人' : childList.relationCode =='02' ? '孩子妈妈' : '孩子爸爸'}}</view>
+          </view>
+          <view class='Iphone'>
+            <image class='Name-bottom-Iphone-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/My/Iphone.png'></image>
+            <view class='Name-bottom-Iphone-text'>{{childList.phoneNum}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='My-Index-List'>
+      <view class='My-Index-List-one'>
+        <view class='My-Index-List-one-section'>
+          <view class='My-Index-List-one-headline'>请先
+            <text class='My-Index-List-one-headline-blue'> 添加孩子信息</text>，才可看到本栏数据。</view>
+          <view class='My-Index-List-one-button'>
+            <view class='My-Index-List-one-button-left'>历史测试记录</view>
+            <view class='My-Index-List-one-button-right'>历史训练记录</view>
+          </view>
+        </view>
+      </view>
+      <view class='My-Index-List-two' bindtap='details'>
+        <view class='My-Index-List-one-section'>
+          <view class='My-Index-List-two-headline'>
+            <view class='My-Index-List-two-headline-left'>
+              <view class='My-Index-List-two-headline-left-Name'>
+                <view class='Name'>孩子名称</view>
+                <image class='Name-gender-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/My/woman.png'></image>
+              </view>
+              <!-- <view class='My-Index-List-two-headline-left-corporeity'>TA的体质： <text class='corporeity-yellow'> 85分</text></view> -->
+              <view class='My-Index-List-two-headline-left-undetected'>TA还未完成体质监测
+                <text class='undetected-yellow'> 去检测 >></text>
+              </view>
+            </view>
+            <view class='My-Index-List-two-headline-right'>
+              <view class='My-Index-List-two-headline-right-time'>8岁 | BMI:22.86</view>
+              <view class='My-Index-List-two-headline-right-participation'>已参与
+                <text class='participation'> 0 </text>项训练</view>
+            </view>
+          </view>
+          <view class='My-Index-List-one-button'>
+            <view class='My-Index-List-one-button-left'>历史测试记录</view>
+            <view class='My-Index-List-one-button-right'>历史训练记录</view>
+          </view>
+        </view>
+      </view>
+      <view class='My-Index-List-two' bindtap='details'>
+        <view class='My-Index-List-one-section'>
+          <view class='My-Index-List-two-headline'>
+            <view class='My-Index-List-two-headline-left'>
+              <view class='My-Index-List-two-headline-left-Name'>
+                <view class='Name'>孩子名称</view>
+                <image class='Name-gender-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/My/man.png'></image>
+              </view>
+              <view class='My-Index-List-two-headline-left-corporeity'>TA的体质：
+                <text class='corporeity-yellow'> 85分</text>
+              </view>
+            </view>
+            <view class='My-Index-List-two-headline-right'>
+              <view class='My-Index-List-two-headline-right-time'>15岁 | BMI:22.86</view>
+              <view class='My-Index-List-two-headline-right-participation'>已参与
+                <text class='participation'> 2 </text>项训练</view>
+            </view>
+          </view>
+          <view class='My-Index-List-one-button'>
+            <view class='My-Index-List-one-button-left'>历史测试记录</view>
+            <view class='My-Index-List-one-button-right'>历史训练记录</view>
+          </view>
+        </view>
+      </view>
+      <view class='My-Index-footer'>
+    <view class='My-Index-footer-left'>新手帮助</view>
+    <view class='My-Index-footer-right' bindtap='ContactCustomerService'>联系客服</view>
+  </view>
+    </view>
+  </view>
+  
+</view>

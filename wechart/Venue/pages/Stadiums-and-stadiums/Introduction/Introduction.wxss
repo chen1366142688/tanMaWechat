@@ -1,0 +1,126 @@
+/* pages/Stadiums-and-stadiums/Introduction/Introduction.wxss
+.Introduction{
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 0;
+}
+#app{
+  width:100vw;
+  height:100vh;
+}
+button{
+  background-color: #ffffff;
+  padding-left:0;
+  padding-right:0;
+}
+.venue-logo{
+  width: 297rpx;
+  height: 65rpx; */
+  /* margin-left: 226rpx;
+  margin-top: 60rpx;
+  margin:60rpx auto 0 auto;
+}
+
+
+.venue-img{
+  width: 657rpx;
+  height: 640rpx; */
+  /* margin-left: 59rpx;
+  margin-top: 61rpx;
+}
+
+.venue-text {
+  width: 233rpx;
+  height: 24rpx;
+  background-size: 100%;
+  background-image: url(http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coach/Introduction/venue-text.png);
+  margin-left: 258rpx;
+  margin-bottom: 50rpx;
+  outline: none;
+  box-shadow: none;
+  border: 0; */
+  /* background-color: #fff; 
+  margin-top: 200rpx;
+}
+
+button::after {
+  border: none;
+}*/
+page{background-color: #fff;}
+#app{
+  /* padding-top:60rpx; */
+  width: 750rpx;
+} 
+/* .log{
+  display: block;
+  width:369rpx;
+  height: 95rpx;
+  margin: 0 auto 11rpx auto;
+}
+.play{
+  display: block;
+  width:725rpx;
+  height:640rpx;
+  margin:0 0 82rpx 25rpx;
+}
+.information{
+  display: block;
+  width:482rpx;
+  height:138rpx;
+  margin:0 auto 60rpx auto;
+}
+.footer{
+  width: 725rpx;
+  display: flex;
+  justify-content: flex-end;
+  padding-right:25rpx;
+}
+.into{
+  width:112rpx;
+  height:40rpx;
+  background:rgba(203,203,203,1);
+  border-radius:20rpx; 
+  font-size:30rpx;
+  font-family:PingFang-SC-Regular;
+  color:rgba(255,255,255,1);
+  text-align: center;
+  line-height: 40rpx;
+} */
+button{
+  background-color: #ffffff;
+  width: 750rpx;
+  height: 100vh;
+  padding-left:0;
+  padding-right:0;
+}
+button::after {
+  border: none;
+}
+
+
+.tanma{
+  width: 750rpx;
+  height: 95rpx;
+  line-height: 95rpx;
+  vertical-align: middle;
+  position: fixed;
+  bottom: 119rpx;
+  margin: 0 auto;
+  display: flex;
+}
+
+.goInto{
+  width:160rpx;
+  height:50rpx;
+  line-height: 50rpx;
+  background: #fff;
+  color: #333;
+  text-align: center;
+  border:1rpx solid #e4e4e4;
+  border-radius: 30rpx;
+  position: absolute;
+  top: 80rpx;
+  right:30rpx;
+  font-size: 24rpx;
+}

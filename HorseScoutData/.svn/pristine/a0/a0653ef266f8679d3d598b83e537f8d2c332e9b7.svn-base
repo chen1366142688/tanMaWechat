@@ -1,0 +1,206 @@
+// pages/Exercise/Test-complete/Test-complete.js
+import * as echarts from '../../../ec-canvas/echarts';
+var ctx = wx.createCanvasContext('scores');
+var mW = ctx.width = 150;
+var mH = ctx.height = 150; 
+var lineWidth = 4;
+var r = mW / 2; //中间位置 
+var cR = r - 4 * lineWidth; //圆半径
+var startAngle = -(1 / 2 * Math.PI); //开始角度
+var endAngle = startAngle + 2 * Math.PI; //结束角度
+var xAngle = 1 * (Math.PI / 180); //偏移角度量
+var fontSize = 35; //字号大小
+var tmpAngle = startAngle; //临时角度变量
+Page({
+  data: {
+    peopleEc: {
+      onInit: initChartPeople
+    }
+  },
+  onLoad: function (options) {
+  },
+  onReady: function () {},
+  onShow: function () {
+    rander()
+  },
+  //回到首页
+  returnhome: function () {
+    wx.switchTab({
+      url: '../../../pages/index/index',
+    })
+  },
+  onHide: function () {},
+  onUnload: function () {},
+  onPullDownRefresh: function () {},
+  onReachBottom: function () {},
+  onShareAppMessage: function () {},
+  changeIndicatorDots: function (e) {
+    this.setData({
+      indicatorDots: !this.data.indicatorDots
+    })
+  },
+})
+//渲染函数
+var rander = function () {
+  if (tmpAngle >= endAngle) {
+    return;
+    //clearInterval(int)
+  } else if (tmpAngle + xAngle > endAngle) {
+    tmpAngle = endAngle;
+  } else {
+    tmpAngle += xAngle;
+  }
+  ctx.clearRect(0, 0, mW, mH);
+
+  //画圈
+  ctx.beginPath();
+  ctx.lineWidth = lineWidth;
+  ctx.strokeStyle = '#4DD0C8';
+  ctx.arc(r, r, cR, startAngle, tmpAngle);
+  ctx.stroke();
+  //ctx.closePath();
+
+  //写字
+  ctx.fillStyle = '#CBCBCB';
+  ctx.setFontSize(40)
+  ctx.textAlign = 'center';
+  ctx.fillText(Math.round((tmpAngle - startAngle) / (endAngle - startAngle) * 100), r, r + fontSize / 2);
+  ctx.stroke()
+
+  ctx.beginPath();
+  ctx.arc(r + fontSize+5, r + fontSize / 2-4, 10, 0, 2 * Math.PI)
+  ctx.setFillStyle('#72B9E7')
+  ctx.fill()
+
+  ctx.beginPath();
+  ctx.fillStyle = '#fff';
+  ctx.setFontSize(10)
+  ctx.textAlign = 'left';
+  ctx.fillText('分', r + fontSize, r + fontSize / 2);
+  ctx.stroke()
+  ctx.draw()
+  //var int = self.setInterval(rander, 1000);
+   requestAnimationFrame(rander);
+
+};
+function initChartPeople(canvas, width, height) {
+  const chart = echarts.init(canvas, null, {
+    width: width,
+    height: height
+  });
+  canvas.setChart(chart);
+
+  var option = {
+    title: {
+      text: '0-100分',
+      textStyle: {
+        color: '#666',
+        fontSize: 13,
+        fontWeight: 'normal'
+      },
+      right: '4%',
+      top: 8
+    },
+    /*tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            lineStyle: {
+                color: '#fff'
+            }
+        }
+    },*/
+    grid: {
+      left: '3%',
+      right: '4%',
+      bottom: '2%',
+      containLabel: true
+    },
+    xAxis: {
+      type: 'category',
+      boundaryGap: false,
+      axisLine: {
+        show: false
+      },
+      axisTick: {
+        show: false
+      },
+      data: [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+    },
+    yAxis: {
+      type: 'value',
+      name: '人数(人)',
+      nameGap: 35,
+      nameTextStyle: {
+        color: '#666',
+        fontSize: 13
+      },
+      splitNumber: 2,
+      splitLine: {
+        lineStyle: {
+          color: '#e2e2e2',
+          type: 'solid'
+        }
+      },
+      axisLine: {
+        show: false
+      },
+      axisTick: {
+        show: false
+      }
+    },
+    series: [
+      {
+        data: [0, 10, 90, 18, 30, 45, 55, 70, 88, 37, 0],
+        type: 'line',
+        showSymbol: false,
+        symbolSize: 2,
+        smooth: true,
+        itemStyle: {
+          normal: {
+            color: "#F882B6"
+          },
+        },
+        lineStyle: {
+          width: 1
+        },
+        areaStyle: {
+          normal: {
+            color: '#F882B6',
+            opacity: 0.3
+          }
+        },
+        markPoint: {
+          symbol: 'roundRect',
+          symbolSize: [34, 24],
+          symbolOffset: [16, -20],
+          label: {
+            formatter: function (param) {
+              return param.value + '人';
+            }
+          },
+          itemStyle: {
+            color: '#5cd3c9'
+          },
+          data: [{
+            name: '最大值',
+            type: 'max'
+          }]
+        }
+      },
+      {
+        type: 'bar',
+        barWidth: '1',
+        itemStyle: {
+          normal: {
+            color: "#fff"
+          },
+        },
+        data: [0, 0, 90, 0, 0, 0, 0, 0, 0, 0, 0],
+
+      }
+    ]
+  };
+
+  chart.setOption(option);
+  return chart;
+}

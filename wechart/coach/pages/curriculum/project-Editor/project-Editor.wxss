@@ -1,0 +1,35 @@
+/* pages/curriculum/project-Editor/project-Editor.wxss */
+
+.project-Editor{
+  width: 750rpx;
+  background-color: #fff;
+  border-top: 1rpx solid #e4e4e4;
+}
+
+.myInfoBxo1{
+  width: 698rpx;
+  height: 58rpx;
+  line-height: 58rpx;
+  padding-top: 10rpx;
+  margin: 0 auto;
+  font-size: 30rpx;
+  color:#333333;
+}
+
+.myInfo {
+  color: #999999;
+  height: 88rpx;
+  line-height: 88rpx;
+  font-size: 30rpx;
+  margin: 0 auto;
+  padding-top: 10rpx;
+}
+
+.myInfoBxo{
+  width: 694rpx;
+  height: 300rpx;
+  padding-top: 10rpx;
+  margin: 0 auto;
+  font-size: 30rpx;
+  border-top: 1rpx solid #e4e4e4;
+}

@@ -1,0 +1,90 @@
+.register{
+    width:100%;
+    height: 100vh;
+    padding:81px 75px 81px 79px;
+    box-sizing: border-box;
+    background-color: #fff;
+    position: relative;
+}
+.phoneBox{
+    width:100%;
+    height: 50px;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.phoneBox image{
+    width:30px;
+    height:30px;
+}
+.phoneBox input{
+    width:526px;
+    font-size:30px;
+    font-family:PingFang-SC-Regular;
+    color:rgba(153,153,153,1);
+    border:0;
+    border-bottom: 1px solid #00C693;
+    margin-left:39px;
+    border-radius:0;
+}
+.phoneBox input.send{
+    width:320px;
+    font-size:30px;
+    font-family:PingFang-SC-Regular;
+    color:rgba(153,153,153,1);
+    border:0;
+    border-bottom: 1px solid #00C693;
+    margin-left:39px;
+    border-radius:0;
+}
+.sendCode{
+    width:160px;
+    height:44px;
+    border:1px solid rgba(0,198,147,1);
+    border-radius:22px;
+    font-size:24px;
+    font-family:PingFang-SC-Regular;
+    color:rgba(0,198,147,1);
+    background-color: #fff;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left:45px;
+    padding-left:0;
+    padding-right:0;
+    cursor: pointer;
+    text-align: center;
+}
+.codeBox{
+    margin-top:60px;
+}
+.helpBox{
+    width:600px;
+    height:88px;
+    background:rgba(0,198,147,1);
+    border-radius:44px;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: center;
+    margin:90px 0 20px 0;
+    position: absolute;
+    bottom:65px;
+    cursor: pointer;
+}
+.helpBorder{
+    width:580px;
+    height:68px;
+    border:1px solid rgba(255,255,255,1);
+    border-radius:34px;
+    font-size:30px;
+    font-family:PingFang-SC-Regular;
+    color:rgba(255,255,255,1);
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}

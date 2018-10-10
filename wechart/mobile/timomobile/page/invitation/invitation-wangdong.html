@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>邀请函</title>
+    <link rel="stylesheet" href="../../css/invitation.css">
+</head>
+<body>
+<img src="../../images/TIMO.gif" id="loabox" class="load" alt="">
+<div class="invitation" id="box">
+    <div class="header-img">
+        <img src="../../images/hu.gif" class="header-Butterfly" alt="">
+        <img src="../../images/header-img.png" class="header-headline" alt="">
+    </div>
+    <div class="header-text"><p class="text-T">王  栋</p></div>
+    <div class="qindian">
+        <img src="../../images/qingdian.png" class="qindian-img" alt="">
+        <!--<img src="../images/yanhua.gif" class="qindian-img2" alt="">-->
+    </div>
+    <div class="dizhi">
+        <!--<img src="../images/dizhi.png" class="dizhi-img" alt="">-->
+        <div class="dizhi-text">
+            <p class="chengdu">中国·成都</p>
+            <hr>
+            <p class="time">时间：2018年6月2日 10:00 am（星期六）</p>
+            <p class="location">地点：高新区益州大道中段1800号移动互联大厦G1栋12F</p>
+        </div>
+    </div>
+</div>
+<script>
+    document.body.className += " js-loading";
+    window.addEventListener("load", removeLoadingClass, false);
+    function removeLoadingClass() {
+        document.body.className = document.body.className.replace("js-loading","");
+        document.getElementById("box").className="green";
+        document.getElementById('loabox').className="tod"
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<!--pages/scoreInquiry/Add-New/Add-New.wxml-->
+<view class='Add-New'>
+  <view class='Add-New-Name'>
+    <input class='Section-one-input' maxlength="30" value="{{name}}" placeholder='输入组名称' placeholder-class='input-cbcbcb' bindinput='palceName'></input>
+  </view>
+  <view class='Add-New-section'>
+    <textarea class='textpush' maxlength="180" auto-height adjust-position="true" placeholder-class="textarea-cbcbcb" placeholder="本组说明" value='{{shuRu}}' data-val="{{shuRu}}" bindinput='palceItem'></textarea>
+  </view>
+  <view class='Register-Submit-left'>
+      <view class='Register-Submit-button' bindtap='submitLogin'>提交结果</view>
+    </view>
+</view>

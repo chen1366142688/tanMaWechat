@@ -1,0 +1,125 @@
+<view class='van-banner' style='background: url({{homeInfo.homeMainPhoto}});background-size: cover;'>
+  <view class='van-banner-item'>
+    <view class='van-text'>
+      <text class='van-city'>{{homeInfo.cityName}}</text>
+      <text class='van-name '>{{homeInfo.homeName}}</text>
+    </view>
+    <view class='van-hot'>
+      <image class='hot-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/van-hot.png'></image>
+      <text class='van-hot-num'>{{homeInfo.popularity}}</text>
+    </view>
+  </view>
+</view>
+<view class='c-ban-bottom'>
+  <view class='van-location'>
+    <view class='van-left'>
+      <image class='van-left-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/van-date.png'></image>
+      <text class='van-left-txt'>经营时间：{{homeInfo.starTime}}-{{homeInfo.endTime}}</text>
+    </view>
+    <view class='van-right' bindtap='toMap'>
+      <image class='van-right-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/van-location.png'></image>
+      <text class='van-right-txt'>{{homeInfo.addrDetail}}</text>
+    </view>
+  </view>
+  <view class='van-sc'>
+    <scroll-view scroll-x class='van-beas'>
+      <view class='van-btn' wx:for="{{homeInfo.itemVOS}}" wx:for-item="item" wx:key="{{item.itemName}}">{{item.itemName}} {{item.itemNums}}课程</view>
+    </scroll-view>
+  </view>
+</view>
+<view class='van-itemInfo'>
+  <view class='van-ke {{van}}' bindtap='kecheng' data-val='1'>场馆课程</view>
+  <view class='van-jie {{vans}}' bindtap='kecheng' data-val='2'>场馆介绍</view>
+</view>
+<view class='van-kejie' wx:if="{{supportItems}}">
+  <scroll-view class='scroll-active' style='width:723rpx; white-space: nowrap; display: flex' scroll-x='true'>
+    <view class='fenleiOne-scroll' wx:for="{{homeInfo.supportItems}}" wx:for-item="item" wx:key="{{item.homeId}}">
+      <image class='itemImg-scroll' src='{{item.itemPhotoAddress}}' data-id="{{item.itemId}}" bindtap='itemChoose'></image>
+      <text class='c-zuqiu-scroll'>{{item.itemName}}</text>
+    </view>
+    <!-- <view class='fenleiOne-scroll last-fenleiOne-scroll'>
+        <image class='itemImg-scroll' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/van-more.png'></image>
+      <text class='c-zuqiu-scroll'>更多</text>
+    </view> -->
+  </scroll-view>
+</view>
+<view class='guangKe' hidden='{{guanKe}}'>
+  <view class='items-jiao'wx:for="{{itemList}}" wx:for-item="item" wx:key="{{index}}">
+    <!-- <image class='userImg' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/userImg.png'></image> -->
+    <view class='item-userTxt' >
+      <view class='userTxt-top clearfloat'>
+        <view class='fl'>
+          <view class='userA iLblock'wx:if="{{item.classType == 1}}">{{item.itemName }} {{item.maxMember }}人班</view>
+          <view class='userA iLblock'wx:if="{{item.classType == 2}}">{{item.itemName }} 私教</view>
+          <view class='userB iLblock'>{{item.className}}</view>
+        </view>
+        <view class='fr'>
+          <view class='userC iLblock'>{{item.courseCount}}课时/{{item.courseTime}}h</view>
+        </view>
+        <view class='money'>
+          <text class='rmb'>RMB</text>
+          <text class='rmbNum'>{{item.courseCostTotal}}</text>
+        </view>
+      </view>
+      <view class='userTxt-bottom'>
+        <!-- <text class='txt-A iLblock'>主教练</text> -->
+        <!-- <view> -->
+        <image class='userIsman iLblock' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/man.png'></image>
+        <text class='txt-B iLblock'>{{item.classCoach}}</text>
+        <!-- </view> -->
+        <!-- <view> -->
+        <!-- <image class='userIsman iLblock' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/man.png'></image> -->
+        <image class="userNumber iLblock" src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/numbers.png'></image>
+        <text class='userMum iLblock'>{{item.lastAttendPeriod}}期</text>
+        <!-- </view> -->
+        <!-- <view> -->
+        <text class='userLevel iLblock'>适合等级:</text>
+        <text class='userLevelColor iLblock' style='margin-left:5px'>{{item.itemStudentGrade}}</text>
+        <!-- </view> -->
+         <view class='popularity'> 
+        <image class='hotTwo iLblock' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/hotTwo.png'></image>
+        <text class='hotTwoText'>{{item.popularity}}</text>
+         </view> 
+        
+      </view>
+    </view>
+  </view>
+  <!-- <view class='items-jiao'>
+    <image class='userImg' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/userImg.png'></image>
+
+    <view class='item-userTxt baoMan'>
+      <view class='userTxt-top clearfloat'>
+        <view class='fl'>
+          <view class='userA iLblock baoMan-bo'>羽毛球 12人班</view>
+          <view class='userB iLblock baoMan'>羽毛球大班课程标题</view>
+        </view>
+        <view class='fr'>
+          <view class='userC iLblock baoMan'>10课时/1.5h</view>
+        </view>
+        <view class='money'>
+          <text class='rmb baoMan'>RMB</text>
+          <text class='rmbNum baoMan'>3000</text>
+        </view>
+      </view>
+      <view class='userTxt-bottom'>
+        <text class='txt-A iLblock baoMan'>主教练</text>
+        <text class='txt-B iLblock baoMan'>张翔</text>
+        <image class='userIsman iLblock' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/man.png'></image>
+        <image class="userNumber iLblock" src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/numbers.png'></image>
+        <text class='userMum iLblock baoMan'>233期</text>
+        <text class='userLevel iLblock baoMan'>适合等级</text>
+        <text class='userLevelColor iLblock baoMan'>L1L2L3</text>
+        <image class='hotTwo iLblock' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/hotTwo.png'></image>
+        <text class='hotTwoText baoMan'>4543</text>
+      </view>
+    </view>
+    <image class='manLe' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/zhang.png'></image>
+  </view> -->
+</view>
+<view class='itemsLo' hidden='{{guanJie}}'>
+  <text class='items-text'>{{homeDesc.describe}}</text>
+  <image wx:for="{{homeDesc.photos}}" wx:for-item="photo" wx:key="{{index}}" class='items-img' src='{{photo}}'></image>
+  <!-- <image class='items-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/item-c.png'></image>
+    <image class='items-img no' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/item.d.png'></image> -->
+</view>
+<text class='footer-txt'>已经到底了</text>

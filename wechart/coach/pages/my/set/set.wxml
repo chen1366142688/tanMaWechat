@@ -1,0 +1,25 @@
+<!--pages/my/set/set.wxml-->
+<view class='Set'>
+  <!-- <view class='Set-versions'>
+    <text class='Set-sort'>关于训练日</text>
+    <image class='next' src='{{imgUrl}}next.png'></image>
+  </view> -->
+  <view class='Set-Edition'>
+    <text class='Set-sort1'>当前版本</text>
+    <text class='Set-text'>{{version}}</text>
+  </view>
+</view>
+<view class='switchover'>
+  <!-- <view class='Set-Switchover' bindtap='student'>
+    <text class='Set-sort'>切换学员端</text>
+    <image class='next' src='{{imgUrl}}next.png'></image>
+  </view>
+  <view class='Set-Switchover' bindtap='Venue'>
+    <text class='Set-sort'>切换场馆端</text>
+    <image class='next' src='{{imgUrl}}next.png'></image>
+  </view> -->
+  <!-- <view class='Set-Switchover'>
+    <text class='Set-sort'>退出登录</text>
+    <image class='next' src='{{imgUrl}}next.png'></image>
+  </view> -->
+</view>

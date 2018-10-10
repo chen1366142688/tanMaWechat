@@ -1,0 +1,59 @@
+<!--pages/Information/Perfect-Information/Perfect-Information.wxml-->
+<view class='Perfect-Information'>
+  <view class='headline-Prompt'>为了便于为您提供更好的服务，我们需要您完善下面信息，如有疑问请
+    <text class='headline-Prompt-blue' bindtap='ContactCustomerService'>联系客服</text>。</view>
+  <view class='Perfect-Information-Name'>
+    <view class='Bargraph-yellow'></view>
+    <view class='Perfect-Information-Name-section'>
+      <view class='Name-section-headline'>您孩子的姓名</view>
+      <input class='Name-section-input {{childName ? "ok" : ""}}' type='text' maxlength="12" placeholder='真实姓名' placeholder-class='Name-section-input-cbcbcb' bindinput='inputChildName'></input>
+    </view>
+  </view>
+  <view class='Information-ID-card'>
+    <view class='Perfect-Information-ID-card'>
+      <view class='Bargraph-red'></view>
+      <view class='Perfect-Information-ID-card-section'>
+        <view class='ID-card-section-headline'>您有孩子的身份证号码吗?</view>
+        <view class='ID-card-section-options'>
+          <!-- <view class='ID-card-section-options-have {{curIndex==1?"pitch-on":""}} {{coursepersona}}' bindtap='Information' data-val='1'>有</view>
+          <view class='ID-card-section-options-no {{curIndex==2?"pitch-on":""}} {{coursepersonbnotice}}' bindtap='Information' data-val='2'>没有</view> -->
+          <view class='ID-card-section-options-have {{curIndex==1?"pitch-on":""}}' bindtap='Information' data-val='1'>有</view>
+          <view class='ID-card-section-options-no {{curIndex==0?"pitch-on":""}}' bindtap='Information' data-val='0'>没有</view>
+        </view>
+        <view class='section-options-have' hidden='{{trainingcourse}}'>
+          <view class='section-options-have-headline'>请输入您孩子的身份证号码</view>
+          <input class='section-options-have-input {{idCard ? "ok" : ""}}' type="idcard" maxlength="18" placeholder='身份证号码' placeholder-class='section-options-have-input-cbcbcb' bindinput='inputCard'></input>
+        </view>
+        <view class='section-options-no' hidden='{{noticecoursetab}}'>
+          <view class='section-options-no-headline'>您孩子的性别为？</view>
+          <view class='section-options-no-section'>
+            <image wx:if="{{activeImg}}" bindtap='active' class='options-no-section-man' src='{{imgUrl}}man-Selected.png'></image>
+             <image wx:if="{{!activeImg}}" bindtap='active' data-index="1" class='options-no-section-man' src='{{imgUrl}}man.png'></image>
+              <image wx:if="{{!noActiveImg}}" bindtap='active' class='options-no-section-woman' src='{{imgUrl}}woman-Selected.png'></image> 
+            <image wx:if="{{noActiveImg}}" bindtap='active' data-index="2" class='options-no-section-woman' src='{{imgUrl}}woman.png'></image>
+          </view>
+          <view class='section-Date-of-Birth'>您孩子的出生年月日？</view>
+          <picker mode="date" value="{{date}}" start="1990-01-01" end="{{end}}" bindchange="bindDateChange">
+           <view class='Year-month-day'>
+             <view class='section-Year'> <text class='section-Year-blue' decode='true'>{{year}}&nbsp;</text>年</view>
+            <view class='section-month'> <text class='section-month-blue' decode='true'>&nbsp;{{month}}&nbsp;</text>月</view>
+            <view class='section-day'> <text class='section-day-blue' decode='true'>&nbsp;{{day}}&nbsp;</text>日</view> 
+
+            <image class='section-pull-down' src='{{imgUrl}}pull-down.png'></image>
+          </view> 
+          </picker>
+          <!-- <picker mode="date" value="{{date}}" class='Year-month-day' start="1990-01-01" end="2018-01-01" bindchange="bindDateChange">
+            <view class="Year-month-day">
+               {{date}}<image class='section-pull-down' src='{{imgUrl}}pull-down.png'></image>
+            </view>
+          </picker> -->
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+   <view class='Perfect-Information-footer'>
+    <view class='Perfect-Information-button' bindtap='next'>下一步</view>
+  </view>  
+</view>

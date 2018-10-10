@@ -1,0 +1,17 @@
+<!--pages/register/Select/Select.wxml-->
+<view class='search'>
+  <input type='text' value="{{schoolName}}"  confirm-type="search" placeholder='输入学校关键字' placeholder-class='chanName' class='guan-name fr' bindinput="inputSchoolName" bindconfirm="confirmSchoolName"  bindfocus="focusSchoolName"></input>
+  <view bindtap="keywordSearch" class='searchview'>
+     <image src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coach/curriculum/search.png' class='sousuo'></image> 
+  </view>
+</view>
+
+<view class='List' wx:for="{{schoolList}}" wx:key="*this">
+  <view class='List-one' data-index="{{index}}" bindtap='chooseSchool'>
+    <view class='category' wx:if="{{item.schoolType==1}}">幼儿园</view>
+    <view class='category' wx:if="{{item.schoolType==2}}">小学</view>
+    <view class='category' wx:if="{{item.schoolType==3}}">初中</view>
+    <view class='category' wx:if="{{item.schoolType==4}}">高中</view>
+    <view class='category-Name'>{{item.schoolName}}</view>
+  </view>
+</view>

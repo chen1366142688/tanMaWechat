@@ -1,0 +1,6 @@
+ <view class='box' bindtouchend='Refresh'>
+  <image class="noType" src='../../../imgs/Reload.png'></image>
+  <view class='newBox'>
+    <text>点击屏幕刷新重试</text><image class='badWork {{active}}' src='../../../imgs/Reloads.png'></image>
+  </view>
+</view> 

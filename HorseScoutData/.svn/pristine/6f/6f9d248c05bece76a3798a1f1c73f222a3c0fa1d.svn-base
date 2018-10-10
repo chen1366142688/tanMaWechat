@@ -1,0 +1,182 @@
+<!--pages/Patriarch/Patriarch-Index/Patriarch-Index.wxml-->
+<view class='Patriarch-Index'>
+  <view class='headline-Name'>
+    <swiper class='scroll-active' previous-margin="20px" next-margin="10px">
+      <!-- <block wx:for="{{childInfo}}" wx:key="*this"> -->
+      <swiper-item class='headline-one' style='background-color:{{item.bgColor}}'>
+        <image class='headline-one-Years-old' src='{{imgUrl}}Patriarch/Years-old.png'></image>
+        <view class='headline-one-section'>
+          <view class='personal-information'>
+            <image class='head-portrait' src='{{item.childImg}}'></image>
+            <view class='section-Name'>孩子{{index+1}}{{item.name}}</view>
+             <image class='section-gender' wx:if="{{item.sex == 1}}" src='{{imgUrl}}Patriarch/woman.png'></image> 
+            <image class='section-gender' wx:if="{{item.sex == 2}}" src='{{imgUrl}}Patriarch/man.png'></image>
+          </view>
+          <view class='headline-one-eag'>{{item.age}}</view>
+        </view>
+      </swiper-item>
+      <!-- </block> -->
+        <swiper-item class='headline-one'>
+        <image class='headline-one-Years-old' src='{{imgUrl}}Patriarch/Years-old.png'></image>
+        <view class='headline-one-section'>
+          <view class='personal-information'>
+            <image class='head-portrait' src='{{imgUrl}}Patriarch/head-portrait.png'></image>
+            <view class='section-Name'>孩子1姓名</view>
+             <image class='section-gender' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/Patriarch/woman.png'></image> 
+            <image class='section-gender' src='{{imgUrl}}Patriarch/man.png'></image>
+          </view>
+          <view class='headline-one-eag'>8</view>
+        </view>
+      </swiper-item> 
+      <swiper-item class='headline-one'>
+        <image class='headline-one-Years-old' src='{{imgUrl}}Patriarch/Years-old.png'></image>
+        <view class='headline-one-section'>
+          <view class='personal-information'>
+            <image class='head-portrait' src='{{imgUrl}}Patriarch/head-portrait.png'></image>
+            <view class='section-Name'>孩子1姓名</view>
+             <image class='section-gender' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/Patriarch/woman.png'></image> 
+            <image class='section-gender' src='{{imgUrl}}Patriarch/man.png'></image>
+          </view>
+          <view class='headline-one-eag'>8</view>
+        </view>
+      </swiper-item>  
+    </swiper>
+  </view>
+  <view class='Patriarch-record'>
+    <view class='Total-Time'>
+      <view class='Total-Time-headline'>总锻炼时间(分钟)</view>
+      <view class='Total-Time-time'>23,424</view>
+    </view>
+    <view class='today-week'>
+      <view class='today-one'>
+        <view class='today-headline'>今日锻炼(分钟)</view>
+        <view class='today-time'>12</view>
+      </view>
+      <view class='week-one'>
+        <view class='week-headline'>今日锻炼(分钟)</view>
+        <view class='week-time'>12</view>
+      </view>
+    </view>
+  </view>
+  <view class='Patriarch-All'>
+    <view class='Patriarch-All-headline'>
+      <image class='All-headline-img' src='{{imgUrl}}Patriarch/All.png'></image>
+      <view class='All-headline-text'>共锻炼
+        <text class='All-headline-text-black'>234</text> 天，当前连续锻炼
+        <text class='All-headline-text-black'>5</text> 天。</view>
+    </view>
+    <scroll-view class='scrollTime' scroll-x="{{scrollX}}">
+        
+        <view class='item iLblock'>12</view>
+        <view class='item iLblock'>12</view>
+        <view class='item iLblock'>12</view> 
+        <view class='item iLblock'>12</view>
+        <view class='item iLblock'>12</view>
+        <view class='item iLblock'>12</view>
+        <view class='item iLblock'>12</view>
+        <view class='item iLblock'>12</view>
+        <view class='item iLblock'>12</view>
+        <view class='item iLblock'>12</view>
+        <view class='item iLblock'>12</view>
+        <view class='item iLblock'>12</view>
+        <view class='item iLblock'>12</view>
+        <view class='item iLblock'>12</view>
+        <view class='item iLblock'>12</view>
+    </scroll-view>
+    <!-- <view class='Patriarch-All-section'>柱状图</view> -->
+  </view>
+
+  <view class='Test'> 
+    <view class='Radar-Map'>
+      <view class='Test-headline'>
+        <image class='Test-headline-img' src='{{imgUrl}}Patriarch/Test.png'></image>
+        <view class='Test-headline-text'>体质得分为
+          <text class='Test-headline-text-purple'>60</text> 分，优于
+          <text class='Test-headline-text-black'>75% </text> 的同龄人。
+        </view>
+      </view>
+      <view class='Prompt'>您还有 2 项测试未完成，完成后便可查看完整评估结果啦~~</view>
+      <view class='Radar-Map-section'>雷达图</view>
+    </view>
+    <view class='Curve-Chart'>
+      <view class='Curve-Chart-headline'>
+        <view class='Curve-Chart-headline-left'>分值的总人数</view>
+        <view class='Curve-Chart-headline-right'>分值0-100分</view>
+      </view>
+      <view class='Curve-Chart-section'>曲线图</view>
+      <view class='share-button'>
+        <image class='share-button-img' src='{{imgUrl}}Patriarch/share.png'></image>
+        <view class='share-button-text'>分享结果</view>
+      </view>
+    </view>
+  </view>
+  <view class='diagnose clearfloat'>
+    <view class='diagnose-headline'>
+      <image class='diagnose-headline-img' src='{{imgUrl}}Patriarch/diagnose.png'></image>
+      <view class='diagnose-headline-text'>小马诊断</view>
+    </view>
+    <view class='diagnose-section clearfloat'>
+      <view class='blank'></view> 门知识与重要性内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内。</view>
+    <view class='diagnose-button'>
+      <view class='diagnose-button-again'>再次测试</view>
+      <view class='diagnose-button-choose'>去选择锻炼计划</view>
+    </view>
+    <view class='LINE-IMPRESSION'></view>
+  </view>
+
+
+  <view class='parameter clearfloat'>
+    <view class='parameter-headline'>
+      <image class='parameter-headline-img' src='{{imgUrl}}Patriarch/parameter.png'></image>
+      <view class='parameter-headline-text'>国家体质健康标准测试成绩</view>
+    </view>
+    <view class='parameter-Curve-Chart-headline'>
+      <view class='parameter-Curve-Chart-headline-left'>成绩提供：学校名称</view>
+      <view class='parameter-Curve-Chart-headline-right'>测试时间：2018-09-14</view>
+    </view>
+    <view class='parameter-section clearfloat'>
+      <view class='parameter-section-one'>
+        <view class='Project'>BMI</view>
+        <view class='specification'>22.34 kg/m2</view>
+        <view class='scale-good'>
+          <view class='scale-good-dot'></view>
+          <text> 良好</text>
+        </view>
+      </view>
+      <view class='parameter-section-one'>
+        <view class='Project'>BMI</view>
+        <view class='specification'>22.34 kg/m2</view>
+        <view class='scale-pass'>
+          <view class='scale-pass-dot'></view>
+         <text>及格</text>
+        </view>
+      </view>
+      <view class='parameter-section-one'>
+        <view class='Project'>BMI</view>
+        <view class='specification'>22.34 kg/m2</view>
+        <view class='scale-fail'>
+          <view class='scale-fail-dot'></view>
+          <text>优秀</text> 
+        </view>
+      </view>
+      <view class='parameter-section-one'>
+        <view class='Project'>BMI</view>
+        <view class='specification'>22.34 kg/m2</view>
+        <view class='scale-excellent'>
+          <view class='scale-excellent-dot'></view>
+          <text>不及格</text>
+        </view>
+      </view>
+      <view class='parameter-section-one'>
+        <view class='Project'>BMI</view>
+        <view class='specification'>22.34 kg/m2</view>
+        <view class='scale-good'>
+          <view class='scale-good-dot'></view>
+          <text>良好</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='placeholder'></view>
+</view>

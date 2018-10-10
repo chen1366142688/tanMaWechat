@@ -1,0 +1,278 @@
+page {
+  background: #ececec;
+  font-size: 30rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(51, 51, 51, 1);
+  line-height: 0;
+}
+
+.myIndex-header {
+  width: 750rpx;
+  background: rgba(0, 198, 147, 1);
+  position: relative;
+  /* margin-bottom: 74rpx; */
+}
+
+.header-top {
+  position: relative;
+  width: 716rpx;
+  padding: 10rpx 34rpx 0 0;
+  text-align: right;
+}
+
+.header-editor {
+  width: 30rpx;
+  height: 30rpx;
+  vertical-align: middle;
+}
+
+.imgBg {
+  width: 160rpx;
+  height: 160rpx;
+  line-height: 155rpx;
+  text-align: center;
+  background: url('http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/mybg.png') no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.myHeadImg {
+  width: 116rpx;
+  height: 116rpx;
+  border-radius: 50%;
+  
+  vertical-align: middle;
+}
+
+.myManOrGril {
+  width: 25rpx;
+  height: 25rpx;
+  position: absolute;
+  top: 10rpx;
+  right: 16rpx;
+}
+
+.userName {
+  max-width: 300rpx;
+  font-size: 32rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+  font-family: PingFang-SC-Bold;
+  color: rgba(255, 255, 255, 1);
+  font-weight: bold;
+  vertical-align: bottom;
+  margin-right: 9rpx;
+}
+
+.category {
+  width: 70rpx;
+  height: 22rpx;
+  line-height: 22rpx;
+  text-align: center;
+  font-size: 22rpx;
+  color: #fff;
+  border: 1rpx solid #fff;
+  vertical-align: middle;
+  border-radius: 5rpx;
+  margin-right: 20rpx;
+}
+
+.phoneImg {
+  width: 11rpx;
+  height: 19rpx;
+  vertical-align: middle;
+  margin-right: 6rpx;
+}
+
+.phoneTxt {
+  font-size: 28rpx;
+  color: #fff;
+  vertical-align: middle;
+}
+
+.content-top {
+  margin-bottom: 19rpx;
+}
+
+.content-topi {
+  margin-bottom: 19rpx;
+}
+
+.content_bomItem {
+  width: 160rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  border: 2rpx solid rgba(255, 255, 255, 0.7);
+  border-radius: 5rpx;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.Lanqiu {
+  width: 100rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+  background: #fff;
+  color: #00c693;
+  font-size: 24rpx;
+  vertical-align: bottom;
+  font-weight: bold;
+}
+
+.level {
+  width: 60rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 30rpx;
+}
+
+.contentBox {
+  height: 250rpx;
+  line-height: 34rpx;
+  width: 403rpx;
+  padding: 0rpx 0 0 34rpx;
+}
+
+.header-content {
+  width: 597rpx;
+  padding: 0 64rpx 0 89rpx;
+}
+
+.content-bottom {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header-chirden {
+  width: 702rpx;
+  height: 88rpx;
+  padding: 16rpx 0;
+  background: #fff;
+  border-radius: 5rpx;
+  box-shadow: 2rpx 0 4rpx rgba(173, 173, 173, 1);
+  position: absolute;
+  left: 24rpx;
+  bottom: -60rpx;
+}
+
+.money {
+  width: 50%;
+  height: 88rpx;
+  text-align: center;
+}
+
+.store {
+  width: 49%;
+  height: 88rpx;
+  border-left: 1rpx solid #e4e4e4;
+  text-align: center;
+}
+
+.moneyNumber {
+  font-size: 40rpx;
+  font-family: SanFranciscoDisplay-Bold;
+  color: rgba(232, 85, 113, 1);
+}
+
+.yuan {
+  font-size: 20rpx;
+  font-family: PingFang-SC-Bold;
+  color: rgba(232, 85, 113, 1);
+  margin-left: 10rpx;
+}
+
+.money-bottom {
+  font-size: 20rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(153, 153, 153, 1);
+  height: 44rpx;
+  line-height: 44rpx;
+}
+
+.money-top {
+  height: 44rpx;
+  line-height: 44rpx;
+  font-weight: bold;
+}
+
+.green {
+  color: rgba(0, 198, 147, 1);
+}
+
+.my-item {
+  width: 698rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  padding: 0 27rpx 0 25rpx;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rpx;
+}
+
+.itemone {
+  width: 30rpx;
+  height: 28rpx;
+  vertical-align: middle;
+  margin-right: 15rpx;
+}
+
+.now {
+  width: 28rpx;
+}
+
+.last {
+  margin-bottom: 20rpx;
+}
+
+.tong {
+  height: 24rpx;
+}
+
+.lasting {
+  margin-bottom: 178rpx;
+  position: relative;
+}
+
+.server {
+  position: absolute;
+  bottom: -85rpx;
+  right: 24rpx;
+  width: 70rpx;
+  height: 70rpx;
+}
+
+.mask {
+  display: inline-block;
+  min-width: 20rpx;
+  height: 24rpx;
+  padding: 0 2rpx;
+  line-height: 24rpx;
+  font-size: 24rpx;
+  background: #e60012;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 25rpx;
+}
+
+.itemOneTxt {
+  font-size: 30rpx;
+  color: rgba(51, 51, 51, 1);
+  vertical-align: middle;
+}
+
+.totast {
+  width: 11rpx;
+  height: 21rpx;
+}
+.van-stickab {
+  width: 70rpx;
+  height: 70rpx;
+  position: fixed;
+  bottom: 53rpx;
+  right: 24rpx;
+  z-index: 9887;
+}

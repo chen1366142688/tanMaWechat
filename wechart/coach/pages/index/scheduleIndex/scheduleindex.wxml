@@ -1,0 +1,97 @@
+<!-- <scroll-view class='scrollWeek' scroll-x='true' bindscrolltoupper="toupper" bindscrolltolower="tolower" scroll-left="{{scrollLeft}}" scroll-with-animation="true" scroll-into-view="{{toView}}" >
+  <view style='width:110rpx;height:10rpx;display: inline-block;'></view>
+  <view class='scrollItem' id="{{index == 0 ? 'numOne' : index == dateList.length-1 ? 'numLast' : '' }}" data-nowDate="{{week.nowDate}}" data-week="{{week.week}}" wx:for="{{dateList}}" wx:key="uqine" wx:for-item="week" bindtap='clickNowDate' data-index='{{index}}'>
+    <view class='weekDay'>{{week.week}}</view>
+    <view class='date {{week.active}}'>{{week.date}}</view>
+    <view wx:if="{{week.studentCount>0}}" class='circular'></view>
+  </view>
+  <view style='width:110rpx;height:10rpx;display: inline-block;'></view>
+</scroll-view> -->
+
+<!-- 优化日期 -->
+<swiper class='scrollWeek' circular="true" current="1" bindchange="swiperChange">
+  <block wx:for="{{imgUrls}}" wx:key="uqine">
+    <swiper-item>
+      <view class='scrollItem' id="{{index == 0 ? 'numOne' : index == dateList.length-1 ? 'numLast' : '' }}" data-nowDate="{{week.nowDate}}" data-week="{{week.week}}" wx:for="{{dateList}}" wx:key="uqine" wx:for-item="week" bindtap='clickNowDate' data-index='{{index}}'>
+        <view class='weekDay'>{{week.week}}</view>
+        <view class='date {{week.active}}'>{{week.date}}</view>
+        <view wx:if="{{week.studentCount>0}}" class='circular'></view>
+      </view>
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class='empty'></view>
+<view class='curseBoxNull' hidden='{{hid}}'>
+  当天没有课程
+  <view class='abDate'>{{nullDate[0]}}年{{nullDate[1]}}月{{nullDate[2]}}日  周{{nullDate[3]}}</view>
+</view>
+<view class='curseBox' wx:for="{{list}}" wx:key="unqie" wx:for-index="idx" wx:for-item="Litem"  bindtap='getClassDetail' data-attendId='{{Litem.attendId}}' data-info="{{Litem}}">
+  <view class='topBox' >
+    <navigator target="miniProgram" open-type="navigate" app-id="wx16ab989b71bd24f1" path="{{Litem.attendId ? 'pages/techer/share-ClassNew/share-ClassNew?attendId='+Litem.attendId+'&cocahId='+userId+'&isCoach=1' : 'pages/techer/share-ClassNew/share-ClassNew?classId='+Litem.classId+'&classSectionId='+Litem.classSectionId+'&attendDate='+Litem.attendDates+'&cocahId='+userId+'&isCoach=1'}}" extra-data="" version="release" class='invitation'>
+      <image class='invitationImg' src='{{imgUrl}}invitation.png'></image>
+      <text>邀请报名</text>
+    </navigator>
+    <view class='title textOver'>{{Litem.className }}</view>
+  </view>
+  <view class='venInfo'>
+    <view class='venAddressBox'>
+      <image class='addressImg' src='{{imgUrl}}address.png'></image>
+      <text class='vneven textOver'>{{Litem.homeName }}</text>
+    </view>
+    <view class='teacherName'>
+      <image class='teacherImg' src='{{imgUrl}}teacher.png'></image>
+      <text class='textOver'>{{Litem.nickName || "未知" }}</text>
+    </view>
+    <view class='dateBox'>
+      <image class='dateImg' src='{{imgUrl}}date.png'></image>
+      <text>{{Litem.dayTimeStart }}-{{Litem.dayTimeEnd  }}</text>
+    </view>
+  </view>
+  <view class='students'>
+    <view class='studentTop' catchtap='clickTake' data-all="{{Litem}}">
+      <text>学员列表（不操作的默认为签到）  <text class='{{Litem.newStudentCount>0? "red" : ""}}'>{{Litem.signUpMember }}</text>/{{Litem.maxMember }}人 <text wx:if="{{Litem.newStudentCount>0}}" class='red'>(+{{Litem.newStudentCount }})</text>    </text>
+      <image wx:if="{{!Litem.status}}" class='takeUpImg' src='{{imgUrl}}takeDown.png'></image>
+      <image wx:if="{{Litem.status}}" class='takeUpImg' src='{{imgUrl}}takeUp.png'></image>
+    </view>
+    <!-- 时间到 -->
+    <view wx:if="{{Litem.settlementStatus == '0' && (Litem.attendStatus == '04' || Litem.attendStatus == '06')}}">
+      <view class='studentItem' wx:for="{{Litem.studentVO}}" wx:key="studentVo" wx:for-item="student" wx:if="{{!Litem.status}}"> 
+      <view class='SchoolName textOver'>{{student.nickName || "" }}</view>
+      <view class='telPhone' catchtap='callPhone' data-phone="{{student.phoneNum}}">{{student.phoneNum || "" }}</view>
+      <view class='studentStatus' wx:if='{{student.signStatus !=2}}'>
+      <text class='Absenteeism' data-index="{{idx}}" data-scheduleId="{{student.scheduleId}}" catchtap='Absenteeism'>旷课</text>
+      <text class='delete' data-index="{{idx}}" data-scheduleId="{{student.scheduleId}}" catchtap='deleteCurse'>移除</text>
+      </view>
+      <view class='studentStatus' wx:if='{{student.signStatus ==2}}' data-index="{{idx}}" data-scheduleId="{{student.scheduleId}}" catchtap='cancelAbsen'>取消旷课</view>
+      </view>
+    </view>
+    <!-- 没到时间 --> 
+    <view wx:else>
+      <view class='studentItem' wx:for="{{Litem.studentVO}}" wx:key="studentVo" wx:for-item="student"  wx:if="{{Litem.status}}"> 
+        <view class='SchoolName textOver'>
+          {{student.nickName || "" }}
+          <view wx:if="{{student.isNew == 1}}" class='circulars'></view>  
+        </view>
+        <view class='telPhone telPhoneOne' catchtap='callPhone' data-phone="{{student.phoneNum}}">{{student.phoneNum || "" }}</view>
+      </view>
+    </view>
+  </view>
+  <view class='abDate'>{{Litem.attendDate[0]}}年{{Litem.attendDate[1]}}月{{Litem.attendDate[2]}}日  周{{Litem.weekDay == 1 ? '一' : Litem.weekDay == 2 ? '二' : Litem.weekDay == 3 ? '三' : Litem.weekDay == 4 ? '四' : Litem.weekDay == 5 ? '五' : Litem.weekDay == 6 ? '六' : '日'}}</view>
+</view>
+<image class='tabloadIng' src='../../../imgs/loading.gif' wx:if="{{tabload}}"></image>
+<view class='classess' bindtap='goAddCurse'>加课</view>
+<!-- 弹窗 -->
+<view class='mock' wx:if="{{isMock}}" bindtap='cancel'>
+  <view class='main'>
+    {{mockInfo}}
+  </view>
+  <view class='bot'>
+    <view class='cancel' bindtap='cancel'>取消</view> 
+    <view class='sure' bindtap='sure'>移除</view>
+  </view>
+</view>
+<!-- 遮罩 -->
+<!-- <view class='Mask' wx:if="{{isMask}}">
+    <image class='tabloadIng' src='../../../imgs/loading.gif'></image> 
+</view> -->

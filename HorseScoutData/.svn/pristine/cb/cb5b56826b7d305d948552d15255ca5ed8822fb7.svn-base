@@ -1,0 +1,27 @@
+/* pages/Patriarch/Testing/Testing.wxss */
+
+.testing{
+  background: white;
+  height: 100%;
+}
+
+.testing .testTab{
+  height: 90rpx;
+  white-space: nowrap; 
+}
+.testing .testTab .tab{
+  display: inline-block;
+  padding: 0 90rpx;
+  height: 100%;
+}
+
+.testing .testTab .tab view{
+  height: 89rpx;
+  color: RGBA(77, 208, 200, 1);
+  font-size: 30rpx;
+  line-height: 90rpx;
+}
+
+.checkthis{
+  border-bottom: 1rpx solid RGBA(77, 208, 200, 1);
+}

@@ -1,0 +1,130 @@
+<!--pages/Patriarch/Test/Test.wxml-->
+<view class='Test'>
+  <view class='Test-header'>
+    <scroll-view class='Exercise-Program-choose' scroll-x="true">
+      <view class='Exercise-Program-choose-two' wx:for="{{childName}}" wx:key="uqine" wx:for-item="child" bindtap='cilckChild' data-index="{{index}}">
+        <view class='Exercise-Program-choose-two-text {{child.active ? "Exercise-Program-choose-one":""}}'>{{child.name}}</view>
+      </view>
+    </scroll-view> 
+  </view>
+  <view class='Test-section'>
+    <view class='Test-section-one clearfloat' wx:if="{{active1}}">
+      <view class='Test-section-one-header clearfloat'>测试说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明（正计时）</view>
+      <view class='Test-section-one-section' wx:if="{{action}}">
+        <view class='one-section-background' bindtap='timing'>
+          <view class='one-section-beijing'>
+            <view class='Test-section-one-time'>000:00</view>
+            <view class='Test-section-one-text'>开始</view>
+            <view class='Test-section-one-kong'></view>
+          </view>
+        </view>
+      </view>
+      <view class='Test-section-one-section1' wx:if="{{!action}}">
+        <view class='restoration-left'></view>
+        <view class='one-section-background1' bindtap='stopTime'>
+          <view class='one-section-beijing1'>
+            <view class='Test-section-one-time'>{{time}}</view>
+            <view class='Test-section-one-text'>记录</view>
+            <view class='Test-section-one-kong'></view>
+          </view>
+        </view>
+        <view class='restoration-right'>
+          <text class='restoration-text' bindtap='reset'> 复位</text>
+        </view>
+      </view>
+      <view class='Test-section-one-Countdown'>
+        <picker-view id="pickerViewTime" indicator-style="border: 1rpx solid #E4E4E4;background-color:rgba(244,244,244,1); z-index: 0;" indicator-class="indicatorClass" mask-class="maskClass" value="{{valueTime}}" bindchange="bindChangeTime">
+          <picker-view-column class="column">
+            <view wx:for="{{firstPlaces}}" class='columnItem {{firstPlace == item? "active" : ""}}'>{{item}}</view>
+          </picker-view-column>
+          <picker-view-column class="column">
+            <view wx:for="{{secondBits}}" class='columnItem {{secondBit == item? "active" : ""}}'>{{item}}</view>
+          </picker-view-column>
+          <picker-view-column class="column lastNext">
+            <view wx:for="{{thirdBits}}" class='columnItem {{thirdBit == item? "active" : ""}}'>{{item}}</view>
+          </picker-view-column>
+          <view class='dian'></view>
+          <picker-view-column class="column last">
+            <view wx:for="{{fourthBits}}" class='columnItem {{fourthBit == item? "active" : ""}}'>{{item}}</view>
+          </picker-view-column>
+          <text>{{SuffixOnt}}</text>
+        </picker-view>
+      </view>
+      <view class='Test-section-one-button'>
+        <view class='Test-section-one-button-left' bindtap='startBtn'>放弃本次测试</view>
+        <view class='Test-section-one-button-right' bindtap='pauseBtn'>提交测试结果</view>
+      </view>
+    </view>
+
+     <view class='Test-section-one clearfloat' wx:if="{{active2}}">
+      <view class='Test-section-one-header clearfloat'>测试说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明（倒计时）</view>
+      <view class='Test-section-one-section' wx:if="{{actionMax}}">
+        <view class='one-section-background' bindtap='timingMax'>
+          <view class='one-section-beijing'>
+            <view class='Test-section-one-time'>{{maxTime}}</view>
+            <view class='Test-section-one-text'>开始</view>
+            <view class='Test-section-one-kong'></view>
+          </view>
+        </view>
+      </view>
+      <view class='Test-section-one-section1' wx:if="{{!actionMax}}">
+        <!-- <view class='restoration-left'></view> -->
+        <view class='one-section-background1' bindtap='resetMax'>
+          <view class='one-section-beijing1'>
+            <view class='Test-section-one-time'>{{timeMax}}</view>
+            <view class='Test-section-one-text'>复位</view>
+            <view class='Test-section-one-kong'></view>
+          </view>
+        </view>
+        <!-- <view class='restoration-right'>
+          <text class='restoration-text' bindtap='resetMax'> 复位</text>
+        </view> -->
+      </view>
+      <view class='Test-section-one-Countdown'>
+        <picker-view id="pickerView" indicator-style="border: 1rpx solid #E4E4E4;background-color:rgba(244,244,244,1); z-index: 0;" indicator-class="indicatorClass" mask-class="maskClass" value="{{value}}" bindchange="bindChange">
+          <picker-view-column class="column">
+            <view wx:for="{{years}}" class='columnItem {{year == item? "active" : ""}}'>{{item}}</view>
+          </picker-view-column>
+          <picker-view-column class="column">
+            <view wx:for="{{months}}" class='columnItem {{month == item? "active" : ""}}'>{{item}}</view>
+          </picker-view-column>
+          <picker-view-column class="column">
+            <view wx:for="{{days}}" class='columnItem {{day == item? "active" : ""}}'>{{item}}</view>
+          </picker-view-column>
+          <text>{{Suffix}}</text>
+        </picker-view>
+      </view>
+      <view class='Test-section-one-button'>
+        <view class='Test-section-one-button-left'>放弃本次测试</view>
+        <view class='Test-section-one-button-right'>提交测试结果</view>
+      </view>
+    </view>
+
+    <view class='Test-section-one clearfloat' wx:if="{{active3}}">
+      <view class='Test-section-one-img'></view>
+      <view class='Test-section-two-header clearfloat'>测试说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明（单独输入）</view>
+      <view class='Test-section-one-Countdown1'>
+        <picker-view id="pickerViewTime" indicator-style="border: 1rpx solid #E4E4E4;background-color:rgba(244,244,244,1); z-index: 0;" indicator-class="indicatorClass" mask-class="maskClass" value="{{valueHeight}}" bindchange="bindChangeHeight">
+          <picker-view-column class="column">
+            <view wx:for="{{heights}}" class='columnItem {{height == item? "active" : ""}}'>{{item}}</view>
+          </picker-view-column>
+          <picker-view-column class="column">
+            <view wx:for="{{heightBits}}" class='columnItem {{heightBit == item? "active" : ""}}'>{{item}}</view>
+          </picker-view-column>
+          <picker-view-column class="column lastNext">
+            <view wx:for="{{heightThirds}}" class='columnItem {{heightThird == item? "active" : ""}}'>{{item}}</view>
+          </picker-view-column>
+          <view class='dian'></view>
+          <picker-view-column class="column last">
+            <view wx:for="{{heightFourths}}" class='columnItem {{heightFourth == item? "active" : ""}}'>{{item}}</view>
+          </picker-view-column>
+          <text>{{SuffixCm}}</text>
+        </picker-view>
+      </view>
+      <view class='Test-section-one-button'>
+        <view class='Test-section-one-button-left'>放弃本次测试</view>
+        <view class='Test-section-one-button-right'>提交测试结果</view>
+      </view>
+    </view> 
+  </view>
+</view>

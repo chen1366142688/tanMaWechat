@@ -1,0 +1,53 @@
+page {
+  background: #ececec;
+}
+
+.bmwH {
+  width: 725rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  background: #fff;
+  margin-bottom: 2rpx;
+  padding-left: 25rpx;
+}
+
+.van-screen {
+  margin-top: 20rpx;
+  font-size: 30rpx;
+  font-family: PingFang-SC-Bold;
+  color: rgba(51, 51, 51, 1);
+  font-weight: bold;
+}
+
+.van-screen-one {
+  font-size: 28rpx;
+  color: rgba(51, 51, 51, 1);
+  font-family: PingFang-SC-Regular;
+  overflow: hidden;
+}
+
+.checkted {
+  color: rgba(0, 198, 147, 1);
+}
+
+.check {
+  border-color: #00c693;
+}
+
+.submit {
+  width: 702rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  background: #00c693;
+  border-radius: 40rpx;
+  color: #fff;
+  margin-top: 61rpx;
+  text-align: center;
+}
+
+.but {
+  width: 750rpx;
+  height: 149rpx;
+  position:absolute;
+  bottom:61rpx;
+}

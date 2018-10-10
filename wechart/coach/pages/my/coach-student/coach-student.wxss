@@ -1,0 +1,205 @@
+/* pages/my/coach-student/coach-student.wxss */
+
+.coach-student {
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+}
+
+.Seek {
+  width: 750rpx;
+  height: 80rpx;
+  padding-top: 15rpx;
+  background: #ececec;
+  z-index: 2;
+  border-bottom: 1rpx solid #e4e4e4;
+}
+
+.venue-seek {
+  width: 702rpx;
+  height: 58rpx;
+  line-height: 58rpx;
+  border: 1rpx solid #007587;
+  border-radius: 30rpx;
+  margin-left: 26rpx;
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(153, 153, 153, 1);
+  display: flex;
+  background-color: #fff;
+}
+
+.venue-seek-Click {
+  width: 150rpx;
+  height: 58rpx;
+  line-height: 56rpx;
+  z-index: 9;
+  vertical-align: middle;
+}
+
+.caoch-suo {
+  width: 678rpx;
+  height: 60rpx;
+  margin: 0 auto;
+  padding-left: 24rpx;
+  font-size: 30rpx;
+  font-family: PingFang-SC-Regular;
+  color: #333;
+}
+
+.coach-sou {
+  font-size: 30rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(153, 153, 153, 1);
+}
+
+.coach-search {
+  width: 30rpx;
+  height: 30rpx;
+  vertical-align: middle;
+  padding-left: 62rpx;
+}
+
+.coach-section {
+  width: 750rpx;
+  line-height: 0;
+}
+
+.section-one {
+  width: 700rpx;
+  min-height: 110rpx;
+  padding: 30rpx 25rpx 10rpx 25rpx;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  vertical-align: middle;
+  margin-bottom: 20rpx;
+}
+
+.section-one-img {
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 45rpx;
+  vertical-align: middle;
+}
+
+.head-portrait {
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 45rpx;
+}
+
+.section-one-category {
+  width: 590rpx;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.name-sex {
+  width: 590rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  vertical-align: middle;
+}
+
+.name-sex-left {
+  height: 30rpx;
+  line-height: 30rpx;
+  vertical-align: middle;
+  display: flex;
+}
+
+.student-name {
+  max-width: 150rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 30rpx;
+  color: #333;
+  vertical-align: middle;
+}
+
+.student-sex {
+  width: 30rpx;
+  height: 30rpx;
+  margin-left: 10rpx;
+  /* margin-right: 10rpx; */
+  vertical-align: middle;
+}
+
+.student-catagory {
+  height: 30rpx;
+  line-height: 30rpx;
+  vertical-align: middle;
+  text-align: center;
+  margin-left: 10rpx;
+  font-size: 22rpx;
+  border: 1rpx solid #333;
+  border-radius: 15rpx;
+  padding: 0 8rpx;
+  color: #333;
+}
+
+.name-sex-right {
+  height: 30rpx;
+  line-height: 30rpx;
+  vertical-align: middle;
+  font-size: 26rpx;
+  color: #333;
+}
+
+.student-items {
+  width: 590rpx;
+  height: 100%;
+  margin-top: 22rpx;
+  overflow: hidden;
+  vertical-align: middle;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.student-items-section {
+  width: 590rpx;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.student-items-one {
+  width: 160rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  border: 1rpx solid #00b6d6;
+  border-radius: 5rpx;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.exercise-item {
+  width: 96rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  vertical-align: middle;
+  text-align: center;
+  background-color: #00b6d6;
+  font-size: 24rpx;
+  color: #fff;
+}
+
+.item-grade {
+  width: 64rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  vertical-align: middle;
+  font-size: 24rpx;
+  background-color: #fff;
+  color: #00b6d6;
+  text-align: center;
+}

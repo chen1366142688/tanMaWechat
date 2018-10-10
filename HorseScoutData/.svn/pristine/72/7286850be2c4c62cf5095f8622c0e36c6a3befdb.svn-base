@@ -1,0 +1,387 @@
+//index.js
+import * as echarts from '../../ec-canvas/echarts';
+
+//获取应用实例
+const app = getApp();
+
+Page({
+  data: {
+    // imgUrls: [
+    //     '/images/index/banner0.png',
+    //     '/images/index/banner1.png',
+    //     '/images/index/banner2.png'
+    // ],
+    movies: [
+      {
+        id: 0,
+        headImg: 'http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/Patriarch/head-portrait.png',
+        name: "00001",
+        age: 15,
+        sex: "http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/Patriarch/man.png",
+        dec: "swpYello"
+      },
+      {
+        id: 1,
+        headImg: 'http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/Patriarch/head-portrait.png',
+        name: "00002",
+        age: 28,
+        sex: "http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/Patriarch/man.png",
+        dec: "swpPink"
+      },
+      {
+        id: 2,
+        headImg: 'http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/Patriarch/head-portrait.png',
+        name: "00003",
+        age: 7,
+        sex: "http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/Patriarch/man.png",
+        dec: "swpblue"
+      }
+    ],
+    dataInfo: [
+      {
+        id: 1,
+        subNum: "C1609050001",
+        percentage: 30,
+        grade: "SPCC",
+        spec: "2.5*1200*C",
+        weight: 500
+      },
+      {
+        id: 2,
+        subNum: "A1609050001",
+        percentage: 80,
+        grade: "SPCC",
+        spec: "3.5*1200*C",
+        weight: 100
+      }
+    ],
+    thisnum: 0,
+    // curBanIndex: 1,
+    // autoplay: true,
+    // interval: 3000,
+    // duration: 500,
+    sportEc: {
+      onInit: initChartSport
+    },
+    physiqueEc: {
+      onInit: initChartPhysique
+    },
+    peopleEc: {
+      onInit: initChartPeople
+    },
+  },
+  swiperChange: function (e) {
+    console.log(e.detail)
+    this.setData({
+      thisnum: e.detail.current
+    })
+  },
+  changeIndicatorDots: function (e) {
+    this.setData({
+      indicatorDots: !this.data.indicatorDots
+    })
+  },
+  changeAutoplay: function (e) {
+    this.setData({
+      autoplay: !this.data.autoplay
+    })
+  },
+  intervalChange: function (e) {
+    this.setData({
+      interval: e.detail.value
+    })
+  },
+  durationChange: function (e) {
+    this.setData({
+      duration: e.detail.value
+    })
+  }
+});
+
+
+function initChartSport(canvas, width, height) {
+  const chart = echarts.init(canvas, null, {
+    width: width,
+    height: height
+  });
+  canvas.setChart(chart);
+
+  var xAxisData = ['6.1', '6.20', '6.21', '6.22', '6.23', '6.24', '6.25', '6.26', '6.27', '6.28', '6.29', '6.30', '7.1', '7.2', '7.3', '7.4', '7.5', '7.6'];
+  var data = [2, 4, 7, 8, 9, 6, 28, 19, 21, 0, 6, 5, 18, 11, 23, 25, 20, 18];
+
+  var option = {
+    dataZoom: [
+      {
+        type: 'inside',
+        show: true,
+        xAxisIndex: [0],
+        start: 60,
+        end: 100,
+        filterMode: 'none',
+        zoomOnMouseWheel: false,
+        zoomLock: true,
+        throttle: 0
+      },
+    ],
+    calculable: true,
+    grid: {
+      left: '0%',
+      right: '0%',
+      bottom: '0%',
+      top: '10%',
+      containLabel: true,
+    },
+    xAxis: {
+      type: 'category',
+      data: xAxisData,
+      axisTick: {
+        alignWithLabel: true
+      },
+      axisLine: {
+        lineStyle: {
+          color: '#CBCBCB'
+        }
+      },
+      axisLabel: {
+        interval: 0,
+        color: '#383838',
+        align: 'left',
+        formatter: function (value) {
+          var arr = value.split('.');
+          var month = parseInt(arr[0]),
+            day = parseInt(arr[1]);
+          if (day == 1) {
+            return day + '\n' + month + '月';
+          } else {
+            return day;
+          }
+        }
+      }
+    },
+    yAxis: [{
+      type: 'value',
+      show: false
+    }],
+    series: [{
+      name: '运动量',
+      type: 'bar',
+      barWidth: '60%',
+      itemStyle: {
+        normal: {
+          barBorderRadius: [30, 30, 0, 0],
+          //color: '#A0E1C4'
+          color: function (param) {
+            var value = param.value;
+            var index = param.dataIndex;
+            var color = '';
+            switch (value) {
+              case 0:
+                color = '#E5E5E5';
+                break;
+              default:
+                color = '#A0E1C4';
+                break;
+            }
+
+            if (index == data.length - 1) {
+              color = '#42C38A';
+            }
+
+            return color;
+          }
+        }
+      },
+      data: data,
+      label: {
+        show: true,
+        position: 'top',
+        color: '#383838'
+      }
+    }]
+  };
+
+  chart.setOption(option);
+  return chart;
+}
+
+
+function initChartPhysique(canvas, width, height) {
+  const chart = echarts.init(canvas, null, {
+    width: width,
+    height: height
+  });
+  canvas.setChart(chart);
+
+  var option = {
+    backgroundColor: '#fff',
+    radar: [
+      {
+        indicator: [
+          { text: '力量', max: 10 },
+          { text: '速度', max: 10 },
+          { text: '耐力', max: 10 },
+          { text: '柔韧', max: 10 },
+          { text: '协调', max: 10 }
+        ],
+        center: ['50%', '50%'],
+        radius: '80%',
+        startAngle: 60,
+        splitNumber: 10,
+        shape: 'circle',
+        name: {
+          textStyle: {
+            color: '#666',
+            fontSize: 14
+          }
+        },
+        splitArea: {
+          areaStyle: {
+            color: ['rgba(0, 0, 0, 0)']
+          }
+        },
+        axisLine: {
+          lineStyle: {
+            color: '#E6E6E6'
+          }
+        },
+        splitLine: {
+          lineStyle: {
+            color: '#E6E6E6'
+          }
+        }
+      }
+    ],
+    series: [
+      {
+        name: '体质统计',
+        type: 'radar',
+        data: [
+          {
+            value: [8, 5, 6, 7, 4],
+            name: '图1',
+            symbol: 'circle',
+            itemStyle: {
+              color: '#FDC54A'
+            },
+            lineStyle: {
+              width: 1,
+              color: '#FDC54A'
+            },
+            label: {
+              show: true,
+              color: '#fff',
+              width: 24,
+              height: 24,
+              lineHeight: 24,
+              align: 'center',
+              verticalAlign: 'middle',
+              borderRadius: 24,
+              position: 'inside',
+              backgroundColor: '#FDC54A',
+              rich: {
+                a: {
+                  color: '#fff'
+                }
+              }
+            },
+            areaStyle: {
+              normal: {
+                color: '#FDC54A',
+                opacity: 0.25
+              }
+            }
+          }
+        ]
+      }
+    ]
+  };
+
+  chart.setOption(option);
+  return chart;
+}
+
+function initChartPeople(canvas, width, height) {
+  const chart = echarts.init(canvas, null, {
+    width: width,
+    height: height
+  });
+  canvas.setChart(chart);
+
+  var option = {
+    title: {
+      text: '分值0-100分',
+      textStyle: {
+        color: '#666',
+        fontSize: 13,
+        fontWeight: 'normal'
+      },
+      right: '4%',
+      top: 10
+    },
+    tooltip: {
+      show: true
+    },
+    grid: {
+      left: '3%',
+      right: '4%',
+      bottom: '2%',
+      containLabel: true
+    },
+    xAxis: {
+      type: 'category',
+      boundaryGap: false,
+      axisLine: {
+        show: false
+      },
+      axisTick: {
+        show: false
+      },
+      data: [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+    },
+    yAxis: {
+      type: 'value',
+      name: '分值的总人数',
+      nameGap: 35,
+      nameTextStyle: {
+        color: '#666',
+        fontSize: 13
+      },
+      splitNumber: 2,
+      splitLine: {
+        lineStyle: {
+          color: '#e2e2e2',
+          type: 'solid'
+        }
+      },
+      axisLine: {
+        show: false
+      },
+      axisTick: {
+        show: false
+      }
+    },
+    series: [{
+      data: [0, 50, 80, 120, 208, 280, 338, 300, 320, 250, 148],
+      type: 'line',
+      showSymbol: false,
+      smooth: true,
+      itemStyle: {
+        normal: {
+          color: "#F882B6"
+        },
+      },
+      lineStyle: {
+        width: 1
+      },
+      areaStyle: {
+        normal: {
+          color: '#F882B6',
+          opacity: 0.3
+        }
+      },
+    }]
+  };
+
+  chart.setOption(option);
+  return chart;
+}

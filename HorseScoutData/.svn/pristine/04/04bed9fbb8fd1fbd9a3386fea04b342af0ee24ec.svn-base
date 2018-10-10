@@ -1,0 +1,47 @@
+<!--pages/Exercise/Select-Planning/Select-Planning.wxml-->
+<view class='Select-Planning'>
+  <view class='Select-headline'>
+    <view class='Select-section-left'>
+      <view class='degree-difficulty'>难度</view>
+      <view class='equipment'>器械</view>
+      <view class='type'>类型</view>
+    </view> 
+    <view class='Select-section-right'>
+      <scroll-view class='difficulty' scroll-x="true">
+        <view class='iLblock allItem {{difficultyItem.active ? "active":""}}' wx:for="{{difficulty}}" wx:key="uqine" wx:for-item="difficultyItem" bindtap='difficultyClick' data-index="{{index}}">{{difficultyItem.name}}</view> 
+      </scroll-view>
+      <scroll-view class='allEquipment' scroll-x="true">
+        <view class='iLblock allItem {{allEquipmentItem.active ? "active":""}}' wx:for="{{allEquipment}}" wx:key="uqine1" wx:for-item="allEquipmentItem" bindtap='allEquipmentClick' data-index="{{index}}">{{allEquipmentItem.name}}</view>
+      </scroll-view>
+      <scroll-view class='allType' scroll-x="true">
+        <view class='iLblock allItem {{allTypeItem.active ? "active":""}}' wx:for="{{allType}}" wx:key="uqine" wx:for-item="allTypeItem" bindtap='allTypeClick' data-index="{{index}}">{{allTypeItem.name}}</view>
+      </scroll-view>
+    </view>  
+  </view> 
+  <view class='Select-Planning-section'>
+     <view class='Exercise-Program-List-one'>
+      <view class='List-one-background'>
+        <image class='exercise-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/Exercise/exercise-img2.png'></image>
+      </view>
+      <view class='List-one-section'>
+        <view class='List-one-section-one'><text class='section-one-green'>力量类</text> | 计划名称1</view>
+        <view class='section-one-time-population'>
+          <view class='section-one-time'>T1基础 <text class='section-one-time-minute'>8分钟</text> </view>
+          <view class='section-one-population'><text class='section-one-population-minute'>3,543,564</text>人已参加</view>
+        </view>
+      </view>
+    </view>
+    <view class='Exercise-Program-List-one'>
+      <view class='List-one-background'>
+        <image class='exercise-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/Exercise/exercise-img1.png'></image>
+      </view>
+      <view class='List-one-section'>
+        <view class='List-one-section-one'><text class='section-one-green'>力量类</text> | 计划名称1</view>
+        <view class='section-one-time-population'>
+          <view class='section-one-time'>T1基础 <text class='section-one-time-minute'>8分钟</text> </view>
+          <view class='section-one-population'><text class='section-one-population-minute'>3,543,564</text>人已参加</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

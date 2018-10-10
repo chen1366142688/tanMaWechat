@@ -1,0 +1,756 @@
+body{
+    background-color: #ECECEC;
+}
+
+.Program-Particulars {
+    width: 100%;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.Program-Particulars-header {
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    vertical-align: middle;
+    margin-bottom: 20px;
+}
+
+.Particulars-header-background {
+    width: 100%;
+    height: 422px;
+    position: relative;
+}
+
+.header-background-img {
+    width: 100%;
+    height: 100%;
+}
+
+.share {
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    vertical-align: middle;
+    position: absolute;
+    bottom: -40px;
+    right: 24px;
+    z-index: 111;
+}
+
+.Particulars-header-section {
+    width: 100%;
+    vertical-align: middle;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 24px;
+    box-sizing: border-box;
+}
+
+.header-section-headline {
+    width: 100%;
+    height: 132px;
+    line-height: 132px;
+    vertical-align: middle;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.header-section {
+    width: 100%;
+    height: 28px;
+    line-height: 28px;
+    font-size: 28px;
+    font-family: PingFang-SC-Bold;
+    color: #171717;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+.header-section-brief-introduction {
+    width: 100%;
+    height: 66px;
+    line-height: 66px;
+    vertical-align: middle;
+    font-size: 26px;
+    color: #999;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.header-section-phases {
+    width: 100%;
+    height: 124px;
+    line-height: 124px;
+    vertical-align: middle;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.section-phases-age {
+    height: 124px;
+    line-height: 124px;
+    vertical-align: middle;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+}
+
+.section-phases-age-headline {
+    height: 22px;
+    line-height: 22px;
+    vertical-align: middle;
+    margin-top: 30px;
+    font-size: 22px;
+    color: #999;
+    text-align: left;
+    width: 100%;
+    align-self: flex-start;
+}
+
+.section-phases-age-section {
+    height: 62px;
+    line-height: 62px;
+    vertical-align: middle;
+    font-size: 28px;
+    color: #171717;
+    text-align: left;
+    width: 100%;
+    align-self: flex-start;
+}
+
+.section-phases-time {
+    height: 124px;
+    line-height: 124px;
+    vertical-align: middle;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+
+.section-phases-time-headline {
+    height: 22px;
+    line-height: 22px;
+    vertical-align: middle;
+    margin-top: 30px;
+    font-size: 22px;
+    color: #999;
+    text-align: left;
+    width: 100%;
+    align-self: flex-start;
+}
+
+.section-phases-time-section {
+    height: 62px;
+    line-height: 62px;
+    vertical-align: middle;
+    font-size: 28px;
+    color: #171717;
+    text-align: left;
+    width: 100%;
+    align-self: flex-start;
+}
+
+.section-phases-Program {
+    height: 124px;
+    line-height: 124px;
+    vertical-align: middle;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+
+.section-phases-Program-headline {
+    height: 22px;
+    line-height: 22px;
+    vertical-align: middle;
+    margin-top: 30px;
+    font-size: 22px;
+    color: #999;
+    text-align: left;
+    width: 100%;
+    align-self: flex-start;
+}
+
+.section-phases-Program-section {
+    height: 62px;
+    line-height: 62px;
+    vertical-align: middle;
+    font-size: 28px;
+    color: #171717;
+    text-align: left;
+    width: 100%;
+    align-self: flex-start;
+}
+
+.header-section-population {
+    width: 100%;
+    height: 122px;
+    line-height: 122px;
+    vertical-align: middle;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-population-left {
+    height: 122px;
+    line-height: 122px;
+    vertical-align: middle;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+
+.population-left-top {
+    width: 100%;
+    height: 28px;
+    line-height: 28px;
+    margin-top: 30px;
+    vertical-align: middle;
+    align-self: flex-start;
+    font-size: 28px;
+    color: #fdc54a;
+}
+
+.population-left-botton {
+    width: 100%;
+    height: 60px;
+    line-height: 61px;
+    vertical-align: middle;
+    font-size: 20px;
+    color: #999;
+    align-self: flex-start;
+}
+
+.section-population-right {
+    height: 122px;
+    line-height: 122px;
+    vertical-align: middle;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.population {
+    width: 52px;
+    height: 52px;
+    line-height: 52px;
+    vertical-align: middle;
+    border-radius: 50%;
+    margin-left: -10px;
+}
+
+.Program-Particulars-section {
+    width: 100%;
+    background-color: #fff;
+    padding: 0 24px;
+    box-sizing: border-box;
+    vertical-align: middle;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.auxiliary-appliance {
+    width: 100%;
+    height: 86px;
+    line-height: 86px;
+    vertical-align: middle;
+    font-size: 28px;
+    color: #171717;
+    font-weight: bold;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.auxiliary-appliance-section {
+    font-size: 24px;
+    color: #999;
+    vertical-align: middle;
+    margin-left: 31px;
+}
+
+.Program-description {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border-bottom: 1px solid #e4e4e4; */
+}
+
+.Program-description-headline {
+    width: 100%;
+    height: 84px;
+    line-height: 84px;
+    vertical-align: middle;
+    font-size: 28px;
+    font-weight: bold;
+    color: #171717;
+    /*overflow: hidden;*/
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.Program-description-text {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 57px;
+    vertical-align: middle;
+    font-size: 24px;
+    color: #999;
+    line-height: 36px;
+}
+
+.Training-Principle-img {
+    width: 100%;
+    height: 394px;
+    line-height: 394px;
+    margin-bottom: 30px;
+    vertical-align: middle;
+}
+
+.Taboo-crowd {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border-bottom: 1px solid #e4e4e4; */
+}
+
+.patent {
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    padding: 0 19px;
+    margin-bottom: 49px;
+    margin-top: 27px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.patent-img {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    vertical-align: middle;
+    position: absolute;
+    left: 321px;
+    top: -30px;
+}
+
+.patent-text {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.patent-text-headline {
+    width: 100%;
+    height: 24px;
+    line-height: 24px;
+    margin-top: 50px;
+    font-size: 24px;
+    color: #cbb383;
+    text-align: center;
+}
+
+.patent-text-section {
+    width: 100%;
+    height: 100%;
+    line-height: 36px;
+    font-size: 24px;
+    margin-top: 17px;
+    margin-bottom: 27px;
+    color: #cbb383;
+}
+
+.pack-up {
+    width: 100%;
+    height: 67px;
+    line-height: 24px;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*margin-bottom: 43px;*/
+}
+
+.pack-up-text {
+    font-size: 24px;
+    line-height: 24px;
+    height: 24px;
+    color: #4dd0c8;
+    vertical-align: middle;
+}
+
+.pack-up-img {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    margin-top: 5px;
+    vertical-align: middle;
+    margin-left: 20px;
+}
+
+/* 教学视频  */
+
+.Program-Particulars-video {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    padding: 0 24px;
+    box-sizing: border-box;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.video-section-headline {
+    width: 100%;
+    height: 84px;
+    line-height: 84px;
+    vertical-align: middle;
+    font-size: 28px;
+    font-weight: bold;
+    color: #171717;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.video-section-video {
+    width: 100%;
+    /*height: 702px;*/
+    height: 395px;
+    vertical-align: middle;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.section-video {
+    width: 100%;
+    height: 100%;
+    line-height: 100%;
+    vertical-align: middle;
+}
+
+.section-Play {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    vertical-align: middle;
+    position: absolute;
+    bottom: 20px;
+    left: 22px;
+    z-index: 55;
+}
+.section-Pause{
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    vertical-align: middle;
+    position: absolute;
+    bottom: 20px;
+    left: 22px;
+    z-index: 55;
+    display: none;
+}
+
+.Training-Steps {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Training-Steps-section {
+    width: 100%;
+    height: 100%;
+    font-size: 24px;
+    color: #171717;
+    vertical-align: middle;
+    line-height: 36px;
+    margin-bottom: 32px;
+}
+
+.Training-Steps-section-one {
+    width: 100%;
+    font-size: 24px;
+    color: #171717;
+    vertical-align: middle;
+}
+
+/*训练反馈  */
+
+.Feedback-Training {
+    width: 100%;
+    height: 100%;
+    padding: 0 24px 20px 24px;
+    box-sizing: border-box;
+    background-color: #fff;
+    vertical-align: middle;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.Feedback-Training-headline {
+    width: 100%;
+    height: 120px;
+    line-height: 120px;
+    vertical-align: middle;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Feedback-Training-headline-text {
+    font-size: 28px;
+    color: #171717;
+    vertical-align: middle;
+    height: 28px;
+    line-height: 28px;
+    font-weight: bold;
+}
+
+.Feedback-Training-headline-button {
+    width: 150px;
+    height: 60px;
+    line-height: 60px;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4dd0c8;
+    border-radius: 30px;
+}
+
+.Feedback-Training-headline-button-img {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    vertical-align: middle;
+}
+
+.Feedback-Training-headline-button-text {
+    font-size: 24px;
+    color: #fff;
+    margin-left: 10px;
+    vertical-align: middle;
+    height: 24px;
+    line-height: 24px;
+}
+
+.Feedback-Training-section {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Feedback-Training-section-one {
+    width: 100%;
+    /* height: 100%; */
+    height: 250px;
+    padding: 0 24px;
+    box-sizing: border-box;
+    vertical-align: middle;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f4f4;
+    margin-bottom: 20px;
+}
+
+.Feedback-Training-one-headline {
+    width: 100%;
+    height: 117px;
+    line-height: 117px;
+    vertical-align: middle;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.one-headline-head-portrait {
+    width: 15%;
+    height: 117px;
+    line-height: 117px;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+}
+
+.one-headline-head-portrait-img {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 30px;
+    vertical-align: middle;
+}
+
+.one-headline-brief-introduction {
+    width: 85%;
+    height: 117px;
+    line-height: 117px;
+    vertical-align: middle;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#video1{
+    width: 100%;
+    height: 100%;
+    line-height: 100%;
+    vertical-align: middle;
+}
+
+.brief-introduction-top {
+    width: 100%;
+    height: 32px;
+    line-height: 32px;
+    vertical-align: middle;
+    font-size: 30px;
+    color: #171717;
+    text-align: left;
+    margin-top: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.brief-introduction-bottom {
+    width: 100%;
+    height: 22px;
+    line-height: 22px;
+    vertical-align: middle;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.brief-introduction-bottom-left {
+    height: 22px;
+    line-height: 22px;
+    vertical-align: middle;
+    font-size: 22px;
+    color: #999;
+}
+
+.brief-introduction-bottom-right {
+    height: 22px;
+    line-height: 22px;
+    vertical-align: middle;
+    font-size: 22px;
+    color: #999;
+}
+
+.Feedback-Training-one-section {
+    width: 100%;
+    height: 105px;
+    /* height: 100%; */
+    line-height: 36px;
+    font-size: 26px;
+    color: #999;
+    vertical-align: middle;
+    margin-bottom: 30px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+.kong {
+    width: 100%;
+    height: 130px;
+}
+
+/*添加本计划  */
+
+.Add-Program {
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4dd0c8;
+    vertical-align: middle;
+    font-size: 28px;
+    color: #fff;
+    margin-top: 30px;
+    position: fixed;
+    bottom: 0;
+    z-index: 56;
+}
+
+.Add-Program-jia {
+    font-size: 38px;
+    vertical-align: middle;
+}
+
+/*  悬浮按钮  */
+
+.message {
+    width: 90px;
+    height: 90px;
+    line-height: 90px;
+    vertical-align: middle;
+    position: fixed;
+    bottom: 260px;
+    right: 24px;
+    z-index: 120;
+}
+
+.Top {
+    width: 90px;
+    height: 90px;
+    line-height: 90px;
+    vertical-align: middle;
+    position: fixed;
+    bottom: 140px;
+    right: 24px;
+    z-index: 120;
+}

@@ -1,0 +1,26 @@
+<!--pages/login/Secondary-Input/Secondary-Input.wxml-->
+<view class='Forget-Password'>
+  <view class='Forget-Password-background'></view>
+  <view class='Forget-Password-section'>
+    <view class='section-Head-Portraits'>
+      <image class='Head-Portraits-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/Head-Portraits.png'></image>
+    </view>
+    <view class='Register-section-taber'>
+      <view class='Section-List'>
+        <view class='Register-List-Section-left'>
+          <view class='Register-List-Section-one'>
+            <input class='List-Section-one-input' maxlength="18" placeholder='输入新密码' placeholder-class='List-Section-one-input-cbcbcb'></input>
+            <image class='List-Section-one-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/accomplish.png'></image>
+          </view>
+           <view class='Register-List-Section-one'>
+            <input class='List-Section-one-input' maxlength="18" placeholder='输入新密码第二次' placeholder-class='List-Section-one-input-cbcbcb'></input>
+            <image class='List-Section-one-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/accomplish.png'></image>
+          </view>
+          <view class='Register-Submit-left'>
+           <view class='Register-Submit-button'>提交</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

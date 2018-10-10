@@ -1,0 +1,23 @@
+<view class='searchTop'>
+  <input class="searchStudent iLblock" placeholder="搜索学员" placeholder-class="searchPlace" bindinput='inputContent' type="text" confirm-type='search' bindconfirm="search"></input>
+  <view class='searchBox iLblock' bindtap='search'>
+     <image class='searchImg' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coach/public/search.png'></image> 
+  </view> 
+</view>
+<scroll-view class='studentListBox' scroll-y="true" style='height:{{height}}px' bindscrolltolower="scrolltolower">
+  <view class='studentItem' wx:for="{{studentList}}" wx:key="upine" wx:for-item="student" bindtap='studentItem' data-classId="{{student.classId}}">
+    <view class='itemTitle textOver'>{{student.className }}</view>
+    <view class='itemInfor'>
+      <text class='itemName' decode='true'>{{student.itemName }}&nbsp;|&nbsp;{{student.maxMember }}人班</text>
+      <view class='itemNumber'>学员<text class='studentNumber'>{{student.studentMember }}</text>人</view>
+    </view>
+  </view>
+</scroll-view>
+<!--  没有数据显示空空如也  -->
+  <view class='kong' wx:if="{{Period}}">
+    <image class='kong-img' src='../../../imgs/dataEmpty.png'></image>
+    <text class='kong-text'>数据为空</text>
+  </view>
+
+
+

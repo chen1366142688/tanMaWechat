@@ -1,0 +1,144 @@
+/* pages/my/myrating/myrating.wxss */
+
+page {
+  background-color: #ececec;
+}
+
+.center {
+  width: 700rpx;
+  padding: 0 25rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+}
+
+.personalImgBox {
+  width: 700rpx;
+  padding: 0 25rpx;
+  height: 120rpx;
+  line-height: 120rpx;
+  margin-bottom: 2rpx;
+  background: #fff;
+}
+
+.personalImgCat {
+  height: 88rpx;
+  line-height: 88rpx;
+  margin-bottom: 2rpx;
+  background: #fff;
+}
+
+.imgLeft-myra {
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(51, 51, 51, 1);
+}
+
+.phoneGreen {
+  width: 35rpx;
+  height: 35rpx;
+  vertical-align: middle;
+}
+
+.model {
+  margin-left: 25rpx;
+}
+
+.imgRigGai {
+  width: 361rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: right;
+}
+
+.wechartGreen {
+  width: 40rpx;
+  height: 38rpx;
+  vertical-align: middle;
+}
+
+/*评级说明*/
+
+.fenBox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  min-height: 240rpx;
+  width: 599rpx;
+  padding: 0 0 12rpx 102rpx;
+  margin-top: 1rpx;
+}
+
+/* 调节封面之间的原始间距，即不小于36px */
+
+.fenItem {
+  width: 60rpx;
+  margin: 24rpx 60rpx 5rpx 0;
+  text-align: center;
+}
+
+@media screen and (min-width: 320px) and (max-width: 374px) {
+  .fenItem {
+    width: 60rpx;
+    margin: 40rpx 68rpx 5rpx 0; /*  */
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 374px) and (max-width: 414px) {
+  .fenItem {
+    width: 60rpx;
+    margin: 40rpx 68rpx 5rpx 0; /*  */
+    text-align: center;
+  }
+}
+
+.itemImg {
+  display: block;
+  width: 50rpx;
+  height: 50rpx;
+  margin: 0 auto;
+}
+
+.c-zuqiu {
+  display: block;
+  font-size: 20rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(23, 23, 24, 1);
+}
+
+/*评级说明a*/
+
+.ratinginstructionsa {
+  font-size: 24rpx;
+  font-family: PingFang-SC-Bold;
+  color: rgba(51, 51, 51, 1);
+  font-weight: bold;
+  text-align: center;
+  margin: 25rpx 0 16rpx;
+}
+
+.ratinginstructionsb-bgfff {
+  background: #fff;
+}
+
+/*近几年来*/
+
+.itemsLo {
+  width: 700rpx;
+  padding: 19rpx 25rpx 36rpx 26rpx;
+  background: #fff;
+  margin-top: 1rpx;
+  margin-bottom: 120rpx;
+}
+
+.items-text {
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(51, 51, 51, 1);
+  line-height: 45rpx;
+  text-indent: 2em;
+  /*padding:17rpx 36rpx 26rpx;*/
+}

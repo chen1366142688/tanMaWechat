@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <script src="../build/flexible_css.debug.js"></script>
+    <script src="../build/flexible.debug.js"></script>
+    <link href="../build/base.debug.css" rel="stylesheet"/>
+    <link href="../build/shareIndex.debug.css" rel="stylesheet"/>
+    <title>小马健康</title>
+</head>
+<body>
+    <div class="topInfo">
+        <div class="imgBox">
+            <img class="topIcon" src="../images/Test.png" alt="">
+        </div>
+        <span class="topText">俺家宝贝体质得分为<span class="sore">60</span>分，优于 <span class="Proportion">75%</span>  的同龄人。</span>
+    </div>
+    <div id="app">
+        <div id="main"></div>
+        <div id="main2"></div>
+    </div>
+    <div class="hr"></div>
+    <div class="describe">描述性文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案。</div>
+    <div class="null"></div>
+    <div class="bootBtn">我也要试试</div>
+</body>
+<script src="../js/url-helper.js" type="text/javascript"></script>
+<script src="../js/echarts.min.js" type="text/javascript"></script>
+<script src="../js/zepto.min.js"></script>
+<script src="../js/shareIndex.js"></script>
+</html>

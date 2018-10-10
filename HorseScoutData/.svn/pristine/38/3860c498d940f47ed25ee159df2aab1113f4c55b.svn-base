@@ -1,0 +1,57 @@
+
+$(function () {
+    getallItemInfo();
+    $('.HelpList-one-li').on('click',function(){
+        let helpDetailId = $(this).attr('data-detail');
+        window.location.href=H5url+"/help-particulars.html?helpDetailId="+helpDetailId;
+    })
+});
+
+function GetQueryString(name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+    var r = window.location.search.substr(1).match(reg);
+    if (r != null) return unescape(r[2]);
+    return null;
+}
+
+/*帮助子标题
+通过帮助详情ID查询详情信息
+*/
+
+/*helpDetailId 帮助详情的id */
+function getallItemInfo() {
+    $.ajax({
+        type: 'post',
+        url: appurl + "/v1/help/get/studentHelp",
+        data: {},
+        dataType: "json",
+        async: false,
+        success: function (res) {
+            // console.log(res);
+            if (res.code == '10000') {
+                var dataHtmls = "";
+                var data_responses = res.response;
+                if (data_responses == null || data_responses.length == 0)
+                    return;
+                for (var i = 0; i < data_responses.length; i++) {
+                    dataHtmls=dataHtmls+"<div class='HelpList-one' data-helpId=" + data_responses[i].helpType +">";
+                    dataHtmls=dataHtmls+"<div class='HelpList-one-section' >";
+                    dataHtmls=dataHtmls+"<div class='HelpList-header-headline' id='HelpListheadline'>" + data_responses[i].typeName + "</div>";
+                    if(data_responses[i] != null && data_responses[i].helpDetail != null){
+                        for (var j = 0; j < data_responses[i].helpDetail.length; j++){
+                            dataHtmls=dataHtmls+"<div class='HelpList-one-li' data-detail='"+data_responses[i].helpDetail[j].helpDetailId+"'>" + data_responses[i].helpDetail[j].title + "</div>";
+                        }
+                    }
+                    dataHtmls=dataHtmls+"</div>";
+                    dataHtmls=dataHtmls+"</div>";
+                }
+                $("#helplis").html(dataHtmls);
+            }
+
+        },
+        error: function (data) {
+            console.log("请求失败，服务器错误")
+        }
+    })
+}
+

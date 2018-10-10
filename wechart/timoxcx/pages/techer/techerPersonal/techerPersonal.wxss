@@ -1,0 +1,112 @@
+page{background: #ececec;font-size: 30rpx;font-family:PingFang-SC-Regular;
+color:rgba(51,51,51,1);}
+.center{
+  width: 700rpx;
+  padding: 0 25rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+}
+.box,.boxTwo{
+  margin-bottom: 20rpx;
+}
+.personalImgBox{
+  width: 700rpx;
+  padding: 0 25rpx;
+  height: 120rpx;
+  line-height: 120rpx;
+  margin-bottom:2rpx;
+  background: #fff;
+}
+.personalImgBoxCat{
+  height: 88rpx;
+  line-height: 88rpx;
+}
+.userImg{
+  width:88rpx;
+  height:88rpx;
+  vertical-align: middle;
+}
+.right{
+  width:12rpx;
+  height:21rpx;
+  vertical-align: middle;
+  margin-left:25rpx;
+}
+.perName{
+  color:rgba(153,153,153,1);
+}
+.perNameGai{
+  color:rgba(153,153,153,1);
+  width: 409rpx;
+  height: 120rpx;
+  line-height: 120rpx;
+  vertical-align: middle;
+}
+.rightGai{
+  width:12rpx;
+  height:21rpx;
+  vertical-align: middle;
+  margin-left:25rpx;
+}
+.imgRigGai{
+  width: 446rpx;
+  height: 120rpx;
+  line-height: 120rpx;
+  text-align: right;
+}
+.bindNum,.security{
+  display: block;
+  font-size:24rpx;
+  font-weight: bold;
+  margin-bottom:20rpx;
+  width: 750rpx;
+  text-align: center;
+}
+.security{
+  margin:20rpx auto;
+}
+.phoneGreen{
+  width:12rpx;
+  height:22rpx;
+  vertical-align: middle;
+}
+.wechartGreen{
+  width:22rpx;
+  height:18rpx;
+  vertical-align: middle;
+}
+.model{
+  margin-left:25rpx;
+}
+.switch{
+  height: 88rpx;
+  line-height: 88rpx;
+}
+.van-footer{
+  display: block;
+  width: 750rpx;
+  text-align: center;
+  margin:20rpx 0 20rpx 0;
+  font-size:24rpx;
+  font-family:PingFang-SC-Regular;
+  color:rgba(153,153,153,1);
+}
+.switchBtn{
+  width:200rpx;
+  height:60rpx;
+  line-height: 60rpx;
+  border:1rpx solid #00C693;
+  border-radius: 5rpx;
+}
+.open,.close{
+  width:100rpx;
+  height:60rpx;
+  text-align: center;
+  color: #00C693;
+}
+.active{
+  background:  #00C693;
+  color: #fff;
+}

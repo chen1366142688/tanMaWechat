@@ -1,0 +1,42 @@
+{
+  "navigationBarTitleText":"成都场馆",
+  "tabBar": {
+    "color": "#9b9b9b",
+    "selectedColor": "#4a4a4a",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "",
+        "iconPath": "image/imgs/kecheng.png",
+        "selectedIconPath": "image/imgs/kecheng.png"
+      },
+      {
+        "pagePath": "pages/Venue/Venue",
+        "text": "场馆",
+        "iconPath": "image/imgs/changguan.png",
+        "selectedIconPath": "image/imgs/changguan.png"
+      },
+      {
+        "pagePath": "pages/coach/coach",
+        "text": "教练",
+        "iconPath": "image/imgs/jiaolian.png",
+        "selectedIconPath": "image/imgs/jiaolian.png"
+      },
+      {
+        "pagePath": "pages/news/news",
+        "text": "消息",
+        "iconPath": "image/imgs/news.png",
+        "selectedIconPath": "image/imgs/news.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "image/imgs/my.png",
+        "selectedIconPath": "image/imgs/my.png"
+      }
+    ]
+  }
+}

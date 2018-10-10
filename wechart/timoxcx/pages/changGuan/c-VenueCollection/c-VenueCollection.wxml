@@ -1,0 +1,53 @@
+<view class="box" wx:for="{{collection}}">
+  <view class='effective'>
+    <text class='effe' wx:if="{{item.validStatus ==1}}">有效</text>
+    <text class='effe noThing' wx:if="{{item.validStatus ==2}}">失效</text>
+  </view>
+  <view class='itemInfo'>
+    <image class='userLevelImg' src='{{url}}gril.png'></image>
+    <text class='userName iLblock textOver'>{{item.classCoach }}</text>
+    <image class='nums' src='{{url}}times.png'></image>
+    <text class='numsTxt'>{{item.lastAttendPeriod }}期</text>
+    <image class='hotImg' src='{{url}}hotBlack.png'></image>
+    <text class='hotNum'>4543</text>
+    <view class='iLblock levelBox'><text class='levelPus'>适合等级</text><text class='level iLblock textOver'>{{item.itemStudentGrade }}</text></view>
+  </view>
+  <view class='itemInfoTitle'>
+    <view class='classItem iLblock'>{{item.itemName }} {{item.maxMember }}人班</view>
+    <view class='title iLblock textOver'>{{item.className }}</view>
+    <text class='iLblock keShi'>{{item.courseCount }}课时/{{item.courseTime *10}}h</text>
+    <view class='moneyBox'>
+      <text class='money'>RMB</text><text class='moneys'>{{item.courseCostTotal }}</text>
+    </view>
+  </view>
+  <!--有效&已选中-->
+  <view class='send clearfloat' wx:if="{{item.remindType ==1&&item.validStatus ==1}}">
+    <checkbox-group class='leftBox fl' wx:if="{{item.remindType ==1}}" bindchange='checkboxChange' data-id="{{item.storeId}}">
+      <checkbox data-id="{{item.storeId }}"  wx:if="{{item.remindType ==1}}" class='check' value='{{item.storeId}}' name="send" checked='{{item.remindType ==1?true:false}}'></checkbox>
+      <text class='sendCode active'>有空缺名额是短信通知我</text>
+    </checkbox-group>
+    <view class='rgBox fr' data-storeId ="{{item.storeId }}" bindtouchend='deleteStore'>
+      <image class='delete' src='{{url}}delete.png'></image>
+    </view>
+  </view>
+  <!--有效&未选中-->
+  <view class='send clearfloat' wx:if="{{item.remindType ==0&&item.validStatus ==1}}">
+    <checkbox-group class='leftBox fl' bindchange='checkboxChange' data-id="{{item.storeId}}">
+      <checkbox data-id="{{item.storeId }}" class='check' value='{{item.storeId}}' name="send" checked='{{item.remindType ==1?true:false}}'></checkbox>
+      <text class='sendCode'>有空缺名额是短信通知我</text>
+    </checkbox-group>
+    <view class='rgBox fr' data-storeId ="{{item.storeId }}" bindtouchend='deleteStore'>
+      <image class='delete' src='{{url}}delete.png'></image>
+    </view>
+  </view>
+  <!--无效效-->
+  <view class='send clearfloat' wx:if="{{item.validStatus ==2}}">
+    <checkbox-group hidden='true' class='leftBox fl' bindchange='checkboxChange' data-id="{{item.storeId}}">
+      <checkbox hidden='true' data-id="{{item.storeId }}" class='check' value='{{item.storeId}}' name="send" checked='{{item.remindType ==1?true:false}}'></checkbox>
+      <text class='sendCode' hidden='true'>有空缺名额是短信通知我</text>
+    </checkbox-group>
+    <view class='rgBox fr' data-storeId ="{{item.storeId }}" bindtouchend='deleteStore'>
+      <image class='delete' src='{{url}}delete.png'></image>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,448 @@
+page {
+  background: #ececec;
+}
+
+.order-item-one {
+  width: 702rpx;
+  padding: 0 24rpx;
+}
+
+.order-state {
+  margin-top: 20rpx;
+  background: #fff;
+}
+.zujiao{
+  max-width:80rpx;
+   overflow:hidden; 
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  height:42rpx;
+  line-height:26rpx;
+}
+.order-userImga {
+  width: 114rpx;
+  height: 120rpx;
+  float: left;
+  /* vertical-align: middle; */
+}
+
+.order-numbers {
+   width: 654rpx; 
+  padding:0 24rpx;
+}
+.order-numbers-top{
+  padding-top: 20rpx;
+  height: 36rpx;
+  line-height: 36rpx;
+  vertical-align:middle;
+}
+
+.order-renshu {
+  display: inline-block;
+  /* max-width: 160rpx; */
+  height: 36rpx;
+  border: 1rpx solid #171718;
+  border-radius: 5rpx;
+  line-height: 36rpx;
+  text-align: center;
+  font-size: 23rpx;
+  padding:  0 8rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(23, 23, 24, 1);
+  margin-right: 9rpx;
+  vertical-align: middle;
+}
+
+.pur-girl-titlea {
+  max-width: 480rpx;
+  display: inline-block;
+  vertical-align: middle;
+  height: 30rpx;
+  line-height: 30rpx;
+}
+
+.order-title {
+  font-size: 29rpx;
+  font-family: PingFang-SC-Bold;
+  color: #333;
+  font-weight: bold;
+}
+
+.order-numbers-bottom {
+  margin-top:16rpx;
+  padding-bottom: 16rpx;
+  width: 500rpx;
+  height: 42rpx;
+  line-height: 42rpx;
+  float: left;
+}
+
+.orientation {
+  margin-top:16rpx;
+  max-width: 130rpx;
+  float: right;
+  height: 42rpx;
+  line-height: 42rpx;
+  text-align: right;
+  /* padding-right: 20rpx; */
+}
+
+.order-qishu-img {
+  width: 18rpx;
+  height: 18rpx;
+  vertical-align: middle;
+  margin-left: 0rpx;
+  float: left;
+  margin-top: 17rpx;
+}
+
+.order-qushu-txt {
+  max-width: 250rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  height: 42rpx;
+  line-height: 42rpx;
+  font-size: 24rpx;
+  font-family: SanFranciscoDisplay-Regular;
+  color: rgba(102, 102, 102, 1);
+  /* margin-left: 9rpx; */
+}
+.shopping{
+  max-width:220rpx;
+  margin-left: 10rpx;
+}
+.purchase-qushu-maina {
+  color: #666;
+  font-weight: bold; 
+  font-size: 24rpx;
+  margin-left: 15rpx;
+  height: 42rpx;
+  line-height: 42rpx;
+}
+
+.purchase-qushu-mainae {
+  color: #666;
+  font-weight: bold;
+  font-size: 24rpx;
+  /* margin-left: 24rpx; */
+}
+
+.purchase-qushu-mainb {
+  display: inline-block;
+  color: #333;
+  font-size: 24rpx;
+}
+
+.order-level-txt {
+  font-size: 20rpx;
+  font-family: SanFranciscoDisplay-Regular;
+  color: rgba(51, 51, 51, 1);
+  margin-left: 9rpx;
+  float: left;
+  max-width:100rpx;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  overflow:hidden;
+  text-align: left;
+  padding-top: 5rpx;
+}
+
+.order-item-keshi {
+  height: 60rpx;
+  line-height: 60rpx;
+}
+
+.order-total-keshi {
+  font-size: 30rpx;
+  color: #333;
+  font-weight: bold;
+  font-family: PingFang SC;
+}
+
+.strong {
+  color: #00c693;
+  font-weight: bold;
+}
+
+.order-total-shenyu {
+  font-size: 30rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(51, 51, 51, 1);
+  margin-left: 30rpx;
+}
+
+.strongs {
+  color: #e85571;
+  /* font-weight: bold; */
+}
+
+#strongs {
+  color: #e85571;
+  font-weight: bold;
+  font-size: 34rpx;
+  margin-left: 10rpx;
+}
+
+.yu-money {
+  font-size: 30rpx;
+}
+
+/*培训项目*/
+
+.c-course-int-titlec {
+  padding: 15rpx 24rpx;
+}
+
+.c-course-int-firsta {
+  width: 702rpx;
+  margin: 0 auto;
+}
+
+.van-right-txtzhac {
+  background-color: #fff;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.c-course-int-titlea {
+  max-height: 100%;
+  color: #333;
+  font-size: 30rpx;
+  line-height: 43rpx;
+  font-weight: Bold;
+}
+
+.c-course-int-titleb {
+  color: #333;
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  text-align: left;
+  line-height: 36rpx;
+  padding-bottom: 12rpx;
+  margin-top: 4rpx;
+}
+
+.c-pur-left {
+  text-align: left;
+  color: #333;
+  font-size: 24rpx;
+}
+
+.course-project-contenta {
+  color: #333;
+  font-size: 24rpx;
+}
+
+.course-project-contenta radio {
+  font-size: 24rpx;
+  transform: scale(0.5);
+}
+
+/*周六*/
+
+.course-six-title {
+  font-family: PingFang-SC-Bold;
+  font-weight: Bold;
+  color: #333;
+  font-size: 30rpx;
+  padding-top: 24rpx;
+  padding-bottom: 10rpx;
+  /* border-bottom: 1rpx dotted #e4e4e4; */
+}
+
+.course-sixe-title {
+  font-family: PingFang-SC-Bold;
+  font-weight: Bold;
+  color: #333;
+  font-size: 30rpx;
+  height: 59rpx;
+  line-height: 59rpx;
+  border-bottom: 1rpx dotted #e4e4e4;
+}
+
+.pur-still-hover {
+  color: #00c693;
+}
+
+.pur-rednumber {
+  color: #e75571;
+  font-size: 24rpx;
+  font-weight: bold;
+}
+
+.pur-item-threea {
+  background-color: #fff;
+  width: 702rpx;
+  margin: 0 24rpx;
+  padding-bottom: 6rpx;
+  margin-bottom: 20rpx;
+}
+
+.pur-item-threeb {
+  width: 662rpx;
+  margin-left: -12rpx;
+}
+
+.pur-line{
+  height: 70rpx;
+  line-height: 70rpx;
+}
+
+.pur-item-threec {
+  width: 50%;
+}
+
+.pur-item-threed {
+  color: #333;
+  font-size: 24rpx;
+  width: 50%;
+  text-align: right;
+}
+
+.pur-item-boxa {
+  padding: 0 24rpx;
+}
+
+/*下单*/
+
+.pur-item-placeordera {
+  background-color: #fff;
+  width: 702rpx;
+  height: 280rpx;
+  margin: 0 24rpx;
+  margin-bottom: 20rpx;
+}
+
+.pur-item-placeorderb {
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.ts {
+  width: 136rpx;
+  margin-top: 17rpx;
+  font-size: 34rpx;
+  float: left;
+  color: #333;
+}
+
+.myInfoBxo {
+  width: 650rpx;
+  height: 160rpx;
+  font-size: 24rpx;
+  float: left;
+  padding-top: 20rpx;
+  margin-right: 24rpx;
+}
+
+.myInfo {
+  color: #999;
+  font-size: 30rpx;
+}
+
+.jisuan-money {
+  margin: 0 24rpx;
+  background: #fff;
+  padding: 10rpx 24rpx 0rpx 24rpx;
+}
+
+.jisuanA {
+  padding-top: 10rpx;
+}
+
+.shifu {
+  height: 35rpx;
+  line-height: 35rpx;
+  font-size: 24rpx;
+  font-family: SanFranciscoDisplay-Regular;
+  color: rgba(51, 51, 51, 1);
+}
+
+.shifuC {
+  height: 58rpx;
+  line-height: 58rpx;
+  font-size: 24rpx;
+  font-family: SanFranciscoDisplay-Regular;
+  color: rgba(51, 51, 51, 1);
+}
+
+.shifu-money {
+  height: 35rpx;
+  line-height: 35rpx;
+  font-size: 24rpx;
+  font-family: SanFranciscoDisplay-Regular;
+  color: rgba(51, 51, 51, 1);
+}
+
+.jisuanB {
+  padding-bottom: 10rpx;
+  border-bottom: 1rpx dotted #e4e4e4;
+}
+
+.shifu-moneys {
+  font-size: 20rpx;
+  font-family: SanFranciscoDisplay-Bold;
+  color: rgba(232, 85, 113, 1);
+}
+
+.jisuanC {
+  height: 58rpx;
+  line-height: 58rpx;
+}
+
+/*已线下支付*/
+
+.pur-item-paya {
+  width: 702rpx;
+  margin-bottom: 20rpx;
+}
+
+.l-stop-a {
+  vertical-align: middle;
+  padding: 0 0rpx;
+  line-height: 70rpx;
+  background: url('http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/student/offlinepaymentbg.png');
+  background-size: 300rpx 70rpx;
+  background-repeat: no-repeat;
+  font-size: 30rpx;
+  color: #00c693;
+  text-align: center;
+  width: 300rpx;
+  height: 70rpx;
+}
+
+/*点击过后换背景色*/
+
+.l-stop-avisited {
+  vertical-align: middle;
+  padding: 0 0rpx;
+  line-height: 70rpx;
+  background: url('http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/student/proceedcheckout.png');
+  background-size: 300rpx 70rpx;
+  background-repeat: no-repeat;
+  font-size: 30rpx;
+  color: #fff;
+  text-align: center;
+  width: 300rpx;
+  height: 70rpx;
+}
+
+.l-stop-b {
+  float: right;
+}
+
+.les-offlinepaymentbtna {
+  display: flex;
+}
+
+.pur-close-stopbtna {
+  width: 702rpx;
+  margin: 0 24rpx;
+  margin-top: 35rpx;
+  margin-bottom: 40rpx;
+}
+
+.class-tutors {
+  width: 20rpx;
+}

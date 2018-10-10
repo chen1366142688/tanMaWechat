@@ -1,0 +1,60 @@
+<!--pages/index/Add-student/Add-student.wxml-->
+<view class='Add-student'>
+  <view class='Add-student-headline'>
+    <view class='headline-search'>
+      <view class='search-input'>
+        <input type='text' bindinput="inputContent" class='caoch-suo' maxlength='20' placeholder-class='coach-s' placeholder='搜索学员姓名' confirm-type='search' bindconfirm="searchBtn" value='{{value}}'></input>
+      </view>
+      <view class='search-Click' bindtap='queryByName'>
+        <image class='search-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/coach/iteration/close.png'></image>
+      </view>
+    </view>
+  </view>
+  <scroll-view class='Add-student-section' scroll-y="true" bindscrolltolower="scrolltolower">
+    <view class='section-one' wx:for-item="clx" wx:for="{{studentList}}" wx:key="curriumise">
+      <view class='section-one-name'>{{clx.nickName}}</view>
+      <view class='section-one-iPhone'>{{clx.phoneNum}}</view>
+      <view class='section-one-add'>
+        <view class='section-one-add-img' bindtap='addstudent' wx:if="{{clx.isSignUp  == 0 && clx.isSpareTime == 1}}" data-ordercode='{{clx.orderCode}}' data-studentid ='{{clx.studentId }}' data-studentuserid='{{clx.studentUserId}}'>
+          <image class='Add-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/coach/iteration/Add.png'></image>
+        </view>
+        <view class='section-one-add-text' wx:elif="{{clx.isSignUp == 1 }}">已添加</view>
+        <view class='section-one-add-text' wx:if="{{clx.isSpareTime == 0 && clx.isSignUp == 0}}">无课时</view>
+      </view>
+    </view> 
+  </scroll-view>
+  <view class='Add-section-footer' bindtap='custom'>
+    <image class='section-footer-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/coach/iteration/Add-white.png'></image>
+    <view class='section-footer-text'>自 定 义 添 加</view>
+  </view>
+</view>
+<!-- 自定义添加模态框 -->
+<view class='footer-Add-model' wx:if="{{tabImgGay}}" >
+  <view class='mockshade' catchtap='closeMock'>
+  
+  </view>
+  <view class='model-section'>
+    <view class='model-section-Name'>
+      <input type='text' class='model-section-Name-input' maxlength='20' placeholder-class='coach-s' placeholder='* 学生姓名（必填）' bindinput='stuName' value='{{stuName}}'></input>
+    </view>
+    <view class='model-section-iPhone'>
+      <input type='number' class='model-section-iPhone-input' maxlength='11' placeholder-class='coach-s' placeholder='* 学生电话号码（选填）' bindinput='stuPhone'></input>
+    </view>
+    <view class='alt'>*自定义添加的学员不纳入课时记录。</view>
+    <view class='submit' bindtap='submit'>提 交</view>
+  </view>
+</view>
+<!-- 添加学员按钮模态框 -->
+<view class='footer-Add-student' wx:if="{{tabImgFay}}" bindtap='dialog'>
+  <view class='student-model'>
+    <view class='student-model-text'>是否将学生姓名添加到这堂课里</view>
+    <view class='student-model-button'>
+      <view class='model-button-cancel' bindtap='cancel'>取 消</view>
+      <view class='model-button-confirm' bindtap='confirm'>确 定</view>
+    </view>
+  </view>
+</view>
+<view class='kong' wx:if="{{Period}}">
+    <image class='kong-img' src='../../../imgs/dataEmpty.png'></image>
+    <text class='kong-text'>数据为空</text>
+  </view>

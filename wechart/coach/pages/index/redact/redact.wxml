@@ -1,0 +1,146 @@
+<!--pages/index/redact/redact.wxml-->
+<view class='redact'>
+  <!-- 开课课程  -->
+  <view class='course-curriculum'>
+    <text class='compile-categorye'>新增课程</text>
+    <image src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/coach-doubt.png' type="primary" bindtap="modalcnte" class='Query'></image>
+    <view class='compile-select'>
+      <view class='compile-select-N'>
+        <picker bindchange="classBindChange" disabled="{{attendClassFlag}}" value="{{classIndex}}" range="{{classList}}">
+          <view>
+            <view bindtap='classClick'>{{classList[classIndex]}} </view>
+          </view>
+        </picker>
+      </view>
+      <image wx:if="{{!attendClassFlag}}" class='compile-select-T' src='{{imgUrl}}xiala2.png'></image>
+    </view>
+  </view>
+  <!-- 课程  -->
+  <view class='course-curriculum1'>
+    <view class='course-curriculum-S'>
+      <text class='S-1'>{{classInfo.itemName}} {{classInfo.maxMember}}人班</text>
+      <text class='S-2'>{{classInfo.className}}</text>
+    </view>
+    <view class='course-curriculum-X'>
+      <view class='X-1'>
+        <image class='l-cdcenter-posa' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/coach.png'></image>
+        <text class='c-username-text'>{{classInfo.classCoach}}</text>
+        <image class='c-touser-xcxb' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/man.png'></image>
+        <image class='c-touser-xcxa' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/grade-blue.png'></image>
+        <text class='c-renshu in'>{{classInfo.itemStudentGrade}}</text>
+        <image class='c-date' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/popularity2.png'></image>
+        <text class='c-data-txt in'>{{classInfo.popularity? classInfo.popularity:'0' }}</text>
+      </view>
+      <view class='X-2'>
+        <view class='van-left-txt'>
+          <view class='van-rmba'>
+            <text class='van-rmbb-smal'>RMB</text>
+            <text class='van-rmbc' wx:if="{{classInfo.courseCostTotal}}">{{classInfo.courseCostTotal/100}}</text>
+          </view>
+          <view class='van-rmbe' wx:if="{{classInfo.courseTime}}">{{classInfo.courseCount}}课时</view>
+          <!-- <view class='van-rmbe' wx:if="{{classInfo.courseTime}}">{{classInfo.courseCount}}课时/{{classInfo.courseTime/10}}h</view> -->
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='course-curriculum' wx:if="{{showAttendPeriod}}">
+    <text class='compile-category'>开课期数</text>
+    <view class='compile-select'>
+      <text class='compile-select-N'>{{attendPeriod}}节</text>
+    </view>
+  </view>
+  <view class='Addition-coach' bindtap='toChooseCoach'>
+    <text class='compile-category'>授课教练</text>
+    <view class='compile-select'>
+      <text class='compile-select-N2'>{{classCoach?classCoach.nickName:'教练昵称'}}</text>
+      <image class='compile-select-T2' wx:if="{{!attendClassFlag}}" src='{{imgUrl}}next.png'></image>
+    </view>
+  </view>
+  <view class='course-curriculum'>
+    <text class='compile-category'>培训场馆</text>
+    <view class='compile-select'>
+      <view class='compile-select-N'>
+        <picker bindchange="homeBindChange" data-val="" value="{{homeIndex}}" range="{{homeList}}">
+          <view>
+            <view>{{homeList[homeIndex]}} </view>
+          </view>
+        </picker>
+      </view>
+      <image class='compile-select-T' src='{{imgUrl}}xiala2.png'></image>
+    </view>
+  </view>
+  <!-- <view class='course-curriculum'>
+    <text class='compile-categorye'>归属时段</text>
+    <image src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/coach-doubt.png'  type="primary" bindtap="modalcnt" class='Query'></image>
+    <view class='compile-select'>
+        <view class='compile-select-N'>
+          <picker bindchange="classSectionBindChange" disabled="{{attendClassFlag}}" value="{{classSectionIndex}}" range="{{classSectionList}}">
+            <view>
+              <view bindtap='classSectionClick'>{{classSectionList[classSectionIndex]}} </view>     
+            </view>
+          </picker>    
+        </view>
+        <image class='compile-select-T' wx:if="{{!attendClassFlag}}" src='{{imgUrl}}xiala2.png'></image>  
+    </view>
+  </view> -->
+  <view class='course-curriculum' >
+    <text class='compile-category'>学生人数上限</text>
+    <view class='compile-selecta'>
+      <view class='compile-select'>
+        <view class='compile-select-N'>
+          <picker bindchange="bindPickerChange" value="{{maxMember}}" range="{{array}}">
+            <view class="picker">{{array[maxMember]}}</view>
+          </picker>
+        </view>
+        <image class='compile-select-T' src='{{imgUrl}}xiala2.png'></image>
+      </view>
+    </view>
+  </view>
+  <view class='course-curriculum'>
+    <text class='compile-category'>自定义日期</text>
+    <view class='compile-selecta'>
+      <view class='compile-select'>
+        <view class='compile-select-N'>
+          <picker bindchange="bindDateChange" mode="date" value="{{attendDate}}">
+            <view>
+              <view>{{attendDate}}</view>
+            </view>
+          </picker>
+        </view>
+        <image class='compile-select-T' src='{{imgUrl}}xiala2.png'></image>
+      </view>
+    </view>
+  </view>
+
+  <view class='course-curriculum'>
+    <text class='compile-category' style='width:210rpx;'>自定义开始时间</text>
+    <view class='compile-select'>
+      <view class='compile-select-N'>
+        <picker bindchange="bindTimeChange" start="08:00" end="22:00" mode="time" value="{{dayTimeStart}}">
+          <view>
+            <view>{{dayTimeStart}} </view>
+          </view>
+        </picker>
+      </view>
+      <image class='compile-select-T' src='{{imgUrl}}xiala2.png'></image>
+    </view>
+  </view>
+</view>
+
+<view class='explain'>*说明：自定义日期和时间不得和已有课程的时段冲突</view>
+<view class='course-curriculum'>
+  <text class='compile-category' style='width:210rpx;'>自定义结束时间</text>
+  <view class='compile-select'>
+    <view class='compile-select-N'>
+      <picker bindchange="bindTimeChangeEnd" start="08:00" end="22:00" mode="time" value="{{dayTimeEnd}}" start="{{minTime}}">
+        <view>
+          <view>{{dayTimeEnd}} </view>
+        </view>
+      </picker>
+    </view>
+    <image class='compile-select-T' src='{{imgUrl}}xiala2.png'></image>
+  </view>
+</view>
+
+<button class='settle-accounts' bindtap='submitAttend' wx:if="{{optionType != '0'}}">提 交 结 果</button>
+<button class='settle-accounts' bindtap='submitAttend' wx:if="{{optionType == '0'}}">确 认 加 课</button>

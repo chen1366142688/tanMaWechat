@@ -1,0 +1,144 @@
+/* pages/curriculum/Curriculum-Order/Curriculum-Order.wxss */
+
+.Curriculum-Order {
+  width: 750rpx;
+  margin: 0rpx;
+  padding: 0rpx;
+  margin-top: 20rpx; 
+  background-color: #fff;
+}
+
+.Order-one {
+  width: 750rpx;
+  height: 120rpx;
+  font-size: 24rpx;
+  color: #333;
+}
+
+.Order-headline {
+  width: 750rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+
+.headline-category {
+  width: 160rpx;
+  display: inline-block; 
+  line-height: 30rpx;
+  height: 30rpx;
+  text-align: center;
+  font-size: 20rpx;
+  margin: 0 auto;
+  border: 1rpx solid #333;
+  margin-left: 20rpx;
+  border-radius: 5rpx;
+}
+
+.headline-text{
+  display: inline-block;
+  width: 520rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 24rpx;
+  margin-left: 15rpx;
+  font-weight:bold;
+  vertical-align: middle;
+}
+
+.Order-Arrange{
+  width: 750rpx;
+  height: 60rpx;
+}
+
+.Arrange-T{
+  width: 500rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  float: left;
+}
+
+.T-one-img{
+  width: 20rpx;
+  height: 20rpx;
+  margin-top: 20rpx;
+  margin-left: 22rpx;
+  float: left;
+}
+
+.T-two-img{
+  width: 20rpx;
+  height: 20rpx;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  float: left;
+}
+.T-there-img{
+  width: 24rpx;
+  height: 24rpx;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  float: left;
+}
+.T-four-img{
+  width: 20rpx;
+  height: 20rpx;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  float: left;
+}
+
+.T-one-text{
+  line-height: 60rpx;
+  margin-left: 11rpx;
+  float: left; 
+}
+
+.T-two-text{
+  line-height: 60rpx;
+  margin-left: 11rpx;
+  float: left; 
+}
+.T-there-text{
+  line-height: 60rpx;
+  margin-left: 11rpx;
+  float: left; 
+}
+.T-four-text{
+  line-height: 60rpx;
+  margin-left: 11rpx;
+  float: left;
+  max-width: 100rpx; 
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+
+.Arrange-Text{
+  width: 200rpx;
+  text-align: right;
+  margin-right: 24rpx;
+  /* margin-top: -41rpx; */
+  height: 60rpx;
+  line-height: 60rpx;
+  float: right;
+  font-size: 20rpx;
+}
+
+.period{
+  color: #E85571;
+}
+
+.over{
+  text-align: center;
+  font-size: 20rpx;
+  color: #999;
+  width: 750rpx;
+  height: 20rpx;
+  line-height: 20rpx;
+  margin-bottom: 40rpx;
+}
+
+.class-list{
+  margin-bottom: 40rpx;
+}

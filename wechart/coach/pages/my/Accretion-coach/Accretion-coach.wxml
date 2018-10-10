@@ -1,0 +1,70 @@
+<!--pages/my/Accretion-coach/Accretion-coach.wxml-->
+<view class='Accretion-coach clearfloat'>
+  <view class='Seek'>
+    <view class='venue-seek'>
+      <input type='text' disabled="{{showModal}}" class='caoch-suo' maxlength='20' placeholder-class='coach-sou' placeholder='搜索教练' value="{{value}}"  bindinput='searchInput'></input>
+      <view class='venue-seek-Click' bindtap='search'>
+        <image class='coach-search' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/search.png'></image>
+      </view>
+    </view>
+  </view>
+<scroll-view class='coach-section clearfloat'   bindscrolltolower="scrolltolower">
+   <view class='coach-Single' wx:for="{{coachList}}" wx:key="itemName" wx:for-item="coach" bindtap='coachInformation' data-coachUserId="{{coach.coachUserId}}" data-phone="{{coach.phoneNo}}">
+    <view class='Single-header'>
+      <view class='coach-jiao-one '>
+        <image class='jiao-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/location7.png'></image>
+        <text class='jiao-text'>{{coach.provinceName? coach.provinceName:'' }}-{{coach.cityName? coach.cityName:'' }}</text>
+      </view>
+      <view class='coach-jiao-two'>
+        <view class="coach-jiao-one-item"  wx:for="{{coach.itemNameList}}" wx:key="coachId" wx:for-item="itemName">
+          <image class='qiu-img' src="{{itemName.itemPhotoAddress}}"></image>
+          <text class='qiu-text'>{{itemName.itemName}}</text>
+        </view>
+      </view>
+    </view>
+    <view class='Single-section clearfloat'>
+      <image class='Head-Portraits' src="{{coach.avatarUrl }}"></image>
+      <view class='section-center clearfloat'>
+        <view class='section-center-one'>
+          <view class='section-center-one-left'>
+            <view class='one-left-name'>{{coach.nickName }}</view>
+           <image class='one-left-gender' wx:if="{{coach.gender==1}}" src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/man-blue.png'></image>
+            <image class='one-left-gender' wx:if="{{coach.gender==2}}" src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/woman-blue.png'></image>
+            <view class='one-left-attestation' wx:if="{{coach.authStatus =='1'}}">已认证</view>
+            <view class='one-left-attestation' wx:else>未认证</view>
+          </view>
+          <view class='section-center-one-right'>
+           <image class='one-right-gender' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/class-blue.png'></image>
+            <view class='one-right-name'>{{coach.athleteName? coach.athleteName:'暂无' }}</view>
+          </view>
+        </view>
+
+        <view class='section-center-two clearfloat'>
+          <view class='section-center-two-left clearfloat'>手机号 {{coach.phoneNo? coach.phoneNo:'' }}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  </scroll-view>
+</view>
+<view class='modal' wx:if="{{showModal}}" style='width:{{width}}px;height:{{height}}px'>
+  <view class='modalContent'>
+    <view class='title'>绑定验证</view>
+    <text class='content' decode='true'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;绑定需要通过教练本人的验证。系统会将验证码发给当前教练，请将TA收到的验证码填写到下面横线上：</text>
+    <view class='sendCode'>
+      <input class='phoneInput' placeholder="请输入验证码" placeholder-class='placeCode' type='number' bindinput='inputCode' maxlength='6'/>
+      <view class="sendCodes" wx:if="{{showCode}}">{{thisTime}}s</view>
+      <view class='sendCodes' wx:if="{{!showCode}}" bindtap='sendCode'>发送短信验证</view>
+    </view>
+    <view class='btnGlrup'>
+      <view class='cencel' bindtap='closeModal'>取消</view>
+      <view class='confrim' bindtap='submitCode'>提交验证</view>
+    </view>
+  </view>
+  <image class='closeModal' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/close.png' bindtap='closeModal'></image>
+</view>
+ <!--  没有数据显示空空如也  -->
+  <view class='kong' wx:if="{{Period}}">
+    <image class='kong-img' src='../../../imgs/dataEmpty.png'></image>
+    <text class='kong-text'>数据为空</text>
+  </view>

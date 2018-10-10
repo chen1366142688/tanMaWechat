@@ -1,0 +1,179 @@
+var timer; // 计时器
+Page({
+  data: {
+    seconds: 0,
+    secondMax: 3599,
+    timeMax:'60:00',
+    maxTime:'60:00',
+    actionMax:true,
+    stopMaxTime:false,
+    resetMax:false,
+    time: '00:00',
+    cost: 0,
+    action:true,
+    stopTime:false,
+    reset:false,
+    childName: [ 
+      { "name": '选项1', "active": true },
+      { "name": '选项2', "active": false },
+      { "name": "选项3", "active": false },
+      { "name": '选项4', "active": false }
+    ],
+    active1:false,
+    active2: true,
+    active3: false,
+    active4: true,
+    active: 'Exercise-Program-choose-one'
+  },
+  cilckChild(e) {
+    const that = this;
+    let index = e.currentTarget.dataset.index;
+    let childName = that.data.childName;
+    for (let i = 0; i < childName.length; i++) {
+      if (index == i) {
+        childName[i].active = true;
+      } else {
+        childName[i].active = false;
+      }
+    }
+    that.setData({ childName: childName })
+  },
+  onLoad: function (options) {},
+  timing(e){
+    this.setData({ action: !this.data.action, stopTime:false})
+    timing(this)
+  },
+  stopTime(e) {
+    console.log("现在的记录时间时长：" + this.data.seconds)
+    this.setData({ stopTime: true, reset: true })
+  },
+  reset(e) {
+    const that = this;
+    if (!that.data.reset) {
+      that.setData({ stopTime: true })
+    } else {
+      that.setData({ seconds: 0, action: !that.data.action })
+    }
+  },
+  timingMax(e){
+    this.setData({ actionMax: !this.data.actionMax, stopMaxTime: false })
+    timingMax(this)
+  },
+  stopMaxTime(e){
+    console.log("现在是记录的时间时长：",this.data.secondMax)
+    this.setData({ stopMaxTime: true, resetMax: true })
+  },
+  resetMax(e) {
+    const that = this;
+    if (!that.data.resetMax) {
+      that.setData({ stopMaxTime: true })
+    } else {
+      that.setData({ secondMax: 3600, actionMax: !that.data.actionMax })
+    }
+  },
+  
+  onReady: function () { },
+  onShow: function () { },
+  onHide: function () { },
+  onUnload: function () { },
+  onPullDownRefresh: function () { },
+  onReachBottom: function () { },
+  onShareAppMessage: function (res) { }
+})
+//正计时
+function timing(that) {
+  var seconds = that.data.seconds
+  if (seconds > 3600) {
+    that.setData({
+      time: '60:00'
+    });
+    return;
+  }
+  if (that.data.stopTime){
+    if(!that.data.reset){
+      that.setData({ seconds: 0, action: !that.data.action })
+      return;
+    }
+    return;
+  }
+  setTimeout(function () {
+    that.setData({
+      seconds: seconds + 1
+    });
+    timing(that);
+  }, 1000)
+  formatSeconds(that)
+}
+function formatSeconds(that) {
+  var mins = 0, hours = 0, seconds = that.data.seconds, time = ''
+  if (seconds < 60) {
+
+  } else if (seconds < 3600) {
+    mins = parseInt(seconds / 60)
+    seconds = seconds % 60
+  } else {
+    mins = parseInt(seconds / 60)
+    seconds = seconds % 60
+    hours = parseInt(mins / 60)
+    mins = mins % 60
+  }
+  that.setData({
+    // time: formatTime(hours) + ':' + formatTime(mins) + ':' + formatTime(seconds)
+    time: formatTime(mins) + ':' + formatTime(seconds)
+  });
+}
+function charging(that) {
+  if (that.data.seconds < 600) {
+    that.setData({cost : 1})
+  }
+}
+//倒计时
+function timingMax(that) {
+  var seconds = that.data.secondMax
+  if (seconds <= 0) {
+    that.setData({
+      timeMax: '00:00'
+    });
+    return;
+  }
+  if (that.data.stopMaxTime) {
+    if (!that.data.resetMax) {
+      that.setData({ secondMax: 3600, actionMax: !that.data.actionMax })
+      return;
+    }
+    return;
+  }
+  setTimeout(function () {
+    that.setData({
+      secondMax: seconds - 1
+    });
+    timingMax(that);
+  }, 1000)
+  formatSecondsMax(that)
+}
+function formatSecondsMax(that) {
+  var mins = 60, hours = 1, seconds = that.data.secondMax, timeMax = ''
+  if (seconds < 60) {
+    mins = parseInt(mins%60)
+  } else if (seconds <= 3600) {
+    mins = parseInt(seconds / 60)
+    seconds = seconds % 60
+  } else {
+    mins = parseInt(seconds / 60)
+    seconds = seconds % 60
+    hours = parseInt(mins / 60)
+    mins = mins % 60
+  }
+  console.log(formatTime(mins))
+  console.log(formatTime(seconds))
+  that.setData({
+    // time: formatTime(hours) + ':' + formatTime(mins) + ':' + formatTime(seconds)
+    timeMax: formatTime(mins) + ':' + formatTime(seconds)
+  });
+}
+function formatTime(num) {
+  if (num < 10)
+    return '0' + num
+  else
+    return num + ''
+}

@@ -1,0 +1,15 @@
+<!--pages/My/alter-Iphone/alter-Iphone.wxml-->
+<view class='alter-Iphone'>
+  <view class='alter-input'>
+    <input class="input" type="number" maxlength="11" name="userName" placeholder="输入手机号" placeholder-class='input-cbcb' bindinput='phoneNum' />
+  </view>
+  <view class='Verification-code'>
+    <input class="Verification-code-input"type="number" maxlength="6" name="userCode" placeholder="输入验证码" placeholder-class='input-cbcb' bindinput='phoneCode' />
+    <view class='Send' bindtap='sendCode'  wx:if="{{showCode}}">发送验证码</view>
+    <view class='Send'  wx:if="{{showCodes}}">({{thisTime}}s)</view>
+  </view>
+  <view class='login-password'>
+    <input class="login-password-input" maxlength="18" password="true" name="userPwd" placeholder="输入登录密码" placeholder-class='input-cbcb' bindinput='phonePwd'/>
+  </view>
+  <view type="default" class="preserve" bindtap='submit'>提交结果</view>
+</view>

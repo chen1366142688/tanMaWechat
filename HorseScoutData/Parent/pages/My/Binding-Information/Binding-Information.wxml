@@ -1,0 +1,51 @@
+<!--pages/My/Binding-Information/Binding-Information.wxml-->
+<view class='Binding-Information'>
+  <view class='ID-number'>
+    <input class='ID-number-input' type="idcard" maxlength="18" name="userName" placeholder="请输入您孩子的完整身份证号" placeholder-class='input-cbcb'></input>
+    <image class='ID-number-search' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/search.png'></image>
+  </view>
+  <view class='Name-age'>
+    <view class='Name-age-section'>
+      <view class='Name-age-left'>
+        <view class='Name-age-left-Name'>孩子姓名</view>
+        <image class='Name-age-left-gender' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/My/man.png'></image>
+      </view>
+      <view class='Name-age-right'>15岁 | 成都 | 所在学校</view>
+    </view>
+  </view>
+  <view class='Prompt'>
+    <view class='Prompt-text'>您搜索的孩子尚未在平台登记，可到</view>
+    <view class='Prompt-button'>这里</view>
+    <view class='Prompt-text'> 完成添加。</view>
+  </view>
+
+  <!-- 绑定模态框 -->
+  <view class='bindingModal' wx:if="{{bindingModalShow}}">
+    <view class='bindingModal-section'>
+      <view class='bindingModal-section-headline'>
+        <view class='headline-text'>绑定验证</view>
+        <image class='headline-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/My/Close.png'></image>
+      </view>
+      <view class='bindingModal-section-NR'>
+        <view class='bindingModal-section-NR-headline'>绑定需要通过孩子已有监护人的验证。系统会将验证码发给当前选定的监护人，请将TA收到的验证码填写到下面：</view>
+        <view class='Exercise-Program-headline' wx:if="{{childName.length>0}}">
+          <scroll-view class='Exercise-Program-choose' scroll-x="{{scroll}}">
+            <view class='Exercise-Program-choose-two {{child.active ? "Exercise-Program-choose-one":""}}' wx:for="{{childName}}" wx:key="uqine" wx:for-item="child" bindtap='cilckChild' data-index="{{index}}">
+              <view class='Exercise-Program-choose-two-Name'>孩子 {{index+1}} {{child.name}}</view>
+              <view class='Exercise-Program-choose-two-iPhone'>{{index+1}} {{child.iPhone}}</view>
+            </view>
+          </scroll-view>
+        </view>
+        <view class='bindingModal-section-NR-iPhone'>
+          <input class='NR-iPhone-input' type="number" maxlength="11" name="userName" placeholder="请输入手机号" placeholder-class='input-cbcb'></input>
+          <!-- <input class='NR-iPhone-input' type="number" maxlength="6" name="userName" placeholder="请输入验证码" placeholder-class='input-cbcb'></input> -->
+          <text class='NR-iPhone-text'>发送验证码</text>
+        </view>
+        <view class='bindingModal-section-NR-Submit'>
+          <view class='bindingModal-section-NR-Submit-button'>提交验证</view>
+          <!-- <view class='bindingModal-section-NR-Submit-button1'>提交验证</view> -->
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

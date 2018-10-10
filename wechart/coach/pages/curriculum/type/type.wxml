@@ -1,0 +1,2 @@
+<!--pages/curriculum/type/type.wxml-->
+<web-view src="{{urlappxcx}}/type.html?token={{userInfo.token}}&userid={{userInfo.userId}}"></web-view>

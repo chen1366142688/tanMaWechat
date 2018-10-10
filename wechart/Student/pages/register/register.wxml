@@ -1,0 +1,121 @@
+<!--pages/register/register.wxml-->
+<view class="page">
+  <!--页头-->
+  <view class="page__bd">
+    <!--学员a start-->
+    <view class="container">
+      <view class="notcheckedai">
+        <view class="notcheckeda_j">
+          <view class="head-img">
+            <image src="{{head_image_url}}"></image>
+          </view>
+          <view class="weui-cells_form log_name_a">
+        <view class="log_name_b">
+          <!--start--> <!--end-->
+          <!-- <view class="weui-cell page-body-form-item notname_a">
+            <view class="weui-cell__hd user-cell__hd user-typeac">
+              <image src="{{url}}c23.png"></image>
+            </view>
+            <view class="weui-cell__hd  notname_a log_name_c">
+              <radio-group class="radio-group log_name_e" bindchange="radioChange">
+                <radio class="radio wx-radio-input wx-radio-input-checked" wx:for-items="{{items}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}">
+                  <text>{{item.value}}</text>
+                </radio>
+              </radio-group>
+            </view>
+          </view>
+          <view class="locationsec_b" wx:if="{{showSchool}}">
+            <view class="locationsec_a">
+              <image src='{{url}}c21.png'></image>
+            </view>
+            <view class="log_name_d locationsec_c">
+              <picker style='width:50%' bindchange="provinceBindChange" data-val="" value="{{provinceIndex}}" range="{{provinceList}}">
+                <view class='locationsec_e'>
+                  <view style='width:100%'>{{provinceList[provinceIndex]}} </view>
+                  <view class="schoolu_boxe"></view>
+                </view>
+              </picker>
+              <picker style='width:50%' bindchange="cityBindChange" data-val="" value="{{cityIndex}}" range="{{cityList}}">
+                <view class='locationsec_e'>
+                  <view style='width:100%'>{{cityList[cityIndex]}} </view>
+                  <view class="schoolu_boxe"></view>
+                </view>
+              </picker>
+            </view>
+          </view>
+          <view class="weui-cell page-body-form-item" wx:if="{{showSchool}}">
+            <view class="weui-cell__hd user-cell__hd schoolu_a">
+              <image src='{{url}}c25.png'></image>
+            </view>
+            <view class="weui-cell__hd log_name_d">
+              <input class="weui-inputpage-body-form-value inpblocknicka" bindfocus="schoolFocus" focus="{{focusFlag}}" maxlength="100" type="text" placeholder="请输入学校名称" value="{{schoolName}}" placeholder-class="psection" />
+            </view>
+          </view> -->
+          <view class="page-body-form-item">
+            <view class="weui-cell__hd user-cell__hd user-typead">
+              <image src='{{url}}c20.png'></image>
+            </view>
+            <view class="weui-cell__hd log_name_d">
+              <input class="weui-inputpage-body-form-value inpblocknicka" bindinput="userNameChange" maxlength="50" type="text" placeholder="学生姓名" value="" placeholder-class="psection" />
+            </view>
+          </view>
+
+        </view>
+
+        <view class="notcheckedabbg bindingmobiab notcheckedac schoolu_boxd">
+          <view class="user-typeae notcheckedad">
+            <image src='{{url}}c22.png'></image>
+          </view>
+          <view class="weui-cell_vcode bindingmobiaa notcheckedae log_name_d">
+            <view class="schoolu_boxc">
+              <input class="page-body-form-value bindingmobileainputa" bindinput="userPhoneNoChange" type="number" placeholder="请先验证您的手机号" value="" maxlength="11" placeholder-class="psection" />
+            </view>
+          </view>
+
+        </view>
+
+        <!-- 验证码start -->
+        <view class="notcheckedabbg bindingmobiab notcheckedac schoolu_boxd">
+          <view class="checksendcodea">
+            <image class='checksendcode-imagea' src='{{url}}c24.png'></image>
+          </view>
+          <view class="weui-cell_vcode bindingmobiaa notcheckedae login-pleasea-code">
+            <view class="weui-cell__ft notcheckedaf">
+              <input class="page-body-form-value" type="number" bindinput='codeChange' placeholder="请输入验证码" value="" maxlength="6" placeholder-class="psection" />
+            </view>
+            <view class="weui-cell__ft" wx:if="{{showCode}}"> 
+              <view class="schoolu_b">({{thisTime}}s)</view>
+            </view>
+            <view class="weui-cell__ft" wx:if="{{!showCode}}">
+            <view class='waikuang'>
+            </view>
+              <button bindtap="getCode" class="btna weui-vcode-btn sendbutton-goa">发送验证码</button>
+            </view>
+          </view>
+        </view>
+      </view>
+        </view>
+      </view>
+      
+      <view wx:if="{{showadultDistance}}" style='width:750rpx;height:2rpx;padding-top:94rpx;' class=''></view>
+      <!-- <view class='reg_sec_linea'></view> -->
+      <!-- 注册学员账户 -->
+      <view wx:if="{{noBack==true}}" class="page__bd page__bd_spacing reg_sec_ac" >
+        <view bindtap="submitData" class="registrationstubtna-one"> <view class='biankuang-one'> 验 证 手 机 号</view></view>
+        <view bindtap="navCallBack" class="return"> <view class='biankuang-return'> 返回</view></view>
+      </view>
+      <view wx:if="{{noBack==false}}" class="page__bd page__bd_spacing reg_sec_a">
+        <view bindtap="submitData" class="registrationstubtna"> <view class='biankuang'> 验 证 手 机 号</view></view>
+      </view>
+      <!-- <view class="btn-area reg_sec_b clearfloat">
+          <view bindtap='navCallBack' hover-class="navigator-hover" class="registecoacha-back">
+            <image class='reg_sec_backfista' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/student/backfist.png'></image>
+            返回
+          </view>
+        <navigator target="miniProgram" open-type="navigate" app-id="wx378740f432235c5b" path="pages/Introduction/Introduction" extra-data="" version="release" hover-class="navigator-hover" class="registecoachaa">注册教练</navigator>
+        <navigator target="miniProgram" open-type="navigate" app-id="wx2cd75bb48408e71b" path="pages/Stadiums-and-stadiums/Introduction/Introduction" extra-data="" version="release" hover-class="navigator-hover" class="registecoachab">场馆端</navigator>
+      </view> -->
+    </view>
+  </view>
+  <!--学员a-->
+</view>

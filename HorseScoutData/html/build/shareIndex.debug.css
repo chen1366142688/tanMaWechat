@@ -1,0 +1,104 @@
+body {
+  font-family: PingFang-SC-Medium;
+  padding-top: 0.533333rem;
+  line-height: 0;
+  height: 100%;
+}
+
+#main {
+  height: 6.666667rem;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#main2 {
+  height: 5.333333rem;
+  width: 98%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#app {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 0.8rem;
+}
+
+.topInfo {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 0.32rem;
+  align-items: flex-end;
+}
+
+.topIcon {
+  width: 0.4rem;
+  height: 0.4rem;
+  align-self: flex-end;
+}
+
+.topText {
+  font-size: 0.373333rem;
+  color: rgba(171,171,171,1);
+  line-height: 0.32rem;
+}
+
+.sore {
+  color: #A088D4;
+  font-size: 0.933333rem;
+}
+
+.Proportion {
+  color: #333333;
+  font-weight: bold;
+}
+
+.imgBox {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-right: 0.133333rem;
+}
+
+.hr {
+  width: 90%;
+  height: 0.026667rem;
+  background: rgba(228,228,228,1);
+  margin: 0 auto 0.493333rem auto;
+}
+
+.describe {
+  width: 93.3333%;
+  min-height: 2.706667rem;
+  font-size: 0.32rem;
+  font-family: PingFang-SC-Regular;
+  color: rgba(51,51,51,1);
+  line-height: 0.48rem;
+  text-indent: 0.64rem;
+  margin: 0 auto;
+  padding-bottom: 0.506667rem;
+}
+
+.null {
+  width: 100%;
+  height: 1.866667rem;
+  background-color: #ECECEC;
+}
+
+.bootBtn {
+  width: 100%;
+  height: 1.333333rem;
+  background: rgba(77,208,200,1);
+  font-size: 0.4rem;
+  color: rgba(255,255,255,1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+}

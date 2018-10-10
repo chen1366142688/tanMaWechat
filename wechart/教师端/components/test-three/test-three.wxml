@@ -1,0 +1,40 @@
+<!--components/test-three/test-three.wxml-->
+
+<view class='test-detail'>
+  <view class='test-tabDescribe'>{{tabParams.tabDescribe}}</view>
+  <view class='btn-start'>
+    <view class='btn-start-out {{isReset ? "btn-timer-out" : ""}}'>
+      <view class='btn-start-line {{isReset ? "btn-timer-line" : ""}}' bindtap='testStart'>
+        <view>{{timerCount}}</view>
+        <view>开始</view>
+      </view>
+      <view class='reset' bindtap='reset' wx:if="{{isReset}}">复位</view>
+    </view>
+  </view>
+  <view class='test-result' wx:if="{{tabParams.testType == 1}}">
+    <picker-view indicator-class="result-mid" class='result-count' value="{{value}}" bindchange="bindChange">
+      <picker-view-column>
+        <view wx:for="{{count}}" wx:key="index" style="line-height: 90rpx;height:270rpx" class='{{first == item ? "resultnow" : ""}}'>{{item}}</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{count}}" wx:key="index" style="line-height: 90rpx;height:270rpx" class='{{second == item ? "resultnow" : ""}}'>{{item}}</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{count}}" wx:key="index" style="line-height: 90rpx;height:270rpx" class='{{third == item ? "resultnow" : ""}}'>{{item}}</view>
+      </picker-view-column>
+      <text style='line-height:270rpx;font-weight:200;font-size:60rpx;'>次</text>
+    </picker-view>
+  </view>
+  <view wx:else class='test-result'>
+      <view class='finish {{checkFinish ? "finished" : ""}}' bindtap='finish'>已完成</view>
+      <view class='finish {{!checkFinish ? "finished" : ""}}' bindtap='unfinish'>未完成</view>
+  </view>
+  <view class='result-btn'>
+    <view class='getUp' bindtap='getUp'>
+      放弃本次测试
+    </view>
+    <view class='pushresult' bindtap='pushBtn'>
+      提交测试结果
+    </view>
+  </view>
+</view>

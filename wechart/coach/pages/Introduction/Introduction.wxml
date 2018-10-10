@@ -1,0 +1,69 @@
+<view class='Register'>
+  <view class='Register-section'>
+    <view class='section-img'>
+      <image src="http://xlrtimo.oss-cn-beijing.aliyuncs.com/coach/iteration/default-avatar-coach.png"></image>
+    </view>
+    <view class='SingleSelection'>
+      <view class='section-phone'>
+        <image src="http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coach/personage/Z-phone.png" class='phone-typead'></image>
+        <view class='section-input'>
+          <view class="phone-input">
+            <input maxlength='11' type='number' bindinput='phoneNo' class="inpblocknicka" type="text" placeholder="绑定手机号" value="" placeholder-class="psection" />
+          </view>
+        </view>
+      </view>
+      <view class='section-verification-code'>
+        <image src="http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coach/public/fasong.png" class='code-typead'></image>
+        <view class="phone-input1">
+          <input maxlength='6' bindinput='code' class="inpblocknickae" type="number" placeholder="请输入验证码" value="" placeholder-class="psection" />
+        </view>
+        <view class='phone-button'>
+          <view class="schoolu_b" wx:if="{{showCode}}">({{thisTime}}s)</view>
+          <button class="btna" wx:if="{{!showCode}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">发送验证码</button>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='section-button'>
+    <view class='waikuang'>
+      <button class='withdraw-deposit' bindtap='checkCoachInfo'>进 入 小 程 序</button>
+    </view>
+    <view class='button-one'>
+      <navigator target="miniProgram" open-type="navigate" app-id="wx16ab989b71bd24f1" path="pages/Introduction/Introduction" extra-data="" version="release"  class='one-X'>注册学员</navigator>
+      <navigator target="miniProgram" open-type="navigate" app-id="wxf986027e1feac425" path="pages/Stadiums-and-stadiums/Introduction/Introduction" extra-data="" version="release" hover-class="navigator-hover"  class='one-C'>注册场馆管理</navigator>
+    </view>
+  </view>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+页面文字说明
+"pages/curriculum/Order-Form/Order-Form",  订单详情
+"pages/curriculum/Course-Details/Course-Details", 课程详情
+"pages/index/particulars/particulars", 开课详情
+"pages/my/Account-Details/Account-Details", 账户明细
+
+"pages/index/QuickMarkfuben/QuickMark", 跳转h5的我的二维码
+
+
+ -->

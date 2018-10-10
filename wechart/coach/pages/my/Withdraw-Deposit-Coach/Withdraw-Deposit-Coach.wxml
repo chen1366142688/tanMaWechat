@@ -1,0 +1,49 @@
+<!--pages/my/Withdraw-Deposit/Withdraw-Deposit.wxml-->
+<view class='Withdraw-Deposit'>
+  <view class='Withdraw-Deposit-one'>
+    <view class='account-number'>提现机构</view>
+    <view class='Deposit-one-text'>
+      <view class='number'>{{nickName}}</view>
+      <view class='hint'>*暂时仅支持微信钱包，经人工审核后12小时内到账。</view>
+    </view>
+  </view>
+  <view class='Withdraw-Deposit-two'>
+    <view class='withdraw'>
+      <view class='withdraw-hint'>提现金额</view>
+      <view class='withdraw-money'>
+          ￥<input bindinput="bindKeyInputAmount"  value='{{showAmount}}' type="digit" placeholder='' class='can-sousuo' placeholder-class='cansoso'></input>
+      </view>
+    </view>
+  </view>
+  <view class='password'>
+    <view class='balance'>
+      <view class='YE'>当前零钱余额{{totleAmount}}元</view>
+      <view class='blue' bindtap="selectAll" >全部提现</view>
+    </view>
+    <view class='password-text'>交易密码</view>
+    <view class='can-souu'>
+      <input bindinput="bindKeyInputPwd" password="true"  value='{{transactionPwd}}' type='text' placeholder='' class='can-sou' placeholder-class='cansoso'></input>
+    </view>
+  </view>
+  <view class='TJ'>
+  <button  bindtap="toApply" class='withdraw-B'>提交申请</button>
+  </view>
+</view>
+ <view class='record'>
+  <view class='record-hind'>提现记录</view>
+  <view class='record-one' wx:for="{{hisList}}" >
+    <view class='one-up'>
+      <view class='money'>{{item.aoumt}}元</view>
+      <view wx:if="{{item.auditStatus == '2' || item.auditStatus == '4'}}" class='succeed'>提现成功</view>
+      <view wx:if="{{item.auditStatus == '3'}}" class='Failure'>提现失败</view>
+      <view wx:if="{{item.auditStatus == '0' || item.auditStatus == '1' || item.auditStatus == '5'}}" class='check'>审核中..</view>
+    </view>
+    <view class='one-down'>
+      <view  wx:if="{{item.auditStatus == '2' || item.auditStatus == '4'}}" class='explain'>说明：无</view>
+      <view  wx:if="{{item.auditStatus == '3'}}" class='explain'>说明：{{item.remark?"无":item.remark}}</view>
+      <view  wx:if="{{item.auditStatus == '0' || item.auditStatus == '1' || item.auditStatus == '5'}}" class='explain'>说明：提现申请审核中。</view>
+      <view class='time'>{{item.createTime}}</view>
+    </view>
+  </view>
+</view> 
+<text wx:if="{{showNotMore}}" class='van-footer'>————已全部显示————</text>

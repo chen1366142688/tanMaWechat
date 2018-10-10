@@ -1,0 +1,97 @@
+page{
+  background-color: #ececec;
+}
+.fl {
+  float: left;
+}
+
+::-webkit-scrollbar {
+  width: 0rpx;
+  height: 0rpx
+}
+input{
+    caret-color:#4DD0C8;
+}
+.fr {
+  float: right;
+}
+
+.clearfloat:after {
+  display: block;
+  clear: both;
+  content: "";
+  visibility: hidden;
+  height: 0;
+}
+
+.clearfloat {
+  zoom: 1;
+}
+
+
+/* 疑问  */
+
+.Query{
+  width: 24rpx;
+  height: 24rpx;
+  line-height: 88rpx;
+  margin-left: 10rpx;
+  margin-top: -4rpx;
+  vertical-align: middle;
+}
+
+/*溢出隐藏*/
+.textOver {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.iLblock {
+  display: inline-block;
+}
+
+/*  没有数据空空如也  */
+.kong{
+  width: 750rpx;
+  height: 790rpx;
+  margin: 0 auto;
+  background-color: #ececec;
+}
+
+.kong-img{
+  width: 340rpx;
+  height: 340rpx;
+  margin-left: 205rpx;
+  margin-top: 20%;
+}
+
+.kong-text{
+  display: inline-block;
+  width: 750rpx;
+  height: 25rpx;
+  line-height: 25rpx;
+  font-size: 24rpx;
+  color: #999;
+  text-align: center;
+  margin-top: 120rpx;
+}
+/*登录注册*/
+.ok{
+  border-bottom: 1rpx solid #4DD0C8;
+}
+.opacity{
+  opacity: 1;
+}
+/*声明 WebFont*/
+@font-face {
+  font-family: 'pinghei';
+  src: url('../font/pinghei.eot');
+  src:
+    url('../font/pinghei.eot?#font-spider') format('embedded-opentype'),
+    url('../font/pinghei.woff') format('woff'),
+    url('../font/pinghei.ttf') format('truetype'),
+    url('../font/pinghei.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

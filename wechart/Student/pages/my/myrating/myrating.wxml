@@ -1,0 +1,1 @@
+<web-view src="{{urlappxcx}}/myrating.html?token={{userInfo.token}}&userid={{userInfo.userId}}"></web-view>

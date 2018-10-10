@@ -1,0 +1,120 @@
+const formatTime = date => {
+  const year = date.getFullYear()
+  const month = date.getMonth() + 1
+  const day = date.getDate()
+  const hour = date.getHours()
+  const minute = date.getMinutes()
+  const second = date.getSeconds()
+
+  return [year, month, day].map(formatNumber).join('/') + ' ' + [hour, minute, second].map(formatNumber).join(':')
+}
+
+const formatNumber = n => {
+  n = n.toString()
+  return n[1] ? n : '0' + n
+}
+
+let appUrl = getApp().globalData.url
+const md5 = require('md5.js');
+const appKey = "5e37b2628ca29d1d";
+const appSecret = "F76B9D9E0901665374A81A318395222811BC72DF";
+// let appUrl = "../pages/"
+// 发送请求
+let http = (url, data, method, s, that, f) => {
+  if (method == "GET") {
+    // 把参数进行排序a-z
+    var newkey = Object.keys(data).sort()
+    // 定义变量
+    var newData = {};
+    var str1 = "";
+    // 把参数重新填入对象
+    for (let i = 0; i < newkey.length; i++) {
+      newData[newkey[i]] = "" + data[newkey[i]];
+    }
+    // 将排好的对象进行判断是否为空，不为空则存入字符串
+    for (let i in newData) {
+      if (newData[i] != "" && newData[i] != "undefined" && newData[i] != "NaN") {
+        str1 += i + newData[i]
+      }
+    }
+    str1 = str1 + appKey + appSecret;
+    var sign = md5.hex_md5(str1).toUpperCase()
+  } else {
+    let str1 = appKey + appSecret;
+    var sign = md5.hex_md5(str1).toUpperCase()
+  }
+  wx.request({
+    url: appUrl + url,
+    method: method,
+    header: {
+      "token": wx.getStorageSync("token").token,
+      "sign": sign,
+      "appKey": appKey
+    },
+    // header: { "token": wx.getStorageSync("token").token },
+    data: data,
+    success: (res) => {
+      if (res.data.code == 10000) {
+        s(that, res.data.response)
+      } else {
+        if (f) {
+          return f(that, res.data.response)
+        }
+        wx.showToast({
+          title: res.data.msg,
+          icon: 'none'
+        })
+      }
+    },
+    fail: function (info) {
+      wx.showModal({
+        title: '提示',
+        content: '网络请求失败！',
+      });
+    }
+  })
+}
+
+
+// let http = (url, data, method, s, that, f) => {
+//   wx.request({
+//     url: appUrl + url,
+//     method: method,
+//     header: { "token": wx.getStorageSync("token").token },
+//     data: data,
+//     success: (res) => {
+//       if (res.data.code == 10000) {
+//         s(that, res.data.response)
+//       } else {
+//         if (f) {
+//           return f(that, res.data.response)
+//         }
+//         wx.showToast({
+//           title: res.data.msg,
+//           icon: 'none'
+//         })
+//       }
+//     },
+//     fail: function (info) {
+//       wx.showModal({
+//         title: '提示',
+//         content: '网络请求失败！',
+//       });
+//     }
+//   })
+// }
+
+
+
+
+
+
+
+
+// 暴露这个文件里面的函数
+module.exports = {
+  formatTime: formatTime,
+  http: http
+}
+
+

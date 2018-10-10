@@ -1,0 +1,487 @@
+/* pages/curriculum/Tution/Tution.wxss */
+page{line-height: 0;font-family:PingFang-SC-Regular;}
+.Tution{
+  width:645rpx;
+  height: 88rpx;
+  background-color:#ffffff;
+  margin: 20rpx auto;
+  border-radius:5rpx;
+  padding:0 36rpx 0 21rpx;
+  display: flex;
+  align-items: center;
+}
+.itemNameAndNumber{
+  font-size:22rpx;
+  color:rgba(23,23,24,1);
+  height:40rpx;
+  /* line-height: 40rpx; */
+  border:1rpx solid rgba(23,23,24,1);
+  border-radius:5rpx;
+  padding:0 10rpx;
+  margin-right:10rpx;
+  display: flex;
+  align-items: center;
+}
+.itemTitle{
+  height:42rpx;
+  line-height: 42rpx;  
+  font-size:24rpx;
+  font-family:PingFang-SC-Bold;
+  color:rgba(51,51,51,1);
+  font-weight: bold;
+  max-width: 440rpx;
+  
+}
+.sectionInfomation{
+  width:670rpx;
+  height: 101rpx;
+  padding:19rpx 12rpx 0 20rpx;
+  margin-bottom:2rpx;
+  border-radius: 5rpx;
+  background-color: #fff;
+}
+.infomationTop{
+  display: flex;
+  justify-content: flex-start; 
+  margin-bottom:9rpx;
+}
+.informationBottom{
+  display: flex;
+  justify-content: space-between;
+  align-items:flex-end;
+  height: 34rpx;
+}
+.numberOfPeriods{
+  font-size:24rpx;
+  color:#333;
+  height: 40rpx;
+  line-height: 40rpx;
+  padding:0 12rpx;
+  border: 1rpx solid #333;
+  border-radius:5rpx;
+}
+.openDate{
+  height: 42rpx;
+  line-height: 42rpx;
+  font-size:24rpx;
+  color:rgba(0,117,135,1);
+  margin-left:11rpx;
+}
+.date{
+  color:#333;
+}
+.status{
+  width:134rpx;
+  height:34rpx;
+  border-radius:17rpx;
+  background-color: rgba(288, 0, 17, 1);
+  font-size:22rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+.cencl{
+  background-color: #999999;
+}
+.HaveSigned{
+  background-color:rgba(0,182,214,1);
+}
+.addressAndNumber{
+  display: flex;
+  justify-content: space-between;
+  align-items: center
+}
+.addressImg{
+  width:24rpx;
+  height: 24rpx;
+  margin-right:10rpx;
+}
+.addressText{
+  font-size:20rpx;
+  color:rgba(153,153,153,1);
+  max-width:125rpx;
+  height:24rpx;
+  line-height: 24rpx;
+}
+.userNickName{
+  width:24rpx;
+  height:24rpx;
+  margin:0 12rpx 0 20rpx;
+}
+.userNickNum{
+  font-size:20rpx;
+  color:rgba(153,153,153,1);
+}
+.userNum{
+  color: #007587;
+}
+.Tution-section{
+  width: 702rpx;
+  margin: 20rpx auto 60rpx auto;
+}
+.footer{
+  display: block;
+  width: 750rpx;
+  text-align: center;
+  margin:60rpx 0 100rpx 0;
+  font-size:24rpx;
+  font-family:PingFang-SC-Regular;
+  color:rgba(153,153,153,1);
+}
+
+
+
+
+/* .Tution{
+  width: 702rpx;
+  height: 120rpx;
+  line-height: 120rpx;
+  margin: 0 auto;
+  background-color: #fff;
+  margin-top: 20rpx;
+} 
+.Head-Portraits{
+  width: 80rpx;
+  height: 80rpx;
+  float: left;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+}
+
+.Tution-content{
+  width: 470rpx;
+  height: 120rpx;
+  float: left;
+  margin-left: 20rpx;
+  line-height: 120rpx;
+}
+
+.content-headline{
+  display: inline-block;
+  width: 450rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  float: left;
+}
+
+.headline-one{
+  padding: 0 8rpx;
+  height: 40rpx;
+  border: 1rpx solid #333;
+  color: #333;
+  text-align: left;
+  line-height: 40rpx;
+  font-size: 22rpx;
+  margin-top: 20rpx;
+  float: left;
+}
+
+.headline-two{
+  display: inline-block;
+  width: 150rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  margin-top: 20rpx;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 24rpx;
+  margin-left: 10rpx;
+  color: #333;
+  float: left;
+}
+
+.content-section{
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 0 auto;
+  vertical-align: middle;
+  width: 450rpx;
+  height: 50rpx;
+  line-height: 50rpx; 
+  margin-top: 10rpx;
+  float: left;
+}
+
+.content-money{
+  display: inline-block;
+  width: 200rpx;
+  height: 120rpx;
+  margin: 0 auto;
+  margin-top: -25rpx;
+  text-align: right;
+  float: right;
+}*/
+
+/*  内容  */
+
+/* .l-cdcenter-posa {
+  width: 20rpx;
+  height: 20rpx;
+  margin-right: 10rpx;
+}
+
+.l-cdcenter-po {
+  width: 20rpx;
+  height: 20rpx;
+  margin-left: 10rpx;
+}
+
+.c-username-text {
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(102, 102, 102, 1);
+}
+
+.c-touser-xcxa {
+  width: 20rpx;
+  height: 20rpx;
+  margin: 0rpx 12rpx 0rpx 22rpx;
+}
+
+.c-renshu {
+  height:25rpx;
+  line-height:25rpx;
+  vertical-align: middle;
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(102, 102, 102, 1);
+}
+
+.c-touser-xcxb {
+  width: 20rpx;
+  height: 20rpx;
+  margin-left: 10rpx;
+}
+
+.c-date {
+  width: 20rpx;
+  height: 20rpx;
+  margin: 0 10rpx 0 20rpx;
+}
+
+.c-data-txt {
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+} */
+
+
+/* 金额  */
+/* .van-left-txt {
+  height: 70rpx;
+  text-align: left;
+  margin-right: 20rpx; 
+  display: inline-block;
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(51, 51, 51, 1);
+  vertical-align: middle;
+}
+
+.van-rmba {
+  height: 40rpx;
+  font-weight: Bold;
+  color: #E40011;
+  margin-top: 25rpx;
+  text-align: right;
+  vertical-align: middle;
+}
+
+.van-rmba .van-rmbb-smal {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 18rpx;
+  float: left;
+  height: 40rpx;
+  line-height: 40rpx;
+} */
+
+/* .van-rmba .van-rmbc {
+  display: inline-block; */
+  /* max-width: 100rpx; */
+  /* height: 40rpx;
+  line-height: 40rpx;
+  overflow: hidden;
+  float: right; */
+  /* text-overflow: ellipsis; */
+  /* white-space: nowrap;
+  font-size: 28rpx;
+  vertical-align: middle;
+}
+
+.van-rmbe {
+  display: inline-block;
+  font-size: 20rpx;
+  height: 19rpx;
+  color: rgba(102, 102, 102, 1);
+  text-align: right;
+  vertical-align: middle;
+  float: right;
+  margin-top: -48rpx;
+} */
+
+/*  渲染内容  */
+
+/* .Tution-section{
+  width: 702rpx; */
+  /* height: 120rpx; 
+  border-bottom: 1rpx solid #e4e4e4;*/
+  /* margin: 0 auto;
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+
+.section-one{
+  width: 702rpx;
+  height: 120rpx;
+  border-bottom: 1rpx solid #e4e4e4;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.one-N{
+  width: 702rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  vertical-align: middle;
+}
+
+.headline-N{
+  width: 160rpx;
+  height: 40rpx;
+  border: 1rpx solid #333;
+  color: #333;
+  text-align: center;
+  line-height: 40rpx;
+  font-size: 22rpx;
+  margin-top: 15rpx;
+  margin-left: 20rpx;
+  float: left;
+}
+
+.headline-M{
+  height: 59rpx;
+  float: left;
+  line-height: 59rpx;
+  margin-left: 20rpx;
+}
+
+.l-cdcenter-Posa {
+  width: 18rpx;
+  height: 18rpx;
+  margin-right: 10rpx;
+}
+
+.c-username-Text {
+  display: inline-block;
+  max-width: 150rpx;
+  line-height: 20rpx;
+  height: 20rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 20rpx;
+  vertical-align: middle;
+  font-family: PingFang-SC-Regular;
+  color: #999999;
+}
+
+.c-Touser-xcxa {
+  width: 20rpx;
+  height: 20rpx;
+  margin: 0rpx 12rpx 0rpx 22rpx;
+}
+
+.c-Renshu {
+  font-size: 20rpx;
+  font-family: PingFang-SC-Regular;
+  color: #999999;
+} */
+
+/*  状态  */
+
+/* .Tution-status{
+  width: 134rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+  border-radius: 17rpx;
+  background-color: #E40011;
+  float: right;
+  color: #fff;
+  margin-top: 15rpx;
+  margin-right: 20rpx;
+  text-align: center;
+  font-size: 22rpx;
+  align-items:center;
+  vertical-align:middle;
+}
+
+.Tution-status1{
+  width: 134rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+  border-radius: 17rpx;
+  background-color: #00B6D6;
+  float: right;
+  color: #fff;
+  margin-top: 15rpx;
+  margin-right: 20rpx;
+  text-align: center;
+  font-size: 22rpx;
+  align-items:center;
+  vertical-align:middle;
+}
+
+.Tution-status2{
+  width: 134rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+  border-radius: 17rpx;
+  background-color: #999999;
+  float: right;
+  color: #fff;
+  margin-top: 15rpx;
+  margin-right: 20rpx;
+  text-align: center;
+  font-size: 22rpx;
+  align-items:center;
+  vertical-align:middle;
+}
+
+.two-N{
+  width: 702rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 24rpx;
+  color: #999999;
+}
+
+.N-time{
+  width: 400rpx;
+  float: left;
+  margin-left: 20rpx;
+}
+
+.M-time{
+  width: 260rpx;
+  margin-right: 20rpx;
+  float: right; */
+  /* font-size: 20rpx; */
+  /* text-align: right;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+
+.RMB{
+  color: #E85571;
+  font-size: 20rpx;
+}
+
+.money{
+  color: #E85571;
+  font-size: 30rpx;
+} */

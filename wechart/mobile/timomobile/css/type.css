@@ -1,0 +1,490 @@
+@charset "UTF-8";
+body, ul, li, dl, dt, dd, p, ol, h1, h2, h3, h4, h5, h6, form, img, table, fieldset, legend {
+    margin: 0;
+    padding: 0;
+}
+
+ul, li, ol {
+    list-style: none;
+}
+
+img, fieldset {
+    border: 0;
+}
+
+img {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 100;
+}
+
+body {
+    font-family: "微软雅黑";
+}
+
+input, a {
+    outline: none;
+    border: 0;
+}
+
+/*header{box-sizing: border-box;}*/
+i {
+    font-style: normal
+}
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+    -webkit-appearance: none;
+}
+
+a, button, input {
+    -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+}
+
+/*自定义开始*/
+
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.clearfloat:after {
+    display: block;
+    clear: both;
+    content: "";
+    visibility: hidden;
+    height: 0;
+}
+
+.clearfloat {
+    zoom: 1;
+}
+
+.textOver {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.iLblock {
+    display: inline-block;
+}
+
+#explain{
+	margin-bottom: 10px;
+    background: #fff;
+    padding: 0rem 0.25rem 0rem 0.26rem;
+}
+
+
+.iLblock-biaoti {
+    width: 100%;
+    height: 100%;
+    font-size: 0.28rem;
+    line-height: 0.4rem !important;
+    font-weight: bold;
+    padding-bottom: 0.2rem;
+    padding-top: 0.2rem;
+    border-bottom: 1px solid #e4e4e4;
+    color: #333;
+}
+.iLblock-section {
+    width: 100%;
+    height: 100%;
+    font-size: 0.28rem;
+    word-break:break-all;
+    line-height: 0.4rem !important;
+    padding-bottom: 0.2rem;
+    margin-top: 0.2rem;
+    color: #999;
+}
+
+/*公共部分end*/
+
+/*Help-particulars 帮助详情 */
+body, html {
+    max-width: 50rem;
+    margin: 0 auto;
+    background-color: #ececec;
+}
+
+.pagefist {
+    background-color: #ececec;
+}
+
+.pagefista {
+    background-color: #fff;
+    width: 100%;
+}
+
+.Help-particulars {
+    width: 93.6%;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.particular-headline {
+    width: 93.3%;
+    height: 0.79rem;
+    line-height: 0.79rem;
+    margin: 0 auto;
+    font-size: 0.34rem;
+    color: #333;
+    font-weight: bold;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.particular-section {
+    width: 93.3%;
+    margin: 0 auto;
+    font-size: 0.28rem;
+    padding-bottom: 0.26rem;
+    color: #333;
+    text-align: left;
+    padding-top: 0.16rem;
+}
+
+.K {
+    width: 0.5rem;
+    display: inline-block;
+}
+
+.footer {
+    width: 100%;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    text-align: center;
+    font-size: 0.24rem;
+    color: #999999;
+}
+
+/*myrating.html start*/
+.pagefist-bansa {
+    width: 100%;
+}
+
+.center {
+    width: 93.3%;
+    padding: 0 0.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+}
+
+.personalImgBox {
+    width: 93.3%;
+    padding: 0 0.25rem;
+    height: 0.12rem;
+    line-height: 0.12rem;
+    margin-bottom: 0.02rem;
+    background: #fff;
+}
+
+.personalImgCat {
+    height: 0.88rem;
+    line-height: 0.33rem;
+    margin-bottom: 0.2rem;
+    background: #fff;
+}
+
+.imgLeft-myra {
+    font-size: 0.24rem;
+    font-family: PingFang-SC-Regular;
+    color: rgba(51, 51, 51, 1);
+}
+
+.phoneGreen {
+    width: 0.35rem;
+    height: 0.35rem;
+    vertical-align: middle;
+}
+
+.model {
+    margin-left: 0.25rem;
+}
+
+.imgRigGai {
+    width: 0.361rem;
+    height: 0.88rem;
+    line-height: 0.88rem;
+    text-align: right;
+}
+
+.wechartGreen {
+    width: 0.40rem;
+    height: 0.38rem;
+    vertical-align: middle;
+}
+
+/*评级说明*/
+/*
+.fenBox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  min-height: 240px;
+  width: 73%;
+  padding: 0rem 0rem 0.24rem 2.04rem;
+  margin-top: 1px;
+}*/
+
+/*评级说明a*/
+.ratinginstructionsa {
+    font-size: 0.24rem;
+    font-family: PingFang-SC-Bold;
+    color: rgba(51, 51, 51, 1);
+    font-weight: bold;
+    text-align: center;
+    margin: 0.25rem 0 0.16rem;
+}
+
+.ratinginstructionsb-bgfff {
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    min-height: 0.24rem;
+    width: 100%;
+    margin-top: 0.01rem;
+    margin: 0 auto;
+    overflow-x:scroll;
+    white-space:nowrap;
+    border-bottom: 1px solid #E4E4E4;
+}
+
+@media screen and (max-width: 1440px) and (min-width: 750px) {
+
+    .ratinginstructionsb-bgfff {
+        background: #fff;
+        width: 98%;
+    }
+
+}
+
+.fenBox {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+::-webkit-scrollbar{
+	width:0px;
+    height: 0px;
+}
+
+/* 调节封面之间的原始间距，即不小于36px */
+
+.fenItem {
+	display: inline-block;
+    width: 22.5%;
+    text-align: center;
+}
+
+@media screen and (min-width: 320px) and (max-width: 375px) {
+    .fenItem {
+        width: 22.5%;
+        display: inline-block;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 414px) and (min-width: 375px) {
+    .fenItem {
+        width: 22.5%;
+        display: inline-block;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 750px) and (min-width: 689px) {
+    .fenItem {
+        width: 22.5%;
+        display: inline-block;
+        text-align: center;
+    }
+
+}
+
+.itemImg {
+    display: block;
+    width: 0.50rem;
+    height: 0.50rem;
+    margin: 0 auto;
+}
+
+.c-zuqiu {
+    display: block;
+    font-size: 0.2rem;
+    font-family: PingFang-SC-Regular;
+    color: rgba(23, 23, 24, 1);
+}
+
+
+
+/*近几年来*/
+
+.itemsLo {
+    width: 100%;
+    /*padding: 0.19rem 0.25rem 0.36rem 0.26rem;*/
+
+    margin-top: 0.01rem;
+    margin-bottom: 0.120rem;
+}
+
+.items-text {
+    font-size: 0.24rem;
+    font-family: PingFang-SC-Regular;
+    color: rgba(51, 51, 51, 1);
+    line-height: 0.45rem;
+    margin-top: 10px;
+    /*text-indent: 2em;*/
+    /*padding:17px 36px 26px;*/
+}
+
+/*覆盖样式*/
+
+
+/*myrating.html end*/
+
+/*教练端 我的二维码*/
+
+page {
+    background-color: #e4e4e4;
+}
+
+.pagefist-qrcode {
+    background-color: #e4e4e4;
+}
+
+.QuickMark {
+    width: 7.5rem;
+    margin: 0 auto;
+    padding: 0rem;
+}
+
+.QuickMark-T {
+    width: 3.6rem;
+    height: 3.6rem;
+    line-height: 3.6rem;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 2.41rem;
+    background-color: #fff;
+}
+
+.QuickMark-T-N {
+    width: 3.21rem;
+    height: 3.21rem;
+    margin: 0 auto;
+    position: absolute;
+    top: 0.21rem;
+    left: 0.21rem;
+}
+
+.QuickMark-T canvas{
+    width: 3.21rem;
+    height: 3.21rem;
+    margin: 0 auto;
+    position: absolute;
+    top: 0.21rem;
+    left: 0.21rem;
+}
+
+
+.QuickMark-M {
+    width: 3.52rem;
+    height: 0.8rem;
+    margin: 0 auto;
+    margin-top: 0.4rem;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 4.4rem;
+}
+
+.QuickMark-qrcga {
+    width: 7rem;
+    height: 0.8rem;
+    margin: 0 auto;
+    margin-top: 0.4rem;
+}
+
+
+.QuickMark-qrcg-b1 {
+    width: 7rem;
+    height: 0.8rem;
+    margin: 0 auto;
+    /*padding-top: 0.4rem;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: -webkit-flex;
+}
+
+
+.QuickMark-M-N {
+    width: 3.52rem;
+    height: 0.8rem;
+    margin: 0 auto;
+    /*padding-top: 0.4rem;*/
+    background: rgba(255, 255, 255, 1);
+    border-radius: 0.4rem;
+    border: 1px solid #007587;
+    border-style: dashed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: -webkit-flex;
+}
+
+.chief-coach {
+    /*width: 0.7rem;*/
+    /*height: 0.22rem;*/
+    /*margin-left: 0.34rem;*/
+    width: auto;
+    font-size: 0.24rem;
+    color: rgba(51, 51, 51, 1);
+    display: block;
+
+}
+
+.chief-coach-qrcga {
+    font-size:0.4rem;
+    font-family:PingFang-SC-Bold;
+    color:rgba(51,51,51,1);
+}
+
+
+.Name {
+	display: inline-block;
+    width: 0.8rem;
+    /*width: 43%;*/
+    /*width:auto;*/
+    height: 0.38rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-left: 0.24rem;
+    font-size: 0.38rem;
+    color: rgba(51, 51, 51, 1);
+    line-height: 0.38rem;
+    vertical-align: middle;
+}
+
+.gender {
+    width: .38rem;
+    height: .37rem;
+    margin-left: 0.43rem;
+}

@@ -1,0 +1,146 @@
+<!--pages/Exercise/Physical-Test/Physical-Test.wxml-->
+<view class='Physical-Test'>
+  <view class='patent-preparatory-work'>
+    <view class='preparatory-work clearfloat' wx:for="{{copyright}}" wx:key="uqine" wx:for-item="copy">
+      <image class='preparatory-work-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/Exercise/preparatory.png'></image>
+      <view class='preparatory-work-text clearfloat'>
+        <view class='preparatory-work-text-headline'>{{copy.name}}</view>
+        <view class='preparatory-work-text-section clearfloat'>{{copy.comtent}}</view>
+      </view>
+    </view>
+    <view class='patent clearfloat'>
+      <image class='patent-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/Exercise/patent.png'></image>
+      <view class='patent-text clearfloat'>
+        <view class='patent-text-headline'>专利版权说明</view>
+        <view class='patent-text-section clearfloat'>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容。</view>
+      </view>
+    </view>
+  </view>
+
+  <!--孩子列表  -->
+  <view class='Physical-Test-list' wx:if="{{childName.length>0}}">
+    <scroll-view class='Exercise-Program-choose' scroll-x="{{scroll}}">
+      <view class='Exercise-Program-choose-two {{child.active ? "Exercise-Program-choose-one":""}}' wx:for="{{childName}}" wx:key="uqine" wx:for-item="child" bindtap='cilckChild' data-index="{{index}}">孩子 {{index+1}} {{child.name}}</view>
+    </scroll-view>
+  </view>
+
+  <!-- 测试项目 -->
+  <view class='Physical-Test-test-item'>
+    <!-- <view class='test-item-one clearfloat'>
+      <view class='test-item-one-section clearfloat'>
+        <view class='test-item-one-section-img'>
+          <image class='section-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/Exercise/video.png'></image>
+          <view class='Completion-Rate'>34534人已完成</view>
+        </view>
+        <view class='test-item clearfloat'>
+          <view class='test-item-headline'>测试项目1</view>
+          <view class='test-item-age'>
+            <view class='test-item-age-headline'>适合年龄段</view>
+            <view class='test-item-age-text'>3-5岁</view>
+          </view>
+          <view class='test-purpose clearfloat'>
+            <view class='test-purpose-headline'>测试目的</view>
+            <view class='test-purpose-text clearfloat'>目的目的目的目的目的目的目的目的目的目的目的目的目的目的目的目的目的目的目的目...</view>
+          </view>
+          <view class='test-philosophy'>
+            <view class='test-philosophy-headline'>测试目的</view>
+            <view class='test-philosophy-text'>目的目的目的目的目的目的目的目的目的目的目的目的目...</view>
+          </view>
+        </view>
+        <view class='pack-up'>
+          <view class='pack-up-text'>查看全部</view>
+          <image class='pack-up-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/Exercise/unfold1.png'></image>
+        </view>
+        <view class='unwind-section clearfloat'>
+          <view class='unwind-section-headline'>测试步骤：</view>
+          <view class='measuring-procedure clearfloat'>
+            <view class='measuring-procedure-text clearfloat'>
+              <view class='measuring-procedure-text-one clearfloat'>1. 步骤1步骤1步骤1步骤1步骤1步骤1步骤1步骤1步骤1。</view>
+              <view class='measuring-procedure-text-one clearfloat'>2. 步骤2步骤2步骤2步骤2步骤2步骤2步骤2步骤2。</view>
+              <view class='measuring-procedure-text-one clearfloat'>3. 步骤3步骤3步骤3步骤3步骤3步骤3步骤3。</view>
+            </view>
+            <view class='measuring-procedure-video'>
+              <image class='video' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/Exercise/header-background.png'></image>
+              <image class='Play' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/Exercise/Play.png'></image>
+            </view>
+            <view class='measuring-procedure-button'>再次测试本项</view>
+          </view>
+        </view>
+      </view>
+    </view> -->
+
+    <!-- <view class='test-item-one clearfloat'>
+      <view class='test-item-one-section clearfloat'>
+        <view class='test-item-one-section-img'>
+          <image class='section-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/Exercise/header-background.png'></image>
+          <view class='Completion-Rate'>34534人已完成</view>
+        </view>
+        <view class='test-item clearfloat'>
+          <view class='test-item-headline'>测试项目1</view>
+          <view class='test-item-age'>
+            <view class='test-item-age-headline'>适合年龄段</view>
+            <view class='test-item-age-text'>3-5岁</view>
+          </view>
+          <view class='test-purpose clearfloat'>
+            <view class='test-purpose-headline'>测试目的</view>
+            <view class='test-purpose-text clearfloat'>目的目的目的目的目的目的目的目的目的目的目的目的目...</view>
+          </view>
+          <view class='test-philosophy clearfloat'>
+            <view class='test-philosophy-headline'>测试目的</view>
+            <view class='test-philosophy-text clearfloat'>目的目的目的目的目的目的目的目的目的目的目的目的目...</view>
+          </view>
+        </view>
+        <view class='pack-up'>
+          <view class='pack-up-text'>展开全部</view>
+          <image class='pack-up-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/Exercise/unwind.png'></image>
+        </view>
+      </view>
+    </view> -->
+
+    <view class='test-item-one'>
+      <view class='test-item-one-header'>
+        <image class='test-item-one-header-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/Exercise/test-background1.png'></image>
+        <view class='test-item-one-header-text'>
+          <view class='header-text-one'>测试项目1</view>
+          <view class='header-text-two'>适合年龄段
+            <text class='header-text-two-age'> 3-5岁</text>
+          </view>
+          <view class='header-text-there'>已有
+            <text class='header-text-there-Number'>34534</text>完成测试</view>
+        </view>
+      </view>
+      <view class='test-item-one-NR clearfloat'>
+        <view class='test-purpose-section clearfloat'>测试目的：
+          <text class='test-purpose-section-text clearfloat'>目的目的目的目的目的目的目的目的目的目的目的目的目的目的目的目的目的目的目的目的目的目的目的目的目</text>
+        </view>
+        <view class='test-philosophy-section clearfloat'>测试原理：
+          <text class='test-philosophy-section-text clearfloat'>目的目的目的目的目的目的目的目的目的目的目的目的目的目的目的目的目的目的目的目的目的目的目的目的目</text>
+        </view>
+      </view>
+      <view class='test-item-one-button'>开始测试本项</view>
+    </view>
+
+    <view class='test-item-one'>
+      <view class='test-item-one-header'>
+        <image class='test-item-one-header-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/Exercise/test-background2.png'></image>
+        <view class='test-item-one-header-text'>
+          <view class='header-text-one'>测试项目1</view>
+          <view class='header-text-two'>适合年龄段
+            <text class='header-text-two-age'> 3-5岁</text>
+          </view>
+          <view class='header-text-there'>已有
+            <text class='header-text-there-Number'>34534</text>完成测试</view>
+        </view>
+      </view>
+      <view class='test-item-one-NR clearfloat'>
+        <view class='test-purpose-section clearfloat'>测试目的：
+          <text class='test-purpose-section-text clearfloat'>目的目的目的目的目的目的目的目的目的目的目的目的目的目的目的目的目的目的目的目的目的目的目的目的目</text>
+        </view>
+        <view class='test-philosophy-section clearfloat'>测试原理：
+          <text class='test-philosophy-section-text clearfloat'>目的目的目的目的目的目的目的目的目的目的目的目的目的目的目的目的目的目的目的目的目的目的目的目的目</text>
+        </view>
+      </view>
+      <view class='test-item-one-button2'>开始测试本项</view>
+    </view>
+  </view>
+</view>

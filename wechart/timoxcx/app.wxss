@@ -1,0 +1,223 @@
+/**index.wxss**/
+
+/*引入模板样式*/
+@import "css/weui.wxss";
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+/** wxss **/
+
+/** 修改默认的navigator点击态 **/
+
+.navigator-hover {
+  color: blue;
+}
+
+/** 自定义其他点击态样式类 **/
+
+.other-navigator-hover {
+  color: red;
+}
+
+/*覆盖样式*/
+
+.weui-cell:before {
+  border-top: 1rpx solid #00c693;
+}
+
+/*覆盖样式*/
+
+.weui-cell:before {
+  border-top: 1rpx solid #00c693;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.clearfloat:after {
+  display: block;
+  clear: both;
+  content: "";
+  visibility: hidden;
+  height: 0;
+}
+
+.clearfloat {
+  zoom: 1;
+}
+
+.textOver {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.iLblock {
+  display: inline-block;
+}
+
+/**开课通知弹窗提示 start 
+**01课程-04（大班）开班通知
+**/
+
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.6;
+  overflow: hidden;
+  z-index: 9000;
+  color: #fff;
+}
+
+.modal-dialog {
+  width: 632rpx;
+  /*overflow: hidden;*/
+  position: fixed;
+  top: 41%;
+  left: 0;
+  z-index: 9999;
+  background: #f9f9f9;
+  margin: -268rpx 59rpx;
+  border-radius: 30rpx;
+}
+
+.modal-title {
+  font-size: 48rpx;
+  font-weight: Bold;
+  color: #030303;
+  text-align: center;
+  width: 632rpx;
+  height: 210rpx;
+  margin: 0 auto;
+  background: url('http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/greenblockbg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.modal-title text {
+  font-size: 48rpx;
+  line-height: 210rpx;
+  color: #fff;
+  width: 243rpx;
+  height: 100%;
+}
+
+.modal-content {
+  margin: 0 auto;
+  padding: 24rpx 54rpx 30rpx 54rpx;
+}
+
+.modal-content text {
+  font-size: 26rpx;
+}
+
+.modal-footer {
+  height: 140rpx;
+  font-size: 34rpx;
+  margin-top: 28rpx;
+}
+
+.btn-cancel {
+  width: 50%;
+  color: #38f;
+  text-align: center;
+  border-right: 2rpx solid #b2b2b2;
+}
+
+.btn-confirm {
+  width: 220rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  border-radius: 35rpx;
+  color: #00c693;
+  text-align: center;
+  border: 2rpx solid #00c693;
+}
+
+.btn-confirm-les-modal-close-stop {
+  width: 220rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  border-radius: 35rpx;
+  color: #fff;
+  text-align: center;
+  background: #00c693;
+}
+
+.btn-confirm-les-modal-close-stopb {
+  color: #fff;
+  margin-left: 23rpx;
+}
+
+.les-modal-close-loseimg {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.les-modal-close-stopa {
+  margin: 0 84rpx;
+  display: flex;
+}
+
+.les-mod-postiona {
+  width: 12rpx;
+  height: 16rpx;
+  vertical-align: middle;
+}
+
+.les-mod-postionb {
+  vertical-align: middle;
+}
+
+.les-mod-noticea image {
+  margin-bottom: 6rpx;
+}
+
+.les-mod-noticeb {
+  color: #999;
+  font-size: 24rpx;
+  line-height: 10rpx;
+}
+
+.modal-btn {
+  width: 300px;
+  height: 280px;
+  position: fixed;
+  top: 92%;
+  left: 44%;
+  z-index: 9999;
+}
+
+/* 关闭图标*/
+
+/*红色教练图标 文字区域的css*/
+
+/**开课通知弹窗提示 end **/

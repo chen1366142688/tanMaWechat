@@ -1,0 +1,81 @@
+/* pages/Announcement/Announcement.wxss */
+
+.Announcement {
+  width: 750rpx;
+  height: 100vh;
+  margin: 0;
+  padding: 0 88rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.kong{
+  display: inline-block;
+  width: 44rpx;
+  height: 28rpx;
+  background-color: #fff;
+}
+
+.Announcement-header {
+  font-size: 28rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(23, 23, 23, 1);
+  line-height: 42rpx;
+}
+
+.Announcement-headlin {
+  font-size: 28rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(23, 23, 23, 1);
+  line-height: 42rpx;
+  margin-top: 60rpx;
+}
+
+.Announcement-img {
+  width: 100%;
+  height: 200rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 92rpx;
+}
+
+.Announcement-img-image {
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.Announcement-button {
+  width: 280rpx;
+  height: 88rpx;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 44rpx;
+  box-shadow: 0rpx 2rpx 6rpx 0rpx rgba(0, 117, 135, 0.3);
+  font-size: 30rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(0, 198, 147, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 90rpx;
+}
+
+.Announcement-Alt {
+  width: 100%;
+  height: 20rpx;
+  font-size: 20rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(153, 153, 153, 1);
+  margin-top: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

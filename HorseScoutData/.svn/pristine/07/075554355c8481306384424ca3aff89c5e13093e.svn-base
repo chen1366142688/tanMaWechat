@@ -1,0 +1,32 @@
+<!--pages/Forget-Password/Forget-Password.wxml-->
+<view class='Forget-Password'>
+  <view class='Forget-Password-background'></view>
+  <view class='Forget-Password-section'>
+    <view class='section-Head-Portraits'>
+      <image class='Head-Portraits-img'  src='{{imgUrl}}Head-Portraits.png'></image>
+    </view>
+    <view class='Register-section-taber'>
+      <view class='Section-List'>
+        <view class='Register-List-Section-left'>
+          <view class='Register-List-Section-one'>
+            <input class='List-Section-one-input {{phoneNum.length==11 ?"ok":""}}' type='number' maxlength="11" placeholder='登录手机' placeholder-class='List-Section-one-input-cbcbcb' bindinput='inputPhone'></input>
+            <image wx:if="{{phoneNum.length == 11}}" class='List-Section-one-img' src='{{imgUrl}}accomplish.png'></image>
+          </view>
+          <view class='Register-List-Section-two'  wx:if="{{phoneNum.length==11}}">
+            <input class='List-Section-one-input-two {{code.length==6?"ok" : ""}}' maxlength="6" placeholder='验证码' placeholder-class='List-Section-one-input-cbcbcb' bindinput='inputCode'></input>
+            <view class='List-Section-one-text-two {{code.length==6?"ok" : ""}}' wx:if="{{showCode}}" style='text-align:center'>({{thisTime}}s)</view>
+            <view class='List-Section-one-text-two {{code.length==6?"ok" : ""}}' wx:if="{{!showCode}}" bindtap='sendCode'>发送验证码</view>
+            <image class='List-Section-one-img-two {{code.length==6?"opacity" : ""}}' src='{{imgUrl}}accomplish.png'></image>
+          </view>
+          <!--没有输入phone时-->
+           <view class='Register-List-Section-twos' wx:if="{{phoneNum.length!==11}}">
+            <input class='List-Section-one-input-twos' maxlength="6" placeholder='验证码' placeholder-class='List-Section-one-input-cbcbcb'></input>
+          </view>
+          <view class='Register-Submit-left'>
+           <view class='Register-Submit-button' bindtap='subLogin'>提 交</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

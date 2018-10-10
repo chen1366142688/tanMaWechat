@@ -1,0 +1,29 @@
+<view class='c-topimg'>
+  <view class='c-news'>
+    <image class='userImg' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coach/public/default-po.png'></image>
+    <!-- <view class='c-select clearfloat'> -->
+    <picker disabled='{{pickTf}}' bindtap='fixParams' class='c-select' bindchange="bindPickerChange"  value="{{index}}" range="{{homeList}}" range-key='homeName'>
+      <image class='c-select-item fl' src='{{url}}select-vanen.png'></image>
+      <text class='c-seletxt fl pickers' wx:if="{{homeList}}">{{homeList[index].homeName}}</text>
+      <text class='c-seletxt fl pickers' wx:if="{{!homeList}}"></text>
+      <image class="c-down" src='{{url}}c-down.png'></image>
+    </picker>
+    <!-- </view> -->
+    <view class='c-user clearfloat'>
+      <image class='c-select-item fl' src='{{url}}student.png'></image>
+      <input class='c-input-name fl' value='' bindblur='name' placeholder-class='c-input-plac' maxlength='15' placeholder='输入昵称'></input>
+    </view>
+    <view class='c-phone clearfloat'>
+      <image class='c-select-items fl' src='{{url}}c-logiin-phonoe.png'></image>
+      <input class='c-input-phone fl' bindinput='shuRu' type='number' placeholder-class='c-input-plac' maxlength='11' placeholder='登录手机'></input>
+      <view class="schoolu_b" wx:if="{{showCode}}">({{thisTime}}s)</view>
+      <view class='c-send-code' bindtap='sendCode' wx:if="{{!showCode}}">发送验证码</view>
+    </view>
+    <view class='c-verification-code clearfloat'>
+      <image class='c-select-itemse fl' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coach/public/transmit.png'></image>
+      <input class='c-input-code fl' bindinput='shuCode' type='number' placeholder-class='c-input-placcode' maxlength='6' placeholder='验证码'></input>
+      </view>
+  </view>
+</view>
+<text class='c-shuoming'>*注意：学员和教练请勿注册本账号.</text>
+<image class='vanenReg' bindtap='submit' src='{{url}}vanen-register.png'></image>

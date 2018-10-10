@@ -1,0 +1,261 @@
+<!--index.wxml-->
+<view class="pg-box">
+  <swiper class="swiper" interval="5000" duration="1000" previous-margin="40rpx" next-margin="40rpx" bindchange="swiperChange">
+    <block wx:for="{{movies}}" wx:for-index="index" wx:key="index">
+      <swiper-item>
+        <view class="slide-image {{item.dec}} {{thisnum == item.id?'cur':''}}">
+          <image class='SwpHeadimg' src="{{item.headImg}}"></image>
+          <text class='bodyName'>{{item.name}}</text>
+          <image class='sexImg' wx:if="{{item.sex == 1}}" src='{{imgUrl}}Patriarch/woman.png'></image>
+          <image class='sexImg' wx:if="{{item.sex == 2}}" src='{{imgUrl}}Patriarch/man.png'></image>
+          <view class='ageView'>
+            <text>{{item.age}}</text>
+            <image class='ageImg' src="{{imgUrl}}Patriarch/Years-old.png"></image>
+          </view>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="pg-block pg-block1">
+    <view class="pg-b1-title">总锻炼时间</view>
+    <view class="pg-b1-value">{{totalTime || 0}}
+      <text class='pg-b1-value-small'> 分钟</text>
+    </view>
+    <view class="pg-b1-sub">
+      <view>
+        <view class="pg-b1-subtitle">今日锻炼</view>
+        <view class="pg-b1-subvalue">{{dayTime || 0 }}
+          <text class='pg-b1-value-small'> 分钟</text>
+        </view>
+      </view>
+      <view>
+        <view class="pg-b1-subtitle">本周锻炼</view>
+        <view class="pg-b1-subvalue weekCol">{{weekTime || 0}}
+          <text class='pg-b1-value-small'> 分钟</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="pg-block pg-block2">
+    <view class="pg-block-title mg-b-8">
+      <image src="{{imgUrl}}Patriarch/All.png" class="t-icon" mode="aspectFit"></image>
+      <view>共锻炼
+        <text>{{totalDay || 0 }}</text> 天，当前连续锻炼
+        <text>{{continueDay || 0}}</text> 天。</view>
+    </view>
+    <view class="pg-block-cont">
+      <view class="charts-sport">
+        <scroll-view scroll-x="true" scroll-with-animation="true" bindscrolltoupper="refreshData" scroll-into-view="{{toDayItem}}"  class="scroll-box">
+          <view class="data-list" style="width: {{boxWidth}}rpx">
+            <view class="data-loading-tip {{isLoading? 'active': ''}}">
+              <image src='../../image/loading.gif'></image>
+            </view>
+            <view class="data-list-item" wx:for="{{StatisticList}}" wx:key="uqine" wx:for-item="statist" id="{{StatisticList.length-1 == index? 'toDayItem' : ''}}">
+              <view class="item-bar {{statist.dayTime == 0 ? 'gray' : ''}}" id="{{StatisticList.length-1 == index? 'toDay' : ''}}" style='height: {{statist.percent == 0 ? 8 : statist.percent}}%'>
+                <view class="item-label">{{statist.dayTime == null ? 0 : statist.dayTime}}</view>
+              </view>
+              <view class="item-x">
+                <view>{{statist.dataDay }}</view>
+                <view wx:if="{{statist.dataDay == 1}}">{{statist.dataMonth  + '月'}}</view>
+              </view>
+            </view>
+          </view>
+        </scroll-view>
+      </view>
+    </view>
+  </view>
+  <view class="pg-block">
+    <view class='pg-blockTop'>
+      <view class="pg-block-title mg-b-8">
+        <image src="{{imgUrl}}Patriarch/Test.png" class="t-icon icon-mt10" mode="aspectFit"></image>
+        <view>体质得分为
+          <text class="text-em">{{TestAgeResult.score  }}</text> 分，优于
+          <text>{{TestAgeResult.percent }}%</text> 的同龄人。</view>
+      </view>
+      <view class="pg-block-subtitle">您还有 {{TestAgeResult.remainNum }} 项测试未完成，完成后便可查看完整评估结果啦！</view>
+    </view>
+    <view class='pg-blockBott'>
+      <view class='pg-blockBott-one'>
+        <view class='pg-blockBott-one-left'>
+          <view class='pg-blockBott-one-left-top'>身体形态</view>
+          <view class="bottom-Bm">BMI  {{TestAgeResult.bmi }}</view>
+        </view>
+        <view class='pg-blockBott-one-right'>
+          <view class='pg-blockBott-one-right-number'>{{bmiValue }}<text class='tinct-gray'>.{{bmiValues == 0 ? 0 : bmiValues  }}</text></view>
+        </view>
+      </view>
+      <view class='pg-blockBott-two'>
+        <view class='pg-blockBott-two-left'>
+          <view class='pg-blockBott-two-left-top'>心肺功能</view>
+          <view class="bottom-Bm">肺活量  {{TestAgeResult.cardiopulmonaryFunction }} ml</view>
+        </view>
+        <view class='pg-blockBott-two-right'>
+          <view class='pg-blockBott-two-right-number'>{{cardiopulmonaryFunctionValue}}<text class='tinct-gray'>.{{cardiopulmonaryFunctionValues == 0 ? 0 : cardiopulmonaryFunctionValues}}</text></view>
+        </view>
+      </view>
+    </view>
+    <view class="pg-block-cont">
+      <view class='pg-block-cont-healine'>身体素质</view>
+      <view class="charts-physique">
+        <ec-canvas id="mychart-dom2" canvas-id="mychart2" ec="{{ physiqueEc }}"></ec-canvas>
+      </view>
+      <view class="divider-line mg-20"></view>
+      <view class="charts-people">
+        <ec-canvas id="mychart-dom3" canvas-id="mychart3" ec="{{ peopleEc }}"></ec-canvas>
+      </view>
+      <view class="pg-btn btn-green" bindtap='shareIndex'>
+        <view class="pg-btn-icon">
+          <image src="{{imgUrl}}Patriarch/share.png" mode="aspectFit"></image>
+        </view>
+        <text>分享结果</text>
+      </view>
+      <view class="divider-line mg-30"></view>
+      <view class="pg-block-title mg-b-8">
+        <image src="{{imgUrl}}Patriarch/diagnose.png" class="t-icon" mode="aspectFit"></image>
+        <view>
+          <text class="bold">小马诊断</text> </view>
+      </view>
+      <view class="pg-cont-para">
+        门知识与重要性内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容。
+      </view>
+      <view class="pg-btn-group mg-20">
+        <view class="pg-btn aginTest" bindtap='Testagin'>
+          <text>再次测试</text>
+        </view>
+        <view class="pg-btn btn-green goExercise" bindtap='ExerciseProgram'>
+          <text>去选择锻炼计划</text>
+        </view>
+      </view>
+      <view class="divider-line mg-30"></view>
+    </view>
+  </view>
+  <!-- 第一种情况 -->
+  <view class='Test-Score'>
+    <view class="pg-block-title mg-b-8">
+      <image src="{{imgUrl}}Patriarch/parameter.png" class="t-icon" mode="aspectFit"></image>
+      <view>
+        <text class="bold">国家体质健康标准测试成绩</text> </view>
+    </view>
+    <view class="pg-level-title">
+      <view>成绩提供：学校名称</view>
+      <view>测试时间：2018-09-14</view>
+    </view>
+    <!-- <view class="pg-list bg-gray">
+                <view class="pg-list-item">
+                    <view>BMI </view>
+                    <view>22.34 kg/m2 </view>
+                    <view class="level-state level-state1">
+                        <view class="icon"></view>
+                        <view>优秀</view>
+                    </view>
+                </view>
+                <view class="pg-list-item">
+                    <view>肺活量 </view>
+                    <view>2830 ml </view>
+                    <view class="level-state level-state2">
+                        <view class="icon"></view>
+                        <view>良好</view>
+                    </view>
+                </view>
+                <view class="pg-list-item">
+                    <view>50米跑 </view>
+                    <view>8.6 s</view>
+                    <view class="level-state level-state3">
+                        <view class="icon"></view>
+                        <view>及格</view>
+                    </view>
+                </view>
+                <view class="pg-list-item">
+                    <view>坐位体前屈 </view>
+                    <view>11.5 cm</view>
+                    <view class="level-state level-state4">
+                        <view class="icon"></view>
+                        <view>不及格</view>
+                    </view>
+                </view>
+            </view> -->
+    <view class='table'>
+      <view class='table-li'>
+        <text class='xl-name bold'>BMI</text>
+        <text class='xl-dw'>22.34 kg/m2 </text>
+        <text class='xl-jg w100 table-blue'>良好</text>
+      </view>
+      <view class='table-li'>
+        <text class='xl-name bold'>50米跑</text>
+        <text class='xl-dw'>08.6 s</text>
+        <text class='xl-jg w100 table-pink'>及格</text>
+      </view>
+      <view class='table-li'>
+        <text class='xl-name bold'>肺活量</text>
+        <text class='xl-dw'>2830 ml</text>
+        <text class='xl-jg w100 table-green'>优秀</text>
+      </view>
+      <view class='table-li'>
+        <text class='xl-name bold'>1分钟仰卧起坐</text>
+        <text class='xl-dw'>117.1 s（1'57"）</text>
+        <text class='xl-jg w100 table-hui'>不及格</text>
+      </view>
+    </view>
+  </view>
+  <!-- 第二种情况 -->
+  <view class='Test-Score'>
+    <view class="pg-block-title mg-b-8">
+      <image src="{{imgUrl}}Patriarch/parameter.png" class="t-icon" mode="aspectFit"></image>
+      <view>
+        <text class="bold">国家体质健康标准测试成绩</text> </view>
+    </view>
+    <view class="pg-level-title">
+      <view>成绩提供：未知</view>
+      <view>测试时间：未知</view>
+    </view>
+    <view class='table2'>
+      <view class='login'>
+        <view class='login-left'>请先</view>
+        <view class='login-center'>注册</view>
+        <view class='login-right'>并添加孩子信息，才可看到本栏数据。</view>
+      </view>
+    </view>
+  </view>
+  <!-- 第三种情况 -->
+  <view class='Test-Score'>
+    <view class="pg-block-title mg-b-8">
+      <image src="{{imgUrl}}Patriarch/parameter.png" class="t-icon" mode="aspectFit"></image>
+      <view>
+        <text class="bold">国家体质健康标准测试成绩</text> </view>
+    </view>
+    <view class="pg-level-title">
+      <view>成绩提供：未知</view>
+      <view>测试时间：未知</view>
+    </view>
+    <view class='table2'>
+      <view class='add-information'>
+        <view class='add-information-left'>请先</view>
+        <view class='add-information-center'>添加孩子信息</view>
+        <view class='add-information-right'>才可看到本栏数</view>
+      </view>
+    </view>
+  </view>
+  <!-- 第四种情况 -->
+  <view class='Test-Score'>
+    <view class="pg-block-title mg-b-8">
+      <image src="{{imgUrl}}Patriarch/parameter.png" class="t-icon" mode="aspectFit"></image>
+      <view>
+        <text class="bold">国家体质健康标准测试成绩</text> </view>
+    </view>
+    <view class="pg-level-title">
+      <view>成绩提供：未知</view>
+      <view>测试时间：未知</view>
+    </view>
+    <view class='table'>
+      <view class='table-li'>
+        <text class='xl-name bold'>BMI</text>
+        <text class='xl-dw'>0 kg/m2 </text>
+        <text class='table-gray'>未知</text>
+      </view>
+    </view>
+  </view>
+  <!--<scroll-view class='scrollBox' bindscrolltoupper="touper" scroll-x="true" style='display:flex;justify-content:flex-end;white-space: nowrap;width:750rpx;height:300rpx;'>
+      <view class='item' wx:for="{{list}}" style='width:150rpx;height:300rpx;background-color:green;display:inline-block;margin-left:40rpx;'>{{item}}</view>
+    </scroll-view>-->
+  <view class='kong'></view>
+</view>

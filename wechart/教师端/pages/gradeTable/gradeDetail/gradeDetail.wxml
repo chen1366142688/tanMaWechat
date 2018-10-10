@@ -1,0 +1,39 @@
+<!--pages/gradeTable/gradeDetail/gradeDetail.wxml-->
+<view class='gradeDetail'>
+  <view class='header'>
+    <view class='left'>
+      <image src='http://tanma-competition.oss-cn-beijing.aliyuncs.com/classgrade.png'></image>
+      <text class='classgrade'>{{classInfo.classList}}{{classInfo.classGrade}}</text>
+      <view class='yetnot'>已录入：{{classInfo.scoreYet}}</view>
+      <view class='yetnot'>未录入：{{classInfo.scoreNot}}</view>
+    </view>
+    <view class='right'>
+      <image src='http://tanma-competition.oss-cn-beijing.aliyuncs.com/student_search.png'></image>
+      <image src='http://tanma-competition.oss-cn-beijing.aliyuncs.com/student_rank.png'></image>
+    </view>
+  </view>
+  <view class='studentlist'>
+    <view class='listheader'>
+      <view class='head-main {{listIndex == 1 ? "checklist":""}}' bindtap='checklist' data-index='1'>
+        全部
+      </view>
+      <view class='head-main {{listIndex == 2 ? "checklist":""}}' bindtap='checklist' data-index='2'>
+        仅男生
+      </view>
+      <view class='head-main {{listIndex == 3 ? "checklist":""}}' bindtap='checklist' data-index='3'>
+        仅女生
+      </view>
+    </view>
+    <view class='studentinfo' wx:for="{{stuList}}" wx:key="{{index}}">
+      <view class='left'>
+        {{item.name}}
+        <text>（09-12）</text>
+        <image src='{{item.sex == 1 ? "../../../image/man2.png" : "../../../image/woman2.png"}}'></image>
+      </view>
+      <view class='right'>
+        <text>{{item.score}}</text>
+        <image src='http://tanma-competition.oss-cn-beijing.aliyuncs.com/next.png'></image>
+      </view>
+    </view>
+  </view>
+</view>

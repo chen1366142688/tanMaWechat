@@ -1,0 +1,32 @@
+<!--pages/curriculum/Comment/Comment.wxml-->
+<view class='comment-header'>
+  <view class='comment-one'>
+    <text class='comment-l fl'>学员整体评价</text>
+    <view class='comment-r fr'>
+      <image class='cha' bindtap='cha' src='{{imgUrl}}bad{{bad}}.png' data-val="bad"></image>
+      <text class='cha-t iLblock {{reds}}' bindtap='cha' data-val="bad">差评</text>
+      <image class='zhong' src='{{imgUrl}}ok{{ok}}.png' data-val="ok" bindtap='cha'></image>
+      <text class='zhong-t iLblock {{hei}}' data-val="ok" bindtap='cha'>中评</text>
+      <image class='hao' src='{{imgUrl}}good{{good}}.png' data-val="good" bindtap='cha'></image>
+      <text class='hao-t iLblock {{green}}' data-val="good" bindtap='cha'>好评</text>
+    </view>
+  </view>
+  <view class='comment-two'>
+    <text class='comment-l fl'>运动技能</text>
+    <view class='comment-r fr'>
+      <view class='select_box'>
+        <picker class='select'  bindchange="bindCasPickerChange"  value="{{index}}" range="{{array}}">
+          <text class='select_text'>{{array[index]}}</text>
+          <image class='select_img' src='{{imgUrl}}xiala2.png'></image>
+        </picker>
+        <!-- <view class='option_box' style='height:{{show?(array.length>5?300:array.length*60):0}}rpx;'>
+          <text class='option' style='{{index==array.length-1&&"border:0;"}}' wx:for='{{array}}' wx:key='this' data-index='{{index}}' catchtap='optionTap'>{{item}}</text>
+        </view> -->
+      </view>
+    </view>
+  </view>
+</view>
+<textarea class='textpush' maxlength="200" auto-height adjust-position="true" placeholder-class="busPush" placeholder="说说你对学员的印象吧……" value='{{comment}}' data-val="{{comment}}" bindinput="arear"></textarea>
+<view class='footer' bindtap='sunBtn'>
+  <view class='submit'>保 存</view>
+</view>

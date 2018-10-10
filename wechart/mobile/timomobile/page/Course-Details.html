@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>课程详情</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <script src="../build/flexible_css.debug.js"></script>
+    <script src="../build/flexible.debug.js"></script>
+    <!--<link href="../build/base.debug.css" rel="stylesheet"/>-->
+    <link href="../build/Course-Details.debug.css" rel="stylesheet"/>
+    <!--<link rel="stylesheet" href="../css/Course-Details.css">-->
+</head>
+<body>
+<div class="Course-Details">
+    <div class="Course-Details-section" id="CDsection"></div>
+</div>
+<div class="empity"></div>
+<div class="Course-Details-botton">
+    <div class="Botton-one">
+        <a  class="Botton-one-a" id="iPhone">
+            <img src="http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/consult.png" alt="" class="Botton-one-image1">
+            <!--<img src="http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/consultingcoachqinse.png" alt="" class="Botton-one-image">-->
+            <p class="Botton-one-text">咨询教练</p>
+        </a>
+    </div>
+    <div class="Botton-two" id="Purchase">
+        <img src="http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/purchasecourse.png" alt=""
+             class="Botton-one-image1">
+        <p class="Botton-one-text">购买课程</p>
+    </div>
+    <div class="Botton-there" id="collect">
+        <img src="http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/collecta.png" alt=""
+             class="Botton-one-image">
+        <img src="http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/green_colleted.png" alt=""
+             class="Botton-one-image2">
+        <p class="Botton-one-text">收藏</p>
+    </div>
+</div>
+<!--选择课程时段-->
+<div class="Course-Details-model1" id="model1">
+    <div class="model1-section">
+        <div class="model1-section-headline">选择课程时段</div>
+        <form id="Iform" method="post" action="">
+        </form>
+        <div class="model1-section-button" id="Confirm">
+            <div class="model1-section-button-biank">确 认 购 买</div>
+        </div>
+    </div>
+    <div class="backModals"></div>
+</div>
+<!--购买课程未登录-->
+<div class="Course-Details-model2" id="model2">
+    <div class="model1-section">
+        <div class="model1-section-headline">选择课程时段</div>
+        <form id="Iform2" method="post" action="">
+
+        </form>
+        <div class="model1-section-iPhone">
+            <div class="model1-section-iPhone-top">
+                <img src="http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/studentNewImg/c22.png"
+                     class="model1-section-iPhone-top-image" alt="">
+                <div class="model1-section-iPhone-top-input">
+                    <input type="text" name="phone" class="iPhone-top-input phone" size="11" placeholder-class='myInfo' placeholder="请输入手机号">
+                </div>
+            </div>
+            <div class="model1-section-iPhone-bottom">
+                <img src="http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/studentNewImg/c22.png"
+                     class="model1-section-iPhone-bottom-image" alt="">
+                <div class="model1-section-iPhone-bottom-input">
+                    <input type="text" class="iPhone-bottom-input checkCode"  name="checkCode" size="6" placeholder-class='myInfo' placeholder="请输入验证码">
+                </div>
+                <input  class="model1-section-iPhone-bottom-fasong btnSendCode"  type="button" value="发送验证码" onclick="getIdentifyingCode(2)">
+            </div>
+        </div>
+        <div class="model1-section-button" id="confirmation">
+            <div class="model1-section-button-biank">确 认 购 买</div>
+        </div>
+    </div>
+    <div class="backModal"></div>
+</div>
+<!--购买成功-->
+<div class="Course-Details-model3" id="model3">
+    <div class="model3-section">
+        <img src="http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/student/paymentapproval.png"
+             class="model3-section-image" alt="">
+        <div class="model3-section-text">购买成功!</div>
+    </div>
+    <div class="backModals"></div>
+</div>
+<!--购买失败-->
+<div class="Course-Details-model4" id="model4">
+    <div class="model4-section">
+        <img src="http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/student/no.png" class="model4-section-image"
+             alt="">
+        <div class="model4-section-text">操作失败!</div>
+    </div>
+    <div class="backModals"></div>
+</div>
+<!--收藏课程  未登录-->
+<div class="Course-Details-model5" id="model5">
+    <div class="model5-section">
+        <div class="model5-section-iPhone-top">
+            <img src="http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/studentNewImg/c22.png"
+                 class="model5-section-iPhone-top-image" alt="">
+            <div class="model5-section-iPhone-top-input">
+                <input type="text" class="iPhone-top-input5 phone" name="storePhone" maxlength="11" placeholder-class='myInfo' placeholder="请输入手机号">
+            </div>
+        </div>
+        <div class="model5-section-iPhone-bottom">
+            <img src="http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/studentNewImg/c22.png"
+                 class="model5-section-iPhone-bottom-image" alt="">
+            <div class="model1-section-iPhone-bottom-input">
+                <input type="text" class="iPhone-bottom-input5 checkCode"  name="storeCode" maxlength="6" placeholder-class='myInfo' placeholder="请输入验证码">
+            </div>
+            <input class="model5-section-iPhone-bottom-fasong btnSendCode" type="button" value="发送验证码" onclick="getIdentifyingCode(1)">
+        </div>
+        <div class="model5-section-button">
+            <div class="model5-section-button-biank" >确 认 收 藏</div>
+        </div>
+    </div>
+    <div class="backModals"></div>
+</div>
+<!--收藏课程  收藏成功-->
+<div class="Course-Details-model6" id="model6">
+    <div class="model6-section">
+        <img src="http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/student/paymentapproval.png"
+             class="model6-section-image" alt="">
+        <div class="model6-section-text">收藏成功!</div>
+    </div>
+    <div class="backModals"></div>
+</div>
+<!--收藏课程  取消成功-->
+<div class="Course-Details-model6" id="model7">
+    <div class="model6-section">
+        <img src="http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/student/paymentapproval.png"
+             class="model6-section-image" alt="">
+        <div class="model6-section-text">取消成功!</div>
+    </div>
+    <div class="backModals"></div>
+</div>
+<!--提示框-->
+<div class="Course-Details-model8" id="model8">
+    <div class="model8-section">
+        <div class="model8-section-input">验证码发送成功</div>
+        <div class="model8-section-text">ok</div>
+    </div>
+    <div class="backModals"></div>
+</div>
+
+<script src="../js/utils/url-helper.js" type="text/javascript"></script>
+<script src="../js/webjs/zepto.min.js" type="text/javascript"></script>
+<script src="../js/utils/Course-Details.js"></script>
+</body>
+</html>

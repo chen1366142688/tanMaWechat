@@ -1,0 +1,29 @@
+<scroll-view class="notice" style='width:{{width}}px;height:{{height}}px' bindscrolltolower="scrolltolower" scroll-y='true'>
+  <view class="list-block media-list">
+    <view class='newmessageapersent'>
+      <!-- 循环绑定数据 Array 数组 -->
+      <view class="noticetitlea" wx:for="{{informfist}}" wx:key="{{item.noticeId}}" bindtap='coursenewevent' data-index="{{index}}" data-noticeId="{{item.noticeId}}" data-scanState="{{item.scanState}}" data-targetId="{{item.targetId}}">
+        <view class="item-content">
+          <view class="item-inner">
+            <view class='item-innerTop'>
+              <view class="item-title textOver">{{item.noticeTitle}}</view>
+              <view>
+                <!-- <text class="ring sys-ringa" wx:if="{{item.scanState=='01'}}"></text> -->
+                <image src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/ss-newmessageprompt.png' class="ring" wx:if="{{item.scanState=='01'}}"></image>
+                <view class="item-after">{{item.creatTime}}</view>
+              </view>
+            </view>
+            <view class="item-text newmessagea {{!item.show ? 'newmessage-content-littlea' : ''}}">{{item.noticeContent}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+<!--  没有数据显示空空如也  -->
+<view class='kong' wx:if="{{!haveData}}">
+    <image class='kong-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/studentNewImg/dataEmpty.png'></image>
+    <text class='kong-text'>数据为空</text>
+</view> 
+<view wx:if="{{more}}" class='more'>————已全部显示————</view>
+</scroll-view>

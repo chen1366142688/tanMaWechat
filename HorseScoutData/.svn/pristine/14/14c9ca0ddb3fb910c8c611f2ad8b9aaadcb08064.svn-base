@@ -1,0 +1,54 @@
+<!--pages/My/Personal-Information/Personal-Information.wxml-->
+<view class='Personal-Information'>
+  <view class='Personal-Information-head-portrait'>
+    <image class='head-portrait' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/My/head-portrait.png'></image>
+    <view class='Alter-head-portrait'>头像更改</view>
+  </view>
+  <view class='Personal-Information-section'>
+    <view class='Personal-Information-section-Name'>
+      <view class='Personal-Information-section-Name-left'>我的昵称</view>
+      <view class='Personal-Information-section-Name-right'>
+        <view class='section-Name-right'>李华</view>
+        <image class='section-Name-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/My/next-page.png'></image>
+      </view>
+    </view>
+    <view class='Personal-Information-section-Name'>
+      <view class='Personal-Information-section-Name-left'>监护人类型</view>
+      <view class='Personal-Information-section-Name-right'>
+        <view class='section-Name-right'>母亲</view>
+        <image class='section-Name-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/My/unfold.png'></image>
+      </view>
+    </view>
+    <view class='Personal-Information-section-Name'>
+      <view class='Personal-Information-section-Name-left'>所在城市</view>
+      <view class='Personal-Information-section-Name-right-two'>
+        <view class='Name-right-one'>
+          <view class='section-Name-right-two'>四川省</view>
+          <image class='section-Name-img-two' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/My/unfold.png'></image>
+        </view>
+        <view class='Name-right-two'>
+          <view class='section-Name-right-two'>四川省</view>
+          <image class='section-Name-img-two' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/My/unfold.png'></image>
+        </view>
+      </view>
+    </view>
+    <view class='Bind-Account'>账号绑定</view>
+    <view class='Personal-Information-section-Name'>
+      <view class='Personal-Information-section-Name-left'>手机(登录账号)</view>
+      <view class='Personal-Information-section-Name-right'>
+        <view class='section-Name-right'>136******99</view>
+        <image class='section-Name-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/My/next-page.png'></image>
+      </view>
+    </view>
+    <view class='Bind-Account'>安全设置</view>
+    <view class='Personal-Information-section-Name'>
+      <view class='Personal-Information-section-Name-left'>登录密码</view>
+      <view class='Personal-Information-section-Name-right'>
+        <view class='section-Name-right'>修改</view>
+        <image class='section-Name-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/My/next-page.png'></image>
+      </view>
+    </view>
+
+    <view class='log-out'>退出登录 > </view>
+  </view>
+</view>

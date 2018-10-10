@@ -1,0 +1,9 @@
+<view class='app'>
+  <view class='imgBox' wx:for="{{activityList}}">
+    <image class='imgData' mode="widthFix" src='{{item.pic}}' bindtap='toCompetitionDetail' data-orgid='{{item.organizationId}}'  />
+  </view>
+  <view wx:if="{{activityList.length > 0 }}" class='notmessage' >-- 没有更多比赛信息了！--</view>
+  <view wx:if="{{!haveActivity }}" class='notmessage' >-- 暂时没有比赛信息！--</view>
+</view>
+
+

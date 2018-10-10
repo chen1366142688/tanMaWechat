@@ -1,0 +1,62 @@
+
+<view class='bindchild'>
+  <view class='childbirth'>
+    <view>孩子的出生年月日</view>
+    <picker mode="date" value="{{date}}" start="1990-01-01" end="{{end}}" bindchange="bindDateChange">
+      <view class='Year-month-day'>
+        <view class='section-Year'> <text class='section-Year-blue section-time' decode='true'>{{year}}&nbsp;</text>年</view>
+        <view class='section-month'> <text class='section-month-blue section-time' decode='true'>&nbsp;{{month}}&nbsp;</text>月</view>
+        <view class='section-day'> <text class='section-day-blue section-time' decode='true'>&nbsp;{{day}}&nbsp;</text>日</view> 
+        <image class='section-pull-down' src='{{imgUrl}}pull-down.png'></image>
+      </view> 
+    </picker>
+  </view>
+  <view class='childname'>
+    <view class='childsex' bindtap='changeSex'>
+      {{sex ? "男" : "女"}}<image class='section-pull-down' src='{{imgUrl}}pull-down.png'></image>
+    </view>
+    <view class='childreal'>
+      <input type='text' placeholder='真实姓名' bindinput='realName'></input>
+    </view>
+  </view>
+  <view class='childcode'>
+    <view>
+      <input type='idcard' placeholder='请输入您孩子的完整身份证号' bindinput='idcard'></input>
+    </view>
+    <view bindtap='searchChild'>
+      <icon type="search" size="15" color='RGBA(77, 208, 200, 1)'/>
+    </view>
+  </view>
+  <view class='childinfo' wx:if="{{childList.length !== 0}}">
+    <view class='childinfo-first'  wx:for="{{childList}}" wx:key="{{index}}" bindtap='searchInfo' data-id='{{item.childrenId}}'>
+      <view class='childinfo-letf'>
+        <view class='realname'>{{item.realName}}</view>
+        <image class='Name-gender-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/My/{{item.gender ==1 ? "man" : "woman"}}.png'></image>
+      </view>
+      <view class='childinfo-right'>
+        {{item.age}}岁 | {{item.cityName }} | {{item.schoolName }}
+      </view>
+    </view>
+  </view>
+  <view class='verification' wx:if="{{isVerification}}">
+    <view class='verification-box'>
+      <view class='verification-title'><view class='clear-icon'><icon type="clear" size="12" color='white'/></view>绑定验证</view>
+      <view class='verification-main'>
+        绑定需要通过孩子已有监护人的验证。系统会将验证码发给当前选定的监护人，请将TA收到的验证码填写到下面：
+      </view>
+      <scroll-view class='verification-info' scroll-x>
+        <view bindtap='checkThis' data-info='{{item}}' data-index='{{index}}' class='verification-one {{checkIndex == index ? "checkthis" : ""}}' wx:for="{{verificationList}}" wx:key="{{index}}">
+          <view>{{item.relationName}}</view>
+          <view>({{item.phoneNo}})</view>
+        </view>
+      </scroll-view>
+      <view class='verification-input'>
+        <input type='number' bindinput='code'></input>
+        <view bindtap='btnCode' class='{{codeTime !== 0 ? "istime" : ""}}'>{{codeTime == 0 ? "发送验证短信" : codeTime + "s后重发"}}</view>
+      </view>
+      <view class='pushcode {{code == ""? "" : "iscode"}}' bindtap='pushCode'>
+        提交验证
+      </view>
+    </view>
+  </view>
+</view>

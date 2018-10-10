@@ -1,0 +1,45 @@
+/* pages/my/Help-particulars/Help-particulars.wxss */
+
+/*@import "wxParse/wxParse.wxss";*/ /* view html转化的有样式   */
+page{
+  background-color: #e4e4e4;
+}
+
+.Help-particulars{
+  width: 750rpx;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.particular-headline{
+  width: 702rpx;
+  height: 79rpx;
+  line-height: 79rpx;
+  margin: 0 auto;
+  font-size: 34rpx;
+  color: #333;
+  font-weight: bold;
+  border-bottom: 1rpx solid #e4e4e4;
+}
+
+.particular-section{
+  width: 702rpx;
+  margin: 0 auto;
+  font-size: 28rpx;
+  padding-bottom: 30rpx;
+  color: #333;
+}
+
+.K{
+  width: 50rpx;
+  display: inline-block;
+}
+
+.footer{
+  width: 750rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 24rpx;
+  color: #999;
+}

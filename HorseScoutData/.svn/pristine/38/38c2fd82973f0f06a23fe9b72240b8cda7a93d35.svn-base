@@ -1,0 +1,50 @@
+$(function(){
+    // let clientType  = GetQueryString("clientType");
+    // let productType  = GetQueryString("productType");
+    // let versions   = GetQueryString("version");
+    let clientType  = 0;
+    let productType  = 1;
+    let versions   = 1;
+    version(clientType,productType,versions)
+    $('.android').click(function(e){
+        window.location.href = '';//安卓下载地址
+    })
+    $('.ios').click(function(e){
+        window.location.href = '';//ios下载地址
+    })
+
+})
+function version(clientType,productType,versions){
+    $.ajax({
+        type:'POST',
+        url: appurl +"/v1/version/getVersionInfo",
+        // headers: {
+        //     'token':token
+        // },
+        dataType:'application/json',
+        data:JSON.stringify({
+            "clientType": clientType,
+            "productType": productType,
+            "version": versions
+        }),
+        contentType: "application/json",
+        success(res){
+            console.log('请求成功')
+            console.log(res)
+            if(res.code == 10000){
+                let result = res.response;
+                $('.headBox').html();//没有字段的图文信息
+                $('.version').text("当前版本号："+result.version);
+                if(result.xxx.length > 0){//待详细说明字段
+                    for(let i =0,html = ''; i<result.xxx.length;i++ ){
+                        html += "<div class='historyItem'><p class='versionHao'>版本号:"+result.xxx+"</p><p>修改内容：</p><ul><li>1. 阿道夫撒地方撒范德萨范德萨发撒范德萨</li><li>2. 地方萨芬撒地方的萨芬撒的撒</li></ul></div>";
+                    }
+                }
+                $('.versionHistory').html(html);
+            }
+        },
+        error(info){
+            confirm(info.msg)
+        }
+    })
+}

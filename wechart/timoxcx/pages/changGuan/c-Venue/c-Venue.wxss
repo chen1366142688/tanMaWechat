@@ -1,0 +1,341 @@
+page{
+  background: #ececec;
+}
+.c-header{
+  width:700rpx;
+  height:88rpx;
+  line-height: 88rpx;
+  background: #fff;
+  padding:0 27rpx 0 23rpx;
+  border-bottom:1rpx solid #ececec;
+  position: relative;
+}
+
+.fenBox{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  min-height: 240rpx;
+  width: 592rpx;
+  padding: 0 74rpx 0 84rpx;
+  background: #fff;
+  margin-top:1rpx;
+}
+.fenItem{
+  width:60rpx; 
+	margin:40rpx 60rpx 5rpx 0;/* 调节封面之间的原始间距，即不小于36px */
+  text-align: center;
+}
+
+
+.xiaLa2{
+  width:13rpx;
+  height:7rpx;
+  vertical-align: middle;
+}
+.fujinTxt{
+  font-size:24rpx;
+  font-family:PingFang-SC-Bold;
+  color:rgba(51,51,51,1);
+  padding-right:9rpx;
+  font-weight:bold;
+}
+.guan-name{
+  width:533rpx;
+  height:58rpx;
+  line-height: 58rpx;
+  border:1rpx solid rgba(0,198,147,1);
+  border-radius: 30rpx; 
+  padding-left:26rpx;
+   margin-top:14rpx; 
+   font-size:24rpx;
+  font-family:PingFang-SC-Regular;
+  color:rgba(153,153,153,1);
+  /* z-index:-1; */
+}
+.chanName{
+  font-size:24rpx;
+  font-family:PingFang-SC-Regular;
+  color:rgba(153,153,153,1);
+}
+.sousuo{
+  width:24rpx;
+  height:24rpx;
+  margin-left:52rpx;
+   /* position: absolute; */
+  /* top:32rpx; */
+  /* right:50rpx;  */
+}
+.searchview{
+  width: 80rpx;
+  position: absolute;
+  top:3rpx;
+  right:50rpx;
+  z-index:9;
+  align-items:center;
+}
+.fenLei{
+  width:592rpx;
+  height:195rpx;
+  background: #fff;
+  padding:24rpx 73rpx 21rpx 84rpx;
+  margin-top:1rpx;
+  display: flex;
+}
+.item{
+  display: inline-block;
+}
+.itemImg{
+  display: block;
+  width:50rpx;
+  height:50rpx;
+  margin:0 auto;
+}
+.c-zuqiu{
+  display: block;
+  font-size:20rpx;
+  font-family:PingFang-SC-Regular;
+  color:rgba(23,23,24,1);
+}
+.fenleiOne{
+  display: inline-block;
+  width:60rpx;
+  text-align: center;
+  margin-right:121rpx;
+  flex: 1;
+}
+.fenCan{
+   margin-right:0;
+}
+.fenleiOne-info{
+  width:60rpx;
+  text-align: center;
+  margin-bottom:40rpx;
+}
+.fenleiOnes-info{
+  width:60rpx;
+  text-align: center;
+}
+.vanThree{
+  width:702rpx;
+  height:362rpx;
+  margin:20rpx auto;
+  background: #fff; 
+}
+.van-banner{
+  width:702rpx;
+  height:239rpx;
+  position: relative;
+  /* background: url('http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/banner.png'); */
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+}
+.van-banner-item{
+  width:658rpx;
+  height:55rpx;
+  line-height: 55rpx;
+  padding:0 17rpx 0 27rpx;
+  position: absolute;
+  bottom: 0;
+  background: rgba(23,23,24,.4);
+  display: flex;
+  flex-direction: row;
+  
+}
+.van-text{
+  flex: 1;
+}
+.van-hot{
+  flex: end;
+  color: #fff;
+}
+.van-city{
+padding:0 8rpx;
+height:19rpx;
+line-height: 19rpx;
+font-size:20rpx;
+font-family:PingFang-SC-Bold;
+color:rgba(255,255,255,1);
+border:1rpx solid rgba(255,255,255,1);
+border-radius: 5rpx;
+vertical-align: middle;
+}
+.van-name{
+  max-width: 358rpx;
+  overflow: hidden;
+font-size:30rpx;
+font-family:PingFang-SC-Bold;
+color:rgba(255,255,255,1);
+margin-left:10rpx;
+}
+.van-hot-num{
+   font-size:24rpx;
+font-family:PingFang-SC-Regular;
+color:rgba(232,85,113,1);
+  padding-left:10rpx;
+  }
+.hot-img{
+  width:24rpx;
+  height:24rpx;
+  vertical-align: middle;
+}
+.van-sc{
+  width: 100%;
+  height: 70rpx;
+  line-height: 70rpx;
+  background: #fff;
+  overflow:hidden;
+  white-space:nowrap;
+  border-bottom:2rpx dotted #4A3E3E;
+}
+.van-scroll{
+  height:66rpx; 
+  width:662rpx;
+  padding:0 20rpx;
+  overflow: scroll;
+}
+.van-ke{
+  display: inline-block;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size:24rpx;
+  padding:0 15rpx;
+  font-family:PingFang-SC-Regular;
+  color:rgba(51,51,51,1);
+  border:1rpx solid #333;
+  border-radius: 5rpx;
+  margin-right:38rpx;
+}
+.van-location{
+  height:50rpx;
+  line-height: 50rpx;
+  padding:0 16rpx 0 20rpx;
+  display: flex;
+  justify-content:space-between;  
+  align-items: center;
+}
+/* .van-left{
+  flex: start;
+}
+.van-right{
+  flex: end;
+} */
+.van-left-img{
+  width:13rpx;
+  height:17rpx;
+  vertical-align: middle;
+  padding-right:10rpx;
+}
+.van-left-txt{
+  display: inline-block;
+  font-size:20rpx;
+  font-family:PingFang-SC-Regular;
+  color:rgba(51,51,51,1);
+  vertical-align: middle;
+}
+.van-over{
+  display: block;
+  width:200rpx;
+  height:23rpx;
+  padding-bottom:20rpx;
+  font-size:24rpx;
+  font-family:PingFang-SC-Regular;
+  color:rgba(153,153,153,1);
+  text-align: center;
+  margin: 0 auto;
+}
+
+
+.scroll-active{
+  padding-left:27rpx;
+  height:150rpx;
+  background: #fff;
+  margin-top:2rpx;
+  overflow: scroll;
+}
+.fenleiOne-scroll{
+  display: inline-block;
+  width:60rpx;
+  text-align: center;
+  margin-right:132rpx;
+}
+.last-fenleiOne-scroll{
+  margin-right:27rpx;
+}
+.itemImg-scroll{
+  display: block;
+  width:50rpx;
+  height:50rpx;
+  margin:43rpx auto 0 auto;
+}
+.c-zuqiu-scroll{
+  display: block;
+  font-size:20rpx;
+  font-family:PingFang-SC-Regular;
+  color:rgba(23,23,24,1);
+}
+.can-fujin{
+  width:670rpx;
+  height:87rpx;
+  padding:0 57rpx 0 23rpx;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top:1rpx solid #ececec;
+}
+.can-txt{
+  height:23rpx;
+  font-size:24rpx;
+  font-family:PingFang-SC-Bold;
+  color:rgba(0,198,147,1);
+  font-weight: bold;
+}
+.sure{
+  width:25rpx;
+  height:19rpx;
+  vertical-align: middle;
+}
+.can-sousuo-con{
+  width:750rpx;
+  height:87rpx;
+  line-height: 87rpx;
+  background: #fff;
+  padding-left: 23rpx;
+  border-top:1rpx solid #ececec;
+}
+.can-sousuo{
+  width:727rpx;
+  height:87rpx;
+}
+.cansoso{
+  font-size: 24rpx;
+  font-family:PingFang-SC-Regular;
+  color:rgba(51,51,51,1);
+}
+.modal{
+  z-index: 1000;
+  position: absolute;
+  height:100vh;
+  width:100vw;
+  background: rgba(23,23,24,.5);
+}
+.loading{  
+  padding: 10rpx;  
+  text-align: center;  
+}  
+.loading:before{  
+  display: inline-block;  
+  margin-right: 5rpx;  
+  vertical-align: middle;  
+  content: '';  
+  width: 40rpx;  
+  height: 40rpx;  
+  /* background: url(../../images/icon-loading.png) no-repeat;   */
+  background-size: contain;  
+  animation: rotate 1s linear infinite;  
+}  
+.loading.complete:before{  
+  display: none;  
+}  

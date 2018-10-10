@@ -1,0 +1,273 @@
+/* pages/my/Withdraw-Deposit/Withdraw-Deposit.wxss */
+
+.Withdraw-Deposit{
+  width: 702rpx;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.Withdraw-Deposit-one{
+  width: 668rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  background-color: #fff;
+  margin-top: 20rpx;
+  padding-left: 34rpx;
+}
+
+.account-number{
+  font-size: 26rpx;
+  color: #333;
+  float: left;
+}
+
+.Deposit-one-text{
+  width: 460rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  float: right;
+  margin-right: 20rpx;
+  text-align: left;
+}
+
+.number{
+  height: 62rpx;
+  font-size: 26rpx;
+  color: #007587;
+  margin: 0rpx;
+  padding: 0rpx;
+}
+
+.hint{
+  height: 18rpx;
+  line-height: 18rpx;
+  color: #E40011;
+  font-size: 18rpx;
+}
+
+.Withdraw-Deposit-two{
+  width: 702rpx;
+  height: 180rpx;
+  background-color: #fff;
+}
+
+.withdraw{
+  width: 110rpx;
+  height: 80rpx;
+  float: left;
+  line-height: 80rpx;
+  margin-left: 34rpx;
+}
+
+.withdraw-hint{
+  width: 110rpx;
+  height: 80rpx;
+  font-size: 26rpx;
+  color: #333;
+}
+
+.withdraw-money{
+  width: 700rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 40rpx;
+  color: #333;
+  font-weight:bold;
+}
+
+.can-sousuo{
+  width: 512rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 40rpx;
+  color: #333;
+  text-align: left;
+  margin-left: 50rpx;
+  position: absolute;
+  margin-top:-75rpx;
+}
+
+
+.balance{
+  width: 702rpx; 
+  height: 50rpx;
+  font-size: 24rpx;
+  text-align: left;
+  color: #999;
+  background-color: #fff;
+  border-top: 1rpx solid #e4e4e4;
+}
+.blue{
+  width: 120rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  color: #007587;
+  float: left;
+}
+.YE{
+  width: 280rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin-left: 34rpx;
+  float: left;
+}
+
+.password{
+  width: 705rpx;
+  height: 130rpx;
+  background-color: #fff;
+  border-top: 1rpx solid #e4e4e4;
+}
+
+.password-text{
+  width: 702rpx;
+  height: 40rpx;
+  font-size: 26rpx;
+  color: #333;
+  display: inline-block;
+  padding-left: 34rpx;
+  line-height: 40rpx;
+}
+
+.can-souu{
+  width: 668rpx;
+  height: 80rpx;
+  padding-left: 34rpx;
+  line-height: 80rpx;
+  padding-top: 10rpx;
+  border-bottom: 1rpx solid #e4e4e4; 
+  background-color: #fff;
+}
+.can-sou{
+  font-size: 40rpx;
+  color: #333;
+}
+
+/*  提交  */
+
+.TJ{
+  width: 702rpx;
+  height: 150rpx;
+  margin: 0 auto;  
+  margin-top: 116rpx;
+}
+
+.withdraw-B{
+  overflow: hidden;
+  width: 635rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  background-image: url('http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coach/public/button.png');
+  background-size:100% 100%;
+  background-color: #007587;
+  border-radius: 40rpx;
+  color: #fff;
+  font-size: 30rpx;
+  /* border: 1rpx dotted #fff; */
+}
+
+.record{
+  width: 702rpx;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  background-color: #fff;
+}
+
+.record-hind{
+  width: 702rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  font-size: 26rpx;
+  color: #333;
+  padding-left: 20rpx;
+}
+
+.record-one{
+  width: 702rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  border-top: 1rpx solid #e4e4e4;
+}
+
+.one-up{
+  width: 682rpx;
+  height: 44rpx;
+  padding-left: 20rpx;
+  line-height: 44rpx;
+  font-size: 28rpx;
+}
+
+.money{
+  width: 400rpx;
+  height: 44rpx;
+  line-height: 44rpx;
+  float: left;
+  color: #00B6D6;
+}
+
+.succeed{
+  width: 200rpx;
+  height: 44rpx;
+  line-height: 44rpx;
+  float: right;
+  color: #007587;
+  text-align: right;
+  padding-right: 20rpx;
+}
+
+.Failure{
+  width: 200rpx;
+  height: 44rpx;
+  line-height: 44rpx;
+  float: right;
+  color: #E40011;
+  text-align: right;
+  padding-right: 20rpx;
+}
+
+.check{
+  width: 200rpx;
+  height: 44rpx;
+  line-height: 44rpx;
+  float: right;
+  color: #00D1E0;
+  text-align: right;
+  padding-right: 20rpx;
+}
+
+.one-down{
+  width: 682rpx;
+  height: 44rpx;
+  padding-left: 20rpx;
+  line-height: 44rpx;
+}
+
+.explain{
+   width: 400rpx;
+  height: 44rpx;
+  line-height: 44rpx;
+  float: left;
+  font-size: 20rpx;
+  color: #333;
+}
+
+.time{
+  width: 200rpx;
+  height: 44rpx;
+  line-height: 44rpx;
+  float: right;
+  font-size: 18rpx;
+  color: #333;
+  text-align: right;
+  padding-right: 20rpx;
+}
+
+.van-footer{
+  display: block;
+  width: 750rpx;
+  text-align: center;
+  margin:20rpx 0 30rpx 0; 
+  font-size:24rpx;
+  font-family:PingFang-SC-Regular;
+  color:rgba(153,153,153,1);
+}

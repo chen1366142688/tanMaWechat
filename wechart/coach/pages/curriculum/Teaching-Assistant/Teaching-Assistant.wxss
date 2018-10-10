@@ -1,0 +1,127 @@
+/* pages/curriculum/Teaching-Assistant/Teaching-Assistant.wxss */
+
+.search {
+  width: 750rpx;
+  height: 88rpx;
+  margin: 0 auto;
+  background: rgba(236, 236, 236, 1);
+}
+
+.guan-name {
+  width: 702rpx;
+  height: 58rpx;
+  line-height: 58rpx;
+  border: 1rpx solid #007587;
+  border-radius: 30rpx;
+  text-align: center;
+  margin-top: 14rpx;
+  margin-right: 25rpx;
+  font-size: 30rpx;
+  color: #333;
+}
+
+.chanName {
+  font-size: 24rpx;
+  color: rgba(153, 153, 153, 1);
+}
+
+.sousuo {
+  width: 24rpx;
+  height: 24rpx;
+  margin-left: 52rpx;
+}
+
+.searchview {
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  top: 25rpx;
+  right: 0rpx;
+  padding-right:50rpx;
+  z-index: 9;
+  text-align: center;
+  align-items: center;
+}
+
+.List {
+  width: 750rpx;
+  height: 100rpx;
+  /* background-color: #fff; */
+}
+
+.List-one {
+  width: 750rpx;
+  height: 120rpx;
+  line-height: 120rpx;
+  background-color: #fff;
+  border-top: 1rpx solid #e4e4e4;
+}
+
+.head-portrait {
+  width: 80rpx;
+  height: 80rpx;
+  float: left;
+  margin-top: 20rpx;
+  margin-left: 24rpx;
+  border-radius: 50rpx;
+}
+
+.List-Name {
+  /* display: inline-block; */
+  width: 180rpx;
+  height: 120rpx;
+  font-size: 30rpx;
+  color: #333;
+  float: left;
+  margin-left: 30rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.gender {
+  width: 30rpx;
+  height: 30rpx;
+  /* margin-left: 5rpx; */
+  margin-top: 47rpx;
+  float: left;
+}
+
+.Site {
+  width: 190rpx;
+  height: 120rpx;
+  line-height: 120rpx;
+  font-size: 30rpx;
+  color: #333;
+  float: left;
+  margin-left: 30rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.Strengths {
+  width: 154rpx;
+  height: 50rpx;
+  border: 1px solid #007587;
+  border-radius: 25rpx;
+  float: right;
+  margin-right: 20rpx;
+  margin-top: 35rpx;
+}
+
+.Strengths-T {
+  width: 30rpx;
+  height: 22rpx;
+  float: left;
+  margin-left: 30rpx;
+  margin-top: 13rpx;
+}
+
+.Strengths-text {
+  float: right;
+  line-height: 50rpx;
+  margin-right: 30rpx;
+  font-size: 24rpx;
+  color: rgba(23, 23, 24, 1);
+}

@@ -1,0 +1,514 @@
+/* pages/my/coach-particulars/coach-particulars.wxss */
+.Subordinate-coach {
+  width: 750rpx;
+  line-height: 0;
+ 
+}
+
+.coach-Single {
+  width: 750rpx;
+  height: 290rpx;
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+
+.Single-header {
+  width: 702rpx;
+  height: 57rpx;
+  line-height: 57rpx;
+  padding: 0 24rpx;
+  border-bottom: 1rpx solid #e4e4e4;
+  display: flex;
+  justify-content: space-between;
+}
+
+.coach-jiao-one {
+  height: 57rpx;
+  line-height: 57rpx;
+  vertical-align: middle;
+}
+
+.coach-jiao-two {
+  height: 57rpx;
+  line-height: 57rpx;
+  vertical-align: middle;
+}
+
+.jiao-img {
+  width: 20rpx;
+  height: 20rpx;
+  vertical-align: middle;
+  margin-right: 10rpx;
+}
+
+.jiao-text {
+  display: inline-block;
+  font-size: 20rpx;
+  color: rgba(51, 51, 51, 1);
+  vertical-align: middle;
+}
+
+.qiu-text {
+  display: inline-block;
+  font-size: 20rpx;
+  color: rgba(51, 51, 51, 1);
+  vertical-align: middle;
+}
+
+.qiu-img {
+  width: 24rpx;
+  height: 24rpx;
+  vertical-align: middle;
+  margin-right: 10rpx;
+}
+
+
+.Single-section{
+  width: 702rpx;
+  height: 162rpx;
+  line-height: 162rpx;
+  padding: 0 24rpx;
+  display: flex;
+  border-bottom: 1rpx solid #e4e4e4;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Head-Portraits{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.section-center {
+  width: 582rpx;
+  height: 120rpx;
+  vertical-align: middle;
+}
+
+.section-center-one{
+  width: 557rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+  padding-left: 25rpx;
+  margin-top: 18rpx;
+  vertical-align: middle;
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-center-one-left{
+  height: 36rpx;
+  line-height: 36rpx;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+}
+
+.one-left-name{
+  max-width: 180rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 34rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.one-left-gender{
+  width: 24rpx;
+  height: 24rpx;
+  margin-left: 10rpx;
+  vertical-align: middle;
+}
+
+.one-left-attestation{
+  width: 80rpx;
+  height: 30rpx;
+  line-height: 32rpx;
+  font-size: 22rpx;
+  text-align: center;
+  color: #00b6d6;
+  border: 1rpx solid #00b6d6;
+  vertical-align: middle;
+  align-items: center;
+  margin-left: 10rpx;
+  border-radius: 5rpx;
+}
+
+.section-center-one-right{
+  height: 34rpx;
+  line-height: 34rpx;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+}
+
+.one-right-gender{
+  width: 24rpx;
+  height: 24rpx;
+  margin-right: 10rpx;
+  vertical-align: middle;
+}
+
+.one-right-name{
+  max-width: 180rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 24rpx;
+  color: #333;
+}
+
+.section-center-two{
+  width: 557rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+  padding-left: 25rpx;
+  margin-top: 18rpx;
+  vertical-align: middle;
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-center-two-left{
+  height: 36rpx;
+  line-height: 36rpx;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+}
+
+.two-left-name{
+  width: 220rpx;
+  font-size: 24rpx;
+  color: #333;
+  vertical-align: middle;
+}
+
+.two-left-name-red{
+  color: #E85571;
+}
+
+
+.section-center-two-right{
+  height: 34rpx;
+  line-height: 34rpx;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+}
+
+.two-right-gender{
+  width: 24rpx;
+  height: 24rpx;
+  margin-right: 10rpx;
+  vertical-align: middle;
+}
+
+.two-right-name{
+  font-size: 24rpx;
+  color: #333;
+  vertical-align: middle;
+}
+
+.Single-footer{
+  width: 702rpx;
+  height: 69rpx;
+  line-height: 69rpx;
+  padding: 0 24rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.training-programs{
+  max-width: 300rpx;
+  height: 69rpx;
+  line-height: 69rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 24rpx;
+  color: #333;
+  vertical-align: middle;
+}
+
+.accept-class{
+  font-size: 24rpx;
+  color: #333;
+  vertical-align: middle;
+}
+
+/*他的课程  */
+.curriculum{
+  width: 750rpx;
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+
+.curriculum-headline{
+  width: 724rpx;
+  height: 88rpx;
+  font-size: 34rpx;
+  line-height: 88rpx;
+  vertical-align: middle;
+  font-weight: bold;
+  color: #333;
+  display: flex;
+  padding-left: 26rpx;
+  border-bottom: 1rpx solid #e4e4e4;
+}
+
+.curiculum-one{
+  width: 750rpx;
+  height: 210rpx;
+  line-height: 210rpx;
+  /* display: flex; */
+}
+
+.one-section{
+  width: 750rpx;
+  height: 116rpx;
+  line-height: 116rpx;
+  vertical-align: middle;
+  border-bottom: 1rpx solid #e4e4e4;
+}
+
+.curiculum-one-header{
+  width: 700rpx;
+  height: 58rpx;
+  line-height: 58rpx;
+  display: flex;
+  margin: 0 25rpx;
+  align-items: center;
+  padding-top: 8rpx;
+  vertical-align: middle;
+}
+
+.header-headline{
+  max-width: 180rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  padding: 0 8rpx;
+  font-size: 20rpx;
+  color: #171718;
+  border-radius: 5rpx;
+  border: 1rpx solid #171718;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.header-section{
+  max-width: 460rpx;
+  height: 58rpx;
+  line-height: 58rpx;
+  color: #333;
+  font-size: 23rpx;
+  margin-left: 10rpx;
+  vertical-align: middle;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: bold;
+}
+
+.curriculum-section{
+  width: 700rpx;
+  height: 48rpx;
+  line-height: 48rpx;
+  padding: 0 25rpx;
+  display: flex;
+  justify-content: space-between;
+  vertical-align: middle;
+}
+
+.section-type{
+  height: 30rpx;
+  line-height: 30rpx;
+  display: flex;
+  vertical-align: middle;
+  margin-top: 10rpx;
+}
+
+.section-money{
+  font-size: 23rpx;
+  height: 48rpx;
+  line-height: 48rpx;
+  vertical-align: middle;
+  color: #333;
+}
+
+
+
+
+.van-left-img {
+  width: 24rpx;
+  height: 24rpx;
+  margin-right: 14rpx;
+  vertical-align: bottom;
+}
+
+.van-timesa-img {
+  width: 24rpx;
+  height: 24rpx;
+  vertical-align: bottom;
+  padding-right: 10rpx;
+}
+
+.van-timesb-img {
+  width: 24rpx;
+  height: 24rpx;
+  padding-right: 10rpx;
+  vertical-align: middle;
+}
+
+.van-terms-class-d {
+  max-width: 220rpx;
+  height: 20rpx;
+  line-height: 20rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-right: 20rpx;
+  vertical-align: middle;
+  font-size: 20rpx;
+  padding-top: 4rpx;
+  color: #666;
+}
+
+.two-section{
+  width: 700rpx;
+  height: 93rpx;
+  line-height: 93rpx;
+  vertical-align: middle;
+  text-align: center;
+  padding: 0 25rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 1rpx solid #e4e4e4;
+  justify-content: space-between;
+}
+
+.compile-button{
+  width: 156rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  font-size: 24rpx;
+  color: #999;
+  padding: 0;
+  margin: 0;
+  border-radius: 25rpx;
+  border:1rpx solid #999;
+  background-color: #fff;
+}
+
+.history-button{
+  width: 156rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  font-size: 24rpx;
+  color: #007587;
+  border-radius: 25rpx;
+  border:1rpx solid #007587;
+  background-color: #fff;
+}
+
+
+/* 解绑  */
+.outline-border{
+  width: 750rpx;
+  height: 148rpx;
+  vertical-align: middle;
+}
+
+.relieve{
+  width: 702rpx;
+  height: 88rpx;
+  font-size: 30rpx;
+  color: #fff;
+  text-align: center;
+  background-color: #E85571;
+  background-image: url('http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/button.png');
+  background-size:100% 100%;
+  margin-left: 24rpx;
+  border-radius: 44rpx;
+  margin-top: 40rpx;
+  margin-bottom: 60rpx;
+  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* ta的权限（多选） */
+
+.permission{
+  width: 750rpx;
+  line-break: 0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bmwH {
+  width: 750rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  background: #fff;
+  margin-bottom: 2rpx;
+  padding: 0 24rpx;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+
+.permission-headline {
+  width: 750rpx;
+  padding: 0 24rpx;
+  box-sizing: border-box;
+  height: 88rpx;
+  line-height: 88rpx;
+  margin-top: 20rpx;
+  font-size: 30rpx;
+  font-family: PingFang-SC-Bold;
+  color: #333;
+  font-weight: bold;
+  vertical-align: middle;
+}
+
+.permission-section {
+  width: 750rpx;
+  padding: 0 24rpx;
+  box-sizing: border-box;
+  height: 88rpx;
+  line-height: 88rpx;
+  vertical-align: middle;
+  font-size: 28rpx;
+  color: #333;
+  font-family: PingFang-SC-Regular;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checkted {
+  color: #333;
+}
+
+.check {
+  border-color: #007587;
+}
+
+

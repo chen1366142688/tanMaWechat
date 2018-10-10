@@ -1,0 +1,5 @@
+<!--pages/my/alter-Name/alter-Name.wxml-->
+<view class='alter-Name'>
+    <input class="input" maxlength="12"  name="userName" placeholder="{{options.classType==3?'请输入机构名称':'请输入昵称'}}" value="{{nickName?nickName:''}}"bindinput="userNameInput"/>
+</view>
+<button class='settle-accounts' bindtap='sunMit'>保  存</button>

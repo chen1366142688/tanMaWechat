@@ -1,0 +1,418 @@
+/* pages/my/Student-Information/Student-Information.wxss */
+
+.Student-Information{
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+  vertical-align: middle;
+}
+
+.personal-Information{
+  width: 750rpx;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.Information-background{
+  width: 750rpx;
+  height: 100%;
+  background-color: #fff;
+}
+
+.Information-header{
+  width: 702rpx;
+  height: 100%;
+  border-top: 1rpx dotted #e4e4e4;
+  padding: 30rpx 24rpx 25rpx 24rpx; 
+  /* margin-left: 24rpx; */
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Information-header-Head-Portraits{
+  width: 160rpx;
+  height: 160rpx;
+  vertical-align: middle;
+}
+
+.Head-Portraits-img{
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.Information-header-section{
+  width: 522rpx;
+  height: 100%;
+  min-height: 160rpx; 
+  vertical-align: middle;
+}
+
+.header-section-name-size{
+  width: 522rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  margin-top: 12rpx;
+  vertical-align: middle;
+  display: flex;
+}
+
+.header-section-name{
+  max-width: 200rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: middle;
+  font-size: 30rpx;
+  color: #333;
+}
+
+.header-section-img{
+  width: 30rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  vertical-align: middle;
+  /* margin:  0 10rpx; */
+  margin-left: 10rpx;
+}
+
+.header-section-catagory{
+  height: 30rpx;
+  line-height: 32rpx;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 22rpx;
+  border: 1rpx solid #333;
+  margin-left: 10rpx;
+  border-radius: 15rpx;
+  padding: 0 8rpx;
+  color: #333;
+}
+
+.individual-resume{
+  width: 522rpx;
+  height: 100%;
+  line-height:36rpx;
+  font-size: 24rpx;
+  color: #333;
+  margin-top: 28rpx;
+}
+
+.Information-grade{
+  width: 702rpx;
+  min-height: 88rpx; 
+  height: 100%;
+  /* padding: 0 24rpx; */
+  margin-left: 24rpx;
+  vertical-align: middle;
+  background-color: #fff;
+  border-top: 1rpx dotted #e4e4e4;
+  display: flex;
+}
+
+.Information-grade-headlin{
+  width: 120rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 28rpx;
+  color: #333;
+  margin-right: 20rpx;
+}
+
+.student-items-section{
+  width: 560rpx;
+  min-height: 88rpx; 
+  height: 100%;
+  display: flex;
+  flex-wrap:wrap; 
+  vertical-align: middle;
+}
+
+.student-items-one{
+  width: 160rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  border: 1rpx solid #00B6D6;
+  border-radius: 5rpx;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+  margin-top: 20rpx;
+  display: flex;
+}
+
+.exercise-item{
+  width: 96rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  vertical-align: middle;
+  text-align: center;
+  background-color: #00B6D6;
+  font-size: 24rpx;
+  color: #fff;
+}
+
+.item-grade{
+  width: 64rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  vertical-align: middle;
+  font-size: 24rpx;
+  background-color: #fff;
+  color: #00B6D6;
+  text-align: center;
+}
+
+/*  学员课程  */
+
+.student-curriculum{
+  width: 750rpx;
+  margin: 0;
+  padding-bottom: 40rpx;
+  vertical-align: middle;
+  background-color: #fff;
+  line-height: 0;
+}
+
+.student-curriculum-one{
+  width: 702rpx;
+  /* padding: 19rpx 24rpx; */
+  margin-left: 24rpx;
+  padding-top: 19rpx;
+  background-color: #fff;
+  height: 86rpx;
+  border-bottom: 1rpx dotted #e4e4e4;
+  font-size: 24rpx;
+  color: #333;
+  margin-top: 20rpx;
+}
+
+
+.curriculum-one-haeder-headlin{
+  width: 702rpx;
+  height: 24rpx;
+  line-height: 24rpx;
+  font-size: 24rpx;
+  color: #333;
+  font-weight: bold;
+  overflow: hidden; 
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.headlin-blue{
+  color: #00B6D6;
+}
+
+.curriculum-two-haeder{
+  width: 702rpx;
+  height: 24rpx;
+  line-height: 24rpx;
+  padding-top: 19rpx;
+  vertical-align: middle;
+  display: flex;
+  justify-content: space-between;
+}
+
+.curriculum-two-haeder-left{
+  font-size: 24rpx;
+  color: #333;
+}
+
+.curriculum-two-haeder-right{
+  font-size: 24rpx;
+  color: #333;
+  display: flex;
+}
+
+.teacher-name{
+  max-width: 150rpx;
+  height: 24rpx;
+  line-height: 24rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 24rpx;
+  color: #333;
+}
+
+.Time-Allocation{
+  width: 702rpx;
+  min-height: 62rpx;
+  height: 100%;
+  background-color: #fff;
+  /* padding: 0 24rpx; */
+  margin-left: 24rpx;
+  display: flex;
+  /* justify-content: space-between; */
+  border-bottom:1rpx dotted #e4e4e4;
+}
+
+.Time-Allocation-time{
+  width: 702rpx;
+  height: 100%;
+  min-height: 62rpx;
+  font-size: 24rpx;
+  color: #333;
+  display: flex;
+}
+
+.Time-Allocation-time-headline{
+  width: 126rpx;
+  height: 62rpx;
+  line-height: 62rpx;
+}
+
+.Allocation-time-section{
+  width: 600rpx;
+  height: 100%;
+  min-height: 62rpx;
+  display: flex;
+  flex-wrap:wrap;
+}
+
+.Time-Allocation-time-one{
+  width: 140rpx;
+  font-size: 24rpx;
+  line-height: 62rpx;
+  height: 62rpx;
+  color: #333;
+  margin-right: 22rpx;
+}
+
+.redact{
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: middle;
+}
+
+.redact-img{
+  width: 40rpx;
+  height: 40rpx;
+  margin-top: 10rpx;
+  margin-left: 10rpx;
+}
+
+/*剩余课时  */
+
+.Surplus{
+  width: 702rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  /* padding: 0 24rpx; */
+  margin-left: 24rpx;
+  vertical-align: middle;
+  display: flex;
+  background-color: #fff;
+  border-bottom:1rpx dotted #e4e4e4; 
+}
+
+.Surplus-headline{
+  font-size: 24rpx;
+  color: #333;
+  vertical-align: middle;
+}
+
+.Surplus-text{
+  font-size: 24rpx;
+  color: #333;
+  vertical-align: middle;
+}
+
+.Surplus-text-red{
+  font-size: 24rpx;
+  color: #E40011;
+}
+
+/* 私教方案  */
+
+.personal-trainer{
+  width: 750rpx;
+  height: 100%;
+  background-color: #fff;
+  
+}
+
+.personal-trainer-headline{
+  width: 702rpx;
+  margin-left: 24rpx;
+  padding-top: 22rpx;
+  font-size: 24rpx;
+  height: 24rpx;
+  color: #333;
+  line-height: 24rpx;
+  vertical-align: middle;
+  /* border-top: 1rpx dotted #e4e4e4; */
+}
+
+.personal-trainer-section{
+  width: 702rpx;
+  height: 100%;
+  line-height: 34rpx;
+  margin-left: 24rpx;
+  margin-top: 10rpx;
+  vertical-align: middle;
+  font-size: 24rpx;
+  overflow: hidden;
+  color: #333;
+}
+
+/*查看订单详情  */
+
+.view-details{
+  width: 702rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  margin-left: 24rpx;
+  font-size: 24rpx;
+  color: #007587;
+  /* margin-bottom: 40rpx; */
+  margin-top: 40rpx; 
+  border:1rpx solid #007587;
+}
+
+/* 灰色背景  */
+
+.gray-background{
+  width: 750rpx;
+  height: 140rpx;
+  background-color: #ececec;
+}
+
+/*联系  */
+
+.contact-student{
+ width: 750rpx;
+ height: 98rpx;
+ line-height: 98rpx;
+ font-size: 30rpx;
+ text-align: center;
+ display: flex;
+ justify-content: space-between;
+ position: fixed;
+ bottom: 0rpx;
+}
+
+.contact-student-leave-word{
+  width: 50%;
+  height: 98rpx;
+  line-height: 98rpx;
+  background-color: #fff;
+  color: #007587;
+  vertical-align: middle
+}
+
+.contact-student-phone{
+  width: 50%;
+  height: 98rpx;
+  line-height: 98rpx;
+  background-color: #007587;
+  color: #fff;
+  vertical-align: middle;
+}

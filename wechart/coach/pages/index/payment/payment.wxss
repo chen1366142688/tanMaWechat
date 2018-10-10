@@ -1,0 +1,37 @@
+/* pages/index/payment/payment.wxss */
+
+
+.Payment {
+  width: 750rpx;
+  height: 494rpx;
+  background-color: #fff;
+  margin: 0 auto;
+}
+
+.succeed {
+  width: 127rpx;
+  height: 127rpx;
+  margin-top: 138rpx;
+  margin-left: 311rpx;
+}
+
+.Payment-succeed {
+  height: 29rpx;
+  font-size: 30rpx;
+  margin-top: 20rpx;
+  margin-left: 256rpx;
+  font-family: PingFang-SC-Bold;
+  color: rgba(0, 209, 224, 1);
+  line-height: 0rpx;
+}
+
+.succeed-T {
+  height: 23rpx;
+  font-size: 24rpx;
+  margin-top: 20rpx;
+  margin-left: 154rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(51, 51, 51, 1);
+  line-height: 0rpx;
+}
+

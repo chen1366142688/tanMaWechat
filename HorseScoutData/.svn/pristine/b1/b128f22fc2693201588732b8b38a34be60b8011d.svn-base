@@ -1,0 +1,13 @@
+<!--pages/My/Alter-Phone-number/Alter-Phone-number.wxml-->
+<view class='Alter-Phone-number'>
+  <input class='Alter-Name-input' type="number" maxlength="11" name="userName" placeholder="输入手机号" placeholder-class='input-cbcb' bindinput='phoneNum'></input>
+  <view class='Alter-Phone-number-input'>
+    <input class='Alter-New-Password-input' type="number" maxlength="6" name="userCode" placeholder="输入验证码" placeholder-class='input-cbcb' bindinput='phoneCode'></input>
+    <view class='verification-code' bindtap='sendCode'  wx:if="{{showCode}}">发送短信</view>
+    <view class='verification-code'  wx:if="{{showCodes}}">({{thisTime}}s)</view>
+  </view>
+   <input class='Alter-Name-input pwd' maxlength="18" password="true" name="userPwd" placeholder="输入登录密码" placeholder-class='input-cbcb' bindinput='phonePwd'></input>
+  <view class='Submit-button'>
+    <view class='Submit-button-section' bindtap='submit'>提交结果</view>
+  </view>
+</view>

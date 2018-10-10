@@ -1,0 +1,119 @@
+<!-- top -->
+<!-- <scroll-view wx:if="{{screenWeek}}" class="screenWeek" scroll-x="true" scroll-with-animation="true" bindscrolltoupper="scrolltoupper" bindscrolltolower="scrolltolower" scroll-into-view="{{toView}}">
+  <view class='screenBox' style='width:130rpx;'>
+    <view class='screenNum Complement'>0</view>
+  </view>
+  <view class='screenBox' bindtap='tapWeek' wx:for="{{screenList}}" wx:key="screen" wx:for-item="screenI" data-num='{{screenI.num}}' id="{{index == 0 ? 'numOne' : index == dateList.length-1 ? 'numLast' : '' }}">
+    <view class='screenNum {{screenI.active}}'>{{screenI.active == 'active'? screenI.name : screenI.num}}</view>
+  </view>
+  <view class='screenBox' style='width:150rpx;'>
+    <view class='screenNum Complement'>6</view>
+  </view>
+</scroll-view> -->
+<!-- 优化日期 -->
+<swiper wx:if="{{screenWeek}}" class='swiperHeight' circular="true" current="1" bindchange="swiperChange">
+  <block wx:for="{{imgUrls}}" wx:key="uqine">
+    <swiper-item>
+      <view class='screenBox' bindtap='tapWeek' wx:for="{{screenList}}" wx:key="screen" wx:for-item="screenI" data-num='{{screenI.num}}' id="{{index == 0 ? 'numOne' : index == dateList.length-1 ? 'numLast' : '' }}">
+        <view class='screenNum {{screenI.active}}'>{{screenI.active == 'active'? screenI.name : screenI.num}}</view>
+      </view>
+    </swiper-item>
+  </block>
+</swiper>
+
+
+
+
+
+
+
+<!-- section -->
+<view class='app'>
+  <view class='appLeft'>
+    <view class='activeMonth' bindtap='clickMonth'>{{month}}月</view>
+    <view class='points' wx:for="{{dateList}}" wx:key="uniqe" wx:for-item="date">{{date}}</view>
+  </view>
+  <view class='appRight' style='height:{{TableStatus ? 838 : 1000}}rpx'>
+    <!-- default -->
+    <scroll-view wx:if="{{TableStatus}}" class='appRightScroll' scroll-x="true" scroll-with-animation="true" scroll-left="{{scrollLeft}}">
+        <view class='appWeek' wx:for="{{array[i]}}" wx:key="week" wx:for-item="weekItem">
+          <view class='weekBox'> 
+            <view class='week'>周{{weekItem.weekDay == 1 ? '一' : weekItem.weekDay == 2 ? '二' : weekItem.weekDay == 3 ? '三' : weekItem.weekDay == 4 ? '四' : weekItem.weekDay == 
+            5 ? '五' : weekItem.weekDay == 6 ? '六' : '日'}}</view>
+            <view class='weeDay'>{{weekItem.yearMonth}}</view>
+          </view>
+          <!-- 默认空格 -->
+          <view class='default' wx:for="{{defaultList}}" wx:key="uqine" wx:for-item="defaItem" data-week="{{weekItem.weekDay}}" data-index="{{index}}" bindlongpress="longNull" style="top:{{index*50}}rpx"></view>
+          <!-- 课表 -->
+          <view wx:for="{{weekItem.arr}}" wx:key="arrD" wx:for-item="sched"  class='curriculum textOver animated {{sched.name}} {{sched.scheduleName == "羽毛球" && sched.classId ? "col1" : sched.scheduleName == "游泳" && sched.classId  ? "col3" : sched.scheduleName == "篮球" && sched.classId ? "col4" : sched.scheduleName == "足球" && sched.classId ? "col5" : sched.scheduleName == "乒乓球" && sched.classId ? "col6" : "col7"}}' data-col='{{sched.scheduleName == "羽毛球" && sched.classId ? "col1" : sched.scheduleName == "游泳" && sched.classId ? "col3" : sched.scheduleName == "篮球" && sched.classId ? "col4" : sched.scheduleName == "足球" && sched.classId ? "col5" : sched.scheduleName == "乒乓球" && sched.classId ? "col6" : "col7"}}' data-height="{{(sched.dayTimeEnd-sched.dayTimeStart)*50}}" data-scheduleId='{{sched.scheduleId}}' data-orderCode='{{sched.orderCode}}' data-top="{{(sched.dayTimeStart-8)*50}}" data-scheduleName="{{sched.scheduleName}}"  data-classid="{{sched.classId}}" data-cur="{{sched.scheduleName}}" data-week="{{sched.weekDay-1}}" data-scheduleType="{{sched.scheduleType }}" data-endTime="{{sched.End}}" data-attendDate="{{sched.attendDate}}"  bindtap='goCurseDeta' bindlongpress="longpress" style='height:{{(sched.dayTimeEnd-sched.dayTimeStart)*50}}rpx;top:{{(sched.dayTimeStart-8)*50}}rpx;'>{{sched.scheduleName}}</view>
+        </view>
+    </scroll-view> 
+
+    <!-- !default -->
+    <scroll-view wx:if="{{!TableStatus}}" class='appRightScroll' scroll-x="true" scroll-with-animation="true" scroll-left="{{scrollLeft}}">
+      <movable-area  class='appRightScrolls' style="background:{{!TableStatus?'#fff':'#f4f4f4'}}">
+        <view class='appWeeks' wx:for="{{array[i]}}" wx:key="week" wx:for-item="weekItem"  style='height:{{TableStatus ? 838 : 1000}}rpx'>
+          <view class='weekBox'>
+            <view class='week'>周{{weekItem.weekDay == 1 ? '一' : weekItem.weekDay == 2 ? '二' : weekItem.weekDay == 3 ? '三' : weekItem.weekDay == 4 ? '四' : weekItem.weekDay == 5 ? '五' : weekItem.weekDay == 6 ? '六' : '日'}}</view>
+            <view class='weeDay'>{{weekItem.yearMonth}}</view>
+          </view>
+          <view class='curriculums animated {{swing}}' wx:for="{{weekItem.arr}}" wx:key="arrD" wx:for-item="sched"  style='height:{{(sched.dayTimeEnd-sched.dayTimeStart)*50}}rpx;top:{{(sched.dayTimeStart-8)*50}}rpx'>{{sched.scheduleName}}</view>
+          <view class='curriculums curriculumAc {{addCurrims}}' wx:for="{{weekItem.attendArr}}" wx:key="attendArrD" wx:for-item="attend"  bindtouchend='clickNullDate' data-week="{{attend.weekDay}}" data-top="{{(attend.dayTimeStart-8)*50}}" data-height="{{(attend.dayTimeEnd-attend .dayTimeStart)*50}}" data-start="{{attend.Start}}" data-end="{{attend.End}}" data-dayTimeStart="{{attend.dayTimeStart}}" data-dayTimeEnd="{{attend.dayTimeEnd}}" data-gosh="{{attend.gosh}}" data-classSectionId="{{attend.classSectionId}}" data-classId="{{attend.classId}}" data-attendId="{{attend.attendId}}" data-attendDate="{{attend.attendDate}}"  data-spareSignUp="{{attend.spareSignUp}}" style='height:{{(attend.dayTimeEnd-attend .dayTimeStart)*50}}rpx;top:{{(attend.dayTimeStart-8)*50}}rpx'>{{attend.spareSignUp == 0 ? "已报满" : '有空位'}}</view>
+        </view>
+      <movable-view  x="{{x}}rpx" y="{{y}}rpx" direction="all" inertia='true' wx:if="{{!TableStatus}}" bindtap='NewCourses' class='activeItem {{animated}} {{bounceOutDown}} {{appCol}}' disabled style='height:{{movableHeight}}rpx;top:{{isXorY ? y : 0}}rpx;left:{{isXorY? x : 0}}rpx'>{{appTxt}}</movable-view>
+      </movable-area>
+    </scroll-view>
+  </view>
+</view>
+<!-- 课程列表 -->
+<view class='currList' wx:if="{{TableStatus && listItem.length>0}}" wx:for="{{listItem}}" wx:key="uqine" wx:for-item="listI"  bindtap='goItemInfo' data-orderCode="{{listI.orderCode }}">
+  <view data-classid='{{listI.classId}}' class='listItem animated  {{listI.name || ""}} {{listI.itemName == "羽毛球" ? "col1" : listI.itemName == "游泳" ? "col3" : listI.itemName == "篮球" ? "col4" : listI.itemName == "足球" ? "col5" : listI.itemName == "乒乓球" ? "col6" : "col7"}}' data-col='{{listI.itemName == "羽毛球" ? "col1" : listI.itemName == "游泳" ? "col3" : listI.itemName == "篮球" ? "col4" : listI.itemName == "足球" ? "col5" : listI.itemName == "乒乓球" ? "col6" : "col7"}}' data-cur="{{listI.itemName}}" data-orderCode="{{listI.orderCode }}" data-spare="{{listI.spareSchedule}}" data-spareTime="{{listI.spareTime}}" bindlongpress="longListItem" >
+    <view class='proint textOver'>{{listI.itemName  }}</view>
+    <view class='prointAddr textOver'>{{listI.organName }}</view>
+  </view>
+  <view class='listItem1'>
+    <view class='text'>已上课时</view>
+    <view class='numJie'>{{listI.signCount || 0 }}节</view>
+  </view>
+  <view class='listItem2'>
+    <view class='text'>剩余课时</view>
+    <view class='numJie'>{{listI.payType == 2 ? '未知' : listI.spareTime}}节</view>
+  </view>
+  <view class='listItem3'>
+    <view class='text'>未排课课时</view>
+    <view class='numJie'>{{listI.payType == 2 ? '未知' : listI.spareSchedule}}节</view>
+  </view>
+  <view class='listItem4' catchtap='goInfo' data-orderCode="{{listI.orderCode }}">
+    <view class='Record'>记录</view>
+    <image class='goInfo' src='{{imgUrl}}goInfo.png'></image>
+  </view>
+  <!-- <navigator url="../Course-record/Course-record?orderCode={{listI.orderCode}}" class='listItem4'>
+    <view class='Record'>记录</view>
+    <image class='goInfo' src='{{imgUrl}}goInfo.png'></image>
+  </navigator> -->
+</view>
+<view class='currList currListNull' wx:if="{{listItem.length > 0 && TableStatus}}">没有更多课程</view>
+<view class='currList currListNull' wx:if="{{listItem.length == 0 && TableStatus}}">您还没有报名任何课程</view>
+<view class='delete' wx:if="{{!TableStatus}}">
+  <view class='deleteBox' bindtouchend='deleteImg'  wx:if="{{deleteImg}}">
+      <image class='deleteImg' src='{{imgUrl}}delete.png'></image>
+  </view>
+  <view class='cancelBox {{deleteImg ? "" : "cancelAll"}}' bindtouchend='cancelImg'>
+    <image class='cancelImg' src='{{imgUrl}}cancel.png'></image>
+  </view>
+</view>
+<!-- 弹窗 -->
+<view class='modal' wx:if="{{modal}}" catchtouchmove="ture">
+  <view class='modalContent'>
+    <view class='modalTxt'>{{modalTxt}}</view>
+    <view class='btngroup'>
+      <view class='btnLf' bindtap='cancel' data-change="{{change}}">{{btnLfText}}</view>
+      <view class='btnRg' bindtap='sure' data-change="{{change}}">{{btnRgText}}</view>
+    </view>
+  </view>
+  <view class='foot' bindtap='cancel' data-change="{{change}}"></view>
+</view>
+<!-- 遮罩 -->
+<view class='Mask' wx:if="{{isMask}}">
+    <image class='tabloadIng' src='../../../image/loading.gif'></image> 
+</view>

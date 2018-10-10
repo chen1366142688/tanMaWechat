@@ -1,0 +1,67 @@
+<!--pages/Patriarch/Test/Test.wxml-->
+<view class='Test'>
+  <view class='Test-header'>
+    <scroll-view class='Exercise-Program-choose' scroll-x="{{scroll}}">
+      <view class='Exercise-Program-choose-two {{child.active ? "Exercise-Program-choose-one":""}}' wx:for="{{childName}}" wx:key="uqine" wx:for-item="child" bindtap='cilckChild' data-index="{{index}}">
+        <view class='Exercise-Program-choose-two-text'>{{child.name}}</view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class='Test-section'>
+    <view class='Test-section-one'>
+      <view class='Test-section-one-header'>测试说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明</view>
+      <view class='Test-section-one-section'>
+        <view class='one-section-background'>
+          <view class='one-section-beijing'>
+            <view class='Test-section-one-time'>00.00</view>
+            <view class='Test-section-one-text'>开始</view>
+            <view class='Test-section-one-kong'></view>
+          </view>
+        </view>
+      </view>
+      <view class='Test-section-one-Countdown'>
+        <view class='Test-section-one-Countdown-section'></view>
+      </view>
+      <view class='Test-section-one-button'>
+        <view class='Test-section-one-button-left'>放弃本次测试</view>
+        <view class='Test-section-one-button-right'>提交测试结果</view>
+      </view>
+    </view>
+
+    <view class='Test-section-one'>
+      <view class='Test-section-one-header'>测试说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明</view>
+      <view class='Test-section-one-section1'>
+        <view class='restoration-left'></view>
+        <view class='one-section-background1'>
+          <view class='one-section-beijing1'>
+            <view class='Test-section-one-time'>00.00</view>
+            <view class='Test-section-one-text'>记录</view>
+            <view class='Test-section-one-kong'></view>
+          </view>
+        </view>
+        <view class='restoration-right'>
+          <text class='restoration-text'> 复位</text>
+        </view>
+      </view>
+      <view class='Test-section-one-Countdown'>
+        <view class='Test-section-one-Countdown-section'></view>
+      </view>
+      <view class='Test-section-one-button'>
+        <view class='Test-section-one-button-left'>放弃本次测试</view>
+        <view class='Test-section-one-button-right'>提交测试结果</view>
+      </view>
+    </view>
+
+    <view class='Test-section-one'>
+      <view class='Test-section-one-img'></view>
+      <view class='Test-section-two-header'>测试说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明</view>
+      <view class='Test-section-one-Countdown'>
+        <view class='Test-section-one-Countdown-section'></view>
+      </view>
+      <view class='Test-section-one-button'>
+        <view class='Test-section-one-button-left'>放弃本次测试</view>
+        <view class='Test-section-one-button-right'>提交测试结果</view>
+      </view>
+    </view>
+  </view>
+</view>

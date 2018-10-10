@@ -1,0 +1,93 @@
+/* pages/scoreInquiry/scoreinfoo/scoreinfoo.wxss */
+.scoreinfo{
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  background: white;
+}
+.scoreinfo .section{
+  height: 60rpx;
+  display: flex;
+  justify-content: space-between;
+  font-size: 26rpx;
+  align-items: center;
+  line-height: 60rpx;
+  text-align: center;
+  padding: 30rpx 0; 
+}
+.scoreinfo .section1{
+  width: 260rpx;
+  height: 60rpx;
+  background: RGBA(2, 199, 220, 1);
+  color: white;
+  border-radius: 60rpx;
+}
+.scoreinfo .section2{
+  width: 220rpx;
+  height: 60rpx;
+  background: RGBA(2, 199, 220, 1);
+  color: white;
+  border-radius: 60rpx;
+}
+.scoreinfo .section3{
+  width: 180rpx;
+  height: 60rpx;
+  background: RGBA(2, 199, 220, 1);
+  color: white;
+  border-radius: 60rpx;
+}
+.scoreinfo .section image{
+  width: 20rpx;
+  height: 20rpx;
+  margin-left:13rpx; 
+}
+
+.scoreinfo .studentlist .listheader{
+  display: flex;
+  justify-content: space-between;
+  height: 80rpx;
+  align-items: center;
+  font-size: 30rpx;
+  color: RGBA(203, 203, 203, 1);
+}
+.scoreinfo .studentlist .listheader .head-main{
+  flex: 1;
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.scoreinfo .studentlist .listheader .checklist{
+  color: RGBA(2, 199, 220, 1);
+  border-bottom: 2rpx solid RGBA(2, 199, 220, 1);
+}
+.scoreinfo .studentlist .studentinfo{
+  height: 120rpx;
+  border-top: 1rpx solid RGBA(228, 228, 228, 1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: RGBA(51, 51, 51, 1);
+  font-size: 28rpx;
+}
+.scoreinfo .studentlist .studentinfo .left text{
+  margin: 0 13rpx;
+  font-size: 20rpx;
+}
+.scoreinfo .studentlist .studentinfo .left image{
+  width: 24rpx;
+  height: 24rpx;
+  border-radius: 24rpx;
+  overflow: hidden;
+}
+.scoreinfo .studentlist .studentinfo .right{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 200rpx;
+}
+.scoreinfo .studentlist .studentinfo .right image{
+  width: 30rpx;
+  height: 30rpx;
+}
+.nottest{
+  color: RGBA(153, 153, 153, 1);
+}

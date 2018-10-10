@@ -1,0 +1,226 @@
+/* pages/my/accountdetails/accountdetails.wxss */
+
+page {
+  background-color: #ececec;
+}
+
+.acc-box-numbersa {
+  display: flex;
+  justify-content: space-around;
+  background: rgba(255, 255, 255, 1);
+  margin-bottom: 20rpx; 
+  height: 120rpx;
+}
+.Query {
+  vertical-align: middle;
+}
+.acc-box-numbersab {
+  display: flex;
+  justify-content: space-around;
+  background: rgba(255, 255, 255, 1);
+  margin-bottom: 20rpx; 
+  height: 88rpx;
+}
+
+.acc-box-numbersa view.acc-box-numbers-yuanb, view.acc-integralbalanceb {
+  flex: 1;
+}
+
+.acc-box-numbersb {
+  margin: 29rpx 0 41rpx 24rpx;
+  display: inline-block;
+  text-align: left;
+}
+
+.acc-integralbalanceb {
+  margin: 29rpx 0 41rpx 24rpx;
+  display: inline-block;
+  text-align: left;
+}
+
+.acc-coursedurationa {
+  margin: 18rpx 0 18rpx;
+  display: inline-block;
+  text-align: center;
+}
+
+.acc-box-numbers-yuana {
+  font-size: 40rpx;
+  font-weight: bold;
+}
+
+.acc-box-numbers-yuanaef {
+  font-size: 24rpx;
+  font-weight: bold;
+  color: #E85571;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+}
+
+.acc-integralbalancea {
+  height: 40rpx;
+  line-height: 40rpx;
+  color: #00c693;
+  margin-top: 5rpx;
+  font-family: PingFang-SC-Regular;
+}
+
+.acc-box-numbers-yuanb {
+  height: 40rpx;
+  line-height: 40rpx;
+  color: #e85571;
+  margin-top: 5rpx;
+  font-family: PingFang-SC-Regular;
+}
+
+.acc-coursedurationb {
+  color: #e85571;
+  font-family: PingFang-SC-Regular;
+}
+
+.acc-box-numbers-yuanc {
+  font-size: 24rpx;
+  text-align: left;
+}
+
+.acc-box-numbers-yuandef {
+  width: 726rpx;
+  color: #999;
+  font-size: 24rpx;
+  text-align: left;
+  margin-left: 24rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  vertical-align: middle;
+}
+
+.acc-box-numbers-yuane{
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+
+.acc-box-numbers-yuand {
+  color: #999;
+  font-size: 24rpx;
+  text-align: left;
+}
+
+.acc-box-numbers-yuand .acc-courseduration333 {
+  color: #333;
+  margin-left: 8rpx;
+}
+
+.acc-coursedurationfista {
+  border-right: 1rpx solid #e4e4e4;
+  height: 64rpx;
+  width: 2rpx;
+  margin: 30rpx 0rpx 0 226rpx;
+}
+
+/*明细变动说明*/
+
+.alteration{
+  width: 750rpx;
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+
+.alteration-money-one{
+  width: 750rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  border-top: 1rpx solid #e4e4e4;
+}
+
+.money-left{
+  width: 450rpx;
+  height: 88rpx;
+  float: left;
+  margin-left: 20rpx;
+}
+
+.explain{
+  widows: 450rpx;
+  height: 35rpx;
+  line-height: 35rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 26rpx;
+  color: #333;
+  font-weight: Bold;
+  margin-top: 10rpx;
+}
+
+.Time{
+  widows: 450rpx;
+  height: 35rpx;
+  line-height: 35rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 20rpx;
+  color: #666;
+}
+
+.monet-rieft-add{
+  width: 200rpx;
+  height: 88rpx;
+  float: right; 
+  font-size: 24rpx;
+  color:#00C693;
+  line-height: 88rpx;
+  text-align: right;
+  margin-right: 20rpx;
+}
+
+.monet-rieft-subtract{
+  width: 200rpx;
+  height: 88rpx;
+  float: right; 
+  font-size: 24rpx;
+  color: #333;
+  line-height: 88rpx;
+  text-align: right;
+  margin-right: 20rpx;
+}
+
+.money-right{
+  width: 200rpx;
+  height: 88rpx;
+  float: right;
+  line-height: 88rpx;
+}
+
+.money-rieft-add{
+  width: 150rpx;
+  text-align: right;
+  font-size: 24rpx;
+  float: left;
+  color:#00C693;
+}
+
+.money-rieft-subtract{
+  width: 150rpx;
+  text-align: right;
+  font-size: 24rpx;
+  float: left;
+  color: #333;
+}
+
+.money-T{
+  width: 16rpx;
+  height: 16rpx;
+  float: right;
+  margin-top: 36rpx;
+  margin-right: 20rpx;
+}
+
+.van-footer{
+  display: block;
+  width: 750rpx;
+  text-align: center;
+  margin:20rpx 0 30rpx 0; 
+  font-size:24rpx;
+  font-family:PingFang-SC-Regular;
+  color:rgba(153,153,153,1);
+}
+

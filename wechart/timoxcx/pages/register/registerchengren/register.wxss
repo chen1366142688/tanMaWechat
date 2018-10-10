@@ -1,0 +1,136 @@
+/* pages/register/register.wxss */
+/** 修改默认的navigator点击态 **/
+.navigator-hover {
+    color:blue;
+}
+/** 自定义其他点击态样式类 **/
+.other-navigator-hover {
+    color:red;
+}
+/*头像*/
+.head-img{
+  width:180rpx;
+  margin:0 auto 125rpx;
+  padding-top:96rpx;
+  }
+.head-img image{
+  width:180rpx;
+  height:180rpx;
+  display:inline-block;
+  overflow:hidden;
+}
+/*
+.cheteenager{}
+.btnbgpng{background:url('https://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/images/icon/btnbg.png') no-repeat fixed center; width: 300px;height:120px;display: block;
+}
+*/
+.pleainput{background: url('https://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/images/icon/pleaxlr.png')  scroll left center no-repeat; display:inline-block;background-size: 37rpx 44rpx;width:74rpx;height:88rpx; 
+}
+.inpblocknicka{display:inline-block;}
+.inpadulta1{background: url('http://j6.cdjmjx.cn/qingshaonian/adulta1.png')  scroll left center no-repeat; display:inline-block;background-size: 50rpx 44rpx;width:100rpx;height:88rpx;}
+.user-typeac image{width: 29rpx;height:29rpx;}
+.user-typead image{width: 28rpx;height:28rpx;}
+.user-typeae image{width: 19rpx;height:35rpx;}
+.sendbuttona {
+  width:200rpx;
+  height:40rpx;
+  border:none;
+  border-radius:none;
+  border-style:none;
+  position:inherit;
+  background:#00C693;
+  color:#fff;
+  line-height:40rpx;
+  font-size:15px;
+}
+.registrationstubtna{background: url('http://jien.cdjmjx.cn/qingshaonian/registrationstubtn.png')  scroll 0 0 no-repeat;background-size:600rpx 88rpx;width:600rpx;height:88rpx;border:none;border-radius:none;border-style:none;position:inherit;color:#fff;}
+.registecoachaa{
+  width:50%;
+  height:90rpx; 
+  color:#00C693;
+  font-size:34rpx;
+  float:left;
+  text-align: center;
+  line-height: 90rpx;
+  text-decoration:underline;
+  }
+.registecoachab{
+  width:50%;
+  height:90rpx; 
+  color:#999999;
+  font-size:34rpx;
+  float:left;
+  text-align: center;
+  line-height: 90rpx;
+  text-decoration:underline;
+}
+radio .wx-radio-input{
+   border-radius: 50%;
+   width: 40rpx;
+   height: 40rpx;
+}
+radio .wx-radio-input.wx-radio-input-checked{
+   border: none;
+   background: #00C693;
+}
+radio .wx-radio-input.wx-radio-input-checked::before{
+   border-radius: 50%;
+   width: 40rpx;
+   height: 40rpx;
+   line-height: 40rpx;
+   text-align: center;
+   font-size:30rpx;
+   color:#fff;
+   background:#00C693;
+   transform:translate(-50%, -50%) scale(1);
+   -webkit-transform:translate(-50%, -50%) scale(1);
+}
+.bindingmobileainputa{width:300rpx;}
+.notcheckedabbg{width:100%;height:88rpx;}
+/*.bindingmobiaa{padding:0px 0px;}
+.bindingmobiab{margin:0 auto;}*/
+/*验证码*/
+.notcheckedac{display:flex;margin-top:26rpx;}
+.notcheckedad{
+display:flex;
+margin-left:39rpx;
+padding-top:11px;
+}
+.notcheckedae{display:flex;line-height:88rpx;}
+.notcheckedaf{font-size:30rpx;margin-top:20rpx;}
+.notcheckedaf input{width:135rpx;color:#00c693;}
+text.notcheckedag{font-size:30rpx;}
+/*青少年距离*/
+.notcheckedah{margin-bottom:58rpx;margin-top:14rpx;}
+.notcheckedai{width:100%;height:453rpx;background:#00C693;}
+.notcheckeda_j{width:93%;height:453rpx;margin:0 auto;background:#FFF;}
+
+/*覆盖样式*/
+.weui-cell:before {
+  border-top:none;
+}
+.notname_a:before{border-top: 1rpx solid #00A883 ;
+}
+.notname_a:after{border-top: 1rpx solid #00A883 ;
+}
+/*tim logo 第一个*/
+.log_name_a{width:93%;margin:0 auto;}
+.log_name_b{
+padding:0rpx 24rpx;
+font-size:30rpx;
+color:#333333;
+border-bottom:1px solid #E4E4E4;
+}
+.log_name_c{margin-left:30rpx;}
+.log_name_d{border-bottom:1px solid #00c693;width:534rpx;margin-left:15px;
+}
+.log_name_e radio:nth-child(2){margin-left:114rpx;}
+/*.name_seconds_a{margin-left:7rpx;}* /*秒钟 */
+.reg_sec_a{margin-top:60rpx;}
+.reg_sec_b{margin-top:57rpx;margin-bottom: 60rpx;}
+.locationsec_a image{width:24rpx;height:31rpx;}/*青少年位置*/
+.schoolu_a image{width:30rpx;height: 33rpx;}
+.schoolu_b{font-size:24rpx;height: 23rpx;line-height:95rpx;}
+.schoolu_boxc input{font-size:30rpx;color:#333333;}
+.schoolu_boxd{padding:0rpx 24rpx;}
+/*青少年开始*/

@@ -1,0 +1,179 @@
+// pages/My/Personal-Information/Personal-Information.js
+const app = getApp().globalData
+Page({
+  data: {
+    imgUrl: app.url,
+    defaultImgUrl: app.url+'My/head-portrait.png',
+    array: ['本人', '母亲', '父亲'],
+    objectArray: [
+      {
+        id: '01',
+        name: '本人'
+      },
+      {
+        id: '02',
+        name: '母亲'
+      },
+      {
+        id: '03',
+        name: '父亲'
+      }
+    ],
+    index: 0,
+    Height: 0,
+    Weight: 0,
+    onselfObj:{}
+  },
+  bindPickerChange: function (e) {
+    console.log(e)
+    let old = wx.getStorageSync('oldRelationCode');
+    if (old) {
+      wx.showToast({
+        title: '当前关系不能改变',
+        icon: 'none'
+      })
+      return false;
+    }
+    this.setData({
+      index: e.detail.value
+    })
+  },
+  //修改昵称
+  // alterName: function () {
+  //   wx.navigateTo({
+  //     url: '../../../pages/My/Alter-Name/Alter-Name',
+  //   })
+  // },
+  //修改手机号
+  alterphone: function () {
+    wx.navigateTo({
+      url: '../../../pages/My/Alter-Phone-number/Alter-Phone-number',
+    })
+  },
+  //修改密码
+  alterpassword: function () {
+    wx.navigateTo({
+      url: '../../../pages/My/Alter-Password/Alter-Password',
+    })
+  },
+  modifyImg: function (e) {
+    let that = this;
+    wx.chooseImage({
+      count: 1, // 默认9
+      sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
+      sourceType: ['album'], // 可以指定来源是相册还是相机，默认二者都有
+      success: function (res) {
+        wx.showLoading({
+          title: '上传中..',
+        })
+        // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
+        var tempFilePaths = res.tempFilePaths;
+        for (let i = 0; i < tempFilePaths.length; i++) {
+          wx.uploadFile({
+            url: app.url + '/v1/file/upload', //仅为示例，非真实的接口地址
+            header: { 
+              'token': wx.getStorageSync('userInfo').oauthToken.token ,
+              'content-type':'multipart/form-data'
+            },
+            filePath: tempFilePaths[i],
+            name: 'muFiles',
+            formData: {
+              'type': 'user_img'
+            },
+            success(re) {
+              console.log(re)
+              var data = JSON.parse(re.data)
+              if (data.code == '10000') {
+                var photoAddress = data.response[0];
+                let onselfObj = onselfObj;
+                onselfObj.avatarUrl = photoAddress
+                that.setData({ onselfObj: onselfObj })
+                wx.request({
+                  url: app.url + '/v1/patriarch/updatePatriarchAvatarUrl',
+                  header: { 'token': wx.getStorageSync('userInfo').oauthToken.token },
+                  method: 'GET',
+                  data: {
+                    'patriarchId': wx.getStorageSync('userInfo').patriarchId,
+                    'uravatarUrl': photoAddress
+                  },
+                  success(re) {
+                    wx.hideLoading();
+                    if(re.data.code == '10000'){
+                      //修改成功
+                    }else{
+                      wx.showToast({
+                        title: re.data.msg,
+                        icon:'none'
+                      })
+                    }
+                    
+                  },
+                  fail(info){
+                    wx.hideLoading();
+                    wx.showToast({
+                      title: '上传失败',
+                      icon:'none'
+                    })
+                  }
+                })
+              } else {
+                wx.hideLoading();
+                wx.showModal({
+                  title: '提示',
+                  content: '图片大小超过5M,请重新上传'
+                })
+              }
+            },
+            fail(info){
+              wx.hideLoading();
+              wx.showToast({
+                title: info.data.msg,
+                icon:'none'
+              })
+            }
+          })
+        }
+      }
+    })
+  },
+  onLoad: function (options) { },
+  onReady: function () { },
+  onShow: function () {
+    oneself(this)
+   },
+  onHide: function () { },
+  onUnload: function () { },
+  onPullDownRefresh: function () { },
+  onReachBottom: function () { },
+  onShareAppMessage: function () { }
+})
+function oneself(that) {
+  wx.request({
+    url: app.rQUrl + '/v1/patriarch/getPatriarchInfo',
+    method: 'GET',
+    header: { 'token': wx.getStorageSync('userInfo').oauthToken.token },
+    data: { patriarchId: wx.getStorageSync('userInfo').patriarchId },
+    success(res) {
+      if (res.data.code == '10000') {
+        let results = res.data.response;
+        let phone = String(results.phoneNum);
+        results.phoneNum = phone.replace(/(\d{3})\d{4}(\d{4})/, '$1****$2');
+        results.relationCode == '01' ? that.setData({ index: 0 }) : results.relationCode == '02' ? that.setData({ index: 1 }) : that.setData({ index: 2 })
+        that.setData({
+          onselfObj: results
+        })
+      } else {
+        wx.showToast({
+          title: res.data.msg,
+          icon:'none'
+        })
+      }
+    },
+    fail(info) {
+      wx.showToast({
+        title: info.data.msg,
+        icon:'none'
+      })
+    }
+  })
+}

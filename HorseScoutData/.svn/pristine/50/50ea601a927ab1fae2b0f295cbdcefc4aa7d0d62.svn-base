@@ -1,0 +1,82 @@
+{
+  "pages": [
+    
+    "pages/screen/screen",
+    "pages/h5/baike/baike",
+    "pages/h5/shareIndex/shareIndex",
+    "pages/h5/health/health",
+    "pages/h5/help/help",
+    "pages/screen/screen/Flicker",
+    "pages/login/Register/Register",
+    "pages/index/index",
+    "pages/Exercise/Exercise-Program/Exercise-Program",
+    "pages/Exercise/Physical-Test/Physical-Test",
+    "pages/Patriarch/Test/Test",
+    "pages/Information/Selection-school/Selection-school",
+    "pages/Exercise/Training-feelings/Training-feelings",
+    "pages/Exercise/Select-Planning/Select-Planning",
+    "pages/My/Alter-Name/Alter-Name",
+    "pages/My/Alter-Password/Alter-Password",
+    "pages/My/Alter-New-Password/Alter-New-Password",
+    "pages/My/Alter-Phone-number/Alter-Phone-number",
+    "pages/My/Test-Record/Test-Record",
+    "pages/My/Training-Record/Training-Record",
+    "pages/My/Personal-Information/Personal-Information",
+    "pages/Exercise/Project-Summary/Project-Summary",
+    "pages/Patriarch/Patriarch-Index/Patriarch-Index",
+    "pages/My/Child-Information/Child-Information",
+    "pages/Information/Perfect-Information/Perfect-Information",
+    "pages/login/Prompt/Prompt",
+    "pages/login/Binding/Binding",
+    "pages/Information/Height-Weight/Height-Weight",
+    "pages/login/Secondary-Input/Secondary-Input",
+    "pages/login/Forget-Password/Forget-Password",
+    "pages/Information/location/location",
+    
+    "pages/My/My-Index/My-Index",
+    "pages/My/Binding-Information/Binding-Information",
+    "pages/Exercise/Program-Particulars/Program-Particulars",
+    "pages/Exercise/Test-complete/Test-complete",
+    "pages/Exercise/Complete-training/Complete-training",
+    "pages/Patriarch/Training/Training",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#4DD0C8",
+    "navigationBarTextStyle": "#fff",
+    "navigationBarTitleText": "探马数据"
+  },
+  "tabBar": {
+    "color": "#C8C8C8",
+    "selectedColor": "#4DD0C8",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "image/indexAction.png",
+        "selectedIconPath": "image/index.png"
+      },
+      {
+        "pagePath": "pages/Exercise/Exercise-Program/Exercise-Program",
+        "text": "锻炼计划",
+        "iconPath": "image/planningAction.png",
+        "selectedIconPath": "image/planning.png"
+      },
+      {
+        "pagePath": "pages/My/My-Index/My-Index",
+        "text": "我的",
+        "iconPath": "image/person.png",
+        "selectedIconPath": "image/personAction.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 6000,
+    "connectSocket": 6000,
+    "uploadFile": 6000,
+    "downloadFile": 6000
+  }
+}

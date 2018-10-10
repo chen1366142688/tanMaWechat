@@ -1,0 +1,7 @@
+<view class="page-body">
+  <view class="page-section page-section-gap">
+  <view> </view>
+    <!--<web-view src="{{serverurl}}page/systematicnotification.html"></web-view>--><!--系统通知 -->
+	<web-view src="{{serverurl}}static/page/systematicnotification.html"></web-view><!--系统通知 -->	
+  </view>
+</view>

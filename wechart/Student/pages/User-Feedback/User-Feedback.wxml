@@ -1,0 +1,59 @@
+<!--pages/User-Feedback/User-Feedback.wxml-->
+<view class='course-curriculum'>
+  <text class='compile-category'>反馈类型</text>
+  <picker class='compile-select' range="{{classStatus}}" range-key="name" value="{{statusIndex}}" disabled='{{editeStatus}}' bindchange='classStatusChange'>
+    <text class='compile-select-N'>{{classStatus[statusIndex].name}}</text>
+    <image class='compile-select-T' wx:if="{{!editeStatus}}" src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/pull-down.png'></image>
+  </picker>
+</view>
+
+
+<view class='User-Feedback-section'>
+  <view  wx:if="{{booleanr==false}}">
+    <view class='biaoti'>
+      <input class='compile-select-two' value="{{title}}" name="userName" maxlength="30" placeholder='标题' bindinput="userTitleInput"></input>
+    </view>
+    <view class='section'><textarea class='myInfoBxo' value="{{content}}" name="userName" placeholder-class='myInfo' placeholder="内容" bindinput="userContentInput" style='margin-left:{{left}}rpx'></textarea>
+</view>
+  </view>
+  <view wx:if="{{booleanr==true}}">
+    <view class='biaoti'>
+      <input class='compile-select-two' value="{{title}}" name="userName" maxlength="30" placeholder='标题' bindinput="userTitleInput"></input>
+    </view>
+    <view class='section'>
+      <textarea class='myInfoBxo' value="{{content}}" name="userName" placeholder-class='myInfo' placeholder="内容" bindinput="userContentInput" style='margin-left:{{left}}rpx'></textarea>
+    </view>
+  </view>
+</view>
+
+<view class='course-curriculum'>
+  <text class='compile-categoryi'>是否需要回访</text>
+  <image src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/student-doubt.png' type="primary" bindtap="modalcnt" class='Query'></image>
+  <picker class='compile-select' disabled='{{editeStatus}}' bindchange='experienceChange' range='{{isExperience}}' range-key='name' value='{{experienceIndex}}'>
+    <text class='compile-select-N'>{{isExperience[experienceIndex].name}}</text>
+    <image class='compile-select-T' wx:if="{{!editeStatus}}" src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/pull-down.png'></image>
+  </picker>
+</view>
+
+<view class='mobile-phone-section' wx:if="{{telephone==true}}">
+  <input class='compile-select-two' type="number" maxlength="11" value="{{phone}}" placeholder='回访手机/电话号码' bindinput="userPhoneInput"></input>
+</view>
+
+
+<view class='but'>
+  <view bindtap='submintClass' class='submitEditor'>
+    <view class='subBor' bindtap='sunMit'>保  存</view>
+  </view>
+</view>
+
+ <view class='feedback-information' wx:for="{{opinion}}" wx:key="{{userId}}">
+  <view class='feedback-information-S'>
+    <view class='information-S-BT'>{{item.title}}</view>
+     <view class='information-S-DQ-Y' wx:if="{{item.redStatus==0}}">未读</view> 
+     <view class='information-S-DQ-W' wx:if="{{item.redStatus==1}}">已读</view> 
+    <view class='information-S-time'>{{item.newDate}}</view>
+  </view>
+  <view class='feedback-information-X'>{{item.content}}</view>
+</view> 
+
+<view  class='finish'>————已全部显示————</view>

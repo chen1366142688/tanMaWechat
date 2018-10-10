@@ -1,0 +1,9 @@
+<!--pages/index/payment/payment.wxml-->
+
+<!--  付款成功  -->
+<view class='Payment'>
+   <image class='succeed' src='{{imgUrl}}coach/public/succeed.png'></image>
+   <view  class='Payment-succeed'>恭喜您！付款成功</view>
+   <view class='succeed-T'>您可以在开课列表中查看到已付款的标识。</view>
+</view>
+<button class='settle-accounts'  bindtap="toClassDetail">返回开课详情</button>

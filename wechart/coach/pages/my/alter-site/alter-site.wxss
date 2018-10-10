@@ -1,0 +1,65 @@
+/* pages/my/alter-site/alter-site.wxss */
+
+.alter-Name {
+  width: 730rpx;
+  height: 88rpx;
+  margin-top: 20rpx;
+  background-color: #fff;
+  line-height: 88rpx;
+  color: #333;
+  font-size: 30rpx;
+  padding-left:20rpx;
+}
+
+.alter-category {
+  width: 120rpx;
+  height: 88rpx;
+  float: left;
+  margin-left: 20rpx;
+  line-height: 88rpx;
+  color: #333;
+  font-size: 30rpx;
+}
+
+.alter-Location {
+  width: 570rpx;
+  height: 88rpx;
+  float: right;
+  text-align: right;
+  margin-right: 20rpx;
+  line-height: 88rpx;
+}
+
+.Location {
+  height: 88rpx;
+  font-size: 30rpx;
+  color: rgba(51, 51, 51, 1);
+  line-height: 0rpx;
+}
+
+.pull-down{
+  width: 11rpx;
+  height: 6rpx;
+  line-height: 88rpx;
+  margin-right: 17rpx;
+  margin-left: 17rpx;
+}
+
+.input {
+  width: 570rpx;
+  height: 88rpx;
+  color: #333;
+  float: right;
+  margin-right: 20rpx;
+  text-align: left;
+  font-size: 30rpx;
+  margin-left: 20rpx;
+  background-color: #fff;
+}
+
+.alter-Password {
+  width: 750rpx;
+  height: 88rpx;
+  border-top: 1px solid #e4e4e4;
+  background-color: #fff;
+}

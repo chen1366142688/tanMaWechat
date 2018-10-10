@@ -1,0 +1,488 @@
+//index.js
+import util from '../../utils/util.js';
+import * as echarts from '../../ec-canvas/echarts';
+const app = getApp().globalData;
+
+var sportsData = [
+  {
+    month: 6,
+    day: 28,
+    value: 34
+  },{
+    month: 6,
+    day: 29,
+    value: 34
+  },
+  {
+    month: 6,
+    day: 30,
+    value: 38
+  },
+  {
+    month: 7,
+    day: 1,
+    value: 12
+  },
+  {
+    month: 7,
+    day: 2,
+    value: 20
+  },
+  {
+    month: 7,
+    day: 3,
+    value: 22
+  },
+  {
+    month: 7,
+    day: 4,
+    value: 27
+  }, {
+    month: 7,
+    day: 5,
+    value: 20
+  },
+  {
+    month: 7,
+    day: 6,
+    value: 12
+  },
+  {
+    month: 7,
+    day: 7,
+    value: 17
+  }
+];
+
+var maxSport = util.maxNumber(sportsData, 'value');
+
+Page({
+  data: {
+    imgUrl: app.url,
+    movies: [
+      {
+        id: 0,
+        headImg: app.url + 'Patriarch/head-portrait.png',
+        name: "默认孩子",
+        age: 8,
+        sex: 1,
+        dec: "swpYello"
+      }
+    ],
+    dataInfo: [
+      {
+        id: 1,
+        subNum: "C1609050001",
+        percentage: 30,
+        grade: "SPCC",
+        spec: "2.5*1200*C",
+        weight: 500 
+      },
+      {
+        id: 2,
+        subNum: "A1609050001",
+        percentage: 80,
+        grade: "SPCC",
+        spec: "3.5*1200*C",
+        weight: 100
+      }
+    ],
+    thisnum: 0,
+    physiqueEc: {
+      onInit: initChartPhysique
+    },
+    peopleEc: {
+      onInit: initChartPeople
+    },
+    list: ['1', '2', '3', '4'],
+    sportsList: sportsData,
+    maxSport: maxSport,
+    boxWidth: (84 * sportsData.length)-22,
+    isLoading: false,
+    TestAgeResult:{},
+    StatisticList:[]
+  },
+  shareIndex(e){},
+  onReady(e){},
+  onReady(){},
+  onShow(){
+    const that = this;
+    if(wx.getStorageSync('userInfo')){
+      if (wx.getStorageSync('userInfo').oauthToken.token){
+        //已登录取孩子信息
+        getStatisticList(that)
+      }else{
+        //未登录取默认数据
+      }
+    }else{
+
+    }
+  },
+  onHide(){},
+  onUnload(){},
+  onPullDownRefresh() {},
+  onReachBottom(){},
+  onShareAppMessage() {},
+  //再次测试
+  Testagin: function () {
+    wx.navigateTo({
+      url: '../../pages/Patriarch/Test/Test',
+    })
+  },
+  //去选择锻炼计划
+  ExerciseProgram: function () {
+    wx.switchTab({
+      url: '../../pages/Exercise/Exercise-Program/Exercise-Program',
+    })
+  },
+  swiperChange: function (e) {
+    this.setData({
+      thisnum: e.detail.current
+    })
+  },
+  refreshData: function () {
+    var bWidth = 84 * this.data.sportsList.length + 60;
+    var _this = this;
+    this.setData({
+      isLoading: true,
+      boxWidth: bWidth
+    });
+
+    setTimeout(function () {
+      var day = _this.data.sportsList[0].day;
+      var arr = [
+        {
+          month: 6,
+          day: day - 3,
+          value: 4
+        },
+        {
+          month: 6,
+          day: day - 2,
+          value: 18
+        }, {
+          month: 6,
+          day: day - 1,
+          value: 21
+        }];
+      var spData = arr.concat(_this.data.sportsList);
+      var spMax = util.maxNumber(spData, 'value');
+      var bWidth = (84 * spData.length)-22;
+
+      _this.setData({
+        isLoading: false,
+        boxWidth: bWidth,
+        maxSport: spMax,
+        sportsList: spData
+      });
+
+    }, 2000);
+  },
+  changeIndicatorDots: function (e) {
+    this.setData({
+      indicatorDots: !this.data.indicatorDots
+    })
+  },
+  changeAutoplay: function (e) {
+    this.setData({
+      autoplay: !this.data.autoplay
+    });
+  },
+  intervalChange: function (e) {
+    this.setData({
+      interval: e.detail.value
+    })
+  },
+  durationChange: function (e) {
+    this.setData({
+      duration: e.detail.value
+    })
+  }
+});
+
+
+function initChartPhysique(canvas, width, height) {
+  const chart = echarts.init(canvas, null, {
+    width: width,
+    height: height
+  });
+  canvas.setChart(chart);
+
+  var option = {
+    backgroundColor: '#fff',
+    radar: [
+      {
+        indicator: [
+          { text: '力量', max: 10 },
+          { text: '速度', max: 10 },
+          { text: '耐力', max: 10 },
+          { text: '柔韧', max: 10 },
+          { text: '协调', max: 10 }
+        ],
+        center: ['50%', '50%'],
+        radius: '80%',
+        startAngle: 60,
+        splitNumber: 10,
+        shape: 'circle',
+        name: {
+          textStyle: {
+            color: '#666',
+            fontSize: 14
+          }
+        },
+        splitArea: {
+          areaStyle: {
+            color: ['rgba(0, 0, 0, 0)']
+          }
+        },
+        axisLine: {
+          lineStyle: {
+            color: '#E6E6E6'
+          }
+        },
+        splitLine: {
+          lineStyle: {
+            color: '#E6E6E6'
+          }
+        }
+      }
+    ],
+    series: [
+      {
+        name: '体质统计',
+        type: 'radar',
+        data: [
+          {
+            value: [8, 5, 6, 7, 4],
+            name: '图1',
+            symbol: 'circle',
+            itemStyle: {
+              color: '#FDC54A'
+            },
+            lineStyle: {
+              width: 1,
+              color: '#FDC54A'
+            },
+            label: {
+              show: true,
+              color: '#fff',
+              width: 24,
+              height: 24,
+              lineHeight: 24,
+              align: 'center',
+              verticalAlign: 'middle',
+              borderRadius: 24,
+              position: 'inside',
+              backgroundColor: '#FDC54A',
+              rich: {
+                a: {
+                  color: '#fff'
+                }
+              }
+            },
+            areaStyle: {
+              normal: {
+                color: '#FDC54A',
+                opacity: 0.25
+              }
+            }
+          }
+        ]
+      }
+    ]
+  };
+
+  chart.setOption(option);
+  return chart;
+}
+
+function initChartPeople(canvas, width, height) {
+  const chart = echarts.init(canvas, null, {
+    width: width,
+    height: height
+  });
+  canvas.setChart(chart);
+
+  var option = {
+    title: {
+      text: '分值0-100分',
+      textStyle: {
+        color: '#666',
+        fontSize: 13,
+        fontWeight: 'normal'
+      },
+      right: '4%',
+      top: 8
+    },
+    /*tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            lineStyle: {
+                color: '#fff'
+            }
+        }
+    },*/
+    grid: {
+      left: '3%',
+      right: '4%',
+      bottom: '2%',
+      containLabel: true
+    },
+    xAxis: {
+      type: 'category',
+      boundaryGap: false,
+      axisLine: {
+        show: false
+      },
+      axisTick: {
+        show: false
+      },
+      data: [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+    },
+    yAxis: {
+      type: 'value',
+      name: '分值的总人数',
+      nameGap: 35,
+      nameTextStyle: {
+        color: '#666',
+        fontSize: 13
+      },
+      splitNumber: 2,
+      splitLine: {
+        lineStyle: {
+          color: '#e2e2e2',
+          type: 'solid'
+        }
+      },
+      axisLine: {
+        show: false
+      },
+      axisTick: {
+        show: false
+      }
+    },
+    series: [
+      {
+        data: [0, 10, 90, 18, 30, 45, 55, 70, 88, 37, 0],
+        type: 'line',
+        showSymbol: false,
+        symbolSize: 2,
+        smooth: true,
+        itemStyle: {
+          normal: {
+            color: "#F882B6"
+          },
+        },
+        lineStyle: {
+          width: 1
+        },
+        areaStyle: {
+          normal: {
+            color: '#F882B6',
+            opacity: 0.3
+          }
+        },
+        markPoint: {
+          symbol: 'roundRect',
+          symbolSize: [34, 24],
+          symbolOffset: [16, -20],
+          label: {
+            formatter: function (param) {
+              return param.value + '人';
+            }
+          },
+          itemStyle: {
+            color: '#5cd3c9'
+          },
+          data: [{
+            name: '最大值',
+            type: 'max'
+          }]
+        }
+      },
+      {
+        type: 'bar',
+        barWidth: '1',
+        itemStyle: {
+          normal: {
+            color: "#fff"
+          },
+        },
+        data: [0, 0, 90, 0, 0, 0, 0, 0, 0, 0, 0],
+      }
+    ]
+  };
+
+  chart.setOption(option);
+  return chart;
+}
+function getStatisticList(that){
+  wx.request({
+    url: app.rQUrl+'/v1/exercisePlan/getStatisticListByChildId',
+    method:'GET',
+    header:{
+      'token':wx.getStorageSync('userInfo').oauthToken.token
+    },
+    // data:{
+    //   childId: childId,
+    //   pageNo: pageNo,
+    //   pageSize: pageSize,
+    //   height: height 
+    // },
+    data: {
+      childId: 0,
+      pageNo: 1,
+      pageSize: 9,
+      height: 300
+    },
+    success(res){
+      if(res.data.code == '10000'){
+        let result = res.data.response;
+        that.setData({ StatisticList:result})
+      }else{
+        wx.showToast({
+          title: res.data.msg,
+          icon:'none'
+        })
+      }
+    },
+    fail(info){
+      wx.showToast({
+        title: info.data.msg,
+        icon:'none'
+      })
+    }
+  })
+}
+function getTestAgeResult(that){
+  wx.request({
+    url: app.rQUrl+'/v1/corporeityTest/getTestAgeResult',
+    method:'GET',
+    header: { 'token': wx.getStorageSync('userInfo').oauthToken.token},
+    data:{
+      childrenId: childrenId,
+      height: height
+    },
+    success(res){
+      if(res.data.code == "10000"){
+        console.log("请求测试成绩成功")
+        console.log(res.data.response)
+        let result = res.data.response;
+        that.setData({ TestAgeResult: TestAgeResult})
+      }else{
+        wx.showToast({
+          title: res.data.msg,
+          icon:'none'
+        })
+      }
+    },
+    fail(info){
+      wx.showToast({
+        title: info.data.msg,
+        icon:'none'
+      })
+    }
+  })
+}
+
+

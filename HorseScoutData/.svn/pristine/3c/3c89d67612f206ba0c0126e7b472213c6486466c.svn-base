@@ -1,0 +1,65 @@
+// pages/My/Personal-Information/Personal-Information.js
+const app = getApp().globalData
+Page({
+  data: {
+    imgUrl: app.url,
+    array: ['本人', '母亲', '父亲'],
+    objectArray: [
+      {
+        id: '01',
+        name: '本人'
+      },
+      {
+        id: '02',
+        name: '母亲'
+      },
+      {
+        id: '03',
+        name: '父亲'
+      }
+    ],
+    index: 0,
+    Height: 0,
+    Weight: 0
+  },
+  bindPickerChange: function (e) {
+    console.log(e)
+    let old = wx.getStorageSync('oldRelationCode');
+    if (old) {
+      wx.showToast({
+        title: '当前关系不能改变',
+        icon: 'none'
+      })
+      return false;
+    }
+    this.setData({
+      index: e.detail.value
+    })
+  },
+  //修改昵称
+  // alterName: function () {
+  //   wx.navigateTo({
+  //     url: '../../../pages/My/Alter-Name/Alter-Name',
+  //   })
+  // },
+  //修改手机号
+  alterphone: function () {
+    wx.navigateTo({
+      url: '../../../pages/My/Alter-Phone-number/Alter-Phone-number',
+    })
+  },
+  //修改密码
+  alterpassword: function () {
+    wx.navigateTo({
+      url: '../../../pages/My/Alter-Password/Alter-Password',
+    })
+  },
+  onLoad: function (options) { },
+  onReady: function () { },
+  onShow: function () { },
+  onHide: function () { },
+  onUnload: function () { },
+  onPullDownRefresh: function () { },
+  onReachBottom: function () { },
+  onShareAppMessage: function () { }
+})

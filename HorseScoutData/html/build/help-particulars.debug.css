@@ -1,0 +1,67 @@
+body {
+  background-color: #ececec;
+  /*height: -webkit-fill-available;*/
+}
+
+.HelpList {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  line-height: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0.32rem;
+  box-sizing: border-box;
+}
+
+.HelpList-header {
+  width: 100%;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0.266667rem;
+}
+
+.HelpList-header-headline {
+  width: 100%;
+  height: 0.866667rem;
+  line-height: 0.866667rem;
+  text-align: left;
+  font-size: 0.373333rem;
+  color: #A088D4;
+  vertical-align: middle;
+  border-bottom: 0.013333rem solid #e4e4e4;
+  font-weight: bold;
+}
+
+.HelpList-section {
+  width: 100%;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.HelpList-section-img {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.HelpList-section-text {
+  width: 100%;
+  height: 100%;
+  line-height: 0.48rem;
+  vertical-align: middle;
+  font-size: 0.32rem;
+  color: #666666;
+  text-align: left;
+  margin: 0.36rem 0;
+}
+
+.HelpList-section-text img {
+  width: 100%;
+}

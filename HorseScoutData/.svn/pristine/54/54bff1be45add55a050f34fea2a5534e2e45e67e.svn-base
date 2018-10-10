@@ -1,0 +1,15 @@
+<!--pages/Patriarch/Testing/Testing.wxml-->
+<view class='testing'>
+  <scroll-view class='testTab' scroll-x>
+    <view class='tab' wx:for="{{testType.tabList}}" wx:key="index"><view class='{{checkNow == index ? "checkthis" : ""}}' bindtap='clickTab' data-value='{{item}}' data-index="{{index}}">{{item.tabName}}</view></view>
+  </scroll-view>
+  <view wx:if="{{tabType == 2}}">
+    <test-one tabParams="{{tabObj}}" testDetail="{{testDetail}}" wx:for="{{testType.tabList}}" wx:key="index" wx:if="{{checkNow == index}}"></test-one>
+  </view>
+  <view wx:elif="{{tabType == 1}}">
+    <test-two tabParams="{{tabObj}}" testDetail="{{testDetail}}" wx:for="{{testType.tabList}}" wx:key="index" wx:if="{{checkNow == index}}"></test-two>
+  </view> 
+  <view wx:elif="{{tabType == 3}}">
+    <test-three tabParams="{{tabObj}}" testDetail="{{testDetail}}" wx:for="{{testType.tabList}}" wx:key="index" wx:if="{{checkNow == index}}"></test-three>
+  </view> 
+</view>

@@ -1,0 +1,57 @@
+<!--pages/index/Pay/pay.wxml-->
+<!-- 交场馆费  -->
+<view class='Pay'>
+  <view class='Pay-header'>{{homeName}}</view>
+  <view class='Hard'>
+    <view class='designation'>场地类型</view>
+    <picker bindchange="bindPickerChangeItem" class='select' value="{{index}}" range-key="itemName" range="{{homeItemArray}}">
+        <text class='select_text'>{{itemName}}</text>
+        <image class='select_img' src='{{imgUrl}}xiala2.png'></image>
+    </picker>
+  </view>
+  <view class='Hard'>
+    <view class='designation'>场地数量</view>
+    <picker bindchange="bindPickerChange" class='select' value="{{index}}" range="{{selectItemCount}}">
+        <text class='select_text'>{{homeItemCount}}个</text>
+        <image class='select_img' src='{{imgUrl}}xiala2.png'></image>
+    </picker>
+  </view>
+  <view class='Hard'>
+    <view class='designation'>时长</view>
+    <picker bindchange="bindPickerChangeTime" class='select' value="{{index}}" range="{{selectItemTime}}">
+        <text class='select_text'>{{homeItemTime}}小时</text>
+        <image class='select_img' src='{{imgUrl}}xiala2.png'></image>
+    </picker>
+  </view>
+</view>
+
+<!-- 费用提示  -->
+
+<view class='Hint'>
+  <text class='Hint-expense'>费用：{{itemName}} RMB {{itemDefaultPrice/100}}/小时/元 <text class='Hint-member-price'>（会员 RMB {{itemMemberPrice/100}}/小时/元）</text></text>
+</view>
+
+<!-- 费用结算  -->
+
+<view class='expense-settlement'>
+  <text class='closing-cost'>费用结算</text>
+  <view class='expense-settlement-discounts'>
+    <view class='original-cost'>
+      <text class='original-cost-headline'>本次场馆费</text>
+      <text class='original-cost-money'>RMB {{totlePrice}}</text>
+    </view>
+    <view class='discounts'>
+      <text class='discounts-headline'>优惠抵扣</text>
+      <text class='discounts-money'>- RMB 0.00</text>
+    </view>
+  </view>
+  <view class='All-in-cost'>
+    <text class='All-in-cost-headline'>总费用</text>
+    <view class='All-in-cost-money'>
+      <text class='van-rmbb-smal'>RMB</text>
+      <text class='van-rmbc'>{{totlePrice}}</text>
+    </view>
+  </view>
+</view>
+
+<button class='settle-accounts' bindtap='toPayPrice' >去结算</button>

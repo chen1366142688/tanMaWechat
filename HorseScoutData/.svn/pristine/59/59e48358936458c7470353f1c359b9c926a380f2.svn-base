@@ -1,0 +1,161 @@
+/* pages/Patriarch/Training/Training.wxss */
+page{
+  background-color: #fff;
+}
+
+.Training {
+  width: 750rpx;
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.Training-video {
+  width: 100%;
+  height: 422rpx;
+  line-height: 422rpx;
+  vertical-align: middle;
+  margin-bottom: 40rpx;
+}
+
+.Training-control {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Training-control-volume {
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  vertical-align: middle;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 23rpx;
+  box-sizing: border-box;
+}
+
+.Training-control-volume-reduce {
+  width: 80rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  vertical-align: middle;
+}
+
+.volume-background {
+  width: 500rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  background-color: #ececec;
+}
+
+.volume-gradual-change {
+  width: 50%;
+  height: 60rpx;
+  line-height: 60rpx;
+  background: -webkit-linear-gradient(left, rgba(77,208,200,0.3), rgba(77,208,200,1)); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(right, rgba(77,208,200,0.3), rgba(77,208,200,1)); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(right, rgba(77,208,200,0.3), rgba(77,208,200,1)); /* Firefox 3.6 - 15 */
+  background: linear-gradient(to right, rgba(77,208,200,0.3), rgba(77,208,200,1)); /* 标准的语法（必须放在最后） */
+}
+
+.Training-control-volume-increase {
+  width: 80rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  vertical-align: middle;
+}
+
+.Training-Pause{
+  width: 100%;
+  height: 544rpx;
+  line-height: 544rpx;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Training-Pause-background{
+  width: 320rpx;
+  height: 320rpx;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgba(77,208,200,0.3);
+}
+
+.Training-Pause-beijing{
+  width: 280rpx;
+  height: 280rpx;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgba(77,208,200,1);
+}
+
+.Abeyancd{
+  width: 80rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  vertical-align: middle;
+}
+
+.Play{
+  width: 80rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  vertical-align: middle;
+}
+
+.Training-button{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  vertical-align: middle;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:  0 24rpx;
+  box-sizing: border-box
+}
+
+.Training-button-left{
+  width: 240rpx;
+  height: 78rpx;
+  line-height: 78rpx;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #fff;
+  color: #4DD0C8;
+  border: 1rpx solid #4DD0C8;
+  border-radius: 40rpx;
+  font-size: 30rpx;
+}
+
+.Training-button-right{
+  width: 410rpx;
+  height: 78rpx;
+  line-height: 78rpx;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #4DD0C8;
+  color: #fff;
+  border: 1rpx solid #4DD0C8;
+  border-radius: 40rpx;
+  font-size: 30rpx;
+}
+
+.kong{
+  width: 100%;
+  height: 60rpx;
+  background-color: #fff;
+}

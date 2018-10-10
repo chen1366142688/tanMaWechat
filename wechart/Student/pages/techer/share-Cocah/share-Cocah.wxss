@@ -1,0 +1,215 @@
+/* pages/techer/share-Cocah/share-Cocah.wxss */
+.curriculum-info{
+  /* height: 450rpx; */
+  width: 100%;
+  padding-top: 120rpx;
+  position: relative;
+  /* background: RGBA(236, 236, 236, 1); */
+}
+page{
+  background: RGBA(236, 236, 236, 1);
+}
+.curriculum-info .share{
+ width: 160rpx;
+ height: 60rpx;
+ border-radius: 60rpx;
+ background: white;
+ font-size: 30rpx;
+ color: RGBA(0, 198, 147, 1);
+ text-align: center; 
+ line-height: 60rpx;
+ position: absolute;
+  right: 25rpx;
+  top: 41rpx;
+}
+.curriculum-info .share image{
+  width: 30rpx;
+  height: 30rpx;
+  
+}
+.curriculum-info .main{
+  background: white;
+  height: 100%;
+  position: relative;
+  padding: 31rpx 37rpx 41rpx;
+  box-sizing: border-box;
+}
+.curriculum-info .main .avatar{
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 30rpx;
+  position: absolute;
+  top:-90rpx;
+  background: white;
+}
+.curriculum-info .main .label{
+  padding-left: 200rpx;
+  font-size: 20rpx;
+  color: RGBA(0, 198, 147, 1);
+  height: 105rpx;
+}
+.curriculum-info .main .label text{
+  padding: 6rpx 20rpx;
+  background: RGBA(217, 247, 239, 1);
+  border-radius: 40rpx;
+  margin-right: 15rpx;
+  line-height: 50rpx;
+}
+.curriculum-info .main .name{
+  padding-left: 40rpx;
+  font-size: 26rpx;
+  color: RGBA(102, 102, 102, 1);
+  margin-bottom: 32rpx;
+}
+.curriculum-info .main .name text:nth-child(1){
+  font-size: 34rpx;
+  color: RGBA(51, 51, 51, 1);
+  margin-right: 20rpx;
+}
+.curriculum-info .main .primary{
+  font-size: 24rpx;
+  line-height: 36rpx;
+}
+
+.curriculum-main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 160rpx;
+}
+.curriculum-main .curriculum-list{
+  height: 144rpx;
+  background: white;
+  width: 700rpx;
+  margin: 20rpx 0 0;
+  border-radius: 8rpx;
+  padding: 25rpx 14rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction:column;
+  justify-content: space-between; 
+}
+.curriculum-main .curriculum-list .top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.curriculum-main .curriculum-list .top .left{
+  display: flex;
+  width: 200rpx;
+  height: 40rpx;
+  border: 1rpx solid RGBA(0, 198, 147, 1);
+  font-size: 22rpx;
+  align-items: center;
+  justify-content: space-around; 
+  border-radius: 40rpx;
+}
+.curriculum-main .curriculum-list .top .left image{
+  width: 24rpx;
+  height: 24rpx;
+}
+.curriculum-main .curriculum-list .top .right{
+  width:426rpx;
+  font-size:30rpx;
+  font-family:PingFang-SC-Bold;
+  font-weight:bold;
+  color:rgba(51,51,51,1);
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+
+.curriculum-main .curriculum-list .bot{
+  display: flex;
+  justify-content: space-between;
+  font-size: 24rpx;
+  color: RGBA(102, 102, 102, 1);
+  align-items: center;
+}
+.curriculum-main .curriculum-list .bot .apply{
+  display: flex;
+  align-items: center;
+}
+.curriculum-main .curriculum-list .bot .apply2{
+  width: 190rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.curriculum-main .curriculum-list .bot .apply image{
+  width: 24rpx;
+  height: 24rpx;
+  margin-right:11rpx; 
+}
+.curriculum-main .curriculum-list .bot .apply .one{
+  color: RGBA(228, 0, 17, 1);
+  font-size: 18rpx;
+}
+.curriculum-main .curriculum-list .bot .apply .two{
+  color: RGBA(228, 0, 17, 1);
+  font-size: 28rpx;
+  font-weight:bold;
+  margin: 0 10rpx;
+}
+.curriculum-main .curriculum-list .bot .apply .three{
+  color: RGBA(102, 102, 102, 1);
+  font-size: 18rpx;
+}
+
+.curriculum-btn{
+  position: fixed;
+  height: 98rpx;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  font-size:24rpx; 
+  z-index: 9
+}
+.curriculum-btn .share_box{
+  width: 65%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.curriculum-btn .share{
+  width: 110%;
+  height: 110%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  font-size:24rpx; 
+  border-radius: 0;
+  border:1prx solid white;
+}
+.curriculum-btn .share image{
+  width: 44rpx;
+  height: 44rpx;
+  margin-right: 14rpx;
+}
+.curriculum-btn .back{
+  width: 35%;
+  height: 100%;
+  background: RGBA(0, 198, 147, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.nobady{
+  font-size: 24rpx;
+  color: RGBA(153, 153, 153, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 151rpx;
+}
+.nobady image{
+  width: 94rpx;
+  height: 94rpx;
+  margin-bottom: 33rpx;
+}

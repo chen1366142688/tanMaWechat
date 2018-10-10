@@ -1,0 +1,48 @@
+<!--开课通知-->
+<scroll-view class="c-jiao-information" scroll-y style='height:{{addendRollHeigth}}px' bindscrolltolower="scrolltolower">
+  <view class='c-items-xcxa' wx:for="{{noticeList}}" wx:key="{{index}}" data-id="{{item.attendId }}" data-openId="{{item.memberId }}" data-orderId="{{item.orderCode }}" data-classtype="{{item.type }}">
+    <view class='c-item-inifoo'>
+      <view class='zuo'>
+        <text class='c-item-info-txt'>{{item.itemName }} {{item.maxMember }}人班 {{item.attendPeriod }}期班</text>
+        <text class='c-item-title'>{{item.className }}</text>
+      </view>
+      <view class='you'>
+        <view class="c-item-status" wx:if="{{item.attendMemberStatus == '01'}}">报名中</view>
+        <view class="c-item-status" wx:elif="{{item.attendMemberStatus == '02'}}">暂停申请中 </view>
+        <view class="c-item-status" wx:elif="{{item.attendMemberStatus == '03'}}">课程暂停中 </view>
+        <view class="c-item-status c-item-apply" wx:elif="{{item.attendMemberStatus == '04'}}">开课已报名 </view>
+        <view class="c-item-status" wx:elif="{{item.attendMemberStatus == '05'}}">开课已结束 </view>
+        <view class="c-item-status c-item-cancel" wx:elif="{{item.attendMemberStatus == '06'}}">开课已取消 </view>
+      </view>
+
+    </view>
+    <view class='c-item-inifo'>
+      <view class='canshu'>
+        <image class='c-user' src='{{minUrl}}redcoach.png'></image>
+        <text class='c-username-text in textOver iLblock'>{{item.classCoach }}</text>
+        <image class='l-cdcenter-posa' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/student/grade-red.png'></image>
+      <text class='c-username-taxt in'>{{item.homeName }}</text>
+        <image class='c-touser-xcxa' src='{{minUrl}}red-total.png'></image>
+        <text class='c-renshu in'>{{item.signUpMember }}人已报名</text>
+         <!-- <image class='c-touser-xcxb' src='{{minUrl}}more.png'></image>  -->
+        <image class='c-date' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/van-date.png'></image>   
+        <text class='c-data-txt in'>{{item.courseTime/10}}课时</text>
+      </view>
+      <view class='c-data-txte in'>
+        <text class="c-data-timea">开课时间</text> {{item.attendDate }} {{item.weekDay }} {{item.dayTimeStart }}</view>
+     
+    </view>
+    <view class='c-item-inifo c-topBor'>
+      <view class='l-stop-a' wx:if="{{item.attendMemberStatus == '01'&&item.type=='1'}}" data-memberid='{{item.memberId }}' bindtap='stopKe'>暂停课程</view> 
+      <view class='l-stop-a' wx:if="{{item.attendMemberStatus =='01'&&item.type=='2'}}" data-attend="{{item.attendId}}" bindtap='cancelKe'>取消开课</view>
+      <view class='l-stop-b' data-phone="{{item.coachPhone}}"  bindtap='callCoach'>联系教练</view>
+    </view>
+  </view>
+  <text class='van-over'>{{attendLastFoot}}</text>
+</scroll-view>
+<!--开课通知 end-->
+<!--  没有数据显示空空如也  -->
+   <view class='kong' wx:if="{{Period}}">
+    <image class='kong-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/studentNewImg/dataEmpty.png'></image>
+    <text class='kong-text'>数据为空</text>
+  </view>

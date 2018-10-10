@@ -1,0 +1,27 @@
+ <!--pages/Exercise/Exercise-Program/Exercise-Program.wxml-->
+<view class='Exercise-Program'>
+  <view class='Exercise-Program-headline' wx:if="{{childName.length>0}}">
+    <scroll-view class='Exercise-Program-choose' scroll-x="{{scroll}}">
+      <view class='Exercise-Program-choose-two {{child.active ? "Exercise-Program-choose-one":""}}' wx:for="{{childName}}" wx:key="uqine" wx:for-item="child" data-childId='{{child.id}}' bindtap='cilckChild' data-index="{{index}}">孩子 {{index+1}} {{child.name}}</view>
+    </scroll-view>
+  </view>
+  <view class='Exercise-Program-List'> 
+    <view class='Exercise-Program-List-one' wx:for="{{defaultPlan}}" wx:key="uqine" wx:for-item="planItem" data-planId="{{planItem.planId }}" bindtap='planDetail'>
+      <view class='List-one-background'>
+        <image class='exercise-img' src='{{planItem.planPhoto}}'></image>
+        <image class='Default' wx:if="{{planItem.defaultPlan ==1}}" src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/Exercise/Default.png'></image>
+        <image class='Completed-today' wx:if="{{planItem.isCompleted == 1}}" src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/Exercise/Completed-today.png'></image>
+      </view>
+      <view class='List-one-section'>
+        <view class='List-one-section-one'><text class='section-one-green'>{{planItem.itemOrientationName }}</text> | {{planItem.planName }}<image src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/Exercise/sports-apparatus.png' class='equipment' wx:if="{{planItem.isNeedTool ==1}}"></image></view>
+        <view class='section-one-time-population'>
+          <view class='section-one-time'>{{planItem.itemLevelName}} <text class='section-one-time-minute'>{{planItem.planDuration }}分钟</text> </view>
+          <view class='section-one-population'><text class='section-one-population-minute'>{{planItem.participationCount }}</text>人已参加</view>
+        </view>
+      </view>
+    </view>
+    <view class='add-coach'>
+       <view class='add-coach-inset' bindtap='addCoach'> <text class='add-coach-inset-add'>+</text> 添加新计划</view>
+    </view>
+  </view>
+</view>

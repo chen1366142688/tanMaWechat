@@ -1,0 +1,223 @@
+// pages/scoreInquiry/scoreInfo/scoreInfo.js
+let utils = require("../../../utils/util.js");
+let http = utils.http;
+var that;
+
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    testType: ['请选择组名称'],
+    classList: ["小学一年级", "小学二年级", "小学三年级", "小学四年级", "小学五年级", "小学六年级", "初一", "初二", "初三", "高一", "高二", "高三"],
+    classGrade: [],
+    testIndex: 0,
+    classIndex: 0,
+    gradeIndex: 0,
+    listIndex : 1,
+    stuList : []
+  },
+  // 选择列表类型
+  checklist(e){
+    this.setData({
+      listIndex: e.currentTarget.dataset.index
+    })
+    testList(that)
+  },  
+  // 改变测试组别的picker
+  typeChange(e) {
+    this.setData({
+      testIndex: e.detail.value,
+      classIndex: 0,
+      gradeIndex: 0
+    })
+    wx.setStorageSync("index", {
+      testIndex: this.data.testIndex,
+      classIndex: this.data.classIndex,
+      gradeIndex: this.data.gradeIndex
+    })
+    // 调用获取班级列表
+    getClass(that)
+  },
+  // 改变测试年级的picker
+  classChange(e) {
+    this.setData({
+      classIndex: e.detail.value,
+      gradeIndex: 0
+    })
+    wx.setStorageSync("index", {
+      testIndex: this.data.testIndex,
+      classIndex: this.data.classIndex,
+      gradeIndex: this.data.gradeIndex
+    })
+    // 调用获取班级列表
+    getClass(that)
+
+  },
+  // 改变测试班级的picker
+  gradeChange(e) {
+    this.setData({
+      gradeIndex: e.detail.value
+    })
+    wx.setStorageSync("index", {
+      testIndex: this.data.testIndex,
+      classIndex: this.data.classIndex,
+      gradeIndex: this.data.gradeIndex
+    })
+    // 调用成绩情况列表
+    testList(that)
+  },
+  goDetail(e){
+    wx.navigateTo({
+      url: '../../gradeTable/Corporeity/Corporeity?schoolId=' + this.data.schoolId + "&activityId=" + this.data.activityId[this.data.testIndex] + "&studentId=" + e.currentTarget.dataset.stuid,
+    })
+  },
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+    wx.showToast({
+      title: '加载中',
+      icon: 'loading'
+    });
+    that = this;
+    
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+    let index = wx.getStorageSync("index") ? wx.getStorageSync("index") 
+    : {
+        testIndex: 0,
+        classIndex: 0,
+        gradeIndex: 0
+      }
+    this.setData({
+      schoolId: wx.getStorageSync("userInfo").schoolId,
+      testIndex: index.testIndex,
+      classIndex: index.classIndex,
+      gradeIndex: index.gradeIndex
+    })
+    http("/v1/activity/list", { schoolId: this.data.schoolId }, "GET", testTypeList, that)
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+  
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+  
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+  
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+  
+  }
+})
+
+// 根据学校id获取测试组别回调
+function testTypeList(that, res) {
+  let array = [];
+  let arrayId = [];
+  for (let i = 0; i < res.length; i++) {
+    array.push(res[i].activityName);
+    arrayId.push(res[i].activityId)
+  }
+  that.setData({
+    testType: array,
+    activityId: arrayId
+  })
+  // 调用获取年级列表
+  getGrades(that)
+}
+
+
+// 根据学校id获取年级
+function getGrades(that) {
+  http("/v1/activity/school/grades", { schoolId: that.data.schoolId }, "GET", (that, res) => {
+    let newClassList = []
+    for (let i = 0; i < res.length; i++) {
+      newClassList[i] = that.data.classList[res[i] - 1]
+    }
+    that.setData({
+      classIndexList: res,
+      newClassList: newClassList
+    })
+    // 调用获取班级列表
+    getClass(that)
+  }, that)
+}
+// 根据年级，学校id获取班级列表
+function getClass(that) {
+  let classObj = {
+    grade: parseFloat(that.data.classIndexList[that.data.classIndex]),
+    schoolId: that.data.schoolId
+  }
+  http("/v1/activity/class/list", classObj, "GET", getClasscb, that)
+}
+// 根据年级，学校id获取班级列表回调
+function getClasscb(that, res) {
+  let classObj = [];
+  let classId = [];
+  for (let i = 0; i < res.length; i++) {
+    classObj.push(res[i].studentClass + "班")
+    classId.push(res[i].classId)
+  }
+  that.setData({
+    classGrade: classObj,
+    classIdList: classId
+  })
+  // // 调用测试情况列表
+  testList(that)
+}
+
+// 根据活动id，学校id，年级，班级查询成绩情况
+function testList(that) {
+  // 获取测试列表参数对象
+  let testObj = {
+    classId: that.data.classIdList[that.data.gradeIndex],
+    activityId: that.data.activityId[that.data.testIndex],
+    schoolId: that.data.schoolId,
+    gender: that.data.listIndex - 1
+  }
+  http("/v1/activity/student/score/list", testObj, "GET", testListcb, that)
+}
+// 根据活动id，学校id，年级，班级查询成绩情况回调
+function testListcb(that, res) {
+  // console.log(res)
+  that.setData({
+    stuList: res
+  })
+}

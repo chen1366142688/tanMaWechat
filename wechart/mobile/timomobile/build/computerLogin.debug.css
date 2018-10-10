@@ -1,0 +1,98 @@
+.register {
+  width: 100%;
+  height: 100vh;
+  padding: 1.08rem 1rem 1.08rem 1.053333rem;
+  box-sizing: border-box;
+  background-color: #fff;
+  position: relative;
+}
+
+.phoneBox {
+  width: 100%;
+  height: 0.666667rem;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.phoneBox image {
+  width: 0.4rem;
+  height: 0.4rem;
+}
+
+.phoneBox input {
+  width: 7.013333rem;
+  font-size: 0.4rem;
+  font-family: PingFang-SC-Regular;
+  color: rgba(153,153,153,1);
+  border: 0;
+  border-bottom: 0.013333rem solid #00C693;
+  margin-left: 0.52rem;
+  border-radius: 0;
+}
+
+.phoneBox input.send {
+  width: 4.266667rem;
+  font-size: 0.4rem;
+  font-family: PingFang-SC-Regular;
+  color: rgba(153,153,153,1);
+  border: 0;
+  border-bottom: 0.013333rem solid #00C693;
+  margin-left: 0.52rem;
+  border-radius: 0;
+}
+
+.sendCode {
+  width: 2.133333rem;
+  height: 0.586667rem;
+  border: 0.013333rem solid rgba(0,198,147,1);
+  border-radius: 0.293333rem;
+  font-size: 0.32rem;
+  font-family: PingFang-SC-Regular;
+  color: rgba(0,198,147,1);
+  background-color: #fff;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.6rem;
+  padding-left: 0;
+  padding-right: 0;
+  cursor: pointer;
+  text-align: center;
+}
+
+.codeBox {
+  margin-top: 0.8rem;
+}
+
+.helpBox {
+  width: 8rem;
+  height: 1.173333rem;
+  background: rgba(0,198,147,1);
+  border-radius: 0.586667rem;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.2rem 0 0.266667rem 0;
+  position: absolute;
+  bottom: 0.866667rem;
+  cursor: pointer;
+}
+
+.helpBorder {
+  width: 7.733333rem;
+  height: 0.906667rem;
+  border: 0.013333rem solid rgba(255,255,255,1);
+  border-radius: 0.453333rem;
+  font-size: 0.4rem;
+  font-family: PingFang-SC-Regular;
+  color: rgba(255,255,255,1);
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}

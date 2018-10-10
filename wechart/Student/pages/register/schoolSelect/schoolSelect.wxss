@@ -1,0 +1,96 @@
+/* pages/register/Select/Select.wxss */
+page{
+  background-color: rgba(236, 236, 236, 1);
+}
+.alter-Idcard {
+  width: 750rpx;
+  height: 88rpx;
+  border-top: 1px solid #e4e4e4;
+  background-color: #fff;
+  color: #fff;
+}
+.search {
+  width: 750rpx;
+  height: 88rpx;
+  margin: 0 auto;
+  background: rgba(236, 236, 236, 1);
+}
+
+.guan-name {
+  width: 702rpx;
+  height: 58rpx;
+  line-height: 58rpx;
+  border: 1rpx solid #007587;
+  border-radius: 30rpx;
+  background-color: #fff;
+  text-align: center;
+  margin-top: 14rpx;
+  margin-right: 25rpx;
+  font-size: 30rpx;
+  color: #333;
+}
+
+.chanName {
+  font-size: 24rpx;
+  color: rgba(153, 153, 153, 1);
+}
+
+.sousuo {
+  width: 24rpx;
+  height: 24rpx;
+  margin-left: 52rpx;
+}
+
+.searchview {
+  width: 80rpx;
+  position: absolute;
+  top: 23rpx;
+  left: 210rpx;
+  z-index: 9;
+  align-items: center;
+}
+
+.List{
+  width: 750rpx;
+  background-color: #fff;
+  margin: 0rpx;
+  padding: 0rpx;
+}
+
+.List-one{
+  width: 750rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  border-top: 1rpx solid #e4e4e4;
+}
+
+.category{
+  width: 132rpx;
+  height: 44rpx;
+  line-height: 44rpx;
+  margin-left: 24rpx;
+  border: 1rpx solid #00C693;
+  float: left; 
+  text-align: center;
+  vertical-align: middle;
+  font-size: 28rpx;
+  color: #00C693;
+  border-radius: 20rpx;
+  margin-top: 23rpx; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.category-Name{
+  width: 546rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 32rpx;
+  color: #333;
+  margin-right: 24rpx;
+  float: right;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

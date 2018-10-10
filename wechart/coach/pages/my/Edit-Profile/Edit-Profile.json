@@ -1,0 +1,27 @@
+{
+  "navigationBarTitleText": "我的介绍",
+  "tabBar": {
+    "color": "#171718",
+    "selectedColor": "#171718",
+    "backgroundColor": "#F9F9F9",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/scheduleIndex/scheduleIndex.wxml",
+        "text": "日程"
+      },
+      {
+        "pagePath": "pages/curriculum/curriculumeIndex/curriculumIndex",
+        "text": "课程"
+      },
+      {
+        "pagePath": "pages/news/newsIndex/newsIndex",
+        "text": "消息"
+      },
+      {
+        "pagePath": "pages/my/myIndex/myIndex",
+        "text": "我的"
+      }
+    ]
+  }
+}

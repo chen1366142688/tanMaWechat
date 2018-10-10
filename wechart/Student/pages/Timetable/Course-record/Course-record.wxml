@@ -1,0 +1,28 @@
+<!--pages/Timetable/Course-record/Course-record.wxml-->
+<scroll-view class='Course-record' scroll-y="{{isScroll}}" style="height:{{cityList.length > 0 ? height : 0}}rpx" bindscrolltolower="tolower">
+  <view class='Course-record-one' wx:for="{{cityList}}" wx:key="uqine" wx:for-item="cityItem" wx:if="{{cityList.length}}">
+    <!-- <view class='Course-record-one'> --> 
+    <view class='Course-record-one-left'>
+      <image class='head-portrait' src='{{cityItem.coachPhoto}}'></image>
+    </view>
+    <view class='Course-record-one-right'>
+      <view class='Course-record-one-right-top'>
+        <view class='Course-record-top-left'>
+          <view class='Course-record-top-left-name'>{{cityItem.coachName}}</view>
+          <view class='Course-record-truant' wx:if="{{cityItem.signStatus ==2}}">旷课</view>
+        </view>
+        <view class='Course-record-top-right' wx:if="{{cityItem.signStatus ==1}}">
+          <view class='Course-record-top-right-YTD'>签到时间:{{cityItem.signTime}}</view>
+        </view>
+      </view>
+      <view class='Course-record-one-right-bottom'>{{cityItem.homeName}}</view>
+    </view>
+  </view>
+</scroll-view>
+<view class="addBtn" bindtap='goAddCurrse'>查看课表</view>
+<!--  没有数据显示空空如也  -->
+<view class='kong' wx:if="{{!cityList.length}}">
+  <image class='kong-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/studentNewImg/dataEmpty.png'></image>
+  <text class='kong-text'>目前您还未上过课</text>
+</view>
+<view class='footerOver' wx:if="{{cityList.length}}">{{footerText}}</view>

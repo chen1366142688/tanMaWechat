@@ -1,0 +1,56 @@
+/* pages/login/Prompt/Prompt.wxss */
+
+.Prompt {
+  width: 750rpx;
+  height: 100vh;
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+.Prompt-section {
+  width: 750rpx;
+  height: 350rpx;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  flex-direction: column;
+}
+
+.Prompt-section-headline {
+  width: 750rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 30rpx;
+  color: #333;
+  margin-top: 297rpx; 
+}
+
+.Existing-account {
+  width: 520rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  vertical-align: middle;
+  text-align: center;
+  color: #fff;
+  font-size: 30rpx;
+  background: rgba(161, 135, 212, 1);
+  border-radius: 40rpx;
+  margin-top: 80rpx;
+}
+
+.New-account {
+  width: 520rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  vertical-align: middle;
+  text-align: center;
+  color: #fff;
+  font-size: 30rpx;
+  background: #FDC54A;
+  border-radius: 40rpx;
+  margin-top: 80rpx;
+}

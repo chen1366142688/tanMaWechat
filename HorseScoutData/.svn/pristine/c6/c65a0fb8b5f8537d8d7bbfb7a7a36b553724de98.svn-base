@@ -1,0 +1,76 @@
+// pages/Patriarch/Testing/Testing.js
+const app = getApp().globalData;
+
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    childId : 0,
+    testId : 0,
+    checkNow : 0
+  },
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+    this.setData({
+      childId: options.childrenid,
+      testId: options.testId
+    })
+  },
+  clickTab(e){
+    let value = e.currentTarget.dataset;
+    this.setData({
+      tabObj : value.value,
+      checkNow: e.currentTarget.dataset.index,
+      tabType: value.value.tabType
+    })   
+  },
+
+
+  onReady: function () {
+    let that = this;
+    getTest(that)
+  },
+  onShow: function () {
+
+  },
+  onHide: function () {
+  
+  },
+  onUnload: function () {
+  
+  },
+  onPullDownRefresh: function () {
+  
+  },
+  onReachBottom: function () {
+  
+  },
+  onShareAppMessage: function () {
+  
+  }
+})
+
+function getTest(that){
+  wx.request({
+    url: app.rQUrl + '/v1/corporeityTest/getTestAllInfoByTestId',
+    method: "GET",
+    header: { 'token': wx.getStorageSync('userInfo').oauthToken.token },
+    data: {testId : that.data.testId},
+    success: function (res) {
+      that.setData({
+        testType : res.data.response,
+        tabObj: res.data.response.tabList[0],
+        tabType: res.data.response.tabList[0].tabType,
+        testDetail : {
+          childId : that.data.childId,
+          testId : that.data.testId
+        }
+      })
+    }
+  })
+}

@@ -1,0 +1,134 @@
+<view class="head">
+
+</view>
+<view class='section' bindtouchstart='closeEval'>
+  <image class='banner' src='{{classInfo.organPhotoAddress}}' lazy-load></image>
+  <view class='textClub'>{{classInfo.organName }}</view>
+  <view class='title textOver'>{{classInfo.className}}</view>
+  <view class='dateBox' wx:if="{{dateShow}}">
+    <image class='dateImg' src='{{imgUrl}}date.png'></image>
+    <text>{{month}}月/{{date}}日  周{{classInfo.weekDay == 1 ? "一" : classInfo.weekDay == 2 ? "二" : classInfo.weekDay == 3 ? "三" : classInfo.weekDay == 4 ? "四" : classInfo.weekDay == 5 ? "五" : classInfo.weekDay == 6 ? "六" : "日"}}  {{classInfo.dayTimeStart}}-{{classInfo.dayTimeEnd}}</text>
+  </view> 
+   <!-- <view class='addressBox'>
+    <image class='addressImg' src='{{imgUrl}}Venue.png'></image>
+    <text>{{classInfo.itemName }}</text>
+  </view> -->
+  <view class='currBox'>
+    <image class='currImg' src='{{imgUrl}}curriculum.png'></image>
+    <text>{{classInfo.itemName}}</text>
+  </view>
+  <view class='currBox'>
+    <image class='currImg' src='{{imgUrl}}coach.png'></image>
+    <text>{{classInfo.classCoachName }}</text>
+  </view>
+  <view class='markBox'>
+    <image class='markImg' src='{{imgUrl}}landmark.png'></image>
+    <text>{{classInfo.homeName }}</text>
+  </view> 
+  <view class='classtime' wx:if="{{!isPlan}}">
+    <view class='classtime-title'>可排课时间</view>
+    <view wx:for="{{classInfo.classSectionVOs}}" wx:key="{{index}}" class='classtime-main'>
+      周{{weekList[item.weekDay-1]}}/{{item.dayTimeStart}}-{{item.dayTimeEnd}}
+    </view>
+  </view>
+  <image class='sign' src='{{imgUrl}}signed.png' wx:if="{{classInfo.signStatus == 1 }}"></image> 
+  <image class='sign' src='{{imgUrl}}Absenteeism.png' wx:if="{{classInfo.signStatus == 2 }}"></image> 
+  <view class='sectionInfo'>
+    <view class='infoItem'>
+      <view class='save'>{{classInfo.payType == 2 ? "未知" : classInfo.signCount + classInfo.spareTime+'节'}}</view>
+      <view class='saveInfo'>总课时</view>
+    </view>
+    <view>
+      <view class='save'>{{classInfo.signCount ? classInfo.signCount : 0}}节</view>
+      <view class='saveInfo'>已上</view>
+    </view>
+    <view>
+      <view class='save'>{{classInfo.payType == 2 ? "未知" : classInfo.spareTime ? classInfo.spareTime+'节' : 0+'节' }}</view>
+      <view class='saveInfo'>剩余</view>
+    </view>
+    <view>
+      <view class='save'>{{classInfo.payType == 2 ? "未知" : classInfo.spareSchedule ? classInfo.spareSchedule+'节' : 0+'节' }}</view>
+      <view class='saveInfo'>未排课</view>
+    </view>
+  </view>
+</view>
+<view class='evaluate'>
+  <view class='evaluTop'>
+    <text class='evalNum'>课程评价({{classInfo.commentCount }})</text>
+    <view class='writeEvaluate' bindtap='writeEval'>
+      <image src='{{imgUrl}}modify.png'></image>
+      <text>写评论</text>
+    </view>
+  </view>
+  <view class='evaluateInfo' wx:if="{{!isWriteEval}}">
+    <view class='ecaItemBox' wx:if="{{pariseList.length>0}}" wx:for="{{pariseList}}" wx:key="praise" wx:for-item="gosh">
+      <view class='userInfo'>
+        <view class='nickName'>
+          <image lazy-load="true" src='{{gosh.studentPhoto || "../../../image/defaults.png"}}'></image>
+          <text class='nickTxt textOver'>{{gosh.studentName}}</text>
+        </view>
+        <view class='praise'>{{gosh.grade == 1 ? "好评" : gosh.grade == 2 ? "中评" : gosh.grade == 3 ? "差评" : ''}}</view>
+      </view>
+      <view class='pariseContent'>{{gosh.content||"该课程暂时没有评论信息"}}</view>
+    </view>
+    <view class='ecaItemBoxKong' wx:if="{{pariseList.length == 0}}">该课程暂时没有评论信息</view>
+  </view>
+  <view class='writeeval' wx:else>
+    <view class='checkeval {{evalType == 1 ? "evaltype" : ""}}' bindtap='writeInput' data-type='1'>
+    <image src='{{imgUrl}}goodeval.png'></image>
+      好评
+    </view>
+    <view class='checkeval {{evalType == 2 ? "evaltype" : ""}}' bindtap='writeInput' data-type='2'>
+    <image src='{{imgUrl}}centereval.png'></image>
+      中评
+    </view>
+    <view class='checkeval {{evalType == 3 ? "evaltype" : ""}}' bindtap='writeInput' data-type='3'>
+    <image src='{{imgUrl}}badeval.png'></image>
+      差评
+    </view>
+  </view>
+</view>
+<view class='tabLoading' wx:if="{{tabLoad}}">
+    <image src='../../../image/loading.gif'></image>
+</view>
+<view class='footerOver' wx:if="{{showFooter}}">已经到底了</view>
+<view class='empty'></view>
+<view class='footFixd' wx:if="{{isShow}}" style='bottom:{{bottom}}px'>
+  <view class='footLf'>
+  <view class='footItemLive-box'>
+    <view class='footItemLive sharelive'>
+      <image src='{{imgUrl}}share.png'></image>
+      <view class='footLTxt'>分享</view>
+    </view>
+    <button open-type='share' bindtap='shareClass' class='sharebtn'>分享</button>
+  </view>
+    
+    <view class='footItemLive' bindtap='makePhone' >
+      <image src="{{imgUrl}}TelephoneConsultation.png"></image>
+      <view class='footLTxt'>电话</view>
+    </view>
+    <view class='footItemLive' bindtap='vacate' wx:if="{{isPlan}}">
+      <image src='{{imgUrl}}leave.png'></image>
+      <view class='footLTxt'>请假</view>
+    </view>
+  </view>
+  <view class='footRg' bindtap='changeClassTime' data-longStatus="{{isPlan? '1' : '2'}}" style='align-items:{{align}}'>{{isPlan ? "更改上课时间" : "排课"}}</view>
+</view>
+<view class='footFixds' wx:if="{{iphoneX}}">
+  <view class='footRg' bindtap='changeClassTime'></view>
+</view>
+<view class='evalinput' wx:if="{{isWriteInput}}">
+  <input type='text' placeholder='评论' bindinput='evalInput' focus='{{focus}}' value='{{evalInput}}'></input>
+  <view class='evalbtn {{evalInput == "" ? "" : "iswrite"}}' bindtap='evalbtn'>发送</view>
+</view>
+<!-- 弹窗 -->
+<view class='modal' wx:if="{{modal}}">
+  <view class='modalContent'>
+    <view class='modalTxt'>{{modalTxt}}</view>
+    <view class='btngroup'>
+      <view class='btnLf' bindtap='cancel'>取消</view>
+      <view class='btnRg' bindtap='sure'>确认</view>
+    </view>
+  </view>
+  <view class='foot' bindtap='cancel'></view>
+</view>

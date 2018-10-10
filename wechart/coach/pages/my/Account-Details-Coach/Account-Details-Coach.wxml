@@ -1,0 +1,32 @@
+<!--pages/my/Account-Details/Account-Details.wxml-->
+<view class='Account-Details'>
+  <image class='money' src='{{imgUrl}}coach/public/money.png'></image>
+  <view class='Account-Details-text1'>{{orgName}}的余额</view>
+  <view class='Account-Details-text2'>RMB {{amount}}</view>
+  <view class='Account-Details-text4'>
+    <text> 预估提现到账时间12小时内。</text>
+    <!-- <text> 提现锁定金额 {{amount}}</text> -->
+    <!-- <image src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/coach-doubt.png' type="primary" bindtap="modalcnt" class='Query'></image> -->
+  </view>
+  <button bindtap="toApply" class='withdraw-deposit'>提现</button>
+  <view class='Account-Details-text3'>
+    <text> 剩余课程折合金额 {{orderSpare.spareCost}}元</text>
+    <image src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/coach-doubt.png' type="primary" bindtap="modalcnty" class='Queryi'></image>
+    <!-- <text>（未完结课程总金额{{orderSpare.courseCost}}元)</text>
+      <image src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/coach-doubt.png' type="primary" bindtap="modalcnte" class='Queryi'></image> -->
+  </view>
+</view>
+
+<view class='alteration'>
+  <!-- 加  -->
+  <view class='alteration-money-one' wx:for="{{bookList}}">
+    <view class='money-left'>
+      <view class='explain'>{{item.optionRemark}}</view>
+      <view class='Time'>{{item.createTime}}</view>
+    </view>
+    <view wx:if="{{item.flowDirection==1}}" class='monet-rieft-add'>+{{item.amount}}</view>
+    <view wx:else class='monet-rieft-subtract'>-{{item.amount}}</view>
+  </view>
+</view>
+
+<text wx:if="{{showNotMore}}" class='van-footer'>————已全部显示————</text>

@@ -1,0 +1,758 @@
+body {
+  background-color: #ECECEC;
+}
+
+.Program-Particulars {
+  width: 100%;
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.Program-Particulars-header {
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  vertical-align: middle;
+  margin-bottom: 0.266667rem;
+}
+
+.Particulars-header-background {
+  width: 100%;
+  height: 5.626667rem;
+  position: relative;
+}
+
+.header-background-img {
+  width: 100%;
+  height: 100%;
+}
+
+.share {
+  width: 1.066667rem;
+  height: 1.066667rem;
+  line-height: 1.066667rem;
+  vertical-align: middle;
+  position: absolute;
+  bottom: -0.533333rem;
+  right: 0.32rem;
+  z-index: 111;
+}
+
+.Particulars-header-section {
+  width: 100%;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0.32rem;
+  box-sizing: border-box;
+}
+
+.header-section-headline {
+  width: 100%;
+  height: 1.76rem;
+  line-height: 1.76rem;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  border-bottom: 0.013333rem solid #e4e4e4;
+}
+
+.header-section {
+  width: 100%;
+  height: 0.373333rem;
+  line-height: 0.373333rem;
+  font-size: 0.373333rem;
+  font-family: PingFang-SC-Bold;
+  color: #171717;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-top: 0.4rem;
+  font-weight: bold;
+}
+
+.header-section-brief-introduction {
+  width: 100%;
+  height: 0.88rem;
+  line-height: 0.88rem;
+  vertical-align: middle;
+  font-size: 0.346667rem;
+  color: #999;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.header-section-phases {
+  width: 100%;
+  height: 1.653333rem;
+  line-height: 1.653333rem;
+  vertical-align: middle;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.013333rem solid #e4e4e4;
+}
+
+.section-phases-age {
+  height: 1.653333rem;
+  line-height: 1.653333rem;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: left;
+}
+
+.section-phases-age-headline {
+  height: 0.293333rem;
+  line-height: 0.293333rem;
+  vertical-align: middle;
+  margin-top: 0.4rem;
+  font-size: 0.293333rem;
+  color: #999;
+  text-align: left;
+  width: 100%;
+  align-self: flex-start;
+}
+
+.section-phases-age-section {
+  height: 0.826667rem;
+  line-height: 0.826667rem;
+  vertical-align: middle;
+  font-size: 0.373333rem;
+  color: #171717;
+  text-align: left;
+  width: 100%;
+  align-self: flex-start;
+}
+
+.section-phases-time {
+  height: 1.653333rem;
+  line-height: 1.653333rem;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+
+.section-phases-time-headline {
+  height: 0.293333rem;
+  line-height: 0.293333rem;
+  vertical-align: middle;
+  margin-top: 0.4rem;
+  font-size: 0.293333rem;
+  color: #999;
+  text-align: left;
+  width: 100%;
+  align-self: flex-start;
+}
+
+.section-phases-time-section {
+  height: 0.826667rem;
+  line-height: 0.826667rem;
+  vertical-align: middle;
+  font-size: 0.373333rem;
+  color: #171717;
+  text-align: left;
+  width: 100%;
+  align-self: flex-start;
+}
+
+.section-phases-Program {
+  height: 1.653333rem;
+  line-height: 1.653333rem;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+
+.section-phases-Program-headline {
+  height: 0.293333rem;
+  line-height: 0.293333rem;
+  vertical-align: middle;
+  margin-top: 0.4rem;
+  font-size: 0.293333rem;
+  color: #999;
+  text-align: left;
+  width: 100%;
+  align-self: flex-start;
+}
+
+.section-phases-Program-section {
+  height: 0.826667rem;
+  line-height: 0.826667rem;
+  vertical-align: middle;
+  font-size: 0.373333rem;
+  color: #171717;
+  text-align: left;
+  width: 100%;
+  align-self: flex-start;
+}
+
+.header-section-population {
+  width: 100%;
+  height: 1.626667rem;
+  line-height: 1.626667rem;
+  vertical-align: middle;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-population-left {
+  height: 1.626667rem;
+  line-height: 1.626667rem;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+
+.population-left-top {
+  width: 100%;
+  height: 0.373333rem;
+  line-height: 0.373333rem;
+  margin-top: 0.4rem;
+  vertical-align: middle;
+  align-self: flex-start;
+  font-size: 0.373333rem;
+  color: #fdc54a;
+}
+
+.population-left-botton {
+  width: 100%;
+  height: 0.8rem;
+  line-height: 0.813333rem;
+  vertical-align: middle;
+  font-size: 0.266667rem;
+  color: #999;
+  align-self: flex-start;
+}
+
+.section-population-right {
+  height: 1.626667rem;
+  line-height: 1.626667rem;
+  vertical-align: middle;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.population {
+  width: 0.693333rem;
+  height: 0.693333rem;
+  line-height: 0.693333rem;
+  vertical-align: middle;
+  border-radius: 50%;
+  margin-left: -0.133333rem;
+}
+
+.Program-Particulars-section {
+  width: 100%;
+  background-color: #fff;
+  padding: 0 0.32rem;
+  box-sizing: border-box;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.auxiliary-appliance {
+  width: 100%;
+  height: 1.146667rem;
+  line-height: 1.146667rem;
+  vertical-align: middle;
+  font-size: 0.373333rem;
+  color: #171717;
+  font-weight: bold;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  border-bottom: 0.013333rem solid #e4e4e4;
+}
+
+.auxiliary-appliance-section {
+  font-size: 0.32rem;
+  color: #999;
+  vertical-align: middle;
+  margin-left: 0.413333rem;
+}
+
+.Program-description {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border-bottom: 1px solid #e4e4e4; */
+}
+
+.Program-description-headline {
+  width: 100%;
+  height: 1.12rem;
+  line-height: 1.12rem;
+  vertical-align: middle;
+  font-size: 0.373333rem;
+  font-weight: bold;
+  color: #171717;
+  /*overflow: hidden;*/
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.Program-description-text {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 0.76rem;
+  vertical-align: middle;
+  font-size: 0.32rem;
+  color: #999;
+  line-height: 0.48rem;
+}
+
+.Training-Principle-img {
+  width: 100%;
+  height: 5.253333rem;
+  line-height: 5.253333rem;
+  margin-bottom: 0.4rem;
+  vertical-align: middle;
+}
+
+.Taboo-crowd {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border-bottom: 1px solid #e4e4e4; */
+}
+
+.patent {
+  width: 100%;
+  height: 100%;
+  background-color: #f4f4f4;
+  border-radius: 0.133333rem;
+  padding: 0 0.253333rem;
+  margin-bottom: 0.653333rem;
+  margin-top: 0.36rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.patent-img {
+  width: 0.8rem;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  vertical-align: middle;
+  position: absolute;
+  left: 4.28rem;
+  top: -0.4rem;
+}
+
+.patent-text {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.patent-text-headline {
+  width: 100%;
+  height: 0.32rem;
+  line-height: 0.32rem;
+  margin-top: 0.666667rem;
+  font-size: 0.32rem;
+  color: #cbb383;
+  text-align: center;
+}
+
+.patent-text-section {
+  width: 100%;
+  height: 100%;
+  line-height: 0.48rem;
+  font-size: 0.32rem;
+  margin-top: 0.226667rem;
+  margin-bottom: 0.36rem;
+  color: #cbb383;
+}
+
+.pack-up {
+  width: 100%;
+  height: 0.893333rem;
+  line-height: 0.32rem;
+  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*margin-bottom: 43px;*/
+}
+
+.pack-up-text {
+  font-size: 0.32rem;
+  line-height: 0.32rem;
+  height: 0.32rem;
+  color: #4dd0c8;
+  vertical-align: middle;
+}
+
+.pack-up-img {
+  width: 0.266667rem;
+  height: 0.266667rem;
+  line-height: 0.266667rem;
+  margin-top: 0.066667rem;
+  vertical-align: middle;
+  margin-left: 0.266667rem;
+}
+
+/* 教学视频  */
+
+.Program-Particulars-video {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  padding: 0 0.32rem;
+  box-sizing: border-box;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0.266667rem;
+}
+
+.video-section-headline {
+  width: 100%;
+  height: 1.12rem;
+  line-height: 1.12rem;
+  vertical-align: middle;
+  font-size: 0.373333rem;
+  font-weight: bold;
+  color: #171717;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.video-section-video {
+  width: 100%;
+  /*height: 702px;*/
+  height: 5.266667rem;
+  vertical-align: middle;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.section-video {
+  width: 100%;
+  height: 100%;
+  line-height: 100%;
+  vertical-align: middle;
+}
+
+.section-Play {
+  width: 0.8rem;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  vertical-align: middle;
+  position: absolute;
+  bottom: 0.266667rem;
+  left: 0.293333rem;
+  z-index: 55;
+}
+
+.section-Pause {
+  width: 0.8rem;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  vertical-align: middle;
+  position: absolute;
+  bottom: 0.266667rem;
+  left: 0.293333rem;
+  z-index: 55;
+  display: none;
+}
+
+.Training-Steps {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Training-Steps-section {
+  width: 100%;
+  height: 100%;
+  font-size: 0.32rem;
+  color: #171717;
+  vertical-align: middle;
+  line-height: 0.48rem;
+  margin-bottom: 0.426667rem;
+}
+
+.Training-Steps-section-one {
+  width: 100%;
+  font-size: 0.32rem;
+  color: #171717;
+  vertical-align: middle;
+}
+
+/*训练反馈  */
+
+.Feedback-Training {
+  width: 100%;
+  height: 100%;
+  padding: 0 0.32rem 0.266667rem 0.32rem;
+  box-sizing: border-box;
+  background-color: #fff;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0.266667rem;
+}
+
+.Feedback-Training-headline {
+  width: 100%;
+  height: 1.6rem;
+  line-height: 1.6rem;
+  vertical-align: middle;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Feedback-Training-headline-text {
+  font-size: 0.373333rem;
+  color: #171717;
+  vertical-align: middle;
+  height: 0.373333rem;
+  line-height: 0.373333rem;
+  font-weight: bold;
+}
+
+.Feedback-Training-headline-button {
+  width: 2rem;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #4dd0c8;
+  border-radius: 0.4rem;
+}
+
+.Feedback-Training-headline-button-img {
+  width: 0.266667rem;
+  height: 0.266667rem;
+  line-height: 0.266667rem;
+  vertical-align: middle;
+}
+
+.Feedback-Training-headline-button-text {
+  font-size: 0.32rem;
+  color: #fff;
+  margin-left: 0.133333rem;
+  vertical-align: middle;
+  height: 0.32rem;
+  line-height: 0.32rem;
+}
+
+.Feedback-Training-section {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Feedback-Training-section-one {
+  width: 100%;
+  /* height: 100%; */
+  height: 3.333333rem;
+  padding: 0 0.32rem;
+  box-sizing: border-box;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f4f4f4;
+  margin-bottom: 0.266667rem;
+}
+
+.Feedback-Training-one-headline {
+  width: 100%;
+  height: 1.56rem;
+  line-height: 1.56rem;
+  vertical-align: middle;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.one-headline-head-portrait {
+  width: 15%;
+  height: 1.56rem;
+  line-height: 1.56rem;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+}
+
+.one-headline-head-portrait-img {
+  width: 0.8rem;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  border-radius: 0.4rem;
+  vertical-align: middle;
+}
+
+.one-headline-brief-introduction {
+  width: 85%;
+  height: 1.56rem;
+  line-height: 1.56rem;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#video1 {
+  width: 100%;
+  height: 100%;
+  line-height: 100%;
+  vertical-align: middle;
+}
+
+.brief-introduction-top {
+  width: 100%;
+  height: 0.426667rem;
+  line-height: 0.426667rem;
+  vertical-align: middle;
+  font-size: 0.4rem;
+  color: #171717;
+  text-align: left;
+  margin-top: 0.4rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.brief-introduction-bottom {
+  width: 100%;
+  height: 0.293333rem;
+  line-height: 0.293333rem;
+  vertical-align: middle;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.133333rem;
+}
+
+.brief-introduction-bottom-left {
+  height: 0.293333rem;
+  line-height: 0.293333rem;
+  vertical-align: middle;
+  font-size: 0.293333rem;
+  color: #999;
+}
+
+.brief-introduction-bottom-right {
+  height: 0.293333rem;
+  line-height: 0.293333rem;
+  vertical-align: middle;
+  font-size: 0.293333rem;
+  color: #999;
+}
+
+.Feedback-Training-one-section {
+  width: 100%;
+  height: 1.4rem;
+  /* height: 100%; */
+  line-height: 0.48rem;
+  font-size: 0.346667rem;
+  color: #999;
+  vertical-align: middle;
+  margin-bottom: 0.4rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.kong {
+  width: 100%;
+  height: 1.733333rem;
+}
+
+/*添加本计划  */
+
+.Add-Program {
+  width: 100%;
+  height: 1.333333rem;
+  line-height: 1.333333rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #4dd0c8;
+  vertical-align: middle;
+  font-size: 0.373333rem;
+  color: #fff;
+  margin-top: 0.4rem;
+  position: fixed;
+  bottom: 0;
+  z-index: 56;
+}
+
+.Add-Program-jia {
+  font-size: 0.506667rem;
+  vertical-align: middle;
+}
+
+/*  悬浮按钮  */
+
+.message {
+  width: 1.2rem;
+  height: 1.2rem;
+  line-height: 1.2rem;
+  vertical-align: middle;
+  position: fixed;
+  bottom: 3.466667rem;
+  right: 0.32rem;
+  z-index: 120;
+}
+
+.Top {
+  width: 1.2rem;
+  height: 1.2rem;
+  line-height: 1.2rem;
+  vertical-align: middle;
+  position: fixed;
+  bottom: 1.866667rem;
+  right: 0.32rem;
+  z-index: 120;
+}

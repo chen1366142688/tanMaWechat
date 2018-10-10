@@ -1,0 +1,178 @@
+const app = getApp().globalData;
+Page({
+  data: {
+    difficulty:[],
+    allEquipment:[],
+    allType:[],
+    defaultPlan:[],
+  },
+  difficultyClick(e){
+    const that = this;
+    let index = e.currentTarget.dataset.index;
+    let difficulty = that.data.difficulty;
+    for (let i = 0; i < difficulty.length; i++) {
+      if (index == i) {
+        difficulty[i].active = true;
+      } else {
+        difficulty[i].active = false;
+      }
+    }
+    that.setData({ difficulty: difficulty })
+  },
+  planDetail(e){
+    let planId = e.currentTarget.dataset.planid;
+    console.log(planId)
+    wx.navigateTo({
+      url: "../../../pages/Exercise/Program-Particulars/Program-Particulars?planId=" + planId + '&&childrenId=' + this.data.childId,
+    })
+  },
+  allEquipmentClick(e) {
+    const that = this;
+    let index = e.currentTarget.dataset.index;
+    let allEquipment = that.data.allEquipment;
+    for (let i = 0; i < allEquipment.length; i++) {
+      if (index == i) {
+        allEquipment[i].active = true;
+      } else {
+        allEquipment[i].active = false;
+      }
+    }
+    that.setData({ allEquipment: allEquipment })
+  },
+  allTypeClick(e) {
+    const that = this;
+    let index = e.currentTarget.dataset.index;
+    let allType = that.data.allType;
+    for (let i = 0; i < allType.length; i++) {
+      if (index == i) {
+        allType[i].active = true;
+      } else {
+        allType[i].active = false;
+      }
+    }
+    that.setData({ allType: allType })
+  },
+  onLoad: function (options) {
+    const that = this;
+    //获取默认列表
+    defaultPlan(that)
+    that.setData({
+      childId: options.childrenid,      
+    })
+    //获取难度/器械、类型
+    planItem(that, 'plan_level')
+    planItem(that, 'plan_tool')
+    planItem(that, 'plan_orientation')
+  },
+  onReady: function () {},
+  onShow: function () {}, 
+  onHide: function () {},
+  onUnload: function () {},
+  onPullDownRefresh: function () {},
+  onReachBottom: function () {},
+  onShareAppMessage: function () {}
+})
+//获取所有默认计划
+function defaultPlan(that) {
+  wx.request({
+    url: app.rQUrl + '/v1/exercisePlan/getAllDefaultPlan',
+    method: 'GET',
+    success(res) {
+      if (res.data.code == '10000') {
+        let results = res.data.response;
+        that.setData({
+          defaultPlan: results
+        })
+      } else {
+        wx.showToast({
+          title: res.data.msg,
+          icon: 'none'
+        })
+      }
+    },
+    fail(info) {
+      wx.showToast({
+        title: info.data.msg,
+        icon: 'none'
+      })
+    }
+  })
+}
+//获取项目类型
+function planItem(that, itemType){
+  wx.request({
+    url: app.rQUrl + '/v1/exercisePlan/getExerciseConfigByItemType',
+    method: 'GET',
+    data:{
+      itemType: itemType
+    },
+    success(res) {
+      if (res.data.code == '10000') {
+        let results = res.data.response;
+        if (itemType == 'plan_level'){
+          results.unshift({
+            "itemCode": 0,
+            "itemName": "全部",
+            "orderIndex": 0,
+            "itemType": "plan_level"
+          })
+          for (let i = 0; i < results.length; i++) {
+            if (i == 0) {
+              results[i].active = true;
+            } else {
+              results[i].active = false;
+            }
+          }
+          that.setData({
+            difficulty: results
+          })
+        } else if (itemType == 'plan_tool'){
+          results.unshift({
+            "itemCode": 0,
+            "itemName": "全部",
+            "orderIndex": 0,
+            "itemType": "plan_tool"
+          })
+          for (let i = 0; i < results.length; i++) {
+            if (i == 0) {
+              results[i].active = true;
+            } else {
+              results[i].active = false;
+            }
+          }
+          that.setData({
+            allEquipment: results
+          })
+        } else if (itemType == 'plan_orientation'){
+          results.unshift({
+            "itemCode": 0,
+            "itemName": "全部",
+            "orderIndex": 0,
+            "itemType": "plan_orientation"
+          })
+          for (let i = 0; i < results.length;i++){
+            if(i == 0){
+              results[i].active = true;
+            }else{
+              results[i].active = false;
+            }
+          }
+          that.setData({
+            allType: results
+          })
+        }
+      } else {
+        wx.showToast({
+          title: res.data.msg,
+          icon: 'none'
+        })
+      }
+    },
+    fail(info) {
+      wx.showToast({
+        title: info.data.msg,
+        icon: 'none'
+      })
+    }
+  })
+}

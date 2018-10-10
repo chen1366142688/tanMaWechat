@@ -1,0 +1,76 @@
+<!--pages/techer/share-Cocah/share-Cocah.wxml-->
+<view class='curriculum-info'>
+<button class='share' open-type="share">
+  分享
+  <image src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/coach/iteration/student_share.png'></image>
+</button>
+  <view class='main'>
+      <image src='{{curriculumInfo.avatarUrl}}' class='avatar'></image>
+      <view class='label'>
+        <text  wx:for="{{curriculumInfo.certificateList}}" wx:key="{{index}}">{{item.itemName}}</text>
+      </view>
+      <view class='name'>
+        <text>{{curriculumInfo.nickName}}</text>    
+        <text>{{!curriculumInfo.organName ? "" : curriculumInfo.organName}}</text>  
+      </view>
+      <view class='primary'>{{curriculumInfo.described ?"教练简历："+ curriculumInfo.described :"暂未填写教练简介"}}</view>
+  </view>
+</view>
+
+<view class='curriculum-main' wx:if="{{classList.length != 0}}">
+  <view class="curriculum-list" wx:for="{{classList}}" wx:key="{{index}}" bindtap='goClassDetail' data-classid='{{item.classId}}'>
+    <view class='top'>
+      <view class='left'>
+        <image src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/studentNewImg/c{{item.itemId == 1 ? "9" : item.itemId == 2?"68":item.itemId == 4 ? "66":item.itemId == 5 ? "67":"1"}}.png' wx:if="{{item.itemId!=8}}"></image>
+        <image src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/student-ping-pong.png' wx:if="{{item.itemId==8}}"></image>
+        <view>
+          {{item.itemName}}
+        </view>
+        <view> 
+          {{item.classType == 1? "大课":"私教"}}
+        </view>
+      </view>
+      <view class='right'>
+        {{item.className}}
+      </view>
+    </view>
+    <view class='bot'>
+      <view class='apply'>
+        <image src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/coach/iteration/people-counting.png'></image>
+        {{item.signUpMember}}人报名
+      </view>
+      <view class='apply'>
+        <image src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/coach/iteration/address.png'></image>
+        <text class="apply2">{{item.homeName}}</text>
+      </view>
+      <view class='apply'>
+        <view class='one'>
+          RMB
+        </view>
+        <view class='two'>
+          {{item.courseCost/100*item.courseCount }}
+        </view>
+        <view class='three'>
+          /{{item.courseCount }}课时
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='nobady' wx:if="{{classList.length ==0}}">
+    <image src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/coach/iteration/nothing.png'></image>
+    教练暂时还没有上传课程
+  </view>
+
+<view class='curriculum-btn' wx:if="{{isShare}}">
+  <view class='share_box'>
+    <button class='share' open-type="share">
+      <image src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/coach/iteration/student_wechart.png'></image>
+      邀请学生快捷报名
+    </button>
+  </view>
+  
+  <view class='back' bindtap='back'>
+    返回
+  </view>
+</view>

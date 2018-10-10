@@ -1,0 +1,36 @@
+<view class="page">
+  <view class="page__bd">
+    <view class="page__bd page__bd_spacing">
+      <view class="">
+        <!--四川省-->
+        <!-- <view class="ca-cancela">
+          <text class="">当前城市</text>
+        </view>-->
+        <view class="ca-cancela-txt">
+          <!--<view class="ca-cancela">四川省
+            <view class="schoolu_boxe locationsec_c"></view>
+          </view>
+          <view class="ca-cancela-txt">成都市
+            <view class="schoolu_boxe"></view>
+          </view>
+          <view class="ca-cancela-txt">高新区
+            <view class="schoolu_boxe"></view>
+          </view>-->
+        </view>
+        <view class="ca-cancelb-sd  ca-cancelb-sg">
+          <view class="ca-cancelb-se">
+            <input type="text" class="" placeholder="具体地址"></input>
+          </view>
+        </view>
+        <view class="ss-postion-a"></view>
+      </view>
+
+    </view>
+    <view>
+      <view class="ca-cancelb-sf"></view>
+      <button class="c-fua">提 交</button>
+    </view>
+  </view>
+  <!--主体-->
+</view>
+<!--课程，定位-->

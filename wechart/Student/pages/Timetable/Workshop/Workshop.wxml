@@ -1,0 +1,41 @@
+<!--pages/Timetable/Workshop/Workshop.wxml-->
+<scroll-view class="scroll-active" id="affix" scroll-x='true'>
+  <view class='classItem' wx:for="{{itemList}}" wx:key="{{index}}" data-id='{{item.itemId}}' bindtap='fenItemList'>
+    <view class="{{itemId == item.itemId ?'is_Checked':'normal'}}">
+      <image class='classItemImg' src='{{item.itemPhotoAddress}}'></image>
+    </view>
+    <view class='classItemText'>{{item.itemName}}</view>
+  </view>
+</scroll-view>
+<scroll-view class='experienceClassSlipping' scroll-y="{{scrollY}}">
+      <view class='course' wx:for="{{aListOfExperienceLessons}}" wx:key="uqine" wx:for-item="venue" data-over="{{venue.signUpOver}}" data-classid="{{venue.classId}}" data-marketingstatus='{{venue.marketingStatus}}' bindtap='goCourseDetails'>
+        <view class='course-section'>
+          <view class='courseImgBox' style='overflow:hidden;'>
+            <image lazy-load="true" wx-if="{{venue.marketingStatus==0}}" bindload="loadImg" class='courseImg' src='{{!imgOk?"../../../image/default.jpg":venue.classPhotoAddress+"?x-oss-process=image/resize,w_400"}}' mode='widthFix'></image>
+            <image lazy-load="true"  wx-if="{{venue.marketingStatus==1}}" bindload="loadImg" class='courseImg' src='{{!imgOk?"../../../image/default.jpg":(venue.marketingPhoto?venue.marketingPhoto:venue.classPhotoAddress)+"?x-oss-process=image/resize,w_400"}}' mode='widthFix'></image>  
+            <text class='itemType'>{{venue.itemName }}</text>
+            <view class='courseIter'>
+              <text class='textOver iLblock'>{{venue.homeName}}</text>
+              <text decode='true'>&nbsp;&nbsp;({{venue.length }}km)</text>
+            </view>
+          </view>
+          <view class='courseInfo'>
+            <view class='perienceTitle textOver' wx-if="{{venue.marketingStatus==0}}">{{venue.className }}</view>
+            <view class='perienceTitle textOver' wx-if="{{venue.marketingStatus==1}}">{{ venue.marketingClassName?venue.marketingClassName:venue.className }}</view>
+            <view class='moneyBoxInfo'>
+              <text class='money' decode='true'>RMB&nbsp;{{venue.courseCost/100}}</text><text class='money-gray' decode='true'>&nbsp;/人次</text>
+            </view>
+          </view>
+        </view>
+
+      </view>
+      <view class='tabLoading' wx:if="{{tabLoad}}">
+        <image src='../../../image/loading.gif'></image>
+      </view>
+      <view class='footerOver' wx:if="{{!tabLoad}}">{{footerText}}</view>
+    </scroll-view>
+<!--  没有数据显示空空如也  -->
+<view class='kong' wx:if="{{Period}}">
+  <image class='kong-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/studentNewImg/dataEmpty.png'></image>
+  <text class='kong-text'>数据为空</text>
+</view>

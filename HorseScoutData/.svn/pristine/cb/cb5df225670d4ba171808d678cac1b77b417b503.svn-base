@@ -1,0 +1,110 @@
+/* pages/Information/Selection-school/Selection-school.wxss */
+
+.Selection-school{
+  width: 750rpx;
+  margin: 0;
+  line-height: 0;
+  background-color: #fff;
+}
+
+
+.Selection-school-headline{
+  width: 100%;
+  height: 120rpx;
+  line-height: 120rpx;
+  padding: 0 24rpx;
+  box-sizing: border-box;
+  vertical-align: middle;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1rpx solid #e4e4e4;
+}
+
+.headline-school{
+  width: 141rpx;
+  height: 120rpx;
+  line-height: 120rpx;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+}
+
+
+.relation{
+  font-size: 34rpx;
+  color: #333;
+}
+
+.section-pull-down{
+  width: 16rpx;
+  height: 16rpx;
+  line-height: 16rpx;
+  margin-left: 20rpx;
+  margin-top: 8rpx;
+  vertical-align: middle;
+}
+
+.headline-Name{
+  width: 520rpx;
+  height: 120rpx;
+  line-height: 120rpx;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+.Bargraph{
+  width: 2rpx;
+  height: 34rpx;
+  vertical-align: middle;
+  background-color: #4DD0C8;
+}
+
+.section-options-have-input{
+  width: 500rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+  text-align: left;
+  font-size: 34rpx;
+  margin-left: 20rpx;
+  color: #333;
+}
+
+.section-options-have-input-cbcbcb{
+  color: #999;
+  font-size: 34rpx;
+}
+
+.headline-search{
+  width: 30rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  vertical-align: middle;
+  margin-left: 10rpx;
+}
+
+.search-img{
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.section-school{
+  width: 100%;
+  padding: 0 24rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.section-school-one{
+  width: 100%;
+  height: 86rpx;
+  line-height: 86rpx;
+  vertical-align: middle;
+  border-bottom: 1rpx solid #e4e4e4;
+  font-size: 30rpx;
+  color: #171717;
+  text-align: left;
+}

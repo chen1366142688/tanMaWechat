@@ -1,0 +1,11 @@
+{
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#4DD0C8",
+  "navigationBarTextStyle": "#fff",
+  "navigationBarTitleText": "测试中",
+  "usingComponents": {
+    "test-one": "/components/test-one/test-one",
+    "test-two": "/components/test-two/test-two",
+    "test-three": "/components/test-three/test-three"
+  }
+}

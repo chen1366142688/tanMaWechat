@@ -1,0 +1,115 @@
+<!--pages/my/coach-student/coach-student.wxml-->
+<view class='coach-student'>
+  <view class='Seek' wx:if="{{!options.classId}}">
+    <view class='venue-seek'>
+      <input type='text' class='caoch-suo' maxlength='20' placeholder-class='coach-sou' placeholder='搜索学员' value="{{options.nickName ? options.nickName : value}}"  bindinput='searchInput'></input>
+      <view class='venue-seek-Click' bindtap='search'>
+        <image class='coach-search' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/search.png'></image>
+      </view>
+    </view>
+  </view>
+
+  <scroll-view class='coach-section clearfloat' scroll-y="true" style='height:{{height}}px;padding:{{padding}}rpx 0rpx' bindscrolltolower="scrolltolower">
+    <view class='section-one' wx:for="{{studentList}}" wx:key="itemName" wx:for-item="student">
+      <view class='section-one-img'>
+        <image class='head-portrait' src='{{student.avatarUrl }}'></image>
+      </view>
+      <view class='section-one-category clearfloat'>
+        <view class='name-sex'>
+          <view class='name-sex-left'>
+            <view class='student-name'>{{student.nickName }}</view>
+            <image class='student-sex' wx:if="{{student.gender == 1}}"src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/man-blue.png'></image>
+            <image class='student-sex' wx:if="{{student.gender==2 }}"src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/woman-blue.png'></image>
+            <view class='student-catagory' wx:if="{{student.studentType==2}}">青少年</view>
+            <view class='student-catagory' wx:if="{{student.studentType==1}}">成人</view>
+          </view>
+          <view class='name-sex-right'>已参训 {{student.classMember }} 课程</view>
+        </view>
+        <view class='student-items clearfloat'>
+          <view class='student-items-section'>
+            <view class='student-items-one' wx:for="{{student.gradeVos }}" wx:key="gradeVos" wx:for-item="gradeVos">
+              <view class='exercise-item'>{{gradeVos.itemName }}</view>
+              <view class='item-grade'>{{gradeVos.itemGrade }}</view>
+            </view>
+            <!-- <view class='student-items-one'>
+              <view class='exercise-item'>羽毛球</view>
+              <view class='item-grade'>L1</view>
+            </view>
+            <view class='student-items-one'>
+              <view class='exercise-item'>羽毛球</view>
+              <view class='item-grade'>L1</view>
+            </view> -->
+          </view>
+
+        </view>
+      </view>
+    </view>
+
+    <!-- <view class='section-one'>
+      <view class='section-one-img'>
+        <image class='head-portrait' src='{{student.avatarUrl }}'></image>
+      </view>
+      <view class='section-one-category clearfloat'>
+        <view class='name-sex'>
+          <view class='name-sex-left'>
+            <view class='student-name'>张 华</view>
+            <image class='student-sex' wx:if="{{student.gender== '1'}}" src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/man-blue.png'></image>
+            <image class='student-sex' wx:if="{{student.gender== '2'}}" src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/man-blue.png'></image>
+            <view class='student-catagory'>青少年</view>
+          </view>
+          <view class='name-sex-right'>已参训 {{student.classMember }} 课程</view>
+        </view>
+        <view class='student-items clearfloat'>
+          <view class='student-items-section'>
+            <view class='student-items-one'>
+              <view class='exercise-item'>羽毛球</view>
+              <view class='item-grade'>L1</view>
+            </view>
+          </view>
+
+        </view>
+      </view>
+    </view>
+
+    <view class='section-one'>
+      <view class='section-one-img'>
+        <image class='head-portrait' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/headportrait.png'></image>
+      </view>
+      <view class='section-one-category clearfloat'>
+        <view class='name-sex'>
+          <view class='name-sex-left'>
+            <view class='student-name'>张 华</view>
+            <image class='student-sex' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/man-blue.png'></image>
+            <view class='student-catagory'>青少年</view>
+          </view>
+          <view class='name-sex-right'>已参训 2 课程</view>
+        </view>
+        <view class='student-items clearfloat'>
+          <view class='student-items-section'>
+            <view class='student-items-one'>
+              <view class='exercise-item'>羽毛球</view>
+              <view class='item-grade'>L1</view>
+            </view>
+            <view class='student-items-one'>
+              <view class='exercise-item'>羽毛球</view>
+              <view class='item-grade'>L1</view>
+            </view>
+            <view class='student-items-one'>
+              <view class='exercise-item'>羽毛球</view>
+              <view class='item-grade'>L1</view>
+            </view>
+            <view class='student-items-one'>
+              <view class='exercise-item'>羽毛球</view>
+              <view class='item-grade'>L1</view>
+            </view>
+            <view class='student-items-one'>
+              <view class='exercise-item'>羽毛球</view>
+              <view class='item-grade'>L1</view>
+            </view>
+          </view>
+
+        </view>
+      </view>
+    </view> -->
+  </scroll-view>
+</view>

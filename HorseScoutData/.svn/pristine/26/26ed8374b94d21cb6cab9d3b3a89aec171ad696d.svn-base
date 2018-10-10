@@ -1,0 +1,53 @@
+// pages/screen/screen/Flicker.js
+Page({
+  data: {
+    time:30
+  },
+  onLoad: function (options) {
+  
+  },
+  onReady: function () {
+  
+  },
+  onShow: function () {
+    changeThisTime(this)
+  },
+  onHide: function () {
+  
+  },
+  onUnload: function () {
+  
+  },
+  onPullDownRefresh: function () {
+  
+  },
+  onReachBottom: function () {
+  
+  },
+  onShareAppMessage: function () {
+  
+  },
+  goIndex(e){
+    this.setData({time: 0});
+  }
+})
+function changeThisTime(that) {
+  var time = that.data.time;
+  time--;
+  if (time >= 0) {
+    that.setData({
+      time: time,
+    });
+    setTimeout(() => {
+      changeThisTime(that)
+    }, 1000)
+  } else {
+    that.setData({
+      time: 30
+    });
+    wx.switchTab({
+      url: '../../../pages/index/index',
+    })
+  }
+
+}

@@ -1,0 +1,73 @@
+page {
+  background: #ececec;
+  font-size:30rpx;
+  font-family:PingFang-SC-Regular;
+}
+.head{
+  width:700rpx;
+  height:88rpx;
+  line-height: 88rpx;
+  background: #fff;
+  margin-bottom:20rpx;
+  padding:0 25rpx;
+}
+.picker{height: 88rpx;
+line-height: 88rpx;}
+.address{
+  display: block;
+  width: 704rpx;
+  height:88rpx;
+  background: #fff;
+  padding:0 25rpx;
+}
+.addLocation{
+  color:rgba(153,153,153,1);
+}
+.down{
+  width:21rpx;
+  height:9rpx;
+  vertical-align: middle;
+  margin-right:15rpx;
+}
+.provice{
+  display: inline-block;
+  width: 106rpx;
+  vertical-align: top;
+  text-align: center;
+}
+.city{
+  display: inline-block;
+  width: 140rpx;
+  vertical-align: top;
+  text-align: center;
+}
+.theCity{
+  display: inline-block;
+  width: 140rpx;
+  vertical-align: top;
+  text-align: center;
+}
+.dingLo{
+  width:164rpx;
+  height:40rpx;
+  position: relative;
+  top:24rpx;
+  left:560rpx;
+}
+.c-fua {
+  width: 702rpx;
+  height: 88rpx;
+  bottom: 60rpx;
+  left: 24rpx;
+  z-index: 20;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 88rpx;
+  font-family: PingFang-SC-Bold;
+  color: rgba(255, 255, 255, 1);
+  background: url('http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/images/icon/submit_fua.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+}
+button::after{border:0;}

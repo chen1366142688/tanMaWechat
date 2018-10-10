@@ -1,0 +1,34 @@
+<!--pages/Exercise/Physical-Test/Physical-Test.wxml-->
+<view class='Physical-Test'>
+  <view class='patent-preparatory-work'>
+    <view class='preparatory-work clearfloat' wx:for="{{copyright}}" wx:key="uqine" wx:for-item="copy">
+      <image class='preparatory-work-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/Exercise/preparatory.png'></image>
+      <view class='preparatory-work-text clearfloat'>
+        <view class='preparatory-work-text-headline'>{{copy.name}}</view>
+        <view class='preparatory-work-text-section clearfloat'>{{copy.comtent}}</view>
+      </view>
+    </view>
+    <view class='patent clearfloat'>
+      <image class='patent-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/Exercise/patent.png'></image>
+      <view class='patent-text clearfloat'>
+        <view class='patent-text-headline'>专利版权说明</view>
+        <view class='patent-text-section clearfloat'>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容。</view>
+      </view>
+    </view>
+  </view>
+
+  <!--孩子列表  -->
+  <view class='Physical-Test-list' id='Physical-Test-list' wx:if="{{childName.length>0}}" >
+    <view class='Physical-Test-box {{isTop ? "fixed-top" : ""}}'>
+      <scroll-view class='Exercise-Program-choose' scroll-x="{{scroll}}">
+        <view class='Exercise-Program-choose-two {{active == index ? "Exercise-Program-choose-one":""}}' wx:for="{{childName}}" wx:key="uqine" wx:for-item="child" bindtap='cilckChild' data-index="{{index}}" data-childId="{{child.childrenId}}">孩子 {{index+1}} {{child.realName}}</view>
+      </scroll-view>
+    </view>  
+  </view>
+
+  <!-- 测试项目 -->
+  <view class='test-box'>
+    <text-list paramsFather="{{paramsObj}}" paramsList="{{item}}" wx:for="{{testList}}" wx:key="index"></text-list>
+  </view>
+  <view wx:if="{{isMore}}" class='ismore'>没有更多了</view>
+</view>

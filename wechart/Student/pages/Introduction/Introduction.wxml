@@ -1,0 +1,34 @@
+<!-- <view id='app'>
+  <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">
+    <image class='log' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/welcome/Venue-Logo.png'></image>
+    <image class='play' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/welcome/student-Img.png'></image>
+    <image class='information' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/welcome/slogan-student.png'></image>
+    <view class='footer'>
+      <view class='into'>进入</view>
+    </view>
+  </button>  
+</view> -->
+<swiper class="swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-color="{{indicatorColor}}" indicator-active-color="{{indicatorActiveColor}}" current="{{current}}" circular="{{circular}}">
+  <block wx:key="orderIndex">
+    <swiper-item>
+      <image src='../../image/Introduction/advertinew01.png' class="slide-image" />
+    </swiper-item>
+    <swiper-item>
+      <image src='../../image/Introduction/advertinew02.png' class="slide-image" />
+    </swiper-item>
+    <swiper-item>
+      <image src='../../image/Introduction/advertinew03.png' class="slide-image" />
+    </swiper-item>
+    <swiper-item>
+      <button open-type="getUserInfo" hover-class='none' bindgetuserinfo="bindGetUserInfo">
+        <image src='../../image/Introduction/advertinew04.png' class="slide-image" />
+      </button>
+    </swiper-item>
+  </block>
+</swiper>
+<!-- <view id='app'>
+  <button open-type="getUserInfo" hover-class='none' bindgetuserinfo="bindGetUserInfo">
+    <view class='goInto'>点击进入</view>
+    <image class='tanma' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coach/Introduction/tanma.png'></image>
+  </button>
+</view> -->

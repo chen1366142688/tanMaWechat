@@ -1,0 +1,64 @@
+<!--pages/curriculum/Addition-coach/Addition-coach.wxml-->
+<view class='search'>
+  <view class='searchBox'>
+    <input type='text' value="" placeholder='输入教练昵称' placeholder-class='chanName' class='guan-name iLblock' bindinput="nickName"></input>
+    <view  class='searchview iLblock' bindtap='serach'>
+        <image src='{{imgUrl}}coach/curriculum/search.png' class='sousuo'></image>  
+    </view>
+  </view>   
+</view>
+  <view class='coach-jian' wx:for="{{coachList}}" wx:for-item="coach" wx:key="{{coach.coachId}}">
+    <view class='coach-jiao-one clearfloat'>
+      <view class='coach-jiao-oneL fl'>
+        <image class='jiao-img' src='{{imgUrl}}coachNewImg/location5.png'></image>
+        <text class='jiao-text'>{{coach.provinceName}}-{{coach.cityName}}</text>
+      </view>
+      <view class='coach-jiao-oneL fr'>
+        <image class='qiu-img' src='{{coach.itemPhotoAddress}}'></image>
+        <text class='qiu-text'>{{coach.itemName?coach.itemName:''}}</text>
+      </view>
+    </view>
+    <view class='cocah-pas' bindtap='chooseCoach' data-userid='{{coach.userId}}'data-nickname='{{coach.nickName}}'>
+      <view class='imgBox iLblock'>
+        <image class='coach-userImg' src='{{coach.avatarUrl}}'></image>
+      </view>
+      <view class='coach-txt-item iLblock'>
+        <view class='nameBox clearfloat'>
+          <view class='name-left fl'>
+            <text class='name-jiao iLblock'>{{coach.nickName}}</text>
+            <image class='manImg'wx:if="{{coach.gender == '1'}}" src='{{imgUrl}}coachNewImg/man-blue.png'></image>
+            <image class='manImg' wx:if="{{coach.gender == '0'}}" src='{{imgUrl}}studentNewImg/c47.png'></image>
+            <image class='coach-ren'wx:if="{{coach.authStatus == '1'}}" src='{{imgUrl}}authenticated.png'></image>
+          </view>
+          <view class='name-left fr' wx:if="{{coach.athleteGrade}}">
+            <image class='coach-levev' src='{{imgUrl}}coachNewImg/class-blue.png'></image>
+            <text class='coach-level-txt iLblock'>{{coach.athleteGrade}}</text>
+          </view>
+        </view>
+        <view class='coach-jianJie'>
+           <text class='coach-str'>简介：</text>{{coach.description?coach.description:''}}
+        </view>
+        <!-- <view class='coach-more-foot clearfloat'>
+          <view class='coach-more-le fl'>
+            <view class=' iLblock'>
+              <image class='men' src='{{imgUrl}}coachNewImg/detail.png'></image>
+              <text class='menNum'>{{coach.totalItemNum}}门</text>
+            </view>
+            <view class='coach-lie iLblock'>
+              <image class='qi' src='{{imgUrl}}coachNewImg/frequency1.png'></image>
+              <text class='qiNum'>{{coach.totalCourseNum}}期</text>
+            </view>
+            <view class=' iLblock'>
+              <image class='jibie' src='{{imgUrl}}coachNewImg/class-blue.png'></image>
+              <text class='jibieNum'>{{coach.itemStudentGrade}}</text>
+            </view>
+          </view>
+          <view class='coach-more-rg fr'>
+            <image class='coach-hot' src='{{imgUrl}}coachNewImg/popularity1.png'></image>
+            <text class='coach-ted iLblock'>{{coach.popularity}}</text>
+          </view>
+        </view> -->
+      </view>
+    </view>
+  </view>
+

@@ -1,0 +1,139 @@
+<view class='coach-suosou {{headers}}'>
+  <view class='venue-seek'>
+    <input type='text' value='{{coachNickName}}' bindinput="bindKeywordInput" class='caoch-suo' maxlength='20' placeholder-class='coach-sou' placeholder='输入您要找的教练名称' confirm-type='search' bindconfirm="searchBtn"></input>
+    <view class='venue-seek-Click' bindtap="queryByName">
+    <image class='coach-search {{search}}' src='{{newUrl}}c56.png'></image>
+    </view>
+  </view>
+</view>
+
+
+<!-- <view wx:if="{{false}}" class='fenLei'>
+  <view class='fenleiOne' wx:for="{{itemList}}" wx:key="*this" wx:for-index="itemIndex">
+    <view class='fenleiOne-info' bindtap="selectItem" data-id="{{item.itemId}}" wx:if="{{itemIndex < 7 || (itemList.length==8) }}">
+      <view class="{{itemId == item.itemId ?'is_Checked':'normal'}}">
+        <image class='itemImg' src='{{item.itemPhotoAddress}}'></image>
+      </view> 
+      <text class='c-zuqiu'>{{item.itemName}}</text>
+    </view>
+  </view>
+</view> -->
+<!-- <scroll-view class='fenLeiX {{scrollBook}}' scroll-x='true'>
+  <view class='fenleiOne-scroll' bindtap="selectItem" data-id="{{item.itemId}}" wx:for="{{itemList}}" wx:key="itemId">
+    <view class="{{itemId == item.itemId ?'is_Checked':'normal'}}">
+      <image class='itemImg-scroll' src='{{item.itemPhotoAddress}}'></image>
+    </view>
+    <text class='c-zuqiu-scroll'>{{item.itemName}}</text>
+  </view>
+</scroll-view> -->
+<scroll-view class='scroll-active {{scrollBook}}' scroll-x='true'>
+    <view class='classItem' wx:for="{{itemList}}" wx:key="{{index}}" data-id='{{item.itemId}}' bindtap='selectItem'>
+      <view class="{{itemId == item.itemId ?'is_Checked':'normal'}}">
+        <image class='classItemImg' src='{{item.itemPhotoAddress}}'></image>
+      </view>
+      <view class='classItemText'>{{item.itemName}}</view>
+    </view>
+  </scroll-view>
+<view id='sortBox'>
+  <view class='select-top-box' hidden="{{passt}}">
+    <view bindtap="selectLine" data-type="a" class='select-line {{selectAuth?"select-line-select":""}}'>平台认证
+      <image class='line_img' src='{{selectAuth?upImg:downwardImg}}' />
+    </view>
+    <view bindtap="selectLine" data-type="l" class='select-line {{selectL?"select-line-select":""}}'>适合等级
+      <image class='line_img' src='{{selectL?upImg:downwardImg}}' />
+    </view>
+    <view bindtap="selectLine" data-type="p" class='select-line {{selectP?"select-line-select":""}}'>人气排名
+      <image class='line_img' src='{{selectP?upImg:downwardImg}}' />
+    </view>
+    <view bindtap="selectLine" data-type="c" class='select-line {{selectC?"select-line-select":""}}'>课程总数
+      <image class='line_img' src='{{selectC?upImg:downwardImg}}' />
+    </view>
+  </view>
+  <view class='show-line-parent {{scrollModal}}' wx:if="{{thisList.length > 0}}">
+    <view class='show-line' bindtap="selectLineItem" data-id="{{item.id}}" style='color:{{item.id==thisId?"#5BD6B2":"#999999"}}' wx:for="{{thisList}}" wx:key="*this">{{item.name}}
+      <image wx:if="{{item != null && item.id==thisId}}" class='line_img_show' src='{{imgUrl}}sure.png'></image>
+    </view>
+    <view class='line-bottom'></view>
+  </view>
+</view>
+<scroll-view class='scroll-view-box' scroll-y="{{scrollY}}">
+  <view class='coach-jian' wx:for="{{coachList}}" wx:key="userId" >
+    <view class='coach-jiao-one clearfloat'>
+      <view class='coach-jiao-oneL fl'>
+        <image class='jiao-img' src='{{newUrl}}c49.png'></image>
+        <text class='jiao-text'>{{item.provinceName}}-{{item.cityName}}</text>
+      </view>
+      <view class='coach-jiao-oneL fr'>
+        <view class="coach-jiao-one-item" wx:for="{{item.itemName}}" wx:key="itemName">
+          <image class='qiu-img' src='{{item.itemPhoto}}'></image>
+          <text class='qiu-text'>{{item.itemName}}</text>
+        </view>
+      </view>
+    </view>
+    <view class='cocah-pas'>
+      <view class='imgBox iLblock' bindtap='imgPreview' data-url='{{item.avatarUrl}}'>
+        <image class='coach-userImg' src='{{item.avatarUrl+"?x-oss-process=image/resize,m_mfit,h_120,w_120"}}' mode="aspectFill"></image>
+      </view>
+      <view class='coach-txt-item iLblock' bindtap="toDetailPage" data-coach="{{item.coachId}}" data-user="{{item.userId}}">
+        <view class='nameBox clearfloat'>
+          <view class='name-left fl'>
+            <text class='name-jiao iLblock' wx:if="{{item.authStatus == '1'}}">{{item.nickName}}</text>
+            <text class='name-jiao name-jiaoClone iLblock' wx:else>{{item.nickName}}</text>
+            <text decode='true'>&nbsp;</text>
+            <image class='coach-ren' wx:if="{{item.authStatus == '1'}}" src='{{imgUrl}}renzheng.png'></image>
+          </view>
+          <!-- <view class='name-left fr' wx:if='{{item.athleteGrade}}'>
+            <image class='coach-levev' src='{{imgUrl}}level.png'></image>
+            <text class='coach-level-txt iLblock'>{{item.athleteGrade?item.athleteGrade:"暂无"}}</text>
+          </view> -->
+          <view class='name-left fr' wx:if="{{item.authStatus == '1' && item.athleteGrade}}">
+            <image class='coach-levev' src='{{imgUrl}}level.png'></image>
+            <text class='coach-level-txt iLblock'>{{item.athleteGrade?item.athleteGrade:"暂无"}}</text>
+          </view>
+        </view>
+        <view class='coach-jianJie'>
+          <text class='coach-str'>简介：</text>{{item.description?item.description:'这家伙很懒，什么也没留下'}}
+        </view>
+        <view class='coach-more-foot clearfloat'>
+          <view class='coach-more-le fl'>
+            <view class=' iLblock'>
+              <image class='men' src='{{newUrl}}c59.png'></image>
+              <text class='menNum'>{{item.totalItemNum}}课程</text>
+            </view>
+            <view class='coach-lie iLblock'>
+              <image class='qi' src='{{newUrl}}c57.png'></image>
+              <text class='qiNum'>{{item.totalCourseNum?item.totalCourseNum:"0"}}节</text>
+            </view>
+            <view class=' iLblock'>
+              <image class='jibie' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/student/grade-red.png'></image>
+              <text class='jibieNum'>{{item.itemStudentGrade?item.itemStudentGrade:"暂无" }}</text>
+            </view>
+          </view>
+          <view class='coach-more-rg fr'>
+            <image class='coach-hot' src='{{imgUrl}}red-hot.png'></image>
+            <text class='coach-ted iLblock'>{{item.popularity?item.popularity:"0"}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='tabLoading' wx:if="{{tabLoad}}">
+      <image src='../../../image/loading.gif'></image>
+    </view>
+  <!-- <view class='footerOver' wx:if="{{!tabLoad}}">已经到底了</view> -->
+  <text wx:if="{{showFooter}}" class='van-footer'>————已显示所有教练————</text>
+</scroll-view>
+<!--显示竖着的-->
+<scroll-view class="scroll-activeTop {{itemOPa}}" id="affix" scroll-y='true' wx:if="{{itemShow}}">
+      <view class='classItems' wx:for="{{itemList}}" wx:key="{{index}}" data-id='{{item.itemId}}' bindtap='selectItem'>
+        <view class="{{itemId == item.itemId ?'is_Checked':'normals'}}">
+          <image class='classItemImg' src='{{item.itemPhotoAddress}}'></image>
+        </view>
+        <!-- <view class='classItemText'>{{item.itemName}}</view> -->
+      </view>
+</scroll-view>
+<!--  没有数据显示空空如也  -->
+<view class='kong' wx:if="{{Period}}">
+  <image class='kong-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/studentNewImg/dataEmpty.png'></image>
+  <text class='kong-text'>数据为空</text>
+</view>

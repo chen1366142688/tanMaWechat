@@ -1,0 +1,11 @@
+<!--pages/My/Alter-Phone-number/Alter-Phone-number.wxml-->
+<view class='Alter-Phone-number'>
+  <input class='Alter-Name-input' maxlength="12" name="userName" placeholder="输入手机号" placeholder-class='input-cbcb'></input>
+  <view class='Alter-Phone-number-input'>
+    <input class='Alter-New-Password-input' maxlength="12" name="userName" placeholder="输入验证码" placeholder-class='input-cbcb'></input>
+    <view class='verification-code'>发送短信</view>
+  </view>
+  <view class='Submit-button'>
+    <view class='Submit-button-section'>提交结果</view>
+  </view>
+</view>

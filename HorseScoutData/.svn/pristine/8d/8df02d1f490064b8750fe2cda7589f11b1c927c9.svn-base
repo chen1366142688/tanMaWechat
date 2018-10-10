@@ -1,0 +1,120 @@
+<!--pages/My/Child-Information/Child-Information.wxml-->
+<view class='Child-Information'>
+  <view class='Child-Information-background'></view>
+  <view class='Child-Information-header'>
+    <view class='Child-Information-headline'>
+      <view class='Child-Information-header-left'>
+        <image class='header-left-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/My/man-img.png'></image>
+      </view>
+      <view class='Child-Information-header-right'>
+        <view class='header-right-one'>
+          <view class='header-right-one-left'>姓名</view>
+          <view class='header-right-one-right'>孩子姓名</view>
+        </view>
+        <view class='header-right-one'>
+          <view class='header-right-one-left'>身份证号</view>
+          <view class='header-right-one-right-two'>510104199906060087</view>
+        </view>
+        <view class='header-right-one'>
+          <view class='header-right-one-left'>身高</view>
+          <view class='header-right-one-right-one'>
+            <view class='header-right-one-right-one-input'>123.0</view>
+            <view class='header-right-one-right-one-biao'>CM</view>
+          </view>
+        </view>
+        <view class='header-right-one'>
+          <view class='header-right-one-left'>体重</view>
+          <view class='header-right-one-right-one'>
+            <view class='header-right-one-right-one-input'>33.0</view>
+            <view class='header-right-one-right-one-biao'>KG</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- BMI表格 -->
+  <view class='BMI-tabulation'>
+    <view class='BMI-tabulation-headline'>
+      <view class='BMI-tabulation-headline-one'>15</view>
+      <view class='BMI-tabulation-headline-one'>20</view>
+      <view class='BMI-tabulation-headline-one'>25</view>
+      <view class='BMI-tabulation-headline-one'>30</view>
+      <view class='BMI-tabulation-headline-one'>35</view>
+      <view class='BMI-tabulation-headline-one'>40</view>
+      <view class='BMI-tabulation-headline-one'>45</view>
+      <view class='BMI-tabulation-headline-one'>50</view>
+    </view>
+    <view class='BMI-tabulation-section'></view>
+  </view>
+  <!--所在学校/所在地区/所在班级 -->
+  <view class='District-school-grade'>
+    <view class='Distric-school-grade-section'>
+      <view class='Distric'>
+        <view class='Distric-one'>所在城市</view>
+        <view class='Distric-two'>
+          <picker class='Distric-two-text'  bindchange="bindPickerChange" value="{{index}}" range="{{array}}">四川省</picker>
+          <image class='Distric-two-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/pull-down.png'></image>
+        </view>
+        <view class='Distric-there'>
+          <picker class='Distric-there-text'  bindchange="bindPickerChange1" value="{{index1}}" range="{{array1}}">成都市</picker>
+          <image class='Distric-there-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/pull-down.png'></image>
+        </view>
+      </view>
+      <view class='Distric'>
+        <view class='Distric-one'>所在学校</view>
+        <view class='Distric-two'>
+          <picker class='Distric-two-text'  bindchange="bindPickerChange2" value="{{index2}}" range="{{array2}}" >{{array2[index2]}}</picker>
+          <image class='Distric-two-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/pull-down.png'></image>
+        </view>
+        <view class='Distric-there'>
+          <view class='Distric-there-text textOver {{SchoolValue? "" : "section-options-have-input-cbcbcb"}}' bindtap='goSchool'>{{SchoolValue? SchoolValue : '当前所在学校'}}</view>
+          <!-- <image class='Distric-there-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/pull-down.png'></image> -->
+        </view>
+      </view>
+      <view class='Distric1'>
+        <view class='Distric-one'>所在班级</view>
+        <view class='Distric-two'>
+          <picker class='Distric-two-text' bindchange="bindPickerChange3" value="{{index3}}" range="{{array3}}">{{array3[index3]}}</picker>
+          <image class='Distric-two-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/pull-down.png'></image>
+        </view>
+        <view class='Distric-there'>
+          <picker class='Distric-there-text' bindchange="bindPickerChange4" value="{{index4}}" range="{{array4}}" >{{array4[index4]}}</picker>
+          <image class='Distric-there-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/pull-down.png'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 按钮  -->
+  <view class='Buttons'>
+    <view class='Buttons-section'>
+      <view class='Buttons-more'>更多...</view>
+      <view class='Buttons-Customer-Services' bindtap='ContactCustomerService'>联系客服</view>
+      <view class='Buttons-submit'>提交</view>
+    </view>
+  </view>
+
+  <!-- 还有以下账号关联了本孩子信息： -->
+  <view class='Account-associated clearfloat'>
+    <view class='Account-associated-section clearfloat'>
+      <view class='Account-associated-headline'>还有以下账号关联了本孩子信息：</view>
+      <view class='Account-associated-phone clearfloat'>
+        <view class='Account-associated-phone-one'>孩子爸爸：136****9548</view>
+        <view class='Account-associated-phone-one'>孩子爸爸：136****9548</view>
+        <view class='Account-associated-phone-one'>孩子爸爸：136****9548</view>
+      </view>
+    </view>
+  </view>
+<!-- 空 -->
+<view class='kong'></view>
+
+<!-- 更多 -->
+<view class='orderModal' wx:if="{{isMoreShow}}">
+  <view class='orderItems'>
+    <text class='add' bindtap='addCoase'>添加孩子资料</text>
+    <text class='bound' bindtap='boundFun'>绑定孩子资料</text>
+    <text class='unbind' bindtap='unbindFun'>解绑当前孩子资料</text>
+    <text class='cancel' bindtap='cancels'>取消</text>
+  </view>
+</view>
+
+</view>

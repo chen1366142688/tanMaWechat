@@ -1,0 +1,62 @@
+// pages/My/My-Index/My-Index.js
+Page({
+  data: {
+
+  },
+  //个人简介
+  introduce: function () {
+    wx.navigateTo({
+      url: '../../../pages/My/Personal-Information/Personal-Information',
+    })
+  },
+  //单个孩子详情简介
+  details: function () {
+    wx.navigateTo({
+      url: '../../../pages/My/Child-Information/Child-Information',
+    })
+  },
+  // 联系客服
+  ContactCustomerService(e) {
+    wx.makePhoneCall({ //客服电话待定
+      phoneNumber: '13679695212',
+    })
+  },
+  //历史测试记录
+  // testrecord: function () {
+  //   wx.navigateTo({
+  //     url: '../../../pages/My/Test-Record/Test-Record',
+  //   })
+  // },
+  //历史训练记录
+  // trainingrecords: function () {
+  //   wx.navigateTo({
+  //     url: '../../../pages/My/Training-Record/Training-Record',
+  //   })
+  // },
+  onLoad: function (options) {
+    
+  },
+  onReady: function () {  },
+  onShow: function () {  
+    //判断是否登录为登录返回去登录
+    if (wx.getStorageSync('userInfo')) {
+      if (wx.getStorageSync('userInfo').oauthToken.token) {
+        //已登录
+      } else {
+        wx.navigateTo({
+          url: '../../../pages/login/Register/Register',
+        })
+      }
+    } else {
+      wx.navigateTo({
+        url: '../../../pages/login/Register/Register',
+      })
+    }
+  },
+  onHide: function () { },
+  onUnload: function () { },
+  onPullDownRefresh: function () { },
+  onReachBottom: function () { },
+  onShareAppMessage: function () { },
+  onTabItemTap(item) {},
+})

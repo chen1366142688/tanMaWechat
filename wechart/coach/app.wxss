@@ -1,0 +1,94 @@
+page{
+  background-color: #ececec;
+}
+
+.fl {
+  float: left;
+}
+
+::-webkit-scrollbar {
+  width: 0rpx;
+  height: 0rpx
+}
+
+.fr {
+  float: right;
+}
+
+.clearfloat:after {
+  display: block;
+  clear: both;
+  content: "";
+  visibility: hidden;
+  height: 0;
+}
+
+.clearfloat {
+  zoom: 1;
+}
+
+
+/* 疑问  */
+
+.Query{
+  width: 24rpx;
+  height: 24rpx;
+  line-height: 88rpx;
+  margin-left: 10rpx;
+  margin-top: -4rpx;
+  vertical-align: middle;
+}
+
+
+.textOver {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.iLblock {
+  display: inline-block;
+}
+
+/*  button  */
+.settle-accounts {
+  width: 702rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  background-image: url('http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coach/public/button.png');
+  background-size:100% 100%;
+  background-color: #007587;
+  border-radius: 40rpx;
+  position: fixed;
+  bottom: 60rpx;
+  margin-left: 23rpx;
+  color: #fff;
+  font-size: 30rpx;
+  /* border: 1rpx dotted #fff; */
+}
+
+/*  没有数据空空如也  */
+.kong{
+  width: 750rpx;
+  height: 790rpx;
+  margin: 0 auto;
+  background-color: #ececec;
+}
+
+.kong-img{
+  display: block;
+  width: 240rpx;
+  height: 240rpx;
+  margin:352rpx auto 0 auto;
+}
+
+.kong-text{
+  display: inline-block;
+  width: 750rpx;
+  height: 26rpx;
+  line-height: 26rpx;
+  font-size: 26rpx;
+  color: #999;
+  text-align: center;
+  margin-top: 34rpx;
+}

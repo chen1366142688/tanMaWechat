@@ -1,0 +1,390 @@
+page {
+  background: #ececec;
+  position: relative;
+  overflow-y: hidden;
+  width: 100%;
+  height: 100%;
+  font-family: PingFang-SC-Regular;
+}
+
+.scrollView {
+  height: 100%;
+  border-top: 1rpx solid #ececec;
+  
+}
+
+.orderItems {
+  width: 750rpx;
+  background: #fff;
+  text-align: center;
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(51, 51, 51, 1);
+  position:absolute;
+  bottom:0;
+  /* margin-top: 964rpx; */
+}
+
+.refund, .stop, .cancel {
+  display: block;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 1rpx solid #ececec;
+}
+
+.cancel {
+  border-bottom: 0;
+}
+
+.orderModal {
+  position: absolute;
+  z-index: 99;
+  width: 750rpx;
+  height: 100%;
+  background: rgba(103, 103, 103, 0.7);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.order-top {
+  width: 634rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  background: #fff;
+  margin-bottom: 20rpx;
+  padding: 0 23rpx 0 93rpx;
+}
+
+.order-sort {
+  width: 60rpx;
+  height: 60rpx;
+  margin-top: 14rpx;
+}
+
+.order-one, .order-two {
+  font-size: 34rpx;
+  font-family: PingFang-SC-Regular;
+  color: #333;
+}
+
+.order-one {
+  margin-right: 144rpx;
+}
+
+.active {
+  color: #007587;
+  border-bottom: 4rpx solid #007587;
+}
+
+.order-item {
+  width: 703rpx;
+  background: #fff;
+  padding: 12rpx 25rpx 20rpx 22rpx;
+  margin-bottom: 20rpx;
+}
+
+.order-userImg {
+  width: 44rpx;
+  height: 44rpx;
+  vertical-align: top;
+}
+
+.orderLocation {
+  width: 18rpx;
+  height: 18rpx;
+  vertical-align: middle;
+}
+
+.order-name {
+  width: 702rpx;
+  height: 55rpx;
+  line-height: 55rpx;
+}
+
+.order-zhuName {
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(0, 198, 147, 1);
+  margin-left: 14rpx;
+  width: 260rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  float: right;
+  text-align: right;
+}
+
+.zhujao {
+  padding-right: 10rpx;
+}
+
+.zhuajiaoName {
+  font-size: 24rpx;
+  color: rgba(51, 51, 51, 1);
+  vertical-align: middle;
+  padding-left: 10rpx;
+}
+
+.order-status {
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  color: #e85571;
+  float: left;
+}
+
+.order-ones {
+  line-height: 0;
+  border-bottom: 1rpx solid #e4e4e4;
+}
+
+.order-twos {
+  width: 100%;
+  line-height: 0;
+  padding: 20rpx 0 0 0;
+}
+
+.order-items {
+  width: 100%;
+  line-height: 0;
+  padding-top: 20rpx;
+  position: relative;
+}
+
+.orderStatus {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.order-qiu {
+  width: 150rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  border: 1rpx solid #171718;
+  text-align: center;
+  font-size: 22rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(23, 23, 24, 1);
+  border-radius: 5rpx;
+  vertical-align: middle;
+}
+
+.order-keName {
+  display: inline-block;
+  width: 530rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  height: 30rpx;
+  line-height: 30rpx;
+  font-size: 30rpx;
+  color: rgba(51, 51, 51, 1);
+  margin-left: 10rpx;
+  vertical-align: middle;
+}
+
+.order-dates {
+  width: 18rpx;
+  height: 18rpx;
+  margin-right: 10rpx;
+  vertical-align: middle;
+}
+
+.order-date {
+  font-size: 20rpx;
+  color: rgba(51, 51, 51, 1);
+  vertical-align: middle;
+}
+
+.order-time{
+  /* max-width: 702rpx; */
+  width:100%;
+  height: 61rpx;
+  line-height: 61rpx;
+  vertical-align: middle;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border-bottom: 1rpx solid #e4e4e4;
+}
+
+.order-location {
+  width: 12rpx;
+  height: 16rpx;
+  vertical-align: middle;
+  margin: 0 10rpx 0 30rpx;
+}
+
+.order-threes {
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx;
+  border-bottom: 1rpx solid #e4e4e4;
+}
+
+.order-keshi {
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(51, 51, 51, 1);
+  vertical-align: middle;
+}
+
+.order-red {
+  color: #e85571;
+  font-weight: bold;
+}
+
+.order-gay {
+  color: #00b6d6;
+  font-weight: bold;
+}
+
+.order-tuikuan {
+  width: 157rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  border: 1rpx solid rgba(0, 117, 135, 1);
+  font-size: 24rpx;
+  border-radius: 25rpx;
+  color: rgba(0, 117, 135, 1);
+  vertical-align: middle;
+}
+
+.order-phoneing {
+  width: 50rpx;
+  height: 50rpx;
+  vertical-align: middle;
+}
+
+.order-weiLiao {
+  width: 50rpx;
+  height: 50rpx;
+  vertical-align: middle;
+  margin-left: 37rpx;
+}
+
+.order-active {
+  background: #007587;
+  color: #fff;
+}
+
+.footer-text {
+  display: block;
+  width: 100%;
+  height: 23rpx;
+  line-height: 23rpx;
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(153, 153, 153, 1);
+  text-align: center;
+  margin: 25rpx auto 0 auto;
+  padding-bottom: 30rpx;
+}
+
+.orderTeacher {
+  width: 60rpx;
+  height: 60rpx;
+  vertical-align: middle;
+  margin-right: 15rpx;
+  border-radius: 50rpx;
+}
+
+.orderUserName {
+  display: inline-block;
+  max-width: 90rpx;
+  font-size: 24rpx;
+  font-weight: bold;
+  vertical-align: middle;
+}
+
+.userIsMan {
+  width: 20rpx;
+  height: 20rpx;
+  vertical-align: middle;
+  margin: 0 10rpx;
+}
+
+.IsStudent {
+  height: 28rpx;
+  line-height: 28rpx;
+  border: 1rpx solid rgba(0, 182, 214, 1);
+  border-radius: 5rpx;
+  margin-left: 10rpx;
+  font-size: 20rpx;
+  padding: 0 5rpx;
+  color: rgba(0, 182, 214, 1);
+  vertical-align: middle;
+}
+
+.studentLieBie {
+  width: 20rpx;
+  height: 20rpx;
+  vertical-align: middle;
+  margin: 0 11rpx 0 19rpx;
+}
+
+.coachLevel {
+  display: inline-block;
+  max-width: 80rpx;
+  height: 24rpx;
+  line-height: 24rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 24rpx;
+  vertical-align: middle;
+}
+
+.order-four {
+  width: 100%;
+  height: 62rpx;
+  border-bottom: 1rpx solid #ececec;
+}
+
+.order-fourLf {
+  width: 702rpx;
+  height: 62rpx;
+  line-height: 62rpx;
+  vertical-align: middle;
+}
+
+.order-fourRg {
+  width: 60rpx;
+  height: 96rpx;
+  line-height: 96rpx;
+  text-align: right;
+}
+
+.etidor {
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: middle;
+}
+
+.etidorSure {
+  width: 100%;
+  height: 100%;
+  vertical-align: bottom;
+}
+
+.Remarks {
+  width: 132rpx;
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(51, 51, 51, 1);
+  vertical-align: middle;
+}
+
+.reMarksInfo {
+  max-width: 500rpx;
+  font-size: 24rpx;
+  vertical-align: middle;
+  /* overflow: scroll; */
+}
+
+.textarea::after {
+  position: none;
+}

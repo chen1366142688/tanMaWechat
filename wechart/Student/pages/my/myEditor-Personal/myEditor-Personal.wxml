@@ -1,0 +1,187 @@
+<!--05我的，修改个人信息-->
+<view class='box'>
+  <view class='personalImgBox center'> 
+    <text>头像</text>
+    <view class='imgRig' bindtap='userImgHead'>
+      <image class='userImg' src='{{studentAdultInfo.avatarUrl?studentAdultInfo.avatarUrl+"?x-oss-process=image/resize,m_mfit,h_88,w_88":"" }}' mode="aspectFill"></image>
+      <image class='right' src='{{url}}next.png'></image>
+    </view>
+  </view>
+  <view class='personalImgBox personalImgCat  center' wx:for="{{info}}" wx:key="{{index}}" data-name="{{studentAdultInfo.studentNickName}}" bindtap='modifyName'>
+    <text>{{item.name? item.name:''}}</text>
+    <view class='imgRige'>
+      <text class='perName-0'>{{studentAdultInfo.studentNickName && studentAdultInfo.studentNickName!='null'?studentAdultInfo.studentNickName:'' }}</text>
+      <image class='righti' src='{{url}}next.png'></image>
+    </view>
+  </view>
+   <!-- <view class='personalImgBox personalImgCat center'> 
+     <text>学员类型</text> 
+     <view class='imgRig'> 
+       <text class='perName'>{{studentAdultInfo.studentType==1?'成人':'青少年' }}</text> 
+         <image class='right' ></image>   
+     </view> 
+      <radio-group class="radio-group iLblock"  bindchange="radioChange"> 
+       <label class="radio" wx:for="{{items}}" wx:key="{{index}}"> 
+         <radio value="{{item.name}}" disabled='true' checked="{{item.checked}}"/>{{item.value? item.value:'' }} 
+       </label> 
+     </radio-group>    
+   </view>  -->
+
+  <view class='personalImgBox personalImgCat  center' data-self="{{studentAdultInfo.described}}" bindtap='introSelf'>
+    <text>自我介绍</text>
+    <view class='imgRige'>
+      <text class='perName-0 textOver'>{{studentAdultInfo.described && studentAdultInfo.described !='null'? studentAdultInfo.described:'' }}</text>
+      <image class='righti' src='{{url}}next.png'></image>
+    </view>
+  </view>
+
+  <view class='personalImgBox personalImgCat1 center'  data-name="{{studentAdultInfo.realName  }}" bindtap='modifyUserName'>
+    <text>真实姓名</text>
+    <view class='imgRige'>
+      <text class='perName-0'>{{studentAdultInfo.realName && studentAdultInfo.realName !='null'? studentAdultInfo.realName:'' }}</text>
+      <image class='righti' src='{{url}}next.png'></image>
+    </view>
+  </view>
+
+  <view class='personalImgBox personalImgCat'>
+    <text class='iLblock cost'>个人性别</text>
+    <radio-group class="radio-group iLblock" bindchange="radioChange2">
+      <label class="radio radiocheck" wx:for="{{mans}}" wx:key="{{index}}">
+        <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value? item.value:'' }}
+      </label>
+    </radio-group>  
+  </view>
+
+  <view class='personalImgBox personalImgCat center xuans'>
+      <picker mode="date" value="{{studentAdultInfo.birthDayTime }}" start="1980-01-01" end="2020-01-01" bindchange="bindDateChange">
+        <view class="picker">出生年月 <text class='bealt'>{{studentAdultInfo.birthDayTime && studentAdultInfo.birthDayTime !='null' && studentAdultInfo.birthDayTime !='undefined'? studentAdultInfo.birthDayTime:'2018-09-03'}}</text> </view>
+      </picker>
+  </view>
+
+  <view class='personalImgBox personalImgCat  center' data-cityId="{{studentAdultInfo.city}}" bindtap='selectSchool' wx:if="{{studentAdultInfo.studentType==2}}">
+    <text>所在学校</text>
+    <view class='imgRige'>
+      <text class='perName-0'>{{studentAdultInfo.studentSchoolName && studentAdultInfo.studentSchoolName!='null'? studentAdultInfo.studentSchoolName:'' }}</text>
+      <image class='righti' src='{{url}}next.png'></image>
+    </view>
+  </view>
+
+  <view class='personalImgBox personalImgCat  center' data-diss="true" bindtap='modifyAddress'>
+    <text>家庭住址</text>
+    <view class='imgRige'>
+      <text class='perName-0 textOver'>{{studentAdultInfo.addrDetail && studentAdultInfo.addrDetail !='null'? studentAdultInfo.addrDetail:'' }}</text>
+      <image class='righti' src='{{url}}next.png'></image>
+    </view>
+  </view>
+</view>
+<text class='bindNum' wx:if="{{studentAdultInfo.studentType==2}}">监护人信息</text>
+<view class='boxTwo' wx:if="{{studentAdultInfo.studentType==2}}">
+  <view class='personalImgBox personalImgCat clearfloat' wx:for="{{nameInfo}}" wx:key="{{index}}" wx:if="{{item.name=='监护人姓名/身份证号'}}" bindtap='modifyIdnumber'>
+    <text class='perNames fl'>{{item.name? item.name:'' }}</text>
+    <view wx:if="{{item.name !=='与学员关系'}}" class='imgRigGai fr {{item.name=="住址"? "location":""}}'>
+      <text class='perNameGai textOver iLblock {{item.name=="住址"? "locations":""}}'>{{item.value && item.value!='null'? item.value:'' }}</text>
+      <image class='rightGai iLblock' src='{{url}}next.png'></image>
+    </view>
+    <view wx:else class='fr pass'>
+      <input class='iLblock guanXi' maxlength='6'  value='{{studentAdultInfo.userRelation }}' bindinput='guanXi'></input>
+       <image class='rightGai iLblock' src='{{url}}next.png'></image> 
+    </view>
+  </view>
+</view>
+<view class='boxTwo'  wx:if="{{studentAdultInfo.studentType==2}}">
+  <view class='personalImgBox personalImgCat clearfloat' wx:for="{{nameInfo}}" wx:key="{{index}}" wx:if="{{item.name=='与学员关系'}}">
+    <text class='perNames fl'>{{item.name? item.name:'' }}</text>
+    <view wx:if="{{item.name !=='与学员关系'}}" class='imgRigGai fr {{item.name=="住址"? "location":""}}'>
+      <text class='perNameGai textOver iLblock {{item.name=="住址"? "locations":""}}'>{{item.value && item.value!='null'? item.value:''}}</text>
+       <image class='rightGai iLblock' src='{{url}}next.png'></image> 
+    </view>
+    <view wx:else class='fr pass'>
+      <input class='iLblock guanXi' placeholder='请输入与监护人的关系' value='{{studentAdultInfo.userRelation }}' bindinput='guanXi' maxlength='6'></input>
+      <!-- <image class='rightGai iLblock' src='{{url}}next.png'></image> -->
+    </view>
+  </view>
+</view>
+<view class='boxTwo'  wx:if="{{studentAdultInfo.studentType==2}}">
+  <view class='personalImgBox personalImgCat clearfloat' wx:for="{{nameInfo}}" wx:key="{{index}}" wx:if="{{item.name=='监护人住址'}}" bindtap='modifyAddress'  data-diss="false">
+    <text class='perNames fl'>{{item.name? item.name:'' }}</text>
+    <view wx:if="{{item.name !=='与学员关系'}}" class='imgRigGai fr {{item.name=="住址"? "location":""}}'>
+      <text class='perNameGai textOver iLblock {{item.name=="住址"? "locations":""}}'>{{item.value && item.value!='null'? item.value:''}}</text>
+      <image class='rightGai iLblock' src='{{url}}next.png'></image>
+    </view>
+    <view wx:else class='fr pass'>
+      <input class='iLblock guanXi' value='{{studentAdultInfo.userRelation }}' bindinput='guanXi'></input>
+      <image class='rightGai iLblock' src='{{url}}next.png'></image>
+    </view>
+  </view>
+</view>
+<view class='boxTwo'  wx:if="{{studentAdultInfo.studentType==2}}">
+  <view class='personalImgBox personalImgCat clearfloat' wx:for="{{nameInfo}}" wx:key="{{index}}" wx:if="{{item.name=='监护人手机'}}" bindtap='modifyPhone'>
+    <text class='perNames fl'>{{item.name? item.name:'' }}</text>
+    <view wx:if="{{item.name !=='与学员关系'}}" class='imgRigGai fr {{item.name=="住址"? "location":""}}'>
+      <text class='perNameGai textOver iLblock {{item.name=="住址"? "locations":""}}'>{{item.value && item.value!='null'? item.value:''}}</text>
+      <image class='rightGai iLblock' src='{{url}}next.png'></image>
+    </view>
+    <view wx:else class='fr pass'>
+      <input class='iLblock guanXi' value='{{studentAdultInfo.userRelation }}' bindinput='guanXi'></input>
+      <image class='rightGai iLblock' src='{{url}}next.png'></image>
+    </view>
+  </view>
+</view>
+<!-- <view class='boxTwo'  wx:if="{{studentAdultInfo.studentType==2}}">
+  <view class='personalImgBox personalImgCat clearfloat' wx:for="{{nameInfo}}"  wx:key="{{index}}" wx:if="{{item.name=='监护人微信'}}" bindtap='modifywechat'>
+    <text class='perNames fl'>{{item.name? item.name:'' }}</text>
+    <view wx:if="{{item.name !=='与学员关系'}}" class='imgRigGai fr {{item.name=="住址"? "location":""}}'>
+      <text class='perNameGai textOver iLblock {{item.name=="住址"? "locations":""}}'>{{item.value && item.value!='null(null)'? item.value:''}}</text>
+      <image class='rightGai iLblock' src='{{url}}next.png'></image>
+    </view>
+    <view wx:else class='fr pass'>
+      <input class='iLblock guanXi' value="{{studentAdultInfo.userRelation && studentAdultInfo.userRelation!='null'?studentAdultInfo.userRelation:'' }}" bindinput='guanXi'></input>
+      <image class='rightGai iLblock' src='{{url}}next.png'></image>
+    </view>
+  </view>
+</view> -->
+
+
+
+
+<text class='bindNum'>账号绑定</text>
+<view class='personalImgBox personalImgCat  center' data-name="student" bindtap='modifyPhone'>
+    <view class='imgLeft'>
+      <image class='phoneGreen' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/studentNewImg/phone.png'></image>
+      <text class='model'>手机（登录账号）</text>
+    </view>
+    <view class='imgRig'>
+      <text class='perName'>{{studentAdultInfo.phone && studentAdultInfo.phone !='null'? studentAdultInfo.phone:'' }}</text>
+      <image class='right' src='{{url}}next.png'></image>
+    </view>
+</view>
+<!-- <view class='personalImgBox personalImgCat center' data-name="student" bindtap='modifywechat'>
+    <view class='imgLeft'>
+      <image class='wechartGreen' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/studentNewImg/wechat.png'></image>
+      <text class='model'>微信</text>
+    </view>
+    <view class='imgRig'>
+      <text class='perName'>{{studentAdultInfo.wechat && studentAdultInfo.wechat!='null'? studentAdultInfo.wechat:'' }}</text>
+      <image class='right' src='{{url}}next.png'></image>
+    </view>
+</view> -->
+<!-- <text class='security'>安全设置</text>
+<view class='personalImgBox personalImgCat center' wx:for="{{setting}}" wx:if="{{item.name=='登录密码'}}" bindtap='modifyLoginPwd' data-pwd="loginPwd">
+    <text>{{item.name}}</text>
+    <view class='imgRig'>
+      <text class='perName'>{{item.value}}</text>
+      <image class='right' src='{{url}}next.png'></image>
+    </view>
+</view>
+<view class='personalImgBox personalImgCat center' wx:for="{{setting}}" wx:if="{{item.name=='交易密码'}}" bindtap='modifyTransactionPwd'  data-pwd="payPwd">
+    <text>{{item.name}}</text>
+    <view class='imgRig'>
+      <text class='perName'>{{item.value}}</text>
+      <image class='right' src='{{url}}next.png'></image>
+    </view>
+</view> -->
+<view class='btn'>
+<view class='footerBtn'>
+  <view class='footerBtnNei' bindtap='allIn'>保   存</view>
+</view>
+</view>

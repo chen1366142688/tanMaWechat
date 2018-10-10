@@ -1,0 +1,45 @@
+<!--pages/Exercise/Exercise-Program/Exercise-Program.wxml-->
+<view class='Exercise-Program'>
+  <view class='Exercise-Program-headline'>
+    <scroll-view class='Exercise-Program-choose'>
+      <view class='Exercise-Program-choose-one'>孩子1名字</view>
+      <view class='Exercise-Program-choose-two'>孩子2名字</view>
+      <view class='Exercise-Program-choose-two'>孩子3名字</view>
+    </scroll-view>
+  </view>
+  <view class='Exercise-Program-List'>
+    <view class='Exercise-Program-List-one'>
+      <view class='List-one-background'>
+        <image class='exercise-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/Exercise/exercise-img2.png'></image>
+        <image class='Default' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/Exercise/Default.png'></image>
+        <image class='Completed-today' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/Exercise/Completed-today.png'></image>
+      </view>
+      <view class='List-one-section'>
+        <view class='List-one-section-one'><text class='section-one-green'>力量类</text> | 计划名称1</view>
+        <view class='section-one-time-population'>
+          <view class='section-one-time'>T1基础 <text class='section-one-time-minute'>8分钟</text> </view>
+          <view class='section-one-population'><text class='section-one-population-minute'>3,543,564</text>人已参加</view>
+        </view>
+      </view>
+    </view>
+
+    <view class='Exercise-Program-List-one'>
+      <view class='List-one-background'>
+        <image class='exercise-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/Exercise/exercise-img1.png'></image>
+        <!-- <image class='Default' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/Exercise/Default.png'></image> -->
+        <!-- <image class='Completed-today' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/Exercise/Completed-today.png'></image> -->
+      </view>
+      <view class='List-one-section'>
+        <view class='List-one-section-one'><text class='section-one-green'>力量类</text> | 计划名称1</view>
+        <view class='section-one-time-population'>
+          <view class='section-one-time'>T1基础 <text class='section-one-time-minute'>8分钟</text> </view>
+          <view class='section-one-population'><text class='section-one-population-minute'>3,543,564</text>人已参加</view>
+        </view>
+      </view>
+    </view>
+    <view class='add-coach'>
+       <view class='add-coach-inset' bindtap='addCoach'> <text class='add-coach-inset-add'>+</text> 添加新计划</view>
+    </view>
+  </view>
+  
+</view>

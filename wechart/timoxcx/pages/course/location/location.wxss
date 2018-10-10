@@ -1,0 +1,74 @@
+page {
+  background: #ececec;
+}
+
+.c-fua {
+  width: 702rpx;
+  height: 88rpx;
+  bottom: 60rpx;
+  left: 24rpx;
+  z-index: 20;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 88rpx;
+  font-family: PingFang-SC-Bold;
+  color: rgba(255, 255, 255, 1);
+  background: url('http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/images/icon/submit_fua.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: inherit;
+  margin-top: 852rpx;
+}
+
+.ca-cancela {
+  display: inline-block;
+  float: left;
+}
+
+.ca-cancela-txt {
+  display: inline-block;
+  float: left;
+}
+
+.ca-cancelb-sc {
+  display: inline-block;
+}
+
+.ca-cancelb-sd {
+  display:block;
+  align-items: center;
+  background-color:#FFF;
+}
+
+/*具体地址 */
+
+.ca-cancelb-se {
+  margin: 0rpx 24rpx;
+}
+
+.ca-cancelb-se input {
+  width: 100%;
+  height: 88rpx;
+  font-size: 30rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(153, 153, 153, 1);
+  border: 0;
+  outline: 0;
+  -webkit-appearance: none;
+  background-color: transparent;
+}
+.ca-cancelb-sf{clear:both;}
+.ca-cancelb-sg{margin-top:18rpx;}
+.ss-postion-a {
+  width: 164rpx;
+  height: 40rpx;
+  font-size: 28rpx;
+  text-align: center;
+  line-height: 40rpx;
+  background: url('http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/images/icon/automaticorientation.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top:24rpx;
+  float:right;
+  margin-right: 24rpx;
+}

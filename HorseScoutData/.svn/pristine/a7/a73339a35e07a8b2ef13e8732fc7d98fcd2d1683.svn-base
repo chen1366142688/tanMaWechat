@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>帮助列表</title>
+		<link rel="stylesheet" href="../css/helpList.css">
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum=1.0,user-scalable=no">
+		<meta name="format-detection" content="telephone=no, email=no">
+		<script src="../build/flexible_css.debug.js"></script>
+		<script src="../build/flexible.debug.js"></script>
+		<link href="../build/base.debug.css" rel="stylesheet"/>
+		<link href="../build/helpList.debug.css" rel="stylesheet"/>
+	</head>
+	<script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if(clientWidth>550){clientWidth=550};
+                    docEl.style.fontSize = 100*(clientWidth / 750) + 'px';
+                };
+            recalc();
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            // doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+	</script>
+	<body>
+	<div id="helplis">
+		<!--<div class="HelpList-one">-->
+			<!--<div class="HelpList-one-section">-->
+				<!--<div class="HelpList-header-headline" id="HelpListheadline">帮助大类1</div>-->
+				<!--<div class="HelpList-one-li" id="HelpListli">帮助子标题1</div>-->
+			<!--</div>-->
+		<!--</div>-->
+	</div>
+		<script src="../js/zepto.min.js" type="text/javascript"></script>
+		<script src="../js/helpList.js" type="text/javascript"></script>
+		<!--公共 接口请求地址/获取URL的参数值-->
+		<script src="../js/url-helper.js" type="text/javascript"></script>
+	</body>
+</html>

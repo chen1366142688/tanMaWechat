@@ -1,0 +1,679 @@
+/* pages/keChen/keChen-index/keChen-index.wxss */
+
+page {
+  background: #ececec;
+}
+
+.c-header {
+  width: 700rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  background: #fff;
+  padding: 0 27rpx 0 23rpx;
+  position: relative;
+}
+
+.xiaLa2 {
+  width: 13rpx;
+  height: 7rpx;
+  vertical-align: middle;
+}
+
+.cou-positiona {
+  width: 23rpx;
+  height: 33rpx;
+  vertical-align: middle;
+}
+
+.fujinTxt {
+  font-size: 28rpx;
+  font-family: PingFang-SC-Regular;
+  color: #333;
+  padding-right: 9rpx;
+}
+
+.guan-name {
+  width: 533rpx;
+  height: 58rpx;
+  line-height: 58rpx;
+  border: 1rpx solid rgba(0, 198, 147, 1);
+  border-radius: 30rpx;
+  padding-left: 26rpx;
+  margin-top: 14rpx;
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(153, 153, 153, 1);
+}
+
+.chanName {
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(153, 153, 153, 1);
+}
+
+.sousuo {
+  width: 41rpx;
+  height: 43rpx;
+  position: absolute;
+  top: 32rpx;
+  right: 50rpx;
+}
+
+.kecc-noticepointa {
+  width: 41rpx;
+  height: 43rpx;
+  vertical-align: text-bottom;
+  padding-left: 5rpx;
+}
+
+image.kecc-noticepointba {
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  top: 18rpx;
+  right: 24rpx;
+}
+
+.fenLei {
+  width: 592rpx;
+  height: 195rpx;
+  background: #fff;
+  padding: 24rpx 73rpx 21rpx 84rpx;
+  margin-top: 1rpx;
+  display: flex;
+}
+
+.item {
+  display: inline-block;
+}
+
+.itemImg {
+  display: block;
+  width: 50rpx;
+  height: 50rpx;
+  margin: 0 auto;
+}
+
+.c-zuqiu {
+  display: block;
+  font-size: 20rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(23, 23, 24, 1);
+}
+
+.fenleiOne {
+  display: inline-block;
+  width: 60rpx;
+  text-align: center;
+  margin-right: 121rpx;
+  flex: 1;
+}
+
+.fenCan {
+  margin-right: 0;
+}
+
+.fenleiOne-info {
+  width: 60rpx;
+  text-align: center;
+  margin-bottom: 40rpx;
+}
+
+.fenleiOnes-info {
+  width: 60rpx;
+  text-align: center;
+}
+
+.vanThree {
+  width: 702rpx;
+  height: 482rpx;
+  margin: 20rpx auto;
+  background: #fff;
+}
+
+.van-banner {
+  width: 702rpx;
+  height: 255rpx;
+  position: relative;
+  background: url('http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/images/icon/cl-detailr-a.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.van-banner-item {
+  width: 685rpx;
+  height: 84rpx;
+  line-height: 84rpx;
+  padding: 0 2rpx 0 16rpx;
+  position: absolute;
+  bottom: 0;
+  background: rgba(23, 23, 24, 0.4);
+  display: flex;
+  flex-direction: row;
+}
+
+/*训练日start*/
+
+.van-bannerceca {
+  width: 702rpx;
+  height: 254rpx;
+  position: relative;
+  background: url('http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/images/icon/cl-detailr-a.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*训练日end */
+
+.van-text {
+  flex: 1;
+}
+
+.van-hot {
+  flex: end;
+  color: #fff;
+}
+
+.van-hot-keca {
+  padding-right: 14rpx;
+}
+
+.van-kecab-a {
+  height: 20px;
+  line-height: 10px;
+  vertical-align: text-top;
+  padding-left: 4px;
+  margin-top: 12rpx;
+}
+
+.van-kecab-colb {
+  line-height: 1px;
+  height: 14px;
+}
+
+.van-city {
+  padding: 0 9rpx;
+  font-size: 24rpx;
+  font-family: PingFang-SC-Bold;
+  color: #fff;
+  border-radius: 5rpx;
+  vertical-align: middle;
+}
+
+.van-name {
+  max-width: 358rpx;
+  overflow: hidden;
+  font-size: 24rpx;
+  font-family: PingFang-SC-Bold;
+  color: rgba(255, 255, 255, 1);
+  margin-left: 34rpx;
+}
+
+.van-hot-num {
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  color: #fff;
+}
+
+.hot-img {
+  width: 24rpx;
+  height: 24rpx;
+  vertical-align: middle;
+}
+
+.hot-img-clasa {
+  width: 78rpx;
+  height: 76rpx;
+}
+
+.hot-img-clasaaf {
+  float: right;
+}
+
+.hot-img-clasb {
+  width: 30rpx;
+  height: 28rpx;
+  vertical-align: text-top;
+}
+
+.img-clasboy {
+  width: 18rpx;
+  height: 19rpx;
+  vertical-align: middle;
+}
+
+.van-sc {
+  width: 100%;
+  height: 126rpx;
+  background: #fff;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.mg-clasboy {
+  width: 70rpx;
+  height: 70rpx;
+  vertical-align: middle;
+}
+
+.van-scroll {
+  height: 126rpx;
+  width: 662rpx;
+  padding: 0 20rpx;
+  /*overflow: scroll;*/
+}
+
+.van-ke {
+  display: inline-block;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 24rpx;
+  padding: 0 15rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(51, 51, 51, 1);
+  border: 1rpx solid #333;
+  border-radius: 5rpx;
+  margin-right: 38rpx;
+}
+
+.van-ke-k-a {
+  display: inline-block;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 24rpx;
+  padding: 0 15rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(51, 51, 51, 1);
+  border-radius: 5rpx;
+  margin-right: 38rpx;
+}
+
+.van-location {
+  height: 80rpx;
+  padding: 0 24rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* .van-left{
+  flex: start;
+}
+.van-right{
+  flex: end;
+} */
+
+.van-left-img {
+  width: 20rpx;
+  height: 25rpx;
+  padding-right: 10rpx;
+}
+
+.van-timesa-img {
+  width: 16rpx;
+  height: 14rpx;
+  vertical-align: middle;
+  padding-right: 8rpx;
+}
+
+.van-timesb-img {
+  width: 24rpx;
+  height: 17rpx;
+  padding-right: 6rpx;
+}
+
+.van-left-txt {
+  display: inline-block;
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(51, 51, 51, 1);
+  vertical-align: middle;
+}
+
+.van-terms-class-c {
+  padding-right: 20rpx;
+}
+
+.van-terms-class-d {
+  padding-right: 10rpx;
+}
+
+.van-over {
+  display: block;
+  width: 200rpx;
+  height: 23rpx;
+  padding-bottom: 20rpx;
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(153, 153, 153, 1);
+  text-align: center;
+  margin: 0 auto;
+}
+
+.scroll-active {
+  padding-left: 27rpx;
+  height: 150rpx;
+  background: #fff;
+  margin-top: 2rpx;
+  overflow: scroll;
+}
+
+.fenleiOne-scroll {
+  display: inline-block;
+  width: 60rpx;
+  text-align: center;
+  margin-right: 132rpx;
+}
+
+.last-fenleiOne-scroll {
+  margin-right: 27rpx;
+}
+
+.itemImg-scroll {
+  display: block;
+  width: 50rpx;
+  height: 50rpx;
+  margin: 43rpx auto 0 auto;
+}
+
+.c-zuqiu-scroll {
+  display: block;
+  font-size: 20rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(23, 23, 24, 1);
+}
+
+.can-fujin {
+  width: 670rpx;
+  height: 87rpx;
+  padding: 0 57rpx 0 23rpx;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1rpx solid #ececec;
+}
+
+.can-txt {
+  height: 23rpx;
+  font-size: 24rpx;
+  font-family: PingFang-SC-Bold;
+  color: rgba(0, 198, 147, 1);
+  font-weight: bold;
+}
+
+.sure {
+  width: 25rpx;
+  height: 19rpx;
+  vertical-align: middle;
+}
+
+.can-sousuo-con {
+  width: 750rpx;
+  height: 87rpx;
+  line-height: 87rpx;
+  background: #fff;
+  padding-left: 23rpx;
+  border-top: 1rpx solid #ececec;
+}
+
+.can-sousuo {
+  width: 727rpx;
+  height: 87rpx;
+}
+
+.cansoso {
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(51, 51, 51, 1);
+}
+
+.modal {
+  z-index: 1000;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(23, 23, 24, 0.5);
+}
+
+.van-topclassa {
+  display: flex;
+  margin-top: 20rpx;
+}
+
+.van-topclassb {
+  font-size: 30rpx;
+  width: 87rpx;
+  height: 96rpx;
+  border: 1px solid #00c693;
+  border-radius: 5px;
+}
+
+.van-topclassb .van-topclassc {
+  color: #fff;
+  background: #00c693;
+  flex: 1;
+  font-size: 12px;
+  text-align: center;
+  height: 50%;
+  line-height: 48rpx;
+}
+
+.van-topclassb .van-topclassd {
+  color: #00c693;
+  flex: 1;
+  font-size: 12px;
+  text-align: center;
+  height: 50%;
+  line-height: 48rpx;
+}
+
+.van-topclassba {
+  font-size: 30rpx;
+  height: 96rpx;
+  font-family: PingFang-SC-Bold;
+  width: 530rpx;
+  overflow: hidden;
+  margin-left: 20rpx;
+}
+
+.van-topclassba .van-class-titlea {
+  font-weight: Bold;
+  font-size: 30rpx;
+  color: #333;
+}
+
+.single-line {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.van-terms-classa {
+  font-size: 12px;
+  text-align: left;
+  color: #666;
+}
+
+.van-terms-classf {
+  margin-top: 66rpx;
+}
+
+.van-rmba {
+  font-family: SanFranciscoDisplay-Bold;
+  font-weight: Bold;
+  color: #ff5571;
+  margin-top: 14rpx;
+}
+
+.van-rmba .van-rmbb-smal {
+  font-size: 18rpx;
+}
+
+.van-rmba .van-rmbc {
+  font-size: 34rpx;
+  padding-left: 9rpx;
+}
+
+.van-rmbe {
+  font-size: 18rpx;
+  color: rgba(102, 102, 102, 1);
+}
+
+.van-rmbf {
+  width: 702rpx;
+  height: 440rpx;
+  background: rgba(40, 38, 39, 1);
+  opacity: 0.7;
+  border-radius: 5px;
+}
+
+.van-sticka {
+  width: 70rpx;
+  height: 75rpx;
+  position: absolute;
+}
+
+.l-stop-sti-a {
+  display: inline-block;
+  height: 82rpx;
+  margin-left: 36rpx;
+  color: #333;
+}
+
+.l-stop-sti-leftb {
+  display: inline-block;
+  margin-left: 34rpx;
+  height: 82rpx;
+  color: #333;
+}
+
+.l-stop-traina {
+  font-size: 34rpx;
+  font-family: PingFang-SC-Regular;
+}
+
+.c-active {
+  color: #00c693;
+  border-bottom: 4rpx solid #00c693;
+}
+
+/*课程类型列表开始*/
+
+.l-stop-trainb-nava {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: box;
+  background: #fff;
+  border-bottom: 1px solid #ececec;
+  text-align: center;
+  height: 95rpx;
+  line-height: 95rpx;
+}
+
+.cla-active {
+  color: #00c693;
+}
+
+.l-trainb-nava {
+  position: relative;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  width: 100%;
+  text-align: center;
+  color: #333;
+  font-size: 28rpx;
+}
+
+.l-trainb-nava .k-train-head-namea {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 85%;
+  vertical-align: middle;
+  text-overflow: ellipsis;
+}
+
+/*课程类型向上图标*/
+
+/*.l-trainb-nava .k-train-head-namea:after {
+  background: url('http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/xiala2.png') scroll 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 13rpx 7rpx;
+  width: 13rpx;
+  height: 7rpx;
+  display: inline-block;
+  margin-left: 4rpx;
+}*/
+
+.l-trainb-nava .k-train-head-nameb {
+  background: url('http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/xiala2.png') scroll 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 13rpx 7rpx;
+  width: 13rpx;
+  height: 7rpx;
+  display: inline-block;
+  margin-left: 4rpx;
+}
+
+/*课程类型向上，向上的方向，下拉，图标*/
+
+.l-trainb-nava .k-name-downwardc {
+  background: url('http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/downward.png') scroll 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 13rpx 7rpx;
+  width: 13rpx;
+  height: 7rpx;
+  display: inline-block;
+  margin-left: 4rpx;
+}
+
+/*下拉*/
+
+.k-active-dowd {
+  font-weight: bold;
+  color: #333;
+  font-size: 28rpx;
+}
+
+.k-act-dowa {
+  background-color: #fff;
+  font-size: 17px;
+  overflow: hidden;
+  position: relative;
+  margin-top: 2rpx;
+}
+
+.k-act-dowb {
+  padding: 10px 15px;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.k-act-dowc {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  height: 24px;
+}
+
+.k-act-dowd {
+  text-align: right;
+  color: #888;
+}
+
+image.k-act-dowe {
+  width: 25rpx;
+  height: 19rpx;
+  vertical-align: middle;
+  margin-right: 30rpx;
+}
+
+/*课程类型列表end*/

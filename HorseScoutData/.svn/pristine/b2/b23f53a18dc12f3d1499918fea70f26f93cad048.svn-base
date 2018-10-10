@@ -1,0 +1,188 @@
+var second = 0;//初始化
+var millisecond = 0;//毫秒
+var int;
+
+var secondMax = 999;//初始化
+var millisecondMax = 1000;//毫秒
+var interval;
+
+Page({
+  data: {
+    seconds: 0,
+    secondMax: 3599,
+    timeMax:'999:99',
+    maxTime:'999:99',
+    actionMax:true,
+    stopMaxTime:false,
+    resetMax:false,
+    time: '000:00',
+    cost: 0,
+    action:true,
+    stopTime:false,
+    reset:false,
+    childName: [ 
+      { "name": '选项1', "active": true },
+      { "name": '选项2', "active": false },
+      { "name": "选项3", "active": false },
+      { "name": '选项4', "active": false }
+    ],
+    active1:true,
+    active2: false,
+    active3: false,
+    active4: false,
+    active: 'Exercise-Program-choose-one'
+  },
+  cilckChild(e) {
+    const that = this;
+    let index = e.currentTarget.dataset.index;
+    let childName = that.data.childName;
+    if(index == 0){
+      that.setData({
+        active1: true,
+        active2: false,
+        active3: false,
+        active4: false,
+      })
+    }else if(index == 1){
+      that.setData({
+        active1: false,
+        active2: true,
+        active3: false,
+        active4: false,
+      })
+    }else if(index == 2){
+      that.setData({
+        active1: false,
+        active2: false,
+        active3: true,
+        active4: false,
+      })
+    }else{
+      that.setData({
+        active1: false,
+        active2: false,
+        active3: false,
+        active4: true,
+      })
+    }
+    for (let i = 0; i < childName.length; i++) {
+      if (index == i) {
+        childName[i].active = true;
+      } else {
+        childName[i].active = false;
+      }
+    }
+    that.setData({ childName: childName })
+  },
+  onLoad: function (options) {},
+  timing(e){
+    this.setData({ action: !this.data.action})
+    start(this)
+  },
+  stopTime(e) {
+    console.log("共计秒：" + second + '秒:' + millisecond+'毫秒')
+    stop(this)
+  },
+  reset(e) {
+    Reset(this)
+  },
+  timingMax(e){
+    this.setData({ actionMax: !this.data.actionMax, stopMaxTime: false })
+    startMax(this)
+  },
+  stopMaxTime(e){
+    console.log("现在是记录的时间时长：",this.data.secondMax)
+    stopMax(this)
+    this.setData({ stopMaxTime: true, resetMax: true })
+  },
+  resetMax(e) {
+    ResetMax(this)
+  },
+  
+  onReady: function () { },
+  onShow: function () { },
+  onHide: function () { },
+  onUnload: function () { },
+  onPullDownRefresh: function () { },
+  onReachBottom: function () { },
+  onShareAppMessage: function (res) { },
+})
+//正重置函数
+function Reset(that) {
+  clearInterval(int);
+  millisecond = second = 0;
+  that.setData({time:'000:00',action:!that.data.action})
+}
+//正开始函数
+function start(that) {
+  int = setInterval(function () { timer(that)}, 10);//每隔50毫秒执行一次timer函数
+}
+//正计时函数
+function timer(that) {
+  millisecond = millisecond + 10;
+  if (millisecond >= 1000) {
+    millisecond = 0;
+    second = second + 1;
+  }
+  if (second >= 999) {
+    clearInterval(int);
+  }
+  that.setData({ time: formatTimeSecond(second) + ':' + formatTime(millisecond/10)})
+}
+//正暂停函数
+function stop() {
+  clearInterval(int);
+}
+
+
+//负重置函数
+function ResetMax(that) {
+  clearInterval(interval);
+  secondMax = 999;
+  millisecondMax = 1000;
+  that.setData({ timeMax: '999:99', actionMax: !that.data.actionMax })
+}
+//负开始函数
+function startMax(that) {
+  interval = setInterval(function () { timerMax(that) }, 10);//每隔50毫秒执行一次timer函数
+}
+//负计时函数
+function timerMax(that) {
+  millisecondMax = millisecondMax - 10;
+  if (millisecondMax <= 0) {
+    millisecondMax = 999;
+    secondMax = secondMax - 1;
+  }
+  if (secondMax <= 0) {
+    clearInterval(interval);
+  }
+  that.setData({ timeMax: formatTimeSecond(secondMax) + ':' + formatTime(parseInt(millisecondMax / 10))})
+}
+//负暂停函数
+function stopMax() {
+  clearInterval(interval);
+}
+
+
+
+
+
+
+
+
+
+
+function formatTime(num) {
+  if (num < 10)
+    return '0' + num
+  else
+    return num + ''
+}
+function formatTimeSecond(num) {
+  if (num < 10)
+    return '00' + num
+  if (num < 100)
+    return '0' + num
+  else
+    return num + ''
+}

@@ -1,0 +1,96 @@
+<!--pages/my/personal-details/personal-details.wxml-->
+
+<!--基本个人信息  -->
+
+<view class='box'>
+  <!--头像  -->
+  <view class='personalImgBox center' bindtap='userImgHead'>
+    <text>头像</text>
+    <view class='imgRig'>
+      <image class='userImg' src='{{coachInfo.avatarUrl?coachInfo.avatarUrl+"?x-oss-process=image/resize,m_mfit,h_88,w_88":""}}' mode="aspectFill"></image>
+      <image class='right' src='{{imgUrl}}next.png'></image>
+    </view>
+  </view>
+  <!--昵称  -->
+  <view class='personalImgBox personalImgCat center' bindtap='nickName'>
+    <text>{{coachInfo.coachType==3 ? '机构名称' : '我的昵称'}}</text>
+    <view class='imgRige'>
+      <text class='perName-0'>{{coachInfo.nickName?coachInfo.nickName:''}}</text>
+      <image class='righti' src='{{imgUrl}}next.png'></image>
+    </view>
+  </view>
+  <!--教练类型  -->
+  <picker class='personalImgBox personalImgCat clearfloat' disabled='true' bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <text class='fl'>教练类型</text>
+    <view class='imgRig iLblock fr'>
+      <text class='perName ziwo'>{{array[index]}}</text>
+      <!-- <image class='top' src='{{imgUrl}}xiala2.png'></image> -->
+    </view>
+  </picker>
+  <!--真实姓名/身份证号  -->
+  <view class='personalImgBox personalImgCat center' bindtap='names'>
+    <text>姓名/身份证号</text>
+    <view class='imgRig'>
+      <text wx:if="{{coachInfo.realName}}" class='perName'>{{coachInfo.realName }}({{coachInfo.identityCode}})</text>
+      <text wx:else class='perName'>未填写</text>
+      <image class='right' src='{{imgUrl}}next.png'></image>
+    </view>
+  </view>
+
+  <!--家庭住址  -->
+  <view class='personalImgBox personalImgCat  center' bindtap='modifyAddress'>
+    <text>住址</text>
+    <view class='imgRige'>
+      <text class='perName-0'>{{coachInfo.addressDetail?coachInfo.addressDetail:"未填写" }}</text>
+      <image class='righti' src='{{imgUrl}}next.png'></image>
+    </view>
+  </view>
+</view>
+
+<!--账号绑定  -->
+<text class='bindNum'>账号绑定</text>
+<view class='personalImgBox personalImgCat center'  bindtap='modifyPhone'>
+  <view class='imgLeft'>
+    <image class='phoneGreen' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/mobile-phone.png'></image>
+    <text class='model'>手机（登录账号）</text>
+  </view>
+  <view class='imgRig'>
+    <text class='perName'>{{coachInfo.phoneNo?coachInfo.phoneNo:'' }}</text>
+    <image class='right' src='{{imgUrl}}next.png'></image>
+  </view>
+</view>
+<view class='personalImgBox personalImgCat  center' hidden="true">
+  <view class='imgLeft'>
+    <image class='wechartGreen' src='{{imgUrl}}coach/personage/wechat.png'></image>
+    <text class='model'>微信</text>
+  </view>
+  <view class='imgRig'>
+    <text class='perName'>{{coachInfo.wechat?coachInfo.wechat:'' }}</text>
+    <image class='right' src='{{imgUrl}}next.png'></image>
+  </view>
+</view>
+
+
+<!--安全设置  -->
+<text wx:if="{{userType=='3'}}" class='security'>安全设置</text>
+<view wx:if="{{userType=='3'}}" class='personalImgBox personalImgCat  center' wx:for="{{setting}}"  bindtap='modifyPwd'>
+  <text>{{item.name}}</text>
+  <view class='imgRig'>
+    <text class='perName'>{{item.value}}</text>
+    <image class='right' src='{{imgUrl}}next.png'></image>
+  </view>
+</view>
+
+<!--安全设置  -->
+<text class='security' wx:if="{{close}}">账号状态</text>
+<view class='personalImgBox personalImgCat  center'wx:if="{{close}}">
+  <text>是否开启</text>
+  <view class='switchBtn'>
+    <text class='iLblock open {{state}}'  bindtap='switchBtn' data-val="open">开启</text>
+    <text class='iLblock close {{states}}'  bindtap='switchBtn' data-val="close">关闭</text>
+  </view>
+</view>
+
+
+<!--底部提示  -->
+<text class='van-footer'>————已全部显示————</text>

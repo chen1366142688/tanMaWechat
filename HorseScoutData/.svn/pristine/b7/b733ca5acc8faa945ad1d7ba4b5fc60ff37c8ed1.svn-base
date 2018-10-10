@@ -1,0 +1,29 @@
+$(function(){
+    version();
+
+});
+
+
+function version(){
+    $.ajax({
+        type:'GET',
+        url: appurl +"/v1/version/getLatestDownloadUrl",
+        dataType:'application/json',
+        data:{},
+        contentType: "application/json",
+        success(res){
+            res = JSON.parse(res);
+            if(res.code == '10000'){
+                $('.android').attr('href',res.response.androidUrl);
+                $('.ios').attr('href',res.response.iosUrl);
+            }else{
+                confirm(res.msg)
+            }
+        },
+        error(info){
+            confirm(info.msg)
+        }
+    })
+}
+
+

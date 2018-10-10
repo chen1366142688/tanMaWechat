@@ -1,0 +1,59 @@
+<!--pages/Information/location/location.wxml-->
+<view class='Perfect-Information'>
+  <view class='headline-Prompt'>为了便于为您提供更好的服务，我们需要您完善下面信息，如有疑问请
+    <text class='headline-Prompt-blue' bindtap='ContactCustomerService'>联系客服</text>。</view>
+  <view class='Perfect-Information-Name'>
+    <view class='Bargraph-yellow'></view>
+    <view class='Perfect-Information-Name-section'>
+      <view class='Name-section-one'> 
+        <view class='Name-section-headline'>您当前所在城市？</view>
+        <view class='family-relation'>
+          <view class='family-relation-one'>
+            <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" class='relation'>{{array[index]}}</picker>
+            <image class='section-pull-down' src='{{imgUrl}}pull-down.png'></image>
+          </view>
+          <view class='family-relation-two'>
+            <picker bindchange="bindPickerChange1" value="{{index1}}" range="{{array1}}" class='relation'>{{array1[index1]}}</picker>
+            <image class='section-pull-down' src='{{imgUrl}}pull-down.png'></image>
+          </view>
+        </view>
+        <!-- <view class='section-options-have-headline'>（本市已有
+          <text class='section-options-have-headline-yellow'>34535</text>名学生加入探马数据）</view> -->
+      </view>
+       <view class='Name-section-one'>
+        <view class='Name-section-headline1'>您孩子所在学校？(选填)</view>
+        <view class='family-relation'>
+          <view class='family-relation-one'>
+            <picker bindchange="bindPickerChange2" value="{{index2}}" range="{{array2}}" class='relation'>{{array2[index2]}}</picker>
+            <image class='section-pull-down' src='{{imgUrl}}pull-down.png'></image>
+          </view>
+          <view class='family-relation-two-two'>
+            <input class='section-options-have-input' maxlength="11" placeholder='当前所在学校' placeholder-class='section-options-have-input-cbcbcb' bindfocus='goSchool'></input>
+          </view>
+        </view>
+        <!-- <view class='section-options-have-headline'>（本校已有
+          <text class='section-options-have-headline-yellow'>535</text>名学生加入探马数据）</view> -->
+      </view>
+       <view class='Name-section-one'>
+        <view class='Name-section-headline1'>您孩子所在的班级？(选填)</view>
+        <view class='family-relation'>
+          <view class='family-relation-one'>
+            <picker bindchange="bindPickerChange3" value="{{index3}}" range="{{array3}}" class='relation'>{{index2 == '0' ? Kindergarten[index3] : index2 == '1' ? array3[index3] : index2 == '2' ? JuniorMiddleSchool[index3] : highSchool[index3]}}</picker>
+            <image class='section-pull-down' src='{{imgUrl}}pull-down.png'></image>
+          </view>
+          <view class='family-relation-two'>
+            <picker bindchange="bindPickerChange4" value="{{index4}}" range="{{array4}}" class='relation'>{{array4[index4]}}</picker>
+            <image class='section-pull-down' src='{{imgUrl}}pull-down.png'></image>
+          </view>
+        </view>
+        <!-- <view class='section-options-have-headline'>（本班已有
+          <text class='section-options-have-headline-yellow'>35%</text>名学生加入探马数据）</view> -->
+      </view>
+    </view>
+  </view>
+  <view class='Perfect-Information-footer'>
+    <view class='Perfect-Information-button-previous-step' bindtap='prev'>上一步</view>
+    <view class='Perfect-Information-button-else' bindtap='overNext'>我有其他孩子</view>
+    <view class='Perfect-Information-button' bindtap='overAll'>完成填写</view>
+  </view>
+</view>

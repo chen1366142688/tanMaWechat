@@ -1,0 +1,48 @@
+ page{
+  width:750rpx;
+  height:100%;
+  background:rgba(255,255,255,1);
+}
+.box{
+  width: 750rpx;
+  text-align: center;
+  padding-top:352rpx;
+  margin-left:50%;
+  transform: translatex(-50%); 
+}
+.noType{
+  width:240rpx;
+  height:240rpx; 
+  z-index: 888;
+}
+.newBox{
+  width:750rpx;
+  text-align: center;
+}
+text{
+  display: inline-block;
+  font-size:26rpx;
+  font-family:PingFang-SC-Regular;
+  font-weight:400;
+  color:rgba(203,203,203,1);
+  vertical-align: middle;
+}
+.badWork{
+  width:24rpx;
+  height:24rpx;
+  vertical-align: middle;
+  margin-left:10rpx;
+} 
+.active{
+   -webkit-animation-name: rotate; /*动画名称*/
+  -webkit-animation-duration: 2s; /*动画持续时间*/
+  -webkit-animation-iteration-count: 2; /*动画次数*/
+}
+@-webkit-keyframes rotate {
+  0% {
+    transform: rotate(0deg); /*初始状态 透明度为0*/
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

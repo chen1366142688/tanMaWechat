@@ -1,0 +1,9 @@
+page {
+  background: #ececec;
+}
+
+.purchase-c-yu-head {
+  width: 114rpx;
+  height: 120rpx;
+  vertical-align: middle;
+}

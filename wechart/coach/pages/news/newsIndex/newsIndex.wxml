@@ -1,0 +1,28 @@
+<!--pages/news/newsIndex/newsIndex.wxml-->
+<view class='Newslndex-BG'>
+  <view class='Newslnedx-header'>
+    <image class='attribute' src='{{imgUrl}}coach/New/Teacher.png'></image>
+    <view class='header-Name'>
+      <image class='Head-Portraits' src='{{avatarUrl?avatarUrl+"?x-oss-process=image/resize,m_mfit,h_125,w_125":defaultHead}}' mode="aspectFill" ></image>
+      <view class='Name'>{{coachNickName}}</view>
+    </view>
+  </view>
+</view>
+
+<!--  单个消息  -->
+<view class='New'>
+  <view class='New-one' wx:for="{{showUserList}}" wx:key="index" bindtap="toChat" data-userimname='{{item.imUserName}}' data-nickname='{{item.nickName}}'  data-avatarurl='{{item.avatarUrl}}'>
+    <image class='Attribute' src='{{item.avatarUrl?item.avatarUrl+"?x-oss-process=image/resize,m_mfit,h_60,w_60":""}}' mode="aspectFill" ></image>
+    <view class='names'>
+      <view class='name-zuo'>
+        <image class='classes' src='{{imgUrl}}coach/New/{{item.userType =="coach"?"Teacher-one":"Teacher-four"}}.png'></image>
+        <view class='name'>{{item.nickName}}</view>
+      </view>
+      <view class='time'>{{item.time}}</view>
+    </view>
+    <view class='message'>
+      <view class='mesage-text'>{{item.contemt}}</view>
+      <view wx:if="{{item.unreadCount>0}}" class='mesage-W'>{{item.unreadCount}}</view>
+    </view>
+  </view>
+</view>

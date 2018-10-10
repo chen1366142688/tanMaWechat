@@ -1,0 +1,10 @@
+<!--pages/Announcement/Announcement.wxml-->
+<view class='Announcement'>
+  <view class='Announcement-header'> <text class='kong'></text> 尊敬的探马用户，为了给您带来更好的用户体验，现在需要绑定到官方微信公众号"探马运动"下。</view>
+  <view class='Announcement-headlin'><text class='kong'></text>在绑定后您可以通过微信公众号快速进入"探马运动"小程序，及时收取您的开课通知并且开通智能课表等新的功能，此次绑定给您带来的不便敬请谅解。</view>
+  <view class='Announcement-img'>
+    <image class='Announcement-img-image' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/coach/iteration/downward.gif'></image>
+  </view>
+  <view class='Announcement-button'>查看二维码</view>
+  <view class='Announcement-Alt'>快长按识别二维码进入新的“探马运动”吧</view>
+</view>

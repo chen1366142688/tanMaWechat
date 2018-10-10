@@ -1,0 +1,22 @@
+{
+  "pages": [
+    "pages/Stadiums-and-stadiums/Introduction/Introduction",
+    "pages/welcome/welcomeNo/welcomeNo",
+    "pages/Stadiums-and-stadiums/Venue/Venue",
+    "pages/Stadiums-and-stadiums/erwei/erwei",
+    "pages/Stadiums-and-stadiums/venue-register/venue-register",
+    "pages/Stadiums-and-stadiums/lockLesson/lockLesson",
+    "pages/Stadiums-and-stadiums/Cost-query/Cost-query",
+    "pages/Stadiums-and-stadiums/pay/pay",  
+    "pages/Stadiums-and-stadiums/Coaching-information/Coaching-information",
+    "pages/Stadiums-and-stadiums/venue-erweima/venue-erweima"
+  ],
+  "enablePullDownRefresh": true,
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "white",
+    "borderStyle": "#E4E4E4",
+    "navigationBarTitleText": "探马",
+    "navigationBarTextStyle": "black"
+  }
+}

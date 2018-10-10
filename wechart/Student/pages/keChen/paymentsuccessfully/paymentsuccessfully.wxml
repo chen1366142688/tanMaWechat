@@ -1,0 +1,74 @@
+<!--pages/keChen/paymentsuccessfully/paymentsuccessfully.wxml
+付款成功
+-->
+<view class='Payment'>
+  <view class='pay-payment-box-one'>
+    <image class='pay-paymentapprovala fl' src="http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/student/paymentapproval.png"></image>
+  </view>
+  <view class='Payment-succeed'>{{orderDetail.payType==1?"恭喜您！付款成功":"恭喜您！下单成功"}}</view>
+  <view class='succeed-T'>您可以在【我的】-【我的课程】中查看本订单信息。</view>
+  <view class='pur-item-paya'>
+    <view bindtap="changto" data-type="index" class='iLblock pay-gobakck pay-congratu-you-back'>返回首页</view>
+    <!-- <view bindtap="changto" data-type="class" class='iLblock pay-gobakck pay-congratu-youa'>回课程页</view> -->
+    <view bindtap="changto" data-type="order" class='iLblock pay-congratu-youa pay-gobakckviisted'>查看订单</view>
+  </view>
+</view>
+
+<view class='pay-order-topa'>
+  <view class='pay-order-topb'>
+    <view class='pay-order-topc'>
+      <view class='pay-order-topd'>
+        订单详情
+      </view>
+      <view class='pay-order-tope'>订单状态：{{orderDetail.payType==1?'已付款，课程进行中':'已下单，待教练确认'}}</view>
+    </view>
+    <view class='pay-mid-ordernumbera'>订单编号：{{orderCode}}</view>
+    <view class='pay-order-topf'>
+      <view>
+        <text class='order-renshu'>{{orderDetail.itemName}}{{orderDetail.maxMember}}人班 </text>
+        <text class='order-title pur-girl-titlea textOver'>{{orderDetail.className}}</text>
+      </view>
+      <view class='order-numbers-bottom'>
+        <text  decode="{{true}}" space="{{true}}" class='purchase-teacher-namea'>主教练/机构：</text>
+        <text class='order-qushu-txt'>{{orderDetail.classCoach}}</text>
+      </view>
+      <view class='order-numbers-bottom'>
+        <text class='purchase-qushu-maina'>授课教练：</text>
+        <text decode="{{true}}" space="{{true}}" class='purchase-qushu-mainb'>{{classTutors.classCoachName}}</text> 
+      </view>
+      <view class='order-numbers-bottom'>
+        <text class='purchase-qushu-maina'>场馆：</text>
+        <text class='order-level-txt'>{{homeName}}</text>
+      </view>
+    </view>
+
+    <view class='pay-order-topfb'>
+      <text class='pay-mid-ordernumberb'>{{orderDetail.courseCount}}课时</text>
+      <!-- <text class='pay-mid-ordernumberb'>{{orderDetail.courseCount}}课时/已付费</text> -->
+      <text class='pay-mid-ordernumberb-rmb'>RMB </text>
+      <text class='pay-mid-ordernumberb-numbers'>{{orderDetail.payCost/100}}</text>
+    </view>
+
+    <!--最新一期开班-->
+    <view class='c-course-int-titlec'>
+      <view class='c-cou-havec clearfix'>
+        <view class='bestnewsa'>
+          <view> 最新一期开班：{{orderDetail.lastAttendPeriod?orderDetail.lastAttendPeriod:0}}节</view>
+          <view class='course-time clearfloat'>
+            <view class='kecheng-course-time'>课程时间：</view>
+            <view class='course-JT' > 
+              <view class='course-jt-time' wx:for="{{orderDetail.orderSectionList}}" wx:key="*this">周{{item.weekDay==1?"一":item.weekDay==2?"二":item.weekDay==3?"三":item.weekDay==4?"四":item.weekDay==5?"五":item.weekDay==6?"六":"日"}} {{item.dayTimeStart}}-{{item.dayTimeEnd}}</view>
+            </view>
+
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='coursedescription-paya'>
+  <view class='coursedescription-payb'>
+    开课说明：对于所有大课的学员，系统会自动在每一节课程开始前一天对学员发出微信和短信通知;对学员发出系统和短信通知；对于所有私教课的学员，教练会提前1~2天对所有学员发出系统和短信通知。学员收到开课通知后，即可参加本节课程的培训。
+  </view>
+</view>

@@ -1,0 +1,54 @@
+<!--pages/my/accountdetails/accountdetails.wxml-->
+
+<view class="acc-box-numbersa">
+  <view class='acc-box-numbersb'>
+    <view>
+      <view class='acc-box-numbers-yuand'>账户余额</view>
+    </view>
+    <view class='acc-box-numbers-yuanb'>
+      <text class='acc-box-numbers-yuana'>{{amount}} </text>
+      <text class='acc-box-numbers-yuanc'>元</text>
+    </view>
+  </view>
+  <view class='acc-coursedurationfista'></view>
+  <view class='acc-integralbalanceb'>
+    <view>
+      <view class='acc-box-numbers-yuand'>积分余额</view>
+    </view>
+    <view class='acc-integralbalancea'>
+      <text class='acc-box-numbers-yuana'>0 </text>
+      <text class='acc-box-numbers-yuanc'>点</text>
+    </view>
+  </view>
+</view>
+<view class='acc-box-numbersab'>
+  <view class='acc-coursedurationb'>
+    <view class='acc-box-numbers-yuandef'>剩余
+      <text class='acc-box-numbers-yuanaef'>{{orderSpare.spareCount?orderSpare.spareCount:0}} </text>
+      <text class='acc-box-numbers-yuanc'>课时</text>
+      <text class='acc-box-numbers-yuane'>锁定金额</text>
+      <text class='acc-courseduration333'>{{orderSpare.spareCost}}元</text>
+      <image src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/student-doubt.png'  type="primary" bindtap="modalcnt" class='Query'></image>
+    </view>
+  </view>
+</view>
+
+ <view class='alteration'>
+   <view class='alteration-money-one' wx:for="{{bookList}}" wx:key="*this">
+    <view class='money-left'>
+      <view class='explain'>{{item.optionRemark}}</view>
+      <view class='Time'>{{item.createTime}}</view>
+    </view>
+    <view wx:if="{{item.flowDirection==1}}" class='monet-rieft-add'>+{{item.amount}}</view>
+    <view wx:else class='monet-rieft-subtract'>-{{item.amount}}</view>
+  </view> 
+<!--  没有数据显示空空如也  -->
+   <view class='kong' wx:if="{{Period}}">
+    <image class='kong-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/studentNewImg/dataEmpty.png'></image>
+    <text class='kong-text'>数据为空</text>
+  </view> 
+  <text wx:if="{{showNotMore}}" class='van-footer'>————已全部显示————</text>
+</view> 
+
+
+

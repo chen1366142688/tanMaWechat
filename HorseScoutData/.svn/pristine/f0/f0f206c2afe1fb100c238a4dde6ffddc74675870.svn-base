@@ -1,0 +1,23 @@
+<!--pages/My/Test-Record/Test-Record.wxml-->
+<view class='Test-Record'>
+  <view class='Test-Record-one'>
+    <view class='Test-Record-one-headline'>测试项目：项目名称</view>
+    <view class='Test-complete-result-one'>
+      <view class='Test-complete-result-one-headline-left'>
+        <view class='Test-complete-result-one-headline-left-top'>测试成绩：</view>
+        <view class='Test-complete-result-one-headline-left-bottom'>测试时间：2018-06-27 23:34</view>
+      </view>
+      <view class='Test-complete-result-one-section-right'>85分</view>
+    </view>
+  </view>
+  <view class='Test-Record-one'>
+    <view class='Test-Record-one-headline'>测试项目：项目名称</view>
+    <view class='Test-complete-result-one'>
+      <view class='Test-complete-result-one-headline-left'>
+        <view class='Test-complete-result-one-headline-left-top'>测试成绩：</view>
+        <view class='Test-complete-result-one-headline-left-bottom'>测试时间：2018-06-27 23:34</view>
+      </view>
+      <view class='Test-complete-result-one-section-right'>82分</view>
+    </view>
+  </view>
+</view>

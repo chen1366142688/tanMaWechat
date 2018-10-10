@@ -1,0 +1,50 @@
+<view class='order-item-one'>
+     <view class='order-state clearfloat'>
+        <image class='order-userImg fl' src='{{orderList.coachPhotoAddress }}' alt="头像"></image>
+        <view class='order-numbers fl'>
+          <view class='order-numbers-top'>
+            <text class='order-renshu'>{{orderList.itemName }} {{orderList.maxMember }}人班</text>
+            <text class='order-title'>{{orderList.className }}</text>
+          </view>
+          <view class='order-numbers-bottom'>
+            <image class='order-name-img' src='{{url}}red-user.png'></image>
+            <text class='order-name-jiao iLblock'>{{orderList.classCoach }}</text>
+            <image wx:if="{{orderList.coachSex == '1'}}" class='order-man-img' src='{{url}}man.png'></image>
+            <image wx:else class='order-man-img' src='{{url}}gril.png'></image>
+            <image class='order-qishu-img' src='{{url}}numbers.png'></image>
+            <text class='order-qushu-txt'>{{orderList.lastAttendPeriod }}期</text>
+            <image class='order-qishu-img' src='{{url}}red-level.png'></image>
+            <text class='order-level-txt'>{{orderList.itemStudentGrade }}</text>
+          </view>
+        </view>
+     </view>
+     <view class='order-item-keshi clearfloat'>
+        <view class='order-total-keshi fl'><text class='strong'>{{orderList.courseCount }}</text>课时/{{orderList.courseTime *10}}h</view>
+        <view class='order-total-shenyu fr'>剩余<text class='strongs'>{{orderList.spareTime }}</text>课时<text class='yu-money'>（课程余额RMB {{orderList.spareCost }}）</text></view>
+     </view>
+  </view>
+  <view class='tuifei'>退费计算</view>
+  <view class='jisuan-money'>
+    <view class='jisuanA clearfloat'>
+      <text class='shifu fl'>实付课程费用</text>
+      <text class='shifu-money fr'>RMB {{orderList.payCost }}</text>
+    </view>
+    <view class='jisuanB clearfloat'>
+      <text class='shifu fl'>退款扣费</text>
+      <text class='shifu-money fr'>-RMB {{orderList.refundPayCost }}</text>
+    </view>
+    <view class='jisuanC clearfloat'>
+      <text class='shifu fl'>实际退款金额</text>
+      <text class='shifu-moneys fr'>RMB<text id='strongs'>{{orderList.realRefundCost }}</text></text>
+    </view>
+  </view>
+  <view class='weChat clearfloat'>
+    <text class='callBackWechat fl'>退回微信账号</text>
+    <text class='weChat-num fr'>13779586485</text>
+  </view>
+  <view class='weChat clearfloat'>
+    <text class='callBackWechat fl'>交易密码</text>
+    <text class='weChat-pwd fr'>*********</text>
+  </view>
+  <text class='zhuming'>*所有退款申请需要经过后台人工审核，通过后，会在24小时内到账。</text>
+  <view class='btn' bindtouchend='subBtn'><text class='sub'>提    交</text></view>

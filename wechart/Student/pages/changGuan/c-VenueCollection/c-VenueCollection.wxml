@@ -1,0 +1,71 @@
+<view class="box" wx:for="{{collection}}" wx:key="*this">
+  <view bindtap='courseDetailsValid' data-status='{{item.validStatus}}' data-classId="{{item.classId}}"> <!--name 容器-->
+    <view class='effective'>
+      <text class='effe' wx:if="{{item.validStatus ==1}}">有效</text>
+      <text class='effe noThing' wx:if="{{item.validStatus ==2}}">失效</text>
+    </view>
+    <view class='itemInfo'>
+    <!-- <text class='userName'></text> -->
+    <text class='userName iLblock textOver'>机构：{{item.classCoach }}</text>
+    <image class='userLevelImg' wx:if="{{item.coachSex == 2}}" src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/studentNewImg/c47.png'></image>
+    <image class='userLevelImg' wx:if="{{item.coachSex == 1}}"  src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/studentNewImg/c46.png'></image>
+    <image class='nums' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/studentNewImg/c44.png'></image>
+      <text class='numsTxt'>{{item.lastAttendPeriod?item.lastAttendPeriod:0 }}节</text>
+    <image class='hotImg' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/studentNewImg/c43.png'></image>
+      <text class='hotNum'>{{item.popularity?item.popularity:0 }}</text>
+    <view class='iLblock levelBox'>
+      <!-- <text class='levelPus'>适合等级</text> -->
+       <image class='userLevelImge' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/student/position.png'></image>
+      <text class='level iLblock textOver'>{{item.itemStudentGrade }}</text>
+    </view>
+  </view>
+  <view class='itemInfoTitle'>
+    <view class='classItem iLblock'>{{item.itemName }} {{item.maxMember }}人班</view>
+    <view class='title iLblock textOver'>{{item.className }}</view>
+    <text class='iLblock keShi'>{{item.courseCount }}课时</text>
+    <!-- <text class='iLblock keShi'>{{item.courseCount }}课时/{{item.courseTime/10}}h</text> -->
+    <view class='moneyBox'>
+      <text class='money'>RMB</text>
+      <text class='moneys'>{{item.courseCostTotal/100 }}</text>
+    </view>
+    </view>
+  </view>
+  <!--有效&已选中-->
+  <view class='send clearfloat' wx:if="{{item.remindType ==1&&item.validStatus ==1}}">
+    <checkbox-group class='leftBox fl' wx:if="{{item.remindType ==1}}" bindchange='checkboxChange' data-id="{{item.storeId}}">
+      <checkbox data-id="{{item.storeId }}" wx:if="{{item.remindType ==1}}" class='check' value='{{item.storeId}}' name="send" checked='{{item.remindType ==1?true:false}}'></checkbox>
+      <text class='sendCode active'>有空缺名额时短信通知我</text>
+    </checkbox-group>
+    <view class='rgBox fr' data-storeId="{{item.storeId }}" data-classId="{{item.classId }}" bindtap='deleteStore'>
+      <image class='delete' src='{{url}}delete.png'></image> 
+    </view>
+  </view>
+  <!--有效&未选中-->
+  <view class='send clearfloat' wx:if="{{item.remindType ==0&&item.validStatus ==1}}">
+    <checkbox-group class='leftBox fl' bindchange='checkboxChange' data-id="{{item.storeId}}">
+      <checkbox data-id="{{item.storeId }}" class='check' value='{{item.storeId}}' name="send" checked='{{item.remindType ==1?true:false}}'></checkbox>
+      <text class='sendCode'>有空缺名额时短信通知我</text>
+    </checkbox-group>
+    <view class='rgBox fr' data-storeid="{{item.storeId }}" data-classId="{{item.classId }}" bindtap='deleteStore'>
+      <image class='delete' src='{{url}}delete.png'></image>
+    </view>
+  </view>
+  <!--无效效-->
+  <view class='send clearfloat' wx:if="{{item.validStatus ==2}}">
+    <checkbox-group hidden='true' class='leftBox fl' bindchange='checkboxChange' data-id="{{item.storeId}}">
+      <checkbox hidden='true' data-id="{{item.storeId }}" class='check' value='{{item.storeId}}' name="send" checked='{{item.remindType ==1?true:false}}'></checkbox>
+      <text class='sendCode' hidden='true'>有空缺名额时短信通知我</text>
+    </checkbox-group>
+    <view class='rgBox fr' data-storeid="{{item.storeId }}" data-classId="{{item.classId }}" bindtap='deleteStore'>
+      <image class='delete' src='{{url}}delete.png'></image>
+    </view>
+  </view>
+</view>
+
+<!--  没有数据显示空空如也  -->
+<view class='kong' wx:if="{{Period}}">
+    <image class='kong-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/studentNewImg/dataEmpty.png'></image>
+    <text class='kong-text'>数据为空</text>
+</view> 
+
+<text wx:if="{{showNotMore}}" class='van-footer'>————已全部显示————</text>

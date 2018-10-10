@@ -1,0 +1,4 @@
+<view class="box" bindtouchend='goIndex'>
+  <image class='plickerImg' src='https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2932292030,3130194325&fm=27&gp=0.jpg'></image>
+  <view class='reverseTime'>{{time}}s</view>
+</view>

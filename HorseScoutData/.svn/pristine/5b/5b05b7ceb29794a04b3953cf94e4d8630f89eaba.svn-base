@@ -1,0 +1,264 @@
+/* pages/Exercise/Test-complete/Test-complete.wxss */
+
+.Test-complete{
+  width: 750rpx;
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Test-complete-header{
+  width: 100%;
+  height: 620rpx;
+  line-height: 620rpx;
+  vertical-align: middle;
+  background-color: #fff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Test-scores{
+  width: 300rpx;
+  height: 300rpx;
+  line-height: 300rpx;
+  vertical-align: middle;
+  margin-top: 80rpx;
+}
+
+.Test-scores-prompt-text{
+  width: 100%;
+  text-align: center;
+  height: 34rpx;
+  line-height: 34rpx;
+  margin-top: 74rpx;
+  font-size: 34rpx;
+  color: #4DD0C8;
+}
+
+.Test-scores-Beat-number{
+  width: 100%;
+  height: 24rpx;
+  line-height: 24rpx;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 24rpx;
+  color: #999;
+  margin-top: 20rpx;
+}
+
+.Beat-number-blue{
+  color: #72B9E7;
+}
+
+.Test-complete-graph{
+  width: 750rpx;
+  height: 617rpx;
+  line-height: 617rpx;
+  padding: 40rpx 24rpx 55rpx 24rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20rpx;
+}
+
+.Test-complete-graph-header{
+  width: 100%;
+  height: 24rpx;
+  line-height: 24rpx;
+  vertical-align: middle;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Test-complete-graph-header-left{
+  height: 24rpx;
+  line-height: 24rpx;
+  vertical-align: middle;
+  font-size: 24rpx;
+  color: #333;
+}
+
+.Test-complete-graph-header-left-blue{
+  color: #72B9E7;
+}
+
+.Test-complete-graph-header-right{
+  height: 24rpx;
+  line-height: 24rpx;
+  vertical-align: middle;
+  font-size: 24rpx;
+  color: #72B9E7;
+}
+
+.graph-img{
+  width: 100%;
+  height: 237rpx;
+  line-height: 237rpx;
+  border: 1rpx solid #72B9E7;
+  vertical-align: middle;
+  margin-top: 35rpx;
+  margin-bottom: 40rpx;
+}
+
+.Test-complete-graph-prompt-text-top{
+  width: 100%;
+  height: 24rpx;
+  line-height: 24rpx;
+  vertical-align: middle;
+  font-size: 24rpx;
+  text-align: left;
+  color: #999;
+}
+
+.Test-complete-graph-prompt-text-bottom{
+  width: 100%;
+  height: 24rpx;
+  line-height: 24rpx;
+  vertical-align: middle;
+  font-size: 24rpx;
+  text-align: left;
+  color: #999;
+  margin-top: 19rpx;
+}
+
+.Test-complete-graph-button{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  vertical-align: middle;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40rpx;
+}
+
+.Test-complete-graph-button-index{
+  width: 220rpx;
+  height: 78rpx;
+  line-height: 78rpx;
+  vertical-align: middle;
+  font-size: 30rpx;
+  color: #4DD0C8;
+  background-color: #fff;
+  border: 1rpx solid #4DD0C8;
+  border-radius: 39rpx;
+  text-align: center;
+}
+
+.Test-complete-graph-button-other{
+  width: 220rpx;
+  height: 78rpx;
+  line-height: 78rpx;
+  vertical-align: middle;
+  font-size: 30rpx;
+  color: #4DD0C8;
+  background-color: #fff;
+  border: 1rpx solid #4DD0C8;
+  border-radius: 39rpx;
+  text-align: center;
+}
+
+.Test-complete-graph-button-again{
+  width: 220rpx;
+  height: 78rpx;
+  line-height: 78rpx;
+  vertical-align: middle;
+  font-size: 30rpx;
+  color: #fff;
+  background-color: #4DD0C8;
+  border: 1rpx solid #4DD0C8;
+  border-radius: 39rpx;
+  text-align: center;
+}
+
+.Test-complete-result{
+  width: 750rpx;
+  line-height: 0;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0 24rpx;
+  background-color: #fff;
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Test-complete-result-headline{
+  width: 100%;
+  height: 65rpx;
+  line-height: 65rpx;
+  vertical-align: middle;
+  text-align: left;
+  font-size: 28rpx;
+  color: #171717;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.Test-complete-result-one{
+  width: 100%;
+  height: 101rpx;
+  line-height: 101rpx;
+  vertical-align: middle;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1rpx solid #e4e4e4;
+}
+
+.Test-complete-result-one-headline-left{
+  width: 85%;
+  height: 101rpx;
+  line-height: 101rpx;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Test-complete-result-one-headline-left-top{
+  font-size: 24rpx;
+  color: #666;
+  width: 100%;
+  height: 24rpx;
+  line-height: 24rpx;
+  margin-top: 19rpx;
+  vertical-align: middle;
+  text-align: left;
+}
+
+.Test-complete-result-one-headline-left-bottom{
+  width: 100%;
+  height: 50rpx;
+  line-height: 50rpx;
+  vertical-align: middle;
+  font-size: 24rpx;
+  color: #666;
+  text-align: left;
+}
+
+.Test-complete-result-one-section-right{
+  width: 15%;
+  height: 101rpx;
+  vertical-align: middle;
+  font-size: 36rpx;
+  color: #FDC54A;
+}
+
+.kong{
+  width: 100%;
+  height: 40rpx;
+}

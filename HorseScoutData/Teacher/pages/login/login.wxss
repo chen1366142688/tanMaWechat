@@ -1,0 +1,316 @@
+/* pages/login/login.wxss */
+
+.login {
+  width: 750rpx;
+  height: 100vh;
+  line-height: 0;
+  margin: 0 auto;
+  padding: 0 88rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+/* 头像 */
+
+.head-portrait {
+  width: 100%;
+  height: 150rpx;
+  margin-top: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.head-portrait-img {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 75rpx;
+  line-height: 150rpx;
+  box-shadow: 0 2rpx 3rpx 2rpx rgba(2, 199, 220, 0.3);
+}
+
+/* 小马健康教师录入端 */
+
+.login-headine {
+  width: 100%;
+  height: 90rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: #333;
+  font-size: 30rpx;
+  font-family: PingFang-SC-Bold;
+  font-weight: bold;
+}
+
+/* 切换密码登录、验证码登录 */
+
+.Section-List-headline {
+  width: 100%;
+  height: 68rpx;
+  line-height: 68rpx;
+  margin-top: 86rpx;
+  display: flex;
+  justify-content: flex-start;
+  font-size: 34rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: #999;
+}
+
+.headline-border {
+  color: #02c7dc;
+  border-bottom: 2rpx solid #02c7dc;
+}
+
+.List-headline-left {
+  text-align: left;
+}
+
+.List-headline-right {
+  text-align: right;
+  margin-left: 55rpx;
+}
+
+/* 密码登录 */
+
+.Register-left {
+  width: 100%;
+  padding: 60rpx 0rpx 10rpx 0rpx;
+}
+
+/* 输入手机号 */
+
+.Iphone {
+  width: 100%;
+  height: 103rpx;
+  border-radius: 50rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  box-shadow: 0 2rpx 3rpx 2rpx rgba(2, 199, 220, 0.3);
+}
+
+.Iphone-img {
+  width: 105rpx;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Iphone-img-image {
+  width: 33rpx;
+  height: 33rpx;
+  line-height: 33rpx;
+}
+
+.Iphone-input {
+  width: 400rpx;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+}
+
+.Section-one-input {
+  width: 400rpx;
+  height: 100rpx;
+  text-align: left;
+  font-size: 34rpx;
+  color: #333;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+}
+
+/* 删除按钮 */
+
+.delete {
+  width: 60rpx;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.delete-img {
+  width: 24rpx;
+  height: 24rpx;
+  line-height: 24rpx;
+}
+
+/* input提示文字 */
+
+.input-cbcbcb {
+  font-size: 34rpx;
+  color: #999;
+  border-bottom: 1rpx solid #02c7dc;
+}
+
+/* 登录密码 */
+
+.lock {
+  width: 100%;
+  height: 103rpx;
+  border-radius: 50rpx;
+  margin-top: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  box-shadow: 0 2rpx 3rpx 2rpx rgba(2, 199, 220, 0.3);
+}
+
+.lock-img {
+  width: 105rpx;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lock-img-image {
+  width: 33rpx;
+  height: 33rpx;
+  line-height: 33rpx;
+}
+
+.lock-input {
+  width: 400rpx;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+}
+
+.lock-one-input {
+  width: 400rpx;
+  height: 100rpx;
+  text-align: left;
+  font-size: 34rpx;
+  color: #333;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+}
+
+/* 忘记密码？联系客服 */
+
+.Register-left-footer {
+  width: 100%;
+  height: 108rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* 忘记密码？ */
+
+.forget-password {
+  font-size: 28rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(2, 199, 220, 1);
+}
+
+/* 联系客服 */
+
+.Contact-Customer-Service {
+  font-size: 28rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(2, 199, 220, 1);
+}
+
+/* 登录按钮 */
+
+.Register-Submit-left {
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  vertical-align: middle;
+  margin-top: 60rpx;
+  display: flex;
+}
+
+.Register-Submit-button {
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  vertical-align: middle;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 34rpx;
+  color: #fff;
+  background-color: rgba(2, 199, 220, 1);
+  border-radius: 50rpx;
+}
+
+/* 验证码登录 */
+
+.Register-right {
+  width: 100%;
+  padding: 60rpx 0rpx 10rpx 0rpx;
+}
+
+.verification-code {
+  width: 100%;
+  height: 103rpx;
+  border-radius: 50rpx;
+  margin-top: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  box-shadow: 0 2rpx 3rpx 2rpx rgba(2, 199, 220, 0.3);
+}
+
+.verification-code-img {
+  width: 105rpx;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.verification-code-img-image {
+  width: 33rpx;
+  height: 33rpx;
+  line-height: 33rpx;
+}
+
+.verification-code-input {
+  width: 280rpx;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+}
+
+.verification-code-one-input {
+  width: 280rpx;
+  height: 100rpx;
+  text-align: left;
+  font-size: 34rpx;
+  color: #333;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+}
+
+/* 发送验证码 */
+
+.send {
+  width: 177rpx;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.send-text {
+  font-size: 28rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(2, 199, 220, 1);
+}

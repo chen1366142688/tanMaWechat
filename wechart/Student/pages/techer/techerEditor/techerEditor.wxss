@@ -1,0 +1,141 @@
+page{background: #ececec;font-size:30rpx;font-family:PingFang-SC-Regular; }
+.editor{
+  width:700rpx;
+  padding:0 25rpx;
+  height:120rpx;
+  background: #fff;
+  margin-bottom:2rpx;
+}
+.center{
+  width: 700rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+}
+.classBox{
+  width:700rpx;
+  padding:0 25rpx;
+  background: #fff;
+}
+.editor-userImg{
+  width:88rpx;
+  height:88rpx;
+  vertical-align: middle;
+}
+.editor-nameAndLocation{
+  color:rgba(51,51,51,1);
+  margin-left:20rpx;
+   vertical-align: middle;
+}
+.editor-phoneImg{
+  width:13rpx;
+  height:22rpx;
+  vertical-align: middle;
+}
+.editor-phoneNum{
+  font-size:30rpx;
+color:rgba(51,51,51,1);
+margin-left:12rpx;
+ vertical-align: middle;
+}
+.editorPen{
+  width:44rpx;
+  height:44rpx;
+  vertical-align: middle;
+  margin-left:63rpx;
+}
+.editor-name,.editor-phone{
+  height: 120rpx;
+  line-height: 120rpx;
+}
+.examine{
+  width: 700rpx;
+  padding:0 25rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 88rpx;
+  background: #fff;
+  margin-bottom:20rpx;
+}
+.exIng{
+  color:#E85571;
+}
+.qiuLeis{vertical-align: middle}
+.next{
+  width:11rpx;
+  height:21rpx;
+  vertical-align: middle;
+  margin-left:23rpx;
+}
+.yunDongBox{
+  height:78rpx;
+  border-bottom:1rpx solid #E4E4E4;
+}
+.uploadItem{
+  width: 100%;
+  font-size:24rpx;
+font-family:PingFang-SC-Regular;
+color:rgba(232,85,113,1);
+}
+.scroolBox{
+  width:726rpx;
+  height: 140rpx;
+  padding:23rpx 0 24rpx 0;
+  background: #fff;
+  overflow:hidden;
+white-space:nowrap;
+margin-bottom:20rpx;
+}
+.intro-scroll{
+  width:100%;
+  height:100%;
+  overflow: scroll;
+}
+.intro-scrollImg{
+  width:200rpx;
+  height:140rpx;
+  vertical-align: bottom;
+  margin-right:20rpx;
+}
+.addProBox{
+  width:750rpx;
+}
+.addPro{
+  display: block;
+  width:702rpx;
+  height:360rpx;
+  margin:0 auto 20rpx auto;
+}
+.myItemBox{
+  width:702rpx;
+  padding:0 24rpx;
+  background: #fff;
+  border-radius: 5rpx;
+}
+.myInfoBxo{
+  width: 100%;
+  min-height: 225rpx;
+  padding:19rpx 0 20rpx 0;
+  border-bottom:1rpx solid #E4E4E4;
+}
+.myInfo{
+  color:  #333333;
+}
+.submitEditor{
+  width:702rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  border-radius: 40rpx;
+  background: #00C693;
+  margin:40rpx auto 60rpx auto;
+  color: #fff;
+}
+.subBor{
+  width:694rpx;
+  height: 80rpx;
+  border-radius: 44rpx;
+  border: 1rpx dotted #fff;
+}

@@ -1,0 +1,349 @@
+// pages/Information/location/location.js
+const app = getApp().globalData
+//这里的location默认取的是默认的地址，进入该页面后重新复制定位的地址
+Page({
+  data: {
+    imgUrl: app.url,
+    locationAllId: {},
+    allProvince:[],
+    array: [],
+    objectArray: [],
+    index: 0,
+    array1: [],
+    objectArray1: [],
+    index1: 0,
+    array2: ['学校类型','幼儿园','小学','初中','高中'],
+    objectArray2: [],
+    index2: 0,
+    array3: ['年级','一年级', '二年级', '三年级', '四年级','五年级','六年级'],
+    index3: 0,
+    array4: ['班级','一班', '二班', '三班', '四班', '五班', '六班', '七班', '八班', '九班', '十班','十一班','十二班','十三班','十四班','十五班','十六班','十七班','十八班','十九班','二十班','二十一班','二十二班','二十三班','二十四班','二十五班','二十六班','二十七班','二十八班','二十九班','三十班','三十一班','三十二班','三十三班','三十四班','三十五班','三十六班','三十七班','三十八班','三十九班','四十班','四十一班','四十二班','四十三班','四十四班','四十五班','四十六班','四十七班','四十八班','四十九班','五十班'],
+    index4: 0,
+    Kindergarten: ['年级','大班','中班','小班'],
+    JuniorMiddleSchool: ['年级','初一','初二','初三'],
+    highSchool: ['年级','高一','高二','高三'],
+    activeProvince: wx.getStorageSync('loacation') ? wx.getStorageSync('loacation').address_component.province : app.defaultLocation.address_component.province,
+    activeProvinceId: '',
+    activecityName: wx.getStorageSync('loacation') ? wx.getStorageSync('loacation').address_component.city : app.defaultLocation.address_component.city,
+    activecityId: '',
+    SchoolValue:'',
+    countryName: wx.getStorageSync('loacation') ? wx.getStorageSync('loacation').address_component.district : app.defaultLocation.address_component.district
+  },
+  ContactCustomerService(e) {
+    wx.makePhoneCall({//客服电话待定
+      phoneNumber: '13679695212',
+    })
+  }, 
+  prev(e){
+    wx.navigateBack({
+      delta:1
+    })
+  },
+  bindPickerChange(e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    const that = this;
+    let index = e.detail.value;
+    let objectArray = that.data.objectArray;
+    for (let i= 0; i < objectArray.length;i++){
+      if ( i == index){
+        that.setData({ activeProvinceId: objectArray[i].provinceId, activeProvince: objectArray[i].provinceName})
+      }
+    }
+    provinceInfo(that)
+    this.setData({ index: index, index1: 0, index2: 0, index3: 0, index4: 0, SchoolValue:''})
+    wx.setStorageSync('schoolName', '')
+    wx.setStorageSync('schoolId', '')
+    wx.setStorageSync('seceltSchoolTypeStatus', false)
+    wx.setStorageSync('seceltSchoolType', 0)
+    //清空所有内容 
+  },
+  bindPickerChange1 (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    const that = this;
+    let index1 = e.detail.value;
+    let objectArray1 = that.data.objectArray1;
+    for (let i = 0; i < objectArray1.length; i++) {
+      if (i == index1) {
+        that.setData({ activecityId: objectArray1[i].cityId, activecityName: objectArray1[i].cityName })
+      }
+    }
+    this.setData({ index1: index1, index2: 0, index3: 0, index4: 0, SchoolValue: ''})
+    wx.setStorageSync('schoolName', '')
+    wx.setStorageSync('schoolId', '')
+    wx.setStorageSync('seceltSchoolTypeStatus', false)
+    wx.setStorageSync('seceltSchoolType', 0)
+    //清空所有内容
+  },
+  bindPickerChange2(e){
+    console.log(e.detail.value)
+    this.setData({ index2: e.detail.value, SchoolValue: ''})
+    wx.setStorageSync('schoolName','')
+  },
+  bindPickerChange3(e) {
+    console.log(e.detail.value)
+    this.setData({ index3: e.detail.value})
+  },
+  bindPickerChange4(e) {
+    console.log(e.detail.value)
+    this.setData({ index4: e.detail.value })
+  },
+  goSchool(e){
+    wx.navigateTo({
+      url: '../../../pages/Information/Selection-school/Selection-school?value=' + this.data.SchoolValue,
+    })
+  },
+  overAll(e){
+    let over = e.currentTarget.dataset.over;
+    const that = this;
+    let index2 = that.data.index2;
+    let index3 = that.data.index3;
+    let index4 = that.data.index4;
+    let array2 = that.data.array2;
+    let array4 = that.data.array4;
+    //cm转换成m
+    let Height = wx.getStorageSync('Height')/100;
+    let Weight = wx.getStorageSync('Weight');
+    
+    let bmi = Math.floor( (Weight / (Height * Height) ) * 100) / 100;
+    console.log(wx.getStorageSync('haveIdCard'));
+    wx.request({
+      url: app.rQUrl + '/v1/childreninfo/addNewChildren',
+      method: 'POST',
+      header: { 'token': wx.getStorageSync('userInfo').oauthToken.token || '1' },
+      data: {
+        "birthday": wx.getStorageSync('ActiveDate') || '',
+        "bmi": bmi,
+        "childrenClass": Number(index4),
+        "childrenHeight": Number(wx.getStorageSync('Height'))*10 || '',
+        "childrenId": '',//新增没有这个id
+        "childrenWeight": Number(wx.getStorageSync('Weight'))*10 || '',
+        "cityId": that.data.activecityId,
+        "gender": wx.getStorageSync('Sex'),
+        "grade": Number(index3),
+        "haveIdCard": wx.getStorageSync('haveIdCard'),
+        "idCard": wx.getStorageSync('idCard') || '',
+        "name": wx.getStorageSync('childName') || '',
+        "parentUserId": wx.getStorageSync('userInfo').userId || '',
+        "provinceId": that.data.activeProvinceId,
+        "relationCode": wx.getStorageSync('relationCode') || '01',
+        "schoolId": wx.getStorageSync('schoolId') || '0' , 
+        "schoolType": that.data.index2 == 0 ? "0" : that.data.index2 == 1 ? "1" : that.data.index2 == 2 ? "2" :that.data.index2 == 3 ? "3" : "4"  
+      },
+      success(res){
+        if(res.data.code == '10000'){
+          //清除缓存"response": "1"
+          let resData=res.data.response;
+          if(resData == "1"){
+
+          }else{
+            wx.showToast({
+              title: '该孩子已被添加，请前往绑定即可',
+              icon:"none"
+            })
+          }
+
+
+          wx.setStorageSync('oldRelationCode', wx.getStorageSync('relationCode'))
+
+          wx.removeStorageSync('haveIdCard')
+          wx.removeStorageSync('childName')
+          wx.removeStorageSync('Sex')
+          wx.removeStorageSync('ActiveDate')
+          wx.removeStorageSync('Height')
+          wx.removeStorageSync('Weight')
+          wx.removeStorageSync('relationship')
+          wx.removeStorageSync('relationCode')
+          wx.removeStorageSync('schoolName')
+          wx.removeStorageSync('schoolId')
+          wx.removeStorageSync('seceltSchoolTypeStatus')
+          wx.removeStorageSync('seceltSchoolType')
+          wx.removeStorageSync('idCard')
+          wx.removeStorageSync('haveIdCard')
+
+          
+          if (over == '1'){//我有其他孩子关闭所有页面
+            wx.reLaunch({
+              url: '../../../pages/Information/Perfect-Information/Perfect-Information'
+            })
+          }else{//完成填写
+            wx.showToast({
+              title: '添加成功',
+            })
+            wx.reLaunch({
+              url: '../../../pages/index/index'
+            })
+          }
+            
+        }else{
+          wx.showToast({
+            title: res.data.msg,
+            icon:'none'
+          })
+        }
+      },
+      fail(info){
+        wx.showToast({
+          title: info.data.msg,
+          icon:'none'
+        })
+      }
+    })
+  },
+  onLoad: function (options) {
+    //重置定位信息
+    let location = wx.getStorageSync('loacation') || app.defaultLocation;
+    if(location){
+      this.setData({
+        activeProvince: location.address_component.province,
+        activecityName: location.address_component.city,
+        countryName: location.address_component.district,
+      })
+    } 
+  },
+  onReady: function () {},
+  onShow: function () {
+    this.setData({ 
+      SchoolValue: wx.getStorageSync('schoolName') || ''
+    })
+    if (wx.getStorageSync('seceltSchoolTypeStatus')){
+      this.setData({
+        index2: wx.getStorageSync('seceltSchoolType') || ''
+      })
+    }
+    locationAll(this)
+    provinceAll(this)
+  },
+  onHide: function () {},
+  onUnload: function () {},
+  onPullDownRefresh: function () {},
+  onReachBottom: function () {},
+  onShareAppMessage: function () {}
+})
+//根据神市区获取省市区id 
+function locationAll(that){
+  wx.request({
+    url: app.rQUrl+'/v1/regionInfo/getRegionInfoId',
+    method:'POST',
+    header: { 'token': wx.getStorageSync('userInfo').oauthToken.token || '1' },
+    data:{
+      "cityName": that.data.activecityName || '',
+      "countryName": that.data.countryName || '',
+      "provinceName": that.data.activeProvince || ''
+    },
+    success(res){
+      //保存省市区id
+      if(res.data.code == '10000'){
+        that.setData({ locationAllId: res.data.response })
+      }else{
+        console.log('获取城市id失败')
+      } 
+    },
+    fail(info){
+      wx.showToast({
+        title: '后台开小差了',
+        icon:'none'
+      })
+    }
+  })
+}
+//获取所有省份信息
+function provinceAll(that){
+  wx.request({
+    url: app.rQUrl + '/v1/regionInfo/get/allProvinceInfo',
+    method: 'GET',
+    header: { 'token': wx.getStorageSync('userInfo').oauthToken.token || '1' },
+    data: {},
+    success(res){
+      if(res.data.code == '10000'){
+        let result = res.data.response;
+        let len = result.length;
+        let array = new Array();
+        for(let i = 0; i < len; i++){
+          if (result[i].provinceName == that.data.activeProvince){
+            that.setData({ index: i, activeProvinceId: result[i].provinceId})
+          }
+          array.push(result[i].provinceName);
+        }
+        that.setData({ array: array, objectArray: result})
+        provinceInfo(that)
+      }else{
+        wx.showToast({
+          title: res.data.msg,
+          icon:'none'
+        })
+      }
+    },
+    fail(info){
+      wx.showToast({
+        title: info.data.msg,
+        icon:'none'
+      })
+    }
+  })
+  
+}
+//通过省份id查询所属城市列表
+function provinceInfo(that){
+  wx.request({
+    url: app.rQUrl + '/v1/regionInfo/get/allCityInfoByProvinceId',
+    method: 'GET',
+    header: { 'token': wx.getStorageSync('userInfo').oauthToken.token || '1' },
+    data: {
+      provinceId: that.data.activeProvinceId
+    },
+    success(res){
+      if(res.data.code == '10000'){
+        let result = res.data.response;
+        let len = result.length;
+        let array1 = new Array();
+        for (let i = 0; i < len; i++) {
+          if (result[i].cityName == that.data.activecityName) {
+            that.setData({ index1: i, activecityId: result[i].cityId})
+          }else{
+            that.setData({ index1: 0, activecityId: result[0].cityId, activecityName: result[0].cityName })
+          }
+          array1.push(result[i].cityName);
+        }
+        that.setData({ array1: array1, objectArray1: result})
+      }else{
+        wx.showToast({
+          title: res.data.msg,
+          icon:'none'
+        })
+      }
+    },
+    fail(info){
+      wx.showToast({
+        title: info.data.msg,
+        icon:'none'
+      })
+    }
+  })
+}
+//通过城市id查询所属区域
+function cityInfo(that) {
+  wx.request({
+    url: app.rQUrl + '/v1/regionInfo/get/allCountyInfoByCityId',
+    method: 'GET',
+    header: { 'token': wx.getStorageSync('userInfo').oauthToken.token || '1' },
+    data: {
+      cityId: that.data.cityId
+    },
+    success(res) {
+      if (res.data.code == '10000') {
+        that.setData({ cityInfo: res.data.response })
+      } else {
+        wx.showToast({
+          title: res.data.msg,
+          icon: 'none'
+        })
+      }
+    },
+    fail(info) {
+      wx.showToast({
+        title: info.data.msg,
+        icon: 'none'
+      })
+    }
+  })
+}

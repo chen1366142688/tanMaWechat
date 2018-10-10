@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播</title>
+    <style type="text/css">
+        *{ margin: 0; padding: 0; text-decoration: none;}
+        body { padding: 0 24px; box-sizing: border-box;}
+        #container { width: 932px; height: 468px;  overflow: hidden; position: relative;}
+        #list { width: 5592px; height: 468px; position: absolute; z-index: 1;}
+        #list img { float: left; width: 932px; height: 468px; }
+        #buttons { position: absolute; height: 10px; width: 100px; z-index: 2; bottom: 20px; left: 250px;}
+        #buttons span { cursor: pointer; float: left; width: 10px; height: 10px; border-radius: 50%; background: #cbcbcb; margin-right: 5px;}
+        #buttons .on {  background: #ffffff;}
+        .arrow { cursor: pointer; display: none; line-height: 39px; text-align: center; font-size: 36px; font-weight: bold; width: 40px; height: 40px;  position: absolute; z-index: 2; top: 180px; background-color: RGBA(0,0,0,.3); color: #fff;}
+        .arrow:hover { background-color: RGBA(0,0,0,.7);}
+        #container:hover .arrow { display: block;}
+        #prev { left: 20px;}
+        #next { right: 20px;}
+    </style>
+</head>
+<body>
+<div id="container">
+    <div id="list" style="left: -932px;">
+        <img src="../images/downLoad/4.png" alt="1">
+        <img src="../images/downLoad/1.png" alt="1">
+        <img src="../images/downLoad/2.png" alt="2">
+        <img src="../images/downLoad/3.png" alt="3">
+        <img src="../images/downLoad/4.png" alt="4">
+        <img src="../images/downLoad/1.png" alt="5">
+    </div>
+    <div id="buttons">
+        <span index="1" class="on"></span>
+        <span index="2" class=""></span>
+        <span index="3" class=""></span>
+        <span index="4" class=""></span>
+    </div>
+    <a href="javascript:;" id="prev" class="arrow">&lt;</a>
+    <a href="javascript:;" id="next" class="arrow">&gt;</a>
+</div>
+<script>
+    window.onload=function(){
+        var container=document.getElementById('container');//获取容器id
+        var list=document.getElementById('list');//获取img容器
+        var buttons=document.getElementById('buttons').getElementsByTagName('span');//获取点
+        var prev=document.getElementById('prev');//左按钮
+        var next=document.getElementById('next');//右按钮
+        var animated=false;
+        var index=1;//小圆点
+        var timer;//定时器
+        //小圆点
+        function showButton(){
+            //对点点循环，去除已经有的on
+            for(var i=0;i<buttons.length;i++){
+                if(buttons[i].className=='on'){
+                    buttons[i].className='';
+                    break//退出循环
+                }
+            }
+            buttons[index-1].className='on'
+        }
+        function animate(offset){
+//            快速点击时，会出现小圆点和图片不对应的情况，解决方案是当图片处于动画状态时，直接屏蔽掉点击事件
+            animated=true;// 快速点击时，会出现小圆点和图片不对应的情况，解决方案是当图片处于动画状态时，直接屏蔽掉点击事件
+            var newLeft=parseInt(list.style.left)+offset;
+
+            //焦点图轮播
+            var time=300;//位移总时间
+            var interval=10;//位移间隔时间
+            var speed=offset/(time/interval);//每次位移量
+            function go(){
+                if(speed<0&&parseInt(list.style.left)>newLeft||(speed>0&&parseInt(list.style.left)<newLeft)){
+                    list.style.left=parseInt(list.style.left)+speed+'px';
+                    setTimeout(go,interval)
+                }else{
+                    animated=false;// 快速点击时，会出现小圆点和图片不对应的情况，解决方案是当图片处于动画状态时，直接屏蔽掉点击事件
+                    list.style.left=newLeft +'px' ;//转成数字702
+                    //判断是否l滚动到辅助图,图片滚动在-702和-2808之间,解决空白问题
+                    if(newLeft>-932){
+                        list.style.left=-3728+'px'
+                    }
+                    if(newLeft<-3728){
+                        list.style.left=-932+'px'
+                    }
+                }
+            }
+            go()
+
+        }
+        //自动切换
+        function play(){
+            timer=setInterval(function(){
+                next.onclick()
+            },3000);
+        }
+        //停止切换
+        function stop(){
+            clearInterval(timer)
+        }
+        //右箭头
+        next.onclick=function(){
+            //判断点点是否是最后一个或者第一个
+            /*            if(index==4){
+                            index=1;
+                        }else{
+                            index+=1;
+                        }*/
+            index += 1;
+            index = index > 4 ? 1 : index;
+            showButton();
+            //+702和-702当做参数传给animate
+//            list.style.left=parseInt(list.style.left)-702 +'px' //把字符串变为整数值，paresInt()只保留字符串中的数字
+            if(!animated){
+                animate(-932)
+            }
+        };
+        //左箭头
+        prev.onclick=function(){
+            /* if(index==1){
+                 index=4;
+             }else{
+                 index-=1;
+             }*/
+            index -= 1;
+            index = index < 1 ? 4 : index;
+            showButton();
+//            list.style.left=parseInt(list.style.left)+702+'px'
+            if(!animated){
+                animate(932)
+            }
+        };
+        //小圆点加事件
+        for(var i=0;i<buttons.length;i++){
+            buttons[i].onclick=function(){
+//                if(this.className=='on'){
+//                    return;
+//                }
+                var myIndex=parseInt(this.getAttribute('index'));//获取当前点点的index
+                var offset=-932*(myIndex-index) ;//移动的距离：当前的index-之前的index
+                //恢复小圆点位置
+                index=myIndex;
+                showButton();
+                if(!animate){
+                    animate(offset)
+                }
+            }
+        }
+        //鼠标移上去，触发自动切换事件
+        container.onmouseover=stop;//不要加括号，
+        container.onmouseout=play;
+        //自动切换
+        play()
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,245 @@
+/* pages/schedule/scheduleIndex/scheduleIndex.wxss */
+
+page {
+  background: #ececec;
+}
+
+/* header始  */
+
+.Schedule-header {
+  width: 700rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  background: #fff;
+  padding: 0 27rpx 0 23rpx;
+  border: 1rpx solid #ececec;
+  position: relative;
+}
+
+.cou-positiona {
+  width: 23rpx;
+  height: 33rpx;
+  vertical-align: middle;
+}
+
+.fujinTxt {
+  display: inline-block;
+  font-size: 28rpx;
+  font-family: PingFang-SC-Regular;
+  color: #333;
+  padding-right: 9rpx;
+  padding-left: 4rpx;
+  width: 172rpx;
+  vertical-align: middle;
+}
+
+image.kecc-noticepointba {
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  top: 18rpx;
+  right: 24rpx; 
+}
+
+.c-active {
+  color: #007587;
+  border-bottom: 4rpx solid #007587;
+}
+
+/* 选项卡  */
+
+.course-head-ab, .course-head-ac {
+  display: inline-block;
+  font-size: 34rpx;
+  font-family: PingFang-SC-Regular;
+  color: #333;
+}
+
+.course-head-ad {
+  border-bottom: 4rpx solid #007587;
+  color: #007587;
+  /* margin-left: 42rpx; */
+}
+
+.kec-tertoupb {
+  margin-left: 33rpx;
+}
+
+/* header结束  */
+
+/*整体日程样式开始  */
+
+/* 外边框  */
+
+.l-stop-traina-Nav {
+  width: 702rpx;
+  height: 230rpx;
+  background-color: #fff;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  border-radius: 5rpx；;
+}
+
+.Schedule-Single {
+  width: 678rpx;
+  /* height: 34rpx; */
+  margin: 0 auto;
+  padding: 0;
+}
+
+.Schedule-Single .c-item-info-txt {
+  display: inline-block;
+  border-radius: 5rpx;
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  border: 2rpx solid rgba(23, 23, 24, 1);
+  padding: 3rpx 8rpx;
+  margin-right: 295rpx;
+}
+
+.Schedule-Single .c-item-status {
+  display: inline-block;
+  width: 134rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+  background: #00b6d6;
+  border-radius: 17rpx;
+  font-size: 22rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
+}
+
+.c-item-inifo {
+  width: 678rpx;
+  margin: 0 auto;
+}
+
+.c-item-inifo .c-data-txt {
+  width: 662rpx;
+  color: #333;
+  font-size: 32rpx;
+  margin-top: 24rpx;
+  font-family: PingFang-SC-Regular;
+}
+
+.c-item-inifo .Statistics {
+  width: 662rpx;
+  margin: 0 auto;
+}
+
+.Statistics .l-cdcenter-posa {
+  width: 14rpx;
+  height: 16rpx;
+  margin-right: 10rpx;
+}
+
+.Statistics .c-username-text {
+  font-size: 20rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(102, 102, 102, 1);
+}
+
+.Statistics .c-touser-xcxa {
+  width: 12rpx;
+  height: 16rpx;
+  margin: 0rpx 12rpx 0rpx 22rpx;
+}
+
+.Statistics .c-renshu {
+  font-size: 20rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(102, 102, 102, 1);
+}
+
+.Statistics .c-touser-xcxb {
+  width: 19rpx;
+  height: 19rpx;
+  margin-left: 10rpx;
+}
+
+.Statistics .c-date {
+  width: 20rpx;
+  height: 20rpx;
+  margin: 0 10rpx 0 20rpx;
+}
+
+.Statistics .c-data-txt {
+  font-size: 20rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(102, 102, 102, 1);
+}
+
+.curriculum-time {
+  width: 662rpx;
+  margin: 0 auto;
+  margin-top: 24rpx;
+  border-top: 2rpx solid rgba(228, 228, 228, 1);
+}
+
+.curriculum-time .c-data-text {
+  color: #00b6d6;
+  font-size: 28rpx;
+}
+
+/*整体日程样式end  */
+
+/* 开课已取消样式  */
+
+.c-item-abolish {
+  display: inline-block;
+  width: 134rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+  background: #999;
+  border-radius: 17rpx;
+  font-size: 22rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
+}
+
+/*添加开课日程始  */
+
+.stop-traina-Nav {
+  width: 702rpx;
+  height: 230rpx;
+  background-color: #fff;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  padding: 0;
+  border-radius: 5rpx；;
+}
+
+/* 添加开课日程虚线边框设置  */
+
+.stop-traina-Nav .Add {
+  width: 682rpx;
+  display: block;
+  margin: 0 auto;
+  padding-top: 10rpx;
+  border-style: dashed;
+  border-color: #007587;
+  border-width: 1rpx;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+/* +添加开课日程字体样式设置  */
+
+.Add .addition {
+  display: block;
+  width: 682rpx;
+  height: 210rpx;
+  line-height: 220rpx;
+  color: #007587;
+  text-align: center;
+  font-size: 45rpx;
+}
+
+/* 开课通知日历  */
+.calendar{
+  width: 702rpx;
+  height: 500rpx;
+  }

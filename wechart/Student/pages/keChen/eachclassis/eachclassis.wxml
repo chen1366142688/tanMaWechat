@@ -1,0 +1,114 @@
+<!--classessituation-->
+<view style='position: relative;'>
+<view class='guangKe'>
+  <view class='items-jiao'>
+    <!-- <image class='userImg' src='{{attendInfo.coachPhotoAddress }}'></image> -->
+
+    <view class='item-userTxt'> 
+      <view class='userTxt-top clearfloat'>
+        <view class='fl'>
+          <view class='userA iLblock'>{{attendInfo.itemName }} {{attendInfo.maxMember }}人班</view>
+          <view class='userB iLblock  user-top-wid-a textOver'>{{attendInfo.className }}</view>
+        </view>
+
+        <view class='money'>
+          <view class='eachclassis-rmbb'>
+            <text class='rmb'>RMB</text>
+            <text class='rmbNum'>{{attendInfo.courseCostTotal/100 }}</text>
+          </view>
+          <view class='fr'>
+            <view class='userC iLblock'>{{attendInfo.courseCount }}课时</view>
+            <!-- <view class='userC iLblock'>{{attendInfo.courseCount }}课时/{{attendInfo.courseTime/10 }}h</view> -->
+          </view>
+        </view>
+
+      </view>
+      <view class='userTxt-bottom'>
+        <image class='userboysexa iLblock' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/redcoach.png'></image>
+        <text class='userMum-lilei iLblock'>{{attendInfo.classCoach }}</text>
+        <image class='userboysexb iLblock' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/blackboy.png' wx:if="{{attendInfo.coachSex==1}}"></image>
+        <image class='userboysexb iLblock' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/blackgirl.png' wx:if="{{attendInfo.coachSex==2}}"></image>
+        <!--性别 女-->
+        <!-- 
+        <image src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/boy.png'></image>
+        <image src='girl.png'></image>
+        -->
+        <image class="userNumber iLblock" src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/studentNewImg/c57.png'></image>
+        <text class='userMum iLblock'>{{attendInfo.lastAttendPeriod?attendInfo.lastAttendPeriod:0 }}节</text>
+        <image style='width:20rpx;height:20rpx;' class='userLevel' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/student/grade-red.png'></image>
+        <text class='userLevelColor iLblock' decode='true'>&nbsp;{{attendInfo.itemStudentGrade }}</text>
+      </view>
+    </view>
+  </view>
+
+</view>
+
+<view class='cor-shop-head-da'></view>
+
+<!--第二部分 -->
+
+<!--羽毛球 234期班 开始-->
+<scroll-view scroll-y='true' style='height:{{height}}px'>
+<!-- <view class="c-jiao-information" wx:for="{{classAttenList}}" wx:key="*this">
+  <view class='c-items-xcxa'>
+    <view class='c-item-inifo'>
+      <text class='c-item-info-txt'>{{item.itemName }} {{item.attendPeriod }}期班</text>
+      <text class='c-item-title'>{{item.attendDate }} {{item.dayTimeStart }}-{{item.dayTimeEnd }}</text>
+      <view class="c-item-status" wx:if="{{item.attendStatus =='00'}}">删除</view>
+      <view class="c-item-status" wx:if="{{item.attendStatus =='01'}}">未报名 </view>
+      <view class="c-item-status c-item-apply" wx:if="{{item.attendStatus =='02'}}">报名中 </view>
+      <view class="c-item-status" wx:if="{{item.attendStatus =='03'}}">报名结束 </view>
+      <view class="c-item-status" wx:if="{{item.attendStatus =='04'}}">已开课</view>
+      <view class="c-item-status c-item-cancel" wx:if="{{item.attendStatus =='05'}}">已取消</view> 
+    </view>
+    <view class='c-item-inifo'>
+      <image class='l-cdcenter-posa' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/student/position-red.png'></image>
+      <text class='c-username-text in'>{{item.homeName }}</text>
+      <image class='c-touser-xcxa' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/red-total.png'></image>
+      <text class='c-renshu in'>{{item.signUpMember }}人已报名</text>
+          <view class='eachclassis-rmbc fr'>
+            <text class='c-data-txt in'>1课时</text> -->
+            <!-- <text class='c-data-txt in'>1课时/{{item.courseTime/10}}h</text> -->
+            <!-- <text class='rmb'>RMB</text>
+            <text class='rmbNuma'>{{item.courseCost/100 }}</text>
+          </view>      
+    </view>
+  </view>
+</view> -->
+
+
+<view class='studentInformation' wx:for="{{classAttenList}}" wx:key="attend" wx:for-item="attend">
+  <view class='studentInfoTop'>
+    <view class='studentInfoLeft'>
+      <text class='studentNumber'>{{attend.attendPeriod }}期</text>
+      <text class='studentDate' decode='true'>{{attend.attendDate }}&nbsp;{{attend.dayTimeStart }}-{{attend.dayTimeEnd }}</text>
+    </view>
+    <view class='studentInfoRight' wx:if="{{attend.attendStatus =='00'}}">删除</view>
+    <view class='studentInfoRight' wx:if="{{attend.attendStatus =='01'}}">未报名</view>
+    <view class='studentInfoRight registered' wx:if="{{attend.attendStatus =='02'}}">报名中</view>
+    <view class='studentInfoRight' wx:if="{{attend.attendStatus =='03'}}">报名结束</view>
+    <view class='studentInfoRight' wx:if="{{attend.attendStatus =='04'}}">已开课</view>
+    <view class='studentInfoRight cancelled' wx:if="{{attend.attendStatus =='05'}}">已取消</view>
+    <view class='studentInfoRight'  wx:if="{{attend.attendStatus  =='06'}}">已结束</view>
+  </view>
+  <view class='studentInfoBom'>
+    <view class='studentInfoBomLeft'>
+      <image class='studentInfoBomAddrImg' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/studentNewImg/address.png'></image>
+      <text class='studentInfoBomAddr textOver'>{{attend.homeName }}</text>
+      <image class='studentInfoBomTotalImg' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coachNewImg/population.png'></image>
+      <text class='studentInfoBomTotal' decode='true'>{{attend.signUpMember }}人报名&nbsp;|&nbsp;<text class='signed'>{{attend.signedMember }}</text>人签到</text><!--待签到人数字段-->
+    </view>
+    <view class='studentInfoBomRight'>教练：{{attend.attendCoachName }}</view><!--待教练名字段-->
+  </view>
+</view>
+
+
+
+<text class='van-over'>{{footer}}</text>
+</scroll-view>
+<!--  没有数据显示空空如也  -->
+  <view class='kong' wx:if="{{Period}}">
+    <image class='kong-img' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/studentNewImg/dataEmpty.png'></image>
+    <text class='kong-text'>数据为空</text>
+  </view>
+</view>

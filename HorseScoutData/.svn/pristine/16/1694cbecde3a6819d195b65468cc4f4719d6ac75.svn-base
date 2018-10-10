@@ -1,0 +1,73 @@
+// pages/Information/Selection-school/Selection-school.js
+const app = getApp().globalData
+Page({
+  data: {
+    imgUrl: app.url,
+    array:['幼儿园','小学','初中','高中'],
+    index:0,
+    schoolName:'',
+    schoolList:[]
+  },
+  bindPickerChange(e){
+    console.log(e.detail.value)
+    this.setData({index:e.detail.value})
+  },
+  inputSchool(e){
+    console.log(e.detail.value)
+    this.setData({ schoolName: e.detail.value})
+  },
+  searchSchool(e){
+    const that = this;
+    let schoolName = that.data.schoolName;
+    let index = that.data.index;
+    let schoolType = index == 0 ? 1 : index == 1 ? 2 : index == 2 ? 3 : 4;
+    let pages = getCurrentPages();
+    let prevPage = pages[pages.length - 2];  //上一个页面
+    let info = prevPage.data //取上页data里的数据也可以修改
+    let cityId = info.activecityId;
+    searchSchool(that, cityId, schoolName, schoolType)
+  },
+  onLoad: function (options) {},
+  onReady: function () {},
+  onShow: function () {},
+  onHide: function () {},
+  onUnload: function () {},
+  onPullDownRefresh: function () {},
+  onReachBottom: function () {},
+  onShareAppMessage: function () {}
+})
+function searchSchool(that, cityId, schoolName, schoolType){
+  wx.request({
+    url: app.rQUrl + '/v1/school/getSchoolSingleInfoList',
+    method: 'GET',
+    header: { 'token': wx.getStorageSync('userInfo').oauthToken.token || '1' },
+    data: {
+      'cityId': cityId,
+      'schoolName': schoolName,
+      'schoolType': schoolType,
+    },
+    success(res){
+      if(res.data.code == '10000'){
+        if(res.data.response.length == 0){
+          wx.showToast({
+            title: '此搜索条件没有对应的学校',
+            icon:'none'
+          })
+        }else{
+          that.setData({ schoolList: res.data.response})
+        }
+      }else{
+        wx.showToast({
+          title: res.data.msg,
+          icon:'none'
+        })
+      }
+    },
+    fail(info){
+      wx.showToast({
+        title: info.data.msg,
+        icono:'none'
+      })
+    }
+  })
+}

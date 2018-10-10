@@ -1,0 +1,74 @@
+// pages/Exercise/Test-complete/Test-complete.js
+var ctx = wx.createCanvasContext('scores');
+var mW = ctx.width = 150;
+var mH = ctx.height = 150;
+var lineWidth = 4;
+var r = mW / 2; //中间位置
+var cR = r - 4 * lineWidth; //圆半径
+var startAngle = -(1 / 2 * Math.PI); //开始角度
+var endAngle = startAngle + 2 * Math.PI; //结束角度
+var xAngle = 1 * (Math.PI / 180); //偏移角度量
+var fontSize = 35; //字号大小
+var tmpAngle = startAngle; //临时角度变量
+Page({
+  data: {
+  
+  },
+  onLoad: function (options) {},
+  onReady: function () {},
+  onShow: function () {
+    rander()
+  },
+  onHide: function () {},
+  onUnload: function () {},
+  onPullDownRefresh: function () {},
+  onReachBottom: function () {},
+  onShareAppMessage: function () {}
+})
+//渲染函数
+var arr=[];
+var rander = function () {
+  console.log(tmpAngle)
+  arr.push(tmpAngle)
+  if (tmpAngle >= endAngle) {
+    console.log(arr.length)
+    return;
+    //clearInterval(int)
+  } else if (tmpAngle + xAngle > endAngle) {
+    tmpAngle = endAngle;
+  } else {
+    tmpAngle += xAngle;
+  }
+  ctx.clearRect(0, 0, mW, mH);
+
+  //画圈
+  ctx.beginPath();
+  ctx.lineWidth = lineWidth;
+  ctx.strokeStyle = '#4DD0C8';
+  ctx.arc(r, r, cR, startAngle, tmpAngle);
+  ctx.stroke();
+  //ctx.closePath();
+
+  //写字
+  ctx.fillStyle = '#CBCBCB';
+  ctx.setFontSize(40)
+  ctx.textAlign = 'center';
+  ctx.fillText(Math.round((tmpAngle - startAngle) / (endAngle - startAngle) * 100), r, r + fontSize / 2);
+  ctx.stroke()
+
+  ctx.beginPath();
+  ctx.arc(r + fontSize+5, r + fontSize / 2-4, 10, 0, 2 * Math.PI)
+  ctx.setFillStyle('#72B9E7')
+  ctx.fill()
+
+  ctx.beginPath();
+  ctx.fillStyle = '#fff';
+  ctx.setFontSize(10)
+  ctx.textAlign = 'left';
+  ctx.fillText('分', r + fontSize, r + fontSize / 2);
+  ctx.stroke()
+  ctx.draw()
+  //var int = self.setInterval(rander, 1000);
+   requestAnimationFrame(rander);
+
+};

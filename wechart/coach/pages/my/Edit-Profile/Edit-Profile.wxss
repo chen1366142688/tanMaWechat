@@ -1,0 +1,281 @@
+/* pages/my/Edit-Profile/Edit-Profile.wxss */
+
+page {
+  background: #ececec;
+  font-size: 30rpx;
+  font-family: PingFang-SC-Regular;
+}
+
+/*教练信息  */
+
+.editor {
+  width: 750rpx;
+  /* padding: 0 25rpx; */
+  height: 120rpx;
+  background: #fff;
+  margin-bottom: 2rpx;
+}
+
+.center {
+  width: 750rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+}
+
+.editor-userImg {
+  width: 88rpx;
+  height: 88rpx;
+  margin-left: 20rpx;
+  vertical-align: middle;
+}
+
+.editor-nameAndLocation {
+  color: rgba(51, 51, 51, 1);
+  margin-left: 20rpx;
+  vertical-align: middle;
+  overflow: hidden;
+  width: 310rpx;
+  white-space:nowrap; 
+  text-overflow:ellipsis; 
+}
+
+.editor-phoneImg {
+  width: 13rpx;
+  height: 22rpx;
+  vertical-align: middle;
+}
+
+.editor-phoneNum {
+  font-size: 30rpx;
+  color: rgba(51, 51, 51, 1);
+  margin-left: 12rpx;
+  vertical-align: middle;
+}
+
+.editorPen {
+  width: 44rpx;
+  height: 44rpx;
+   margin-right: 20rpx; 
+  vertical-align: middle;
+  margin-left: 40rpx;
+}
+
+.editor-name, .editor-phone {
+  height: 120rpx;
+  line-height: 120rpx;
+}
+
+/* 资料审核 */
+
+.examine {
+  width: 750rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 88rpx;
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+
+.extext {
+  font-size: 30rpx;
+  color: rgba(51, 51, 51, 1);
+  line-height: 0rpx;
+  margin-left: 20rpx;
+}
+
+.exIng {
+  color: #00d1e0;
+  font-size: 30rpx;
+  margin-right: 20rpx;
+}
+
+/*运动项目  */
+
+.classBox {
+  width: 702rpx;
+  margin: 0 auto;
+  margin-bottom:20rpx;
+
+}
+
+.yunDongBox {
+  width: 702rpx;
+  height: 78rpx;
+  border-bottom: 1rpx solid #e4e4e4;
+}
+
+.Item-Category {
+  font-size: 30rpx;
+  font-family: PingFang-SC-Regular;
+  color: rgba(51, 51, 51, 1);
+  line-height: 0rpx;
+  margin-left: 20rpx;
+}
+
+.uploadBox {
+  width: 702rpx;
+  background-color: #fff;
+  margin: 0 auto;
+}
+
+.uploadItem {
+  width: 100%;
+  font-size: 20rpx;
+  margin-left: 20rpx;
+  color: rgba(228, 0, 17, 1);
+}
+
+.scroolBox {
+  width: 702rpx;
+  height: 160rpx;
+  margin-top: 20rpx;
+  background: #fff;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.intro-scroll {
+  font-size: 18rpx;
+  margin-left: 20rpx;
+  overflow: scroll;
+}
+
+.intro-scrollImg {
+  width: 200rpx;
+  height: 149rpx;
+  vertical-align: bottom;
+  margin-right: 20rpx;
+}
+
+
+.cancel {
+  width: 702rpx;
+  border: none;
+  color: #007587;
+  font-size: 30rpx;
+  height: 92rpx;
+  line-height: 92rpx;
+  background-color: #f4f4f4;
+}
+
+.compile-select {
+  width: 511rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  float: right;
+}
+
+.compile-select-N {
+  width: 450rpx;
+  height: 88rpx;
+  float: left;
+  text-align: right;
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+}
+
+.compile-select-T {
+  width: 11rpx;
+  height: 6rpx;
+  float: right;
+  margin-top: 43rpx;
+  margin-right: 30rpx;
+}
+
+/*  添加运动项目  */
+
+.addProBox {
+  width: 702rpx;
+  height: 340rpx;
+  margin: 0 auto;
+  line-height: 340rpx;
+  margin-top: 20rpx;
+  background-color: #fff;
+  /* position: relative; */
+  padding-top: 20rpx;
+}
+
+.addition {
+  display: block;
+  width: 662rpx;
+  margin: 0 auto;
+  height: 320rpx;
+  color: #007587;
+  font-size: 45rpx;
+  text-align: center;
+  border: 1px dashed #007587;
+}
+
+/*填写自我介绍  */
+
+.myItemBox {
+  width: 702rpx;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  background: #fff;
+  border-radius: 5rpx;
+  padding-top:20rpx;
+}
+
+.myInfoBxo {
+  width: 682rpx;
+  line-height:36rpx;
+  min-height: 200rpx;
+  margin-left: 20rpx;
+  border-bottom: 1rpx solid #e4e4e4;
+  overflow: hidden;
+}
+
+.myInfo {
+  color: #333;
+}
+
+/*  提交  */
+
+.submitEditor {
+  width: 702rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  border-radius: 40rpx;
+  background-image: url('http://xlrtimo.oss-cn-beijing.aliyuncs.com/timo/imgs/coach/public/button.png');
+  background-size: 100% 100%;
+  background-color: #007587;
+  margin: 40rpx auto 60rpx auto;
+  color: #fff;
+}
+
+.subBor {
+  width: 694rpx;
+  height: 80rpx;
+  border-radius: 44rpx;
+  /* border: 1rpx dotted #fff; */
+}
+
+.intro-deleteImg {
+  width: 30rpx;
+  height: 30rpx;
+  top: 0rpx;
+  right: 8rpx;
+  position: absolute;
+}
+.intro-view {
+  width: 210rpx;
+  height: 148rpx;
+  line-height: 141rpx;
+  margin-left: 20rpx;
+  position: relative;
+}
+
+button::after{
+border: none;
+}
+
+.btn{
+  width: 750rpx;
+  height: 150rpx;
+}

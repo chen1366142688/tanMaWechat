@@ -1,0 +1,157 @@
+page{background: #ececec;font-size:30rpx;font-family:PingFang-SC-Regular;color:rgba(51,51,51,1);padding-top:20rpx;line-height: 0}
+.box{
+  width:750rpx;
+  height: 200rpx;
+  position: relative;
+  background: #fff;
+  margin-bottom:20rpx; 
+}
+.effective{
+  text-align: right;
+  height:40rpx;
+}
+.effe{
+  display: inline-block;
+  width:90rpx;
+  height:40rpx;
+  text-align: center;
+  line-height: 40rpx;
+  font-size:24rpx;
+  color: #ffffff;
+  background:rgba(0,198,147,1);
+}
+.itemInfo,.itemInfoTitle{
+  width: 708rpx;
+  padding:0 23rpx 0 19rpx;
+  margin-bottom:18rpx;
+}
+.userLevelImg{
+  width:16rpx;
+  height:16rpx;
+  vertical-align: middle;
+  margin-right:10rpx;
+}
+.userName{
+  font-size:24rpx;
+  font-weight: bold;
+  width: 100rpx;
+  height: 24rpx;
+  line-height: 24rpx;
+  margin-right:20rpx;
+}
+.nums{
+  width:14rpx;
+  height: 12rpx;
+  vertical-align: middle;
+  margin-right:6rpx;
+}
+.hotImg{
+  width:20rpx;
+  height:20rpx;
+  vertical-align: middle;
+  margin-right:4rpx;
+}
+.hotNum,.levelPus,.level,.numsTxt{
+  font-size:20rpx;
+}
+.levelPus{
+  font-weight: bold;
+  margin-right:5rpx;
+}
+.levelBox{
+  height: 20rpx;
+  line-height: 20rpx;
+}
+.level{
+  width: 100rpx;
+  vertical-align: middle;
+}
+.numsTxt{
+  margin-right:9rpx;
+}
+.hotNum{
+  margin-right:14rpx;
+}
+.itemInfoTitle{
+  margin-bottom:0;
+}
+.classItem{
+  height: 30rpx;
+  line-height: 30rpx;
+  border:1rpx solid #171718;
+  border-radius: 5rpx;
+  color: #171718;
+  font-size: 22rpx;
+  padding:0 10rpx;
+  vertical-align: middle;
+}
+.title{
+  height: 23rpx;
+  line-height: 23rpx;
+  max-width: 210rpx;
+  font-weight: bold;
+  font-size:24rpx;
+  margin-left: 10rpx;
+  vertical-align: middle;
+}
+
+.itemInfoTitle{
+  position: relative;
+  height: 30rpx;
+}
+.keShi{
+  height: 30rpx;
+  line-height: 30rpx;
+  font-size:18rpx;
+  vertical-align: middle;
+  position: absolute;
+  right: 23rpx;
+  bottom:0;
+  color:#ADADAD;
+}
+.moneyBox{
+  position: absolute;
+  top:-12rpx;
+  right:23rpx;
+}
+.money{
+  font-size:18rpx;
+font-family:SanFranciscoDisplay-Regular;
+color:rgba(232,85,113,1);
+}
+.moneys{
+  font-size:28rpx;
+font-family:SanFranciscoDisplay-Bold;
+color:rgba(232,85,113,1);
+font-weight: bold;
+padding-left:6rpx;
+}
+.send{
+  width: 708rpx;
+  margin:14rpx auto 0 auto;
+  border-top:1rpx solid #ececec;
+  padding-top:14rpx;
+}
+.check{vertical-align: middle}
+.sendCode{
+  display: inline-block;
+  font-size:30rpx;
+  vertical-align: middle;
+}
+.delete{
+  width: 36rpx;
+  height:38rpx;
+  vertical-align: middle;
+}
+.noThing{
+  background:rgba(153,153,153,1);
+  color: #fff;
+}
+.active{
+  color: #00C693;
+}
+.rgBox {
+  width:100rpx;
+  height: 100%;
+  text-align: right;
+}

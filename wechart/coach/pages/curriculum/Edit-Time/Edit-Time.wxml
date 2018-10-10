@@ -1,0 +1,15 @@
+<!--pages/curriculum/Edit-Time/Edit-Time.wxml-->
+<view class='Edit-Time'>
+  <view class='Edit-Time-headline'>课程时段 </view>
+  <checkbox-group class="checkboxChange" bindchange="radioChange">
+    <label class="radio" wx:for="{{items}}" bindtap="checkChange" data-sectionid="{{item.sectionId}}" data-checked="{{item.checked}}">
+      <checkbox style="transform:scale(.5)" color="#007587"  class='check' value="{{item.sectionId }}" checked="{{item.checked}}"/>
+      <text class="{{item.checked==true ? 'checkted' : ''}}">{{item.weekDay_ch}}:{{item.dayTimeStart}}-{{item.dayTimeEnd }}</text>
+      <view class='surplus-number'>还可报 
+       <text class='red' wx:if="{{item.maxMember>=item.signUpMember}}"> {{item.maxMember-item.signUpMember }}</text>
+       <text class='red' wx:else>0</text>
+      人</view>
+    </label>
+  </checkbox-group>
+</view>
+<button class='settle-accounts' form-type='submit' bindtap='studentState'>提 交</button>

@@ -1,0 +1,60 @@
+// var appurl = 'http://192.168.3.4:8081';  //这个删除
+var planId;
+$(function () {
+    planId = GetQueryString('planId');
+    helpnotice(this, planId);
+});
+
+function GetQueryString(name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+    var r = window.location.search.substr(1).match(reg);
+    if (r != null) return unescape(r[2]);
+    return null;
+}
+
+/*计划简介子标题
+通过计划简介ID查询详情信息
+*/
+
+/*planId 计划简介的id */
+function helpnotice(that, planId) {
+    $.ajax({
+        type: 'get',
+        url: appurl + "/v1/exercisePlan/getExercisePlanDescribe",
+        data: {
+            'planId': planId
+        },
+        dataType: "json",
+        async: false,
+        success: function (res) {
+            if (res.code == '10000') {
+                var result = res.response;
+                var presentation = result.detailPresentation;
+                var theory = result.theoryDetail;
+                var TargetUser = result.detailFitThrong;
+                var TabooCrowd = result.detailTabooThrong;
+                var preparation = result.detailPrepare;
+                var Copyright = result.detailPrepare;
+                // $('.Training-Principle-img').attr('src',result.theoryDetail);
+
+                $('#presentation').html(res.response.detailPresentation);
+                presentation.innerHTML;
+                $('#theory').html(res.response.theoryDetail);
+                theory.innerHTML;
+                $('#TargetUser').html(res.response.detailFitThrong);
+                TargetUser.innerHTML;
+                $('#TabooCrowd').html(res.response.detailTabooThrong);
+                TabooCrowd.innerHTML;
+                $('#preparation').html(res.response.detailPrepare);
+                preparation.innerHTML;
+                $('#Copyright').html(res.response.detailPrepare);
+                Copyright.innerHTML;
+            }
+        },
+        error: function (data) {
+            console.log("请求失败，服务器错误")
+        }
+    })
+
+}
+

@@ -1,0 +1,47 @@
+<!--pages/Exercise/Complete-training/Complete-training.wxml-->
+<view class='Complete-training'>
+  <view class='Test-complete-header'>
+    <view class='Test-scores'> 
+      <image class='Test-scores-head-portrait' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/Exercise/head-portrait.png'></image>
+      <image class='Test-scores-Complete-training' src='http://xlrtimo.oss-cn-beijing.aliyuncs.com/HorseScoutData/patriarch/Exercise/Complete-training.png'></image>
+    </view>
+    <view class='Test-scores-Beat-number'>XXX已训练<text class='Beat-number-blue'>123</text>次，打败了<text class='Beat-number-blue'>78%</text>的同龄人喔~</view>
+  </view>
+  
+    <!-- <view class='Test-complete-graph-header'>
+      <view class='Test-complete-graph-header-left'>人数 
+        <text class='Test-complete-graph-header-left-blue'>(人)</text> </view>
+      <view class='Test-complete-graph-header-left'>次数<text class='Test-complete-graph-header-left-blue'>(次)</text></view>
+    </view> -->
+    <view class='graph-img'>
+      <ec-canvas id="mychart-dom3" canvas-id="mychart3" ec="{{ peopleEc }}"></ec-canvas>
+    </view>
+    <view class='Test-complete-graph'>
+    <!-- <view class='Test-complete-graph-prompt-text-top'>您还有 2 项测试未完成，完成后便可查看完整评估结果啦~~</view> -->
+    <!-- <view class='Test-complete-graph-prompt-text-bottom'>您可以在【我的】-【历史测试记录】中查看过往测试结果。</view> -->
+    <view class='Test-complete-graph-button'>
+      <view class='Test-complete-graph-button-index' bindtap='returnhome'>回首页</view>
+      <view class='Test-complete-graph-button-other' bindtap='training'>写写心得</view>
+      <view class='Test-complete-graph-button-again'>开始其他训练</view>
+    </view>
+  </view>
+  <view class='Test-complete-result'>
+    <view class='Test-complete-result-headline'>XXX的本计划历史训练记录</view>
+    <view class='Test-complete-graph-prompt-text-bottom'>您可在【我的】中查看所有历史测试记录。</view>
+    <view class='Test-complete-result-one'>
+      <view class='Test-complete-result-one-headline-left'>
+        <view class='Test-complete-result-one-headline-left-top'>训练时长：</view>
+        <view class='Test-complete-result-one-headline-left-bottom'>训练时间：2018-06-27 23:34</view>
+      </view>
+      <view class='Test-complete-result-one-section-right'><text class='right-text'>次数：</text>122</view>
+    </view>
+    <view class='Test-complete-result-one'>
+      <view class='Test-complete-result-one-headline-left'>
+        <view class='Test-complete-result-one-headline-left-top'>训练时长：</view>
+        <view class='Test-complete-result-one-headline-left-bottom'>训练时间：2018-06-27 23:34</view>
+      </view>
+      <view class='Test-complete-result-one-section-right'><text class='right-text'>次数：</text>122</view>
+    </view>
+  </view>
+  <view class='kong'></view>
+</view>
